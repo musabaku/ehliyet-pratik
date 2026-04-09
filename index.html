@@ -279,6 +279,38 @@ body{
 .score-big.pass{color:var(--brand)}
 .score-big.fail{color:var(--danger)}
 
+/* ══════════ TRANSLATE ══════════ */
+.tr-toggle{
+  display:inline-flex;align-items:center;gap:5px;padding:5px 12px;
+  border:1px solid rgba(255,255,255,.25);border-radius:7px;
+  background:rgba(255,255,255,.1);color:#fff;font-size:12px;cursor:pointer;
+  font-family:inherit;transition:all .15s;
+}
+.tr-toggle:hover{background:rgba(255,255,255,.2)}
+.tr-toggle.on{background:rgba(255,255,255,.25);border-color:rgba(255,255,255,.4)}
+
+.tr-toggle-home{
+  display:inline-flex;align-items:center;gap:5px;padding:5px 12px;
+  border:1px solid rgba(255,255,255,.3);border-radius:7px;
+  background:rgba(255,255,255,.12);color:#fff;font-size:12px;cursor:pointer;
+  font-family:inherit;margin-top:10px;transition:all .15s;
+}
+.tr-toggle-home:hover{background:rgba(255,255,255,.2)}
+.tr-toggle-home.on{background:rgba(255,255,255,.25)}
+
+.q-translation{
+  font-size:13px;color:var(--brand);line-height:1.5;margin-top:8px;
+  padding:8px 12px;background:var(--brand-bg);border-radius:8px;
+  border-left:3px solid var(--brand);font-style:italic;display:none;
+}
+.q-translation.show{display:block}
+
+.opt-translation{
+  font-size:11px;color:var(--brand);margin-top:3px;font-style:italic;
+  opacity:.8;display:none;
+}
+.opt-translation.show{display:block}
+
 /* ══════════ RESPONSIVE ══════════ */
 @media(max-width:600px){
   .hero{padding:20px 14px 16px}
@@ -308,6 +340,10 @@ body{
     <button class="main-tab active" onclick="switchTab('sorular')">Sorular</button>
     <button class="main-tab" onclick="switchTab('kelime')">Kelime</button>
   </div>
+  <button class="tr-toggle-home" id="tr-toggle-home" onclick="toggleTranslate()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 0M4 11l3-8 3 8M12.5 3h3.5a2 2 0 0 1 2 2v1M11 21l5-10 5 10M14.5 17h5"/></svg>
+    <span id="tr-label">EN Translation: OFF</span>
+  </button>
 </div>
 
 <!-- ══════════ TOPBAR (during quiz) ══════════ -->
@@ -323,6 +359,7 @@ body{
   </div>
   <div class="topbar-right">
     <div class="timer" id="timer">45:00</div>
+    <button class="tr-toggle" id="tr-toggle-bar" onclick="toggleTranslate()">EN</button>
     <button class="tb-btn" onclick="endQuiz()">Bitir</button>
     <button class="tb-btn" onclick="backToHome()">&#10005;</button>
   </div>
@@ -363,6 +400,7 @@ body{
         <span class="q-flag" id="q-flag" onclick="toggleFlag()" title="Isaretle">&#9733;</span>
       </div>
       <div class="q-text" id="q-text"></div>
+      <div class="q-translation" id="q-tr"></div>
       <div class="options" id="q-opts"></div>
       <div class="feedback" id="q-fb"></div>
     </div>
@@ -370,7 +408,7 @@ body{
       <button class="btn" id="btn-prev" onclick="prevQ()">&larr; Onceki</button>
       <button class="btn btn-primary" id="btn-next" onclick="nextQ()">Sonraki &rarr;</button>
     </div>
-    <div class="kbd-hint"><kbd class="kbd">1-4</kbd> sec <kbd class="kbd">&larr;&rarr;</kbd> gecis <kbd class="kbd">F</kbd> isaretle</div>
+    <div class="kbd-hint"><kbd class="kbd">1-4</kbd> sec <kbd class="kbd">&larr;&rarr;</kbd> gecis <kbd class="kbd">F</kbd> isaretle <kbd class="kbd">T</kbd> translate</div>
   </div>
 
   <!-- Results -->
@@ -571,7 +609,7 @@ function renderQ(){
     const d=document.createElement('div');d.className='option';d.dataset.letter=L;
     if(sel!==undefined){d.classList.add('disabled');if(L===q.answer)d.classList.add('correct');if(L===sel&&L!==q.answer)d.classList.add('wrong')}
     if(L===sel)d.classList.add('selected');
-    d.innerHTML=`<div class="option-letter">${L}</div><div class="option-text">${q.options[L]||''}</div>`;
+    d.innerHTML=`<div class="option-letter">${L}</div><div class="option-text">${q.options[L]||''}<div class="opt-translation"></div></div>`;
     if(sel===undefined)d.onclick=()=>selectA(L);
     el.appendChild(d);
   });
@@ -585,6 +623,8 @@ function renderQ(){
   document.getElementById('btn-prev').style.visibility=E.idx>0?'visible':'hidden';
   document.getElementById('btn-next').textContent=E.idx===E.questions.length-1?'Bitir':'Sonraki \u2192';
   updateStats();
+  // Translate if enabled
+  translateQuestion();
 }
 
 function selectA(L){
@@ -800,6 +840,79 @@ function showVResults(){
 }
 
 /* ═══════════════════════════════════════════
+   TRANSLATION ENGINE (Free Google Translate)
+   ═══════════════════════════════════════════ */
+let translateOn = JSON.parse(localStorage.getItem('eh_tr') || 'false');
+const trCache = {};
+
+function toggleTranslate() {
+  translateOn = !translateOn;
+  localStorage.setItem('eh_tr', JSON.stringify(translateOn));
+  updateTrButtons();
+  // Re-render current question if in quiz
+  if (document.getElementById('s-quiz').style.display !== 'none') renderQ();
+}
+
+function updateTrButtons() {
+  const home = document.getElementById('tr-toggle-home');
+  const bar = document.getElementById('tr-toggle-bar');
+  const label = document.getElementById('tr-label');
+  if (home) { home.className = 'tr-toggle-home' + (translateOn ? ' on' : ''); }
+  if (bar) { bar.className = 'tr-toggle' + (translateOn ? ' on' : ''); bar.textContent = translateOn ? 'EN ON' : 'EN'; }
+  if (label) { label.textContent = translateOn ? 'EN Translation: ON' : 'EN Translation: OFF'; }
+}
+updateTrButtons();
+
+async function translateText(text) {
+  if (!text || text.length < 3) return '';
+  const key = text.trim().substring(0, 200);
+  if (trCache[key]) return trCache[key];
+
+  try {
+    const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=tr&tl=en&dt=t&q=' + encodeURIComponent(key);
+    const res = await fetch(url);
+    const data = await res.json();
+    const translated = data[0].map(s => s[0]).join('');
+    trCache[key] = translated;
+    return translated;
+  } catch (e) {
+    return '';
+  }
+}
+
+async function translateQuestion() {
+  if (!translateOn) {
+    document.getElementById('q-tr').className = 'q-translation';
+    document.querySelectorAll('.opt-translation').forEach(el => el.className = 'opt-translation');
+    return;
+  }
+
+  const q = E.questions[E.idx];
+  if (!q) return;
+
+  // Translate question text
+  const qTr = document.getElementById('q-tr');
+  qTr.textContent = 'Translating...';
+  qTr.className = 'q-translation show';
+  const qTranslated = await translateText(q.question);
+  // Check we're still on the same question
+  if (E.questions[E.idx] === q) {
+    qTr.textContent = qTranslated || 'Translation unavailable';
+  }
+
+  // Translate each option
+  for (const L of ['A', 'B', 'C', 'D']) {
+    const optEl = document.querySelector(`.option[data-letter="${L}"] .opt-translation`);
+    if (optEl && q.options[L]) {
+      optEl.textContent = '...';
+      optEl.className = 'opt-translation show';
+      const t = await translateText(q.options[L]);
+      if (E.questions[E.idx] === q) optEl.textContent = t || '';
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════
    KEYBOARD
    ═══════════════════════════════════════════ */
 document.addEventListener('keydown',e=>{
@@ -810,6 +923,7 @@ document.addEventListener('keydown',e=>{
     else if(e.key==='ArrowRight'||e.key==='Enter')nextQ();
     else if(e.key==='ArrowLeft')prevQ();
     else if(e.key==='f'||e.key==='F')toggleFlag();
+    else if(e.key==='t'||e.key==='T')toggleTranslate();
     else if(e.key==='Escape')backToHome();
   }
   // Vocab quiz
