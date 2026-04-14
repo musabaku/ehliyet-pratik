@@ -142,6 +142,17 @@ body{
 /* ══════════ FILTER CHIPS ══════════ */
 .chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
 .cat-count{font-size:10px;opacity:.65;margin-left:2px;font-weight:500}
+.vl-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.vl-table th{text-align:left;padding:10px 14px;background:var(--surface2);font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;border-bottom:1px solid var(--line)}
+.vl-table td{padding:10px 14px;border-bottom:1px solid var(--surface2);font-size:14px}
+.vl-table tr:last-child td{border-bottom:none}
+.vl-table tr:hover td{background:var(--surface2)}
+.vl-table .vl-tr{font-weight:600;color:var(--text)}
+.vl-table .vl-en{color:var(--muted);font-style:italic}
+.vl-table .vl-note{font-size:11px;color:var(--muted2);margin-top:2px}
+.vl-table .vl-cat-tag{display:inline-block;padding:2px 6px;background:var(--brand-bg);color:var(--brand);border-radius:4px;font-size:10px;font-weight:500;margin-top:3px}
+.vl-count-badge{display:inline-block;margin-left:8px;padding:2px 8px;background:var(--brand-bg);color:var(--brand);border-radius:12px;font-size:12px;font-weight:600}
+.vl-empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:14px}
 
 /* ══════════ QUESTION CARD ══════════ */
 .q-card{
@@ -448,6 +459,9 @@ body{
       <div class="dir-btn active" id="dir-tr" onclick="setDir('tr')">TR &rarr; EN</div>
       <div class="dir-btn" id="dir-en" onclick="setDir('en')">EN &rarr; TR</div>
     </div>
+    <div style="text-align:center;margin-bottom:12px">
+      <button class="btn btn-primary btn-sm" onclick="showVList()" style="padding:7px 14px;font-size:13px">📋 Kelime Listesi (TR/EN)</button>
+    </div>
     <div class="mode-cards" style="max-width:480px;margin:0 auto 16px">
       <div class="mode-card" onclick="startLearn()"><h3>Ogrenip Quiz</h3><p>10'lu gruplar, once oku sonra quiz</p></div>
       <div class="mode-card" onclick="startVQuiz('mcq')"><h3>MCQ Quiz (20)</h3><p>4 secenekli, rastgele 20</p></div>
@@ -455,6 +469,17 @@ body{
       <div class="mode-card" onclick="startVQuiz('mcq',true)"><h3>Hatalarim</h3><p>Yanlis kelimeleri tekrarla</p></div>
     </div>
     <div style="text-align:center;font-size:12px;color:var(--muted)"><span id="v-home-stats"></span></div>
+  </div>
+
+  <!-- Vocab Full List -->
+  <div id="v-list" style="display:none">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+      <button class="btn btn-sm" onclick="showVHome()">&larr; Geri</button>
+      <h3 id="vl-list-title" style="flex:1;margin:0;font-size:16px"></h3>
+      <input id="vl-search" type="text" placeholder="Ara..." oninput="renderVList()" style="padding:6px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;min-width:140px">
+      <button class="btn btn-sm" onclick="toggleVListSort()" id="vl-sort-btn">A→Z</button>
+    </div>
+    <div id="vl-list-body"></div>
   </div>
 
   <!-- Learn Phase -->
@@ -586,6 +611,58 @@ else{E.updateCatCounts()}
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
 function setCategory(c,el){E.cat=c;document.querySelectorAll('#filter-row .btn').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
+
+/* ═══════════════════════════════════════════
+   VOCAB LIST VIEWER (showVList)
+   Shows all words in the current set/category filter as a clean TR/EN table.
+   Respects the active tab (Tumu/Teknik/Genel) + the active category chip.
+   ═══════════════════════════════════════════ */
+let vlSortAsc=true;
+function showVList(){
+  ['v-home','v-learn','v-quiz','v-results'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none'});
+  document.getElementById('v-list').style.display='block';
+  document.getElementById('vl-search').value='';
+  vlSortAsc=true;
+  document.getElementById('vl-sort-btn').textContent='A→Z';
+  renderVList();
+}
+function toggleVListSort(){
+  vlSortAsc=!vlSortAsc;
+  document.getElementById('vl-sort-btn').textContent=vlSortAsc?'A→Z':'Z→A';
+  renderVList();
+}
+function renderVList(){
+  const pool=getVPool();
+  const searchEl=document.getElementById('vl-search');
+  const search=(searchEl?.value||'').toLowerCase().trim();
+  let filtered=pool.filter(t=>{
+    if(!search)return true;
+    return (t.tr||'').toLowerCase().includes(search)||(t.en||'').toLowerCase().includes(search)||(t.note||'').toLowerCase().includes(search);
+  });
+  filtered.sort((a,b)=>{
+    const ta=(a.tr||'').toLocaleLowerCase('tr'),tb=(b.tr||'').toLocaleLowerCase('tr');
+    return vlSortAsc?ta.localeCompare(tb,'tr'):tb.localeCompare(ta,'tr');
+  });
+  // Title
+  const setLabel=vSet==='all'?'Tumu':vSet==='technical'?'Teknik':'Genel';
+  const catLabel=vCat==='all'?'':` · ${vCat.replace(/\s*\(.*?\)\s*/g,'').trim()}`;
+  document.getElementById('vl-list-title').innerHTML=`${setLabel}${catLabel}<span class="vl-count-badge">${filtered.length} kelime</span>`;
+  // Body
+  const body=document.getElementById('vl-list-body');
+  if(!filtered.length){
+    body.innerHTML='<div class="vl-empty">Kelime bulunamadi.</div>';
+    return;
+  }
+  const showCat=vCat==='all';
+  let html='<table class="vl-table"><thead><tr><th style="width:44%">Türkçe</th><th>English</th></tr></thead><tbody>';
+  filtered.forEach(t=>{
+    const catTag=showCat&&t.category?`<div class="vl-cat-tag">${t.category.replace(/\s*\(.*?\)\s*/g,'').trim()}</div>`:'';
+    const note=t.note?`<div class="vl-note">${t.note}</div>`:'';
+    html+=`<tr><td><div class="vl-tr">${t.tr||''}</div>${catTag}</td><td><div class="vl-en">${t.en||''}</div>${note}</td></tr>`;
+  });
+  html+='</tbody></table>';
+  body.innerHTML=html;
+}
 
 function startQuiz(m){
   if(typeof ALL_QUESTIONS==='undefined'||!ALL_QUESTIONS.length){
@@ -769,7 +846,7 @@ function getVPool(){let t=getAllV().map((v,i)=>({...v,_vi:vSet+'_'+i}));if(vCat!
 function updateVHomeStats(){const t=getAllV().length;document.getElementById('v-home-stats').textContent=`Ogrenilen: ${vMastered.size}/${t} | Hatalar: ${Object.keys(vMistakes).length}`}
 
 function showVHome(){
-  ['v-learn','v-quiz','v-results'].forEach(id=>document.getElementById(id).style.display='none');
+  ['v-learn','v-quiz','v-results','v-list'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none'});
   document.getElementById('v-home').style.display='block';updateVHomeStats();
 }
 
