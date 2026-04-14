@@ -309,6 +309,9 @@ body{
 }
 .tr-toggle-home:hover{background:rgba(255,255,255,.2)}
 .tr-toggle-home.on{background:rgba(255,255,255,.25)}
+.ui-lang-toggle{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.85);padding:5px 10px;border-radius:10px;font-size:11px;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:4px;transition:background .15s;letter-spacing:.03em;margin-left:6px}
+.ui-lang-toggle:hover{background:rgba(255,255,255,.2);color:#fff}
+.ui-lang-toggle.en{background:rgba(255,193,7,.25);border-color:rgba(255,193,7,.45);color:#fff8e1}
 
 .q-translation{
   font-size:13px;color:var(--brand);line-height:1.5;margin-top:8px;
@@ -346,16 +349,19 @@ body{
 
 <!-- ══════════ HERO ══════════ -->
 <div class="hero" id="hero">
-  <h1>Ehliyet Pratik</h1>
-  <p>4,450 soru + 466 kelime | Subat, Mart & Nisan 2026</p>
+  <h1 data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</h1>
+  <p data-tr="4,450 soru + 466 kelime | Subat, Mart & Nisan 2026" data-en="4,450 questions + 466 words | Feb, Mar & Apr 2026">4,450 soru + 466 kelime | Subat, Mart & Nisan 2026</p>
   <div class="main-tabs">
-    <button class="main-tab active" onclick="switchTab('sorular')">Sorular</button>
-    <button class="main-tab" onclick="switchTab('kelime')">Kelime</button>
+    <button class="main-tab active" onclick="switchTab('sorular')" data-tr="Sorular" data-en="Questions">Sorular</button>
+    <button class="main-tab" onclick="switchTab('kelime')" data-tr="Kelime" data-en="Vocabulary">Kelime</button>
   </div>
-  <button class="tr-toggle-home" id="tr-toggle-home" onclick="toggleTranslate()">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 0M4 11l3-8 3 8M12.5 3h3.5a2 2 0 0 1 2 2v1M11 21l5-10 5 10M14.5 17h5"/></svg>
-    <span id="tr-label">EN Translation: OFF</span>
-  </button>
+  <div style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center">
+    <button class="tr-toggle-home" id="tr-toggle-home" onclick="toggleTranslate()" title="Translate question content (Google Translate)">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 0M4 11l3-8 3 8M12.5 3h3.5a2 2 0 0 1 2 2v1M11 21l5-10 5 10M14.5 17h5"/></svg>
+      <span id="tr-label" data-tr="EN Translation: OFF" data-en="EN Translation: OFF">EN Translation: OFF</span>
+    </button>
+    <button class="ui-lang-toggle" id="ui-lang-btn" onclick="toggleUILang()" title="Switch UI language (buttons and labels)">UI: TR</button>
+  </div>
 </div>
 
 <!-- ══════════ TOPBAR (during quiz) ══════════ -->
@@ -363,7 +369,7 @@ body{
   <div class="topbar-left">
     <h2 id="topbar-title">Sinav</h2>
     <div class="stats">
-      <span>Soru <strong id="stat-cur">1</strong>/<strong id="stat-tot">50</strong></span>
+      <span><span data-tr="Soru" data-en="Question">Soru</span> <strong id="stat-cur">1</strong>/<strong id="stat-tot">50</strong></span>
       <span class="s-correct" id="stat-ok">0</span>
       <span class="s-wrong" id="stat-fail">0</span>
       <span class="s-pct" id="stat-pct">-</span>
@@ -372,7 +378,7 @@ body{
   <div class="topbar-right">
     <div class="timer" id="timer">45:00</div>
     <button class="tr-toggle" id="tr-toggle-bar" onclick="toggleTranslate()">EN</button>
-    <button class="tb-btn" onclick="endQuiz()">Bitir</button>
+    <button class="tb-btn" onclick="endQuiz()" data-tr="Bitir" data-en="Finish">Bitir</button>
     <button class="tb-btn" onclick="backToHome()">&#10005;</button>
   </div>
 </div>
@@ -388,19 +394,19 @@ body{
   <!-- Home -->
   <div id="s-home" style="padding-top:8px">
     <div class="mode-cards">
-      <div class="mode-card" onclick="startQuiz('exam')"><h3>Sinav Modu</h3><p>50 soru, 45 dk, gercek format</p></div>
-      <div class="mode-card" onclick="startQuiz('practice')"><h3>Pratik</h3><p>Aninda cevap, zaman yok</p></div>
-      <div class="mode-card" onclick="startQuiz('marathon')"><h3>Maraton</h3><p>Tum 4450 soru, kaydet</p></div>
-      <div class="mode-card" onclick="startQuiz('mistakes')"><h3>Hatalarim</h3><p>Yanlis sorulari tekrarla</p></div>
-      <div class="mode-card" onclick="startQuiz('flagged')"><h3>Isaretlenen</h3><p>Isaret sorulari tekrarla</p></div>
-      <div class="mode-card" onclick="startQuiz('random')"><h3>Rastgele 20</h3><p>Hizli pratik</p></div>
+      <div class="mode-card" onclick="startQuiz('exam')"><h3 data-tr="Sinav Modu" data-en="Exam Mode">Sinav Modu</h3><p data-tr="50 soru, 45 dk, gercek format" data-en="50 questions, 45 min, real format">50 soru, 45 dk, gercek format</p></div>
+      <div class="mode-card" onclick="startQuiz('practice')"><h3 data-tr="Pratik" data-en="Practice">Pratik</h3><p data-tr="Aninda cevap, zaman yok" data-en="Instant feedback, no timer">Aninda cevap, zaman yok</p></div>
+      <div class="mode-card" onclick="startQuiz('marathon')"><h3 data-tr="Maraton" data-en="Marathon">Maraton</h3><p data-tr="Tum 4450 soru, kaydet" data-en="All 4,450 questions, saves progress">Tum 4450 soru, kaydet</p></div>
+      <div class="mode-card" onclick="startQuiz('mistakes')"><h3 data-tr="Hatalarim" data-en="My Mistakes">Hatalarim</h3><p data-tr="Yanlis sorulari tekrarla" data-en="Replay wrong questions">Yanlis sorulari tekrarla</p></div>
+      <div class="mode-card" onclick="startQuiz('flagged')"><h3 data-tr="Isaretlenen" data-en="Flagged">Isaretlenen</h3><p data-tr="Isaret sorulari tekrarla" data-en="Replay flagged questions">Isaret sorulari tekrarla</p></div>
+      <div class="mode-card" onclick="startQuiz('random')"><h3 data-tr="Rastgele 20" data-en="Random 20">Rastgele 20</h3><p data-tr="Hizli pratik" data-en="Quick practice">Hizli pratik</p></div>
     </div>
     <div class="chips" id="filter-row">
-      <button class="btn btn-sm active" onclick="setCategory('all',this)">Tumu <span class="cat-count" id="cnt-all"></span></button>
-      <button class="btn btn-sm" onclick="setCategory('trafik_cevre',this)">Trafik &amp; Cevre <span class="cat-count" id="cnt-trafik_cevre"></span></button>
-      <button class="btn btn-sm" onclick="setCategory('ilk_yardim',this)">Ilk Yardim <span class="cat-count" id="cnt-ilk_yardim"></span></button>
-      <button class="btn btn-sm" onclick="setCategory('arac_teknigi',this)">Arac Teknigi <span class="cat-count" id="cnt-arac_teknigi"></span></button>
-      <button class="btn btn-sm" onclick="setCategory('trafik_adabi',this)">Trafik Adabi <span class="cat-count" id="cnt-trafik_adabi"></span></button>
+      <button class="btn btn-sm active" onclick="setCategory('all',this)"><span data-tr="Tumu" data-en="All">Tumu</span> <span class="cat-count" id="cnt-all"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('trafik_cevre',this)"><span data-tr="Trafik &amp; Cevre" data-en="Traffic &amp; Environment">Trafik &amp; Cevre</span> <span class="cat-count" id="cnt-trafik_cevre"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('ilk_yardim',this)"><span data-tr="Ilk Yardim" data-en="First Aid">Ilk Yardim</span> <span class="cat-count" id="cnt-ilk_yardim"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('arac_teknigi',this)"><span data-tr="Arac Teknigi" data-en="Vehicle Tech">Arac Teknigi</span> <span class="cat-count" id="cnt-arac_teknigi"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('trafik_adabi',this)"><span data-tr="Trafik Adabi" data-en="Traffic Etiquette">Trafik Adabi</span> <span class="cat-count" id="cnt-trafik_adabi"></span></button>
     </div>
     <div style="text-align:center;color:var(--muted);font-size:12px"><span id="marathon-txt"></span></div>
   </div>
@@ -418,25 +424,25 @@ body{
       <div class="feedback" id="q-fb"></div>
     </div>
     <div class="nav-bar">
-      <button class="btn" id="btn-prev" onclick="prevQ()">&larr; Onceki</button>
-      <button class="btn btn-primary" id="btn-next" onclick="nextQ()">Sonraki &rarr;</button>
+      <button class="btn" id="btn-prev" onclick="prevQ()"><span data-tr="&larr; Onceki" data-en="&larr; Previous">&larr; Onceki</span></button>
+      <button class="btn btn-primary" id="btn-next" onclick="nextQ()"><span data-tr="Sonraki &rarr;" data-en="Next &rarr;">Sonraki &rarr;</span></button>
     </div>
-    <div class="kbd-hint"><kbd class="kbd">1-4</kbd> sec <kbd class="kbd">&larr;&rarr;</kbd> gecis <kbd class="kbd">F</kbd> isaretle <kbd class="kbd">T</kbd> translate</div>
+    <div class="kbd-hint"><kbd class="kbd">1-4</kbd> <span data-tr="sec" data-en="select">sec</span> <kbd class="kbd">&larr;&rarr;</kbd> <span data-tr="gecis" data-en="navigate">gecis</span> <kbd class="kbd">F</kbd> <span data-tr="isaretle" data-en="flag">isaretle</span> <kbd class="kbd">T</kbd> translate</div>
   </div>
 
   <!-- Results -->
   <div id="s-results" class="results-wrap" style="display:none">
-    <h2 id="r-title">Sinav Bitti</h2>
-    <div class="score-circle" id="r-circle"><span id="r-pct">0%</span><small>puan</small></div>
+    <h2 id="r-title" data-tr="Sinav Bitti" data-en="Exam Finished">Sinav Bitti</h2>
+    <div class="score-circle" id="r-circle"><span id="r-pct">0%</span><small data-tr="puan" data-en="score">puan</small></div>
     <div class="results-stats">
-      <span style="color:var(--brand)">Dogru: <strong id="r-ok">0</strong></span>
-      <span style="color:var(--danger)">Yanlis: <strong id="r-fail">0</strong></span>
-      <span style="color:var(--muted)">Bos: <strong id="r-empty">0</strong></span>
+      <span style="color:var(--brand)"><span data-tr="Dogru" data-en="Correct">Dogru</span>: <strong id="r-ok">0</strong></span>
+      <span style="color:var(--danger)"><span data-tr="Yanlis" data-en="Wrong">Yanlis</span>: <strong id="r-fail">0</strong></span>
+      <span style="color:var(--muted)"><span data-tr="Bos" data-en="Blank">Bos</span>: <strong id="r-empty">0</strong></span>
     </div>
     <p id="r-verdict" style="font-size:17px;font-weight:600;margin-bottom:20px"></p>
     <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
-      <button class="btn" onclick="reviewMistakes()">Hatalari Incele</button>
-      <button class="btn btn-primary" onclick="backToHome()">Yeni Sinav</button>
+      <button class="btn" onclick="reviewMistakes()" data-tr="Hatalari Incele" data-en="Review Mistakes">Hatalari Incele</button>
+      <button class="btn btn-primary" onclick="backToHome()" data-tr="Yeni Sinav" data-en="New Quiz">Yeni Sinav</button>
     </div>
     <div id="r-review" style="margin-top:28px;text-align:left"></div>
   </div>
@@ -450,9 +456,9 @@ body{
   <!-- Vocab Home -->
   <div id="v-home" style="padding-top:8px">
     <div class="v-tabs" id="v-set-tabs">
-      <button class="v-tab active" onclick="setVSet('all',this)">Tumu (466)</button>
-      <button class="v-tab" onclick="setVSet('technical',this)">Teknik (213)</button>
-      <button class="v-tab" onclick="setVSet('general',this)">Genel (253)</button>
+      <button class="v-tab active" onclick="setVSet('all',this)"><span data-tr="Tumu" data-en="All">Tumu</span> (466)</button>
+      <button class="v-tab" onclick="setVSet('technical',this)"><span data-tr="Teknik" data-en="Technical">Teknik</span> (213)</button>
+      <button class="v-tab" onclick="setVSet('general',this)"><span data-tr="Genel" data-en="General">Genel</span> (253)</button>
     </div>
     <div class="chips" id="v-cat-chips"></div>
     <div class="dir-toggle">
@@ -460,13 +466,13 @@ body{
       <div class="dir-btn" id="dir-en" onclick="setDir('en')">EN &rarr; TR</div>
     </div>
     <div style="text-align:center;margin-bottom:12px">
-      <button class="btn btn-primary btn-sm" onclick="showVList()" style="padding:7px 14px;font-size:13px">📋 Kelime Listesi (TR/EN)</button>
+      <button class="btn btn-primary btn-sm" onclick="showVList()" style="padding:7px 14px;font-size:13px">📋 <span data-tr="Kelime Listesi (TR/EN)" data-en="Word List (TR/EN)">Kelime Listesi (TR/EN)</span></button>
     </div>
     <div class="mode-cards" style="max-width:480px;margin:0 auto 16px">
-      <div class="mode-card" onclick="startLearn()"><h3>Ogrenip Quiz</h3><p>10'lu gruplar, once oku sonra quiz</p></div>
-      <div class="mode-card" onclick="startVQuiz('mcq')"><h3>MCQ Quiz (20)</h3><p>4 secenekli, rastgele 20</p></div>
-      <div class="mode-card" onclick="startVQuiz('type')"><h3>Yaz Quiz (20)</h3><p>Cevabi yaz, rastgele 20</p></div>
-      <div class="mode-card" onclick="startVQuiz('mcq',true)"><h3>Hatalarim</h3><p>Yanlis kelimeleri tekrarla</p></div>
+      <div class="mode-card" onclick="startLearn()"><h3 data-tr="Ogrenip Quiz" data-en="Learn &amp; Quiz">Ogrenip Quiz</h3><p data-tr="10'lu gruplar, once oku sonra quiz" data-en="Batches of 10, study then quiz">10'lu gruplar, once oku sonra quiz</p></div>
+      <div class="mode-card" onclick="startVQuiz('mcq')"><h3>MCQ Quiz (20)</h3><p data-tr="4 secenekli, rastgele 20" data-en="4 options, random 20">4 secenekli, rastgele 20</p></div>
+      <div class="mode-card" onclick="startVQuiz('type')"><h3 data-tr="Yaz Quiz (20)" data-en="Type Quiz (20)">Yaz Quiz (20)</h3><p data-tr="Cevabi yaz, rastgele 20" data-en="Type the answer, random 20">Cevabi yaz, rastgele 20</p></div>
+      <div class="mode-card" onclick="startVQuiz('mcq',true)"><h3 data-tr="Hatalarim" data-en="My Mistakes">Hatalarim</h3><p data-tr="Yanlis kelimeleri tekrarla" data-en="Replay wrong words">Yanlis kelimeleri tekrarla</p></div>
     </div>
     <div style="text-align:center;font-size:12px;color:var(--muted)"><span id="v-home-stats"></span></div>
   </div>
@@ -474,9 +480,9 @@ body{
   <!-- Vocab Full List -->
   <div id="v-list" style="display:none">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
-      <button class="btn btn-sm" onclick="showVHome()">&larr; Geri</button>
+      <button class="btn btn-sm" onclick="showVHome()"><span data-tr="&larr; Geri" data-en="&larr; Back">&larr; Geri</span></button>
       <h3 id="vl-list-title" style="flex:1;margin:0;font-size:16px"></h3>
-      <input id="vl-search" type="text" placeholder="Ara..." oninput="renderVList()" style="padding:6px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;min-width:140px">
+      <input id="vl-search" type="text" placeholder="Ara..." data-tr-placeholder="Ara..." data-en-placeholder="Search..." oninput="renderVList()" style="padding:6px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;min-width:140px">
       <button class="btn btn-sm" onclick="toggleVListSort()" id="vl-sort-btn">A→Z</button>
     </div>
     <div id="vl-list-body"></div>
@@ -489,8 +495,8 @@ body{
       <div id="vl-terms"></div>
     </div>
     <div style="display:flex;justify-content:center;gap:8px">
-      <button class="btn" onclick="showVHome()">Geri</button>
-      <button class="btn btn-primary btn-lg" onclick="startBatchQuiz()">Quiz Yap</button>
+      <button class="btn" onclick="showVHome()" data-tr="Geri" data-en="Back">Geri</button>
+      <button class="btn btn-primary btn-lg" onclick="startBatchQuiz()" data-tr="Quiz Yap" data-en="Start Quiz">Quiz Yap</button>
     </div>
   </div>
 
@@ -600,17 +606,98 @@ const E={
   },
   updateMarathonText(){
     const el=document.getElementById('marathon-txt');
-    if(el&&this.marathon>0)el.textContent=`Maraton: ${this.marathon}/4450 (${Math.round(this.marathon/4450*100)}%)`;
+    if(el&&this.marathon>0){
+      const label = (typeof uiLang !== 'undefined' && uiLang === 'en') ? 'Marathon' : 'Maraton';
+      el.textContent=`${label}: ${this.marathon}/4450 (${Math.round(this.marathon/4450*100)}%)`;
+    }
   }
 };
 E.updateMarathonText();
-// Populate category counts in the filter chips once DOM is ready
-if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>E.updateCatCounts())}
-else{E.updateCatCounts()}
+// Populate category counts + apply saved UI language on DOM ready
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{E.updateCatCounts();applyUILang();})}
+else{E.updateCatCounts();applyUILang();}
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
 function setCategory(c,el){E.cat=c;document.querySelectorAll('#filter-row .btn').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
+
+/* ═══════════════════════════════════════════
+   UI LANGUAGE TOGGLE (separate from Google Translate)
+   Flips every static label between Turkish and English using
+   data-tr / data-en attributes. Does NOT affect question content
+   translation (that's still the EN Translation / Google Translate button).
+   ═══════════════════════════════════════════ */
+let uiLang = localStorage.getItem('eh_uilang') || 'tr';
+
+// Dynamic labels (set by JS, not in HTML)
+const UI_DYN = {
+  tr: {
+    modes: {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20'},
+    soru: 'Soru',
+    kelimeLit: 'kelime',
+    grup: 'Grup',
+    kelimeWord: 'kelime',
+    aktifTab: 'Kelime',
+    questionQ: 'Soru',
+  },
+  en: {
+    modes: {exam:'Exam',practice:'Practice',marathon:'Marathon',mistakes:'Mistakes',flagged:'Flagged',random:'Random 20'},
+    soru: 'Question',
+    kelimeLit: 'words',
+    grup: 'Group',
+    kelimeWord: 'words',
+    aktifTab: 'Vocabulary',
+    questionQ: 'Question',
+  }
+};
+
+function toggleUILang(){
+  uiLang = uiLang === 'tr' ? 'en' : 'tr';
+  localStorage.setItem('eh_uilang', uiLang);
+  applyUILang();
+}
+
+function applyUILang(){
+  const L = uiLang;
+  // Swap text for every tagged element
+  document.querySelectorAll('[data-tr]').forEach(el => {
+    const val = el.dataset[L];
+    if (val !== undefined) el.innerHTML = val;
+  });
+  // Swap placeholders for input elements
+  document.querySelectorAll('[data-tr-placeholder]').forEach(el => {
+    const val = L === 'en' ? el.dataset.enPlaceholder : el.dataset.trPlaceholder;
+    if (val !== undefined) el.placeholder = val;
+  });
+  // Update the toggle button itself
+  const btn = document.getElementById('ui-lang-btn');
+  if (btn){
+    btn.textContent = 'UI: ' + L.toUpperCase();
+    btn.className = 'ui-lang-toggle' + (L === 'en' ? ' en' : '');
+  }
+  // Update dynamic labels currently visible
+  updateDynamicLabels();
+}
+
+function updateDynamicLabels(){
+  const dyn = UI_DYN[uiLang];
+  // Topbar title if a quiz is running
+  const tt = document.getElementById('topbar-title');
+  if (tt && E.mode && dyn.modes[E.mode]) tt.textContent = dyn.modes[E.mode];
+  // Quiz question number prefix (q-num = "Soru X/Y")
+  const qn = document.getElementById('q-num');
+  if (qn && E.questions && E.questions.length){
+    qn.textContent = `${dyn.questionQ} ${E.idx+1}/${E.questions.length}`;
+  }
+  // Marathon text
+  if (E.updateMarathonText) E.updateMarathonText();
+  // Vocab home stats
+  if (typeof updateVHomeStats === 'function') try { updateVHomeStats(); } catch(e) {}
+  // Rebuild vocab category chips (their "Tumu/All" label depends on uiLang)
+  if (typeof buildVCatChips === 'function' && document.getElementById('tab-kelime').style.display !== 'none') {
+    try { buildVCatChips(); } catch(e) {}
+  }
+}
 
 /* ═══════════════════════════════════════════
    VOCAB LIST VIEWER (showVList)
@@ -717,7 +804,7 @@ function startQuiz(m){
   document.getElementById('progress-wrap').style.display='block';
   document.getElementById('stat-tot').textContent=E.questions.length;
   document.getElementById('timer').style.display=m==='exam'?'block':'none';
-  const t={exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20'};
+  const t=(typeof UI_DYN !== 'undefined' ? UI_DYN[uiLang].modes : {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20'});
   document.getElementById('topbar-title').textContent=t[m]||'Quiz';
   renderQ();
 }
@@ -734,7 +821,7 @@ function updateTimerD(){
 
 function renderQ(){
   const q=E.questions[E.idx];if(!q)return;
-  document.getElementById('q-num').textContent=`Soru ${E.idx+1}/${E.questions.length}`;
+  document.getElementById('q-num').textContent=`${(typeof UI_DYN !== 'undefined' ? UI_DYN[uiLang].questionQ : 'Soru')} ${E.idx+1}/${E.questions.length}`;
   document.getElementById('q-text').textContent=q.question;
   document.getElementById('stat-cur').textContent=E.idx+1;
   document.getElementById('q-flag').className='q-flag'+(E.flagged.has(q._oi)?' flagged':'');
@@ -833,7 +920,8 @@ function getAllV(){return vSet==='all'?[...VOCAB_DATA.technical,...VOCAB_DATA.ge
 function buildVCatChips(){
   const terms=getAllV(),cats=[...new Set(terms.map(t=>t.category))];
   const el=document.getElementById('v-cat-chips');
-  el.innerHTML='<button class="btn btn-sm active" onclick="setVCat(\'all\',this)">Tumu</button>';
+  const allLabel=(typeof uiLang!=='undefined'&&uiLang==='en')?'All':'Tumu';
+  el.innerHTML=`<button class="btn btn-sm active" onclick="setVCat('all',this)">${allLabel}</button>`;
   cats.forEach(c=>{
     const short=c.replace(/\s*\(.*?\)\s*/g,'').trim(),cnt=terms.filter(t=>t.category===c).length;
     el.innerHTML+=`<button class="btn btn-sm" onclick="setVCat('${c.replace(/'/g,"\\'")}',this)">${short} (${cnt})</button>`;
