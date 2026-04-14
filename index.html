@@ -350,7 +350,7 @@ body{
 <!-- ══════════ HERO ══════════ -->
 <div class="hero" id="hero">
   <h1 data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</h1>
-  <p data-tr="4,450 soru + 466 kelime | Subat, Mart & Nisan 2026" data-en="4,450 questions + 466 words | Feb, Mar & Apr 2026">4,450 soru + 466 kelime | Subat, Mart & Nisan 2026</p>
+  <p><span data-tr="4,450 soru +" data-en="4,450 questions +">4,450 soru +</span> <span id="hero-vocab-count">466</span> <span data-tr="kelime | Subat, Mart & Nisan 2026" data-en="words | Feb, Mar & Apr 2026">kelime | Subat, Mart & Nisan 2026</span></p>
   <div class="main-tabs">
     <button class="main-tab active" onclick="switchTab('sorular')" data-tr="Sorular" data-en="Questions">Sorular</button>
     <button class="main-tab" onclick="switchTab('kelime')" data-tr="Kelime" data-en="Vocabulary">Kelime</button>
@@ -456,9 +456,9 @@ body{
   <!-- Vocab Home -->
   <div id="v-home" style="padding-top:8px">
     <div class="v-tabs" id="v-set-tabs">
-      <button class="v-tab active" onclick="setVSet('all',this)"><span data-tr="Tumu" data-en="All">Tumu</span> (466)</button>
-      <button class="v-tab" onclick="setVSet('technical',this)"><span data-tr="Teknik" data-en="Technical">Teknik</span> (213)</button>
-      <button class="v-tab" onclick="setVSet('general',this)"><span data-tr="Genel" data-en="General">Genel</span> (253)</button>
+      <button class="v-tab active" onclick="setVSet('all',this)"><span data-tr="Tumu" data-en="All">Tumu</span> (<span id="v-count-all">466</span>)</button>
+      <button class="v-tab" onclick="setVSet('technical',this)"><span data-tr="Teknik" data-en="Technical">Teknik</span> (<span id="v-count-technical">213</span>)</button>
+      <button class="v-tab" onclick="setVSet('general',this)"><span data-tr="Genel" data-en="General">Genel</span> (<span id="v-count-general">253</span>)</button>
     </div>
     <div class="chips" id="v-cat-chips"></div>
     <div class="dir-toggle">
@@ -541,8 +541,9 @@ body{
 
 </div><!-- /container -->
 
-<script src="questions_data.js"></script>
-<script src="vocab_data.js"></script>
+<!-- Cache-bust version tags — bump these whenever questions_data.js or vocab_data.js changes -->
+<script src="questions_data.js?v=4450"></script>
+<script src="vocab_data.js?v=1293"></script>
 <script>
 /* ═══════════════════════════════════════════
    TAB SWITCHING
@@ -613,9 +614,23 @@ const E={
   }
 };
 E.updateMarathonText();
-// Populate category counts + apply saved UI language on DOM ready
-if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{E.updateCatCounts();applyUILang();})}
-else{E.updateCatCounts();applyUILang();}
+
+// Update all vocab counts from the actual VOCAB_DATA arrays (was hardcoded).
+function updateVCounts(){
+  if(typeof VOCAB_DATA==='undefined')return;
+  const tech=VOCAB_DATA.technical?.length||0;
+  const gen=VOCAB_DATA.general?.length||0;
+  const all=tech+gen;
+  const set=(id,n)=>{const el=document.getElementById(id);if(el)el.textContent=n};
+  set('v-count-all',all);
+  set('v-count-technical',tech);
+  set('v-count-general',gen);
+  set('hero-vocab-count',all);
+}
+
+// Populate category counts + vocab counts + apply saved UI language on DOM ready
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{E.updateCatCounts();updateVCounts();applyUILang();})}
+else{E.updateCatCounts();updateVCounts();applyUILang();}
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
