@@ -141,6 +141,7 @@ body{
 
 /* ══════════ FILTER CHIPS ══════════ */
 .chips{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-bottom:16px}
+.cat-count{font-size:10px;opacity:.65;margin-left:2px;font-weight:500}
 
 /* ══════════ QUESTION CARD ══════════ */
 .q-card{
@@ -335,7 +336,7 @@ body{
 <!-- ══════════ HERO ══════════ -->
 <div class="hero" id="hero">
   <h1>Ehliyet Pratik</h1>
-  <p>2,950 soru + 466 kelime | Subat & Mart 2026</p>
+  <p>4,450 soru + 466 kelime | Subat, Mart & Nisan 2026</p>
   <div class="main-tabs">
     <button class="main-tab active" onclick="switchTab('sorular')">Sorular</button>
     <button class="main-tab" onclick="switchTab('kelime')">Kelime</button>
@@ -378,16 +379,17 @@ body{
     <div class="mode-cards">
       <div class="mode-card" onclick="startQuiz('exam')"><h3>Sinav Modu</h3><p>50 soru, 45 dk, gercek format</p></div>
       <div class="mode-card" onclick="startQuiz('practice')"><h3>Pratik</h3><p>Aninda cevap, zaman yok</p></div>
-      <div class="mode-card" onclick="startQuiz('marathon')"><h3>Maraton</h3><p>Tum 2950 soru, kaydet</p></div>
+      <div class="mode-card" onclick="startQuiz('marathon')"><h3>Maraton</h3><p>Tum 4450 soru, kaydet</p></div>
       <div class="mode-card" onclick="startQuiz('mistakes')"><h3>Hatalarim</h3><p>Yanlis sorulari tekrarla</p></div>
       <div class="mode-card" onclick="startQuiz('flagged')"><h3>Isaretlenen</h3><p>Isaret sorulari tekrarla</p></div>
       <div class="mode-card" onclick="startQuiz('random')"><h3>Rastgele 20</h3><p>Hizli pratik</p></div>
     </div>
     <div class="chips" id="filter-row">
-      <button class="btn btn-sm active" onclick="setCategory('all',this)">Tumu</button>
-      <button class="btn btn-sm" onclick="setCategory('ilkyardim',this)">Ilk Yardim</button>
-      <button class="btn btn-sm" onclick="setCategory('trafik',this)">Trafik</button>
-      <button class="btn btn-sm" onclick="setCategory('motor',this)">Motor</button>
+      <button class="btn btn-sm active" onclick="setCategory('all',this)">Tumu <span class="cat-count" id="cnt-all"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('trafik_cevre',this)">Trafik &amp; Cevre <span class="cat-count" id="cnt-trafik_cevre"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('ilk_yardim',this)">Ilk Yardim <span class="cat-count" id="cnt-ilk_yardim"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('arac_teknigi',this)">Arac Teknigi <span class="cat-count" id="cnt-arac_teknigi"></span></button>
+      <button class="btn btn-sm" onclick="setCategory('trafik_adabi',this)">Trafik Adabi <span class="cat-count" id="cnt-trafik_adabi"></span></button>
     </div>
     <div style="text-align:center;color:var(--muted);font-size:12px"><span id="marathon-txt"></span></div>
   </div>
@@ -545,38 +547,95 @@ const E={
   mistakes:JSON.parse(localStorage.getItem('eh_mis')||'{}'),
   marathon:parseInt(localStorage.getItem('eh_mar')||'0'),
 
+  // Prefer the pre-computed `category` field (added by categorize_questions.py).
+  // Fall back to regex classification for any legacy question without a category.
   detectCat(q){
+    if(q&&q.category)return q.category;
     const a=((q.question||'')+' '+Object.values(q.options||{}).join(' ')).toLowerCase();
-    if(/ilk yard|kazazede|solunum|kalp masaj|turnike|kırık|kanama|yanık|bilinç|koma|nabız|heimlich|sedye|pansuman|şok poz|temel yaşam|suni sol/.test(a))return'ilkyardim';
-    if(/motor|yağ|akü|buji|silindir|piston|egzoz|radyatör|debriyaj|vites|ateşleme|soğutma|şarj|filtre|yakıt sis|marş|alternatör|termostat|antifriz|süspansiyon|fren sis|lastik.*basınc|hidrolik|katalitik|distribütör/.test(a))return'motor';
-    return'trafik';
+    if(/ilk yard|kazazede|solunum|kalp masaj|turnike|kırık|kanama|yanık|bilinç|koma|nabız|heimlich|sedye|pansuman|şok poz|temel yaşam|suni sol/.test(a))return'ilk_yardim';
+    if(/motor|yağ|akü|buji|silindir|piston|egzoz|radyatör|debriyaj|vites|ateşleme|soğutma|şarj|filtre|yakıt sis|marş|alternatör|termostat|antifriz|süspansiyon|fren sis|lastik.*basınc|hidrolik|katalitik|distribütör/.test(a))return'arac_teknigi';
+    if(/trafik adab|adap|nezaket|saygı|empati|öfke|stres|hak ihlal|trafik kültür/.test(a))return'trafik_adabi';
+    return'trafik_cevre';
+  },
+  CAT_LABELS:{
+    all:'Tum sorular',
+    trafik_cevre:'Trafik & Cevre',
+    ilk_yardim:'Ilk Yardim',
+    arac_teknigi:'Arac Teknigi',
+    trafik_adabi:'Trafik Adabi'
+  },
+  updateCatCounts(){
+    if(typeof ALL_QUESTIONS==='undefined')return;
+    const counts={all:ALL_QUESTIONS.length,trafik_cevre:0,ilk_yardim:0,arac_teknigi:0,trafik_adabi:0};
+    ALL_QUESTIONS.forEach(q=>{const c=this.detectCat(q);if(counts[c]!==undefined)counts[c]++});
+    for(const k in counts){
+      const el=document.getElementById('cnt-'+k);
+      if(el)el.textContent='('+counts[k]+')';
+    }
   },
   updateMarathonText(){
     const el=document.getElementById('marathon-txt');
-    if(el&&this.marathon>0)el.textContent=`Maraton: ${this.marathon}/2950 (${Math.round(this.marathon/2950*100)}%)`;
+    if(el&&this.marathon>0)el.textContent=`Maraton: ${this.marathon}/4450 (${Math.round(this.marathon/4450*100)}%)`;
   }
 };
 E.updateMarathonText();
+// Populate category counts in the filter chips once DOM is ready
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>E.updateCatCounts())}
+else{E.updateCatCounts()}
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
 function setCategory(c,el){E.cat=c;document.querySelectorAll('#filter-row .btn').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
 
 function startQuiz(m){
+  if(typeof ALL_QUESTIONS==='undefined'||!ALL_QUESTIONS.length){
+    alert('Soru verisi yuklenemedi. questions_data.js dosyasini kontrol edin.');
+    return;
+  }
   E.mode=m;E.answers={};E.ok=0;E.fail=0;E.idx=0;
   let pool=ALL_QUESTIONS.map((q,i)=>({...q,_oi:i}));
   if(E.cat!=='all')pool=pool.filter(q=>E.detectCat(q)===E.cat);
 
-  if(m==='exam'){E.questions=shuffle([...pool]).slice(0,50);startTimer(45*60)}
-  else if(m==='practice')E.questions=shuffle([...pool]).slice(0,50);
-  else if(m==='marathon'){E.questions=pool;E.idx=Math.min(E.marathon,pool.length-1)}
-  else if(m==='mistakes'){const ids=Object.keys(E.mistakes).map(Number);E.questions=pool.filter(q=>ids.includes(q._oi));if(!E.questions.length){alert('Hata yok!');return}shuffle(E.questions)}
-  else if(m==='flagged'){E.questions=pool.filter(q=>E.flagged.has(q._oi));if(!E.questions.length){alert('Isaret yok.');return}}
-  else if(m==='random')E.questions=shuffle([...pool]).slice(0,20);
+  // Empty-pool guard — prevents silent fail when a category has no questions
+  if(!pool.length){
+    const catName=E.CAT_LABELS[E.cat]||E.cat;
+    alert(`Bu kategoride (${catName}) hic soru bulunamadi.`);
+    return;
+  }
+
+  if(m==='exam'){
+    if(pool.length<50){alert(`Sinav modu 50 soru gerektirir. Bu kategoride sadece ${pool.length} soru var. "Pratik" modunu deneyin.`);return}
+    E.questions=shuffle([...pool]).slice(0,50);startTimer(45*60)
+  }
+  else if(m==='practice')E.questions=shuffle([...pool]).slice(0,Math.min(50,pool.length));
+  else if(m==='marathon'){
+    E.questions=pool;
+    // Clamp to valid range — fixes crash when saved marathon index > new pool length
+    E.idx=Math.max(0,Math.min(E.marathon,pool.length-1));
+  }
+  else if(m==='mistakes'){
+    const ids=Object.keys(E.mistakes).map(Number);
+    E.questions=pool.filter(q=>ids.includes(q._oi));
+    if(!E.questions.length){alert('Hatali soru yok! Harika.');return}
+    shuffle(E.questions)
+  }
+  else if(m==='flagged'){
+    E.questions=pool.filter(q=>E.flagged.has(q._oi));
+    if(!E.questions.length){alert('Isaretli soru yok. Yildiz (F tusu) ile isaretleyin.');return}
+  }
+  else if(m==='random')E.questions=shuffle([...pool]).slice(0,Math.min(20,pool.length));
+  else {alert('Bilinmeyen mod: '+m);return}
+
+  // Final safety: if after filtering we still have zero questions, bail out
+  if(!E.questions||!E.questions.length){
+    alert('Soru listesi olusturulamadi.');
+    return;
+  }
 
   document.getElementById('hero').style.display='none';
   document.getElementById('s-home').style.display='none';
   document.getElementById('s-quiz').style.display='block';
+  document.getElementById('s-results').style.display='none';
   document.getElementById('topbar').style.display='flex';
   document.getElementById('progress-wrap').style.display='block';
   document.getElementById('stat-tot').textContent=E.questions.length;
