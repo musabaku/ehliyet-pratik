@@ -58,7 +58,7 @@ body{
   background:rgba(255,255,255,.12);
   border-radius:10px;
   padding:3px;
-  max-width:340px;
+  max-width:460px;
   margin:0 auto;
 }
 .main-tab{
@@ -360,6 +360,14 @@ body{
 .enrich-panel p{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.45}
 .enrich-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
 .enrich-stat{font-size:11px;color:var(--muted2);text-align:center;margin-top:8px}
+.study-panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;margin:0 0 16px;box-shadow:var(--shadow);
+}
+.study-panel h3{font-size:14px;margin-bottom:4px}
+.study-panel p{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.45}
+.study-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.study-actions .btn{text-align:center;text-decoration:none}
 
 .opt-translation{
   font-size:11px;color:var(--brand);margin-top:3px;font-style:italic;
@@ -395,6 +403,7 @@ body{
   <div class="main-tabs">
     <button class="main-tab active" onclick="switchTab('sorular')" data-tr="Sorular" data-en="Questions">Sorular</button>
     <button class="main-tab" onclick="switchTab('kelime')" data-tr="Kelime" data-en="Vocabulary">Kelime</button>
+    <a class="main-tab" href="notes/" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px" data-tr="Ders" data-en="Study">Ders</a>
     <a class="main-tab" href="pics/" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px" data-tr="📚 Slaytlar" data-en="📚 Slides">📚 Slaytlar</a>
   </div>
   <div style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center">
@@ -443,6 +452,16 @@ body{
       <div class="mode-card" onclick="startQuiz('mistakes')"><h3 data-tr="Hatalarim" data-en="My Mistakes">Hatalarim</h3><p data-tr="Yanlis sorulari tekrarla" data-en="Replay wrong questions">Yanlis sorulari tekrarla</p></div>
       <div class="mode-card" onclick="startQuiz('flagged')"><h3 data-tr="Isaretlenen" data-en="Flagged">Isaretlenen</h3><p data-tr="Isaret sorulari tekrarla" data-en="Replay flagged questions">Isaret sorulari tekrarla</p></div>
       <div class="mode-card" onclick="startQuiz('random')"><h3 data-tr="Rastgele 20" data-en="Random 20">Rastgele 20</h3><p data-tr="Hizli pratik" data-en="Quick practice">Hizli pratik</p></div>
+    </div>
+    <div class="study-panel">
+      <h3 data-tr="Ders Calisma" data-en="Study Materials">Ders Calisma</h3>
+      <p data-tr="Konu notlari, portal e-kitabi, temiz PDF metinleri ve slayt galerileri tek yerde." data-en="Topic notes, portal e-book, clean PDF text, and slide galleries in one place.">Konu notlari, portal e-kitabi, temiz PDF metinleri ve slayt galerileri tek yerde.</p>
+      <div class="study-actions">
+        <a class="btn btn-sm" href="notes/" data-tr="Ders Notlari" data-en="Study Notes">Ders Notlari</a>
+        <a class="btn btn-sm" href="ekitap/" data-tr="E-Kitap" data-en="E-Book">E-Kitap</a>
+        <a class="btn btn-sm" href="ders-kitabi/" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</a>
+        <a class="btn btn-sm" href="pics/" data-tr="Slaytlar" data-en="Slides">Slaytlar</a>
+      </div>
     </div>
     <div class="chips" id="filter-row">
       <button class="btn btn-sm active" onclick="setCategory('all',this)"><span data-tr="Tumu" data-en="All">Tumu</span> <span class="cat-count" id="cnt-all"></span></button>
