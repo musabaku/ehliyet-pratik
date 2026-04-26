@@ -41,41 +41,63 @@ body{
   background-attachment:fixed;
 }
 
-/* ══════════ HERO / NAV ══════════ */
+/* ══════════ APP SHELL / SIDEBAR ══════════ */
+.app-main{
+  min-height:100vh;
+  margin-left:280px;
+}
 .hero{
-  background:linear-gradient(122deg,#11472d,#227245);
+  position:fixed;
+  inset:0 auto 0 0;
+  width:280px;
+  z-index:120;
+  background:linear-gradient(180deg,#0f4229,#1d7044);
   color:#fff;
-  padding:28px 20px 20px;
-  text-align:center;
+  padding:20px 16px;
+  overflow:auto;
+  box-shadow:2px 0 18px rgba(25,18,10,.14);
 }
-.hero h1{font-size:22px;font-weight:700;margin-bottom:2px;letter-spacing:-.3px}
-.hero p{font-size:13px;opacity:.75;margin-bottom:16px}
-
-.main-tabs{
+.hero h1{font-size:20px;font-weight:700;margin-bottom:5px;letter-spacing:0}
+.hero p{font-size:12px;opacity:.76;margin-bottom:18px;line-height:1.45}
+.side-section{padding:14px 0;border-top:1px solid rgba(255,255,255,.14)}
+.side-section:first-of-type{border-top:0;padding-top:0}
+.side-label{
+  font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.55);margin-bottom:8px;
+}
+.main-tabs,.side-links{display:grid;gap:6px}
+.main-tab,.side-link{
+  width:100%;
   display:flex;
-  gap:4px;
-  justify-content:center;
-  background:rgba(255,255,255,.12);
-  border-radius:10px;
-  padding:3px;
-  max-width:460px;
-  margin:0 auto;
-}
-.main-tab{
-  flex:1;
-  padding:8px 16px;
-  text-align:center;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 11px;
+  text-align:left;
   border-radius:8px;
   cursor:pointer;
   font-size:13px;
   font-weight:600;
-  color:rgba(255,255,255,.7);
+  color:rgba(255,255,255,.78);
   transition:all .15s;
-  border:none;
+  border:1px solid transparent;
   background:none;
+  text-decoration:none;
+  font-family:inherit;
 }
-.main-tab:hover{color:#fff}
-.main-tab.active{background:rgba(255,255,255,.2);color:#fff}
+.main-tab:hover,.side-link:hover{color:#fff;background:rgba(255,255,255,.11)}
+.main-tab.active{background:rgba(255,255,255,.18);color:#fff;border-color:rgba(255,255,255,.18)}
+.side-link span:last-child,.main-tab span:last-child{font-size:11px;color:rgba(255,255,255,.56);font-weight:500}
+.side-actions{display:grid;gap:8px}
+.side-actions .tr-toggle-home,.side-actions .ui-lang-toggle{
+  width:100%;
+  justify-content:center;
+  margin:0;
+}
+.side-note{
+  font-size:11px;line-height:1.45;color:rgba(255,255,255,.62);
+  padding:10px 11px;background:rgba(255,255,255,.08);border-radius:8px;
+}
 
 /* ══════════ TOPBAR (quiz active) ══════════ */
 .topbar{
@@ -110,7 +132,7 @@ body{
 .progress-bar{height:100%;background:linear-gradient(90deg,var(--brand),#34d399);transition:width .3s;width:0%}
 
 /* ══════════ CONTAINER ══════════ */
-.container{max-width:680px;margin:0 auto;padding:24px 16px 100px}
+.container{max-width:760px;margin:0 auto;padding:32px 16px 100px}
 
 /* ══════════ SHARED: BUTTONS ══════════ */
 .btn{
@@ -378,9 +400,26 @@ body{
 .opt-translation.show{display:block}
 
 /* ══════════ RESPONSIVE ══════════ */
-@media(max-width:600px){
-  .hero{padding:20px 14px 16px}
+@media(max-width:900px){
+  .app-main{margin-left:0}
+  .hero{
+    position:relative;
+    inset:auto;
+    width:auto;
+    max-height:none;
+    padding:18px 14px;
+    box-shadow:none;
+  }
   .hero h1{font-size:19px}
+  .hero p{margin-bottom:12px}
+  .side-section{padding:10px 0}
+  .main-tabs{grid-template-columns:1fr 1fr}
+  .side-links{grid-template-columns:1fr 1fr}
+  .side-actions{grid-template-columns:1fr 1fr 1fr}
+  .side-note{display:none}
+}
+
+@media(max-width:600px){
   .topbar{padding:8px 12px}
   .topbar h2{font-size:13px}
   .q-card,.vq-card{padding:20px 16px}
@@ -388,6 +427,8 @@ body{
   .option{padding:11px 13px}
   .option-text{font-size:13px}
   .container{padding:16px 12px 80px}
+  .side-links,.side-actions{grid-template-columns:1fr 1fr}
+  .side-actions .tr-toggle-home{grid-column:1/-1}
   .kbd-hint{display:none}
   .mode-cards{grid-template-columns:1fr 1fr}
   .vq-choices{grid-template-columns:1fr}
@@ -398,24 +439,47 @@ body{
 </head>
 <body>
 
-<!-- ══════════ HERO ══════════ -->
+<!-- ══════════ SIDEBAR ══════════ -->
 <div class="hero" id="hero">
   <h1 data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</h1>
   <p><span data-tr="4,450 soru +" data-en="4,450 questions +">4,450 soru +</span> <span id="hero-vocab-count">466</span> <span data-tr="kelime | Subat, Mart & Nisan 2026" data-en="words | Feb, Mar & Apr 2026">kelime | Subat, Mart & Nisan 2026</span></p>
-  <div class="main-tabs">
-    <button class="main-tab active" onclick="switchTab('sorular')" data-tr="Sorular" data-en="Questions">Sorular</button>
-    <button class="main-tab" onclick="switchTab('kelime')" data-tr="Kelime" data-en="Vocabulary">Kelime</button>
-    <a class="main-tab" href="notes/" style="text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px" data-tr="Ders" data-en="Study">Ders</a>
-    <a class="main-tab" href="pics/" style="text-decoration:none;display:inline-flex;align-items:center;gap:6px" data-tr="📚 Slaytlar" data-en="📚 Slides">📚 Slaytlar</a>
+
+  <div class="side-section">
+    <div class="side-label" data-tr="Calisma" data-en="Practice">Calisma</div>
+    <div class="main-tabs">
+      <button class="main-tab active" data-tab="sorular" onclick="switchTab('sorular')"><span data-tr="Sorular" data-en="Questions">Sorular</span><span>4450</span></button>
+      <button class="main-tab" data-tab="kelime" onclick="switchTab('kelime')"><span data-tr="Kelime" data-en="Vocabulary">Kelime</span><span id="side-vocab-count">466</span></button>
+    </div>
   </div>
-  <div style="display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:center">
-    <button class="tr-toggle-home" id="tr-toggle-home" onclick="toggleTranslate()" title="Translate question content (Google Translate)">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 0M4 11l3-8 3 8M12.5 3h3.5a2 2 0 0 1 2 2v1M11 21l5-10 5 10M14.5 17h5"/></svg>
-      <span id="tr-label" data-tr="EN Translation: OFF" data-en="EN Translation: OFF">EN Translation: OFF</span>
-    </button>
-    <button class="ui-lang-toggle" id="ui-lang-btn" onclick="toggleUILang()" title="Switch UI language (buttons and labels)">UI: TR</button>
+
+  <div class="side-section">
+    <div class="side-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
+    <div class="side-links">
+      <a class="side-link" href="notes/"><span data-tr="Ders Notlari" data-en="Study Notes">Ders Notlari</span><span>40</span></a>
+      <a class="side-link" href="ekitap/"><span data-tr="E-Kitap" data-en="E-Book">E-Kitap</span><span>63</span></a>
+      <a class="side-link" href="ders-kitabi/"><span data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span><span>240</span></a>
+      <a class="side-link" href="pics/"><span data-tr="Slaytlar" data-en="Slides">Slaytlar</span><span>galeri</span></a>
+    </div>
+  </div>
+
+  <div class="side-section">
+    <div class="side-label" data-tr="Araclar" data-en="Tools">Araclar</div>
+    <div class="side-actions">
+      <button class="main-tab" onclick="goHome()"><span data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</span><span>Esc</span></button>
+      <button class="tr-toggle-home" id="tr-toggle-home" onclick="toggleTranslate()" title="Translate question content (Google Translate)">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 0M4 11l3-8 3 8M12.5 3h3.5a2 2 0 0 1 2 2v1M11 21l5-10 5 10M14.5 17h5"/></svg>
+        <span id="tr-label" data-tr="EN Translation: OFF" data-en="EN Translation: OFF">EN Translation: OFF</span>
+      </button>
+      <button class="ui-lang-toggle" id="ui-lang-btn" onclick="toggleUILang()" title="Switch UI language (buttons and labels)">UI: TR</button>
+    </div>
+  </div>
+
+  <div class="side-section">
+    <div class="side-note" data-tr="Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar." data-en="After wrong answers, topic links appear. Visual practice respects the category filter and opens 30, 100, or all media questions.">Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar.</div>
   </div>
 </div>
+
+<main class="app-main">
 
 <!-- ══════════ TOPBAR (during quiz) ══════════ -->
 <div class="topbar" id="topbar" style="display:none">
@@ -431,9 +495,7 @@ body{
   <div class="topbar-right">
     <div class="timer" id="timer">45:00</div>
     <button class="tr-toggle" id="tr-toggle-bar" onclick="toggleTranslate()">EN</button>
-    <button class="tb-btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
     <button class="tb-btn" onclick="endQuiz()" data-tr="Bitir" data-en="Finish">Bitir</button>
-    <button class="tb-btn" onclick="goHome()">&#10005;</button>
   </div>
 </div>
 <div class="progress-wrap" id="progress-wrap" style="display:none"><div class="progress-bar" id="progress-bar"></div></div>
@@ -454,16 +516,6 @@ body{
       <div class="mode-card" onclick="startQuiz('mistakes')"><h3 data-tr="Hatalarim" data-en="My Mistakes">Hatalarim</h3><p data-tr="Yanlis sorulari tekrarla" data-en="Replay wrong questions">Yanlis sorulari tekrarla</p></div>
       <div class="mode-card" onclick="startQuiz('flagged')"><h3 data-tr="Isaretlenen" data-en="Flagged">Isaretlenen</h3><p data-tr="Isaret sorulari tekrarla" data-en="Replay flagged questions">Isaret sorulari tekrarla</p></div>
       <div class="mode-card" onclick="startQuiz('random')"><h3 data-tr="Rastgele 20" data-en="Random 20">Rastgele 20</h3><p data-tr="Hizli pratik" data-en="Quick practice">Hizli pratik</p></div>
-    </div>
-    <div class="study-panel">
-      <h3 data-tr="Ders Calisma" data-en="Study Materials">Ders Calisma</h3>
-      <p data-tr="Konu notlari, portal e-kitabi, temiz PDF metinleri ve slayt galerileri tek yerde." data-en="Topic notes, portal e-book, clean PDF text, and slide galleries in one place.">Konu notlari, portal e-kitabi, temiz PDF metinleri ve slayt galerileri tek yerde.</p>
-      <div class="study-actions">
-        <a class="btn btn-sm" href="notes/" data-tr="Ders Notlari" data-en="Study Notes">Ders Notlari</a>
-        <a class="btn btn-sm" href="ekitap/" data-tr="E-Kitap" data-en="E-Book">E-Kitap</a>
-        <a class="btn btn-sm" href="ders-kitabi/" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</a>
-        <a class="btn btn-sm" href="pics/" data-tr="Slaytlar" data-en="Slides">Slaytlar</a>
-      </div>
     </div>
     <div class="chips" id="filter-row">
       <button class="btn btn-sm active" onclick="setCategory('all',this)"><span data-tr="Tumu" data-en="All">Tumu</span> <span class="cat-count" id="cnt-all"></span></button>
@@ -501,7 +553,7 @@ body{
     </div>
     <div class="nav-bar">
       <button class="btn" id="btn-prev" onclick="prevQ()"><span data-tr="&larr; Onceki" data-en="&larr; Previous">&larr; Onceki</span></button>
-      <div class="nav-center"><button class="btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button></div>
+      <div class="nav-center"></div>
       <button class="btn btn-primary" id="btn-next" onclick="nextQ()"><span data-tr="Sonraki &rarr;" data-en="Next &rarr;">Sonraki &rarr;</span></button>
     </div>
     <div class="kbd-hint"><kbd class="kbd">1-4</kbd> <span data-tr="sec" data-en="select">sec</span> <kbd class="kbd">&larr;&rarr;</kbd> <span data-tr="gecis" data-en="navigate">gecis</span> <kbd class="kbd">F</kbd> <span data-tr="isaretle" data-en="flag">isaretle</span> <kbd class="kbd">T</kbd> translate</div>
@@ -625,6 +677,7 @@ body{
 </div>
 
 </div><!-- /container -->
+</main>
 
 <!-- Cache-bust version tags — bump these whenever questions_data.js or vocab_data.js changes -->
 <script src="questions_data.js?v=4450m845r4345"></script>
@@ -637,10 +690,12 @@ let activeTab='sorular';
 function switchTab(t){
   activeTab=t;
   document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
-  document.querySelector(`.main-tab[onclick*="${t}"]`).classList.add('active');
+  const tabBtn=document.querySelector(`.main-tab[data-tab="${t}"]`);
+  if(tabBtn)tabBtn.classList.add('active');
   document.getElementById('tab-sorular').style.display=t==='sorular'?'block':'none';
   document.getElementById('tab-kelime').style.display=t==='kelime'?'block':'none';
   if(t==='kelime'){buildVCatChips();updateVHomeStats()}
+  window.scrollTo({top:0,behavior:'smooth'});
 }
 
 function goHome(){
@@ -648,11 +703,10 @@ function goHome(){
   E.timerInterval=null;
   document.getElementById('topbar').style.display='none';
   document.getElementById('progress-wrap').style.display='none';
-  document.getElementById('hero').style.display='block';
   document.getElementById('tab-sorular').style.display='block';
   document.getElementById('tab-kelime').style.display='none';
   document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
-  const sorularTab=document.querySelector('.main-tab[onclick*="sorular"]');
+  const sorularTab=document.querySelector('.main-tab[data-tab="sorular"]');
   if(sorularTab)sorularTab.classList.add('active');
   activeTab='sorular';
   ['s-quiz','s-results'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none'});
@@ -738,6 +792,7 @@ function updateVCounts(){
   set('v-count-technical',tech);
   set('v-count-general',gen);
   set('hero-vocab-count',all);
+  set('side-vocab-count',all);
 }
 
 // Populate category counts + vocab counts + apply saved UI language on DOM ready
@@ -1012,7 +1067,6 @@ function startQuiz(m,opts={}){
     return;
   }
 
-  document.getElementById('hero').style.display='none';
   document.getElementById('s-home').style.display='none';
   document.getElementById('s-quiz').style.display='block';
   document.getElementById('s-results').style.display='none';
@@ -1100,7 +1154,6 @@ function endQuiz(){
   document.getElementById('s-quiz').style.display='none';
   document.getElementById('topbar').style.display='none';
   document.getElementById('progress-wrap').style.display='none';
-  document.getElementById('hero').style.display='block';
   document.getElementById('s-results').style.display='block';
   document.getElementById('r-pct').textContent=`%${pct}`;
   document.getElementById('r-circle').className='score-circle '+(pass?'pass':'fail');
