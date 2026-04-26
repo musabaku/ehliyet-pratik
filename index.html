@@ -6,6 +6,7 @@
 <title>Ehliyet Pratik</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/nav.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
@@ -44,7 +45,6 @@ body{
 /* ══════════ APP SHELL / SIDEBAR ══════════ */
 .app-main{
   min-height:100vh;
-  margin-left:280px;
 }
 .hero{
   position:fixed;
@@ -401,7 +401,6 @@ body{
 
 /* ══════════ RESPONSIVE ══════════ */
 @media(max-width:900px){
-  .app-main{margin-left:0}
   .hero{
     position:relative;
     inset:auto;
@@ -440,32 +439,35 @@ body{
 <body>
 
 <!-- ══════════ SIDEBAR ══════════ -->
-<div class="hero" id="hero">
-  <h1 data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</h1>
-  <p><span data-tr="4,450 soru +" data-en="4,450 questions +">4,450 soru +</span> <span id="hero-vocab-count">466</span> <span data-tr="kelime | Subat, Mart & Nisan 2026" data-en="words | Feb, Mar & Apr 2026">kelime | Subat, Mart & Nisan 2026</span></p>
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand">
+    <strong data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</strong>
+    <span><span data-tr="4,450 soru +" data-en="4,450 questions +">4,450 soru +</span> <span id="hero-vocab-count">466</span> <span data-tr="kelime | Subat, Mart & Nisan 2026" data-en="words | Feb, Mar & Apr 2026">kelime | Subat, Mart & Nisan 2026</span></span>
+  </div>
 
-  <div class="side-section">
-    <div class="side-label" data-tr="Calisma" data-en="Practice">Calisma</div>
-    <div class="main-tabs">
-      <button class="main-tab active" data-tab="sorular" onclick="switchTab('sorular')"><span data-tr="Sorular" data-en="Questions">Sorular</span><span>4450</span></button>
-      <button class="main-tab" data-tab="kelime" onclick="switchTab('kelime')"><span data-tr="Kelime" data-en="Vocabulary">Kelime</span><span id="side-vocab-count">466</span></button>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Calisma" data-en="Practice">Calisma</div>
+    <div class="eh-nav-links main-tabs">
+      <button class="eh-nav-link main-tab active" data-tab="sorular" data-area="home" onclick="switchTab('sorular')"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text" data-tr="Sorular" data-en="Questions">Sorular</span></span><span class="eh-nav-meta">4450</span></button>
+      <button class="eh-nav-link main-tab" data-tab="kelime" onclick="switchTab('kelime')"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text" data-tr="Kelime" data-en="Vocabulary">Kelime</span></span><span class="eh-nav-meta" id="side-vocab-count">466</span></button>
     </div>
   </div>
 
-  <div class="side-section">
-    <div class="side-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
-    <div class="side-links">
-      <a class="side-link" href="notes/"><span data-tr="Ders Notlari" data-en="Study Notes">Ders Notlari</span><span>40</span></a>
-      <a class="side-link" href="ekitap/"><span data-tr="E-Kitap" data-en="E-Book">E-Kitap</span><span>63</span></a>
-      <a class="side-link" href="ders-kitabi/"><span data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span><span>240</span></a>
-      <a class="side-link" href="pics/"><span data-tr="Slaytlar" data-en="Slides">Slaytlar</span><span>galeri</span></a>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text" data-tr="Ders Notlari" data-en="Study Notes">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text" data-tr="E-Kitap" data-en="E-Book">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text" data-tr="Slaytlar" data-en="Slides">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
     </div>
   </div>
 
-  <div class="side-section">
-    <div class="side-label" data-tr="Araclar" data-en="Tools">Araclar</div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Araclar" data-en="Tools">Araclar</div>
     <div class="side-actions">
-      <button class="main-tab" onclick="goHome()"><span data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</span><span>Esc</span></button>
+      <button class="eh-nav-link main-tab" onclick="goHome()"><span class="eh-nav-left"><span class="eh-nav-icon">H</span><span class="eh-nav-text" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</span></span><span class="eh-nav-meta">Esc</span></button>
       <button class="tr-toggle-home" id="tr-toggle-home" onclick="toggleTranslate()" title="Translate question content (Google Translate)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 8l6 0M4 11l3-8 3 8M12.5 3h3.5a2 2 0 0 1 2 2v1M11 21l5-10 5 10M14.5 17h5"/></svg>
         <span id="tr-label" data-tr="EN Translation: OFF" data-en="EN Translation: OFF">EN Translation: OFF</span>
@@ -474,10 +476,11 @@ body{
     </div>
   </div>
 
-  <div class="side-section">
-    <div class="side-note" data-tr="Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar." data-en="After wrong answers, topic links appear. Visual practice respects the category filter and opens 30, 100, or all media questions.">Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar.</div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-note" data-tr="Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar." data-en="After wrong answers, topic links appear. Visual practice respects the category filter and opens 30, 100, or all media questions.">Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar.</div>
   </div>
-</div>
+</aside>
+<div class="eh-nav-scrim"></div>
 
 <main class="app-main">
 
@@ -679,6 +682,7 @@ body{
 </div><!-- /container -->
 </main>
 
+<script src="assets/nav.js"></script>
 <!-- Cache-bust version tags — bump these whenever questions_data.js or vocab_data.js changes -->
 <script src="questions_data.js?v=4450m845r4345"></script>
 <script src="vocab_data.js?v=1366"></script>
@@ -1437,6 +1441,7 @@ document.getElementById('vq-input').addEventListener('keydown',e=>{
 
 // Init
 buildVCatChips();
+if(location.hash==='#vocab')switchTab('kelime');
 </script>
 </body>
 </html>
