@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -128,8 +144,8 @@ body{
 <h2>1. Overview — Görev (Purpose)</h2>
 <p>Before you can answer a single Trafik ve Çevre question, you need to know exactly what these four words mean — <strong>Trafik</strong>, <strong>Karayolu</strong>, <strong>Araç</strong>, and <strong>Taşıt</strong>. They sound similar in Turkish but the exam deliberately swaps them in distractor answers. Getting these four definitions cold is the single cheapest win in the whole subject.</p>
 <hr />
-<h2>2. SLIDE 1 — The four base definitions</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-002.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-002.png" alt="Slayt — Sayfa 2: Trafik: Yayaların, hayvanların ve araçların karayolu üzerindeki hal ve hareketle" loading="lazy"></a><figcaption>Slayt — Sayfa 2: Trafik: Yayaların, hayvanların ve araçların karayolu üzerindeki hal ve hareketle <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-002.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-002.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-002.png" alt="Slayt — Sayfa 2: Trafik: Yayaların, hayvanların ve araçların karayolu üzerindeki hal ve hareketle" loading="lazy"></a><figcaption>Slayt — Sayfa 2: Trafik: Yayaların, hayvanların ve araçların karayolu üzerindeki hal ve hareketle <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-002.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — The four base definitions</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A photo of a busy Istanbul highway (multi-lane urban road, cars, buses, pedestrians along the side) with four definitions underneath:</p>
@@ -190,8 +206,8 @@ body{
 <p><strong>Trafik = hal + hareket</strong> (state AND movement), of <strong>yayalar + hayvanlar + araçlar</strong>, on a <strong>karayolu</strong>. If an answer option drops any one of these three groups, or drops "hal" and only says "hareket", it's wrong.</p>
 </blockquote>
 <hr />
-<h2>2B. SLIDE 2 — Sürücü vs Şoför (the person behind the wheel)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-003.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-003.png" alt="Slayt — Sayfa 3: Sürücü: Karayolunda motorlu veya motorsuz bir aracı sevk ve idare" loading="lazy"></a><figcaption>Slayt — Sayfa 3: Sürücü: Karayolunda motorlu veya motorsuz bir aracı sevk ve idare <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-003.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-003.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-003.png" alt="Slayt — Sayfa 3: Sürücü: Karayolunda motorlu veya motorsuz bir aracı sevk ve idare" loading="lazy"></a><figcaption>Slayt — Sayfa 3: Sürücü: Karayolunda motorlu veya motorsuz bir aracı sevk ve idare <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-003.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2B. SLIDE 2 — Sürücü vs Şoför (the person behind the wheel)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two photos side by side:<br />
@@ -222,8 +238,8 @@ body{
 <em>Sürücü</em> is the broad term (any vehicle, any driver). <em>Şoför</em> requires a <strong>commercially registered motor vehicle</strong> — professional/commercial driving only.</p>
 </blockquote>
 <hr />
-<h2>2C. The Sürücü ⊃ Şoför relationship</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. The Sürücü ⊃ Şoför relationship</h2>
+
 
 <pre><code>                    SÜRÜCÜ  (anyone operating any vehicle on a public road)
                        |
@@ -240,8 +256,8 @@ body{
 </code></pre>
 <p><strong>The trap:</strong> the exam will show you two profiles and ask "which one is ONLY a sürücü and not a şoför?" → the private-car driver. Or "which is a şoför?" → the taxi driver. Read the plate color (yellow = commercial in Türkiye) or the phrase "ticari olarak tescil edilmiş" and you can decide instantly.</p>
 <hr />
-<h2>2D. SLIDE 3 — Trafik İşaretleri (Traffic Signs &amp; Signals)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-004.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-004.png" alt="Slayt — Sayfa 4: Trafik İşaretleri: Trafiği düzenleme amacı ile trafik zabıtası veya diğer" loading="lazy"></a><figcaption>Slayt — Sayfa 4: Trafik İşaretleri: Trafiği düzenleme amacı ile trafik zabıtası veya diğer <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-004.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-004.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-004.png" alt="Slayt — Sayfa 4: Trafik İşaretleri: Trafiği düzenleme amacı ile trafik zabıtası veya diğer" loading="lazy"></a><figcaption>Slayt — Sayfa 4: Trafik İşaretleri: Trafiği düzenleme amacı ile trafik zabıtası veya diğer <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-004.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2D. SLIDE 3 — Trafik İşaretleri (Traffic Signs &amp; Signals)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Three pictures in a row:<br />
@@ -277,8 +293,8 @@ body{
 <p>If the slide asks "what counts as a trafik işareti?" — <strong>all 4/5 categories</strong> count: polis işareti, ışıklı, sesli, işaret levhaları, yer işaretleri. If asked about precedence when two of them conflict: <strong>polis &gt; ışıklı/sesli &gt; levha &gt; yer</strong>.</p>
 </blockquote>
 <hr />
-<h2>2E. SLIDE 4 — Geçiş Üstünlüğü vs Geçiş Hakkı (the classic two-name trap)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-005.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-005.png" alt="Slayt — Sayfa 5: Geçiş Üstünlüğü: Görev sırasında, belirli araç sürücülerinin can ve mal güvenliğ" loading="lazy"></a><figcaption>Slayt — Sayfa 5: Geçiş Üstünlüğü: Görev sırasında, belirli araç sürücülerinin can ve mal güvenliğ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-005.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-005.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-005.png" alt="Slayt — Sayfa 5: Geçiş Üstünlüğü: Görev sırasında, belirli araç sürücülerinin can ve mal güvenliğ" loading="lazy"></a><figcaption>Slayt — Sayfa 5: Geçiş Üstünlüğü: Görev sırasında, belirli araç sürücülerinin can ve mal güvenliğ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-005.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2E. SLIDE 4 — Geçiş Üstünlüğü vs Geçiş Hakkı (the classic two-name trap)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Three images across the top:<br />
@@ -323,8 +339,8 @@ body{
 <p><strong>The trap:</strong> in a question about a taxi vs a bus at an intersection, the answer is about <em>geçiş hakkı</em>. In a question about an ambulance running a red light, the answer is about <em>geçiş üstünlüğü</em>. Never swap them.</p>
 </blockquote>
 <hr />
-<h2>2F. The two-name trap side-by-side</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2F. The two-name trap side-by-side</h2>
+
 
 <table>
 <thead>
@@ -368,8 +384,8 @@ body{
 </tbody>
 </table>
 <hr />
-<h2>2G. SLIDE 5 — Durma, Duraklama, Park Etme (the three-way stop trap)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-006.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-006.png" alt="Slayt — Sayfa 6: Durma : Her türlü trafik zorunlulukları nedeni ile aracın durdurulmasıdır." loading="lazy"></a><figcaption>Slayt — Sayfa 6: Durma : Her türlü trafik zorunlulukları nedeni ile aracın durdurulmasıdır. <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-006.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-006.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-006.png" alt="Slayt — Sayfa 6: Durma : Her türlü trafik zorunlulukları nedeni ile aracın durdurulmasıdır." loading="lazy"></a><figcaption>Slayt — Sayfa 6: Durma : Her türlü trafik zorunlulukları nedeni ile aracın durdurulmasıdır. <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-006.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2G. SLIDE 5 — Durma, Duraklama, Park Etme (the three-way stop trap)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A top-down illustration of a car parallel-parking on a city street between two other parked cars, with green "safe distance" sensor arcs at the front and red "close distance" arcs at the rear — clearly evoking parking sensors. Below, three definitions:</p>
@@ -422,8 +438,8 @@ body{
 <p>The exam will describe a scenario and ask which one it is. Decode it by: (1) was it <em>required</em> or <em>chosen</em>? — if required, it's durma. (2) if chosen, short or long? — short is duraklama, long is park etme.</p>
 </blockquote>
 <hr />
-<h2>2H. SLIDE 6 — Trafik Kazası &amp; Trafikten Men (accident + removal from traffic)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-007.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-007.png" alt="Slayt — Sayfa 7: Trafik Kazası: Karayolu üzerinde hareket halinde olan bir veya birden fazla" loading="lazy"></a><figcaption>Slayt — Sayfa 7: Trafik Kazası: Karayolu üzerinde hareket halinde olan bir veya birden fazla <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-007.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-007.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-007.png" alt="Slayt — Sayfa 7: Trafik Kazası: Karayolu üzerinde hareket halinde olan bir veya birden fazla" loading="lazy"></a><figcaption>Slayt — Sayfa 7: Trafik Kazası: Karayolu üzerinde hareket halinde olan bir veya birden fazla <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-007.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2H. SLIDE 6 — Trafik Kazası &amp; Trafikten Men (accident + removal from traffic)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>An aerial photo of a real traffic accident scene: a minibus overturned on its side at a roundabout, with a large crowd of bystanders gathered around it and other cars scattered nearby. Two definitions underneath:</p>
@@ -458,8 +474,8 @@ body{
 <p><strong>Trafikten Men = police physically removing the vehicle from traffic</strong> (seizing its documents and towing it to a designated place). It's a legal penalty applied to the <em>vehicle</em>, not the driver.</p>
 </blockquote>
 <hr />
-<h2>3. The containment hierarchy (must know cold)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. The containment hierarchy (must know cold)</h2>
+
 
 <pre><code>                        ARAÇ  (umbrella — everything legally on the road)
                        /     \
@@ -480,7 +496,7 @@ body{
 </code></pre>
 <p><strong>Why this matters:</strong> the exam will ask "which of the following is a taşıt but not a motorlu taşıt?" → <em>bisiklet</em>. Or "which is an araç but not a taşıt?" → <em>iş makinesi</em> or <em>traktör</em>. You cannot answer these without the hierarchy.</p>
 <hr />
-<h2>4. Why this matters for the exam</h2>
+</div></section><h2>4. Why this matters for the exam</h2>
 <ol>
 <li>
 <p><strong>Q: "Trafiğin tanımı hangisidir?"</strong> (What is the definition of traffic?)<br />

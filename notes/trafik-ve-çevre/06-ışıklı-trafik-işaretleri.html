@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -134,8 +150,8 @@ body{
 <li><strong>Behaviour rules</strong> — what you must <em>do</em> when you see each one (stop, wait, prepare, go, slow, yield).</li>
 </ol>
 <hr />
-<h2>2. SLIDE 1 — Sabit (solid) Kırmızı / Sarı / Yeşil Işıklar</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-043.png" alt="Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-043.png" alt="Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Sabit (solid) Kırmızı / Sarı / Yeşil Işıklar</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A photo of a real intersection with a green traffic light, title <strong>"IŞIKLI TRAFİK İŞARETLERİ"</strong>, and three colour-coded definition paragraphs (kırmızı in red, yeşil in green, sarı in yellow).</p>
@@ -185,8 +201,8 @@ body{
 <p>Watch for distractor answers that say "on yellow, always stop immediately" — <strong>wrong</strong>. Safety overrides reflex-stopping.</p>
 </blockquote>
 <hr />
-<h2>3. SLIDE 2 — Fasılalı (flashing) Işıklar + Oklar + Sesli/Yazılı İşaretler</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-044.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-044.png" alt="Slayt — Sayfa 44: IŞIKLI TRAFİK İŞARETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 44: IŞIKLI TRAFİK İŞARETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-044.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-044.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-044.png" alt="Slayt — Sayfa 44: IŞIKLI TRAFİK İŞARETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 44: IŞIKLI TRAFİK İŞARETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-044.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Fasılalı (flashing) Işıklar + Oklar + Sesli/Yazılı İşaretler</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A stylised intersection illustration with a flashing red arrow and flashing yellow, plus a traffic light column with a red arrow. Four definition blocks below — flashing red, flashing yellow, arrow lights, audible/written signals.</p>
@@ -241,7 +257,7 @@ body{
 <p><strong>Green arrow is the only way to turn</strong> — even a main green ball does NOT give you permission to turn if a red arrow is lit.</p>
 </blockquote>
 <hr />
-<h2>4. Why this matters for the exam</h2>
+</div></section><h2>4. Why this matters for the exam</h2>
 <ol>
 <li><strong>Yellow after green:</strong> <em>"Yeşil ışıktan sonra sarı yandığında ne yaparsınız?"</em> → <strong>Emniyetli şekilde durabiliyorsam dururum, duramıyorsam geçerim.</strong></li>
 <li><strong>Yellow with red:</strong> <em>"Kırmızı ile birlikte sarı ışık yandığında ne anlama gelir?"</em> → <strong>Yolun trafiğe açılmak üzere olduğunu bildirir, harekete hazırlanılır.</strong> (You do NOT move yet.)</li>

@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -137,8 +153,8 @@ body{
 - Is <strong>illegal</strong> and fined.</p>
 <p>For loads that exceed standard size or weight, special permission and escort are required.</p>
 <hr />
-<h2>2. SLIDE 1 — Araçların Yüklenmesi</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-129.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-129.png" alt="Slayt — Sayfa 129: ARAÇLARIN YÜKLENMESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 129: ARAÇLARIN YÜKLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-129.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-129.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-129.png" alt="Slayt — Sayfa 129: ARAÇLARIN YÜKLENMESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 129: ARAÇLARIN YÜKLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-129.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Araçların Yüklenmesi</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Header "<strong>ARAÇLARIN YÜKLENMESİ</strong>" with 5 bullet rules. Below is a striking photo of a heavy-haul truck carrying a full-sized <strong>fishing boat</strong> on a flatbed, passing under an İstanbul/Ankara highway sign — the textbook example of "standart dışı yük."</p>
@@ -220,7 +236,7 @@ body{
 <strong>Radyoaktif madde izni:</strong> <strong>Atom Enerjisi Komisyonu</strong>.</p>
 </blockquote>
 <hr />
-<h2>3. Why this matters for the exam</h2>
+</div></section><h2>3. Why this matters for the exam</h2>
 <ol>
 <li><strong>"Araçların ağırlık kontrolü hangi kurumca yapılır?"</strong> → <strong>Karayolları Genel Müdürlüğü.</strong></li>
 <li><strong>"Standart dışı yüklerin karayolunda taşınması için hangi kurumdan izin alınır?"</strong> → <strong>Karayolları Genel Müdürlüğü.</strong></li>

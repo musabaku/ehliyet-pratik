@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -134,8 +150,8 @@ body{
 <li><strong>Trafik polisinin hareketleri</strong> — the standard police hand signals drivers must recognize</li>
 </ol>
 <hr />
-<h2>2. SLIDE 1 — Karayolu Yapısı ve Trafik İşaretlerinin Korunması</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-030.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-030.png" alt="Slayt — Sayfa 30: KARAYOLU YAPISI VE TRAFİK İŞARETLERİNİN KORUNMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 30: KARAYOLU YAPISI VE TRAFİK İŞARETLERİNİN KORUNMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-030.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-030.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-030.png" alt="Slayt — Sayfa 30: KARAYOLU YAPISI VE TRAFİK İŞARETLERİNİN KORUNMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 30: KARAYOLU YAPISI VE TRAFİK İŞARETLERİNİN KORUNMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-030.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Karayolu Yapısı ve Trafik İşaretlerinin Korunması</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A yellow warning box titled <strong>"KARAYOLU YAPISI VE TRAFİK İŞARETLERİNİN KORUNMASI"</strong> with three dense paragraphs of prohibitions. Each paragraph cites the <strong>ceza (fine)</strong>, <strong>puan (penalty points)</strong> and <strong>Ceza Listesi No</strong>. Below the text, a photo showing a "DUR" sign partially wrapped/covered by a parked car.</p>
@@ -167,8 +183,8 @@ body{
 <p><strong>Repair obligation:</strong> damages to the road/signs are fixed by the responsible authority (karayolları), but <strong>the cost is charged back to whoever caused the damage</strong>.</p>
 </blockquote>
 <hr />
-<h2>3. SLIDE 2 — Trafik İşaretlerine Uyma Öncelik Sırası (the hierarchy)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-031.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-031.png" alt="Slayt — Sayfa 31: TRAFİK İŞARETLERİNE UYMA ÖNCELİK SIRASI" loading="lazy"></a><figcaption>Slayt — Sayfa 31: TRAFİK İŞARETLERİNE UYMA ÖNCELİK SIRASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-031.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-031.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-031.png" alt="Slayt — Sayfa 31: TRAFİK İŞARETLERİNE UYMA ÖNCELİK SIRASI" loading="lazy"></a><figcaption>Slayt — Sayfa 31: TRAFİK İŞARETLERİNE UYMA ÖNCELİK SIRASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-031.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Trafik İşaretlerine Uyma Öncelik Sırası (the hierarchy)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A title <strong>"TRAFİK İŞARETLERİNE UYMA ÖNCELİK SIRASI"</strong> with a numbered list (1–4), and four illustrative photos below: a police officer directing traffic, a traffic light + speaker, a round "ÖNDEKİ TAŞITI GEÇMEK YASAKTIR" sign, and a yellow-marked road surface.</p>
@@ -224,8 +240,8 @@ body{
 <p>Mnemonic: <strong>İnsan &gt; Makine &gt; Tabela &gt; Yer</strong> (Human &gt; Machine &gt; Board &gt; Ground).</p>
 </blockquote>
 <hr />
-<h2>4. SLIDE 3 — Trafik Polisinin Hareketleri (police hand signals)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-032.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-032.png" alt="Slayt — Sayfa 32: TRAFİK POLİSİNİN HAREKETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 32: TRAFİK POLİSİNİN HAREKETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-032.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-032.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-032.png" alt="Slayt — Sayfa 32: TRAFİK POLİSİNİN HAREKETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 32: TRAFİK POLİSİNİN HAREKETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-032.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Trafik Polisinin Hareketleri (police hand signals)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Eight numbered poses of a traffic officer in a yellow safety vest, each with a short caption. Two rows of four.</p>
@@ -292,7 +308,7 @@ Key detail: <strong>fast/rapid</strong> flashlight motion toward you = <strong>S
 <p><strong>Police hand signals outrank everything</strong> — green light, "DUR" sign, painted arrows, all of it. Rank 1 beats rank 2/3/4 always.</p>
 </blockquote>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <ol>
 <li><strong>Hierarchy recall:</strong> <em>"Aşağıdakilerin hangisinin işaretlerine uyma önceliği diğerlerinden fazladır?"</em> → <strong>Trafik görevlisi (police officer).</strong></li>
 <li><strong>Light vs sign conflict:</strong> <em>"Kırmızı ışık yanarken 'dur' yasağı olmayan kavşakta ne yaparsınız?"</em> → <strong>Durursunuz</strong> (light, rank 2, beats anything lower).</li>

@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -136,8 +152,8 @@ body{
 - <strong>Polisin 8 hareketi + kontrol hiyerarşisi</strong> → <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a><br />
 - <strong>Sağdan gelene öncelik</strong> (appears inside the sola dönüş rules) → <a href="18-manevralar-dönüşler.md">18-manevralar-dönüşler.md</a></p>
 <hr />
-<h2>2. SLIDE 1 — Kavşaklara Yaklaşan Sürücünün Genel Yükümlülükleri</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-096.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-096.png" alt="Slayt — Sayfa 96: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 96: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-096.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-096.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-096.png" alt="Slayt — Sayfa 96: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 96: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-096.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Kavşaklara Yaklaşan Sürücünün Genel Yükümlülükleri</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A header "<strong>KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI</strong>" with a general duty paragraph, then a numbered list of 4 sources of authority a driver must obey (in priority order), and a trafik polisi illustration.</p>
@@ -178,8 +194,8 @@ body{
 <p><strong>Uyulacak sıra (kontrol hiyerarşisi):</strong> <strong>1-Görevli → 2-Işık → 3-Levha → 4-Yer işareti.</strong></p>
 </blockquote>
 <hr />
-<h2>2B. SLIDE 2 — Kontrolsüz Kavşakta İlk Geçiş Hakkı (7 rule)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2B. SLIDE 2 — Kontrolsüz Kavşakta İlk Geçiş Hakkı (7 rule)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A header "<strong>KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI</strong>" with a pink sub-header naming the scope:</p>
@@ -265,8 +281,8 @@ body{
 <p><strong>Eşit statülü iki araç çakıştığında: SAĞDAN GELENE ÖNCELİK.</strong></p>
 </blockquote>
 <hr />
-<h2>2C. SLIDE 3 — Bölünmüş Yola Çıkış (Rule 4 illustrated)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-100.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-100.png" alt="Slayt — Sayfa 100: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 100: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-100.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-100.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-100.png" alt="Slayt — Sayfa 100: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 100: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-100.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. SLIDE 3 — Bölünmüş Yola Çıkış (Rule 4 illustrated)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Header "KAVŞAKLARDA İLK GEÇİŞ HAKKI" with a single bullet and a right-side diagram of a normal road meeting a divided (median-separated) road, numbered "3" — a car entering a bölünmüş yol from a side street.</p>
@@ -281,8 +297,8 @@ body{
 <p><strong>Normal yol → bölünmüş yol = sen bekle, bölünmüş yoldaki geçer.</strong></p>
 </blockquote>
 <hr />
-<h2>2D. SLIDE 4 — İz veya Mülkten Karayoluna Çıkış (Rule 6 illustrated)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2D. SLIDE 4 — İz veya Mülkten Karayoluna Çıkış (Rule 6 illustrated)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two side-by-side diagrams:<br />
@@ -299,8 +315,8 @@ body{
 <p><strong>Benzinlik, otopark, ev girişi, tarla yolu çıkışı → karayolundaki araç önce geçer, sen beklersin.</strong></p>
 </blockquote>
 <hr />
-<h2>2E. SLIDE 5 — Dönel Kavşak (Rule 5 illustrated)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-102.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-102.png" alt="Slayt — Sayfa 102: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 102: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-102.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-102.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-102.png" alt="Slayt — Sayfa 102: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 102: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-102.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2E. SLIDE 5 — Dönel Kavşak (Rule 5 illustrated)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two side-by-side roundabout diagrams. Left (gray) shows a car approaching a roundabout with another circulating inside; right (green, aerial view) shows the same layout at a four-arm dönel kavşak.</p>
@@ -315,8 +331,8 @@ body{
 <p><strong>Dönel kavşakta: İÇERİDEKİ ARAÇ her zaman ÖNCE GEÇER. Dışarıdan girecek sürücü YOL VERİR.</strong></p>
 </blockquote>
 <hr />
-<h2>2F. SLIDE 6 — Kavşak Kolları Eşit İse (Equal-arms hierarchy + do-not-block rule)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2F. SLIDE 6 — Kavşak Kolları Eşit İse (Equal-arms hierarchy + do-not-block rule)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Header "KAVŞAKLARDA İLK GEÇİŞ HAKKI" with a pink sub-header "<strong>Kavşak Kolları Eşit ise</strong>" followed by 4 bullets and an "Ayrıca;" clause at the bottom.</p>
@@ -373,8 +389,8 @@ body{
 <p><strong>Yeşil ışıkta bile, kavşak içinde takılıp kalacaksan KAVŞAĞA GİRME — yasak.</strong></p>
 </blockquote>
 <hr />
-<h2>2G. SLIDE 7 — Motorsuz &amp; LTT Visual (equal-arms rules 1–2 illustrated)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2G. SLIDE 7 — Motorsuz &amp; LTT Visual (equal-arms rules 1–2 illustrated)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two diagrams on the same "KAVŞAKLARDA İLK GEÇİŞ HAKKI" layout, now listing rules 2 and 3 of the equal-arms hierarchy:</p>
@@ -400,8 +416,8 @@ body{
 <p><strong>Motorsuz taşıt (at arabası, bisiklet) = motorlu araçların HEPSİNE yol verir.</strong></p>
 </blockquote>
 <hr />
-<h2>2H. SLIDE 8 — Worked Exam Question (sağdan gelene öncelik)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2H. SLIDE 8 — Worked Exam Question (sağdan gelene öncelik)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title bullet: <strong>"Motorlu araçlardan soldaki, sağdan gelen araca ilk geçiş hakkı verilmelidir."</strong> Two diagrams and a sample question:</p>
@@ -427,8 +443,8 @@ D) İkazda bulunup otomobili yavaşlatmalıdır.</p>
 <p><strong>Eşit kollu kontrolsüz kavşakta sağdan gelen araç → SEN BEKLE. "Hızlanıp önce girmek" ve "ikazda bulunmak" her zaman YANLIŞ CEVAP.</strong></p>
 </blockquote>
 <hr />
-<h2>2H2. SLIDE 9 — Two More Worked Exam Questions (motorsuz &amp; LTT)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2H2. SLIDE 9 — Two More Worked Exam Questions (motorsuz &amp; LTT)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two side-by-side kavşak diagrams, each with a multiple-choice question.</p>
@@ -464,8 +480,8 @@ D) Geçiş hakkını kendi kullanmalıdır.</p>
 <p><strong>Bisiklet (motorsuz) + otomobil → bisiklet bekler. Traktör (LTT) + otomobil → traktör bekler.</strong> Her iki durumda da diğer seçenekler ("hızlan", "ikaz et", "önce gir") TUZAKTIR.</p>
 </blockquote>
 <hr />
-<h2>2H3. SLIDE 10 — Full 4-vehicle hierarchy exam questions</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2H3. SLIDE 10 — Full 4-vehicle hierarchy exam questions</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two 4-way kavşak diagrams, each with 4 different vehicles approaching from the 4 arms, testing the full equal-arms hierarchy.</p>
@@ -508,8 +524,8 @@ D) Kamyonet</p>
 (3) Geri kalan <strong>normal motorlu araçlar</strong> arasında <strong>sağdan gelene öncelik</strong> uygulanır — en hızlı yöntem: her aracın sağındakine bak, motorsuz olan aracın "solundaki" motorlu ilk geçer.</p>
 </blockquote>
 <hr />
-<h2>2H4. SLIDE 11 — Dönüş-yapan vs doğru-geçen priority (sequence questions)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2H4. SLIDE 11 — Dönüş-yapan vs doğru-geçen priority (sequence questions)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two 4-way kavşak diagrams with numbered vehicles. Both test <strong>Rule 7</strong> of the 7-rule list: <em>"Dönüş yapan sürücüler, doğru geçmekte olan araçlara ilk geçiş hakkını verir."</em></p>
@@ -548,8 +564,8 @@ D) <strong>3 – 2 – 1</strong> ✅</p>
 <p><strong>Üç araçlı tipik cevap kalıbı: sağdaki doğru-geçen → soldaki doğru-geçen → dönüş yapan.</strong></p>
 </blockquote>
 <hr />
-<h2>2H5. SLIDE 12 — Geçiş Üstünlüğü at a kavşak (Rule 1 illustrated)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-115.png" alt="Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME" loading="lazy"></a><figcaption>Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-115.png" alt="Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME" loading="lazy"></a><figcaption>Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2H5. SLIDE 12 — Geçiş Üstünlüğü at a kavşak (Rule 1 illustrated)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Single bullet at top + aerial diagram of a 4-way kavşak with 4 numbered vehicles, all visually candidates for geçiş üstünlüğü (except one trap):</p>
@@ -604,8 +620,8 @@ D) <strong>3 – 2 – 1</strong> ✅</p>
 <p><strong>TUZAK:</strong> Sıradan <strong>iş makinesi</strong> (inşaat yükleyicisi vb.) geçiş üstünlüğüne sahip DEĞİLDİR. Sadece <strong>kar-buz mücadele</strong> veya <strong>acil yol bakımı</strong> yapan araçlar bu kategoriye girer.</p>
 </blockquote>
 <hr />
-<h2>2I. Hoca's Live Class Additions (2026-04-18)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2I. Hoca's Live Class Additions (2026-04-18)</h2>
+
 
 <h3>The "don't invent classifications" rule — how to read kavşak exam diagrams</h3>
 <p>When a student answered the sample motosiklet question (SLIDE 8 / section 2H) with reasoning like <em>"because it's a motorcycle vs a car"</em> or <em>"because the car is on the main road"</em>, the hoca pushed back hard. The exam diagram gives you <strong>only what it shows</strong>. You do NOT invent road classifications or vehicle-class hierarchies that aren't visible.</p>
@@ -632,8 +648,8 @@ D) <strong>3 – 2 – 1</strong> ✅</p>
 <p><strong>Kavşak sorusunda SADECE diyagramda görünen bilgiyi kullan.</strong> Araç tipine, "büyük yol kim" tahminine veya "normal/anormal yol" hissine göre karar verme — bunlar hep TUZAK. Sadece bu not dosyasındaki 12-basamaklı öncelik yığınını uygula.</p>
 </blockquote>
 <hr />
-<h2>2J. Hoca's Live Class Additions — Part 2 (2026-04-18, 20:30-21:00)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2J. Hoca's Live Class Additions — Part 2 (2026-04-18, 20:30-21:00)</h2>
+
 
 <h3>The bisiklet vs motosiklet identification trap</h3>
 <p>The hoca caught himself mid-class making an error on the sample question from SLIDE 10: he initially identified the small two-wheeler in the diagram as a <strong>bisiklet</strong> (and gave answer B), then corrected himself — it's actually a <strong>motosiklet</strong>, which changes the reasoning and the answer.</p>
@@ -685,8 +701,8 @@ D) <strong>3 – 2 – 1</strong> ✅</p>
 (3) Araç tipini doğrula (bisiklet ≠ motosiklet).</p>
 </blockquote>
 <hr />
-<h2>3. The combined priority stack (from highest to lowest)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. The combined priority stack (from highest to lowest)</h2>
+
 
 <p>When two competing claims appear at a kavşak, resolve in this order:</p>
 <ol>
@@ -704,7 +720,7 @@ D) <strong>3 – 2 – 1</strong> ✅</p>
 <li><strong>SAĞDAN GELEN</strong> &gt; soldan gelen (fallback tie-breaker).</li>
 </ol>
 <hr />
-<h2>4. Why this matters for the exam</h2>
+</div></section><h2>4. Why this matters for the exam</h2>
 <ol>
 <li><strong>"Kavşağa yaklaşan sürücü ilk önce ne yapmalıdır?"</strong> → <strong>Yavaşlar, dikkatli olur, geçiş hakkı olana izin verir.</strong></li>
 <li><strong>"Kavşakta polis, ışık ve levha varsa hangisine uyulur?"</strong> → <strong>Polise</strong> (hiyerarşide en üstte).</li>

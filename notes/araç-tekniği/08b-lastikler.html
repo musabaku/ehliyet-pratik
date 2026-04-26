@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -136,8 +152,8 @@ body{
 3. <strong>Whether it's balanced and aligned</strong> — vibration, steering, even wear</p>
 <p>Each of these has its own slide covered below.</p>
 <hr />
-<h2>2. SLIDE 1 — Lastiğin Yan Yüzündeki İşaretler (Sidewall Markings)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Lastiğin Yan Yüzündeki İşaretler (Sidewall Markings)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A tire photograph with labeled call-outs pointing to the sidewall markings. Example tire: <strong>195/65 R 15 91 H</strong> plus Goodyear branding.</p>
@@ -213,8 +229,8 @@ body{
 <li><strong>Lastiğin serisi (aspect ratio)</strong> is a <strong>percentage</strong>, not a millimeter measurement. This trips people up constantly.</li>
 </ul>
 <hr />
-<h2>3. SLIDE 2 — Hava Basıncına Göre Yerle Temas Etme Şekilleri (Contact Patch by Air Pressure)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Hava Basıncına Göre Yerle Temas Etme Şekilleri (Contact Patch by Air Pressure)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Three cross-sectional tire illustrations side by side, each with downward hatching showing how the tire touches the ground. Title:</p>
@@ -270,8 +286,8 @@ body{
 <li>Fazla (high) = middle wears (opposite of low — if not edges, then center)</li>
 </ul>
 <hr />
-<h2>4. SLIDE 3 — Lastiklerin Bakım ve Basit Arızaları (Tire Maintenance &amp; Common Faults)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Lastiklerin Bakım ve Basit Arızaları (Tire Maintenance &amp; Common Faults)</h2>
+
 
 <h3>What the slide said</h3>
 <blockquote>
@@ -338,8 +354,8 @@ body{
 </table>
 <p>These three cause-effect mappings generate at least 3-4 exam questions between them.</p>
 <hr />
-<h2>4B. SLIDE 4 — Lastik Bakım Kuralları (Tire Care Rules)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4B. SLIDE 4 — Lastik Bakım Kuralları (Tire Care Rules)</h2>
+
 
 <h3>What the slide said</h3>
 <blockquote>
@@ -393,8 +409,8 @@ body{
 <li><strong>Bijon → kuru bezle silindikten sonra sıkılır</strong> (lug nuts are tightened AFTER being wiped dry).</li>
 </ul>
 <hr />
-<h2>4C. Hoca's Live Class Additions (2026-04-13)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4C. Hoca's Live Class Additions (2026-04-13)</h2>
+
 
 <h3>Tire pressure is NOT a universal number</h3>
 <p>A student asked <em>"lastiğe basacağımız hava en fazla otuz, doğru mudur?"</em> (The max air pressure is 30, right?). Hoca's response:</p>
@@ -485,8 +501,8 @@ body{
 </table>
 <p><strong>Exam note:</strong> When exam questions ask "what information does the tire sidewall provide?", the answer covers all of the above — <strong>brand, size, construction, load, speed, age</strong>. The one thing NOT typically on the tire itself is the <strong>recommended inflation pressure for your specific car</strong> — that's on the door-jamb sticker.</p>
 <hr />
-<h2>4D. Additional Exam Facts (from portal E-Kitap Subjects 2 &amp; 5)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4D. Additional Exam Facts (from portal E-Kitap Subjects 2 &amp; 5)</h2>
+
 
 <p>Our slide-based notes captured the basics, but the portal has <strong>additional exam-testable facts</strong> the hoca didn't dwell on. These are all drawn from the e-kitap curriculum and are fair game on the theory exam.</p>
 <h3>Tire construction types — definitions you'll be asked</h3>
@@ -672,8 +688,8 @@ body{
 <p><strong>Rule:</strong> Tires should be checked <strong>at least once a day</strong>. This reinforces the slide 4 rule (<em>"her araca binerken kontrol edilmelidir"</em> — check every time you get in the car). The portal formalizes it as a <strong>daily minimum</strong>.</p>
 <p>This is part of the broader <strong>günlük araç kontrolleri</strong> (daily vehicle checks) checklist — a topic that deserves its own notes file once the hoca covers it (currently a gap per <code>coverage-map.md</code>).</p>
 <hr />
-<h2>4E. SLIDES (2026-04-14) — LASTİK DEĞİŞİMİ PROSEDÜRÜ (How to Change a Flat Tire)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4E. SLIDES (2026-04-14) — LASTİK DEĞİŞİMİ PROSEDÜRÜ (How to Change a Flat Tire)</h2>
+
 
 <h3>What the slides showed</h3>
 <p>A 4-slide mini-chapter on <strong>roadside tire replacement</strong>:</p>
@@ -1151,8 +1167,8 @@ body{
 <em>After changing a tire, retighten the bolts after driving a few km.</em></p>
 </blockquote>
 <hr />
-<h2>4F2. Hoca's Live Class Additions (2026-04-14) — Lastik Değişimi + Reflektör</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4F2. Hoca's Live Class Additions (2026-04-14) — Lastik Değişimi + Reflektör</h2>
+
 
 <h3>Addition 1 — ⭐ CORRECTION: Reflektör distance is 30–50 m / 150 m (NOT 30/100)</h3>
 <p>The slides we captured earlier showed rough numbers. Hoca gave <strong>precise values</strong> in class:</p>
@@ -1245,8 +1261,8 @@ body{
 <p><strong>For your own safety in real life:</strong> check your car's manual to know if it's FWD, RWD, or 4WD. The answer depends on the car.</p>
 <p><strong>Exam rule (ignoring reality):</strong> always answer <strong>ön tekerlekler</strong> for snow chain placement unless the question explicitly says "arka çekişli araç" or "4×4 araç".</p>
 <hr />
-<h2>4G. SLIDE (2026-04-14) — LASTİĞİN ÖNEMİ (The Importance of Tires) — Recap Emphasis Slide</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4G. SLIDE (2026-04-14) — LASTİĞİN ÖNEMİ (The Importance of Tires) — Recap Emphasis Slide</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A full-slide text block in <strong>blue letters</strong> with a <strong>cartoon of a man shouting into a megaphone</strong> (💡 representing "attention!") and a <strong>red-yellow triangular warning sign with "!"</strong> (uyarı). The text emphasizes that tires are <strong>the only physical link between the car and the road</strong>, and therefore the single most important component for vehicle control.</p>
@@ -1325,7 +1341,7 @@ body{
 <em>The tire is the ONLY element that connects the car to the ground. The control of the car is entirely dependent on the tires.</em></p>
 </blockquote>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <p>Very high-frequency questions:</p>
 <ol>
 <li><em>"Lastiklerin kenar kısımlarından aşınmasının sebebi nedir?"</em><br />

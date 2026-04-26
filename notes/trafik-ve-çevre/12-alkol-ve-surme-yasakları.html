@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -128,8 +144,8 @@ body{
 <h2>1. Overview — Görev (Purpose)</h2>
 <p>These slides cover <strong>who may NOT drive</strong> and <strong>for how long you may drive</strong> — the legal prohibitions and limits that apply to the driver rather than to the vehicle or road. The penalties in this section are among the <strong>heaviest in the entire KTK</strong> — fines in the tens of thousands of TL plus multi-year license suspensions.</p>
 <hr />
-<h2>2. SLIDE 1 — Karayollarında Araç Sürme Yasağı (Drug &amp; Alcohol Ban)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-076.png" alt="Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI" loading="lazy"></a><figcaption>Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-076.png" alt="Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI" loading="lazy"></a><figcaption>Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Karayollarında Araç Sürme Yasağı (Drug &amp; Alcohol Ban)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Photos of a police checkpoint with officers conducting breath tests. Title: <strong>"KARAYOLLARINDA ARAÇ SÜRME YASAĞI"</strong></p>
@@ -150,8 +166,8 @@ body{
 <p><strong>Drug use = 60.036 TL + 5-year license suspension + criminal charges.</strong> This is the single harshest penalty on these slides. The exam asks: <em>"Uyuşturucu madde kullanmış sürücünün cezası nedir?"</em> → <strong>60.036 TL para cezası + 5 yıl sürücü belgesi geri alınır + TCK uygulanır.</strong></p>
 </blockquote>
 <hr />
-<h2>3. SLIDE 2 — Alkollü Araç Kullanma Yasağı (Detailed Penalty Tiers)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-076.png" alt="Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI" loading="lazy"></a><figcaption>Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-076.png" alt="Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI" loading="lazy"></a><figcaption>Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Alkollü Araç Kullanma Yasağı (Detailed Penalty Tiers)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A dense text slide titled <strong>"ALKOLLÜ ARAÇ KULLANMA YASAĞI"</strong> with colour-coded penalty tiers (green, yellow, red).</p>
@@ -248,8 +264,8 @@ Süre sonunda sağlık görüşlerinin belgelerini ibraz eder.</p>
 <em>"Hususi otomobil sürücüsü için?"</em> → <strong>0.50 promil.</strong></p>
 </blockquote>
 <hr />
-<h2>4. SLIDE 3 — Sürücü Belgesiz Araç Kullanma (Driving Without a License)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-077.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-077.png" alt="Slayt — Sayfa 77: SÜRÜCÜ BELGESİZ ARAÇ KULLANMA" loading="lazy"></a><figcaption>Slayt — Sayfa 77: SÜRÜCÜ BELGESİZ ARAÇ KULLANMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-077.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-077.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-077.png" alt="Slayt — Sayfa 77: SÜRÜCÜ BELGESİZ ARAÇ KULLANMA" loading="lazy"></a><figcaption>Slayt — Sayfa 77: SÜRÜCÜ BELGESİZ ARAÇ KULLANMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-077.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Sürücü Belgesiz Araç Kullanma (Driving Without a License)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>"SÜRÜCÜ BELGESİZ ARAÇ KULLANMA"</strong> — dense text about penalties.</p>
@@ -286,8 +302,8 @@ Ayrıca araç sahibi de cezalandırılır.</p>
 <p><em>"Sürücü belgesi olmadan araç kullanan kişiye ne ceza verilir?"</em> → <strong>21.637 TL idari para cezası.</strong></p>
 </blockquote>
 <hr />
-<h2>5. SLIDES 4–5 — Araç Kullanım Süreleri (Driving Hours &amp; Tachograph)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-078.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-078.png" alt="Slayt — Sayfa 78: ARAÇ KULLANIM SÜRELERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 78: ARAÇ KULLANIM SÜRELERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-078.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-078.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-078.png" alt="Slayt — Sayfa 78: ARAÇ KULLANIM SÜRELERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 78: ARAÇ KULLANIM SÜRELERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-078.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5. SLIDES 4–5 — Araç Kullanım Süreleri (Driving Hours &amp; Tachograph)</h2>
+
 
 <h3>What the slides showed</h3>
 <p>Title: <strong>"ARAÇ KULLANIM SÜRELERİ"</strong> with photos of a digital <strong>takograf (tachograph)</strong> device. Dense text about driving time limits.</p>
@@ -333,7 +349,7 @@ Ayrıca araç sahibi de cezalandırılır.</p>
 <em>"4,5 saatten sonra en az kaç dakika dinlenmelidir?"</em> → <strong>45 dakika.</strong></p>
 </blockquote>
 <hr />
-<h2>6. Why this matters for the exam</h2>
+</div></section><h2>6. Why this matters for the exam</h2>
 <ol>
 <li><strong>Drug use penalty:</strong> 60.036 TL + 5 yıl geri alınma + TCK.</li>
 <li><strong>Alcohol limits:</strong> 0.50 promil (hususi), 0.20 promil (ticari/diğer).</li>

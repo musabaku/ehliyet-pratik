@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -133,8 +149,8 @@ body{
 </ul>
 <p>The exam will ask you about both types and — most importantly — how to tell them apart.</p>
 <hr />
-<h2>2. Diesel Fuel System — Flow (Dizel Yakıt Sisteminin Çalışması)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-025.png" alt="Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-025.png" alt="Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. Diesel Fuel System — Flow (Dizel Yakıt Sisteminin Çalışması)</h2>
+
 
 <h3>The component chain</h3>
 <pre><code>YAKIT DEPOSU ────▶ YAKIT GÖSTERGESİ
@@ -170,8 +186,8 @@ ENJEKTÖR  ────▶ cylinder (püskürtülür / sprayed)
 </ol>
 <p>The hoca's analogy: imagine a wood stove top glowing red from the fire underneath. Drop a little kolonya (cologne) or any flammable liquid on that hot surface — it ignites instantly. That's how diesel combustion works.</p>
 <hr />
-<h2>3. "BUNLARI UNUTMA" — Diesel System Fault: Air Lock (Hava Yapma)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-022.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-022.png" alt="Slayt — Sayfa 22: YAKIT GÖSTERGESĠ                                YAKIT FĠLTRESĠ               HAV" loading="lazy"></a><figcaption>Slayt — Sayfa 22: YAKIT GÖSTERGESĠ                                YAKIT FĠLTRESĠ               HAV <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-022.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-022.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-022.png" alt="Slayt — Sayfa 22: YAKIT GÖSTERGESĠ                                YAKIT FĠLTRESĠ               HAV" loading="lazy"></a><figcaption>Slayt — Sayfa 22: YAKIT GÖSTERGESĠ                                YAKIT FĠLTRESĠ               HAV <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-022.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. "BUNLARI UNUTMA" — Diesel System Fault: Air Lock (Hava Yapma)</h2>
+
 
 <h3>The #1 diesel system fault on the exam</h3>
 <blockquote>
@@ -192,8 +208,8 @@ ENJEKTÖR  ────▶ cylinder (püskürtülür / sprayed)
 <li><strong>Yakıt tamamen bitmeden doldurulmalıdır</strong> — never run the tank completely empty</li>
 </ul>
 <hr />
-<h2>4. Egzozdan Siyah Duman (Black Exhaust Smoke) — Causes</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-025.png" alt="Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-025.png" alt="Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 25: DĠZEL MOTORLARIN YAKIT SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-025.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. Egzozdan Siyah Duman (Black Exhaust Smoke) — Causes</h2>
+
 
 <p>Classic exam question: <em>"Egzozdan siyah duman çıkmasının sebebi aşağıdakilerden hangisidir?"</em><br />
 (Which of the following is a cause of black smoke from the exhaust?)</p>
@@ -210,8 +226,8 @@ ENJEKTÖR  ────▶ cylinder (püskürtülür / sprayed)
 <strong>Note:</strong> A "glow plug" (kızdırma bujisi) is NOT a spark plug — it's a small heater that pre-warms the cylinder on cold starts, so the hot-air ignition works even when the engine is cold. It's the closest thing a diesel has to a "buji" and exam questions sometimes try to trick you here.</li>
 </ul>
 <hr />
-<h2>5. Benzinli Motor vs Dizel Motor (Gasoline vs Diesel) — The Master Table</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-023.png" alt="Slayt — Sayfa 23: BENZĠNLĠ MOTOR" loading="lazy"></a><figcaption>Slayt — Sayfa 23: BENZĠNLĠ MOTOR <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-023.png" alt="Slayt — Sayfa 23: BENZĠNLĠ MOTOR" loading="lazy"></a><figcaption>Slayt — Sayfa 23: BENZĠNLĠ MOTOR <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5. Benzinli Motor vs Dizel Motor (Gasoline vs Diesel) — The Master Table</h2>
+
 
 <p>This table is <strong>the single most important content</strong> in the whole fuel-system section. Memorize it cold.</p>
 <table>
@@ -270,7 +286,7 @@ ENJEKTÖR  ────▶ cylinder (püskürtülür / sprayed)
 <p>Hoca's quote: <em>"Bazen benzinli araç kullanan insanlar, 'benim araba çok yakıt yakıyor, su gibi içiyor' der. Çünkü sünger gibi benzini emiyor."</em><br />
 <em>(Some people driving gasoline cars say "my car drinks fuel like water." That's because it absorbs gasoline like a sponge.)</em></p>
 <hr />
-<h2>6. Memorize These (Fuel System)</h2>
+</div></section><h2>6. Memorize These (Fuel System)</h2>
 <blockquote>
 <p><strong>Dizel sistemin en çok görülen arızası sistemin hava yapmasıdır.</strong><br />
 <em>(The most common diesel system fault is air entering the system.)</em></p>

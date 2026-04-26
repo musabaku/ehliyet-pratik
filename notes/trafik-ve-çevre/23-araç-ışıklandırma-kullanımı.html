@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -134,8 +150,8 @@ body{
 - <strong>How far each headlight type must illuminate</strong> (3 fixed distances: <strong>100 m / 25 m / 20 m</strong>).<br />
 - <strong>When each light type is required</strong> (day vs night, town vs highway, weather) and <strong>when it is forbidden</strong>.</p>
 <hr />
-<h2>2. SLIDE 1 — Araçların Işıklandırılması</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-125.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-125.png" alt="Slayt — Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve" loading="lazy"></a><figcaption>Slayt — Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-125.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-125.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-125.png" alt="Slayt — Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve" loading="lazy"></a><figcaption>Slayt — Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-125.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Araçların Işıklandırılması</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Diagram of two cars from above — a red car with a short yellow beam labeled <strong>25 metre</strong>, and a purple car with a long yellow beam labeled <strong>100 metre</strong>. Three bullet points below describe: when to turn lights on, what lights are on the front vs back, and the 3 distance values.</p>
@@ -246,8 +262,8 @@ body{
 Gündüz: kar/sis/şiddetli yağmur/karanlık yer → lights on. Gece: her zaman zorunlu.</p>
 </blockquote>
 <hr />
-<h2>3. SLIDE 2 — Işıkların Kullanılması</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-126.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-126.png" alt="Slayt — Sayfa 126: IŞIKLARIN KULLANILMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 126: IŞIKLARIN KULLANILMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-126.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-126.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-126.png" alt="Slayt — Sayfa 126: IŞIKLARIN KULLANILMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 126: IŞIKLARIN KULLANILMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-126.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Işıkların Kullanılması</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Header "<strong>IŞIKLARIN KULLANILMASI</strong>" with two pink sub-sections — "<strong>Uzağı Gösteren Işıklar (Uzun Farlar):</strong>" and "<strong>Yakını Gösteren Işıklar (Kısa Farlar):</strong>" — each with bullet rules. A blue high-beam icon appears top-right. Closing paragraph describes "<strong>Selektör Yapma</strong>" (flashing). Bottom shows two toy-car photos labeled <strong>karşılaşmada yakın ışıklar</strong> (low beams when meeting oncoming) and <strong>takipte yakın ışıklar</strong> (low beams when following).</p>
@@ -295,8 +311,8 @@ Gündüz: kar/sis/şiddetli yağmur/karanlık yer → lights on. Gece: her zaman
 <strong>Selektör yapma:</strong> gece görülmeyen <strong>kavşak / dönemeç / tepe üstü</strong> — yakın+uzak ışıkları <strong>ardı ardına</strong> yak.</p>
 </blockquote>
 <hr />
-<h2>4. SLIDE 3 — Işıkların Kullanılmasında Yasaklar</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-127.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-127.png" alt="Slayt — Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-127.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-127.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-127.png" alt="Slayt — Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-127.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Işıkların Kullanılmasında Yasaklar</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Pink header "<strong>IŞIKLARIN KULLANILMASINDA YASAKLAR</strong>" with a 6-item bullet list and a closing legal paragraph citing the fine (<strong>1.246 TL, Madde 30/1-a</strong>). Two photos at the bottom: a car in a tunnel, and cars in heavy fog/snow with lights on.</p>
@@ -341,7 +357,7 @@ Gündüz: kar/sis/şiddetli yağmur/karanlık yer → lights on. Gece: her zaman
 6. Standart dışı ışık takma/kullanma <strong>YASAK</strong>. Ceza: <strong>1.246 TL</strong>.</p>
 </blockquote>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <ol>
 <li><strong>"Uzun farlar kaç metre ileriyi aydınlatır?"</strong> → <strong>100 m.</strong></li>
 <li><strong>"Kısa farlar kaç metre ileriyi aydınlatır?"</strong> → <strong>25 m.</strong></li>

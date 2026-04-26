@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -132,8 +148,8 @@ body{
 - <strong>Yol çizgileri</strong> — kesik çizgi = geçme serbest; devamlı çizgi = geçme YASAK (see <a href="11-yol-çizgileri.md">11-yol-çizgileri.md</a>).<br />
 - <strong>Trafik işaretleri</strong> — TT-27 (geçme yasağı, herkese) and TT-28 (kamyonlara geçme yasağı) in <a href="08-trafik-tanzim-işaretleri-yasaklama.md">08-trafik-tanzim-işaretleri-yasaklama.md</a>.</p>
 <hr />
-<h2>2. SLIDE 1 — Öndeki Aracı Geçme Kuralları</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Öndeki Aracı Geçme Kuralları</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A four-section slide with a lane diagram on the right showing three cars (red at back, green middle, white at front, gray at front being overtaken).</p>
@@ -263,8 +279,8 @@ body{
 <p><strong>Geçişler sol şeritten yapılır.</strong> Sağdan geçiş sadece 3 durumda: <strong>tramvay · sola dönecek araç · görev başında sol kenarda duran geçiş üstünlüğüne sahip araç</strong>.</p>
 </blockquote>
 <hr />
-<h2>2B. SLIDE 2 — Öndeki Aracı Geçmenin Yasak Olduğu Yerler (5 yer)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-089.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-089.png" alt="Slayt — Sayfa 89: ÖNDEKİ ARACI GEÇMENİN YASAK OLDUĞU YERLER" loading="lazy"></a><figcaption>Slayt — Sayfa 89: ÖNDEKİ ARACI GEÇMENİN YASAK OLDUĞU YERLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-089.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-089.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-089.png" alt="Slayt — Sayfa 89: ÖNDEKİ ARACI GEÇMENİN YASAK OLDUĞU YERLER" loading="lazy"></a><figcaption>Slayt — Sayfa 89: ÖNDEKİ ARACI GEÇMENİN YASAK OLDUĞU YERLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-089.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2B. SLIDE 2 — Öndeki Aracı Geçmenin Yasak Olduğu Yerler (5 yer)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A "<strong>ÖNDEKİ ARACI GEÇMENİN YASAK OLDUĞU YERLER</strong>" header with a 5-item list and a red circular <strong>"Öndeki Taşıtı Geçmek Yasaktır"</strong> (TT-27) sign + 4 illustrated scenarios (tepe üstü, kavşak, yaya geçidi, tünel).</p>
@@ -301,8 +317,8 @@ body{
 <p><strong>ÖNDEKİ ARACI GEÇMENİN YASAK OLDUĞU 5 YER:</strong> (1) trafik işaretinin yasakladığı yer · (2) görüş yetersiz tepe üstü ve dönemeç · (3) yaya ve okul geçidi · (4) kavşak ve demiryolu geçidi · (5) gidiş/geliş için birer şeridi bulunan iki yönlü köprü ve tünel.</p>
 </blockquote>
 <hr />
-<h2>2C. Hoca's Live Class Additions (2026-04-18)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. Hoca's Live Class Additions (2026-04-18)</h2>
+
 
 <h3>Why "sağdan geçme yasağı" is life-or-death — motosiklet kaza istatistiği</h3>
 <p>The hoca spent extra class time on the 3-exceptions rule because of a real statistic:</p>
@@ -316,8 +332,8 @@ body{
 <p><strong>Türkiye'de her 2 kazadan 1'i motosiklet kazası. En yaygın senaryo: motosikletin sağdan kural dışı geçmesi + sağa dönen aracın onu görememesi. Sağdan geçmenin YASAK olmasının sebebi budur.</strong></p>
 </blockquote>
 <hr />
-<h2>3. When overtaking is FORBIDDEN (pair this with the sign lessons)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. When overtaking is FORBIDDEN (pair this with the sign lessons)</h2>
+
 
 <p>Geçme YASAKTIR when:<br />
 - A <strong>devamlı (unbroken) white line</strong> separates the lanes.<br />
@@ -329,8 +345,8 @@ body{
 - Someone is already overtaking <strong>you</strong> (precondition #2 failed).<br />
 - <strong>Sis, kar, yağmur</strong> reduces visibility below the required clear distance.</p>
 <hr />
-<h2>4. Duties of the driver being overtaken</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. Duties of the driver being overtaken</h2>
+
 
 <p>You must actively cooperate with a legal overtake:<br />
 1. <strong>Signal seen?</strong> Don't speed up. (Speeding up while being overtaken is one of the most common — and most lethal — driving errors the exam targets.)<br />
@@ -338,7 +354,7 @@ body{
 3. <strong>Dar iki yönlü yolda:</strong> pull right, slow down, stop if the passing car's sight distance is about to be compromised.<br />
 4. <strong>Never block or weave.</strong> This is a legal offense on top of a safety hazard.</p>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <ol>
 <li><strong>"Öndeki aracı geçmek isteyen sürücü ilk önce ne yapmalıdır?"</strong> → <strong>Sol sinyal ver.</strong></li>
 <li><strong>"Gündüz ve gece öndeki aracı nasıl uyarırsınız?"</strong> → <strong>Gündüz korna, gece selektör.</strong></li>

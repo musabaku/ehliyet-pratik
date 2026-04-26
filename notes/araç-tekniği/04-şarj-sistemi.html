@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -154,8 +170,8 @@ body{
 </table>
 <p>Without the şarj sistemi, your battery would drain within minutes of driving — headlights, wipers, radio, ignition, and lighting would all pull from the akü with no replenishment.</p>
 <hr />
-<h2>2. SLIDE — Şarj Sistemi (Full slide)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-033.png" alt="Slayt — Sayfa 33: ġARJ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 33: ġARJ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-033.png" alt="Slayt — Sayfa 33: ġARJ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 33: ġARJ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE — Şarj Sistemi (Full slide)</h2>
+
 
 <p><strong>Slide title:</strong> ŞARJ SİSTEMİ</p>
 <h3>What the slide said</h3>
@@ -184,7 +200,7 @@ body{
 </ol>
 <p>So the akü is really only used for the first few seconds of driving (to start the engine). After that, the alternator takes over and the akü is just being topped back up.</p>
 <hr />
-<h2>3. The 8 Parts (Memorize this list!)</h2>
+</div></section><h2>3. The 8 Parts (Memorize this list!)</h2>
 <table>
 <thead>
 <tr>
@@ -254,8 +270,8 @@ body{
 <li><strong>Kontak anahtarı</strong> — also the same as in marş sistemi. Shared component.</li>
 </ul>
 <hr />
-<h2>4. How the system flows (Sistemin Çalışması)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-033.png" alt="Slayt — Sayfa 33: ġARJ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 33: ġARJ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-033.png" alt="Slayt — Sayfa 33: ġARJ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 33: ġARJ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. How the system flows (Sistemin Çalışması)</h2>
+
 
 <pre><code>Motor çalışır (engine runs)
        │
@@ -289,8 +305,8 @@ KONJONKTÖR (REGÜLATÖR) regulates voltage
 5. You have maybe a few minutes of driving before the battery dies OR the engine overheats</p>
 <p><strong>Correct action:</strong> Pull over, stop the engine, call for roadside assistance or tow. Do not keep driving.</p>
 <hr />
-<h2>4B. Hoca's Live Class Additions (2026-04-13)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4B. Hoca's Live Class Additions (2026-04-13)</h2>
+
 
 <h3>Vantilatör Kayışı tension test (practical maintenance check)</h3>
 <p>The hoca gave a very practical diagnostic for checking the fan belt:</p>
@@ -373,7 +389,7 @@ KONJONKTÖR (REGÜLATÖR) regulates voltage
 <p><strong>The rule:</strong> When you see an exam option with a name you don't immediately recognize, <strong>check if it's the alternate name for a part you already know</strong>. All six names in the table above are valid şarj sistemi components. Don't eliminate "regülatör" just because you only memorized "konjonktör."</p>
 <p>This trap isn't just in şarj sistemi — it applies to <strong>any component with two names</strong> across all of Araç Tekniği (e.g., şaft ↔ kardan mili, yakıt deposu ↔ depo, aks ↔ dingil, etc.).</p>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <p>Very high-frequency question types:</p>
 <ol>
 <li>

@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -141,8 +157,8 @@ body{
 - <strong>Put the power on the road</strong> → <strong>Tekerlekler (wheels)</strong></p>
 <p>That chain is the güç aktarma organları.</p>
 <hr />
-<h2>2. SLIDE — Güç Aktarma Organları Diagram</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-046.png" alt="Slayt — Sayfa 46: Aktarma Organları;" loading="lazy"></a><figcaption>Slayt — Sayfa 46: Aktarma Organları; <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-046.png" alt="Slayt — Sayfa 46: Aktarma Organları;" loading="lazy"></a><figcaption>Slayt — Sayfa 46: Aktarma Organları; <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE — Güç Aktarma Organları Diagram</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A cutaway illustration of a rear-wheel-drive car's drivetrain from engine to rear wheels, with the following parts labeled:<br />
@@ -186,7 +202,7 @@ body{
 </blockquote>
 <p><strong>Practical implication for snow chains:</strong> If the exam asks "which wheels do snow chains go on for a modern city car?" the answer is <strong>ön tekerleklere</strong> (front wheels) — because modern cars are <strong>önden çekiş</strong> and the front wheels are the <strong>çekici lastikler</strong> (driving/traction wheels). See <a href="08b-lastikler.md">08b-lastikler.md</a> slide 4 for the full rule.</p>
 <hr />
-<h2>2A. BONUS — Amortisör (Shock Absorber), a Related Part</h2>
+</div></section><h2>2A. BONUS — Amortisör (Shock Absorber), a Related Part</h2>
 <p>Not technically part of güç aktarma organları (it belongs to the <strong>süspansiyon sistemi</strong>), but the hoca pointed at it while explaining the drivetrain diagram:</p>
 <blockquote>
 <p><em>"Şu tekerleklerin üzerindeki yaylara ne diyoruz? Amortisör diyoruz."</em></p>
@@ -199,8 +215,8 @@ body{
 <p>If the amortisör fails, the car bounces excessively after bumps, tires wear unevenly, and handling becomes unpredictable. <strong>Worn shocks are a safety issue</strong>, not just a comfort one.</p>
 <p>This topic belongs to <strong>Süspansiyon Sistemi</strong> — a file to build out later when the hoca covers it.</p>
 <hr />
-<h2>2B. BONUS — Visual Trick for Motor Cooling Type (Hava Soğutmalı vs Su Soğutmalı)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-009.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/01-motor-genel/page-009.png" alt="Slayt — Sayfa 9: Motorların Sınıflandırılması" loading="lazy"></a><figcaption>Slayt — Sayfa 9: Motorların Sınıflandırılması <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-009.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-009.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/01-motor-genel/page-009.png" alt="Slayt — Sayfa 9: Motorların Sınıflandırılması" loading="lazy"></a><figcaption>Slayt — Sayfa 9: Motorların Sınıflandırılması <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-009.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2B. BONUS — Visual Trick for Motor Cooling Type (Hava Soğutmalı vs Su Soğutmalı)</h2>
+
 
 <p>The hoca shared an exam tactic for engine-identification questions:</p>
 <blockquote>
@@ -235,8 +251,8 @@ body{
 </ul>
 <p>If the exam shows an image of neat cylinders in a line, it's <strong>sıra tipi</strong> — the single most common engine arrangement.</p>
 <hr />
-<h2>2C. Part-Level Detail (from portal E-Kitap Subject 5)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-046.png" alt="Slayt — Sayfa 46: Aktarma Organları;" loading="lazy"></a><figcaption>Slayt — Sayfa 46: Aktarma Organları; <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-046.png" alt="Slayt — Sayfa 46: Aktarma Organları;" loading="lazy"></a><figcaption>Slayt — Sayfa 46: Aktarma Organları; <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-046.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. Part-Level Detail (from portal E-Kitap Subject 5)</h2>
+
 
 <p>The hoca's class slide showed the drivetrain chain at a high level. The portal E-Kitap article has <strong>much deeper part-by-part detail</strong> that isn't on the slides but will be on the exam. Every one of these sub-parts and fault scenarios is testable.</p>
 <h3>1. Debriyaj (Clutch) System — details</h3>
@@ -489,8 +505,8 @@ TEKERLEKLER + LASTİKLER (wheels + tires)
 </code></pre>
 <p>Memorize this expanded chain — it's the single most complete picture of güç aktarma organları the exam will test against.</p>
 <hr />
-<h2>2D. SLIDE (2026-04-14) — VİTES KUTUSU tanımı + "Şanzıman"</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-045.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-045.png" alt="Slayt — Sayfa 45: GÜÇ AKTARMA ORGANLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 45: GÜÇ AKTARMA ORGANLARI <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-045.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-045.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-045.png" alt="Slayt — Sayfa 45: GÜÇ AKTARMA ORGANLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 45: GÜÇ AKTARMA ORGANLARI <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-045.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2D. SLIDE (2026-04-14) — VİTES KUTUSU tanımı + "Şanzıman"</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>VİTES KUTUSU</strong>. A short one-sentence definition at the top, and a <strong>3D cutaway illustration of a gearbox</strong> showing the internal gear wheels (dişliler), the input shaft on the left, and the output shafts running along the length of the housing. A small <strong>H-pattern shift diagram</strong> in the corner labeled "R 1 3 / 2 4" (reverse, 1st, 3rd on top row; 2nd, 4th on bottom row) with the caption <strong>"Click on numbers to change speed"</strong> — indicating this was an interactive animation in the original hoca presentation.</p>
@@ -566,8 +582,8 @@ It is the <strong>box that contains the gears used to regulate the speed of the 
 <em>Gear oil goes in the gearbox.</em></p>
 </blockquote>
 <hr />
-<h2>2E. SLIDE (2026-04-14) — VİTES KULLANIM HIZLARI (Which Gear at Which Speed)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2E. SLIDE (2026-04-14) — VİTES KULLANIM HIZLARI (Which Gear at Which Speed)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>VİTES KULLANIM HIZLARI</strong> (Gear Usage Speeds). A numbered text block explaining that <strong>1. vites is the starting gear</strong>, that each gear has its own speed range, and a list of the <strong>approximate speed range for each gear</strong>. A closing line about what comes after shifting.</p>
@@ -694,8 +710,8 @@ It is the <strong>box that contains the gears used to regulate the speed of the 
 <em>Gear speed ranges: 1st→0-20, 2nd→20-40, 3rd→40-60, 4th→60-80, 5th→80+ km/h.</em></p>
 </blockquote>
 <hr />
-<h2>2F. Hoca's Live Class Additions (2026-04-14) — Vites Kullanımı &amp; Kalkış</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2F. Hoca's Live Class Additions (2026-04-14) — Vites Kullanımı &amp; Kalkış</h2>
+
 
 <h3>Addition 1 — EXAM CRITICAL: Maximum 2 stops in the direksiyon sınavı. 3rd stop = direct fail.</h3>
 <p>This is the single most important operational fact hoca gave all class. It is NOT in the slides.</p>
@@ -932,7 +948,7 @@ It is the <strong>box that contains the gears used to regulate the speed of the 
 <p>You press the gas, the car figures out which gear to be in. You press the brake, it downshifts automatically. All the manual-transmission complexity (clutch, yarım debriyaj, shifting 1→2→3) disappears. This is why otomatik ehliyet is <strong>much easier</strong> for beginners — the single hardest skill (clutch coordination) is removed.</p>
 <p><strong>Downside of otomatik ehliyet:</strong> <strong>you can ONLY drive automatic cars with it</strong> — you're legally prohibited from driving a manual. With a <strong>manuel ehliyet</strong>, you can drive <strong>both</strong> manual and automatic cars. Most students take manuel ehliyet for this reason, even though it's harder to learn.</p>
 <hr />
-<h2>3. Why this matters for the exam</h2>
+</div></section><h2>3. Why this matters for the exam</h2>
 <p>Common question patterns:</p>
 <ol>
 <li><em>"Güç aktarma organlarının görevi nedir?"</em><br />

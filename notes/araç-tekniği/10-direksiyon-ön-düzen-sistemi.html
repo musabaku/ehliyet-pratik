@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -133,8 +149,8 @@ body{
 </blockquote>
 <p>The two systems are always taught together because the steering hardware (direksiyon kutusu, rot, rot başı) lives inside the ön düzen area, and a fault in one almost always shows up as a symptom in the other (e.g., worn rot başları → direksiyonda boşluk hissedilir).</p>
 <hr />
-<h2>2. SLIDE 1 — Parçaların İsimleri + Önemli Dipnotlar</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-056.png" alt="Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-056.png" alt="Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Parçaların İsimleri + Önemli Dipnotlar</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>ÖN DÜZEN VE DİREKSİYON SİSTEMİ</strong>. Left column lists <strong>4 part names</strong> under "Parçaların isimleri". Below that, in green italics, a second block titled <strong><em>Önemli Dipnotlar</em></strong> (Important Footnotes) with <strong>4 numbered facts</strong>.</p>
@@ -229,8 +245,8 @@ ROT BAŞLARI        (tie-rod ends transmit force to wheel hubs)
 <p><strong>Plain English:</strong> When rot ayarı (toe) or camber is wrong, the tires don't roll flat on the road — they scuff sideways or lean on one edge. Result: <strong>uneven edge wear</strong> on the tread. Wear on <strong>one specific edge</strong> (only inside OR only outside) points to camber issues; wear on <strong>both edges</strong> points to toe / rot bozukluğu. The slide's wording <strong>"içten ve dıştan aşınır"</strong> covers both.</p>
 <p><strong>Exam trigger phrase:</strong> <em>"Lastiklerin iç veya dış kenarları aşınıyorsa…"</em> → <strong>ön düzen ayarı bozuktur</strong>. Fix: <strong>rot-balans ayarı yaptır</strong>.</p>
 <hr />
-<h2>3. SLIDE 2 — Direksiyon + Ön Düzen Diyagramı (Labeled Diagram)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-056.png" alt="Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-056.png" alt="Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 56: DĠREKSĠYON – ÖN DÜZEN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-056.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Direksiyon + Ön Düzen Diyagramı (Labeled Diagram)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A front-on exploded view of the entire front-end assembly, with the <strong>direksiyon simidi</strong> at the top, the <strong>direksiyon mili</strong> running downward, a clearly visible <strong>direksiyon kutusu</strong> (labeled in large black text) containing a rack gear, green <strong>rotlar</strong> (labeled "rotlar") running outward from the rack to the wheels, blue <strong>salıncaklar</strong> (control arms), grey <strong>amortisörler</strong> (shock absorbers), and the <strong>ön tekerlekler</strong> on each side. Two small gauges above the wheels show "<strong>0 / 0</strong>" readings — these represent a <strong>wheel-alignment check</strong> showing toe/camber readings at zero (correctly aligned).</p>
@@ -318,7 +334,7 @@ ROT BAŞLARI        (tie-rod ends transmit force to wheel hubs)
 <em>Rot and rot başı are parts of the steering system — but they are checked together with the front-end alignment.</em></p>
 </blockquote>
 <hr />
-<h2>4. Why this matters for the exam</h2>
+</div></section><h2>4. Why this matters for the exam</h2>
 <p>Typical exam question patterns on this topic:</p>
 <ol>
 <li><strong>"Direksiyon kutusuna ne konulur?"</strong> → <strong>Dişli yağı</strong> (gear oil, NOT motor oil and NOT brake fluid)</li>

@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -154,8 +170,8 @@ body{
 <p><strong>Exam mnemonic:</strong> <strong>Kırmızı daire = yasak (no!). Mavi daire = mecburi (must!).</strong> Colour = intent.</p>
 </blockquote>
 <hr />
-<h2>2. SLIDE 1 — Mandatory Direction Signs (TT-35 → TT-40)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Mandatory Direction Signs (TT-35 → TT-40)</h2>
+
 
 <h3>The 8 signs</h3>
 <table>
@@ -224,8 +240,8 @@ body{
 <li><strong>TT-40a (roundabout direction)</strong> — Turkey drives on the <strong>right</strong>, so roundabouts go <strong>counterclockwise</strong> (saat yönünün tersine). The blue circular arrow confirms this. If the exam shows a roundabout sign, vehicles already inside have priority.</li>
 </ul>
 <hr />
-<h2>3. SLIDE 2 — Pedestrian, Cyclist, and Horse Signs</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-139.png" alt="Slayt — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-139.png" alt="Slayt — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Pedestrian, Cyclist, and Horse Signs</h2>
+
 
 <h3>The 8 signs</h3>
 <table>
@@ -293,8 +309,8 @@ body{
 <li><strong>Blue circle with both pedestrian + bicycle icon = shared path.</strong> Blue circle with a <strong>dividing line</strong> between pedestrian and bicycle icons = <strong>separate</strong> paths (each group uses their own side). This distinction is the exam's favourite test on this slide.</li>
 </ul>
 <hr />
-<h2>4. SLIDE 3 — Minimum Speed · Snow Chains · Hazmat Direction</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Minimum Speed · Snow Chains · Hazmat Direction</h2>
+
 
 <h3>The 5 signs</h3>
 <table>
@@ -350,8 +366,8 @@ body{
 <li><strong>Kar zinciri = çekici lastiklere takılır</strong> (snow chains go on the <strong>drive wheels</strong>). For modern front-wheel-drive (FWD) cars = <strong>front wheels</strong>. This links back to the Araç Tekniği module — see <a href="../araç-tekniği/08b-lastikler.md">08b-lastikler.md</a>.</li>
 </ul>
 <hr />
-<h2>5. SLIDE 4 — Shared Path &amp; End-of-Path Signs (TT-44)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-145.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-145.png" alt="Slayt — Sayfa 145: YAYALARLA İLGİLİ KURALLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 145: YAYALARLA İLGİLİ KURALLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-145.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-145.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-145.png" alt="Slayt — Sayfa 145: YAYALARLA İLGİLİ KURALLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 145: YAYALARLA İLGİLİ KURALLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-145.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Shared Path &amp; End-of-Path Signs (TT-44)</h2>
+
 
 <h3>The 4 signs</h3>
 <table>
@@ -395,7 +411,7 @@ body{
 <p><strong>Shared vs separate — THE visual cue:</strong> if the pedestrian icon and bicycle icon are side by side with <strong>no line</strong> between them = <strong>shared</strong>. If there is a <strong>vertical line</strong> dividing them = <strong>separate paths</strong>. Exam: <em>"Bu iki işaret arasındaki fark nedir?"</em> → one is shared, the other separates pedestrians from cyclists.</p>
 </blockquote>
 <hr />
-<h2>6. Why this matters for the exam</h2>
+</div></section><h2>6. Why this matters for the exam</h2>
 <ol>
 <li><strong>Red circle = yasak, blue circle = mecburi:</strong> <em>"Mavi zeminli daire şeklindeki işaretler ne anlama gelir?"</em> → <strong>Mecburi (mandatory) — uyulması zorunlu.</strong></li>
 <li><strong>Azami vs asgari hız:</strong> <em>"Kırmızı daire içinde 50 yazıyorsa ne anlama gelir?"</em> → <strong>Azami hız 50 km/h.</strong> <em>"Mavi daire içinde 30 yazıyorsa?"</em> → <strong>Asgari hız 30 km/h.</strong></li>

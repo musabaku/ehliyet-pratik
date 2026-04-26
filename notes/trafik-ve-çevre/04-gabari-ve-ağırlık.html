@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -135,8 +151,8 @@ body{
 </ol>
 <p>These four terms show up as <strong>bridge, tunnel, and narrow-road prohibition signs</strong> (the red-circle signs with a number followed by "m" or "t"). The exam tests both the definitions and the meaning of each sign.</p>
 <hr />
-<h2>2. SLIDE 1 — The 4 measurement definitions + gabari signs</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-029.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-029.png" alt="Slayt — Sayfa 29: Gabari: Araçların yüklü veya yüksüz olarak karayolunda güvenli seyirlerini temin" loading="lazy"></a><figcaption>Slayt — Sayfa 29: Gabari: Araçların yüklü veya yüksüz olarak karayolunda güvenli seyirlerini temin <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-029.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-029.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-029.png" alt="Slayt — Sayfa 29: Gabari: Araçların yüklü veya yüksüz olarak karayolunda güvenli seyirlerini temin" loading="lazy"></a><figcaption>Slayt — Sayfa 29: Gabari: Araçların yüklü veya yüksüz olarak karayolunda güvenli seyirlerini temin <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-029.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — The 4 measurement definitions + gabari signs</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Four red-bold definitions stacked at the top. Below them, <strong>five prohibitive signs</strong> in red circles:<br />
@@ -189,8 +205,8 @@ body{
 <p><strong>Dingil ağırlığı is per-axle, not total.</strong> A 6 t axle sign can block a 5-ton truck if its rear axle alone is loaded to 6.5 t.</p>
 </blockquote>
 <hr />
-<h2>3. Reading the 5 prohibitive gabari signs</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-128.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-128.png" alt="Slayt — Sayfa 128: ARAÇLARIN BOYUT ÖLÇÜ VE AĞIRLIKLARI:" loading="lazy"></a><figcaption>Slayt — Sayfa 128: ARAÇLARIN BOYUT ÖLÇÜ VE AĞIRLIKLARI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-128.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-128.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-128.png" alt="Slayt — Sayfa 128: ARAÇLARIN BOYUT ÖLÇÜ VE AĞIRLIKLARI:" loading="lazy"></a><figcaption>Slayt — Sayfa 128: ARAÇLARIN BOYUT ÖLÇÜ VE AĞIRLIKLARI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-128.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. Reading the 5 prohibitive gabari signs</h2>
+
 
 <p>Each sign is a <strong>red circle with a black number</strong>. Red circle = prohibition.</p>
 <table>
@@ -229,7 +245,7 @@ body{
 - <strong>"t"</strong> (tons) alone → <strong>azami (yüklü) ağırlık</strong><br />
 - <strong>"t"</strong> with <strong>axle</strong> symbol → <strong>dingil ağırlığı</strong></p>
 <hr />
-<h2>4. Why this matters for the exam</h2>
+</div></section><h2>4. Why this matters for the exam</h2>
 <ol>
 <li><strong>Definition match-up</strong> — the exam asks <em>"Aracın yükle birlikte ağırlığına ne denir?"</em> → <strong>Azami ağırlık</strong> (trap: not "taşıma sınırı").</li>
 <li><strong>Gabari scope</strong> — <em>"Gabari neyi ifade eder?"</em> → <strong>uzunluk, genişlik, yükseklik</strong> (all three — not weight).</li>

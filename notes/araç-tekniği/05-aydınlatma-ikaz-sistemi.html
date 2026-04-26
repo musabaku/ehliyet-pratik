@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -226,8 +242,8 @@ body{
 - <strong>Yağ pompası</strong> (wrong — that's yağlama sistemi)</p>
 <p>Memorize the 8 parts above so you can instantly spot what doesn't belong.</p>
 <hr />
-<h2>3. SLIDE 2 — Arızaları (Fault Diagnosis Flow)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Arızaları (Fault Diagnosis Flow)</h2>
+
 
 <h3>What the slide said</h3>
 <blockquote>
@@ -278,8 +294,8 @@ body{
    → <strong>Ampul yenisiyle değiştirilir</strong></li>
 </ol>
 <hr />
-<h2>4. SLIDE 3 — Göstergeler Sistemi (Dashboard / Indicators System)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Göstergeler Sistemi (Dashboard / Indicators System)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>GÖSTERGELER SİSTEMİ</strong><br />
@@ -459,8 +475,8 @@ Image: car dashboard cluster (gauges) + grid of warning light icons</p>
 </ol>
 <p>Ignoring any of these can destroy the engine within minutes. This is one of the single most common exam questions in the Araç Tekniği section.</p>
 <hr />
-<h2>4A. SLIDE 4 — The 4 Critical Warning Light Icons (Detailed)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4A. SLIDE 4 — The 4 Critical Warning Light Icons (Detailed)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Four large warning light icons with labels:<br />
@@ -515,8 +531,8 @@ Image: car dashboard cluster (gauges) + grid of warning light icons</p>
 <h3>Critical exam fact</h3>
 <p>Three of these four lights (<strong>şarj, yağ, hararet</strong>) are the <strong>"3 red light rule"</strong> — if any turns on while driving, stop the car immediately. The fourth (<strong>yakıt</strong>) is yellow — important but not an emergency.</p>
 <hr />
-<h2>4B. SLIDE 5 — Composite Dashboard Icons (Fuel Gauge + Signals + Misc Warnings)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-043.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-043.png" alt="Slayt — Sayfa 43: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-043.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-043.png" alt="Slayt — Sayfa 43: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4B. SLIDE 5 — Composite Dashboard Icons (Fuel Gauge + Signals + Misc Warnings)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A mixed layout with:<br />
@@ -570,8 +586,8 @@ Image: car dashboard cluster (gauges) + grid of warning light icons</p>
 <h3>Turn signal arrows (sinyal ok göstergesi)</h3>
 <p>The two large green arrows are the <strong>turn signal indicators</strong> — they blink in sync with your actual exterior turn signals so you know which way you've signaled. If one blinks <em>faster than normal</em>, it usually means one of the exterior bulbs has burned out.</p>
 <hr />
-<h2>4C. SLIDE 6 — Signal, Hazard &amp; Headlight Indicator Lights</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4C. SLIDE 6 — Signal, Hazard &amp; Headlight Indicator Lights</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Four labeled indicator lights:<br />
@@ -637,8 +653,8 @@ Image: car dashboard cluster (gauges) + grid of warning light icons</p>
 <li><strong>Sinyal göstergesi</strong> blinks faster than normal → one of the exterior signal bulbs is burned out.</li>
 </ol>
 <hr />
-<h2>4D. Hoca's Live Class Addition — Yarım Kontak (Half-Ignition) in the Driving Test</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4D. Hoca's Live Class Addition — Yarım Kontak (Half-Ignition) in the Driving Test</h2>
+
 
 <p>This is a practical/exam concept that isn't on the slides but comes up <strong>on the actual driving test</strong> (direksiyon sınavı):</p>
 <blockquote>
@@ -674,8 +690,8 @@ Image: car dashboard cluster (gauges) + grid of warning light icons</p>
 (Don't think of this lesson as just "pass the e-exam by solving 10 questions." When you actually drive, this information will be very useful.)</p>
 </blockquote>
 <hr />
-<h2>4E. SLIDE (2026-04-14) — GÖSTERGELER: The 3-Color Rule</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4E. SLIDE (2026-04-14) — GÖSTERGELER: The 3-Color Rule</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title in red: <strong>"GÖSTERGELER…!!"</strong> (Indicators…!!). Below, a <strong>3-rule color-coded list</strong> explaining what it means when a dashboard indicator light is <strong>off, red, or yellow</strong> — a simple traffic-light-style rule for interpreting any warning lamp on any car.</p>
@@ -785,7 +801,7 @@ Image: car dashboard cluster (gauges) + grid of warning light icons</p>
 - <strong>Red</strong> → fault, car must not be driven, go to service immediately</p>
 </blockquote>
 <hr />
-<h2>4F. SLIDE (2026-04-14) — AYDINLATMA SİSTEMİNİN GÖREVİ (Görev Recap Slide)</h2>
+</div></section><h2>4F. SLIDE (2026-04-14) — AYDINLATMA SİSTEMİNİN GÖREVİ (Görev Recap Slide)</h2>
 <h3>What the slide showed</h3>
 <p>A full-slide, text-only transition slide — red underlined title <strong>"AYDINLATMA SİSTEMİNİN GÖREVİ"</strong> on top, and underneath, in large black capital letters, the <strong>one-sentence görev (purpose) definition</strong>. Hoca showed this as the introduction to the <strong>Aydınlatma Sistemleri (Lighting Systems)</strong> chapter after covering göstergeler and the 3-color rule.</p>
 <h3>Verbatim Turkish → English</h3>
@@ -831,8 +847,8 @@ It is the set of lights used to ensure <strong>safe movement</strong> of the veh
 <em>The purpose of the lighting system is the set of lights used to ensure safe movement of the vehicle.</em></p>
 </blockquote>
 <hr />
-<h2>4G. Hoca's Live Class Additions (2026-04-14) — Göstergeler &amp; Yarım Kontak Exam Test</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4G. Hoca's Live Class Additions (2026-04-14) — Göstergeler &amp; Yarım Kontak Exam Test</h2>
+
 
 <h3>Addition 1 — The "yarım kontak" (half-ignition) sınav testi: exact committee questions</h3>
 <p>We already know from class 1 (section 4D of this file) that the committee stops you at <strong>yarım kontak</strong> and quizzes you on the dashboard. Hoca gave more detail in class 2 about <strong>exactly what the committee asks</strong>:</p>
@@ -865,8 +881,8 @@ It is the set of lights used to ensure <strong>safe movement</strong> of the veh
 </blockquote>
 <p><strong>Exam angle:</strong> this is the exam-ready phrasing of the "if red → don't drive" rule. Use it verbatim if asked "if you see a red warning light, what do you do?" → <strong>"Aracı hareket ettirmem, en kısa zamanda servise götürürüm."</strong></p>
 <hr />
-<h2>4H. SLIDE (2026-04-14 post-break) — Uzun Far Göstergesi + 100m Aydınlatma + Mavi Lamba</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4H. SLIDE (2026-04-14 post-break) — Uzun Far Göstergesi + 100m Aydınlatma + Mavi Lamba</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A blue-text paragraph at the top describing the <strong>uzun far (high beam)</strong> dashboard indicator, followed by a <strong>large black-and-white icon</strong> showing the classic high-beam symbol — a <strong>D-shape with horizontal lines</strong> pointing forward (these horizontal lines represent the straight, far-reaching beam of light pointing forward, as opposed to the angled-down low-beam pattern).</p>
@@ -911,8 +927,8 @@ When approaching oncoming traffic at 150 m, high beams must be switched to low b
 <em>When approaching oncoming traffic within 150 meters, high beams must be switched to low beams.</em></p>
 </blockquote>
 <hr />
-<h2>4I. SLIDE (2026-04-14 post-break) — Farlarda Yapılan Ayarlara: FAR AYARI</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4I. SLIDE (2026-04-14 post-break) — Farlarda Yapılan Ayarlara: FAR AYARI</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A text-only slide titled <strong>"FARLARDA YAPILAN AYARLARA: FAR AYARI DENİR"</strong> (The adjustments made to headlights are called "headlight alignment"). Below, a <strong>5-bullet list</strong> covering the core rules about far ayarı, the distances, the indicator colors, the sinyal fault symptom, and the sigorta replacement rule. Some words are highlighted in colors (BLUE = key concepts, RED = warnings).</p>
@@ -1077,8 +1093,8 @@ When approaching oncoming traffic at 150 m, high beams must be switched to low b
 <h3>Note on the Aydınlatma Sisteminin Görevi recap slide</h3>
 <p>The third image shared is the <strong>same slide I already saved as section 4F</strong> (görev definition — "aracın emniyetli seyrini sağlamak için kullanılan ışıklandırmalardır"). Hoca re-showed it after the break as the chapter intro before moving into far/sinyal/sigorta content. No new content to capture — it's already in section 4F.</p>
 <hr />
-<h2>4J. SLIDE (2026-04-14 post-break) — FREN LAMBASI (Brake Lamp)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4J. SLIDE (2026-04-14 post-break) — FREN LAMBASI (Brake Lamp)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title at top: <strong>"FREN LAMBASI"</strong>. Below, a rear-view cartoon illustration of a hatchback car with <strong>3 red/pink rectangular lights lit up</strong>: two at the corners of the rear (left and right <strong>fren/stop lambaları</strong>) and a <strong>third red light mounted in the middle of the rear window</strong> (the <strong>3. stop / üçüncü fren lambası</strong>, required by law on all modern cars). Underneath, a 3-sentence text block explaining what the brake lamps do and 2 common faults.</p>
@@ -1159,8 +1175,8 @@ A <strong>faulty fren müşiri (brake light switch)</strong> can cause the brake
 <em>If one brake lamp isn't lit → the bulb is faulty. If no brake lamps are lit → the brake light switch is faulty.</em></p>
 </blockquote>
 <hr />
-<h2>4K. SLIDE (2026-04-14 post-break) — GERİ VİTES LAMBASI (Reverse Lamp)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4K. SLIDE (2026-04-14 post-break) — GERİ VİTES LAMBASI (Reverse Lamp)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title at top: <strong>"GERİ VİTES LAMBASI"</strong>. A rear-view cartoon illustration of a car with <strong>two white/beyaz lamps lit up at the rear corners</strong> (with radiating "shine" lines to indicate they're on). Underneath, a 2-sentence text block about purpose and one common fault.</p>
@@ -1247,8 +1263,8 @@ If one reverse lamp is <strong>bright</strong> and the other is <strong>dim</str
 <em>If one reverse lamp is bright and the other is dim, there is corrosion in the lamp's connection.</em></p>
 </blockquote>
 <hr />
-<h2>4L. SLIDE (2026-04-14 post-break) — RÖMORK (Trailer): Electric Connection + Gres Yağı</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4L. SLIDE (2026-04-14 post-break) — RÖMORK (Trailer): Electric Connection + Gres Yağı</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A text block with colored keywords describing what you must do when you attach a <strong>römork (trailer)</strong> to your vehicle — connect its electrical system to the tow vehicle's socket, ensure the signal / stop / park lamps work on the trailer, and <strong>lubricate the tow ball with gres yağı</strong>. Below the text, a photograph of a <strong>pickup truck with a box / kulübe (animal crate) trailer attached to the back</strong>.</p>
@@ -1364,8 +1380,8 @@ It is <strong>mandatory</strong> that the <strong>SIGNAL LAMPS, STOP LAMPS, and 
 <em>Grease is applied to the tow ball.</em></p>
 </blockquote>
 <hr />
-<h2>4M. SLIDE GROUP (2026-04-14 post-break) — ARAÇTA BULUNAN GÖSTERGELER Recap + New Icons</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4M. SLIDE GROUP (2026-04-14 post-break) — ARAÇTA BULUNAN GÖSTERGELER Recap + New Icons</h2>
+
 
 <h3>What hoca presented</h3>
 <p>A chapter-header slide titled <strong>"ARAÇTA BULUNAN GÖSTERGELER"</strong> (Indicators Found in the Vehicle), followed by a series of individual warning-light slides covering each icon with a verbatim description + a big B&amp;W icon image. The slides in order:</p>
@@ -1709,8 +1725,8 @@ When the headlights are left on, this lamp stays continuously lit.</p>
 <em>The headlights-on warning indicates that the headlights are continuously on. If you leave the car without turning them off, the battery drains.</em></p>
 </blockquote>
 <hr />
-<h2>4N. SLIDE (2026-04-14) — AMPUL DEĞİŞİMİ (How to Replace a Headlight Bulb)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4N. SLIDE (2026-04-14) — AMPUL DEĞİŞİMİ (How to Replace a Headlight Bulb)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>"AMPUL DEĞİŞİMİ"</strong>. Below, a <strong>3-step procedure</strong> for replacing a burned-out headlight bulb with two small photographs showing the process: the back of a headlight housing with electrical connector + rubber boot, and a hand removing the bulb.</p>
@@ -1834,7 +1850,7 @@ During the replacement procedure:<br />
 <p><strong>Far ampulü yandığında, aracın yedek ampul kitinden yeni ampul ile değiştirilir. Değiştirme sırası: fiş çıkar → lastik çıkar → ampul çıkar → yeni ampul tak → lastik tak → fiş tak.</strong></p>
 </blockquote>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <p>Very high-frequency question types:</p>
 <ol>
 <li><em>"Aydınlatma ve ikaz sisteminin görevi nedir?"</em> → Road illumination + signal indication</li>

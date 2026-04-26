@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -134,8 +150,8 @@ body{
 </ol>
 <p>Every "why couldn't you brake in time?" exam question maps to one of these three phases. <strong>Duruş mesafesi</strong> is the single most-tested word in the Hız/Mesafe section of the exam.</p>
 <hr />
-<h2>2. SLIDE 1 — Taşıtın Durdurulması (the 3-part stopping model)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-085.png" alt="Slayt — Sayfa 85: TAŞITIN DURDURULMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 85: TAŞITIN DURDURULMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-085.png" alt="Slayt — Sayfa 85: TAŞITIN DURDURULMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 85: TAŞITIN DURDURULMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Taşıtın Durdurulması (the 3-part stopping model)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two paragraphs of definitions (quoted below), then the 90 km/h numerical example, then a green <strong>DURUŞ MESAFESİ</strong> diagram:</p>
@@ -202,8 +218,8 @@ body{
 <p><strong>90 km/s hızda kuru asfaltta:</strong> intikal mesafesi <strong>18.75 m</strong>, duruş mesafesi <strong>≈ 72 m</strong>.</p>
 </blockquote>
 <hr />
-<h2>2B. SLIDE 2 — Takip Mesafesi (following distance)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-086.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-086.png" alt="Slayt — Sayfa 86: TAKİP MESAFESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 86: TAKİP MESAFESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-086.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-086.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-086.png" alt="Slayt — Sayfa 86: TAKİP MESAFESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 86: TAKİP MESAFESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-086.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2B. SLIDE 2 — Takip Mesafesi (following distance)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A title "<strong>TAKİP MESAFESİ</strong>" with two paragraphs of rules, a 90 km/h highway diagram showing <strong>45 metre Takip Mesafesi</strong> between two cars, a blue inset showing <strong>"2 Saniye kontrolü — 88-89"</strong> being counted as a car passes a sign, and a truck-example diagram showing <strong>"40 m veya 2 sn mesafe — 80 km/s"</strong>.</p>
@@ -288,8 +304,8 @@ body{
 <p><strong>Örnek sayılar:</strong> 50→25 m, 80→40 m, <strong>90→45 m</strong>, 120→60 m.</p>
 </blockquote>
 <hr />
-<h2>2C. SLIDE 3 — Takip Mesafesi: üç özel durum</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-087.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-087.png" alt="Slayt — Sayfa 87: TAKİP MESAFESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 87: TAKİP MESAFESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-087.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-087.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-087.png" alt="Slayt — Sayfa 87: TAKİP MESAFESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 87: TAKİP MESAFESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-087.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. SLIDE 3 — Takip Mesafesi: üç özel durum</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Same "TAKİP MESAFESİ" header, three bulleted special cases, plus two illustrations: a <strong>50 metre</strong> gap between a car and a truck, and a convoy diagram ("Takip mesafesi — Takip mesafesi — Takip mesafesi") showing spaced cars plus a highway shot of a tanker truck with its shadow between two lanes.</p>
@@ -328,8 +344,8 @@ body{
 <p><strong>Yağmurlu / ıslak / çamurlu yolda takip mesafesi ARTIRILIR.</strong> <em>(Dry 2 sn → wet 4 sn, ice up to 8 sn.)</em></p>
 </blockquote>
 <hr />
-<h2>3. The three-term taxonomy (never swap them)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-085.png" alt="Slayt — Sayfa 85: TAŞITIN DURDURULMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 85: TAŞITIN DURDURULMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-085.png" alt="Slayt — Sayfa 85: TAŞITIN DURDURULMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 85: TAŞITIN DURDURULMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. The three-term taxonomy (never swap them)</h2>
+
 
 <table>
 <thead>
@@ -369,8 +385,8 @@ body{
 </table>
 <p>Exam trap: "Fren mesafesi = 72 m" → <strong>YANLIŞ</strong>. That's duruş mesafesi. Fren mesafesi is only the part after the pedal.</p>
 <hr />
-<h2>4. What increases each phase</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-085.png" alt="Slayt — Sayfa 85: TAŞITIN DURDURULMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 85: TAŞITIN DURDURULMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-085.png" alt="Slayt — Sayfa 85: TAŞITIN DURDURULMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 85: TAŞITIN DURDURULMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-085.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. What increases each phase</h2>
+
 
 <h3>İntikal süresi grows with:</h3>
 <ul>
@@ -397,7 +413,7 @@ body{
 <li>Maintaining extra margin in bad weather</li>
 </ul>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <ol>
 <li><strong>"Sürücünün tehlikeyi gördükten sonra frene basmaya başlaması için geçen süre kaç saniyedir?"</strong> → <strong>0.75 sn</strong>.</li>
 <li><strong>"İntikal süresine başka ne denir?"</strong> → <strong>Reaksiyon süresi</strong>.</li>

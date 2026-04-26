@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -135,8 +151,8 @@ body{
 </blockquote>
 <p>Memorize the <strong>30 / 150</strong> pair cold — it is the single most-asked dönüş number on the exam.</p>
 <hr />
-<h2>2. SLIDE 1 — Sağa Dönüşler (Right Turns)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Sağa Dönüşler (Right Turns)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A blue header "<strong>ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞLER)</strong>" with the 30/150 şerit-değiştirme-yasağı paragraph, a "<strong>Sağa dönüşlerde sürücüler;</strong>" header, then 5 bulleted duties. Right-side illustrations showed (a) a top-down intersection with a red car and note "<strong>Şehir içi 30 — Şehirler arası 150 metreden sinyal verilir</strong>", and (b) a car mid-right-turn with a YOL VER sign.</p>
@@ -173,8 +189,8 @@ body{
 <p><strong>Sağa dönüş 5 görev:</strong> (1) sağa sinyal · (2) sağ şeride / dönüş şeridine gir · (3) hızı azalt · (4) <strong>dar</strong> bir kavisle dön · (5) yayalara + bisikletlilere geçiş hakkı · ve dönülen yolun <strong>en sağ şeridine</strong> gir.</p>
 </blockquote>
 <hr />
-<h2>2B. SLIDE 2 — Sola Dönüşler (Left Turns)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-091.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-091.png" alt="Slayt — Sayfa 91: ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER):" loading="lazy"></a><figcaption>Slayt — Sayfa 91: ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-091.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-091.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-091.png" alt="Slayt — Sayfa 91: ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER):" loading="lazy"></a><figcaption>Slayt — Sayfa 91: ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-091.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2B. SLIDE 2 — Sola Dönüşler (Left Turns)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A blue header "<strong>ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER)</strong>" followed by a "<strong>Sola dönüşlerde sürücüler;</strong>" header and 8 bulleted duties ending in "<strong>Zorunludurlar.</strong>". An illustration showed a pink car labeled "1" stopped at a YOL VER sign on the south approach and the same car labeled "2" completing a wide left turn into the westbound carriageway.</p>
@@ -213,8 +229,8 @@ body{
 <p><strong>Sola dönüş 8 görev:</strong> (1) sola sinyal · (2) çok şeritli yolda <strong>en sol şeride</strong>, iki yönlü yolda <strong>sağ şeridin soluna</strong> · (3) hızı azalt · (4) yayalara geçiş hakkı · (5) <strong>sağdan gelen araca</strong> ilk geçiş hakkı · (6) karşı yönden yakın araçları bekle · (7) <strong>geniş</strong> kavisle dön · (8) dönülen çok şeritli yolda <strong>en sağ DIŞINDA uygun bir şeride</strong> gir, sonra en kısa sürede sağa yaklaş.</p>
 </blockquote>
 <hr />
-<h2>2C. SLIDE 3 — Dönel Kavşaklarda Dönüşler (Roundabouts)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. SLIDE 3 — Dönel Kavşaklarda Dönüşler (Roundabouts)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A header "<strong>ARAÇLARIN MANEVRALARI (DÖNEL KAVŞAKLARDA DÖNÜŞLER)</strong>" followed by a 5-bullet list, plus three illustrations: a top-down cross-shape kavşak, a 3-lane approach with numbered lanes (1/2/3), and a red-flow diagram showing a car entering a dönel kavşak and circulating around the center island.</p>
@@ -248,8 +264,8 @@ body{
 <p><strong>Dönel kavşakta sola veya geriye dönecek sürücü, ORTA ADAYA BİTİŞİK ŞERİTTEN girer. Dönel kavşakta ŞERİT MUHAFAZA edilir</strong> (uygun çıkış hariç).</p>
 </blockquote>
 <hr />
-<h2>2D. SLIDE 4 — Geri Gitme ve Geri Dönüşler (Reversing &amp; U-turns)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-095.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-095.png" alt="Slayt — Sayfa 95: GERİ GİTME VE GERİ DÖNÜŞLER" loading="lazy"></a><figcaption>Slayt — Sayfa 95: GERİ GİTME VE GERİ DÖNÜŞLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-095.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-095.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-095.png" alt="Slayt — Sayfa 95: GERİ GİTME VE GERİ DÖNÜŞLER" loading="lazy"></a><figcaption>Slayt — Sayfa 95: GERİ GİTME VE GERİ DÖNÜŞLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-095.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2D. SLIDE 4 — Geri Gitme ve Geri Dönüşler (Reversing &amp; U-turns)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A header "<strong>GERİ GİTME VE GERİ DÖNÜŞLER</strong>" with two bulleted rules, plus illustrations of a driver looking over her shoulder while reversing, and a truck+trailer rig.</p>
@@ -282,7 +298,7 @@ body{
 <p><strong>Kamyon/otobüs/çekici/römork takılı araç:</strong> görüş açık değilse sürücü arkaya <strong>GÖZCÜ</strong> koymak ZORUNDADIR.</p>
 </blockquote>
 <hr />
-<h2>2E. SLIDE 5 — Araçların Dönüşleri ve Manevra Kuralları (Summary + 3 forbidden behaviors)</h2>
+</div></section><h2>2E. SLIDE 5 — Araçların Dönüşleri ve Manevra Kuralları (Summary + 3 forbidden behaviors)</h2>
 <h3>What the slide showed</h3>
 <p>A summary slide "<strong>ARAÇLARIN DÖNÜŞLERİ VE MANEVRA KURALLARI</strong>" with three side-by-side diagrams captioned:<br />
 - <strong>Sağa dar kavisle</strong> (right turn: tight arc)<br />

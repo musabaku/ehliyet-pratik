@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -138,8 +154,8 @@ body{
 <p>Without suspension, every bump would be transmitted straight into the chassis and the cabin — the car would bounce uncontrollably, tires would momentarily lift off the road (losing grip for braking and steering), and mechanical parts plus passengers would absorb every impact.</p>
 <p><strong>The system's enemy is vertical shock; its solution is a spring + damper pair at every wheel.</strong></p>
 <hr />
-<h2>2. SLIDE 1 — Önemli Dipnotlar + Arka Aks Diyagramı</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Önemli Dipnotlar + Arka Aks Diyagramı</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>SÜSPANSİYON SİSTEMİ</strong>. Left column has <strong><em>Önemli Dipnotlar</em></strong> (important footnotes) with 2 bullet points. Right side has two images:</p>
@@ -213,7 +229,7 @@ body{
 </table>
 <p><strong>Why leaf springs on the rear axle of older/commercial vehicles:</strong> leaf springs can carry very heavy loads, they're cheap, durable, and dual-purpose (they also help locate the axle laterally). Modern passenger cars use <strong>helezon yay</strong> (coil springs) instead for better comfort.</p>
 <hr />
-<h2>3. SLIDE 2 — Görev + Parçaların İsimleri + Ön Tekerlek Diyagramı</h2>
+</div></section><h2>3. SLIDE 2 — Görev + Parçaların İsimleri + Ön Tekerlek Diyagramı</h2>
 <h3>What the slide showed</h3>
 <p>Left column: the full <strong>görev tanımı</strong> (purpose definition) + a bulleted list of <strong>parçaların isimleri</strong> (part names, 3 items). Right: a labeled 3D illustration of a <strong>front wheel + strut assembly</strong>, showing the <strong>Amortisör ve Yay</strong> (shock absorber and coil spring combined into one strut unit), the <strong>Direksiyon Bağlantısı</strong> (steering linkage attachment), the <strong>Alt Süspansiyon Kolu</strong> (lower suspension arm / lower control arm), and the <strong>Şasi</strong> (chassis) at the bottom.</p>
 <h3>Görev (verbatim) — Turkish → English</h3>
@@ -297,8 +313,8 @@ body{
 <em>The 3 fundamental parts of the suspension: spring (coil spring), shock absorber, leaf spring.</em></p>
 </blockquote>
 <hr />
-<h2>4. SLIDE 3 — Animasyon: Süspansiyon iş başında (Animation: Suspension in action)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Animasyon: Süspansiyon iş başında (Animation: Suspension in action)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>An animated illustration: a silver Peugeot 308 hatchback at the top (real car image), then below it a <strong>cutaway cartoon side view</strong> of the same car in bright green, showing <strong>two purple strut assemblies</strong> clearly visible inside the wheel arches — one at each axle. The car is driving over a wavy orange road surface, and the strut units can be seen <strong>compressing and extending</strong> as the wheels follow the bumps, while the car body (green) stays relatively level above. A play/pause button at the bottom controls the animation.</p>
@@ -318,8 +334,8 @@ body{
 <em>Suspension decouples wheel motion from chassis motion: wheels stay in contact with the road while the cabin stays stable.</em></p>
 </blockquote>
 <hr />
-<h2>5. SLIDE 4 — ŞASE NEDİR (What is the Chassis)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — ŞASE NEDİR (What is the Chassis)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A full-slide text block in large red + blue letters, no image. The title <strong>ŞASE NEDİR</strong> is in red, and the body paragraph explains what a chassis is and why it's the most important safety component in the car.</p>
@@ -361,8 +377,8 @@ The chassis is the <strong>skeleton system</strong> of the car. It is the <stron
 <em>In an accident, the chassis breaks at designed crumple points to reduce impact severity.</em></p>
 </blockquote>
 <hr />
-<h2>5B. SLIDE 5 — Tam Araç İskelet Diyagramı (Full-Car Skeleton View)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-016.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/02-atesleme-aku/page-016.png" alt="Slayt — Sayfa 16: Akümülatörün üzerinde ( + ) ve ( - ) olmak üzere iki tane kutup başı vardır. ( +" loading="lazy"></a><figcaption>Slayt — Sayfa 16: Akümülatörün üzerinde ( + ) ve ( - ) olmak üzere iki tane kutup başı vardır. ( + <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-016.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-016.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/02-atesleme-aku/page-016.png" alt="Slayt — Sayfa 16: Akümülatörün üzerinde ( + ) ve ( - ) olmak üzere iki tane kutup başı vardır. ( +" loading="lazy"></a><figcaption>Slayt — Sayfa 16: Akümülatörün üzerinde ( + ) ve ( - ) olmak üzere iki tane kutup başı vardır. ( + <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-016.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5B. SLIDE 5 — Tam Araç İskelet Diyagramı (Full-Car Skeleton View)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A 3D cutaway illustration of a complete car with the body panels rendered semi-transparent, so you can see the internal frame and all 4 wheels with their suspension assemblies. Four labels point to the key parts:</p>
@@ -418,8 +434,8 @@ The chassis is the <strong>skeleton system</strong> of the car. It is the <stron
 <em>Every wheel has its own shock absorber — 4 shock absorbers total.</em></p>
 </blockquote>
 <hr />
-<h2>5C. SLIDE 6 — KAROSER NEDİR (What is the Body)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-032.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/page-032.png" alt="Slayt — Sayfa 32: HARARET" loading="lazy"></a><figcaption>Slayt — Sayfa 32: HARARET <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-032.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-032.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/page-032.png" alt="Slayt — Sayfa 32: HARARET" loading="lazy"></a><figcaption>Slayt — Sayfa 32: HARARET <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-032.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5C. SLIDE 6 — KAROSER NEDİR (What is the Body)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A full-slide text block (red title, blue body text) defining <strong>karoser</strong> (car body).</p>
@@ -477,8 +493,8 @@ The part of motorized land vehicles that <strong>carries passengers and cargo</s
 <em>The karoser is the part that carries passengers and cargo. The front fender, hood, and front grille are NOT part of the karoser.</em></p>
 </blockquote>
 <hr />
-<h2>5D. SLIDE 7 — GÜNÜMÜZ OTOMOBİL YAPISI (Modern Car Body Construction)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-023.png" alt="Slayt — Sayfa 23: BENZĠNLĠ MOTOR" loading="lazy"></a><figcaption>Slayt — Sayfa 23: BENZĠNLĠ MOTOR <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/page-023.png" alt="Slayt — Sayfa 23: BENZĠNLĠ MOTOR" loading="lazy"></a><figcaption>Slayt — Sayfa 23: BENZĠNLĠ MOTOR <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-023.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5D. SLIDE 7 — GÜNÜMÜZ OTOMOBİL YAPISI (Modern Car Body Construction)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>Günümüz Otomobil Yapısı</strong> (Modern Automobile Structure). A cutaway illustration of a modern car with its body shell exposed, color-coded by material. 5 different colored sections show 5 different materials used in different parts of the car:</p>
@@ -558,8 +574,8 @@ The part of motorized land vehicles that <strong>carries passengers and cargo</s
 <em>The strongest material is boron steel — used in the critical points of the passenger safety cell (B-pillar, door reinforcements).</em></p>
 </blockquote>
 <hr />
-<h2>5E. Hoca's Live Class Additions (2026-04-14) — Süspansiyon &amp; Şase</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-058.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-058.png" alt="Slayt — Sayfa 58: Günlük Bakım:" loading="lazy"></a><figcaption>Slayt — Sayfa 58: Günlük Bakım: <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-058.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-058.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-058.png" alt="Slayt — Sayfa 58: Günlük Bakım:" loading="lazy"></a><figcaption>Slayt — Sayfa 58: Günlük Bakım: <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-058.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5E. Hoca's Live Class Additions (2026-04-14) — Süspansiyon &amp; Şase</h2>
+
 
 <h3>Addition 1 — Practical car-buying tip: tap the hood to test build quality</h3>
 <p>Hoca gave a real-world car-shopping analogy while explaining the "Günümüz Otomobil Yapısı" slide:</p>
@@ -602,7 +618,7 @@ The part of motorized land vehicles that <strong>carries passengers and cargo</s
 - The other corners are still fine<br />
 - Drive it to the service <strong>but don't keep driving for long</strong> — each bump is now hitting the şase directly and stressing it</p>
 <hr />
-<h2>6. Why this matters for the exam</h2>
+</div></section><h2>6. Why this matters for the exam</h2>
 <p>Typical exam questions on süspansiyon + şase:</p>
 <ol>
 <li><strong>"Süspansiyon sisteminin görevi nedir?"</strong> → <em>Yerden gelen sarsıntı ve darbeleri şasiye iletmeyen sistemdir.</em></li>

@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -140,8 +156,8 @@ body{
 6. Starter motor disengages</p>
 <p>Once the engine is running, the starter system is <strong>done</strong> — its job is only the first movement.</p>
 <hr />
-<h2>2. SLIDE 1 — Marş Sistemi: Intro</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Marş Sistemi: Intro</h2>
+
 
 <p><strong>Slide title:</strong> MARŞ SİSTEMİ<br />
 <strong>Subtitle:</strong> "Motorumuzun çalışabilmesi için ilk hareketi vermektir..."</p>
@@ -155,8 +171,8 @@ body{
 </blockquote>
 <p>This one sentence will answer the majority of "what is the görev of…" questions about the starter system.</p>
 <hr />
-<h2>3. SLIDE 2 — Marş Sistemi Parçaları (Parts Diagram)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Marş Sistemi Parçaları (Parts Diagram)</h2>
+
 
 <p><strong>Slide content:</strong> A wiring diagram showing 4 labeled parts connected by blue wires:<br />
 - <strong>AKÜ</strong> (battery) — top-left<br />
@@ -179,8 +195,8 @@ body{
 <p>A classic distractor question: <em>"Aşağıdakilerden hangisi marş sisteminin parçası değildir?"</em><br />
 The trap answer is usually from another system: <strong>karbüratör, enjektör, radyatör, alternatör, yağ pompası</strong>. Memorize the 4 marş parts above (plus the marş dişlisi as an attached sub-part) so you can spot distractors instantly.</p>
 <hr />
-<h2>4. SLIDE 3 — Detailed Definitions (Akümülatör, Kontak Anahtarı, Marş Motoru)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Detailed Definitions (Akümülatör, Kontak Anahtarı, Marş Motoru)</h2>
+
 
 <h3>What the slide said</h3>
 <blockquote>
@@ -247,8 +263,8 @@ The trap answer is usually from another system: <strong>karbüratör, enjektör,
 </table>
 <p>These two are <strong>mirror opposites</strong>. Exam questions exploit the confusion.</p>
 <hr />
-<h2>4B. Hoca's Live Class Additions (2026-04-13)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4B. Hoca's Live Class Additions (2026-04-13)</h2>
+
 
 <p>These points came from the live class discussion, not the slides. All are exam-relevant or safety-critical.</p>
 <h3>⚠️ NEVER re-turn the key on a running engine ("dişi sıyırmak")</h3>
@@ -294,7 +310,7 @@ The trap answer is usually from another system: <strong>karbüratör, enjektör,
 <p><strong>Note:</strong> This only works for combustion engine cars (benzinli/dizel). Electric vehicles have a completely different traction battery system and can't be jump-started the same way.</p>
 </blockquote>
 <hr />
-<h2>5. Memorize These (Starter System)</h2>
+</div></section><h2>5. Memorize These (Starter System)</h2>
 <blockquote>
 <p><strong>Marş sisteminin görevi, motora ilk hareketi vermektir.</strong><br />
 <em>(The job of the starter system is to give the engine its first movement.)</em></p>

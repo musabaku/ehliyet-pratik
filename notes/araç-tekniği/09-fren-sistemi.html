@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -264,8 +280,8 @@ Separate mechanism from the main hydraulic brakes. Usually operated by a <strong
 </blockquote>
 <p>The trap here is <strong>Westinghouse</strong> — it looks like a foreign word on a Turkish exam and many students don't recognize it. If you see "Westinghouse" in a multiple-choice list of brake-system parts, <strong>it is correct</strong> — it refers to the brake booster (or the full air-brake system on heavy vehicles).</p>
 <hr />
-<h2>2C. SLIDE 3 — Fren Sistemi Arızaları (Brake System Faults)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. SLIDE 3 — Fren Sistemi Arızaları (Brake System Faults)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>FREN SİSTEMİ — Fren Sistemi Arızaları</strong>. A numbered list of <strong>4 classic brake faults</strong>, each describing a cause and its symptom. These are all high-yield exam traps — the exam almost always includes at least one "frene bastım ama…" scenario question.</p>
@@ -312,8 +328,8 @@ Separate mechanism from the main hydraulic brakes. Usually operated by a <strong
 <em>Wrong brake adjustment → car pulls to one side.</em></p>
 </blockquote>
 <hr />
-<h2>2D. SLIDE 4 — "Önemli Dipnotlar" (Important Footnotes)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2D. SLIDE 4 — "Önemli Dipnotlar" (Important Footnotes)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>FREN SİSTEMİ — "Önemli Dipnotlar"</strong>. A numbered list of short, single-sentence facts about brake-system behavior, covering hydraulic, vacuum, and air-brake variations. These are <strong>high-yield one-liners</strong> — each sentence = one possible exam question.</p>
@@ -379,8 +395,8 @@ Separate mechanism from the main hydraulic brakes. Usually operated by a <strong
 </blockquote>
 <p>These two cover almost every "weird pedal feel" question on the exam.</p>
 <hr />
-<h2>2E. Hoca's Live Class Additions (2026-04-14) — Fren Sistemi</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2E. Hoca's Live Class Additions (2026-04-14) — Fren Sistemi</h2>
+
 
 <h3>Addition 1 — Physical mechanism: piston pushes the balata outward</h3>
 <p>Hoca walked through the physical mechanism in detail, beyond what the slides say:</p>
@@ -446,8 +462,8 @@ Separate mechanism from the main hydraulic brakes. Usually operated by a <strong
 <p><strong>Plain English:</strong> Hoca said the önemli dipnotlar (daily hydraulic fluid check, Westinghouse-motor-stop, air-brake compressor leaks at rekorlar) are <strong>reference-level details</strong> — they're in the slides but not the core of what's tested.</p>
 <p><strong>The main thing you need to know:</strong> <em>different vehicle types have different brake systems.</em> That's the core exam concept. Everything else is supporting detail.</p>
 <hr />
-<h2>3. Fren çeşitleri — Types of brakes</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-051.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-051.png" alt="Slayt — Sayfa 51: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 51: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-051.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-051.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-051.png" alt="Slayt — Sayfa 51: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 51: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-051.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. Fren çeşitleri — Types of brakes</h2>
+
 
 <p>The exam recognizes <strong>two main types of brake</strong>:</p>
 <table>
@@ -473,7 +489,7 @@ Separate mechanism from the main hydraulic brakes. Usually operated by a <strong
 </table>
 <p><strong>Remember:</strong> <em>el freni hareket halindeyken değil, park halindeyken kullanılır</em> — the handbrake is for <strong>parked cars</strong>, not for slowing a moving car.</p>
 <hr />
-<h2>4. Why this matters for the exam</h2>
+</div></section><h2>4. Why this matters for the exam</h2>
 <p>Typical exam questions on the intro slide:</p>
 <ol>
 <li><strong>"Fren sisteminin görevi nedir?"</strong> → <em>Hareket halindeki aracı yavaşlatıp durduran sistemdir.</em></li>

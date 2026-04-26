@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -135,8 +151,8 @@ body{
 <p>Fix either one and you save fuel. Fix both and you can cut fuel consumption by <strong>30–40%</strong> compared to a poorly-maintained car with a careless driver.</p>
 <p>Reference: <a href="../../e-kitap/03-araç-tekniği/04-ekonomik-arac-kullanma.md">e-kitap/03-araç-tekniği/04-ekonomik-arac-kullanma.md</a> — the portal's dedicated subject on this topic.</p>
 <hr />
-<h2>2. SLIDE 1 — Araçtan Kaynaklanan Kusurlar (Vehicle-Side Causes of High Fuel Consumption)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-059.png" alt="Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri" loading="lazy"></a><figcaption>Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-059.png" alt="Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri" loading="lazy"></a><figcaption>Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Araçtan Kaynaklanan Kusurlar (Vehicle-Side Causes of High Fuel Consumption)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>"Aracın fazla yakıt yakmasının nedenleri"</strong> (Reasons a vehicle burns excess fuel). Subtitle: <strong>"Araçtan kaynaklanan kusurlar"</strong> (Vehicle-related faults). A bulleted list of <strong>9 mechanical/maintenance faults</strong> that cause fuel wastage.</p>
@@ -232,8 +248,8 @@ Taşıtlarda fazla yakıt sarfiyatına yol açan nedenler aşağıdaki iki grup 
 <p><strong>Aracın fazla yakıt yakmasının araçtan kaynaklanan 9 nedeni:</strong> karbüratör, bujiler, lastik basıncı, fren ayarı, hava filtresi, distribütör platin, akü/kablolar, rölanti devri, debriyaj kaçırması.</p>
 </blockquote>
 <hr />
-<h2>3. SLIDE 2 — Sürücüden Kaynaklanan Kusurlar (Driver-Side Causes)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-059.png" alt="Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri" loading="lazy"></a><figcaption>Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-059.png" alt="Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri" loading="lazy"></a><figcaption>Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Sürücüden Kaynaklanan Kusurlar (Driver-Side Causes)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>"Sürücüden kaynaklanan kusurlar"</strong> (Driver-related faults). A bulleted list of <strong>6 habits</strong> that waste fuel, plus a transition line to the "yakıt tasarrufu için neler yapılmalıdır" (fuel-saving tips) section.</p>
@@ -311,8 +327,8 @@ Taşıtlarda fazla yakıt sarfiyatına yol açan nedenler aşağıdaki iki grup 
 <p><strong>Aracın fazla yakıt yakmasının sürücüden kaynaklanan nedenleri:</strong> düşük vitesle seyretme, gereksiz motor kapat-aç, ani hızlanma, gereksiz fren, gereğinden fazla marşa basma, bilinçsiz klima kullanımı, marş sırasında gaza basma.</p>
 </blockquote>
 <hr />
-<h2>4. SLIDE 3 — Ekonomik Sürüş İçin Alınacak Önlemler (Fuel-Saving Measures)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-048.png" alt="Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 48: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-048.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Ekonomik Sürüş İçin Alınacak Önlemler (Fuel-Saving Measures)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>"Ekonomik sürüş için alınacak önlemler"</strong> (Measures for fuel-efficient driving). Subtitle: <strong>"İşte az yakıtı an önlemler"</strong> (Here are the fuel-saving measures). A bulleted list of <strong>7 concrete habits</strong> to minimize fuel consumption.</p>
@@ -401,8 +417,8 @@ Taşıtlarda fazla yakıt sarfiyatına yol açan nedenler aşağıdaki iki grup 
 <p><strong>Yüksek hızda pencereler kapalı, A/C açık</strong> (aerodynamic drag &gt; A/C penalty above ~80 km/h).</p>
 </blockquote>
 <hr />
-<h2>5. SLIDE 4 — ARAÇTA YAKIT TASARRUFU (Fuel-Saving Checklist — 8 Items)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — ARAÇTA YAKIT TASARRUFU (Fuel-Saving Checklist — 8 Items)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Title: <strong>"ARAÇTA YAKIT TASARRUFU"</strong>. A header <strong>"Yakıt tasarrufu sağlamak için şunlara dikkat edilmelidir:"</strong> and then an <strong>8-item numbered checklist</strong> of concrete vehicle-maintenance actions that improve fuel economy.</p>
@@ -518,8 +534,8 @@ Taşıtlarda fazla yakıt sarfiyatına yol açan nedenler aşağıdaki iki grup 
 8. Debriyaj kaçırmamalı</p>
 </blockquote>
 <hr />
-<h2>5B. SLIDE 5 — Final Closing Tips (The Last Slide of Class 2)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5B. SLIDE 5 — Final Closing Tips (The Last Slide of Class 2)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A simple 5-bullet closing list of ekonomik sürüş tips — three of which are <strong>new</strong> and two of which recap earlier rules. Hoca showed this as the final ders content before the <strong>"DERSİMİZ BİTTİ / HERKESE SINAVLARDA BAŞARILAR DİLERİZ — @İNAYET ÖĞRETMEN"</strong> end card.</p>
@@ -671,8 +687,8 @@ Taşıtlarda fazla yakıt sarfiyatına yol açan nedenler aşağıdaki iki grup 
 <p><strong>Files updated:</strong> <a href="05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a>, <a href="08-güç-aktarma-organları.md">08-güç-aktarma-organları.md</a>, <a href="08b-lastikler.md">08b-lastikler.md</a>, <a href="09-fren-sistemi.md">09-fren-sistemi.md</a>, <a href="10-direksiyon-ön-düzen-sistemi.md">10-direksiyon-ön-düzen-sistemi.md</a>, <a href="11-süspansiyon-sistemi.md">11-süspansiyon-sistemi.md</a>, <a href="12-güvenli-araç-kullanma.md">12-güvenli-araç-kullanma.md</a>, <a href="13-ekonomik-araç-kullanma.md">13-ekonomik-araç-kullanma.md</a>.</p>
 <p><strong>Next class:</strong> Trafik ve Çevre Bilgisi — 2026-04-15, Session ID 76 186 597 209, Password tV4jqp.</p>
 <hr />
-<h2>5C. Hoca's Live Class Additions (2026-04-14) — ⭐⭐⭐ EXAM PATTERN-RECOGNITION TRICK</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-059.png" alt="Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri" loading="lazy"></a><figcaption>Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-059.png" alt="Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri" loading="lazy"></a><figcaption>Slayt — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5C. Hoca's Live Class Additions (2026-04-14) — ⭐⭐⭐ EXAM PATTERN-RECOGNITION TRICK</h2>
+
 
 <h3>The heuristic — identify the correct answer from sentence structure alone</h3>
 <p>This is the <strong>single highest-value exam-taking trick</strong> hoca gave all class 2. It works even if you don't know the specific facts.</p>
@@ -817,7 +833,7 @@ D) Debriyajın kaçırması</p>
 </blockquote>
 <p>Apply this and you'll catch most exam questions even without full memorization.</p>
 <hr />
-<h2>6. Why this matters for the exam</h2>
+</div></section><h2>6. Why this matters for the exam</h2>
 <p>The <strong>Ekonomik Araç Kullanma</strong> topic is a full exam subject with several reliable question patterns:</p>
 <ol>
 <li><strong>"Aşağıdakilerden hangisi yakıt tüketimini artırır?"</strong> → pick any of the 9 vehicle-side faults OR the 5 driver-side habits from slides 1–2</li>

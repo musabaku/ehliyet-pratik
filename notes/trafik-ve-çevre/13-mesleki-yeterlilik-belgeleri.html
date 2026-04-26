@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -133,8 +149,8 @@ body{
 </ol>
 <p>Both are obtained <strong>after</strong> getting the ehliyet. They are separate documents, not a replacement for the license.</p>
 <hr />
-<h2>2. SLIDE 1 — Mesleki Yeterlilik Belgeleri (SRC1 → SRC5)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-079.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-079.png" alt="Slayt — Sayfa 79: MESLEKİ YETERLİLİK BELGELERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 79: MESLEKİ YETERLİLİK BELGELERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-079.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-079.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-079.png" alt="Slayt — Sayfa 79: MESLEKİ YETERLİLİK BELGELERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 79: MESLEKİ YETERLİLİK BELGELERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-079.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Mesleki Yeterlilik Belgeleri (SRC1 → SRC5)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A title bar "<strong>MESLEKİ YETERLİLİK BELGELERİ</strong>" with the rule:</p>
@@ -187,8 +203,8 @@ body{
 <p>Ticari amaçla yük ve yolcu taşıyan sürücüler için ehliyet <strong>yeterli DEĞİLDİR</strong> — ayrıca <strong>Mesleki Yeterlilik Belgesi (SRC)</strong> ve <strong>Psiko-teknik belgesi</strong> gereklidir. SRC1 = uluslararası yolcu, SRC2 = yurt içi yolcu, SRC3 = uluslararası eşya, SRC4 = yurt içi eşya, SRC5 = tehlikeli madde.</p>
 </blockquote>
 <hr />
-<h2>3. Psiko-teknik Belgesi (supporting concept)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-076.png" alt="Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI" loading="lazy"></a><figcaption>Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-076.png" alt="Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI" loading="lazy"></a><figcaption>Slayt — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. Psiko-teknik Belgesi (supporting concept)</h2>
+
 
 <p>A <strong>psiko-teknik değerlendirme</strong> is a lab assessment of a commercial driver's:<br />
 - <strong>Tepki süresi</strong> — reaction time<br />
@@ -197,7 +213,7 @@ body{
 - <strong>Algı</strong> — perception (depth, distance, color)</p>
 <p>It is <strong>valid for 5 years</strong> (and must be renewed), and is legally required alongside SRC for commercial drivers. The exam may also mention psiko-teknik as a penalty/rehabilitation requirement after serious violations (e.g., alcohol over 1.00 promil) — but that's a different use-case from the SRC-linked commercial requirement.</p>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <ol>
 <li><strong>"A commercial driver needs ___ in addition to an ehliyet?"</strong> → <strong>Mesleki Yeterlilik Belgesi + Psiko-teknik Belgesi</strong>.</li>
 <li><strong>"Which SRC do you need to drive a domestic cargo truck?"</strong> → <strong>SRC4</strong>.</li>

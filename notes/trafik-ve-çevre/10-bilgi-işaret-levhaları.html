@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -151,8 +167,8 @@ body{
 </tbody>
 </table>
 <hr />
-<h2>2. SLIDE 1 — Meskun Mahal Levhaları (Settlement Signs)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-043.png" alt="Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-043.png" alt="Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Meskun Mahal Levhaları (Settlement Signs)</h2>
+
 
 <h3>The 6 signs</h3>
 <table>
@@ -240,8 +256,8 @@ Current-generation meskun mahal signs <strong>only show the name</strong> of the
 <p>Hoca noted that some otoyol sections have been raised to <strong>130 km/h</strong> in certain locations.</p>
 </blockquote>
 <hr />
-<h2>3. SLIDE 2 — Coğrafi Bilgi · Mesafe Levhaları</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Coğrafi Bilgi · Mesafe Levhaları</h2>
+
 
 <h3>The 6 signs</h3>
 <table>
@@ -297,8 +313,8 @@ Current-generation meskun mahal signs <strong>only show the name</strong> of the
 <li><strong>Green signs = otoyol / mesafe.</strong> Blue signs = general bilgi. Brown signs = coğrafi/turizm. The colour coding is tested: <em>"Yeşil levhalar ne tür bilgi verir?"</em> → <strong>Otoyol ve mesafe bilgisi.</strong></li>
 </ul>
 <hr />
-<h2>4. SLIDE 3 — Facility Signs (Yaya Geçidi, Okul, Hastane, Tek Yön, Yaya Bölgesi)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Facility Signs (Yaya Geçidi, Okul, Hastane, Tek Yön, Yaya Bölgesi)</h2>
+
 
 <h3>The 8 signs</h3>
 <table>
@@ -366,8 +382,8 @@ Current-generation meskun mahal signs <strong>only show the name</strong> of the
 <li><strong>Yaya bölgesi sub-signs</strong> are rectangular blue signs with white sub-panels listing <strong>restrictions, permissions, and time windows</strong>. The exam may show a yaya bölgesi sign with a time sub-panel and ask <em>"Bu saatler dışında araç girebilir mi?"</em> — read the sub-panel carefully.</li>
 </ul>
 <hr />
-<h2>5. SLIDE 4 — Priority Road · Emergency Services · Institutions</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-174.png" alt="Slayt — Sayfa 174: 5- Milli Eğitim Bakanlığı :" loading="lazy"></a><figcaption>Slayt — Sayfa 174: 5- Milli Eğitim Bakanlığı : <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-174.png" alt="Slayt — Sayfa 174: 5- Milli Eğitim Bakanlığı :" loading="lazy"></a><figcaption>Slayt — Sayfa 174: 5- Milli Eğitim Bakanlığı : <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Priority Road · Emergency Services · Institutions</h2>
+
 
 <h3>The 8 signs</h3>
 <table>
@@ -445,8 +461,8 @@ Current-generation meskun mahal signs <strong>only show the name</strong> of the
 <p>The official way to say the emergency number is now <strong>"bir-bir-iki"</strong> (1-1-2), not "yüz on iki" (112). Small children can say single digits but not "one hundred and twelve." Teach it as <strong>three separate digits</strong>.</p>
 </blockquote>
 <hr />
-<h2>6. SLIDE 5 — Otoyol, Tünel, Şerit Düzenleme, Kaçış Rampası</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-135.png" alt="Slayt — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-135.png" alt="Slayt — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>6. SLIDE 5 — Otoyol, Tünel, Şerit Düzenleme, Kaçış Rampası</h2>
+
 
 <h3>The 7 signs</h3>
 <table>
@@ -505,8 +521,8 @@ Current-generation meskun mahal signs <strong>only show the name</strong> of the
 <p>These are posted on <strong>mountain descents</strong> (tehlikeli eğim / iniş). The signs come in a sequence: <strong>500 m → ramp approach → ramp itself</strong>.</p>
 </blockquote>
 <hr />
-<h2>7. SLIDE 6 — Duraklama ve Park Etme İşaret Levhaları</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-018.png" alt="Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan" loading="lazy"></a><figcaption>Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-018.png" alt="Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan" loading="lazy"></a><figcaption>Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>7. SLIDE 6 — Duraklama ve Park Etme İşaret Levhaları</h2>
+
 
 <h3>The 7 signs</h3>
 <table>
@@ -568,8 +584,8 @@ Current-generation meskun mahal signs <strong>only show the name</strong> of the
   - <strong>Park etme</strong> = leaving the vehicle standing</p>
 <p><strong>P-1 bans park but allows duraklama. P-2 bans both.</strong></p>
 <hr />
-<h2>8. SLIDE 7 — Otoyol İşaretleri</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-083.png" alt="Slayt — Sayfa 83: HIZ KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 83: HIZ KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-083.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-083.png" alt="Slayt — Sayfa 83: HIZ KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 83: HIZ KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-083.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>8. SLIDE 7 — Otoyol İşaretleri</h2>
+
 
 <h3>The 6 signs</h3>
 <table>
@@ -629,7 +645,7 @@ Current-generation meskun mahal signs <strong>only show the name</strong> of the
 <p><strong>Otoyol sign colour = yeşil (green).</strong> Regular bilgi signs = mavi (blue). If you see a green sign on the exam, it's either an otoyol sign or a distance sign.</p>
 </blockquote>
 <hr />
-<h2>9. SLIDE 8 — Yol Numaraları (Road Numbering System)</h2>
+</div></section><h2>9. SLIDE 8 — Yol Numaraları (Road Numbering System)</h2>
 <h3>The 5 number types</h3>
 <table>
 <thead>

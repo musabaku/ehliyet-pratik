@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -135,8 +151,8 @@ body{
 - <strong>↓↑ (blue rectangle)</strong> — <em>"Gelen trafiğe göre önceliğiniz var"</em> — you have priority over oncoming traffic.<br />
 - <strong>↓↑ (red circle with slash)</strong> — <em>"Gelen trafiğe öncelik verin"</em> — yield to oncoming traffic.</p>
 <hr />
-<h2>2. SLIDE 1 — Dar taşıt yolunda geçiş kolaylığı hiyerarşisi</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-116.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-116.png" alt="Slayt — Sayfa 116: GELEN TRAFİKLE KARŞILAŞMA HALİNDE" loading="lazy"></a><figcaption>Slayt — Sayfa 116: GELEN TRAFİKLE KARŞILAŞMA HALİNDE <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-116.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-116.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-116.png" alt="Slayt — Sayfa 116: GELEN TRAFİKLE KARŞILAŞMA HALİNDE" loading="lazy"></a><figcaption>Slayt — Sayfa 116: GELEN TRAFİKLE KARŞILAŞMA HALİNDE <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-116.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Dar taşıt yolunda geçiş kolaylığı hiyerarşisi</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A title "<strong>GELEN TRAFİKLE KARŞILAŞMA HALİNDE GEÇİŞ KOLAYLIĞI SAĞLAMA KURALI</strong>" with a pink sub-header specifying the scope, a vertical list of 9 vehicle classes (each first letter highlighted in bold pink), and on the right a diagram of a narrow chokepoint between two wide green areas, with car <strong>1</strong> on the left already in the narrow section and car <strong>2</strong> on the right approaching. The two "↓↑" signs (blue square + red circle) appear on the far right.</p>
@@ -277,8 +293,8 @@ body{
 <p><strong>Eğer "↓↑" işareti varsa:</strong> <strong>kırmızı daire</strong> = YOL VER · <strong>mavi kare</strong> = GEÇ.</p>
 </blockquote>
 <hr />
-<h2>2B. SLIDE 2 — Tehlikeli Eğimli (Yokuş) Dar Yolda Karşılaşma</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-118.png" alt="Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA" loading="lazy"></a><figcaption>Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-118.png" alt="Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA" loading="lazy"></a><figcaption>Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2B. SLIDE 2 — Tehlikeli Eğimli (Yokuş) Dar Yolda Karşılaşma</h2>
+
 
 <h3>What the slide showed</h3>
 <p>A "<strong>GEÇİŞ KOLAYLIĞI SAĞLAMA</strong>" header with the <strong>tehlikeli eğim</strong> (dangerous slope) rule in two paragraphs, and a diagram of a steep narrow road: <strong>otomobil "1"</strong> climbing uphill (çıkan araç) from the bottom with a warning-triangle sign beside it, and <strong>kamyon "2"</strong> descending (inen araç) from the top.</p>
@@ -341,8 +357,8 @@ body{
 (3) Çıkan araç manevra yapamıyorsa <strong>geri git.</strong></p>
 </blockquote>
 <hr />
-<h2>2C. Hoca's Live Class Additions (2026-04-18)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-118.png" alt="Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA" loading="lazy"></a><figcaption>Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-118.png" alt="Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA" loading="lazy"></a><figcaption>Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2C. Hoca's Live Class Additions (2026-04-18)</h2>
+
 
 <h3>The "tır vs motosiklet" extreme example — why inen gives way</h3>
 <p>The hoca gave a deliberately extreme worked example to lock in the rampada rule:</p>
@@ -366,8 +382,8 @@ body{
 <p>Bu kural araç sınıfını (kamyon vs motor) <strong>tamamen geçersiz kılar</strong> — düz yoldaki OmKokaLiM hiyerarşisi yokuşta işlemez.</p>
 </blockquote>
 <hr />
-<h2>3. When this hierarchy does NOT apply</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. When this hierarchy does NOT apply</h2>
+
 
 <p>The 9-level list is <strong>only</strong> the default rule on a flat narrow road without signs. It's overridden by:</p>
 <ol>
@@ -377,7 +393,7 @@ body{
 <li><strong>A kavşak</strong> — inside an intersection, use the kavşak rules from <a href="19-kavşak-geçiş-hakkı.md">19</a>, not this list.</li>
 </ol>
 <hr />
-<h2>4. Why this matters for the exam</h2>
+</div></section><h2>4. Why this matters for the exam</h2>
 <ol>
 <li><strong>"Düz eğimsiz dar bir yolda otomobil ile kamyon karşılaşırsa geçiş hakkı kimindir?"</strong> → <strong>Otomobil.</strong></li>
 <li><strong>"Aynı yolda traktör (LTT) ile iş makinesi karşılaşırsa?"</strong> → <strong>LTT</strong> (7 &gt; 8).</li>

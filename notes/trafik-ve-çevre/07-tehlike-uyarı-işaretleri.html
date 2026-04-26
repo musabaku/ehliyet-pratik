@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -170,8 +186,8 @@ body{
 <li><strong>Sinyal verme/işaret verme hazırla</strong> — prepare to signal if the hazard requires maneuvering.</li>
 </ol>
 <hr />
-<h2>2. SLIDE 1 — Virajlar · Tehlikeli Eğim · Daralan Kaplama</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Virajlar · Tehlikeli Eğim · Daralan Kaplama</h2>
+
 
 <h3>The 8 signs</h3>
 <table>
@@ -242,8 +258,8 @@ body{
 <li><strong>Daralan kaplama traps</strong> — T-4a narrows from both sides; T-4b narrows only from the right. Watch for a variant T-4c that narrows from the left. The action is the same: <strong>slow down, stay central, be ready to yield to oncoming traffic</strong>.</li>
 </ul>
 <hr />
-<h2>3. SLIDE 2 — Pedestrians · Animals · Work Zones · Devices · Environment</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Pedestrians · Animals · Work Zones · Devices · Environment</h2>
+
 
 <h3>The 8 signs</h3>
 <table>
@@ -314,8 +330,8 @@ body{
 <li><strong>Havaalanı (alçak uçuş)</strong> sounds weird but it's a real sign. Low-flying aircraft can distract drivers or startle horses/livestock — the warning is about driver reaction, not collision with planes.</li>
 </ul>
 <hr />
-<h2>4. SLIDE 3 — Traffic Situations · Kavşaks · Demiryolu Geçidi</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Traffic Situations · Kavşaks · Demiryolu Geçidi</h2>
+
 
 <h3>The 12 signs</h3>
 <table>
@@ -411,8 +427,8 @@ body{
 <li><strong>Dönel kavşak (T-24) — roundabout priority:</strong> vehicles <strong>already in the roundabout have priority</strong>; entering vehicles yield. This matches international convention.</li>
 </ul>
 <hr />
-<h2>5. SLIDE 4 — Demiryolu Approach Bars · Köprü · Viraj Yön Levhaları · Ek Levhalar</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Demiryolu Approach Bars · Köprü · Viraj Yön Levhaları · Ek Levhalar</h2>
+
 
 <h3>The 13 signs</h3>
 <table>
@@ -519,8 +535,8 @@ body{
 </li>
 </ul>
 <hr />
-<h2>6. SLIDE 5 — Trafik Sıkışıklığı · Tramvay Kavşağı</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-115.png" alt="Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME" loading="lazy"></a><figcaption>Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-115.png" alt="Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME" loading="lazy"></a><figcaption>Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>6. SLIDE 5 — Trafik Sıkışıklığı · Tramvay Kavşağı</h2>
+
 
 <h3>The 2 signs</h3>
 <table>
@@ -554,7 +570,7 @@ body{
 <li><strong>Note on T-30 numbering:</strong> the same "T-30" code appears twice in this slide set — once for "demiryolu geçit yaklaşımı 100 m" in Slide 4 and once for "trafik sıkışıklığı" here. The slide code is just a teaching reference, not a strict catalog ID — don't let the overlap confuse you.</li>
 </ul>
 <hr />
-<h2>7. Why this matters for the exam</h2>
+</div></section><h2>7. Why this matters for the exam</h2>
 <ol>
 <li><strong>Universal shape/colour rule:</strong> <em>"Tehlike uyarı işaretlerinin şekli ve rengi nedir?"</em> → <strong>Kırmızı kenarlı, beyaz zeminli, tepesi yukarı bakan eşkenar üçgen.</strong></li>
 <li><strong>Yellow exception:</strong> <em>"Hangi tehlike uyarı işareti sarı zemin üzerine yapılır?"</em> → <strong>Yolda çalışma (T-15).</strong></li>

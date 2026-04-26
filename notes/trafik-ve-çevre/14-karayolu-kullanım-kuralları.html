@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -132,8 +148,8 @@ body{
 2. <strong>Lane-change ethics</strong> — don't force, don't surprise, and always signal.<br />
 3. <strong>Heavy vehicles stay right</strong> — on multi-lane two-way roads, only specific light vehicles may use middle/left lanes.</p>
 <hr />
-<h2>2. SLIDE 1 — Karayolu Kullanım Kuralları (positive duties + prohibitions)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-080.png" alt="Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-080.png" alt="Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Karayolu Kullanım Kuralları (positive duties + prohibitions)</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two color-coded blocks.</p>
@@ -193,8 +209,8 @@ body{
 <p><strong>Aksine bir işaret bulunmadıkça, sürücüler araçlarını yolun EN SAĞINDAN ve HIZININ GEREKTİRDİĞİ ŞERİTTEN sürmek zorundadırlar.</strong> <em>(Unless a sign says otherwise, drivers MUST keep to the rightmost part of the road and to the lane that matches their speed.)</em> Violation = <strong>2.719 TL, Madde 46/2-a.</strong></p>
 </blockquote>
 <hr />
-<h2>3. The "prohibited lane behavior" cheat-sheet</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-080.png" alt="Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-080.png" alt="Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 80: KARAYOLU KULLANIM KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-080.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. The "prohibited lane behavior" cheat-sheet</h2>
+
 
 <p>Seven behaviors that are flat-out <strong>yasak</strong> on any karayolu:</p>
 <table>
@@ -245,7 +261,7 @@ body{
 </table>
 <p>Every one of these = <strong>2.719 TL</strong>.</p>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <ol>
 <li><strong>"Aksine bir işaret yoksa sürücüler aracını yolun neresinden sürmelidir?"</strong> → <strong>En sağından</strong> (right edge).</li>
 <li><strong>"Çok şeritli yolda hangi şeritten gidilir?"</strong> → <strong>Hızının gerektirdiği şeritten</strong>, not "always the middle," not "always the right."</li>

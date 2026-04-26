@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -128,8 +144,8 @@ body{
 <h2>1. Overview — Görev (Purpose)</h2>
 <p>A "karayolu" (public road) is not a single undifferentiated strip. It has distinct <strong>named parts</strong>, each with its own legal purpose, allowed users, and exam keywords. Musab, you already know the definition of <em>karayolu</em> itself (see <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a>). This file zooms in on the <strong>anatomy</strong> — what the pieces of that road are called and who is allowed to use each one. The exam asks about these definitions constantly — especially <strong>banket</strong> (who can walk on it? who can drive on it?) and <strong>şerit</strong> (what is a lane, technically?).</p>
 <hr />
-<h2>2. SLIDE 7 — The five named parts of the road</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-008.png" alt="Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar" loading="lazy"></a><figcaption>Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-008.png" alt="Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar" loading="lazy"></a><figcaption>Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 7 — The five named parts of the road</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Two photos side by side on top:<br />
@@ -190,8 +206,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Platform = kaplama + (yaya yolu OR banket).</strong> One side of the addition is always the kaplama; the other side is either the sidewalk or the shoulder, depending on the road type.</p>
 </blockquote>
 <hr />
-<h2>2D. SLIDE 9 — Erişme Kontrollü Karayolu (OTOYOL) — the motorway</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-010.png" alt="Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel" loading="lazy"></a><figcaption>Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-010.png" alt="Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel" loading="lazy"></a><figcaption>Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2D. SLIDE 9 — Erişme Kontrollü Karayolu (OTOYOL) — the motorway</h2>
+
 
 <h3>What the slide showed</h3>
 <p>Three images across the top:<br />
@@ -244,8 +260,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Forbidden on otoyol:</strong> duraklama, park, geri gitmek, geriye dönmek, <strong>and seyretmek on the emniyet şeridi.</strong> The emniyet şeridi is for emergencies only.</p>
 </blockquote>
 <hr />
-<h2>2E. The otoyol extras — lane names to know</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-010.png" alt="Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel" loading="lazy"></a><figcaption>Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-010.png" alt="Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel" loading="lazy"></a><figcaption>Slayt — Sayfa 10: Erişme Kontrollü Karayolu (OTOYOL): Özellikle transit trafiğe tahsis edilen, bel <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-010.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2E. The otoyol extras — lane names to know</h2>
+
 
 <table>
 <thead>
@@ -284,8 +300,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 </tbody>
 </table>
 <hr />
-<h2>2F. SLIDE 10 — Bağlantı Yolu, Geçiş Yolu, Bisiklet Yolu</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-011.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-011.png" alt="Slayt — Sayfa 11: Bağlantı Yolu: Taşıt yollarının birbirine bağlanmasını sağlayan, kavşak alanı dı" loading="lazy"></a><figcaption>Slayt — Sayfa 11: Bağlantı Yolu: Taşıt yollarının birbirine bağlanmasını sağlayan, kavşak alanı dı <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-011.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-011.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-011.png" alt="Slayt — Sayfa 11: Bağlantı Yolu: Taşıt yollarının birbirine bağlanmasını sağlayan, kavşak alanı dı" loading="lazy"></a><figcaption>Slayt — Sayfa 11: Bağlantı Yolu: Taşıt yollarının birbirine bağlanmasını sağlayan, kavşak alanı dı <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-011.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2F. SLIDE 10 — Bağlantı Yolu, Geçiş Yolu, Bisiklet Yolu</h2>
+
 
 <blockquote>
 <p><strong>Bağlantı Yolu:</strong> Taşıt yollarının birbirine bağlanmasını sağlayan, <strong>kavşak alanı dışında</strong> kalan ve <strong>bir yönlü</strong> trafiğe ayrılmış olan karayolu kısmıdır.</p>
@@ -303,8 +319,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Bağlantı yolu is always tek yönlü</strong> and sits <strong>outside</strong> the kavşak area. <strong>Geçiş yolu is your driveway</strong> — part of the karayolu. <strong>Bisiklet yolu is for bikes only</strong>.</p>
 </blockquote>
 <hr />
-<h2>2G. SLIDE 11 — Anayol vs Tali Yol (main vs side road) — classic geçiş-hakkı anchor</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-012.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-012.png" alt="Slayt — Sayfa 12: Anayol: Ana trafiğe açık olan ve bunu kesen karayolundaki trafiğin, bu yolu" loading="lazy"></a><figcaption>Slayt — Sayfa 12: Anayol: Ana trafiğe açık olan ve bunu kesen karayolundaki trafiğin, bu yolu <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-012.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-012.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-012.png" alt="Slayt — Sayfa 12: Anayol: Ana trafiğe açık olan ve bunu kesen karayolundaki trafiğin, bu yolu" loading="lazy"></a><figcaption>Slayt — Sayfa 12: Anayol: Ana trafiğe açık olan ve bunu kesen karayolundaki trafiğin, bu yolu <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-012.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2G. SLIDE 11 — Anayol vs Tali Yol (main vs side road) — classic geçiş-hakkı anchor</h2>
+
 
 <blockquote>
 <p><strong>Anayol:</strong> Ana trafiğe açık olan ve bunu kesen karayolundaki trafiğin, bu yolu <strong>geçerken veya bu yola girerken</strong>, <strong>ilk geçiş hakkını vermesi</strong> gerektiği <strong>işaretlerle belirlenmiş</strong> karayoludur.</p>
@@ -320,8 +336,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Tali yol = YOL VER (yield).</strong> <strong>Anayol = has right of way.</strong> At an unmarked intersection between an anayol and a tali yol, the tali yol driver must stop and let the anayol traffic go first. Exam loves the scenario: "a car on the tali yol reaches the intersection — what does it do?" → <strong>Yield.</strong></p>
 </blockquote>
 <hr />
-<h2>2H. SLIDE 12 — Tehlikeli Eğim, Kavşak, Ada</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-014.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-014.png" alt="Slayt — Sayfa 14: Tehlikeli Eğim: Araçların emniyetle seyrine devamı için, vites küçültmeyi gerekt" loading="lazy"></a><figcaption>Slayt — Sayfa 14: Tehlikeli Eğim: Araçların emniyetle seyrine devamı için, vites küçültmeyi gerekt <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-014.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-014.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-014.png" alt="Slayt — Sayfa 14: Tehlikeli Eğim: Araçların emniyetle seyrine devamı için, vites küçültmeyi gerekt" loading="lazy"></a><figcaption>Slayt — Sayfa 14: Tehlikeli Eğim: Araçların emniyetle seyrine devamı için, vites küçültmeyi gerekt <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-014.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2H. SLIDE 12 — Tehlikeli Eğim, Kavşak, Ada</h2>
+
 
 <blockquote>
 <p><strong>Tehlikeli Eğim:</strong> Araçların <strong>emniyetle seyrine devamı</strong> için, <strong>vites küçültmeyi gerektirecek</strong> uzunluk veya açıdaki yol eğimidir.</p>
@@ -341,8 +357,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <strong>Ada = pedestrian island, no vehicles allowed.</strong></p>
 </blockquote>
 <hr />
-<h2>2I. SLIDE 13 — Yaya Geçidi &amp; Okul Geçidi</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2I. SLIDE 13 — Yaya Geçidi &amp; Okul Geçidi</h2>
+
 
 <blockquote>
 <p><strong>Yaya Geçidi:</strong> Taşıt yolunda, yayaların <strong>güvenli geçebilmelerini sağlamak üzere</strong> trafik işaretleri ile belirlenmiş alanlardır.</p>
@@ -364,8 +380,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>At a yaya/okul geçidi: slow down + yield to pedestrians + NO overtaking, NO stopping, NO parking.</strong> All three yasaks apply.</p>
 </blockquote>
 <hr />
-<h2>2J. SLIDE 14 — Üst Geçit &amp; Alt Geçit</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-016.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-016.png" alt="Slayt — Sayfa 16: Üst Geçit: Karayolunun diğer bir karayolu veya demiryolunu üstten geçmesini" loading="lazy"></a><figcaption>Slayt — Sayfa 16: Üst Geçit: Karayolunun diğer bir karayolu veya demiryolunu üstten geçmesini <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-016.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-016.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-016.png" alt="Slayt — Sayfa 16: Üst Geçit: Karayolunun diğer bir karayolu veya demiryolunu üstten geçmesini" loading="lazy"></a><figcaption>Slayt — Sayfa 16: Üst Geçit: Karayolunun diğer bir karayolu veya demiryolunu üstten geçmesini <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-016.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2J. SLIDE 14 — Üst Geçit &amp; Alt Geçit</h2>
+
 
 <blockquote>
 <p><strong>Üst Geçit:</strong> Karayolunun, diğer bir karayolu veya demiryolunu <strong>üstten geçmesini</strong> sağlayan yapıdır.</p>
@@ -381,8 +397,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Üst = üst</strong> (over/on top). <strong>Alt = alt</strong> (under/below). Trivially obvious in Turkish — the exam mostly tests: "which type crosses above?" → üst geçit. Pedestrians should always use üst/alt geçit instead of crossing the road at grade where one is provided.</p>
 </blockquote>
 <hr />
-<h2>2K. SLIDE 15 — Demiryolu Geçidi (Hemzemin Geçit)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-017.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-017.png" alt="Slayt — Sayfa 17: Demiryolu Geçidi (Hemzemin Geçit): Karayolu ile demiryolunun" loading="lazy"></a><figcaption>Slayt — Sayfa 17: Demiryolu Geçidi (Hemzemin Geçit): Karayolu ile demiryolunun <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-017.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-017.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-017.png" alt="Slayt — Sayfa 17: Demiryolu Geçidi (Hemzemin Geçit): Karayolu ile demiryolunun" loading="lazy"></a><figcaption>Slayt — Sayfa 17: Demiryolu Geçidi (Hemzemin Geçit): Karayolu ile demiryolunun <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-017.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2K. SLIDE 15 — Demiryolu Geçidi (Hemzemin Geçit)</h2>
+
 
 <blockquote>
 <p><strong>Demiryolu Geçidi (Hemzemin Geçit):</strong> Karayolu ile demiryolunun <strong>aynı seviyede</strong> kesiştiği <strong>bariyerli veya bariyersiz</strong> geçitlerdir.</p>
@@ -400,8 +416,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Hemzemin = aynı seviyede.</strong> A hemzemin geçit can be bariyerli (kontrollü) or bariyersiz (kontrolsüz). At a kontrolsüz geçit the driver must stop and check personally — no signal will warn them.</p>
 </blockquote>
 <hr />
-<h2>2L. SLIDE 16 — Park Yeri (Otopark)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-018.png" alt="Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan" loading="lazy"></a><figcaption>Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-018.png" alt="Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan" loading="lazy"></a><figcaption>Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2L. SLIDE 16 — Park Yeri (Otopark)</h2>
+
 
 <blockquote>
 <p><strong>Park Yeri (Otopark):</strong> Araçların park etmesi için kullanılan açık veya kapalı alandır. Taşıt yolundaki veya buna bitişik alanlardaki park yerine <strong>Karayolu üzeri park yeri</strong>, karayolu sınır çizgisi dışında olan ve bir geçiş yolu veya servis yolu ile taşıt yoluna bağlanan park yerine <strong>Karayolu dışı park yeri</strong> denir.</p>
@@ -417,8 +433,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Otopark splits into on-street (karayolu üzeri) and off-street (karayolu dışı)</strong> — the key distinction is whether the parking area is inside the karayolu sınır çizgisi.</p>
 </blockquote>
 <hr />
-<h2>2M. SLIDE 17 — Karayolu kenarındaki tesisler: Muayene, Servis, Akaryakıt İstasyonu</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-019.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-019.png" alt="Slayt — Sayfa 19: Araç Muayene İstasyonu: Araçların niteliklerini tespit ve kontrol edebilecek" loading="lazy"></a><figcaption>Slayt — Sayfa 19: Araç Muayene İstasyonu: Araçların niteliklerini tespit ve kontrol edebilecek <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-019.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-019.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-019.png" alt="Slayt — Sayfa 19: Araç Muayene İstasyonu: Araçların niteliklerini tespit ve kontrol edebilecek" loading="lazy"></a><figcaption>Slayt — Sayfa 19: Araç Muayene İstasyonu: Araçların niteliklerini tespit ve kontrol edebilecek <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-019.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2M. SLIDE 17 — Karayolu kenarındaki tesisler: Muayene, Servis, Akaryakıt İstasyonu</h2>
+
 
 <blockquote>
 <p><strong>Araç Muayene İstasyonu:</strong> Araçların <strong>niteliklerini tespit ve kontrol</strong> edebilecek cihaz ve personeli bulunan yerdir.</p>
@@ -437,8 +453,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <strong>Muayene = inspection/certification.</strong> <strong>Servis = repair/maintenance.</strong> <strong>Akaryakıt = refueling.</strong></p>
 </blockquote>
 <hr />
-<h2>2N. SLIDE 18 — Araçlar ile ilgili Tanımlar (Otomobil, Otobüs, Minibüs)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-020.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-020.png" alt="Slayt — Sayfa 20: ARAÇLAR İLE İLGİLİ TANIMLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 20: ARAÇLAR İLE İLGİLİ TANIMLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-020.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-020.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-020.png" alt="Slayt — Sayfa 20: ARAÇLAR İLE İLGİLİ TANIMLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 20: ARAÇLAR İLE İLGİLİ TANIMLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-020.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2N. SLIDE 18 — Araçlar ile ilgili Tanımlar (Otomobil, Otobüs, Minibüs)</h2>
+
 
 <blockquote>
 <p><strong>Otomobil:</strong> Sürücü <strong>dahil</strong> en fazla <strong>9 oturma yeri</strong> olan ve insan taşımak için imal edilmiş motorlu taşıttır.</p>
@@ -482,8 +498,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 <p><strong>Otomobil: ≤ 9. Minibüs: 10–14. Otobüs: ≥ 15.</strong> Always <strong>driver included (sürücü dahil)</strong>. The exam will give you a seat number and ask "what is this vehicle?" — memorize the three brackets.</p>
 </blockquote>
 <hr />
-<h2>3. The road anatomy diagram</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-008.png" alt="Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar" loading="lazy"></a><figcaption>Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-008.png" alt="Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar" loading="lazy"></a><figcaption>Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. The road anatomy diagram</h2>
+
 
 <h3>Urban road (has a yaya yolu)</h3>
 <pre><code>  [building]  | kaldırım | taşıt yolu (kaplama) | kaldırım | [building]
@@ -501,8 +517,8 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
                  PLATFORM  =  kaplama  +  banket (both sides)
 </code></pre>
 <hr />
-<h2>4. Who-can-use-what (the permission matrix)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-008.png" alt="Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar" loading="lazy"></a><figcaption>Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-008.png" alt="Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar" loading="lazy"></a><figcaption>Slayt — Sayfa 8: Karayolu üzeri ve kenarındaki Tesislerle ilgili Tanımlar <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-008.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. Who-can-use-what (the permission matrix)</h2>
+
 
 <table>
 <thead>
@@ -553,7 +569,7 @@ On a rural road without a sidewalk: platform = taşıt yolu + banket.</p>
 </tbody>
 </table>
 <hr />
-<h2>5. Why this matters for the exam</h2>
+</div></section><h2>5. Why this matters for the exam</h2>
 <ol>
 <li>
 <p><strong>Q: "Karayolunun, taşıt trafiğince kullanılan kısmına ne denir?"</strong><br />

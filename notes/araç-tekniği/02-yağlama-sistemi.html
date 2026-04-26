@@ -21,7 +21,7 @@ body{
 .bar a:hover{opacity:1;text-decoration:underline}
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
-  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  max-width:1180px;margin:24px auto 60px;padding:30px 32px;
   background:#fff;border-radius:12px;
   border:1px solid #e4dac8;
   box-shadow:0 2px 12px rgba(0,0,0,.04);
@@ -78,6 +78,22 @@ body{
 }
 .slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
+.slide-section{
+  display:flex;gap:22px;align-items:flex-start;margin:28px 0;
+}
+.slide-pin{
+  flex:0 0 44%;position:sticky;top:14px;align-self:flex-start;
+  max-height:calc(100vh - 28px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0}
+.slide-pin .slide-figure img{max-height:calc(100vh - 110px);width:auto;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
 @media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
@@ -138,8 +154,8 @@ body{
 </ol>
 <p>These <strong>4 görev</strong> are heavily exam-tested. Memorize all four.</p>
 <hr />
-<h2>2. SLIDE 1 — Yağlama Sistemi: Intro</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/04-yaglama-sistemi/page-026.png" alt="Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank">→ pdf metni</a></figcaption></figure>
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/04-yaglama-sistemi/page-026.png" alt="Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Yağlama Sistemi: Intro</h2>
+
 
 <p><strong>Slide title:</strong> YAĞLAMA SİSTEMİ</p>
 <h3>What the slide showed</h3>
@@ -158,8 +174,8 @@ body{
 <p>The lubrication system has <strong>4 görev</strong>: kolaylaştırmak, temizliğini sağlamak, soğutmaya yardımcı olmak, aşınmalarını önlemek.</p>
 </blockquote>
 <hr />
-<h2>3. SLIDE 2 — Başlıca Parçaları (Main Parts)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/04-yaglama-sistemi/page-026.png" alt="Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/04-yaglama-sistemi/page-026.png" alt="Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Başlıca Parçaları (Main Parts)</h2>
+
 
 <p><strong>Slide title:</strong> BAŞLICA PARÇALARI</p>
 <h3>What the slide showed</h3>
@@ -186,8 +202,8 @@ body{
 <h3>Exam trap</h3>
 <p>A classic question: <em>"Aşağıdakilerden hangisi yağlama sisteminin parçası değildir?"</em> (Which is NOT a part of the lubrication system?) — the distractor will be something like <strong>karbüratör, buji, radyatör, alternatör, enjektör</strong>. Make sure you can recognize the 6 yağlama parts above vs. parts from other systems.</p>
 <hr />
-<h2>4. SLIDE 3 — Yağ Çubuğu (Dipstick Usage)</h2>
-<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/04-yaglama-sistemi/page-026.png" alt="Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank">→ pdf metni</a></figcaption></figure>
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/04-yaglama-sistemi/page-026.png" alt="Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 26: YAĞLAMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-026.html" target="_blank">→ pdf metni</a></figcaption></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Yağ Çubuğu (Dipstick Usage)</h2>
+
 
 <p><strong>Slide content:</strong></p>
 <blockquote>
@@ -256,7 +272,7 @@ body{
 </blockquote>
 <p>Target the <strong>middle</strong> of the MIN–MAX window, not the bottom edge. If you're at or near MIN, add oil immediately.</p>
 <hr />
-<h2>5. Memorize These (Lubrication System)</h2>
+</div></section><h2>5. Memorize These (Lubrication System)</h2>
 <blockquote>
 <p><strong>Yağlama sisteminin görevi:</strong> Motorumuzdaki hareketli parçaların hareketlerini kolaylaştırmak, temizliğini sağlamak, soğutmasına yardımcı olmak ve aşınmalarını önlemektir.<br />
 <em>(The job of the lubrication system is to facilitate, clean, cool, and prevent wear on the engine's moving parts.)</em></p>
