@@ -193,8 +193,9 @@ body{
 .feedback.wrong-fb{background:var(--danger-bg);color:var(--danger)}
 
 /* ══════════ NAV BAR ══════════ */
-.nav-bar{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.nav-bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .nav-bar .btn{padding:10px 24px;font-size:14px;font-weight:500}
+.nav-center{display:flex;justify-content:center;align-items:center;gap:8px;flex:1}
 
 /* ══════════ KBD ══════════ */
 .kbd-hint{text-align:center;font-size:11px;color:var(--muted2);margin-top:14px;opacity:.6}
@@ -397,8 +398,9 @@ body{
   <div class="topbar-right">
     <div class="timer" id="timer">45:00</div>
     <button class="tr-toggle" id="tr-toggle-bar" onclick="toggleTranslate()">EN</button>
+    <button class="tb-btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
     <button class="tb-btn" onclick="endQuiz()" data-tr="Bitir" data-en="Finish">Bitir</button>
-    <button class="tb-btn" onclick="backToHome()">&#10005;</button>
+    <button class="tb-btn" onclick="goHome()">&#10005;</button>
   </div>
 </div>
 <div class="progress-wrap" id="progress-wrap" style="display:none"><div class="progress-bar" id="progress-bar"></div></div>
@@ -454,6 +456,7 @@ body{
     </div>
     <div class="nav-bar">
       <button class="btn" id="btn-prev" onclick="prevQ()"><span data-tr="&larr; Onceki" data-en="&larr; Previous">&larr; Onceki</span></button>
+      <div class="nav-center"><button class="btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button></div>
       <button class="btn btn-primary" id="btn-next" onclick="nextQ()"><span data-tr="Sonraki &rarr;" data-en="Next &rarr;">Sonraki &rarr;</span></button>
     </div>
     <div class="kbd-hint"><kbd class="kbd">1-4</kbd> <span data-tr="sec" data-en="select">sec</span> <kbd class="kbd">&larr;&rarr;</kbd> <span data-tr="gecis" data-en="navigate">gecis</span> <kbd class="kbd">F</kbd> <span data-tr="isaretle" data-en="flag">isaretle</span> <kbd class="kbd">T</kbd> translate</div>
@@ -471,6 +474,7 @@ body{
     <p id="r-verdict" style="font-size:17px;font-weight:600;margin-bottom:20px"></p>
     <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
       <button class="btn" onclick="reviewMistakes()" data-tr="Hatalari Incele" data-en="Review Mistakes">Hatalari Incele</button>
+      <button class="btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
       <button class="btn btn-primary" onclick="backToHome()" data-tr="Yeni Sinav" data-en="New Quiz">Yeni Sinav</button>
     </div>
     <div id="r-review" style="margin-top:28px;text-align:left"></div>
@@ -510,6 +514,7 @@ body{
   <div id="v-list" style="display:none">
     <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap">
       <button class="btn btn-sm" onclick="showVHome()"><span data-tr="&larr; Geri" data-en="&larr; Back">&larr; Geri</span></button>
+      <button class="btn btn-sm" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
       <h3 id="vl-list-title" style="flex:1;margin:0;font-size:16px"></h3>
       <input id="vl-search" type="text" placeholder="Ara..." data-tr-placeholder="Ara..." data-en-placeholder="Search..." oninput="renderVList()" style="padding:6px 10px;border:1px solid var(--line);border-radius:8px;font-size:13px;min-width:140px">
       <button class="btn btn-sm" onclick="toggleVListSort()" id="vl-sort-btn">A→Z</button>
@@ -525,6 +530,7 @@ body{
     </div>
     <div style="display:flex;justify-content:center;gap:8px">
       <button class="btn" onclick="showVHome()" data-tr="Geri" data-en="Back">Geri</button>
+      <button class="btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
       <button class="btn btn-primary btn-lg" onclick="startBatchQuiz()" data-tr="Quiz Yap" data-en="Start Quiz">Quiz Yap</button>
     </div>
   </div>
@@ -547,6 +553,10 @@ body{
       <div class="vq-feedback" id="vq-fb"></div>
       <button class="btn btn-primary" id="vq-next" onclick="vqNext()" style="display:none">Sonraki</button>
     </div>
+    <div style="display:flex;justify-content:center;gap:8px;margin-bottom:10px;flex-wrap:wrap">
+      <button class="btn" onclick="showVHome()" data-tr="Kelime Ana Sayfa" data-en="Vocabulary Home">Kelime Ana Sayfa</button>
+      <button class="btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
+    </div>
     <div class="kbd-hint"><kbd class="kbd">1-4</kbd> sec <kbd class="kbd">Enter</kbd> sonraki <kbd class="kbd">Esc</kbd> cik</div>
   </div>
 
@@ -562,7 +572,8 @@ body{
       <div id="vr-wrongs" style="text-align:left"></div>
       <div style="display:flex;gap:8px;justify-content:center;margin-top:20px;flex-wrap:wrap">
         <button class="btn" id="vr-next-batch" onclick="nextBatch()" style="display:none">Sonraki Grup</button>
-        <button class="btn btn-primary" onclick="showVHome()">Ana Sayfa</button>
+        <button class="btn" onclick="showVHome()" data-tr="Kelime Ana Sayfa" data-en="Vocabulary Home">Kelime Ana Sayfa</button>
+        <button class="btn btn-primary" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
       </div>
     </div>
   </div>
@@ -588,15 +599,29 @@ function switchTab(t){
   if(t==='kelime'){buildVCatChips();updateVHomeStats()}
 }
 
-function backToHome(){
+function goHome(){
   if(E.timerInterval)clearInterval(E.timerInterval);
+  E.timerInterval=null;
   document.getElementById('topbar').style.display='none';
   document.getElementById('progress-wrap').style.display='none';
   document.getElementById('hero').style.display='block';
-  document.getElementById('s-quiz').style.display='none';
-  document.getElementById('s-results').style.display='none';
-  document.getElementById('s-home').style.display='block';
+  document.getElementById('tab-sorular').style.display='block';
+  document.getElementById('tab-kelime').style.display='none';
+  document.querySelectorAll('.main-tab').forEach(b=>b.classList.remove('active'));
+  const sorularTab=document.querySelector('.main-tab[onclick*="sorular"]');
+  if(sorularTab)sorularTab.classList.add('active');
+  activeTab='sorular';
+  ['s-quiz','s-results'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display='none'});
+  const sHome=document.getElementById('s-home');
+  if(sHome)sHome.style.display='block';
+  ['v-home','v-learn','v-quiz','v-results','v-list'].forEach(id=>{const el=document.getElementById(id);if(el)el.style.display=id==='v-home'?'block':'none'});
   E.updateMarathonText();
+  if(typeof updateVHomeStats==='function')try{updateVHomeStats()}catch(e){}
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function backToHome(){
+  goHome();
 }
 
 /* ═══════════════════════════════════════════
@@ -1246,7 +1271,7 @@ document.addEventListener('keydown',e=>{
     else if(e.key==='ArrowLeft')prevQ();
     else if(e.key==='f'||e.key==='F')toggleFlag();
     else if(e.key==='t'||e.key==='T')toggleTranslate();
-    else if(e.key==='Escape')backToHome();
+    else if(e.key==='Escape')goHome();
   }
   // Vocab quiz
   if(document.getElementById('v-quiz').style.display!=='none'){
@@ -1254,7 +1279,7 @@ document.addEventListener('keydown',e=>{
       const btns=document.querySelectorAll('.vq-choice');if(btns[parseInt(e.key)-1])btns[parseInt(e.key)-1].click();
     }
     if(e.key==='Enter'){if(vMode==='type'&&!vDone)checkVType();else if(vDone)vqNext()}
-    if(e.key==='Escape')showVHome();
+    if(e.key==='Escape')goHome();
   }
 });
 
