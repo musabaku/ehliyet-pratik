@@ -320,6 +320,24 @@ body{
 }
 .q-translation.show{display:block}
 
+.q-media{
+  display:none;margin:0 0 18px;border:1px solid var(--line);border-radius:var(--radius2);
+  overflow:hidden;background:var(--surface2);
+}
+.q-media.show{display:block}
+.q-media img,.q-media video{display:block;width:100%;max-height:360px;object-fit:contain;background:#fff}
+.q-media-caption{padding:7px 10px;font-size:11px;color:var(--muted);border-top:1px solid var(--line);background:var(--surface2)}
+.option-media{margin-top:8px;display:flex;flex-wrap:wrap;gap:8px}
+.option-media img{max-width:150px;max-height:110px;object-fit:contain;border:1px solid var(--line);border-radius:8px;background:#fff}
+.enrich-panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.enrich-panel h3{font-size:14px;margin-bottom:4px}
+.enrich-panel p{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.45}
+.enrich-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.enrich-stat{font-size:11px;color:var(--muted2);text-align:center;margin-top:8px}
+
 .opt-translation{
   font-size:11px;color:var(--brand);margin-top:3px;font-style:italic;
   opacity:.8;display:none;
@@ -409,6 +427,15 @@ body{
       <button class="btn btn-sm" onclick="setCategory('arac_teknigi',this)"><span data-tr="Arac Teknigi" data-en="Vehicle Tech">Arac Teknigi</span> <span class="cat-count" id="cnt-arac_teknigi"></span></button>
       <button class="btn btn-sm" onclick="setCategory('trafik_adabi',this)"><span data-tr="Trafik Adabi" data-en="Traffic Etiquette">Trafik Adabi</span> <span class="cat-count" id="cnt-trafik_adabi"></span></button>
     </div>
+    <div class="enrich-panel" id="enrich-panel">
+      <h3 data-tr="Enriched gorsel pratik" data-en="Enriched visual practice">Enriched gorsel pratik</h3>
+      <p data-tr="Ayrı kopya: canlı HTML'den çekilen resimli/video sorular. Orijinal soru bankası korunur." data-en="Separate copy: image/video questions parsed from live HTML. The original question bank stays preserved.">Ayrı kopya: canlı HTML'den çekilen resimli/video sorular. Orijinal soru bankası korunur.</p>
+      <div class="enrich-actions">
+        <button class="btn btn-primary btn-sm" onclick="startQuiz('media')" data-tr="Gorselli Pratik" data-en="Media Practice">Gorselli Pratik</button>
+        <button class="btn btn-sm" onclick="startQuiz('enriched')" data-tr="Tum Enriched (metin+gorsel)" data-en="All Enriched (text+media)">Tum Enriched (metin+gorsel)</button>
+      </div>
+      <div class="enrich-stat" id="enrich-stat">Enriched data yukleniyor...</div>
+    </div>
     <div style="text-align:center;color:var(--muted);font-size:12px"><span id="marathon-txt"></span></div>
   </div>
 
@@ -421,6 +448,7 @@ body{
       </div>
       <div class="q-text" id="q-text"></div>
       <div class="q-translation" id="q-tr"></div>
+      <div class="q-media" id="q-media"></div>
       <div class="options" id="q-opts"></div>
       <div class="feedback" id="q-fb"></div>
     </div>
@@ -544,6 +572,7 @@ body{
 
 <!-- Cache-bust version tags — bump these whenever questions_data.js or vocab_data.js changes -->
 <script src="questions_data.js?v=4450"></script>
+<script src="questions_enriched_data.js?v=4500m1187"></script>
 <script src="vocab_data.js?v=1366"></script>
 <script>
 /* ═══════════════════════════════════════════
@@ -612,9 +641,21 @@ const E={
       const label = (typeof uiLang !== 'undefined' && uiLang === 'en') ? 'Marathon' : 'Maraton';
       el.textContent=`${label}: ${this.marathon}/4450 (${Math.round(this.marathon/4450*100)}%)`;
     }
+  },
+  updateEnrichedText(){
+    const el=document.getElementById('enrich-stat');
+    if(!el)return;
+    if(typeof ALL_QUESTIONS_ENRICHED==='undefined'||!ALL_QUESTIONS_ENRICHED.length){
+      el.textContent='Enriched data bulunamadi. Once scripts/build_questions_enriched.py calistirin.';
+      return;
+    }
+    const total=ALL_QUESTIONS_ENRICHED.length;
+    const media=ALL_QUESTIONS_ENRICHED.filter(q=>q.has_media).length;
+    el.textContent=`${total} enriched soru · ${media} gorselli/video`;
   }
 };
 E.updateMarathonText();
+E.updateEnrichedText();
 
 // Update all vocab counts from the actual VOCAB_DATA arrays (was hardcoded).
 function updateVCounts(){
@@ -630,8 +671,8 @@ function updateVCounts(){
 }
 
 // Populate category counts + vocab counts + apply saved UI language on DOM ready
-if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{E.updateCatCounts();updateVCounts();applyUILang();})}
-else{E.updateCatCounts();updateVCounts();applyUILang();}
+if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',()=>{E.updateCatCounts();E.updateEnrichedText();updateVCounts();applyUILang();})}
+else{E.updateCatCounts();E.updateEnrichedText();updateVCounts();applyUILang();}
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
@@ -648,7 +689,7 @@ let uiLang = localStorage.getItem('eh_uilang') || 'tr';
 // Dynamic labels (set by JS, not in HTML)
 const UI_DYN = {
   tr: {
-    modes: {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20'},
+    modes: {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20',media:'Gorselli Pratik',enriched:'Enriched'},
     soru: 'Soru',
     kelimeLit: 'kelime',
     grup: 'Grup',
@@ -657,7 +698,7 @@ const UI_DYN = {
     questionQ: 'Soru',
   },
   en: {
-    modes: {exam:'Exam',practice:'Practice',marathon:'Marathon',mistakes:'Mistakes',flagged:'Flagged',random:'Random 20'},
+    modes: {exam:'Exam',practice:'Practice',marathon:'Marathon',mistakes:'Mistakes',flagged:'Flagged',random:'Random 20',media:'Media Practice',enriched:'Enriched'},
     soru: 'Question',
     kelimeLit: 'words',
     grup: 'Group',
@@ -767,13 +808,48 @@ function renderVList(){
   body.innerHTML=html;
 }
 
+function questionSourceForMode(mode){
+  if(mode==='media'||mode==='enriched')return (typeof ALL_QUESTIONS_ENRICHED!=='undefined'?ALL_QUESTIONS_ENRICHED:[]);
+  return typeof ALL_QUESTIONS!=='undefined'?ALL_QUESTIONS:[];
+}
+
+function escapeHTML(s){
+  return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function mediaHTML(items){
+  return (items||[]).map(item=>{
+    if(item.type==='image'&&item.path)return `<img src="${escapeHTML(item.path)}" alt="${escapeHTML(item.alt||'question image')}" loading="lazy">`;
+    if(item.type==='video'&&item.url)return `<video controls preload="metadata" src="${escapeHTML(item.url)}"></video>`;
+    return '';
+  }).join('');
+}
+
+function renderMedia(q){
+  const box=document.getElementById('q-media');
+  if(!box)return;
+  const html=mediaHTML(q.media||[]);
+  if(!html){box.innerHTML='';box.className='q-media';return}
+  const caption=q.source_url?`<div class="q-media-caption">${escapeHTML(q.month||'')} ${q.day?`day-${String(q.day).padStart(2,'0')}`:''} · ${escapeHTML(q.source_url)}</div>`:'';
+  box.innerHTML=html+caption;
+  box.className='q-media show';
+}
+
+function optionMediaHTML(q,L){
+  const items=q.option_media&&q.option_media[L]?q.option_media[L]:[];
+  const html=mediaHTML(items);
+  return html?`<div class="option-media">${html}</div>`:'';
+}
+
 function startQuiz(m){
-  if(typeof ALL_QUESTIONS==='undefined'||!ALL_QUESTIONS.length){
+  const source=questionSourceForMode(m);
+  if(!source||!source.length){
     alert('Soru verisi yuklenemedi. questions_data.js dosyasini kontrol edin.');
     return;
   }
   E.mode=m;E.answers={};E.ok=0;E.fail=0;E.idx=0;
-  let pool=ALL_QUESTIONS.map((q,i)=>({...q,_oi:i}));
+  const isEnrichedSource=(m==='media'||m==='enriched');
+  let pool=source.map((q,i)=>({...q,_oi:isEnrichedSource?'enriched:'+i:i}));
   if(E.cat!=='all')pool=pool.filter(q=>E.detectCat(q)===E.cat);
 
   // Empty-pool guard — prevents silent fail when a category has no questions
@@ -794,8 +870,8 @@ function startQuiz(m){
     E.idx=Math.max(0,Math.min(E.marathon,pool.length-1));
   }
   else if(m==='mistakes'){
-    const ids=Object.keys(E.mistakes).map(Number);
-    E.questions=pool.filter(q=>ids.includes(q._oi));
+    const ids=Object.keys(E.mistakes);
+    E.questions=pool.filter(q=>ids.includes(String(q._oi)));
     if(!E.questions.length){alert('Hatali soru yok! Harika.');return}
     shuffle(E.questions)
   }
@@ -804,6 +880,11 @@ function startQuiz(m){
     if(!E.questions.length){alert('Isaretli soru yok. Yildiz (F tusu) ile isaretleyin.');return}
   }
   else if(m==='random')E.questions=shuffle([...pool]).slice(0,Math.min(20,pool.length));
+  else if(m==='media'){
+    E.questions=shuffle(pool.filter(q=>q.has_media)).slice(0,Math.min(30,pool.filter(q=>q.has_media).length));
+    if(!E.questions.length){alert('Enriched gorselli soru bulunamadi. Once enriched pipeline calistirin.');return}
+  }
+  else if(m==='enriched')E.questions=shuffle([...pool]).slice(0,Math.min(50,pool.length));
   else {alert('Bilinmeyen mod: '+m);return}
 
   // Final safety: if after filtering we still have zero questions, bail out
@@ -820,7 +901,7 @@ function startQuiz(m){
   document.getElementById('progress-wrap').style.display='block';
   document.getElementById('stat-tot').textContent=E.questions.length;
   document.getElementById('timer').style.display=m==='exam'?'block':'none';
-  const t=(typeof UI_DYN !== 'undefined' ? UI_DYN[uiLang].modes : {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20'});
+  const t=(typeof UI_DYN !== 'undefined' ? UI_DYN[uiLang].modes : {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20',media:'Gorselli Pratik',enriched:'Enriched'});
   document.getElementById('topbar-title').textContent=t[m]||'Quiz';
   renderQ();
 }
@@ -839,6 +920,7 @@ function renderQ(){
   const q=E.questions[E.idx];if(!q)return;
   document.getElementById('q-num').textContent=`${(typeof UI_DYN !== 'undefined' ? UI_DYN[uiLang].questionQ : 'Soru')} ${E.idx+1}/${E.questions.length}`;
   document.getElementById('q-text').textContent=q.question;
+  renderMedia(q);
   document.getElementById('stat-cur').textContent=E.idx+1;
   document.getElementById('q-flag').className='q-flag'+(E.flagged.has(q._oi)?' flagged':'');
 
@@ -848,7 +930,7 @@ function renderQ(){
     const d=document.createElement('div');d.className='option';d.dataset.letter=L;
     if(sel!==undefined){d.classList.add('disabled');if(L===q.answer)d.classList.add('correct');if(L===sel&&L!==q.answer)d.classList.add('wrong')}
     if(L===sel)d.classList.add('selected');
-    d.innerHTML=`<div class="option-letter">${L}</div><div class="option-text">${q.options[L]||''}<div class="opt-translation"></div></div>`;
+    d.innerHTML=`<div class="option-letter">${L}</div><div class="option-text">${escapeHTML(q.options[L]||'')}${optionMediaHTML(q,L)}<div class="opt-translation"></div></div>`;
     if(sel===undefined)d.onclick=()=>selectA(L);
     el.appendChild(d);
   });
