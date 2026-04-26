@@ -430,13 +430,12 @@ body{
       <button class="btn btn-sm" onclick="setCategory('trafik_adabi',this)"><span data-tr="Trafik Adabi" data-en="Traffic Etiquette">Trafik Adabi</span> <span class="cat-count" id="cnt-trafik_adabi"></span></button>
     </div>
     <div class="enrich-panel" id="enrich-panel">
-      <h3 data-tr="Enriched gorsel pratik" data-en="Enriched visual practice">Enriched gorsel pratik</h3>
-      <p data-tr="Ayrı kopya: canlı HTML'den çekilen resimli/video sorular. Orijinal soru bankası korunur." data-en="Separate copy: image/video questions parsed from live HTML. The original question bank stays preserved.">Ayrı kopya: canlı HTML'den çekilen resimli/video sorular. Orijinal soru bankası korunur.</p>
+      <h3 data-tr="Görselli Pratik" data-en="Visual Practice">Görselli Pratik</h3>
+      <p data-tr="Resimli ve videolu sorular — özellikle trafik işaretleri, gösterge lambaları ve ilk yardım diyagramları için." data-en="Image and video questions — especially traffic signs, dashboard lights, and first-aid diagrams.">Resimli ve videolu sorular — özellikle trafik işaretleri, gösterge lambaları ve ilk yardım diyagramları için.</p>
       <div class="enrich-actions">
-        <button class="btn btn-primary btn-sm" onclick="startQuiz('media')" data-tr="Gorselli Pratik" data-en="Media Practice">Gorselli Pratik</button>
-        <button class="btn btn-sm" onclick="startQuiz('enriched')" data-tr="Tum Enriched (metin+gorsel)" data-en="All Enriched (text+media)">Tum Enriched (metin+gorsel)</button>
+        <button class="btn btn-primary btn-sm" onclick="startQuiz('media')" data-tr="Sadece Görselli (30)" data-en="Media Only (30)">Sadece Görselli (30)</button>
       </div>
-      <div class="enrich-stat" id="enrich-stat">Enriched data yukleniyor...</div>
+      <div class="enrich-stat" id="enrich-stat"></div>
     </div>
     <div style="text-align:center;color:var(--muted);font-size:12px"><span id="marathon-txt"></span></div>
   </div>
@@ -582,8 +581,7 @@ body{
 </div><!-- /container -->
 
 <!-- Cache-bust version tags — bump these whenever questions_data.js or vocab_data.js changes -->
-<script src="questions_data.js?v=4450"></script>
-<script src="questions_enriched_data.js?v=4500m1187"></script>
+<script src="questions_data.js?v=4450m845"></script>
 <script src="vocab_data.js?v=1366"></script>
 <script>
 /* ═══════════════════════════════════════════
@@ -670,13 +668,9 @@ const E={
   updateEnrichedText(){
     const el=document.getElementById('enrich-stat');
     if(!el)return;
-    if(typeof ALL_QUESTIONS_ENRICHED==='undefined'||!ALL_QUESTIONS_ENRICHED.length){
-      el.textContent='Enriched data bulunamadi. Once scripts/build_questions_enriched.py calistirin.';
-      return;
-    }
-    const total=ALL_QUESTIONS_ENRICHED.length;
-    const media=ALL_QUESTIONS_ENRICHED.filter(q=>q.has_media).length;
-    el.textContent=`${total} enriched soru · ${media} gorselli/video`;
+    if(typeof ALL_QUESTIONS==='undefined'||!ALL_QUESTIONS.length){el.textContent='';return;}
+    const media=ALL_QUESTIONS.filter(q=>(q.media&&q.media.length)||(q.option_media&&Object.keys(q.option_media).length)).length;
+    el.textContent=`${media} resimli/videolu soru · toplam ${ALL_QUESTIONS.length} soru`;
   }
 };
 E.updateMarathonText();
@@ -714,7 +708,7 @@ let uiLang = localStorage.getItem('eh_uilang') || 'tr';
 // Dynamic labels (set by JS, not in HTML)
 const UI_DYN = {
   tr: {
-    modes: {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20',media:'Gorselli Pratik',enriched:'Enriched'},
+    modes: {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20',media:'Görselli Pratik'},
     soru: 'Soru',
     kelimeLit: 'kelime',
     grup: 'Grup',
@@ -723,7 +717,7 @@ const UI_DYN = {
     questionQ: 'Soru',
   },
   en: {
-    modes: {exam:'Exam',practice:'Practice',marathon:'Marathon',mistakes:'Mistakes',flagged:'Flagged',random:'Random 20',media:'Media Practice',enriched:'Enriched'},
+    modes: {exam:'Exam',practice:'Practice',marathon:'Marathon',mistakes:'Mistakes',flagged:'Flagged',random:'Random 20',media:'Visual Practice'},
     soru: 'Question',
     kelimeLit: 'words',
     grup: 'Group',
@@ -834,8 +828,11 @@ function renderVList(){
 }
 
 function questionSourceForMode(mode){
-  if(mode==='media'||mode==='enriched')return (typeof ALL_QUESTIONS_ENRICHED!=='undefined'?ALL_QUESTIONS_ENRICHED:[]);
   return typeof ALL_QUESTIONS!=='undefined'?ALL_QUESTIONS:[];
+}
+
+function hasMedia(q){
+  return (q.media&&q.media.length)||(q.option_media&&Object.keys(q.option_media).length);
 }
 
 function escapeHTML(s){
@@ -873,8 +870,7 @@ function startQuiz(m){
     return;
   }
   E.mode=m;E.answers={};E.ok=0;E.fail=0;E.idx=0;
-  const isEnrichedSource=(m==='media'||m==='enriched');
-  let pool=source.map((q,i)=>({...q,_oi:isEnrichedSource?'enriched:'+i:i}));
+  let pool=source.map((q,i)=>({...q,_oi:i}));
   if(E.cat!=='all')pool=pool.filter(q=>E.detectCat(q)===E.cat);
 
   // Empty-pool guard — prevents silent fail when a category has no questions
@@ -906,10 +902,10 @@ function startQuiz(m){
   }
   else if(m==='random')E.questions=shuffle([...pool]).slice(0,Math.min(20,pool.length));
   else if(m==='media'){
-    E.questions=shuffle(pool.filter(q=>q.has_media)).slice(0,Math.min(30,pool.filter(q=>q.has_media).length));
-    if(!E.questions.length){alert('Enriched gorselli soru bulunamadi. Once enriched pipeline calistirin.');return}
+    const withMedia=pool.filter(hasMedia);
+    E.questions=shuffle(withMedia).slice(0,Math.min(30,withMedia.length));
+    if(!E.questions.length){alert('Bu kategoride resimli/videolu soru bulunamadi.');return}
   }
-  else if(m==='enriched')E.questions=shuffle([...pool]).slice(0,Math.min(50,pool.length));
   else {alert('Bilinmeyen mod: '+m);return}
 
   // Final safety: if after filtering we still have zero questions, bail out
@@ -926,7 +922,7 @@ function startQuiz(m){
   document.getElementById('progress-wrap').style.display='block';
   document.getElementById('stat-tot').textContent=E.questions.length;
   document.getElementById('timer').style.display=m==='exam'?'block':'none';
-  const t=(typeof UI_DYN !== 'undefined' ? UI_DYN[uiLang].modes : {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20',media:'Gorselli Pratik',enriched:'Enriched'});
+  const t=(typeof UI_DYN !== 'undefined' ? UI_DYN[uiLang].modes : {exam:'Sinav',practice:'Pratik',marathon:'Maraton',mistakes:'Hatalar',flagged:'Isaret',random:'Rastgele 20',media:'Görselli Pratik'});
   document.getElementById('topbar-title').textContent=t[m]||'Quiz';
   renderQ();
 }
