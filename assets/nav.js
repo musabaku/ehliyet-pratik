@@ -65,5 +65,21 @@
     localStorage.setItem('eh_uilang',cur==='tr'?'en':'tr');
     applyLang();
   });
-  window.addEventListener('storage',e=>{if(e.key==='eh_uilang')applyLang();});
+  window.addEventListener('storage',e=>{if(e.key==='eh_uilang')applyLang();if(e.key==='eh_theme')applyTheme();});
+
+  // Theme picker — applies data-theme to <body>, persists eh_theme
+  function applyTheme(){
+    const t=localStorage.getItem('eh_theme')||'cream';
+    document.body.dataset.theme=t;
+    nav.querySelectorAll('.eh-nav-theme').forEach(b=>{
+      b.classList.toggle('active', b.dataset.theme===t);
+    });
+  }
+  applyTheme();
+  nav.querySelectorAll('.eh-nav-theme').forEach(b=>{
+    b.addEventListener('click',()=>{
+      localStorage.setItem('eh_theme',b.dataset.theme);
+      applyTheme();
+    });
+  });
 })();

@@ -5,14 +5,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Geri Düz Gitme (25 Metre) | Ehliyet Pratik</title>
 <style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 body{
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
-  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
-  color:#1f1b15;line-height:1.6;min-height:100vh;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
 }
 .bar{
-  background:linear-gradient(122deg,#11472d,#227245);
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
   color:#fff;padding:14px 20px;
   display:flex;align-items:center;gap:12px;flex-wrap:wrap;
   box-shadow:0 1px 3px rgba(0,0,0,.1);
@@ -22,50 +54,50 @@ body{
 .bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
 .content{
   max-width:1480px;margin:24px auto 60px;padding:24px 22px;
-  background:#fff;border-radius:12px;
-  border:1px solid #e4dac8;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
   box-shadow:0 2px 12px rgba(0,0,0,.04);
 }
-.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
-.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
-.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
-.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
 .content p{margin:10px 0}
 .content ul,.content ol{margin:10px 0 10px 24px}
 .content li{margin:4px 0}
-.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
-.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
 .content pre code{background:none;padding:0}
 .content blockquote{
-  border-left:4px solid #0a7f44;
-  background:#f0f7f2;padding:10px 16px;margin:12px 0;
-  font-style:italic;color:#1f1b15;
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
 }
 .content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
-.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
-.content th{background:#fff8ec;font-weight:600;color:#11472d}
-.content tr:nth-child(even){background:#fffcf6}
-.content a{color:#0a7f44;text-decoration:none}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
 .content a:hover{text-decoration:underline}
-.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
-.content strong{color:#11472d;font-weight:600}
-.content em{color:#1f1b15}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
 .resource-panel{
   margin-top:26px;padding:16px 18px;
-  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
 }
 .resource-panel h2{
   border-bottom:0;margin:0 0 10px;padding:0;
-  font-size:1.05rem;color:#11472d;
+  font-size:1.05rem;color:var(--brand-dark);
 }
 .resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
 .resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
 .resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
-.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
 .slide-figure{
   margin:14px 0 18px;padding:8px;
-  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
   text-align:center;
 }
 .slide-figure a{display:inline-block;line-height:0}
@@ -74,14 +106,29 @@ body{
   box-shadow:0 2px 6px rgba(0,0,0,.08);
 }
 .slide-figure figcaption{
-  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
 }
-.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
 .slide-figure-link:hover{text-decoration:underline}
 .slide-pair{margin:0 0 10px}
 .slide-pair:last-child{margin-bottom:0}
-.slide-pair-label{font-size:.72rem;font-weight:600;color:#0a7f44;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
 .slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
 .slide-section{
   display:flex;gap:10px;align-items:flex-start;margin:24px 0;
 }
@@ -129,6 +176,13 @@ body{
     </div>
   </div>
   <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Tema" data-en="Theme">Tema</div>
+    <div class="eh-nav-themes">
+      <button class="eh-nav-theme" data-theme="cream" type="button" title="Cream">🌾</button>
+      <button class="eh-nav-theme" data-theme="blue" type="button" title="Blue">🌊</button>
+      <button class="eh-nav-theme" data-theme="paper" type="button" title="Paper">📜</button>
+      <button class="eh-nav-theme" data-theme="dim" type="button" title="Dim">🌙</button>
+    </div>
     <button class="eh-nav-lang" type="button" id="eh-nav-lang-btn" title="Switch UI language">UI: TR</button>
     <div class="eh-nav-note" data-tr="Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis." data-en="Jump from any page to the main app, notes, PDF texts, and slides.">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div>
   </div>

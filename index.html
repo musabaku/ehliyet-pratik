@@ -10,26 +10,41 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
-:root{
-  --surface:#fffcf6;
-  --surface2:#fff8ec;
-  --card:#ffffff;
-  --line:#e4dac8;
-  --line2:#d4c9b3;
-  --text:#1f1b15;
-  --muted:#6f6454;
-  --muted2:#9a8e7d;
-  --brand:#0a7f44;
-  --brand2:#0b9950;
-  --brand-bg:rgba(10,127,68,.08);
-  --danger:#c8352f;
-  --danger-bg:rgba(200,53,47,.08);
-  --amber:#b58a1b;
-  --amber-bg:rgba(181,138,27,.08);
-  --shadow:0 2px 12px rgba(35,26,15,.06);
-  --shadow2:0 8px 28px rgba(35,26,15,.1);
-  --radius:14px;
-  --radius2:10px;
+:root,body[data-theme="cream"]{
+  --surface:#fffcf6;--surface2:#fff8ec;--card:#ffffff;
+  --line:#e4dac8;--line2:#d4c9b3;
+  --text:#1f1b15;--muted:#6f6454;--muted2:#9a8e7d;
+  --brand:#0a7f44;--brand2:#0b9950;--brand-bg:rgba(10,127,68,.08);
+  --brand-deep:#0f4229;--brand-mid:#1d7044;
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --danger:#c8352f;--danger-bg:rgba(200,53,47,.08);
+  --amber:#b58a1b;--amber-bg:rgba(181,138,27,.08);
+  --shadow:0 2px 12px rgba(35,26,15,.06);--shadow2:0 8px 28px rgba(35,26,15,.1);
+  --radius:14px;--radius2:10px;
+}
+body[data-theme="blue"]{
+  --surface:#f6fafe;--surface2:#eaf2fc;--card:#ffffff;
+  --line:#cad8e6;--line2:#b3c5d6;
+  --text:#13202f;--muted:#5a6b7d;--muted2:#869aae;
+  --brand:#1f7aae;--brand2:#1b88c4;--brand-bg:rgba(31,122,174,.08);
+  --brand-deep:#163d5b;--brand-mid:#2d709c;
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+}
+body[data-theme="paper"]{
+  --surface:#fdf8ed;--surface2:#f3e7c8;--card:#fdf8ed;
+  --line:#d4c5a8;--line2:#c1b08c;
+  --text:#3a2f1f;--muted:#7a6a52;--muted2:#9a8a72;
+  --brand:#9a7333;--brand2:#b08540;--brand-bg:rgba(154,115,51,.08);
+  --brand-deep:#4a3214;--brand-mid:#7a5928;
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+}
+body[data-theme="dim"]{
+  --surface:#262d34;--surface2:#2f363d;--card:#2c333a;
+  --line:#3a414a;--line2:#4a525c;
+  --text:#e6e3dc;--muted:#9aa0a6;--muted2:#7a818a;
+  --brand:#3aae6b;--brand2:#4cc079;--brand-bg:rgba(58,174,107,.12);
+  --brand-deep:#155233;--brand-mid:#2a8d56;
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
 }
 
 body{
@@ -37,8 +52,8 @@ body{
   color:var(--text);
   min-height:100vh;
   background:
-    radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),
-    radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+    radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),
+    radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
   background-attachment:fixed;
 }
 
@@ -477,8 +492,32 @@ body{
   </div>
 
   <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Tema" data-en="Theme">Tema</div>
+    <div style="display:flex;gap:6px;margin:0 0 10px">
+      <button class="theme-pick" data-theme="cream" type="button" title="Cream" style="flex:1;padding:6px 0;border-radius:8px;cursor:pointer;font-size:13px;color:#fff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08)">🌾</button>
+      <button class="theme-pick" data-theme="blue" type="button" title="Blue" style="flex:1;padding:6px 0;border-radius:8px;cursor:pointer;font-size:13px;color:#fff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08)">🌊</button>
+      <button class="theme-pick" data-theme="paper" type="button" title="Paper" style="flex:1;padding:6px 0;border-radius:8px;cursor:pointer;font-size:13px;color:#fff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08)">📜</button>
+      <button class="theme-pick" data-theme="dim" type="button" title="Dim" style="flex:1;padding:6px 0;border-radius:8px;cursor:pointer;font-size:13px;color:#fff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08)">🌙</button>
+    </div>
     <div class="eh-nav-note" data-tr="Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar." data-en="After wrong answers, topic links appear. Visual practice respects the category filter and opens 30, 100, or all media questions.">Yanlis cevaplardan sonra konu linkleri acilir. Gorselli pratik kategori filtresine gore 30, 100 veya tum medya sorularini acar.</div>
   </div>
+  <script>
+    (function(){
+      function applyTheme(){
+        const t=localStorage.getItem('eh_theme')||'cream';
+        document.body.dataset.theme=t;
+        document.querySelectorAll('.theme-pick').forEach(b=>{
+          b.style.background=b.dataset.theme===t?'rgba(255,255,255,.28)':'rgba(255,255,255,.08)';
+          b.style.borderColor=b.dataset.theme===t?'rgba(255,255,255,.5)':'rgba(255,255,255,.2)';
+        });
+      }
+      applyTheme();
+      document.querySelectorAll('.theme-pick').forEach(b=>{
+        b.addEventListener('click',()=>{localStorage.setItem('eh_theme',b.dataset.theme);applyTheme();});
+      });
+      window.addEventListener('storage',e=>{if(e.key==='eh_theme')applyTheme();});
+    })();
+  </script>
 </aside>
 <div class="eh-nav-scrim"></div>
 
