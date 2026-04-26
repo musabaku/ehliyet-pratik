@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temel Yaşam Desteği — Basic Life Support (BLS) | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 03-temel-yasam-destegi</span>
+</div>
+<div class="content">
+<h1>Temel Yaşam Desteği — Basic Life Support (BLS)</h1>
+<p><strong>Last updated:</strong> 2026-04-25<br />
+<strong>Slides covered:</strong> SLIDE 19 (solunum durması — BAK-DİNLE-HİSSET), SLIDE 20 (Suni Solunum — ağızdan ağza), SLIDE 21 (ağızdan buruna + maske ile suni solunum), SLIDE 22 (Holger-Nielsen / Sırttan Bastırma), SLIDE 23 (Silvester / Göğüsten Bastırma), SLIDE 24 (Beslenme sırasında soluk yolu tıkanması — Heimlich), SLIDE 25 (Suda Boğulma), SLIDE 26 (Kalp Durması — kalp masajı / chest compressions), SLIDE 27 (Kalp Masajı + Suni Solunum birlikte uygulanması — CPR ratios)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p><strong>Temel Yaşam Desteği (TYD)</strong> is the <strong>2nd link</strong> of the Hayat Kurtarma Zinciri (chain of survival). It's the on-scene CPR-equivalent that a lay first-aider performs to keep a victim's brain alive until 112 arrives.</p>
+<blockquote>
+<p><strong>Solunum durmasında ilk etkilenen organ BEYİNDİR.</strong> Solunum durduğunda kandaki oksijen oranı düşer ve <strong>6 dakika içinde ölüm meydana gelir.</strong><br />
+<em>(When breathing stops, the brain is the first organ affected. Blood oxygen drops and death occurs within 6 minutes.)</em></p>
+</blockquote>
+<p>This 6-minute window is why TYD must start <strong>immediately</strong> — not after the ambulance arrives.</p>
+<hr />
+<h2>2. SLIDE 19 — Solunum Durmasını Tanıma (BAK-DİNLE-HİSSET)</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>Solunum durmasında ilk etkilenen organ beyindir.</strong> Solunum durduğunda kandaki oksijen oranı düşer ve <strong>6 dakika içinde ölüm meydana gelir.</strong></p>
+<p><strong>Solunum durmasını tanıma:</strong><br />
+- Yaralının karın ve göğüs hareketi incelenir. <strong>(BAK)</strong><br />
+- İlk yardımcı, kulağını kazazedenin ağzına ve burnuna yaklaştırarak soluk sesini dinler. <strong>(DİNLE)</strong><br />
+- Elin üzeri veya işaret parmağı yaralının ağız ve burnuna yaklaştırılır, ısınmış havanın gelip gelmediğine bakılır. <strong>(HİSSET)</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>The <strong>3-step "Look-Listen-Feel" maneuver</strong> to confirm a person is or isn't breathing — universal first-aid technique. Takes ~10 seconds.</p>
+<table>
+<thead>
+<tr>
+<th>Adım</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What you actually do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>BAK</strong></td>
+<td>Look</td>
+<td>Watch the victim's <strong>karın (belly) and göğüs (chest)</strong> — is it rising and falling?</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>DİNLE</strong></td>
+<td>Listen</td>
+<td>Put your <strong>ear close to their mouth and nose</strong> — can you hear breath sounds?</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>HİSSET</strong></td>
+<td>Feel</td>
+<td>Hold the <strong>back of your hand or your index finger</strong> near their mouth/nose — can you feel <strong>warm air</strong> moving?</td>
+</tr>
+</tbody>
+</table>
+<p><strong>If all three are NEGATIVE</strong> → solunum durmuş (breathing has stopped) → start suni solunum <strong>immediately</strong>.</p>
+<h4>The 6-minute rule (memorize as a number)</h4>
+<ul>
+<li><strong>0–4 minutes</strong> without oxygen: brain damage starts.</li>
+<li><strong>4–6 minutes</strong>: irreversible brain damage.</li>
+<li><strong>After 6 minutes</strong>: ölüm (death).</li>
+</ul>
+<p>This is why <strong>the brain (beyin)</strong> is the answer to the question "solunum durduğunda ilk etkilenen organ hangisidir?" — not the heart, not the lungs.</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>"Solunum durmasında ilk etkilenen organ?"</strong> → <strong>BEYİN.</strong> Always.</li>
+<li><strong>6 dakika içinde ölüm.</strong> Memorize the number — exam asks "kaç dakika?".</li>
+<li><strong>BAK – DİNLE – HİSSET</strong> in this exact order (B-D-H mnemonic).</li>
+<li>A trap option: "kalp ilk etkilenir" → wrong. Heart fails <em>because of</em> brain failure that started from oxygen lack; the FIRST affected organ is brain.</li>
+</ul>
+<hr />
+<h2>3. SLIDE 20 — Suni Solunum (Ağızdan Ağıza Yöntemi)</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>SUNI SOLUNUM</strong></p>
+<p><strong>Kalbi çalıştığı halde solunumu durmuş olan hastaya, hasta kendi kendine soluyuncaya kadar suni solunum yapılmalıdır.</strong> Suni solunum sonucu tekrar solumaya başlayan kişiye <strong>yan yatış pozisyonu</strong> verilir. Suni solunum yöntemi yaralının durumuna göre seçilir.</p>
+<p><strong>Ağızdan ağıza suni solunum:</strong><br />
+En <strong>etkili</strong> solunum yöntemidir. Yaralı <strong>sırt üstü</strong> yatırılır, ilk yardımcı yaralının yan tarafına geçer, ağız boşluğu kontrol edilerek varsa <strong>takma dişler veya diğer yabancı cisimler çıkarılır</strong>. İlk yardımcı bir eliyle yaralının <strong>ensesinin altından tutar</strong>, diğer eliyle <strong>alnından bastırarak başı geriye doğru getirir</strong>. Alından bastıran elin <strong>baş ve işaret parmakları</strong> yaralının <strong>burnunu kapatır</strong>. İlk yardımcı <strong>derin bir nefes alarak</strong> yaralının ağzından üfler ve <strong>göğsün kabarmasını kontrol eder</strong>. İlk yardımcı isterse yaralının ağzına <strong>gazlı bez veya mendil</strong> koyabilir. Ağız yaralıdan çekilince göğüs aşağı doğru iner; bu işlem yetişkin bir kişide <strong>dakikada 15–20 kez</strong> olmak üzere kendiliğinden soluncaya kadar tekrarlanmalıdır. Ancak ilk <strong>5 soluk</strong> verildiğinde göğüs kabarmıyorsa ağız boşluğu tekrar kontrol edilmeli veya suni solunum yöntemi değiştirilmelidir.</p>
+<p>Bu yöntem <strong>ağızdan kan gelmiyorsa, çene kemiği kırık değilse</strong> uygulanabilir. <strong>Bebeklerde</strong> suni solunum <strong>ağız ve burundan birlikte</strong>, <strong>az hava, sık aralıklarla</strong> verilmelidir.</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>When to do suni solunum</h4>
+<ul>
+<li><strong>Heart beating BUT breathing stopped</strong> → suni solunum only.</li>
+<li>(If heart has also stopped → kalp masajı + suni solunum together = full CPR, covered next slide.)</li>
+<li>After breathing returns → <strong>yan yatış pozisyonu</strong> (recovery position) so the tongue/vomit doesn't block the airway.</li>
+</ul>
+<h4>Mouth-to-mouth procedure (the slide's standard method — <strong>most effective</strong>)</h4>
+<ol>
+<li><strong>Position the victim:</strong> sırt üstü (on the back), flat surface.</li>
+<li><strong>First-aider position:</strong> stand/kneel on the <strong>side</strong> of the victim.</li>
+<li><strong>Clear the mouth:</strong> check ağız boşluğu, remove <strong>takma dişler (dentures)</strong> or any <strong>yabancı cisim (foreign object)</strong>.</li>
+<li><strong>Open the airway (head-tilt chin-lift):</strong></li>
+<li>One hand under the <strong>ense (back of neck)</strong>.</li>
+<li>Other hand on the <strong>alın (forehead)</strong> pressing down.</li>
+<li>This tips the head BACK so the tongue doesn't block the throat.</li>
+<li><strong>Pinch the nose closed:</strong> with the <strong>thumb and index finger</strong> of the hand on the forehead.</li>
+<li><strong>Take a deep breath, seal mouth-to-mouth, blow.</strong></li>
+<li><strong>Watch the chest rise (göğüs kabarması)</strong> — confirms air went in.</li>
+<li><strong>Release</strong> — chest falls naturally.</li>
+<li><strong>Optional barrier:</strong> gazlı bez or mendil over the victim's mouth (hygiene).</li>
+<li><strong>Repeat at 15–20 times per minute</strong> for an adult, until they breathe on their own.</li>
+</ol>
+<h4>When to STOP and reassess</h4>
+<ul>
+<li>After <strong>5 breaths</strong>, if <strong>göğüs kabarmıyor (chest isn't rising)</strong> → airway still blocked, OR wrong technique → re-check the mouth, or switch suni solunum method.</li>
+</ul>
+<h4>Contraindications — when ağızdan ağıza is NOT used</h4>
+<ul>
+<li><strong>Ağızdan kan geliyorsa</strong> (blood coming from mouth)</li>
+<li><strong>Çene kemiği kırıksa</strong> (jaw broken)<br />
+→ Use <strong>ağızdan burna (mouth-to-nose)</strong> instead.</li>
+</ul>
+<h4>Bebeklerde (in infants) — different rules</h4>
+<ul>
+<li><strong>Ağız ve burundan birlikte</strong> üflenir (cover both mouth and nose with your mouth).</li>
+<li><strong>Az hava</strong> (small breaths — infant lungs are tiny).</li>
+<li><strong>Sık aralıklarla</strong> (more frequently — higher rate than adults).</li>
+</ul>
+<h3>Critical exam fact (this slide is heavily tested)</h3>
+<ul>
+<li><strong>Yetişkinde dakikada 15–20 kez.</strong> A trap option will say "30 kez" or "60 kez" — wrong.</li>
+<li><strong>Yan yatış pozisyonu</strong> = position given AFTER suni solunum succeeds. Don't confuse with "sırt üstü" which is the position DURING suni solunum.</li>
+<li><strong>Baş geriye doğru</strong> (head tilted back) — opens the airway. A trap option says "baş öne eğilir" → wrong; that closes the airway.</li>
+<li><strong>Burun kapatılır</strong> by the <strong>same hand that's pressing the alın</strong> (using thumb + index).</li>
+<li><strong>Göğsün kabarmasını kontrol etmek</strong> = the success indicator. If chest doesn't rise → airway blocked.</li>
+<li><strong>Ağzından kan geliyorsa veya çene kemiği kırıksa → ağızdan ağıza YAPILMAZ.</strong> Switch to ağızdan burna.</li>
+<li><strong>Bebek = az hava, sık aralık, ağız+burun birlikte.</strong> Three rules in one trap.</li>
+</ul>
+<hr />
+<h2>3B. SLIDE 21 — Ağızdan Buruna + Maske ile Suni Solunum</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>Ağızdan buruna suni solunum:</strong><br />
+Yaralı ağızdan ağza yönteminde olduğu gibi yatırılır. İlkyardımcının eli bu kez <strong>ensenin altında değil yaralının çenesinin altındadır.</strong> Çeneyi yukarı iterken <strong>baş parmak ağzı kapatır.</strong> Burun deliklerinin yukarı gelmesi sağlanarak ilkyardımcı buradan soluğunu üfler. Diğer aşamalar ağızdan ağza olduğu gibidir.</p>
+<p><strong>Maske ile suni solunum:</strong><br />
+İlkyardım çantasında bulunması yararlı malzemelerden birisi de <strong>solunum maskesidir</strong>. Özellikle <strong>bebeklerde</strong> suni solunum hem ağızdan hem burundan aynı anda <strong>az fakat sık hava</strong> üfleyerek yapılacağından maske uygun bir malzemedir. <strong>Az havanın ölçütü ilkyardımcının yanaklarını şişirecek kadar hava</strong> ile doldurarak bebeğe üflemesidir.</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Ağızdan buruna (mouth-to-nose) — when ağızdan ağıza fails</h4>
+<p>Used when <strong>mouth is unusable</strong> — bleeding from mouth, broken jaw, locked teeth, or vomit/foreign matter that can't be cleared.</p>
+<p><strong>Hand position differs from mouth-to-mouth:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Hand 1 (lower)</th>
+<th>Hand 2 (upper)</th>
+<th>Mouth/nose seal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ağızdan ağıza</td>
+<td>under the <strong>ense</strong> (back of neck)</td>
+<td>on the <strong>alın</strong> (forehead), thumb+index pinch the <strong>nose</strong> closed</td>
+<td>rescuer seals MOUTH; victim's nose is pinched.</td>
+</tr>
+<tr>
+<td>Ağızdan buruna</td>
+<td>under the <strong>çene</strong> (under the chin), pushing the <strong>jaw UPWARD</strong></td>
+<td>the rescuer's <strong>thumb closes the victim's MOUTH</strong> while the chin is pushed up</td>
+<td>rescuer seals NOSE; victim's mouth is held closed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps:</strong><br />
+1. Same supine position as ağızdan ağza.<br />
+2. One hand goes under the <strong>chin (çene)</strong>, NOT under the neck — and pushes the jaw upward to seal the mouth shut.<br />
+3. The <strong>thumb</strong> of that hand also presses to keep the mouth closed.<br />
+4. Make sure nostrils are facing up.<br />
+5. Rescuer takes a deep breath, <strong>seals their mouth around the victim's nose</strong>, and blows.<br />
+6. Watch the chest rise — same success indicator.<br />
+7. Everything else (rate, etc.) is the same as ağızdan ağza.</p>
+<h4>Maske ile suni solunum (mask-assisted)</h4>
+<p><strong>Solunum maskesi</strong> = a useful add-on to the first aid kit. (Not legally required, but recommended.)</p>
+<p><strong>Two reasons to use it:</strong><br />
+1. <strong>Hygiene</strong> — barrier between rescuer and victim.<br />
+2. <strong>Bebeklerde (in infants)</strong> — the mask covers <strong>mouth + nose simultaneously</strong>, perfectly matching the infant suni solunum technique (ağız+burun birlikte, az hava, sık aralık).</p>
+<p><strong>The "az hava" measurement (very testable):</strong></p>
+<blockquote>
+<p>"Az havanın ölçütü, <strong>ilkyardımcının yanaklarını şişirecek kadar hava</strong> ile doldurarak bebeğe üflemesidir."</p>
+</blockquote>
+<p>→ Don't take a deep chest breath for an infant. Instead, <strong>fill only your cheeks</strong> with air (puff your cheeks) — that's the right volume for a baby's lungs. A full adult breath would over-inflate and damage infant lungs.</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Ağızdan buruna kullanılır:</strong> ağızdan kan geliyorsa, çene kemiği kırıksa, ağız bir nedenle kullanılamıyorsa.</li>
+<li><strong>Ağızdan buruna'da el konumu:</strong> <strong>çenenin altında</strong> (NOT ensenin altında — that's mouth-to-mouth). Trap question.</li>
+<li><strong>Bebek suni solunumu için en uygun yöntem = MASKE ile</strong>, çünkü ağız+burun aynı anda kapatılır.</li>
+<li><strong>"Az hava" = yanakları şişirecek kadar hava.</strong> Stock exam answer.</li>
+<li>All three methods (ağızdan ağıza / ağızdan buruna / maske) → adult rate <strong>15–20/dk</strong>, infant rate <strong>higher with smaller breaths</strong>.</li>
+</ul>
+<hr />
+<h2>3C. SLIDE 22 — Holger-Nielsen (Sırttan Bastırma) Yöntemi</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>Holger-Nielsen (Sırttan Bastırma):</strong></p>
+<p><strong>Ağızdan ve burundan kan geliyorsa, yüzde büyük yaralanma var ise</strong> ağızdan ve burundan suni solunum yapılamayacağı için <strong>holger-nielsen</strong> yöntemi uygulanır.</p>
+<p><strong>Bu yöntem göğüs ve omurga yaralanmalarında uygulanmaz.</strong></p>
+<p>Yaralı <strong>yüzüstü</strong> yatırılarak <strong>başı yana çevrilir</strong>, kolları dirsekten bükülerek başın altına konur. İlkyardımcı yaralının baş ucunda <strong>bir diz kalkık, diğer diz yerde</strong> olacak şekilde durur. İlkyardımcının iki el <strong>baş parmağını omurgayı bulacak şekilde</strong>, diğer parmaklarını <strong>kürek kemiğinin üzerine yerleştirir</strong> ve basınç uygular. Böylece <strong>kirli hava dışarı atılır</strong>. Sonra ellerini kaydırarak <strong>dirseklerinden esnetir</strong> ve hava girmesini sağlamış olur. <strong>Çocuklarda kollar yanda olmalıdır.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>When to use Holger-Nielsen</h4>
+<p>This is the <strong>last-resort</strong> suni solunum method, used <strong>only</strong> when:<br />
+- <strong>Ağızdan ve burundan kan geliyor</strong> (bleeding from both mouth and nose), OR<br />
+- <strong>Yüzde büyük yaralanma</strong> (major facial injury)</p>
+<p>→ i.e. you can't use ağızdan ağıza, ağızdan buruna, OR maske, because the face/airway openings are unusable.</p>
+<h4>Critical contraindication (the exam loves this)</h4>
+<blockquote>
+<p><strong>Bu yöntem göğüs ve omurga yaralanmalarında UYGULANMAZ.</strong></p>
+</blockquote>
+<p>Pressing on the back would worsen a chest or spinal injury. So:<br />
+- Chest trauma → no Holger-Nielsen.<br />
+- Spinal/back trauma → no Holger-Nielsen.</p>
+<h4>Procedure (5-step diagram on the slide)</h4>
+<table>
+<thead>
+<tr>
+<th>Adım</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Yaralı <strong>yüzüstü (face down / prone)</strong> yatırılır, <strong>başı yana</strong> çevrilir.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Kollar dirsekten bükülerek başın altına</strong> konur (forms a pillow).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>İlkyardımcı <strong>baş ucunda</strong>, <strong>bir diz kalkık + diğer diz yerde</strong> durur.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>İki elin baş parmakları omurgayı bulur</strong>, diğer parmaklar <strong>kürek kemiklerine</strong> yerleşir → aşağı ve öne <strong>bastırır</strong> → <strong>kirli hava dışarı çıkar</strong> (expiration).</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Eller dirseklere kaydırılır, <strong>dirseklerden esnetilerek yukarı kaldırılır</strong> → <strong>hava içeri girer</strong> (inspiration).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Children:</strong> kolları yanda olmalı, başın altında değil.</p>
+<h4>Why this works (the principle)</h4>
+<p>Pressing down on the back compresses the rib cage → forces stale air out (expiration). Lifting the elbows expands the chest → fresh air rushes in (inspiration). It's a manual chest-pump for cases where you can't blow into the lungs.</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Holger-Nielsen kullanım nedeni:</strong> ağızdan + burundan kan veya <strong>yüzde büyük yaralanma</strong>.</li>
+<li><strong>Kontrendikasyon (asla uygulanmaz):</strong> <strong>göğüs ve omurga yaralanmaları</strong>. Trap option says "every patient" → wrong.</li>
+<li><strong>Pozisyon:</strong> YÜZÜSTÜ (prone), başı yana.</li>
+<li><strong>İlk yardımcının duruşu:</strong> baş ucunda, <strong>bir diz kalkık, bir diz yerde</strong>.</li>
+<li><strong>Eller:</strong> baş parmaklar <strong>omurgada</strong>, diğer parmaklar <strong>kürek kemiklerinde</strong>.</li>
+<li><strong>Çocukta:</strong> kolları <strong>yanda</strong>, başın altında değil.</li>
+<li>The Turkish name "Sırttan Bastırma" literally means "back pressing" — the second name is the trick word; remember both. Some questions use <strong>Holger-Nielsen</strong>, others use <strong>sırttan bastırma</strong>.</li>
+</ul>
+<hr />
+<h2>3D. SLIDE 23 — Silvester Yöntemi (Göğüsten Bastırma)</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>Silvester Yöntemi; Göğüsten Bastırma:</strong></p>
+<p><strong>Ağız ve burunda kanama varsa tercih edilmesi gereken yöntemlerden biridir.</strong> Yaralı <strong>sırtüstü</strong> yatırılır, <strong>omzunun altı desteklenerek baş yana çevrilirken biraz geriye doğru çekilir.</strong> İlkyardımcı yaralının baş ucunda <strong>diz çöker</strong>, yaralının <strong>dirseklerinden tutarak kolları yukarı ve kendine doğru çeker</strong> (= akciğer genişler, hava içeri girer). Sonra <strong>dirsekleri yere doğru bastırarak</strong> akciğerin genişlemesini sağlar (akciğer boşalır, hava dışarı çıkar). <strong>Son hareket</strong> ise yaralının <strong>kolları ile kendi göğsüne baskı yaptırmaktır.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>When to use Silvester</h4>
+<p>Like Holger-Nielsen, Silvester is for when <strong>ağız ve burunda kanama</strong> prevents direct breathing methods. Both Silvester and Holger-Nielsen are alternative manual methods — they differ in <strong>patient position</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Pozisyon</th>
+<th>Use when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Holger-Nielsen</strong> (Sırttan Bastırma)</td>
+<td><strong>Yüzüstü</strong> (face down)</td>
+<td>Bleeding from face/nose AND back is intact</td>
+</tr>
+<tr>
+<td><strong>Silvester</strong> (Göğüsten Bastırma)</td>
+<td><strong>Sırtüstü</strong> (face up)</td>
+<td>Bleeding from mouth/nose, but you can keep the patient on their back</td>
+</tr>
+</tbody>
+</table>
+<h4>Procedure</h4>
+<ol>
+<li><strong>Sırtüstü</strong> (supine) — patient on the back.</li>
+<li><strong>Omzunun altı desteklenir</strong> (a support under the shoulders) → baş yana çevrilir + biraz geriye → opens the airway and lets blood drain to the side.</li>
+<li>İlkyardımcı yaralının <strong>baş ucunda diz çöker</strong> (kneels at the head).</li>
+<li><strong>Inspirasyon (hava giriş):</strong> dirseklerden tutar → <strong>kolları yukarı ve kendine doğru çeker</strong> → göğüs kafesi genişler → hava içeri girer.</li>
+<li><strong>Ekspirasyon (hava çıkış):</strong> <strong>dirsekleri yere doğru bastırır</strong> → kolları yaralının göğsüne bastırır → göğüs kafesi sıkışır → hava dışarı çıkar.</li>
+<li><strong>Son hareket:</strong> yaralının <strong>kollarıyla kendi göğsüne baskı yaptırır</strong> (extra compression to push air out completely).</li>
+</ol>
+<p>This is essentially a manual bellows pump using the patient's own arms as levers.</p>
+<h4>Important nuance — same caveat as Holger-Nielsen</h4>
+<p>While the slide doesn't restate it, <strong>göğüs ve omurga yaralanmalarında</strong> Silvester de uygulanmaz — pressing the chest worsens chest trauma. Use suni solunum maskesi or wait for 112 instead.</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Silvester = Göğüsten Bastırma</strong> — two-name pair, same trick as Holger-Nielsen.</li>
+<li><strong>Silvester pozisyonu = SIRTÜSTÜ</strong> (NOT yüzüstü — that's Holger-Nielsen).</li>
+<li><strong>Holger-Nielsen pozisyonu = YÜZÜSTÜ.</strong> A common trap: question gives "yüzüstü" then asks the method name → answer is Holger-Nielsen, not Silvester.</li>
+<li><strong>Endikasyon:</strong> ağız ve burunda kanama → ağızdan ağıza/buruna yapılamadığında manuel yöntem gerekir.</li>
+<li><strong>Hareket sırası:</strong> Kollar yukarı + kendine = hava içeri (genişleme). Kollar göğse bastırır = hava dışarı (boşalma).</li>
+<li>Memory hook: <strong>S</strong>ilvester = <strong>S</strong>ırtüstü. <strong>H</strong>olger = ya<strong>H</strong>üzüstü (yüzüstü). Different first letters → different positions.</li>
+</ul>
+<hr />
+<h2>3E. SLIDE 24 — Beslenme Sırasında Soluk Yolunun Tıkanması (Heimlich)</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>BESLENME SIRASINDA SOLUK YOLUNUN TIKANMASI</strong></p>
+<ul>
+<li><strong>Çocuk ise;</strong> yüzü yere doğru gelecek şekilde <strong>dizin veya kolun üzerine yatırarak 2 kürek kemiğinin ortasına 4 kez vurulur.</strong></li>
+<li><strong>Elin ayası göbek çukurunun 3 parmak üstüne konur ve 5–6 kez ani basınç yapılır.</strong> (Heimlich maneuver — yetişkinde)</li>
+<li>Solunum yolu tıkanan kişi <strong>yan yatırılarak</strong> yine <strong>iki kürek kemiği ortasına 4 kez vurulur.</strong></li>
+<li>Çocuk ise <strong>ayak bileklerinden sarkıtılarak</strong> yine sırtına vurulur.</li>
+<li><strong>Öksürtülür.</strong></li>
+<li><strong>Görünüyorsa ağzından parmakla alınır.</strong></li>
+</ul>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>When a piece of food (or any object) blocks the airway, the victim cannot breathe — death within minutes if not cleared. The slide gives the <strong>standard sequence</strong>, with technique split by <strong>adult vs. child</strong>.</p>
+<h4>Technique 1 — Heimlich (göbek çukuru basıncı) — for adults</h4>
+<ul>
+<li>Stand behind the conscious victim.</li>
+<li>Make a fist; place the <strong>palm side (elin ayası)</strong> <strong>3 finger-widths above the navel (göbek çukurunun 3 parmak üstüne)</strong>.</li>
+<li>Cover the fist with your other hand.</li>
+<li>Pull <strong>inward and upward</strong> with <strong>5–6 sharp, sudden compressions (ani basınç)</strong>.</li>
+</ul>
+<h4>Technique 2 — Sırta Vuruş (back blows)</h4>
+<p><strong>Adult (or unconscious):</strong><br />
+- Lay the person on their <strong>side</strong> (yan yatır).<br />
+- Strike the <strong>midpoint between the shoulder blades (iki kürek kemiği ortası)</strong> <strong>4 times</strong> with the heel of your hand.</p>
+<p><strong>Child:</strong><br />
+- Drape the child <strong>face down</strong> across your knee or arm (yüzü yere doğru, dizin veya kolun üzerine).<br />
+- Strike the same spot — <strong>2 kürek kemiği ortası, 4 kez</strong> — sharp and downward.</p>
+<h4>Technique 3 — Bebek/Çocuk için ek yöntem (extreme cases)</h4>
+<ul>
+<li>Hold the child by the <strong>ayak bileklerinden (ankles)</strong> so they hang upside down.</li>
+<li>Then strike the back. Gravity helps dislodge the object.</li>
+</ul>
+<h4>Final steps (in order)</h4>
+<ol>
+<li><strong>Öksürtülür.</strong> Encourage <strong>coughing</strong> — the body's own clearing reflex is the most effective if the victim can still cough.</li>
+<li><strong>Görünüyorsa ağzından parmakla alınır.</strong> If you can SEE the object in the mouth, scoop it out with a finger. <strong>Don't blind-finger-sweep</strong> — you may push it deeper.</li>
+</ol>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Heimlich pozisyonu:</strong> elin ayası → <strong>göbek çukurunun 3 parmak ÜSTÜ</strong> (above the navel). Trap option says "below" → wrong.</li>
+<li><strong>Heimlich sayısı:</strong> <strong>5–6 kez ani basınç</strong>.</li>
+<li><strong>Sırta vuruş yeri:</strong> <strong>iki kürek kemiğinin ortası</strong>, <strong>4 kez</strong>.</li>
+<li><strong>Çocukta pozisyon:</strong> <strong>yüzü yere doğru</strong>, dizin veya kolun üzerine. (NOT face up.)</li>
+<li><strong>Görünmeyen cisim → parmakla alınmaz!</strong> Only <strong>görünüyorsa</strong> finger-sweep is allowed.</li>
+<li>The exam often combines this with the <strong>öksürme (coughing)</strong> rule — if the person is coughing forcefully, <strong>let them cough first</strong>; intervene only when coughing is ineffective.</li>
+</ul>
+<hr />
+<h2>3F. SLIDE 25 — Suda Boğulma (Drowning Rescue)</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>SUDA BOĞULMA</strong></p>
+<p>Sudan kurtarmanın temel kuralı: <strong>"At (Simit gibi), Çek (Ağaç dalı gibi), işe yaramazsa, yüzerek git."</strong> Arkadan ve yandan yaklaşarak <strong>koltuk altından tutarak sırtını omzunuzun üzerine getirin</strong> böylece <strong>baş yukarıda kalacaktır</strong>. <strong>Sırtüstü veya yan yüzerek</strong> kişiyi karaya çıkarınız.</p>
+<p>Hemen <strong>sırt üstü yatırarak başını yan çevirip</strong> bu arada diğer bir kişi <strong>bacaklarından yukarı kaldırarak suyun boşalması sağlanır</strong> veya boğulanın <strong>karnından iki elle tutularak bel yukarı doğru kaldırılır.</strong> <strong>Vücut ters V şeklinde olmalıdır.</strong> Bu pozisyonda su boşalacaktır. <strong>Çocuk ise ayak bileklerinden tutularak yukarıya kaldırılır.</strong> Su bir miktar boşaldıktan sonra ağızdan <strong>takma diş veya başka yabancı cisim varsa çıkarılır.</strong> <strong>Ağızdan ağza suni solunum yapılır</strong> ve her defasında <strong>baş yana çevrilerek</strong> varsa suyun çıkması sağlanır. Ancak bu işlem <strong>5–6 kez yapılmalıdır.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Rescue order (memorize as 3 rules + escalation)</h4>
+<blockquote>
+<p><strong>AT → ÇEK → YÜZEREK GİT</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Method</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>AT (throw)</strong></td>
+<td>Throw a flotation aid — <strong>simit gibi</strong> (like a life ring). Safest for the rescuer.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ÇEK (reach/pull)</strong></td>
+<td>Reach with a long object — <strong>ağaç dalı gibi</strong> (like a tree branch / stick) — and pull them in.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>YÜZEREK GİT (swim to them)</strong></td>
+<td>Last resort — only if AT and ÇEK fail. Risky for the rescuer (drowning victims grab and pull rescuers under).</td>
+</tr>
+</tbody>
+</table>
+<p>This priority is <strong>lifeguard 101</strong> — protect yourself first, intervene with distance, swim only as last resort.</p>
+<h4>How to approach when you must swim</h4>
+<ul>
+<li><strong>Approach from behind and from the side</strong> (arkadan ve yandan), never face-on (they'll grab you).</li>
+<li>Grab under the <strong>armpit (koltuk altından)</strong> and bring their <strong>back onto your shoulder</strong> so their <strong>head stays above water (baş yukarıda)</strong>.</li>
+<li>Swim back <strong>on your back (sırtüstü) or on your side (yan)</strong> towards shore.</li>
+</ul>
+<h4>Once on shore — clear the lungs</h4>
+<ol>
+<li>Lay the victim <strong>sırt üstü, başı yana</strong> (supine, head turned to the side).</li>
+<li><strong>Drain water from the lungs</strong> — two options:</li>
+<li>Another person <strong>lifts the legs up</strong> (bacaklarından yukarı) so the body forms a <strong>TERS V (inverted V)</strong> — water drains by gravity.</li>
+<li>OR grasp the <strong>belly with both hands</strong> and <strong>lift the waist up</strong> to make the inverted V.</li>
+<li><strong>For a child:</strong> simply <strong>hold by the ankles and lift up</strong> — the small body inverts easily.</li>
+<li>Remove <strong>takma diş</strong> or <strong>yabancı cisim</strong> if present from the mouth.</li>
+<li><strong>Ağızdan ağıza suni solunum</strong> — give rescue breaths.</li>
+<li><strong>After each breath, turn the head sideways</strong> so any water that comes up can drain out.</li>
+<li>Repeat <strong>5–6 kez</strong> before reassessing.</li>
+</ol>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Sudan kurtarmanın 3 kuralı sırasıyla:</strong> <strong>AT → ÇEK → YÜZEREK GİT</strong>. Memorize the exact order. A trap option puts "yüzerek git" first → wrong.</li>
+<li><strong>AT = simit, ÇEK = ağaç dalı.</strong> These two analogies are stock answers.</li>
+<li><strong>Yaklaşma yönü:</strong> <strong>arkadan ve yandan</strong>, koltuk altından tutarak. Never approach from the front.</li>
+<li><strong>Vücut pozisyonu suyu boşaltırken:</strong> <strong>TERS V şeklinde</strong> (inverted V).</li>
+<li><strong>Çocukta:</strong> ayak bileklerinden yukarı kaldırılır.</li>
+<li><strong>Suni solunum tekrarı:</strong> <strong>5–6 kez</strong>, her seferde <strong>baş yana çevrilir</strong> (suyun çıkması için).</li>
+</ul>
+<hr />
+<h2>3G. SLIDE 26 — Kalp Durması (Kalp Masajı / Chest Compressions)</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>KALP DURMASI:</strong></p>
+<p>Kalbi en çok <strong>5 dk önce durmuş</strong> olanlara kalp masajı yapılır. <strong>Çalışan kalbe asla masaj yapılmamalıdır.</strong> Kalp masajı ile <strong>organlara kan gitmesi</strong> sağlanmış olur.</p>
+<p><strong>Nabız;</strong> şakaktan, boyundan, koldan, bilekten, kasıktan alınabilir (<strong>en kolay nabız boyun atardamarlarından alınır</strong>).</p>
+<p><strong>Yetişkinlerde;</strong> kazazede <strong>sert bir zemine sırtüstü</strong> yatırılır, ilkyardımcı kazazedenin <strong>yan tarafında diz çöker</strong>, kalp masajının yapılacağı yer belirlenir, kalp masajı önde <strong>kaburgaların birleştiği göğüs kemiğinin 1/3 alt kısmına</strong> uygulanır. İlkyardımcı belirlenen yerden elini <strong>yumruk yaparak önce şoklar (precordial thump)</strong>, şok ile çalışmamışsa; <strong>bir elinin ayasını göğüs kemiğinin 1/3 alt kısmına, diğer elini de öbür elinin üzerine koyar</strong>. <strong>Parmaklar vücuda değmemeli</strong>, basınç <strong>ellerin ayası</strong> ile yapılmalıdır. Ellerin ayaları ile <strong>4–5 cm esnetecek kadar</strong> basınç yapılmalıdır. Sonra basınç kaldırılır. Bu işlem <strong>1 dakikada 80–100 kez</strong> tekrarlanır. <strong>1 dk aralıklarla en fazla 10 saniye süren kontroller</strong> yapılır. Kalp çalışmış ise masaja son verilir.</p>
+<p><strong>Çocuklarda;</strong> daha az basınçla ya <strong>tek el ayası veya parmak uçları</strong> ile <strong>dakikada 80–100 kez</strong> yapılır. <strong>Bebeklerde baş parmakla aynı noktaya 100 kez az basınçla</strong> uygulanır.</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>When to do kalp masajı (chest compressions)</h4>
+<ul>
+<li>Apply ONLY when the heart has stopped within the last <strong>5 minutes</strong>. Beyond that window, brain death has likely set in.</li>
+<li><strong>NEVER massage a beating heart.</strong> This is a hard rule — pressing a working heart can throw it into a fatal arrhythmia. So you MUST verify there's no pulse before starting.</li>
+</ul>
+<h4>What kalp masajı actually does</h4>
+<p>Manual compression of the chest squeezes the heart between the sternum and spine, mechanically pushing blood out → <strong>kan organlara gider</strong> (blood reaches the organs, especially the brain). It buys time until the heart restarts or 112 arrives with a defibrillator.</p>
+<h4>Nabız (pulse) — where to check</h4>
+<p>The slide lists <strong>5 pulse points</strong> in order:<br />
+1. <strong>Şakak</strong> — temple<br />
+2. <strong>Boyun</strong> — neck (carotid)<br />
+3. <strong>Kol</strong> — arm (brachial)<br />
+4. <strong>Bilek</strong> — wrist (radial)<br />
+5. <strong>Kasık</strong> — groin (femoral)</p>
+<blockquote>
+<p><strong>En kolay alınan nabız → BOYUN ATARDAMARLARI</strong> (carotid artery). This is the standard exam answer.</p>
+</blockquote>
+<h4>Yetişkinde kalp masajı — full procedure</h4>
+<table>
+<thead>
+<tr>
+<th>Adım</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Kazazede <strong>sert bir zemine</strong> (hard surface — NOT a bed) <strong>sırtüstü</strong> yatırılır.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>İlkyardımcı kazazedenin <strong>yan tarafına</strong> geçer, <strong>diz çöker</strong>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Bası noktası belirlenir → <strong>kaburgaların birleştiği göğüs kemiğinin (sternum) 1/3 ALT kısmı</strong> (lower third of breastbone).</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Önce yumruk yapıp şok</strong> (precordial thump — single hard punch to restart the heart).</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Şok işe yaramazsa: <strong>bir elin ayası</strong> sternumun 1/3 alt kısmına, <strong>diğer el üstüne</strong>.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Parmaklar göğse değmez</strong> — only the heel of the palm presses.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>4–5 cm esnetecek kadar</strong> bastır → bırak → bastır → bırak.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Hız: <strong>dakikada 80–100 kez</strong>.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Her <strong>1 dakikada bir</strong>, en fazla <strong>10 saniye</strong> kontrol — kalp çalıştı mı?</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Kalp çalıştıysa <strong>masaja son ver</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h4>Çocuk (child) farkları</h4>
+<ul>
+<li><strong>Daha az basınç.</strong></li>
+<li><strong>Tek el ayası</strong> VEYA <strong>parmak uçları</strong>.</li>
+<li>Hız aynı: <strong>dakikada 80–100 kez</strong>.</li>
+</ul>
+<h4>Bebek (infant) farkları</h4>
+<ul>
+<li><strong>Sadece baş parmak (thumb)</strong> ile aynı noktaya bastırılır.</li>
+<li><strong>100 kez</strong> dakikada.</li>
+<li><strong>Az basınç</strong> — bebek göğsü çok hassas.</li>
+</ul>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>"Kalp masajı kaç dk önce durmuş kalbe yapılır?"</strong> → <strong>5 dakika.</strong></li>
+<li><strong>"Çalışan kalbe masaj yapılır mı?"</strong> → <strong>ASLA YAPILMAZ.</strong> Trap option.</li>
+<li><strong>"Kalp masajının amacı?"</strong> → <strong>Organlara kan gitmesini sağlamak</strong> (NOT "kalbi yeniden çalıştırmak" — that's a side effect, not the primary purpose; pumping circulation is).</li>
+<li><strong>"En kolay nabız nereden alınır?"</strong> → <strong>BOYUN ATARDAMARLARI</strong> (carotid).</li>
+<li><strong>"Kalp masajı yeri?"</strong> → <strong>Göğüs kemiğinin 1/3 ALT kısmı</strong> (NOT üst, NOT orta — trap options).</li>
+<li><strong>"Basınç kaç cm?"</strong> → <strong>4–5 cm</strong>.</li>
+<li><strong>"Dakikada kaç kez?"</strong> → <strong>80–100 kez</strong> (yetişkin ve çocuk aynı).</li>
+<li><strong>"Bebekte kalp masajı nasıl?"</strong> → <strong>Baş parmakla, 100 kez, az basınçla.</strong></li>
+<li><strong>"Zemin nasıl olmalı?"</strong> → <strong>SERT zemin</strong> (hard ground). Trap option says "yumuşak/yatakta" → wrong; soft surface absorbs the pressure.</li>
+<li><strong>"Parmaklar nereye?"</strong> → Vücuda <strong>DEĞMEMELİ</strong>. Only the <strong>el ayası</strong> (palm heel) presses.</li>
+<li><strong>"Kontrol sıklığı?"</strong> → <strong>1 dakikada bir, en fazla 10 saniye.</strong></li>
+<li><strong>Yumruk şoku (precordial thump)</strong> = first attempt. If that fails → switch to two-hand compressions. Some questions test this sequence.</li>
+</ul>
+<hr />
+<h2>3H. SLIDE 27 — Kalp Masajı + Suni Solunum Birlikte (CPR Ratios)</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>KALP DURMASI:</strong></p>
+<p><strong>Kalp Masajının ile Suni Solunumun Birlikte Uygulanması;</strong> hem kalp hem de soluk durmuş ise, ilkyardımcının sayısına göre şu şekilde uygulanır:<br />
+- <strong>İlkyardımcı tek ise</strong>, önce <strong>2 suni solunum sonra 30 kalp masajı</strong> (2 : 30).<br />
+- <strong>İlkyardımcı sayısı 2 ise</strong>, <strong>1 suni solunum 5 kalp masajı</strong> (1 : 5). Göğüs suni solunum ile yükselip sonra inmeye başladığı anda kalp masajına başlanır.</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>This is the <strong>full CPR (Kardiyo-Pulmoner Resüsitasyon)</strong> rule for when <strong>BOTH heart AND breathing have stopped</strong>. Suni solunum alone isn't enough — without circulation, oxygen never reaches the brain. So you alternate breaths with compressions.</p>
+<p>The ratio depends on <strong>how many rescuers</strong> are present.</p>
+<h4>Tek ilkyardımcı (1 rescuer) — 2 : 30</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Action</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1st</td>
+<td>Suni solunum (rescue breath)</td>
+<td><strong>2 kez</strong></td>
+</tr>
+<tr>
+<td>2nd</td>
+<td>Kalp masajı (chest compression)</td>
+<td><strong>30 kez</strong></td>
+</tr>
+<tr>
+<td>Then repeat the 2:30 cycle.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>single rescuer</strong> does both jobs alone — give 2 quick breaths first, then switch to 30 fast compressions, then back to 2 breaths, and so on.</p>
+<h4>İki ilkyardımcı (2 rescuers) — 1 : 5</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Action</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rescuer A</td>
+<td>Suni solunum</td>
+<td><strong>1 kez</strong></td>
+</tr>
+<tr>
+<td>Rescuer B</td>
+<td>Kalp masajı</td>
+<td><strong>5 kez</strong></td>
+</tr>
+<tr>
+<td>Continuous alternation; switch immediately when breath finishes.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>When <strong>two rescuers</strong> divide the work — one at the head doing breaths, one at the chest doing compressions — the cycle is <strong>1 breath : 5 compressions</strong>. Faster turnover is possible because no one has to switch positions.</p>
+<h4>Timing detail (testable)</h4>
+<blockquote>
+<p><strong>Göğüs suni solunum ile yükselip sonra inmeye başladığı anda kalp masajına başlanır.</strong></p>
+</blockquote>
+<p>→ When you give the rescue breath, watch the chest <strong>rise THEN start to fall</strong> — the moment it begins to fall, that's when the next compression cycle starts. Don't compress while air is still going in (it would push the air back out).</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Tek ilkyardımcıda oran:</strong> <strong>2 suni solunum : 30 kalp masajı.</strong></li>
+<li><strong>İki ilkyardımcıda oran:</strong> <strong>1 suni solunum : 5 kalp masajı.</strong></li>
+<li><strong>"Hangisi önce yapılır, suni solunum mu kalp masajı mı?"</strong> → <strong>Önce 2 suni solunum</strong>, sonra kalp masajı (tek ilkyardımcıda).</li>
+<li><strong>Compression timing:</strong> göğüs <strong>inmeye başladığı anda</strong> masaj başlar. Trap option: "yükselirken bastır" → wrong.</li>
+<li>Trap: question gives "2 ilkyardımcı" then asks ratio — answer is <strong>1 : 5</strong>, not 2 : 30. Read the rescuer count carefully.</li>
+<li><strong>CPR = kalp masajı + suni solunum birlikte.</strong> Just kalp masajı alone or suni solunum alone is NOT CPR.</li>
+</ul>
+<hr />
+<h2>3I. Hoca's Live Class Additions (2026-04-25) — Discrepancies &amp; Verbal Detail</h2>
+<p>These are points the hoca emphasized verbally that aren't on the slides — or that <strong>conflict with the slides</strong>. Both versions show up in different exam questions; learn to recognize each.</p>
+<h3>1. ⚠️ Bebek Kalp Masajı — Slide vs Hoca Conflict</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Bebek için technique</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SLIDE 26</strong></td>
+<td><strong>Baş parmak (thumb)</strong> ile aynı noktaya 100 kez az basınçla.</td>
+</tr>
+<tr>
+<td><strong>Hoca (verbal)</strong></td>
+<td><strong>Orta + yüzük parmak (middle + ring finger)</strong> ile, dakikada 100 bası.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Both are valid in different curricula</strong> (Türkiye AHA-uyumlu protokol artık 2 parmak — orta + yüzük — der; eski MEB slide'ı baş parmak diyor). On the test:<br />
+- If the question references <strong>slide wording</strong>, pick <strong>baş parmak</strong>.<br />
+- If it references modern technique or "iki parmakla", pick <strong>orta + yüzük parmak</strong>.</p>
+<h3>2. ⚠️ Kalp Masajı Hızı — 80–100 vs 100</h3>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Hız</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SLIDE 26</strong></td>
+<td><strong>Dakikada 80–100 kez</strong></td>
+</tr>
+<tr>
+<td><strong>Hoca (verbal)</strong></td>
+<td><strong>Dakikada 100 bası</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Both numbers appear in MEB exam pools. Modern AHA standard = 100–120/dk. The exam most often accepts <strong>80–100</strong> OR <strong>100</strong>.</p>
+<h3>3. ⚠️ CPR Oranı — Hoca Said 30:2 (modern), Slide Says 2:30 OR 1:5</h3>
+<blockquote>
+<p><em>"Bu genelde otuz kalp masajı, iki suni solunum şeklindedir. Yani bu hareketi iki kere yaparız. Daha sonra kalp masajına geçiyoruz... otuz kalp masajı, iki suni solunum, dakikada 100 bası."</em></p>
+</blockquote>
+<p>The hoca taught <strong>30 kalp masajı : 2 suni solunum</strong> (modern AHA — works for both single and double rescuer). The slide split it into <strong>tek=2:30</strong> and <strong>iki=1:5</strong>. <strong>MEB sınavı still tests 2:30 and 1:5 as the textbook answer</strong> — answer per the slide unless the question explicitly says "modern AHA."</p>
+<h3>4. ⚠️ Sırta Vuruş Sayısı — 4 (slide) vs 5–7 (hoca)</h3>
+<blockquote>
+<p><em>"İki kürek kemiğinin ortasına 5–7 kez elimizin o sert ayasıyla vuruyoruz, süpürür tarzda, aşağıdan yukarıya."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Vuruş sayısı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SLIDE 24</strong></td>
+<td><strong>4 kez</strong></td>
+</tr>
+<tr>
+<td><strong>Hoca (verbal)</strong></td>
+<td><strong>5–7 kez</strong></td>
+</tr>
+</tbody>
+</table>
+<p>MEB ehliyet sınavı geleneksel olarak <strong>4 kez</strong> kullanır. Exam answer = <strong>4</strong>.</p>
+<h3>5. Bebek Suni Solunum — Critical Detail Slide Doesn't Spell Out</h3>
+<blockquote>
+<p><em>"Bebeklerde nefesi verirken komple ağzı ve burnu içeriye alıyoruz. Yani ayrıyeten burun deliklerini kapatmıyoruz."</em></p>
+</blockquote>
+<p>For an infant, you do <strong>NOT</strong> pinch the nose closed (as you would for an adult). Instead, your mouth covers <strong>both the infant's mouth AND nose simultaneously</strong>. This is the key technique difference and why a <strong>maske</strong> is ideal in infants.</p>
+<h3>6. Bebek Tıkanması — Heimlich-Equivalent Technique</h3>
+<blockquote>
+<p><em>"Bebeği yüzü yere bakacak şekilde dizimizin üzerine alıyoruz, kürek kemiklerinin arasına 5–7 kez süpürür tarzda vuruyoruz. Çıkmadıysa bebeğin yüzü bize dönecek şekilde bacaklarımızın üzerine koyuyoruz, göğüs kemiğinin bittiği boşluğa </em><em>orta ve yüzük parmağımızla</em><em> baskı yapıyoruz."</em></p>
+</blockquote>
+<p><strong>Bebek Heimlich = orta + yüzük parmak</strong> (NOT yumruk like adults). Same finger combination as bebek kalp masajı.</p>
+<h3>7. Tıkanma — Kismi vs Tam (Hoca's verbal definition)</h3>
+<p>The slide showed Heimlich procedure but didn't formally distinguish <strong>kismi (partial)</strong> vs <strong>tam (complete)</strong> tıkanma. Hoca defined them:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Kismi tıkanma</strong></th>
+<th><strong>Tam tıkanma</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Öksürebilir mi?</td>
+<td>EVET</td>
+<td>HAYIR</td>
+</tr>
+<tr>
+<td>Konuşabilir mi?</td>
+<td>EVET</td>
+<td>HAYIR</td>
+</tr>
+<tr>
+<td>Nefes alabilir mi?</td>
+<td>EVET</td>
+<td>HAYIR</td>
+</tr>
+<tr>
+<td>Vücut tepkisi</td>
+<td>normal</td>
+<td>morarır, ellerini boğazına götürür, öne eğilir</td>
+</tr>
+<tr>
+<td>Müdahale</td>
+<td><strong>Öksürmeye teşvik et</strong>, yalnız bırakma</td>
+<td>Sırta vuruş + Heimlich</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical exam fact:</strong> Kismi tıkanmada <strong>öksürtmeye devam edilir</strong> — Heimlich UYGULANMAZ. Heimlich sadece <strong>tam tıkanmada</strong> yapılır. Hoca: "öksürmeye teşvik ettiriyoruz."</p>
+<h3>8. Heimlich — "Ters J" Mnemonic</h3>
+<blockquote>
+<p><em>"Sağ elimizi yumruk yaptık, arkadan kişiye sarıldık, göğüs kemiğinin bittiği yerden içeri bir baskı uyguladık, daha sonra elimiz içerideyken yukarı — yani bir J harfi çiziyorsunuz, içeri-yukarı."</em></p>
+</blockquote>
+<p><strong>Heimlich hareketi = ters J:</strong> önce <strong>içeri</strong>, sonra <strong>yukarı</strong>. Öğrenmesi en kolay imge.</p>
+<h3>9. Suda Boğulma — "El Ele Zinciri" Method (extra)</h3>
+<p>The hoca added a <strong>chain rescue</strong> method not on the slide:</p>
+<blockquote>
+<p><em>"Kıyıdaki insanlar el ele tutup onun yanına kadar gidip o şekilde onu kurtarmışlar."</em></p>
+</blockquote>
+<p>When neither AT nor ÇEK works and no one is a strong swimmer, multiple bystanders form a <strong>human chain</strong> holding hands from shore out to the victim. Safer than one person swimming alone. Not commonly tested but good to know.</p>
+<h3>10. Kalp Masajı Tekniği — Dirsekler Dik</h3>
+<blockquote>
+<p><em>"İki elle yetişkinlerde yapıp ellerimizi dirseklerden bükmüyoruz, dik olacak."</em></p>
+</blockquote>
+<p><strong>Dirsekleri DİK tut</strong> — bent elbows = weak compression + tires the rescuer. Lock arms straight; use <strong>shoulder/torso weight</strong> to push, not arm muscles.</p>
+<h3>11. Kanama Önceliği — "Atardamar" Spesifikasyonu</h3>
+<blockquote>
+<p><em>"Üçüncü sırada kanaması olanlar — ama bunu açmak lazım, atardamar kanaması yani fışkırır tarzda olanlar. Toplardamar veya kılcal değil."</em></p>
+</blockquote>
+<p>Triage'da "kanaması olanlar" = sadece <strong>atardamar kanaması</strong> (the spurting kind). A toplardamar oozer doesn't bump priority.</p>
+<hr />
+<h2>4. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Solunum durduğunda ilk etkilenen organ?"</strong> → <strong>BEYİN</strong>.</li>
+<li><strong>"Kaç dakika içinde ölüm?"</strong> → <strong>6 dakika</strong>.</li>
+<li><strong>"Solunum durmasını tanıma yöntemi?"</strong> → <strong>BAK–DİNLE–HİSSET</strong>.</li>
+<li><strong>"En etkili suni solunum yöntemi?"</strong> → <strong>Ağızdan ağıza</strong>.</li>
+<li><strong>"Suni solunum sırasında yaralı hangi pozisyondadır?"</strong> → <strong>Sırt üstü</strong>.</li>
+<li><strong>"Suni solunum sonrası tekrar solumaya başlayan kişiye verilen pozisyon?"</strong> → <strong>Yan yatış</strong>.</li>
+<li><strong>"Yetişkinde suni solunum sıklığı?"</strong> → <strong>Dakikada 15–20 kez</strong>.</li>
+<li><strong>"Bebekte suni solunum nasıl yapılır?"</strong> → <strong>Ağız ve burundan birlikte, az hava, sık aralıklarla</strong>.</li>
+<li><strong>"Ağızdan ağıza suni solunumun yapılamayacağı durumlar?"</strong> → <strong>ağızdan kan geliyorsa, çene kırıksa</strong>.</li>
+</ol>
+<hr />
+<h2>5. Memorize These</h2>
+<blockquote>
+<p><strong>Solunum durmasında ilk etkilenen organ → BEYİN.</strong> Süre → <strong>6 dakika</strong>.</p>
+<p><strong>Tanıma:</strong> <strong>BAK</strong> (göğüs), <strong>DİNLE</strong> (kulak), <strong>HİSSET</strong> (el üstü).</p>
+<p><strong>Pozisyonlar:</strong> Müdahalede <strong>sırt üstü</strong>, sonrasında <strong>yan yatış</strong>.</p>
+<p><strong>Yetişkin:</strong> dakikada <strong>15–20</strong> kez. <strong>Bebek:</strong> ağız+burun birlikte, <strong>az hava, sık aralık</strong>.</p>
+</blockquote>
+<hr />
+<h2>6. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>temel yaşam desteği (TYD)</td>
+<td>basic life support (BLS)</td>
+<td>the 2nd halka of chain of survival</td>
+</tr>
+<tr>
+<td>solunum</td>
+<td>respiration / breathing</td>
+<td>act of breathing</td>
+</tr>
+<tr>
+<td>solunum durması</td>
+<td>respiratory arrest</td>
+<td>breathing has stopped</td>
+</tr>
+<tr>
+<td>beyin</td>
+<td>brain</td>
+<td>first organ affected when breathing stops</td>
+</tr>
+<tr>
+<td>suni solunum</td>
+<td>artificial respiration</td>
+<td>rescue breathing</td>
+</tr>
+<tr>
+<td>ağızdan ağıza</td>
+<td>mouth-to-mouth</td>
+<td>the most effective method</td>
+</tr>
+<tr>
+<td>ağızdan burna</td>
+<td>mouth-to-nose</td>
+<td>alternative when mouth is unusable</td>
+</tr>
+<tr>
+<td>sırt üstü</td>
+<td>supine (on the back)</td>
+<td>position during intervention</td>
+</tr>
+<tr>
+<td>yan yatış pozisyonu</td>
+<td>recovery position</td>
+<td>after breathing resumes</td>
+</tr>
+<tr>
+<td>ense</td>
+<td>nape / back of neck</td>
+<td>hand placed under for head-tilt</td>
+</tr>
+<tr>
+<td>alın</td>
+<td>forehead</td>
+<td>other hand presses here</td>
+</tr>
+<tr>
+<td>baş geriye</td>
+<td>head back</td>
+<td>tilted to open airway</td>
+</tr>
+<tr>
+<td>takma diş</td>
+<td>dentures</td>
+<td>removed before suni solunum</td>
+</tr>
+<tr>
+<td>yabancı cisim</td>
+<td>foreign object</td>
+<td>removed from mouth</td>
+</tr>
+<tr>
+<td>göğsün kabarması</td>
+<td>chest rising</td>
+<td>success indicator</td>
+</tr>
+<tr>
+<td>gazlı bez / mendil</td>
+<td>gauze / handkerchief</td>
+<td>optional hygiene barrier</td>
+</tr>
+<tr>
+<td>çene kemiği</td>
+<td>jawbone</td>
+<td>if broken → switch method</td>
+</tr>
+<tr>
+<td>dakikada 15–20 kez</td>
+<td>15–20 times per minute</td>
+<td>adult rate</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. Cross-references</h2>
+<ul>
+<li>Previous: <a href="01-ilk-yardim-kavramlari.md">01-ilk-yardim-kavramlari.md</a> — Hayat Kurtarma Zinciri (TYD is link 2)</li>
+<li>Anatomy: <a href="02-insan-vucudu.md">02-insan-vucudu.md</a> — solunum sistemi + dolaşım sistemi</li>
+<li>Next expected: kalp masajı (chest compressions), full CPR cycle (30:2), AED basics</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

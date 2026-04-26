@@ -1,0 +1,2646 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Güvenli Araç Kullanma, Bakım ve Kontroller — Safe Driving, Maintenance & Checks | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 12-güvenli-araç-kullanma</span>
+</div>
+<div class="content">
+<h1>Güvenli Araç Kullanma, Bakım ve Kontroller — Safe Driving, Maintenance &amp; Checks</h1>
+<p><strong>Last updated:</strong> 2026-04-14 (class 2)<br />
+<strong>Covered in class:</strong> Araca binmeden önce ne yapılır (slide 1), Araca doğru oturma pozisyonu başlık (slide 2), Doğru oturma pozisyonu açıklaması (slide 3), Direksiyon tutuş pozisyonu 9:15 + sürüş pozisyonu diyagramı (slide 4), Araca binildiğinde yapılması gereken hususlar (slide 5), Kör nokta nedir (slide 6), Aynalar ve görüş açıları (slide 7), Aracın çalıştırılması başlık (slide 8), Doğru oturma pozisyonu recap + kemer (slide 9), Ayna ayarı + vites boşa alma (slide 10), Kontak anahtarı çevirme prosedürü (slide 11), 3 pedal tanımı + sol/sağ ayak kullanımı (slide 12), El freni indirme + birinci vitese alma + kalkış (slide 13), Aktif ve Pasif Güvenlik Sistemleri başlık (slide 14), Aktif/Pasif deep dive (slide 15), Rodaj tanımı (slide 16), Bakımlar — günlük + haftalık + akü bakımı (slide 17), Karlı günler için önlemler (slide 18), Antifriz nedir (slide 19), Karlı/buzlu yollarda sürüş (slide 20), Kar zinciri nasıl takılır (slide 21)</p>
+<hr />
+<h2>1. Overview — Neden bu konu?</h2>
+<p>This topic is from the portal's <strong>"Güvenli Araç Kullanma, Araç Bakım ve Kontrolleri"</strong> subject (Araç Tekniği subject 2/6). It covers everything a driver should do <strong>before, during, and around</strong> driving to stay safe and keep the car in good shape. The first block is <strong>araç kullanmaya hazırlık</strong> — the routine you should follow every time you approach your car.</p>
+<p>Three things matter on the exam here:</p>
+<ol>
+<li><strong>Pre-drive (araç dışı + araç içi) checks</strong> — what to look at before you even sit down</li>
+<li><strong>Correct seating / driving position</strong> — seat back angle, body contact, arm reach</li>
+<li><strong>Adjustment of mirrors, head restraint, seatbelt</strong> — cabin setup</li>
+</ol>
+<p>The underlying principle: <em>"Doğru hazırlık = kısa reaksiyon süresi + maksimum kontrol"</em> — correct preparation gives you the shortest possible reaction time and the best control of the car.</p>
+<hr />
+<h2>2. SLIDE 1 — Araca Binmeden Önce Ne Yapılır? (Pre-drive External Check)</h2>
+<h3>What the slide showed</h3>
+<p>A full-slide text block (red title, blue body) listing the items a driver must visually check <strong>before getting into the car</strong>.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>ARACA BİNMEDEN ÖNCE NE YAPILIR.?</strong><br />
+Lastiklerin göz kontrolü, fren lambalarını, stop lambaları, sinyaller, benzin depo kapağına, ve yağ akıntısına bakılmalıdır. Aracın altında herhangi bir şey olup, kedi ve köpeğin olmadığının kontrolü yapılır.</p>
+<p><strong>WHAT IS DONE BEFORE GETTING INTO THE CAR?</strong><br />
+Visual inspection of the <strong>tires</strong>, <strong>brake lights</strong>, <strong>stop lamps</strong>, <strong>signals (turn indicators)</strong>, the <strong>fuel tank cap</strong>, and any <strong>oil leaks</strong> should be checked. A check is also made for anything <strong>under the car</strong>, including <strong>cats and dogs</strong>.</p>
+</blockquote>
+<h3>The 7-item pre-drive walk-around</h3>
+<p>This is a <strong>memorize-the-list</strong> question on the exam. The 7 items to check before you enter the car:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Lastiklerin göz kontrolü</strong></td>
+<td>Visual tire check</td>
+<td>Low air pressure, cuts, bulges, or nails in the tread are all <strong>immediate safety risks</strong>. Look at all 4 tires — are they properly inflated? Any visible damage?</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Fren lambaları</strong></td>
+<td>Brake lights</td>
+<td>Must light up when you press the pedal. If one is burned out, you're invisible to the car behind you when braking — huge rear-end collision risk.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Stop lambaları</strong></td>
+<td>Stop lamps (same as fren lambaları, redundant wording)</td>
+<td>In Turkish driving curriculum, "stop lambası" and "fren lambası" are used interchangeably to refer to the red rear brake light.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Sinyaller</strong></td>
+<td>Turn signals / indicators</td>
+<td>Front and rear signal lamps must flash when activated. Broken signals = illegal + dangerous.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Benzin depo kapağı</strong></td>
+<td>Fuel tank cap</td>
+<td>Must be securely closed. A loose fuel cap lets vapor escape, triggers the check-engine light, and in rare cases can leak fuel.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Yağ akıntısı</strong></td>
+<td>Oil leaks (on the ground under the car)</td>
+<td>A dark puddle under the engine bay means oil is leaking → stop driving, because low oil → engine damage.</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Aracın altında herhangi bir şey + kedi ve köpek kontrolü</strong></td>
+<td>Check under the car for any object / <strong>cats and dogs</strong></td>
+<td>Classic Turkish driving-culture item: cats especially love to sleep under parked cars for warmth. <strong>Always check</strong> before starting the engine. Also check for rocks, branches, parking blocks, or children's toys.</td>
+</tr>
+</tbody>
+</table>
+<h3>The "kedi ve köpek" item — why it's always on Turkish exams</h3>
+<p>Turkish driving curriculum takes this <strong>very seriously</strong> — partly because stray cats are extremely common in Turkish neighborhoods, and partly because it's an easily memorizable exam question. Hoca will hammer this point:</p>
+<blockquote>
+<p><strong>Aracı çalıştırmadan önce aracın altını kontrol et — özellikle kış aylarında kediler motor altında uyur.</strong><br />
+<em>Before starting the car, check underneath — especially in winter, cats sleep under the engine.</em></p>
+</blockquote>
+<p><strong>Exam trigger phrase:</strong> <em>"Araca binmeden önce aracın altı neden kontrol edilir?"</em> → <strong>Kedi, köpek veya herhangi bir engelin olmadığının görülmesi için.</strong></p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Araca binmeden önce lastikler, fren/stop lambaları, sinyaller, benzin deposu kapağı, yağ akıntısı ve aracın altı (kedi-köpek dahil) kontrol edilir.</strong><br />
+<em>Before getting into the car, check tires, brake/stop lamps, signals, fuel cap, oil leaks, and underneath the car (including for cats and dogs).</em></p>
+</blockquote>
+<hr />
+<h2>3. SLIDE 2 — Araca Doğru Oturma Pozisyonu Nasıl Olmalıdır? (Title Slide)</h2>
+<h3>What the slide showed</h3>
+<p>A large question heading alone on a slide: <strong>"ARACA DOĞRU OTURMA POZİSYONU NASIL OLMALIDIR.?"</strong> (How should the correct seating position in the car be?)</p>
+<p>This is a <strong>title-only slide</strong> that introduces the next content block — hoca is about to explain the rules of the correct driving posture. It's essentially a chapter header, so there's no substantive content to analyze. The answer comes on slide 3.</p>
+<hr />
+<h2>4. SLIDE 3 — Doğru Oturma Pozisyonu (Correct Seating Position — Rules)</h2>
+<h3>What the slide showed</h3>
+<p>A full-slide text paragraph (blue text) explaining the <strong>four rules</strong> for correct driving posture: seat back angle, shoulder contact, left-foot leverage, arm reach to the steering wheel, plus the consequences of a wrong position.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p>Koltuğa oturduğunuzda koltuğa sırt ayarı yaklaşık 90 derecelik bir açıda olmalıdır. Omuzlarınızın koltuk sırtıyla sıkı bağlantısı olmalı, sol ayaktan kuvvet alarak vücudun koltuk sırtlığına tamamen yapışması gerekir. Bu pozisyon alındıktan sonra ellerin direksiyon simidinin üst bölümünü kolaylıkla kavrayabileceği kadar koltuk ileri alınmalıdır. Aksi taktirde direksiyondan uzak kalınır. Bu pozisyon vücudun rahat hareket etmesine ve reaksiyon süresinin daha uzun sürmesine sebep olur, sert manevralarda da öne savrulmayı önler.</p>
+<p>When you sit in the seat, the <strong>seat-back angle should be approximately 90 degrees</strong>. Your <strong>shoulders must be firmly in contact with the seat back</strong>, and by <strong>pushing with your left foot</strong>, your body should <strong>fully adhere to the seat back</strong>. Once this position is set, the <strong>seat should be moved forward just enough that your hands can easily grip the top section of the steering wheel</strong>. Otherwise you'll be too far from the wheel. This position allows the body to move comfortably and [extends reaction time — SLIDE TYPO, see note below], and also prevents being thrown forward during hard maneuvers.</p>
+</blockquote>
+<h3>The 4 rules — broken down</h3>
+<h4>Rule 1 — Seat back angle: ~90 degrees</h4>
+<blockquote>
+<p><strong>Koltuğa oturduğunuzda koltuğa sırt ayarı yaklaşık 90 derecelik bir açıda olmalıdır.</strong><br />
+<em>When seated, the seat-back angle should be approximately 90°.</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> The backrest should be <strong>nearly upright</strong> — close to a right angle with the seat cushion, not reclined. A reclined "lounging" position looks comfortable but it's <strong>dangerous</strong>:</p>
+<ul>
+<li>You can't see the road clearly over the dashboard</li>
+<li>Your shoulders pull away from the seat → less control, delayed reaction</li>
+<li>The seatbelt doesn't sit correctly across your chest</li>
+<li>In a crash, you can <strong>"submarine"</strong> under the seatbelt (slide forward/under it) and suffer severe internal injuries</li>
+</ul>
+<p><strong>Exam-ready phrasing:</strong> <em>"Sürücü koltuğunun sırt açısı yaklaşık 90° olmalıdır."</em></p>
+<hr />
+<h4>Rule 2 — Shoulders must stay in contact with the seat back</h4>
+<blockquote>
+<p><strong>Omuzlarınızın koltuk sırtıyla sıkı bağlantısı olmalı.</strong><br />
+<em>Your shoulders must be in firm contact with the seat back.</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> When you turn the steering wheel hard (e.g., sharp corner, emergency swerve), your body naturally wants to rotate forward away from the seat. If your shoulders <strong>leave the seat back</strong>, you lose leverage — you're essentially fighting the steering wheel with your arms alone, not your core body. By keeping both shoulder blades pressed against the seat back, you can use your <strong>whole torso</strong> for strength and accuracy.</p>
+<p><strong>Exam angle:</strong> <em>"Sürüş esnasında omuzlar koltuk sırtından ayrılmamalıdır."</em></p>
+<hr />
+<h4>Rule 3 — "Sol ayaktan kuvvet alarak" — the left-foot brace</h4>
+<blockquote>
+<p><strong>Sol ayaktan kuvvet alarak vücudun koltuk sırtlığına tamamen yapışması gerekir.</strong><br />
+<em>By </em><em>taking force from the left foot</em><em>, the body should fully press against the seat back.</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> Most people don't realize this, but in a manual transmission car, when your <strong>sol ayak</strong> (left foot) is not pressing the clutch, it should be <strong>braced firmly against the floor (or against the dedicated foot-rest / dead-pedal / "ayak dayama yeri")</strong> on the far left. This brace does two critical things:</p>
+<ol>
+<li><strong>Pushes your body back into the seat</strong> — your legs straighten slightly, which pushes your hips and back against the seat back, locking you in place</li>
+<li><strong>Stabilizes your body during hard cornering and braking</strong> — without the brace, sharp turns throw your upper body sideways and you lose control of the steering</li>
+</ol>
+<p>In an automatic car, the same principle applies — the <strong>dead pedal</strong> on the far left exists specifically so the left foot can brace.</p>
+<p><strong>Exam angle:</strong> this is the reason the answer to <em>"Ayaklar nasıl konumlandırılmalıdır?"</em> includes the left-foot brace — not just "ayaklar rahat dursun".</p>
+<hr />
+<h4>Rule 4 — Arm reach: fingertips to the top of the steering wheel</h4>
+<blockquote>
+<p><strong>Ellerin direksiyon simidinin üst bölümünü kolaylıkla kavrayabileceği kadar koltuk ileri alınmalıdır. Aksi taktirde direksiyondan uzak kalınır.</strong><br />
+<em>The seat should be moved forward </em><em>just enough that your hands can easily grip the top section of the steering wheel</em><em>. Otherwise you'll end up too far from the wheel.</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> With your shoulders firmly against the seat back (rule 2), extend one arm forward — your <strong>wrist</strong> should rest comfortably on the <strong>top of the steering wheel</strong>. That's the reference point. If you can't reach it without leaning forward, you're too far back — <strong>move the seat forward</strong>. If your arm is folded sharply with elbows against your body, you're too close — <strong>move it back</strong>.</p>
+<p><strong>Why this arm-length rule works:</strong><br />
+- At this distance, when you grip the wheel normally (at 9 and 3, or 10 and 2), your elbows are <strong>slightly bent</strong> — not locked straight, not cramped tight<br />
+- Slightly bent elbows give you <strong>maximum range of motion</strong> for steering corrections<br />
+- You have the <strong>leverage</strong> to turn the wheel fully lock-to-lock without losing shoulder contact with the seat</p>
+<p><strong>Exam trigger phrase:</strong> <em>"Direksiyon simidinin üst noktasına kol uzatıldığında bilek direksiyonun üzerine gelmelidir."</em></p>
+<hr />
+<h3>⚠️ Note about the slide's reaction-time wording</h3>
+<p>The slide says:</p>
+<blockquote>
+<p><em>"Bu pozisyon vücudun rahat hareket etmesine ve </em><em>reaksiyon süresinin daha uzun sürmesine</em><em> sebep olur…"</em></p>
+</blockquote>
+<p>Taken literally, this says "the correct position causes <strong>longer</strong> reaction time" — which is <strong>the opposite of the truth</strong>. Correct posture gives <strong>shorter</strong> (faster) reaction time, not longer. This appears to be a <strong>typo</strong> in the slide (most likely meant to say <strong>daha kısa sürmesine</strong> — "shorter").</p>
+<p><strong>What you should remember for the exam:</strong><br />
+- <strong>Doğru oturma pozisyonu = reaksiyon süresini KISALTIR (shortens)</strong> — not lengthens<br />
+- This is the standard Turkish exam answer</p>
+<p>If you see a question like <em>"Doğru sürüş pozisyonunun faydası nedir?"</em> the correct answer is always that it <strong>reduces reaction time</strong> and <strong>prevents forward throw (öne savrulma) in hard maneuvers</strong>. Ignore the typo on the slide.</p>
+<hr />
+<h3>The 4 benefits of correct seating position</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Vücudun rahat hareket etmesini sağlar</strong></td>
+<td>Allows the body to move comfortably</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Reaksiyon süresini kısaltır</strong> (NOT uzatır — see typo note)</td>
+<td>Shortens reaction time</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sert manevralarda öne savrulmayı önler</strong></td>
+<td>Prevents being thrown forward during hard maneuvers</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Direksiyondan uzak kalmayı önler</strong></td>
+<td>Prevents sitting too far from the steering wheel</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Sürüş pozisyonu: sırt 90°, omuzlar koltuğa yapışık, sol ayak payandada, kol uzatıldığında bilek direksiyon üstünde.</strong><br />
+<em>Driving position: back 90°, shoulders against the seat, left foot on the dead pedal, wrist resting on top of the steering wheel when the arm is extended.</em></p>
+<p><strong>Doğru sürüş pozisyonu reaksiyon süresini kısaltır ve sert manevralarda öne savrulmayı önler.</strong><br />
+<em>Correct driving position shortens reaction time and prevents forward-throw in hard maneuvers.</em></p>
+</blockquote>
+<hr />
+<h2>4B. SLIDE 4 — Direksiyon Tutuş Pozisyonu: 9:15 + Sürüş Pozisyonu Diyagramı</h2>
+<h3>What the slide showed</h3>
+<p>Top of the slide: a paragraph in blue text explaining why seating position alone is not enough — the <strong>steering wheel grip</strong> must also be correct. Then two images:</p>
+<ol>
+<li><strong>Left:</strong> a photograph of a man sitting in a driving simulator rig, with <strong>4 numbered yellow labels</strong> pointing to the key contact points of the body with the car: <strong>1 = feet on pedals</strong>, <strong>2 = hips/back against the seat</strong>, <strong>3 = arms on the steering wheel</strong>, <strong>4 = head against the headrest</strong>.</li>
+<li><strong>Right:</strong> a simple <strong>stick-figure diagram</strong> labeled <strong>"SÜRÜŞ POZİSYONU"</strong> (driving position), showing a driver with <strong>an angle marker of "90° à 120° MAX"</strong> at the <strong>elbow</strong> — meaning the arms should be bent to somewhere between 90° and 120° (not straight, not tightly folded).</li>
+</ol>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Ancak her şey oturma pozisyonuyla bitmiyor. Direksiyon simidinin tutulmasıyla ilgili sorunu da çözmemiz gerekiyor. Sol el direksiyonda, sağ elle vitesle arkadaşlık ediyorsa ya da 10:15 veya 10:10 pozisyonunu doğru zannediyorsanız yanılıyorsunuz. Direksiyon simidi mutlaka 9:15 pozisyonunda tutulmalıdır. Bu durumda her iki yöne de maksimum hareket kabiliyeti elde edilir.</strong></p>
+<p>But it doesn't all end with the seating position. We also have to solve the problem of <strong>how to hold the steering wheel</strong>. If your <strong>left hand is on the wheel and your right hand is keeping the gear lever company</strong>, or if you think <strong>10:15 or 10:10</strong> is the correct position, <strong>you're wrong</strong>. The steering wheel <strong>must</strong> be held in the <strong>9:15 position</strong>. In this position, you get the <strong>maximum range of motion in both directions</strong>.</p>
+</blockquote>
+<h3>The 9:15 rule — explained</h3>
+<p>The <strong>9:15 position</strong> refers to the <strong>positions of the hands</strong> on the steering wheel, imagined as the <strong>hands of a clock</strong>:</p>
+<ul>
+<li><strong>Left hand → 9 o'clock</strong> (horizontally to the left, exactly at the equator of the wheel)</li>
+<li><strong>Right hand → 3 o'clock</strong> (horizontally to the right, exactly opposite the left hand)</li>
+</ul>
+<p>In Turkish clock-time, <strong>9:15</strong> means the <strong>big hand at 3 (the "15 minutes past" position) and the little hand at 9</strong> — so the slide's "9:15" is shorthand for <strong>"both hands at the 9 and 3 positions"</strong> (which in English-speaking driving schools is sometimes called <strong>"9 and 3"</strong>).</p>
+<h3>Why 9:15 is correct (and 10:10 / 10:15 is wrong)</h3>
+<p>The older driving-school standard was <strong>10 and 2</strong> (10:10) — hands near the top of the wheel. Modern driving instruction has moved to <strong>9 and 3</strong> (9:15) for several reasons:</p>
+<ol>
+<li><strong>Maximum turning range in both directions.</strong> From 9 and 3, you can turn the wheel a full <strong>180°</strong> in either direction without having to cross your hands or let go. From 10 and 2, your range is shorter before your arms lock up.</li>
+<li><strong>Airbag safety.</strong> In a crash, the steering wheel airbag deploys explosively from the center of the wheel. If your hands are at 10 and 2, the airbag can <strong>slam your hands and arms into your own face</strong>. At 9 and 3, your hands are out of the airbag's direct path.</li>
+<li><strong>Better leverage and control.</strong> At 9 and 3, your arms are in their strongest pushing/pulling position, and your shoulders stay anchored to the seat back (rule 2 from slide 3).</li>
+<li><strong>Symmetry.</strong> You have <strong>equal reach and leverage in both directions</strong> — important for quick emergency corrections.</li>
+</ol>
+<h3>The wrong positions the slide warns about</h3>
+<table>
+<thead>
+<tr>
+<th>Wrong position</th>
+<th>What it looks like</th>
+<th>Why it's wrong</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sol el direksiyonda, sağ elle vites</strong></td>
+<td>Only the left hand on the wheel; the right hand is resting on the gear stick</td>
+<td>You have <strong>only one hand</strong> on the wheel → half the control, half the leverage, none of the symmetry. The right hand should be on the wheel except during the brief moment of a gear change.</td>
+</tr>
+<tr>
+<td><strong>10:10 (iki el üstte)</strong></td>
+<td>Both hands near the top of the wheel</td>
+<td>Too high → crosses into airbag deployment zone, less range of motion, elbows too high for good leverage</td>
+</tr>
+<tr>
+<td><strong>10:15</strong></td>
+<td>Left at 10, right at 3 (asymmetric)</td>
+<td>Asymmetric grip → unequal strength in each direction</td>
+</tr>
+</tbody>
+</table>
+<h3>The two support images</h3>
+<h4>Image 1 — The 4 body contact points (numbered photo)</h4>
+<p>The simulator-rig photo shows the <strong>four physical anchor points</strong> of a correctly-seated driver:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Body part</th>
+<th>Contact point</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>Ayaklar</strong> (feet)</td>
+<td>On the pedals + left foot braced on dead pedal</td>
+<td>Controls gas/brake/clutch; left foot braces the body</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>Kalça ve sırt</strong> (hips and back)</td>
+<td>Pressed into the seat cushion and seat back</td>
+<td>Anchors the body, keeps shoulders on the seat back</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>Kollar</strong> (arms)</td>
+<td>Gripping the steering wheel at 9:15</td>
+<td>Controls direction; elbows slightly bent for range</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>Baş</strong> (head)</td>
+<td>Against the <strong>koltuk başlığı / başlık</strong> (headrest)</td>
+<td>Protects the neck in rear-end impacts (prevents whiplash)</td>
+</tr>
+</tbody>
+</table>
+<p>Memorize this as <strong>the 4 contact points</strong>: <strong>ayaklar → kalça/sırt → kollar → baş</strong>. If any one of these is not in correct contact, the posture is wrong.</p>
+<h4>Image 2 — The "90° – 120° MAX" stick figure</h4>
+<p>The stick-figure diagram labels the <strong>elbow angle</strong> as <strong>90° to 120° maximum</strong>. This is the <strong>ideal arm bend</strong> when gripping the steering wheel at 9:15:</p>
+<ul>
+<li><strong>Less than 90° (arms tightly folded)</strong> → seat is too close → you can't turn the wheel fully and your chest is too close to the airbag</li>
+<li><strong>More than 120° (arms nearly straight)</strong> → seat is too far back → you lose leverage and shoulders come off the seat back</li>
+<li><strong>Between 90° and 120°</strong> → <strong>optimal</strong> — enough leverage for emergency maneuvers, enough range of motion to turn the wheel lock-to-lock, elbows still slightly bent so you can push and pull the wheel freely</li>
+</ul>
+<p>This is why slide 3 rule 4 works: when you extend your arm straight forward from a correct posture, your wrist rests on the top of the wheel — and when you then lower your hand to the <strong>9 o'clock</strong> position, your elbow naturally ends up bent at roughly <strong>90°–120°</strong>.</p>
+<h3>Hoca's live annotation (2026-04-14) — the hand-drawn clock</h3>
+<p>During this slide, hoca paused to <strong>draw a rough clock face on the slide by hand</strong>, in brown pen with red X marks. The drawing shows:</p>
+<ul>
+<li>A rough <strong>circular clock face</strong> with the clock numbers sketched around it (12 at top, 3 at right, 6 at bottom, 9 at left)</li>
+<li>A <strong>red X</strong> at the <strong>12 o'clock</strong> position (to show that's NOT where hands go)</li>
+<li><strong>Red X marks</strong> at other incorrect positions (10, 2)</li>
+<li><strong>Red arrows/circles</strong> pointing to the <strong>9 o'clock (left)</strong> and <strong>3 o'clock (right)</strong> positions — the <strong>correct</strong> hand placement</li>
+</ul>
+<p><strong>What hoca was emphasizing with the drawing:</strong> the 9:15 rule is literally <strong>read off a clock face</strong>. When you look at the steering wheel as if it were a clock:</p>
+<ul>
+<li><strong>Sol el</strong> (left hand) → <strong>9 konumunda</strong> (at the 9 o'clock position, horizontally to the left)</li>
+<li><strong>Sağ el</strong> (right hand) → <strong>3 konumunda</strong> (at the 3 o'clock position, horizontally to the right, which in Turkish time is "15 dakika geçe" → "<strong>:15</strong>")</li>
+</ul>
+<p>So <strong>"9:15 pozisyonu"</strong> = <strong>"sol el 9'da, sağ el 3'te (çeyrek geçe pozisyonu)"</strong>.</p>
+<p>This is a classic hoca trick — the slide just shows the text, but the hand-drawn clock makes the geometry instantly obvious. Drawing an X on top of the wheel (12 o'clock) visually reinforces that <strong>hands at the top = wrong</strong>. Memorize the drawing, not just the text.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Direksiyon simidi 9:15 pozisyonunda tutulmalıdır. Kollar 90° – 120° arasında bükülü olmalıdır.</strong><br />
+<em>The steering wheel must be held in the 9:15 position. Arms should be bent between 90° and 120°.</em></p>
+<p><strong>9:15 = sol el saatin 9'u, sağ el saatin 3'ü konumunda.</strong><br />
+<em>9:15 = left hand at the 9 o'clock position of the clock, right hand at the 3 o'clock position.</em></p>
+<p><strong>Doğru sürüş pozisyonunun 4 temas noktası: ayaklar, kalça/sırt, kollar/direksiyon, baş/başlık.</strong><br />
+<em>The 4 contact points of correct driving position: feet, hips/back, arms/steering wheel, head/headrest.</em></p>
+</blockquote>
+<hr />
+<h2>4C. SLIDE 5 — Araca Binildiğinde Yapılması Gereken Hususlar (Interior / Pre-Start Checks)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>ARACA BİNİLDİĞİNDE YAPILMASI GEREKEN HUSUSLAR</strong> (Things to do once you've gotten into the car). A checklist of <strong>4 interior items</strong> the driver must set up <strong>before starting the engine</strong>. This is the inside-the-car counterpart to slide 1 (which was the outside walk-around).</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>ARACA BİNİLDİĞİNDE YAPILMASI GEREKEN HUSUSLAR</strong><br />
+Araca binen sürücü, motoru çalıştırmadan önce, şu hususları yerine getirmelidir:</p>
+<ul>
+<li><strong>Sürücü Koltuğu:</strong> Sürücü, koltuğunu aracı rahatça kullanabilecek şekilde kendine uygun biçimde ayarlamalıdır.</li>
+<li><strong>İç ve Dış Aynaların Durumu:</strong> Aracın iç ve dış aynalarını, trafiği rahat bir biçimde gözetleyebilecek şekilde ayarlamalıdır.</li>
+<li><strong>Emniyet Kemerinin Kontrolü:</strong> Emniyet kemeri sürücüye en uygun biçimde ayarlanarak, araçta bulunan yolcuya da takılmalıdır.</li>
+<li><strong>Sürücü Mahalli Kontrolü:</strong> Sürücü, kullanacağı aydınlatma sistemi anahtarlarını, aksesuarları (radyo, fan vb.) ve el freninin yerini kontrol etmelidir.</li>
+</ul>
+<p><strong>Things to do after getting into the car</strong><br />
+Before starting the engine, the driver must:</p>
+<ul>
+<li><strong>Driver's seat:</strong> The driver should adjust the seat to the position that allows comfortable operation of the vehicle.</li>
+<li><strong>Interior and exterior mirrors:</strong> Adjust the inside (rearview) and outside mirrors so traffic can be easily observed.</li>
+<li><strong>Seatbelt check:</strong> The seatbelt should be adjusted properly for the driver, and <strong>should also be fastened by any passengers in the car</strong>.</li>
+<li><strong>Driver compartment check:</strong> The driver should locate and check the <strong>lighting-system switches</strong> (headlights, park, fog, signals), the <strong>accessories</strong> (radio, fan, AC, etc.), and the <strong>location of the handbrake</strong>.</li>
+</ul>
+</blockquote>
+<h3>The 4 interior setup items — explained</h3>
+<h4>Item 1 — Sürücü koltuğu ayarı (Driver's seat)</h4>
+<p><strong>Plain English:</strong> This ties directly to slides 3 and 4 — before you start the engine, set the seat so that:<br />
+- The <strong>seat-back angle is ~90°</strong> (slide 3, rule 1)<br />
+- Your <strong>shoulders stay against the seat back</strong> (slide 3, rule 2)<br />
+- Your <strong>left foot braces on the dead pedal</strong> (slide 3, rule 3)<br />
+- Your <strong>wrist rests on the top of the steering wheel</strong> when you extend your arm (slide 3, rule 4)<br />
+- Your <strong>elbows are bent 90°–120°</strong> when gripping at 9:15 (slide 4)</p>
+<p>If you can't achieve all of these, the seat is not in the right position — <strong>adjust before starting the engine</strong>, not after.</p>
+<hr />
+<h4>Item 2 — İç ve dış aynaların ayarı (Interior and exterior mirrors)</h4>
+<p><strong>Plain English:</strong> The three mirrors in a passenger car:</p>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>İç ayna</strong></td>
+<td>Interior rearview mirror</td>
+<td>On the windshield, center — shows straight behind through the rear window</td>
+</tr>
+<tr>
+<td><strong>Sol dış ayna</strong></td>
+<td>Left exterior mirror</td>
+<td>Left side of the car — shows the left rear and blind spot</td>
+</tr>
+<tr>
+<td><strong>Sağ dış ayna</strong></td>
+<td>Right exterior mirror</td>
+<td>Right side of the car — shows the right rear and blind spot</td>
+</tr>
+</tbody>
+</table>
+<p><strong>How to adjust them correctly:</strong><br />
+- <strong>İç ayna:</strong> You should be able to see the entire rear window framed in the mirror. Head position: in your normal driving posture (don't lean).<br />
+- <strong>Dış aynalar:</strong> Adjust them so you see a <strong>small sliver of your own car's side</strong> at the inner edge of the mirror, and as much of the adjacent lane as possible on the outer edge. This minimizes the <strong>kör nokta</strong> (blind spot — see slide 6).</p>
+<p><strong>Exam trigger phrase:</strong> <em>"Aynalar motor çalıştırılmadan önce ayarlanır"</em> — mirror adjustment happens <strong>before</strong> starting the engine, not while driving.</p>
+<hr />
+<h4>Item 3 — Emniyet kemerinin kontrolü (Seatbelt check)</h4>
+<p><strong>Plain English:</strong> The driver's <strong>own seatbelt</strong> must be properly fastened, adjusted, and positioned — <strong>and</strong> every passenger in the car (front and rear) must also be wearing one. The slide makes this explicit: <em>"araçta bulunan yolcuya da takılmalıdır"</em> — <em>the seatbelt must also be fastened by passengers in the car</em>.</p>
+<p><strong>Why the slide emphasizes passengers:</strong> Turkish law makes the <strong>driver legally responsible</strong> for ensuring all passengers wear their seatbelts, including rear-seat passengers. If a passenger is unbelted and you're stopped or in an accident, the <strong>driver receives the fine</strong>.</p>
+<p><strong>Classic exam angle:</strong><br />
+- <em>"Emniyet kemerini kim takmakla yükümlüdür?"</em> → <strong>Sürücü ve tüm yolcular</strong> (driver and all passengers).<br />
+- <em>"Arka koltuktaki yolcu emniyet kemeri takmak zorunda mıdır?"</em> → <strong>Evet</strong> (yes).<br />
+- <em>"Emniyet kemeri takmayan yolcunun cezasını kim öder?"</em> → <strong>Sürücü</strong> (the driver).</p>
+<p>Seatbelt is a <strong>pasif güvenlik sistemi</strong> (passive safety system — see <a href="09-fren-sistemi.md">09-fren-sistemi.md</a>). It only works if worn <strong>correctly</strong>: across the chest (not under the arm), across the hips (not on the stomach), and snugly (no slack).</p>
+<hr />
+<h4>Item 4 — Sürücü mahalli kontrolü (Driver compartment check)</h4>
+<p><strong>Plain English:</strong> Before starting the engine, the driver should <strong>locate and familiarize themselves with</strong> the controls they'll need while driving — especially in a car they don't drive regularly (rental, borrowed, different model):</p>
+<ul>
+<li><strong>Aydınlatma sistemi anahtarları</strong> → headlight switch, park light switch, fog light switch, high-beam, signal lever. You should know <strong>without looking</strong> how to turn each one on.</li>
+<li><strong>Aksesuarlar</strong> → radio, fan, AC, defroster, wipers, washer fluid control.</li>
+<li><strong>El freni</strong> → Where is it? Is it a lever between the seats? A foot-pedal handbrake? An electronic button? Find it <strong>before</strong> you need it. On a hill, you don't want to fumble for the handbrake location.</li>
+</ul>
+<p><strong>Why this matters:</strong> the time to learn where things are is <strong>not</strong> when you're rolling backward down a hill or trying to turn on the fog lights in sudden rain. Do it <strong>before the engine starts</strong>.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Araca binildikten sonra motoru çalıştırmadan önce: koltuk ayarı, ayna ayarı, emniyet kemeri (tüm yolcular dahil), sürücü mahalli kontrolü yapılır.</strong><br />
+<em>After getting in the car but before starting the engine: seat adjustment, mirror adjustment, seatbelt (including all passengers), driver compartment check.</em></p>
+</blockquote>
+<h3>Sequence recap: the 3 phases of "hazırlık"</h3>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>When</th>
+<th>What</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Phase 1 — Araç dışı kontrol</strong></td>
+<td>Before getting in</td>
+<td>Tires, lamps, signals, fuel cap, oil leaks, under the car (slide 1)</td>
+</tr>
+<tr>
+<td><strong>Phase 2 — Araç içi ayar</strong></td>
+<td>After getting in, engine OFF</td>
+<td>Seat, mirrors, seatbelt, compartment controls (slide 5)</td>
+</tr>
+<tr>
+<td><strong>Phase 3 — Aracı çalıştırma</strong></td>
+<td>After phase 2 is complete</td>
+<td>Turn the key / push start — and only now does the car move</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>4D. SLIDE 6 — KÖR NOKTA NEDİR? (What is a Blind Spot?)</h2>
+<h3>What the slide showed</h3>
+<p>Title in red: <strong>"Kör nokta nedir ?"</strong> Below, a multi-paragraph text block (in black) explaining what a blind spot is, why it's dangerous, how to compensate for it, and the importance of mirror position. At the bottom of the slide, two images:</p>
+<ol>
+<li><strong>Left image:</strong> A photograph taken through a left-side <strong>dış ayna</strong> (exterior mirror), showing a guardrail along the road — illustrating what a properly-adjusted mirror looks like from the driver's point of view.</li>
+<li><strong>Right image:</strong> A <strong>top-down diagram</strong> of a green car driving between two other vehicles (blue), with <strong>two blue shaded cone regions</strong> fanning out behind and to the sides of the green car — these are the <strong>blind-spot zones</strong> where the other cars are hidden from the driver's mirror view. One car is clearly in the right blind spot and the other in the left blind spot.</li>
+</ol>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Kör nokta nedir ?</strong><br />
+Aynaların en uç noktasında olan gösterme açısının azaldığı ve son bulduğu noktadır. Şerit değiştirmelerde aynaya baktığınızda arkanızı boş gibi görebilirsiniz ancak hemen yanınızda bir araç olabilir. Bu aracı görememenizin sebebi aracın kör noktanızda olmasıdır. Peki bunu nasıl önleyebiliriz?</p>
+<p>Otomobilde bunun tek şansı direksiyona doğru biraz daha eğilerek aynaya bakış açısını genişletmektir.</p>
+<p>Ayna ve kör nokta kontrolü yaparken gözümüzü asla yoldan ayırmamalıyız. Bu sebeple aynaları karenajda olan sürücüler, aynaları gidonda olanlara nazaran gözlerini yoldan ayırmadan kafayı kaldırmadan daha rahat ayna kontrolü yapabilirler.</p>
+<p>Unutmayalım. Doğru pozisyonda ayarlanmamış ayna hiçbir işe yaramaz.</p>
+<p><strong>What is a blind spot?</strong><br />
+A blind spot is the point at the <strong>very edge of a mirror's field of view</strong>, where the mirror's <strong>viewing angle narrows and disappears</strong>. When changing lanes, you might look in the mirror and see the area behind you as <strong>empty</strong>, but there may actually be a car <strong>right next to you</strong>. The reason you can't see that car is because it's sitting in your blind spot. So how can we prevent this?</p>
+<p>In a car, the only way to do this is to <strong>lean slightly toward the steering wheel</strong> to widen your viewing angle in the mirror.</p>
+<p>When checking mirrors and blind spots, <strong>we must never take our eyes off the road</strong>. That's why drivers whose mirrors are mounted on the <strong>car body (karenaj)</strong> can check them <strong>without taking their eyes off the road or lifting their head</strong> — more comfortably than drivers whose mirrors are on the <strong>gidon</strong> (handlebars — a motorcycle reference).</p>
+<p>Remember: <strong>a mirror that is not correctly positioned is useless</strong>.</p>
+</blockquote>
+<h3>Clean English explanation — the full concept</h3>
+<p><strong>Kör nokta (blind spot)</strong> is the area around your car that <strong>none of your mirrors can see</strong> — specifically, the region just behind and to the side of your car, roughly beside the rear doors. When another vehicle is in that zone, it can be <strong>completely invisible</strong> to you even though it's just a meter or two away.</p>
+<h4>Why it happens</h4>
+<p>Mirrors have a <strong>limited field of view</strong>. The center of the mirror shows the area directly behind you, and the edges show further out to the sides. But the mirror's view <strong>ends</strong> at a certain angle — and there's a <strong>gap</strong> between where the rear mirror's view ends and where your peripheral vision (looking forward) begins. That gap is the <strong>kör nokta</strong>.</p>
+<p>On the top-down diagram on the slide, you can see the <strong>two blue shaded cones</strong> extending outward from behind the green car — those cones represent the blind-spot zones, and two other vehicles are sitting <strong>exactly inside them</strong>, invisible to the green-car driver through any mirror.</p>
+<h4>Why it's dangerous</h4>
+<p><strong>Lane changes (şerit değiştirme)</strong> are the highest-risk situation. You check your side mirror, see "nothing", signal, and start to move over — and <strong>bam</strong>, there's a car right next to you in the blind spot that you never saw. Classic side-swipe collision scenario.</p>
+<h4>The 3 ways to compensate (slide content)</h4>
+<ol>
+<li><strong>Lean slightly toward the steering wheel</strong> to widen your mirror's field of view. A small change in head position translates to a big change in mirror angle.</li>
+<li><strong>Turn your head briefly</strong> to physically look over your shoulder before changing lanes — this is the <strong>"omuz üstü bakış"</strong> (shoulder check) technique that driving schools teach universally, though the slide emphasizes the mirror-lean method.</li>
+<li><strong>Keep your mirrors correctly adjusted.</strong> The last line of the slide is the key point: <strong>"Doğru pozisyonda ayarlanmamış ayna hiçbir işe yaramaz"</strong> — a badly-aimed mirror is worse than useless because it gives you false confidence. A mirror that shows too much of your own car's side is wasting its field of view on your own metal.</li>
+</ol>
+<h4>The "karenaj vs gidon" aside</h4>
+<p>The slide briefly mentions that drivers whose mirrors are on the <strong>karenaj</strong> (car body / fairing) can check them without moving their head — versus drivers whose mirrors are on the <strong>gidon</strong> (handlebar). <strong>"Gidon"</strong> is Turkish for <strong>motorcycle handlebar</strong>, so this is a motorcycle reference: on motorcycles with handlebar-mounted mirrors, the mirrors shake with the bars and require the rider to move their head to see clearly. On a car, the mirrors are fixed to the car body and stay stable — so you can use peripheral vision + slight lean to check them <strong>without ever taking your eyes off the road</strong>. This is a <strong>throwaway point for B-class exam prep</strong> but hoca mentioned it, so it's in the notes.</p>
+<h3>The 4 key takeaways from this slide</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Rule</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Her aracın kör noktası vardır</strong> — every car has a blind spot</td>
+<td>It's a geometric limitation of mirrors, not a fault</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Şerit değiştirmeden önce kör noktayı kontrol et</strong></td>
+<td>Check the blind spot before every lane change</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Direksiyona doğru hafifçe eğilerek aynanın görüş açısını genişlet</strong></td>
+<td>Leaning toward the wheel expands the mirror view</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Doğru ayarlanmamış ayna hiçbir işe yaramaz</strong></td>
+<td>A badly-aimed mirror is worse than no mirror (false confidence)</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kör nokta: aynaların gösterme açısının son bulduğu noktadır. Şerit değiştirmeden önce mutlaka kontrol edilmelidir.</strong><br />
+<em>Blind spot: the point where the mirror's field of view ends. It must always be checked before changing lanes.</em></p>
+<p><strong>Doğru pozisyonda ayarlanmamış ayna hiçbir işe yaramaz.</strong><br />
+<em>A mirror that isn't correctly positioned is useless.</em></p>
+</blockquote>
+<hr />
+<h2>4E. SLIDE 7 — Aynalar ve Görüş Açıları (Mirrors and Viewing Angles)</h2>
+<h3>What the slide showed</h3>
+<p>Title in blue underlined text: <strong>"Aynalar ve görüş açıları;"</strong> Below, a multi-paragraph text block in black explaining <strong>why mirrors matter</strong>, <strong>what factors to pay attention to when using them</strong>, and <strong>why blind spots exist geometrically</strong>.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Aynalar ve görüş açıları;</strong></p>
+<p>Taşıtlarımızda önümüzü görmek kadar arkamızı görmek de önemlidir. Önümüze çıkacak tehlikeler kadar arkamızdan gelecek tehlikelere de hazır olabilmek açısından aynalarımıza gereken ilgiyi göstermeliyiz.</p>
+<p>Peki bu ilgiyi gösterirken nelere dikkat etmeliyiz.</p>
+<p>Aynalara bakış yönümüz, açımız, süratimiz, yoldaki şeritteki konumumuz göstereceğimiz dikkatin ana unsurlarıdır. Aynalar, arkadan gelen araçların hızına göre kendi hızımızı, geçiş rotamızı, duruş sırasındaki güvenliğimizi kontrol etmemiz için hayati önem taşırlar.</p>
+<p>Tüm aynalarda bakış açımızla odaklama ve görüş açısı aynı olmadığından dolayı görüşte farklılık ortaya çıkar. Bu farklılık halk dilinde kör nokta olarak adlandırılmaktadır.</p>
+<p><strong>Mirrors and viewing angles;</strong></p>
+<p>In our vehicles, <strong>seeing behind us is just as important as seeing in front of us</strong>. In order to be prepared for dangers coming from behind just as much as dangers appearing in front, we must <strong>pay proper attention to our mirrors</strong>.</p>
+<p>So what should we pay attention to when giving that attention?</p>
+<p><strong>Our direction of gaze at the mirrors, our angle, our speed, and our position in the lane</strong> are the main elements of the attention we need to give. Mirrors are of <strong>vital importance</strong> for checking our own speed relative to the speed of approaching traffic behind us, our passing trajectory, and our safety while stopped.</p>
+<p>Since our <strong>angle of view, focus point, and field of view are not the same in every mirror</strong>, a discrepancy appears in vision. This discrepancy is commonly called the <strong>"blind spot" (kör nokta)</strong>.</p>
+</blockquote>
+<h3>Clean English explanation — the 3 ideas on this slide</h3>
+<h4>Idea 1 — Arkayı görmek önü görmek kadar önemli (seeing behind = seeing ahead)</h4>
+<p><strong>Plain English:</strong> Most beginner drivers focus 100% on what's in front of them. This slide is telling you that <strong>the traffic behind you is equally important</strong> because:</p>
+<ul>
+<li>A fast car overtaking you from behind can be a hazard</li>
+<li>Tailgaters can cause rear-end collisions</li>
+<li>You need to know who's behind you before braking, turning, or changing lanes</li>
+<li>Emergency vehicles (ambulans, polis, itfaiye) approaching from behind must be detected <strong>early</strong> so you can pull over</li>
+</ul>
+<p>The rule is: <strong>"Önü görmek kadar arkayı da görmek hayati önemdedir"</strong> (seeing behind is as vitally important as seeing ahead).</p>
+<hr />
+<h4>Idea 2 — The 4 "ana unsur" (main attention elements) when using mirrors</h4>
+<p>The slide lists <strong>4 things</strong> to focus on when checking your mirrors:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Bakış yönümüz</strong></td>
+<td>Our direction of gaze</td>
+<td><strong>Where</strong> you're looking (which mirror, which part of the mirror)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Açımız</strong></td>
+<td>Our angle</td>
+<td>The <strong>angle of view</strong> the mirror gives you — affected by mirror tilt and your head position</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Süratimiz</strong></td>
+<td>Our speed</td>
+<td>Your current speed affects how quickly approaching traffic catches up — faster = check mirrors more often</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Yoldaki / şeritteki konumumuz</strong></td>
+<td>Our position on the road / in the lane</td>
+<td>Where you are laterally — center of lane, near the line, etc. affects what your mirrors show</td>
+</tr>
+</tbody>
+</table>
+<p>All four work together: you're not just "glancing at the mirror", you're <strong>integrating</strong> direction, angle, speed, and position into a real-time understanding of the traffic situation behind and around you.</p>
+<hr />
+<h4>Idea 3 — What mirrors give you</h4>
+<p>The slide lists <strong>3 critical things</strong> that mirrors enable you to check:</p>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Situation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kendi hızımızı (arkadan gelenin hızına göre)</strong></td>
+<td>Your own speed relative to traffic behind</td>
+<td>Am I too slow? Too fast? Do I need to accelerate to clear the lane?</td>
+</tr>
+<tr>
+<td><strong>Geçiş rotası</strong></td>
+<td>Passing trajectory</td>
+<td>Is it safe to overtake? Is there a gap in the next lane?</td>
+</tr>
+<tr>
+<td><strong>Duruş sırasındaki güvenlik</strong></td>
+<td>Safety while stopped</td>
+<td>Is a car approaching too fast from behind while I'm stopped at a light? (→ prepare to move forward to avoid being rear-ended)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h4>Idea 4 — Why blind spots exist (geometric explanation)</h4>
+<p>The final paragraph explains <strong>the physical cause of the kör nokta</strong>:</p>
+<blockquote>
+<p><em>"Tüm aynalarda bakış açımızla odaklama ve görüş açısı aynı olmadığından dolayı görüşte farklılık ortaya çıkar. Bu farklılık halk dilinde kör nokta olarak adlandırılmaktadır."</em><br />
+<em>"Because </em><em>your angle of view</em><em>, </em><em>focal point</em><em>, and </em><em>field of view</em><em> are not the same in every mirror, a discrepancy appears in your overall vision. This discrepancy is called the </em><em>blind spot</em><em> in everyday language."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> This is a more precise explanation than slide 6. The reason the blind spot exists:</p>
+<ol>
+<li><strong>Bakış açısı (angle of view)</strong> — the angle between your eyes and the mirror</li>
+<li><strong>Odaklama (focus / focal point)</strong> — where your eye is actually focused (near the mirror surface vs. far into the reflected scene)</li>
+<li><strong>Görüş açısı (mirror's field of view)</strong> — how wide an area the mirror can reflect</li>
+</ol>
+<p>These three factors are <strong>different for each of your three mirrors</strong> (interior, left exterior, right exterior), so they don't all see the same areas. The <strong>gaps between what each mirror covers</strong> add up to the blind spot regions.</p>
+<p><strong>The takeaway:</strong> Blind spots are not a defect — they're an <strong>inherent geometric consequence</strong> of using flat or slightly curved mirrors with a seated driver's fixed eye position. Every car has them. You can't eliminate them, you can only <strong>compensate</strong> for them (lean forward, shoulder-check, adjust mirrors wider).</p>
+<h3>Connection to slide 6 (Kör nokta nedir)</h3>
+<p>Slides 6 and 7 are a <strong>pair</strong>:</p>
+<ul>
+<li><strong>Slide 6</strong> = what a blind spot IS (definition + how to compensate by leaning)</li>
+<li><strong>Slide 7</strong> = WHY blind spots exist (geometric explanation) + why mirrors matter in general</li>
+</ul>
+<p>Read them together. The exam will ask both "what is a kör nokta" (slide 6) and "why do they exist / what are the 4 elements of mirror attention" (slide 7).</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Arkamızı görmek önümüzü görmek kadar önemlidir.</strong><br />
+<em>Seeing behind is as important as seeing ahead.</em></p>
+<p><strong>Ayna kullanırken 4 ana unsur: bakış yönü, açı, sürat, şerit konumu.</strong><br />
+<em>4 main elements when using mirrors: gaze direction, angle, speed, lane position.</em></p>
+<p><strong>Kör nokta, farklı aynaların bakış açısı + odaklama + görüş açısı farklılığından doğan, aynaların göremediği bölgedir.</strong><br />
+<em>The blind spot is the region the mirrors cannot see, arising from differences in angle of view, focal point, and field of view across the mirrors.</em></p>
+</blockquote>
+<hr />
+<h2>4F. SLIDE 8 — ARACIN ÇALIŞTIRILMASI (Title Slide)</h2>
+<h3>What the slide showed</h3>
+<p>A large chapter-header slide with only the title <strong>"ARACIN ÇALIŞTIRILMASI"</strong> (Starting the Vehicle) in big blue letters.</p>
+<p>This is a <strong>section divider</strong> — hoca is moving from the "hazırlık" (preparation) topic into a new sub-topic about the actual <strong>procedure for starting the engine</strong>. There's no content on the slide itself — it's just announcing what comes next.</p>
+<h3>What's coming in the next slides (based on the portal)</h3>
+<p>According to <a href="../../e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md">e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md</a> section 1, the "ARAÇ KULLANMAYA HAZIRLIK" chapter concludes with <strong>"Aracı çalıştırma"</strong> — the procedure of actually starting the engine. Expect the next slides to cover:</p>
+<ul>
+<li>Vites kolunu boşa almak (put the gear in neutral)</li>
+<li>Kontak anahtarını çevirmek (turn the ignition key)</li>
+<li>Marş süresi (how long to hold the starter — see <a href="03-marş-sistemi.md">03-marş-sistemi.md</a>)</li>
+<li>Motor ısınması (wait 30 sn – 1 dk for warm-up — see [07 soğutma section if covered, or rodaj in the portal])</li>
+<li>Vites takmadan önce el frenini indirmek (release handbrake before engaging gear)</li>
+</ul>
+<hr />
+<h2>4G. SLIDE 9 — Doğru Oturma Pozisyonu (Recap + Seatbelt)</h2>
+<h3>What the slide showed</h3>
+<p>A small slide titled <strong>"DOĞRU OTURMA POZİSYONU"</strong> with a photograph of a woman sitting in the driver's seat, both hands on the steering wheel, upright posture, seatbelt fastened across her chest — illustrating the correct driving posture. Below the photo, a short text paragraph.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>DOĞRU OTURMA POZİSYONU</strong><br />
+Aracın şoför koltuğuna oturun ve emniyet kemerinizi takın. Koltuğu rahat edeceğiniz şekilde ayarlayın. Rahat bir sürüş için koltuğu, direksiyonun üst kısmını tutarken arkanıza yaslanabileceğiniz şekilde ayarlayabilirsiniz.</p>
+<p><strong>CORRECT SEATING POSITION</strong><br />
+Sit in the driver's seat and <strong>fasten your seatbelt</strong>. Adjust the seat to a comfortable position. For a comfortable drive, you can adjust the seat so that <strong>when you hold the top of the steering wheel, you can lean back against the seat back</strong>.</p>
+</blockquote>
+<h3>Clean English explanation — why this slide is on the "Aracın Çalıştırılması" section</h3>
+<p>The slide is a <strong>recap + the final seating check</strong> at the start of the "starting the vehicle" procedure. Even though we covered seating position in detail on slides 3 and 4, the slide repeats the key points here because <strong>the sequence matters</strong>:</p>
+<ol>
+<li>Get in the car (slide 2 title)</li>
+<li><strong>Sit down + fasten seatbelt</strong> ← this slide</li>
+<li>Adjust the seat (rules from slide 3)</li>
+<li>Grip the wheel correctly at 9:15 (slide 4)</li>
+<li>Adjust mirrors + compartment (slide 5)</li>
+<li><strong>Start the engine</strong> ← next slide(s)</li>
+</ol>
+<h3>The short-form test this slide gives you</h3>
+<p>This slide is essentially telling you: <em>"You can verify your seat is in the right position by doing this one test — reach for the top of the steering wheel with your hand while keeping your back against the seat. If you can reach it comfortably, the seat is correct."</em></p>
+<p>This is the <strong>same "arm extended → wrist on top of wheel" test</strong> from slide 3 rule 4, rephrased as "when you grip the top of the wheel, your back should still be against the seat." Both tests check the same thing: that the seat is <strong>the right distance from the steering wheel</strong>.</p>
+<h3>Key points from the recap</h3>
+<ol>
+<li><strong>Emniyet kemerini TAK</strong> → Fasten your seatbelt. (Emphasized before touching the gear shift or ignition.)</li>
+<li><strong>Koltuğu rahat edecek şekilde ayarla</strong> → Adjust the seat for comfort.</li>
+<li><strong>Direksiyonun üst kısmını tutarken arkana yaslanabilmelisin</strong> → You should be able to lean back against the seat while holding the top of the wheel.</li>
+</ol>
+<p>The photo reinforces the body position: upright spine, shoulders anchored to the seat, both hands on the wheel in the 9:15 region, seatbelt properly routed across the chest (not under the arm or on the neck).</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Doğru oturma pozisyonu testi:</strong> direksiyonun üst kısmını tutarken sırtın koltuk sırtına yaslanabiliyorsa koltuk ayarı doğrudur.<br />
+<em>Correct seating position test: if you can keep your back against the seat while gripping the top of the steering wheel, the seat is correctly adjusted.</em></p>
+<p><strong>Motoru çalıştırmadan önce emniyet kemeri takılmalıdır.</strong><br />
+<em>The seatbelt must be fastened before starting the engine.</em></p>
+</blockquote>
+<hr />
+<h2>4H. SLIDE 10 — Ayna Ayarı + Vitesin Boşta Olduğunu Kontrol Etme</h2>
+<h3>What the slide showed</h3>
+<p>A small text slide continuing the "Aracın Çalıştırılması" start sequence — how to adjust the mirrors and how to verify the gear lever is in neutral before starting the engine.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p>Aynaları kendinize göre ayarlayın. Sağ ve sol aynalarda ise aracın arkasını hafiften görebilecek şekilde ayarlamanızı öneririz. Dikiz aynasını ayarlarken ise kafanızı ortalayabilirsiniz. Vitesin boşta olduğuna emin olun. Vites kolunu sağa sola hareket ettirin. Sağa ve sola rahat hareket ediyorsa vites boştadır.</p>
+<p><strong>Adjust the mirrors to your position.</strong> For the <strong>left and right exterior mirrors</strong>, we recommend adjusting them so that you can <strong>just barely see the rear of your own car</strong>. When adjusting the <strong>dikiz aynası (interior rearview mirror)</strong>, you can <strong>center your head</strong> (set up with your head in the normal driving position). <strong>Make sure the gear is in neutral.</strong> Move the <strong>vites kolu (gear lever)</strong> left and right. If it <strong>moves freely left and right</strong>, the gear is in <strong>neutral (boş)</strong>.</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Dış aynalar (exterior mirrors) — the "sliver of your own car" rule</h4>
+<p>Adjust each exterior mirror so you see just a <strong>small sliver</strong> of your own car's rear flank on the inside edge of the mirror. This:</p>
+<ul>
+<li>Gives you a <strong>reference point</strong> so you know where the edge of your own car is</li>
+<li>Maximizes the <strong>outward field of view</strong> — because most of the mirror is showing the lane next to you, not your own doors</li>
+<li>Helps <strong>minimize the blind spot</strong> (slides 6 &amp; 7), though it can't eliminate it</li>
+</ul>
+<p><strong>Wrong way:</strong> tilting the mirror inward so you see half your own car — that's wasting half the mirror on something you already know the position of.</p>
+<h4>İç (dikiz) ayna (interior rearview mirror)</h4>
+<p>Adjust the <strong>dikiz aynası</strong> (interior mirror) so that with your head in the <strong>normal driving position</strong> (not leaning forward or sideways), you see the <strong>entire rear window</strong> framed in the mirror. The slide's instruction <strong>"kafanızı ortalayabilirsiniz"</strong> literally means "you can center your head" — i.e., set the mirror while sitting normally with your head in its natural driving position. Don't lean while adjusting, or the mirror will only work when you lean.</p>
+<h4>Vitesin boşta olduğunu kontrol etme (checking for neutral)</h4>
+<p>Before starting the engine on a manual transmission (düz vites) car, you must verify the gear is in <strong>neutral (boş)</strong>. The slide gives a simple test:</p>
+<blockquote>
+<p><strong>Vites kolunu sağa sola hareket ettir. Sağa ve sola rahat hareket ediyorsa vites boştadır.</strong><br />
+<em>Move the gear lever left and right. If it moves freely left and right, the gear is in neutral.</em></p>
+</blockquote>
+<p><strong>Why this works:</strong> when the gear lever is <strong>engaged</strong> in any gear (1, 2, 3, 4, 5, R), it's <strong>locked</strong> into the slot for that gear — it can't swing side-to-side, it can only slide forward-back within its column. In <strong>neutral</strong>, the lever is sitting in the <strong>central corridor</strong> between all the gear positions, so it can swing freely <strong>left and right</strong>. If it swings, you're in neutral; if it won't swing, you're still in gear.</p>
+<p><strong>Critical safety reason:</strong> if you crank the starter while in gear (e.g., 1st gear) with the clutch released, the <strong>car will lurch forward</strong> as soon as the engine catches — because the engine is already connected to the wheels. If the car is parked close to a wall, another car, or a pedestrian, this can cause damage or injury. <strong>Always verify neutral before starting.</strong></p>
+<p>On <strong>automatic (otomatik vites)</strong> cars, the equivalent is to make sure the shifter is in <strong>P (Park)</strong> or <strong>N (Neutral)</strong> before starting — most automatics won't even crank unless they're in one of those two positions (a safety interlock).</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Dış aynaları, kendi aracınızın arka köşesini hafifçe görecek şekilde ayarlayın.</strong><br />
+<em>Adjust the exterior mirrors so you can just barely see the rear corner of your own car.</em></p>
+<p><strong>İç aynayı, normal sürüş pozisyonunda kafanız ortalanmış haldeyken ayarlayın.</strong><br />
+<em>Adjust the interior mirror while sitting in normal driving position with your head centered.</em></p>
+<p><strong>Motoru çalıştırmadan önce vites boşta olmalıdır. Test: vites kolu sağa-sola rahat hareket ediyorsa vites boştadır.</strong><br />
+<em>The gear must be in neutral before starting the engine. Test: if the lever moves freely left-and-right, you're in neutral.</em></p>
+</blockquote>
+<hr />
+<h2>4I. SLIDE 11 — Kontak Anahtarını Çevirme Prosedürü (Ignition Key Procedure)</h2>
+<h3>What the slide showed</h3>
+<p>A small text slide describing how to <strong>insert and turn the ignition key</strong>, the <strong>two key positions</strong> during starting, what should happen with the dashboard warning lights, and what it means if starting takes too long.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p>Kontak anahtarını direksiyonun sağında bulunan anahtar girişine takın ve ileri doğru çevirin. İlk çevirişinizde bazı elektronik aksam ve aydınlatmaları devreye sokacak, çevirmeye devam ederek ikinci kademeye getirdiğinizde ise göstergeler çalışacaktır. Göstergelerin birçoğu birkaç saniye içinde söner. Bu göstergelerden normalin üzerinde birkaç saniye içerisinde sönmesi gerekirken yanmakta [kalanlar arıza işaretidir]. [Bir arıza hissetmiyorsanız / yanmıyorsa] ve araba çalışıncaya kadar elinizi bırakmayın. Yaklaşık 1 saniye içerisinde araba çalışır. Eğer aracın çalışması 1-2 saniyeden uzun sürüyorsa bir arıza olabilir.</p>
+<p><strong>Insert the ignition key</strong> into the keyhole on the <strong>right side of the steering wheel</strong> and <strong>turn it forward</strong>. On your <strong>first turn</strong> it will activate <strong>some electronics and lights</strong>. Continuing to turn, when you bring it to the <strong>second position</strong>, the <strong>gauges (göstergeler)</strong> will activate. <strong>Most of the warning lights will go out within a few seconds.</strong> [Any warning lights that should have gone out but are still lit are a sign of a fault.] [Continue to] hold the key until the car starts. <strong>The car starts within about 1 second.</strong> If starting takes <strong>longer than 1–2 seconds</strong>, there may be a fault.</p>
+</blockquote>
+<h3>Clean English explanation — the 3 key positions</h3>
+<p>On a traditional key-ignition car (not push-button start), the ignition switch has <strong>3 — sometimes 4 — positions</strong> as you turn the key forward:</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0 (kapalı)</strong></td>
+<td>Kapalı konum</td>
+<td>Off</td>
+<td>Nothing powered. Key can be removed.</td>
+</tr>
+<tr>
+<td><strong>1 (kontak açık)</strong></td>
+<td>İlk kademe</td>
+<td>Accessory / Ignition On</td>
+<td><strong>Electronics + aydınlatma</strong> (radio, lights, interior) come alive. Engine NOT running.</td>
+</tr>
+<tr>
+<td><strong>2 (kontak açık - ikinci kademe)</strong></td>
+<td>İkinci kademe</td>
+<td>Ignition (full on)</td>
+<td><strong>Göstergeler (gauges)</strong> activate, warning lights come on, fuel pump primes. Engine still NOT running.</td>
+</tr>
+<tr>
+<td><strong>3 (marş)</strong></td>
+<td>Marş konumu</td>
+<td>Start / Cranking</td>
+<td>Spring-loaded — you hold the key here. The <strong>marş motoru (starter motor)</strong> cranks the engine. Release when the engine catches.</td>
+</tr>
+</tbody>
+</table>
+<p>The slide focuses on positions 1, 2, and 3. The key insight from the slide: as you turn the key forward in stages, different things happen — electronics first, then gauges, then the starter cranks.</p>
+<h3>Dashboard warning lights (kontak açıkken yanan ikazlar)</h3>
+<p>When you turn the key to <strong>position 2 (kontak açık)</strong>, every warning light on the dashboard lights up briefly as a <strong>self-test / bulb check</strong> (<em>kontrol amaçlı</em>). This is normal — it tells you that all the warning bulbs are working. Within a few seconds of the engine starting:</p>
+<ul>
+<li><strong>Göstergelerin çoğu söner</strong> → most warning lights go out.</li>
+<li><strong>Normalde sönmesi gereken ama yanmaya devam eden ışıklar</strong> → any warning light that <strong>stays on</strong> after it should have gone off is a <strong>fault indicator</strong> and must be investigated before driving.</li>
+</ul>
+<p><strong>The 3 red-light rule applies here</strong> — see <a href="05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a>:</p>
+<ol>
+<li><strong>Yağ ikazı (oil warning)</strong> — must go out within seconds of engine start. If it stays on → stop immediately.</li>
+<li><strong>Şarj ikazı (charge warning / battery)</strong> — must go out within seconds. If it stays on → charging system fault (alternatör / akü / kayış).</li>
+<li><strong>Hararet ikazı (temperature warning)</strong> — should not come on at all during normal operation. If it comes on → overheat, stop immediately.</li>
+</ol>
+<p>These are the <strong>3 kırmızı ikaz lambası</strong> — all three must be OFF before you start driving. If any of them stays on after startup, <strong>the car should not be driven</strong>.</p>
+<h3>Marş süresi (how long to hold the starter)</h3>
+<p>The slide says <strong>"yaklaşık 1 saniye içerisinde araba çalışır"</strong> — the engine catches within about 1 second. If it takes longer than 1–2 seconds, something is wrong.</p>
+<p><strong>Note the exam/real-world discrepancy:</strong></p>
+<ul>
+<li><strong>Real-world practice:</strong> you hold the starter for about <strong>1 – 5 seconds</strong> until the engine catches, then release immediately.</li>
+<li><strong>Exam answer for marş süresi:</strong> per the MEB curriculum (see <a href="03-marş-sistemi.md">03-marş-sistemi.md</a>), the exam answer is <strong>"10 – 15 saniyeden fazla marşa basılmamalıdır"</strong> — you should NOT hold the starter for more than 10–15 seconds, because longer cranking overheats the starter motor and drains the battery.</li>
+</ul>
+<p><strong>Rule of thumb:</strong><br />
+- <strong>This slide</strong> = what happens in practice (engine catches in ~1 sec)<br />
+- <strong>Exam answer</strong> = what the maximum allowed crank time is (<strong>10–15 sn max</strong>)</p>
+<p>Both are true — they're answering different questions. The exam question is "how long should you crank max?" and the answer is <strong>10–15 sn</strong>. If cranking hasn't produced a running engine by then, there's a problem and you need to stop, wait for the starter motor to cool, and investigate.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Kontak anahtarı direksiyonun sağında bulunur ve ileri doğru çevrilir.</strong><br />
+<em>The ignition key is located to the right of the steering column and is turned forward.</em></p>
+<p><strong>Kontak açıkken göstergeler bir self-test için yanar, motor çalıştıktan sonra sönmelidir.</strong><br />
+<em>When the ignition is on, the gauges light up as a self-test, and should go out after the engine starts.</em></p>
+<p><strong>Motor çalıştıktan sonra yanmaya devam eden herhangi bir ikaz lambası arıza belirtisidir.</strong><br />
+<em>Any warning light that stays on after the engine starts is a sign of a fault.</em></p>
+<p><strong>Marş süresi:</strong> gerçek hayatta araba yaklaşık 1 saniyede çalışır; sınavda cevap <strong>10 – 15 saniyeden fazla marşa basılmaz</strong>.<br />
+<em>Cranking time: in real life the car starts in about 1 second; the exam answer is "don't crank for more than 10–15 seconds".</em></p>
+</blockquote>
+<hr />
+<h2>4J. SLIDE 12 — Üç Pedal: Debriyaj, Fren, Gaz (3 Pedals: Clutch, Brake, Gas)</h2>
+<h3>What the slide showed</h3>
+<p>A small text slide explaining the <strong>3 pedals</strong> of a manual transmission car, which foot to use for each, and the pre-start safety procedure of pressing the clutch and brake before starting the engine.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p>Ayağınızın altında üç adet pedal vardır. Bunlar soldan sağa doğru <strong>debriyaj, fren ve gaz pedallarıdır</strong>. Sol ayağınızı debriyaj pedalına, sağ ayağınızı ise fren ve gaz pedallarına basmak için kullanacaksınız. Bu aşamada sol ayağınızı sonuna kadar debriyaja, sağ ayağınızı da frene basın. Aslında pedallara aracı çalıştırmadan önce basmanız sizin için bir tedbir niteliğinde olacaktır.</p>
+<p>There are <strong>three pedals</strong> beneath your feet. From <strong>left to right</strong> they are the <strong>debriyaj (clutch), fren (brake), and gaz (gas/accelerator) pedals</strong>. You'll use your <strong>left foot for the clutch pedal</strong> and your <strong>right foot for both the brake and the gas</strong>. At this stage, press the <strong>clutch all the way down</strong> with your left foot and <strong>press the brake</strong> with your right foot. Pressing both pedals before starting the engine serves as a <strong>safety precaution</strong>.</p>
+</blockquote>
+<h3>The 3 pedals — memorize the left-to-right order</h3>
+<p>On a <strong>manual transmission (düz vites)</strong> car, the pedals are arranged left-to-right:</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Foot</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Left</strong></td>
+<td><strong>Debriyaj</strong></td>
+<td>Clutch</td>
+<td><strong>Sol ayak</strong> (left foot)</td>
+<td>Disengages the engine from the transmission so you can shift gears</td>
+</tr>
+<tr>
+<td><strong>Middle</strong></td>
+<td><strong>Fren</strong></td>
+<td>Brake</td>
+<td><strong>Sağ ayak</strong> (right foot)</td>
+<td>Slows/stops the car</td>
+</tr>
+<tr>
+<td><strong>Right</strong></td>
+<td><strong>Gaz</strong></td>
+<td>Gas / Accelerator</td>
+<td><strong>Sağ ayak</strong> (right foot)</td>
+<td>Opens the throttle, makes the engine produce more power</td>
+</tr>
+</tbody>
+</table>
+<h3>Foot-assignment rule — absolutely critical for the exam</h3>
+<blockquote>
+<p><strong>Sol ayak → sadece debriyaj. Sağ ayak → hem fren hem gaz.</strong><br />
+<em>Left foot → only the clutch. Right foot → both brake and gas.</em></p>
+</blockquote>
+<p><strong>Why right foot handles both brake and gas:</strong> because you never need to press the <strong>brake and gas at the same time</strong>. It's one or the other — speeding up or slowing down. By using the same foot for both, you force yourself to make a clean decision between the two, and it's physically impossible to accidentally press both together.</p>
+<p><strong>Why left foot is only for the clutch:</strong> you can't use the left foot for braking because the clutch has to be ready for every gear change, and because using the left foot to brake is an unwanted habit that leads to <strong>"brake-and-gas at the same time"</strong> — which burns out brakes and wastes fuel.</p>
+<p><strong>Exam trap question:</strong><br />
+- <em>"Düz vitesli araçta fren pedalı hangi ayakla kullanılır?"</em> → <strong>Sağ ayak</strong> (right foot)<br />
+- <em>"Düz vitesli araçta debriyaj pedalı hangi ayakla kullanılır?"</em> → <strong>Sol ayak</strong> (left foot)<br />
+- <em>"Sol ayak hangi pedala basar?"</em> → <strong>Debriyaj (clutch)</strong></p>
+<h3>Automatic transmission exception</h3>
+<p>On <strong>otomatik vitesli (automatic)</strong> cars, there is <strong>no clutch pedal</strong> — only brake and gas. Both are operated by the <strong>right foot</strong>. The <strong>left foot</strong> stays on the <strong>dead pedal (ayak dayama yeri)</strong> the entire time, used only for bracing the body against the seat (slide 3, rule 3).</p>
+<p>Reference: <a href="../../e-kitap/03-araç-tekniği/01-aracla-ilgili-temel-bilgiler.md">e-kitap/03-araç-tekniği/01-aracla-ilgili-temel-bilgiler.md</a> — the portal explicitly says: <em>"Otomatik vitese sahip araçlarda manuel araçlardan farklı olarak vites sürücü tarafından değiştirilmiyor... bu nedenle otomatik vitesli araçlarda debriyaj bulunmuyor. Sol tarafta fren, sağ tarafta ise gaz pedalı bulunuyor."</em></p>
+<h3>Pre-start safety: press clutch + brake</h3>
+<p>The slide ends with an important safety rule:</p>
+<blockquote>
+<p><strong>Aracı çalıştırmadan önce sol ayağınızı debriyaja, sağ ayağınızı frene basın.</strong><br />
+<em>Before starting the car, press the clutch with your left foot and the brake with your right foot.</em></p>
+</blockquote>
+<p><strong>Why this is a safety precaution (tedbir):</strong></p>
+<ol>
+<li><strong>Clutch pressed down</strong> = engine is physically disconnected from the transmission. Even if the car was accidentally left in gear, it cannot lurch forward when the engine catches.</li>
+<li><strong>Brake pressed down</strong> = even if the parking brake is weak or released, the car cannot roll in either direction.</li>
+</ol>
+<p>So the safe starting posture is: <strong>left foot on clutch (floor), right foot on brake, key turns in ignition</strong>. On many modern cars this is actually <strong>required</strong> — the car won't crank at all unless the clutch pedal is pressed (a clutch-start interlock switch).</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>3 pedal soldan sağa: debriyaj, fren, gaz.</strong><br />
+<em>3 pedals from left to right: clutch, brake, gas.</em></p>
+<p><strong>Sol ayak sadece debriyaj için kullanılır. Sağ ayak hem fren hem gaza basar.</strong><br />
+<em>The left foot is used only for the clutch. The right foot presses both the brake and the gas.</em></p>
+<p><strong>Aracı çalıştırmadan önce sol ayak debriyaja, sağ ayak frene basılır — güvenlik tedbiri.</strong><br />
+<em>Before starting the engine, the left foot presses the clutch and the right foot presses the brake — as a safety precaution.</em></p>
+</blockquote>
+<hr />
+<h2>4K. SLIDE 13 — El Freni İndirme + Birinci Vites + Kalkış (Handbrake Release + 1st Gear + Moving Off)</h2>
+<h3>What the slide showed</h3>
+<p>A small text slide describing the <strong>final moving-off sequence</strong>: lowering the handbrake, shifting into first gear, releasing the clutch while lifting off the brake, and lightly pressing the gas — the exact coordination needed to get the car rolling.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p>İki koltuğun arasında bulunan <strong>el freni kolunu aşağıya indirin</strong>. Bunu yaparken üzerindeki düğmeye basarak önce çok az yukarı çekmeniz ve ardından tamamen aşağı indirmeniz gerekecektir. Bunu yaptığınızda göstergeler arasındaki <strong>"el freni ışığı" sönecektir</strong>. <strong>Aracı birinci vitese alın.</strong> Sol ayağınızı yavaşça debriyajdan çekerken sağ ayağınızı frenden kaldırın ve <strong>hafifçe gaz pedalına basın</strong>. Araba hareket edecektir. Bu an ayrıntılı şekilde anlatılmalı ve uygulanmalıdır.</p>
+<p><strong>Lower the handbrake lever</strong> located between the two seats. To do this, press the <strong>button on top</strong> of the lever, first pull it <strong>slightly up</strong>, then <strong>lower it all the way down</strong>. Once you do this, the <strong>"handbrake light" on the dashboard will go out</strong>. <strong>Put the car in first gear (birinci vites).</strong> <strong>Slowly release the clutch</strong> with your left foot while <strong>lifting your right foot off the brake</strong> and <strong>lightly pressing the gas pedal</strong>. The car will start to move. This moment must be explained in detail and practiced.</p>
+</blockquote>
+<h3>Clean English explanation — step by step</h3>
+<h4>Step 1 — Release the handbrake (el freni indirme)</h4>
+<p>The handbrake (<strong>el freni / park freni</strong>) in most Turkish manual cars is a <strong>lever between the two front seats</strong>. It has a <strong>button</strong> (düğme) on top that must be pressed to release the ratcheting mechanism. The correct release procedure:</p>
+<ol>
+<li><strong>Press the button</strong> on top of the lever with your thumb — this disengages the ratchet</li>
+<li><strong>Pull the lever slightly up first</strong> (just 1–2 cm) — this releases the pawl</li>
+<li><strong>Lower it all the way down</strong> (into the flat/rest position)</li>
+</ol>
+<p><strong>Why the "pull up first" step:</strong> if you just press the button and push the lever down without pulling up first, the mechanism can <strong>jam</strong> or <strong>catch</strong>. The brief upward pull unloads the pawl so the ratchet can slide past it cleanly.</p>
+<p><strong>Dashboard confirmation:</strong> when the handbrake is fully released, the <strong>"el freni ışığı"</strong> (handbrake warning light, usually a red circle with "!" or "P") <strong>goes out</strong> on the dashboard. If it stays on, the handbrake isn't fully released — do NOT try to drive off, because you'll burn the rear balatas (see <a href="09-fren-sistemi.md">09-fren-sistemi.md</a> slide 3, fault 1: <em>"El freni çekik unutulursa balatalar ısınır, yanar"</em>).</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"El freni lambası yanmaya devam ediyorsa ne yapılır?"</em> → <strong>El frenini tamamen indir.</strong><br />
+- <em>"El freni çekik unutulursa ne olur?"</em> → <strong>Balatalar yanar, fren tutmaz olur.</strong></p>
+<hr />
+<h4>Step 2 — Shift into first gear (birinci vites)</h4>
+<p>With the <strong>clutch still pressed fully down</strong> (from slide 12's safety position), move the <strong>vites kolu (gear lever)</strong> to the <strong>1st gear position</strong>. On most H-pattern manual gearboxes, 1st is in the <strong>top-left</strong> position.</p>
+<p><strong>Why first gear and not second:</strong> 1st gear has the <strong>highest mechanical advantage</strong> (lowest gear ratio) — it gives you the maximum torque multiplication, which is what you need to get a stationary car moving against friction, inertia, and any slight slope. Starting in 2nd gear is possible on flat ground but requires more clutch slip and wears out the clutch faster.</p>
+<hr />
+<h4>Step 3 — The clutch-gas-brake coordination (the hard part)</h4>
+<p>This is the <strong>kalkış</strong> (move-off) procedure and it's the single hardest skill for beginner manual drivers:</p>
+<ol>
+<li><strong>Sol ayağı yavaşça debriyajdan çek</strong> → slowly lift your left foot off the clutch. <strong>Slowly</strong> is the key word.</li>
+<li><strong>Sağ ayağı frenden kaldır</strong> → simultaneously lift your right foot off the brake.</li>
+<li><strong>Hafifçe gaz pedalına bas</strong> → gently press the gas pedal with your right foot.</li>
+</ol>
+<p>The <strong>timing</strong> is what matters:<br />
+- The clutch must come up <strong>gradually</strong>, not fast — it engages the engine to the transmission<br />
+- The gas must come on <strong>at the same time</strong> as the clutch rises — to give the engine enough power not to stall<br />
+- If you release the clutch too fast → the engine stalls (araç stop eder)<br />
+- If you don't give enough gas → the engine also stalls<br />
+- If you give too much gas with the clutch still down → the engine revs without moving the car, wearing out the clutch plate</p>
+<p>There's a <strong>sweet spot</strong> called the <strong>"yarım kontak" (half-clutch / friction point)</strong> where the clutch is partially engaged and the car starts to creep forward. At the yarım kontak point, you hold the clutch steady and let the car inch forward while the engine pulls against the load. This is the critical skill that takes 10–20 hours of practice to master.</p>
+<p><strong>Exam angle:</strong> <em>"yarım kontak" süresi hesaplanır mı?</em> — for the exam, you just need to know what yarım kontak <strong>is</strong> (the partial-engagement point) and that it's used for <strong>starting on a slope</strong> and <strong>slow maneuvering</strong>. The actual control of it is tested on the <strong>direksiyon uygulama sınavı</strong> (practical driving test), not the theory exam.</p>
+<hr />
+<h3>The full start-to-moving sequence (all 13 slides summarized)</h3>
+<p>Here's the full sequence from "approaching the car" to "moving off", tying all 13 slides together:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Phase</th>
+<th>From slide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Walk around the car</strong> — check tires, lamps, signals, fuel cap, oil leak, underneath (cats!)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Get in the car</strong></td>
+<td>(slide 2 title)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sit correctly</strong> — 90° back, shoulders on seat, left foot brace, wrist on top of wheel</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Grip wheel at 9:15</strong>, elbows bent 90°–120°</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Adjust seat</strong> so you can reach controls comfortably</td>
+<td>5 (item 1)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Adjust all 3 mirrors</strong> — interior + both exteriors, tiny sliver of your car on the inside edge</td>
+<td>5 (item 2) + 7</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Fasten seatbelt</strong> (yours and verify passengers')</td>
+<td>5 (item 3) + 9</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Familiarize with controls</strong> — lights, accessories, handbrake location</td>
+<td>5 (item 4)</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Verify gear is in neutral</strong> — wiggle lever left-right</td>
+<td>10</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Press clutch fully + press brake</strong> (both feet down)</td>
+<td>12</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Turn the ignition key</strong> forward in 2 stages; hold until engine catches</td>
+<td>11</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Release the handbrake</strong> (button, pull up slightly, lower) → el freni ışığı söner</td>
+<td>13 (step 1)</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Shift into 1st gear</strong></td>
+<td>13 (step 2)</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Slowly release clutch + lift off brake + lightly press gas</strong> — car starts moving</td>
+<td>13 (step 3)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>This is the complete "aracı çalıştırma ve hareket ettirme" procedure</strong> and it's exactly what you'll do in every direksiyon lesson when you start the car.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>El freni indirme sırası:</strong> düğmeye bas → biraz yukarı çek → tamamen aşağı indir → el freni ışığı söner.<br />
+<em>Handbrake release sequence: press button → pull slightly up → lower all the way → handbrake light goes out.</em></p>
+<p><strong>Kalkış:</strong> 1. vitese al → sol ayağı yavaşça debriyajdan çek + sağ ayağı frenden kaldır + hafifçe gaza bas.<br />
+<em>Move-off: shift to 1st gear → slowly release clutch + lift off brake + lightly press gas.</em></p>
+<p><strong>El freni ışığı sönmeden araç hareket ettirilmez.</strong><br />
+<em>The car must not be driven until the handbrake light goes out.</em></p>
+</blockquote>
+<hr />
+<h2>4L. Hoca's Live Class Additions (2026-04-14) — Güvenli Araç Kullanma</h2>
+<h3>Addition 1 — Real story: short female student blamed her parking failure on poor seat adjustment</h3>
+<p>Hoca shared a concrete anecdote about why doğru oturma pozisyonu matters in practice:</p>
+<blockquote>
+<p><em>"Bir gün parkta böyle, çünkü kızın biri kalmıştı. Boyu da kısaydı bayağı böyle. İndiğinde söylediği şey inan bu oldu. Belki vicdanını rahatlatmak içindi bilemem. Ama oturmayla ilgili sıkıntı yaşadığını, pedallara rahat dokunamadığını söylemişti. 'Hocam koltuk ayarını güzel yapamadım. Ben o yüzden pedallara güzel basamadım. Parkı da güzel yapamadım, ondan kaldım.'"</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> A short female student failed the direksiyon sınavı at the <strong>park maneuvers</strong> and, when she got out of the car, blamed her failure on the seat adjustment — she said she couldn't reach the pedals comfortably, which is why she couldn't press them smoothly, which is why she couldn't do the park maneuver cleanly.</p>
+<p><strong>Critical takeaway — why hoca told this story:</strong></p>
+<ol>
+<li><strong>Seat adjustment is not optional or cosmetic.</strong> If you're too far from the pedals, you <strong>cannot</strong> operate them with fine control. Your foot either stabs at the pedal or can't reach it at all, and clutch/brake/gas become clumsy.</li>
+<li><strong>Short drivers must move the seat forward aggressively</strong> — don't be afraid to look "close to the wheel" if that's what it takes to reach the pedals. The driving position has a range for a reason, and if you're short, <strong>your correct position is further forward than average</strong>.</li>
+<li><strong>Every driver has a different correct seat position</strong> — there's no "one position for everyone". Even 12 students driving the same exam car in the same day each adjust it for themselves.</li>
+<li><strong>Do the seat adjustment BEFORE every lesson and every exam</strong>, not as an afterthought once you're already moving.</li>
+</ol>
+<p><strong>Exam angle:</strong> this ties directly to slide 3 rule 4 (seat forward so wrist rests on top of wheel). If the wrist-on-top-of-wheel test fails, you are <strong>too far</strong> — move forward until it passes, regardless of how "close" it feels.</p>
+<hr />
+<h3>Addition 2 — Practical shoes rule for direksiyon lessons: soft soles, no thick/hard shoes</h3>
+<p>Hoca gave an important practical recommendation that is NOT in any slide:</p>
+<blockquote>
+<p><em>"Direksiyon dersleriniz başladığı zaman arkadaşlar, kesinlikle böyle altı sert, kauçuk, yüksek tavanlı bir ayakkabıyla direksiyon dersine gitmeyin olur mu? Bu pedalları özellikle hiç kullanmayanlar için söylüyorum. Hissetmek için ne kadar aşağıda, ne kadar yukarıda olduğunu anlayabilmeniz için ne yapmanız lazım? Hissetmeniz lazım. O yüzden altı yumuşak böyle spor ayakkabı gibi ya da babet gibi öyle diyeyim size ayakkabılar tercih edin."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> When you go to direksiyon lessons, <strong>do NOT wear</strong>:</p>
+<ul>
+<li><strong>Altı sert ayakkabı</strong> — hard-soled shoes</li>
+<li><strong>Kauçuk / yüksek tavanlı ayakkabı</strong> — thick rubber-soled boots, platform shoes</li>
+<li>Work boots, thick hiking boots, or anything with a rigid base</li>
+</ul>
+<p><strong>DO wear:</strong></p>
+<ul>
+<li><strong>Altı yumuşak spor ayakkabı</strong> — soft-soled sneakers / running shoes</li>
+<li><strong>Babet</strong> — ballet flats (for women)</li>
+<li>Anything where your foot can <strong>feel</strong> the pedal underneath</li>
+</ul>
+<p><strong>Why this matters — hoca's reasoning:</strong></p>
+<blockquote>
+<p><em>"Hissetmek için ne kadar aşağıda, ne kadar yukarıda olduğunu anlayabilmeniz için hissetmeniz lazım."</em></p>
+</blockquote>
+<p>When you're <strong>new to driving</strong>, you need to develop a <strong>feel</strong> for the pedals — how far is half-clutch, how much force is half-brake, how sensitive is the gas. A <strong>rigid shoe separates your foot from the pedal</strong> and you lose all that tactile information. With a soft shoe, you can feel the exact position of the pedal beneath your foot, which is critical for learning <strong>yarım debriyaj (half-clutch)</strong> and smooth braking.</p>
+<p><strong>Experienced drivers can wear anything</strong> because they already have muscle memory. But <strong>for the first 10–20 hours of driving</strong>, soft shoes will cut your learning time roughly in half.</p>
+<p><strong>Exam day dress code:</strong> also wear the same soft shoes you practiced in. Don't wear a brand-new pair of shoes on exam day — stick with something your feet already know.</p>
+<hr />
+<h3>Addition 3 — Practical advice: start with 6–7 kurs lessons, then practice with family</h3>
+<p>Hoca gave a sequenced practice plan for people with zero driving experience:</p>
+<blockquote>
+<p><em>"Öncelikle tabii ki e-sınavınız bittikten sonra bir 3-4 gün derslerinizi şöyle alın. 8 ders, 10 ders. Sonrasında kendi aracınız babanın yardımıyla, kardeşinin yardımıyla varsa birazcık ufak ufak pratikler yapın. Ama önce bir 6 ders, 7 ders ne yapın? Mutlaka kurs hocasıyla derse çıkın. Özellikle hiç araba kullanmamış olan adaylara. Çoğu mesela 'Hocam, ilk kez direksiyonun başına oturduğum. İlk kez debriyaj ne demek gördüm' falan filan."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> Hoca's recommended learning sequence for <strong>new drivers</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>What</th>
+<th>Where</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td><strong>E-sınav</strong> (theory test)</td>
+<td>At home / online</td>
+<td>Get the legal theory out of the way first</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td><strong>6–7 direksiyon lessons WITH the kurs hocası (driving school instructor)</strong></td>
+<td>In the kurs car, with professional teaching</td>
+<td>Build basic skills in a controlled setting with someone who knows what they're doing</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td><strong>A few more lessons (8–10 total)</strong></td>
+<td>Same</td>
+<td>Solidify the core skills</td>
+</tr>
+<tr>
+<td><strong>4</strong></td>
+<td><strong>Informal practice with family</strong> (baba, kardeş)</td>
+<td>Private land / quiet streets, in a family car</td>
+<td>Build confidence and hours</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why NOT start with family practice:</strong> hoca has seen many students whose <strong>first-ever driving experience</strong> was with a family member, and they developed bad habits that took weeks to unlearn in the kurs lessons. Start with a professional instructor — they'll teach you the <strong>right way</strong> the first time, and you won't have to unlearn anything.</p>
+<p><strong>The "I've never driven" reality:</strong> many of hoca's students say things like <em>"Hocam, ilk kez direksiyonun başına oturuyorum. İlk kez debriyaj ne demek gördüm"</em> (Teacher, this is my first time sitting behind the wheel, I just learned what a clutch is). This is normal — you are not alone. But you need <strong>at least 6–7 kurs lessons</strong> before you're ready to drive even in a supervised family setting.</p>
+<hr />
+<h3>Addition 4 — Sancaktepe / Tahtekale context for park maneuvers &amp; blind spots</h3>
+<p>Hoca connected the kör nokta slides to <strong>local trafik reality in Istanbul</strong>:</p>
+<blockquote>
+<p><em>"Park yapacaksınız arkadaşlar. L park yapacaksınız. Paralel park yapacaksınız. Parklarda bu aynaları ve yeri görmek, geyiği görmek çok işinize yarayacak. Bu aynaya bakarak duvalara çarpmamaya çalışacaksın. İki gün sonra çünkü bir AVM'ye gideceksin, değil mi? Yanında sağında solunda arabalar olacak çok yakınında. Onlara çarpmamak için milim milim çıkacaksın. Nereye bakacaksın? Aynalara bakacaksın. Ya da işte çok kalabalık bir yoldan Tahtakale'nin merkez trafiğini düşünün. Alanda araç kullan mesela. Sancaktepe'dekiler Sancaktepe alanında, Tahtakale'dekiler Tahtakale alanında araç kullanacak. Ama çok yoğun bir trafiğin içine girdiğinde inan böyle heyecanlanıyor. Hele ayağı birbirine dolaşıyor adayın. İşte bu heyecanı atmak lazım."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> Mirror use is <strong>not optional</strong> in real Turkish city driving. Concrete examples hoca gave:</p>
+<ol>
+<li><strong>L park and paralel park maneuvers on the exam</strong> — you need the side mirrors to avoid hitting walls, curbs, or other cars</li>
+<li><strong>AVM (shopping mall) parking</strong> — cars on both sides, <strong>milim milim</strong> (millimeter by millimeter) precision required, the only way to see the gap is through your mirrors</li>
+<li><strong>Istanbul merkez traffic (Tahtakale, Sancaktepe)</strong> — extremely dense, cars constantly cutting in from every direction, and students literally panic and <strong>"ayağı birbirine dolaşıyor"</strong> (their feet get tangled up) at first exposure</li>
+<li><strong>Direksiyon sınavı alanı</strong> — students at the Sancaktepe kurs drive at the <strong>Sancaktepe alanı</strong>, students at the Tahtekale kurs drive at the <strong>Tahtekale alanı</strong></li>
+</ol>
+<p><strong>The practical lesson:</strong> practice mirror use until it's automatic <strong>before</strong> you go into any of these situations. The first time you encounter dense Istanbul traffic should <strong>not</strong> be the first time you're relying on your mirrors.</p>
+<hr />
+<h3>Addition 5 — Detailed walkthrough of the yarım kontak exam test (see also <a href="05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a> section 4G)</h3>
+<p>Hoca gave detail on exactly what the committee asks during the <strong>yarım kontak test</strong> at the start of the direksiyon sınavı. This content is reflected in more detail in <a href="05-aydınlatma-ikaz-sistemi.md#4g-hocas-live-class-additions-2026-04-14--göstergeler--yarım-kontak-exam-test">05-aydınlatma-ikaz-sistemi.md section 4G</a> — read it there. Key point: at the yarım kontak position (engine NOT yet running), the komisyon will ask:</p>
+<ul>
+<li><strong>Şu gösterge ne?</strong> (point to a dashboard icon)</li>
+<li><strong>Sağa / sola sinyal ver</strong> (operate turn signals)</li>
+<li><strong>Pedalları say</strong> (name the 3 pedals left-to-right: debriyaj, fren, gaz)</li>
+<li><strong>Uzun farları aç, kısa farları aç</strong> (operate low/high beams)</li>
+<li><strong>İç aydınlatma nerede?</strong> (find the interior light)</li>
+<li>Plus likely: dörtlü, sis lambası, cam sileceği, korna, el freni konumu</li>
+</ul>
+<p><strong>Only after you pass this test does the committee say "hazırsan aracı çalıştır"</strong> and you go to full ignition.</p>
+<hr />
+<h3>Addition 6 — "Çok aşırı sıkı tutmak da doğru değil" — don't grip too tight</h3>
+<p>Hoca added a small refinement to the 9:15 rule:</p>
+<blockquote>
+<p><em>"Direksiyonun dediğim gibi üst tarafından tuttuğunuzda sırtınız böyle dik olacak. Ayaklarınız da pedallara rahatlıkla uzanabiliyor şekilde olacak... Çok aşırı sıkı tutmak da doğru değil bu arada."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> Don't death-grip the wheel. Your hands should be <strong>firm but relaxed</strong> at 9:15. A tight stranglehold on the wheel:<br />
+- Tires your forearms quickly<br />
+- Reduces fine-control sensitivity<br />
+- Makes you overcorrect on small bumps<br />
+- Makes passengers nervous</p>
+<p>Think of it as <strong>holding a small bird</strong> — firm enough not to drop it, gentle enough not to hurt it. This applies throughout your drive, not just at startup.</p>
+<hr />
+<h3>Addition 7 — The "ensuring the car knows the car" habit</h3>
+<p>Hoca mentioned a subtle but important practical habit:</p>
+<blockquote>
+<p><em>"Gördüğünüz gibi şuralarda düğmeleri var. Yine uygulama dersinde hocalar size gösterecek. 'Bak şunu çevir' diyecek. 'Şuradan aşağıya gidiyor, buradan öne gidiyor.' Aracı çok iyi tanımanız lazım."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> Every driving lesson, your hoca should <strong>actively point at each control</strong> and tell you "this turns on X, this goes forward to do Y". You should <strong>ask</strong> if they don't volunteer the info. By the end of your first few lessons, you should know — <strong>without looking</strong> — where every switch, lever, and button is in the kurs car. This is the only way to pass the yarım kontak test.</p>
+<hr />
+<h3>Addition 8 — Emniyet kemeri enforcement reality</h3>
+<p>Hoca was blunt about seatbelt refusers:</p>
+<blockquote>
+<p><em>"Sonra aday diyor ki 'ya bir kemerden ne olacak ya' diye. Konuştukça konuşanlara da ayrı bir sinir oluyorum. Yüzde 90 hayat kurtarıyor arkadaşlar. Emniyet kemeri takmak zorundayız."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> Some students complain that seatbelts are unnecessary. Hoca's response: <strong>emniyet kemeri yüzde 90 hayat kurtarır</strong> (the seatbelt saves lives in 90% of accidents). <strong>It's not optional — it's mandatory</strong> both legally and practically.</p>
+<p><strong>Exam reality:</strong> if you start the engine and begin to move the car without the seatbelt on, <strong>you fail the direksiyon sınavı immediately</strong>. Same rule as forgetting to release the handbrake — this is a <strong>"bitti, direkt kalma"</strong> fault, not a deductible point.</p>
+<hr />
+<h2>4M. SLIDE 14 — AKTİF VE PASİF GÜVENLİK SİSTEMLERİ (Title Slide)</h2>
+<h3>What the slide showed</h3>
+<p>A full-screen title slide with only the text <strong>"AKTİF VE PASİF GÜVENLİK SİSTEMLERİ"</strong> (Active and Passive Safety Systems) in large red letters.</p>
+<p>This is a <strong>chapter-divider slide</strong> — hoca is announcing the topic. All the content is on the next slide (15).</p>
+<p><strong>Quick refresher before diving in:</strong></p>
+<ul>
+<li><strong>Aktif güvenlik</strong> = systems that <strong>help PREVENT</strong> an accident (before it happens)</li>
+<li><strong>Pasif güvenlik</strong> = systems that <strong>reduce INJURIES</strong> during and after an accident (when it's happening or has happened)</li>
+</ul>
+<p>This is the cleanest test on the exam: <em>"If it keeps you from crashing, it's aktif. If it protects you when you crash, it's pasif."</em></p>
+<p>This topic was previously introduced in <a href="09-fren-sistemi.md">09-fren-sistemi.md section 2C</a> (slide 3 on fren arızaları mentioned aktif/pasif briefly). Now hoca is doing the <strong>full deep-dive</strong>.</p>
+<hr />
+<h2>4N. SLIDE 15 — Aktif ve Pasif Güvenlik Sistemleri: Full Breakdown</h2>
+<h3>What the slide showed</h3>
+<p>A text-only slide split into two color-coded sections on a light-blue background:</p>
+<ol>
+<li><strong>"Aktif sistemler"</strong> (red header) — definition + 3 sub-goals + 4 technology names</li>
+<li><strong>"Pasif güvenlik sistemleri"</strong> (red header) — definition + 7 specific components</li>
+</ol>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Aktif sistemler:</strong> Sürüş emniyetini artırarak şoföre yardımcı olan sistemlerdir. Aktif güvenlik gelişmeleri incelersek:<br />
+1. <strong>Fren güvenliği</strong><br />
+2. <strong>Patinaj önleme</strong><br />
+3. <strong>Savrulma – devrilme kontrolü</strong></p>
+<p>Günümüzde kullanılan bu sistemler şu şekildedir:<br />
+- <strong>ABS ASR fren sistemi</strong> (Kızaklama önleyici fren sistemi)<br />
+- <strong>VSC Araç stabilite kontrol sistemi</strong><br />
+- <strong>TRC Araç patinaj kontrol sistemi</strong><br />
+- <strong>EMS Elektronik kontrollü süspansiyon sistemi</strong></p>
+<p><strong>Pasif güvenlik sistemleri:</strong> Aracın ve yolcuların kaza anında ve sonrasında güvenliğini sağlayan sistemlerdir.<br />
+- <strong>Airbag (hava yastığı)</strong><br />
+- <strong>Ön germeli emniyet kemerleri</strong><br />
+- <strong>Arttırılmış kabin mukavemeti</strong><br />
+- <strong>Kapı içi çelik barlar</strong><br />
+- <strong>Teleskopik katlanır direksiyon kolonu</strong><br />
+- <strong>Kaza esnasında arkaya katlanır pedal sistemi</strong><br />
+- <strong>Kaza anında koparak motorun devrilmesini sağlayan motor kulak dizaynı</strong></p>
+<p><strong>Active systems:</strong> Systems that <strong>assist the driver by increasing driving safety</strong>. Looking at active-safety developments:<br />
+1. <strong>Brake safety</strong><br />
+2. <strong>Skid (traction) prevention</strong><br />
+3. <strong>Swerving / rollover control</strong></p>
+<p>Today's systems are as follows:<br />
+- <strong>ABS ASR brake system</strong> (anti-skid braking system)<br />
+- <strong>VSC</strong> — Vehicle Stability Control<br />
+- <strong>TRC</strong> — Traction Control<br />
+- <strong>EMS</strong> — Electronically-controlled suspension</p>
+<p><strong>Passive safety systems:</strong> Systems that <strong>protect the vehicle and its occupants during and after a crash</strong>.<br />
+- <strong>Airbag</strong><br />
+- <strong>Pre-tensioning seatbelts</strong><br />
+- <strong>Reinforced (strengthened) passenger cell</strong><br />
+- <strong>Steel reinforcing bars inside the doors</strong><br />
+- <strong>Telescopic collapsing steering column</strong><br />
+- <strong>Pedals that fold backward (away from the driver) during a crash</strong><br />
+- <strong>"Motor kulak" mounts that break away so the engine drops/rolls out of the passenger compartment during a crash</strong></p>
+</blockquote>
+<hr />
+<h3>Part 1 — AKTİF GÜVENLİK SİSTEMLERİ (Active Safety Systems)</h3>
+<h4>The core principle</h4>
+<blockquote>
+<p><strong>Aktif sistemler sürüş emniyetini artırarak şoföre yardımcı olan sistemlerdir.</strong><br />
+<em>Active systems are systems that increase driving safety by assisting the driver.</em></p>
+</blockquote>
+<p>They work <strong>before an accident happens</strong> — their job is to <strong>prevent</strong> the crash in the first place. An active system is in the "help me NOT crash" category.</p>
+<h4>The 3 goals of active safety</h4>
+<p>Every active safety system on a car is trying to do one of these 3 things:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it prevents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Fren güvenliği</strong></td>
+<td>Brake safety</td>
+<td>Wheels locking up during hard braking → loss of steering control</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Patinaj önleme</strong></td>
+<td>Traction / skid prevention</td>
+<td>Drive wheels spinning on slippery surfaces → loss of acceleration and direction</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Savrulma – devrilme kontrolü</strong></td>
+<td>Swerving / rollover control</td>
+<td>Car skidding sideways or rolling over during sharp turns</td>
+</tr>
+</tbody>
+</table>
+<h4>The 4 technology names you MUST memorize</h4>
+<p>These 4 system acronyms are <strong>guaranteed exam material</strong> — you should be able to match each name to what it does:</p>
+<h5>1. ABS — Anti-lock Braking System</h5>
+<p><strong>Full name:</strong> <em>Anti-blokaj Sistem / Kızaklama Önleyici Fren Sistemi</em> (Anti-lock / Anti-skid brake system)</p>
+<p><strong>What it does:</strong> During hard braking, <strong>prevents the wheels from locking up</strong> (stopping their rotation entirely). A locked wheel <strong>slides</strong> along the road instead of rolling, which means:<br />
+- You <strong>lose steering control</strong> (a sliding wheel can't be steered)<br />
+- <strong>Braking distance actually INCREASES</strong> (sliding friction is less than rolling friction)</p>
+<p>ABS continuously <strong>releases and re-applies brake pressure</strong> many times per second at each wheel, keeping them right at the edge of locking but never actually locked. This lets you <strong>brake hard AND steer at the same time</strong> — critical for emergency avoidance maneuvers.</p>
+<p><strong>Symptom of ABS active:</strong> brake pedal pulsates / vibrates under your foot, and you may hear a "grrrr" sound. <strong>This is normal — it means ABS is working, not faulty.</strong> See the hoca's note from earlier sessions.</p>
+<p><strong>Relevant exam tie-in:</strong> goes under <strong>fren güvenliği</strong> (goal 1).</p>
+<h5>2. ASR — Traction Control (Patinaj Önleme)</h5>
+<p><strong>Full name:</strong> <em>Patinaj Önleme / Çekiş Kontrol Sistemi</em></p>
+<p><strong>What it does:</strong> Stops the <strong>drive wheels</strong> from <strong>spinning freely</strong> on slippery surfaces (ice, wet leaves, gravel) when you accelerate too hard. If ASR detects wheel spin:<br />
+- <strong>Reduces engine power</strong> temporarily<br />
+- <strong>Brakes the spinning wheel</strong> briefly<br />
+- Transfers torque to the wheel with more grip</p>
+<p><strong>Why it matters:</strong> without ASR, pressing the gas too hard on a wet road will spin the drive wheels and the car won't accelerate — it just sits there making noise while the tires smoke. ASR feeds just enough power to actually move the car.</p>
+<p><strong>Relevant exam tie-in:</strong> goes under <strong>patinaj önleme</strong> (goal 2). Also sometimes listed as <strong>TRC/TC/TCS</strong>.</p>
+<h5>3. VSC / VDC / ESP / ESC — Vehicle Stability Control</h5>
+<p><strong>Full name:</strong> <em>Araç Stabilite Kontrol Sistemi / Elektronik Denge Sistemi</em></p>
+<p><strong>What it does:</strong> Prevents the car from <strong>skidding sideways or rolling over</strong> during sharp turns or sudden maneuvers. If VSC detects the car is starting to slide:<br />
+- <strong>Individually brakes each wheel</strong> as needed to correct the slide<br />
+- <strong>Reduces engine power</strong> if needed<br />
+- Pulls the car back onto its intended path</p>
+<p><strong>Why it matters:</strong> VSC is the most sophisticated active safety system and has saved countless lives. If you're rounding a curve too fast and start to understeer (push wide) or oversteer (spin), VSC will quietly intervene and keep the car on the road.</p>
+<p><strong>Many names for the same thing (two-name trap):</strong><br />
+- <strong>VSC</strong> — Vehicle Stability Control (Toyota)<br />
+- <strong>VDC</strong> — Vehicle Dynamics Control (Nissan, Subaru)<br />
+- <strong>ESP</strong> — Elektronik Stabilite Programı (European, VW/Mercedes)<br />
+- <strong>ESC</strong> — Electronic Stability Control (general)</p>
+<p>All of these are the <strong>same system</strong> with different manufacturer names.</p>
+<p><strong>Relevant exam tie-in:</strong> goes under <strong>savrulma-devrilme kontrolü</strong> (goal 3).</p>
+<h5>4. EMS — Electronically Controlled Suspension</h5>
+<p><strong>Full name:</strong> <em>Elektronik Kontrollü Süspansiyon Sistemi</em></p>
+<p><strong>What it does:</strong> Adjusts the <strong>amortisör (shock absorber)</strong> firmness in real time based on driving conditions:<br />
+- <strong>Softer</strong> for comfort on smooth roads<br />
+- <strong>Firmer</strong> for control during hard cornering or braking<br />
+- Each wheel can be adjusted <strong>independently</strong></p>
+<p><strong>Why it's aktif güvenlik:</strong> by keeping all four wheels in optimal contact with the road regardless of driving conditions, EMS indirectly helps the brakes, steering, and traction systems work better. It's a <strong>supporting system</strong> for the other three.</p>
+<p><strong>Relevant exam tie-in:</strong> EMS enables goals 1, 2, and 3 by giving the other systems a stable foundation.</p>
+<hr />
+<h3>Part 2 — PASİF GÜVENLİK SİSTEMLERİ (Passive Safety Systems)</h3>
+<h4>The core principle</h4>
+<blockquote>
+<p><strong>Pasif güvenlik sistemleri, aracın ve yolcuların kaza anında ve sonrasında güvenliğini sağlayan sistemlerdir.</strong><br />
+<em>Passive safety systems protect the vehicle and its occupants during and after a crash.</em></p>
+</blockquote>
+<p>They work <strong>during and after an accident</strong> — their job is to <strong>reduce injuries when the crash has already started or finished</strong>. A passive system is in the "help me survive when the crash is happening" category.</p>
+<h4>The 7 passive safety components</h4>
+<p>This is a <strong>memorize-all-7</strong> exam question. You should be able to list them cleanly:</p>
+<h5>1. Airbag (Hava Yastığı)</h5>
+<p>A <strong>nylon bag</strong> folded inside the steering wheel, dashboard, seats, or headliner that <strong>inflates explosively</strong> (in ~30 milliseconds) when an impact sensor detects a crash. The airbag:<br />
+- Creates a <strong>cushion</strong> between the occupant and the hard interior surfaces<br />
+- <strong>Spreads the impact force</strong> over a larger area of the body<br />
+- <strong>Deflates quickly</strong> after the impact so you're not trapped</p>
+<p><strong>Types:</strong> sürücü airbag (driver), yolcu airbag (passenger), yan airbag (side), perde airbag (curtain), diz airbag (knee). Modern cars have 6–10 airbags.</p>
+<p><strong>Critical rule:</strong> airbags <strong>only work if the seatbelt is on</strong>. Airbag deployment force alone can injure an unbelted occupant. <strong>Emniyet kemeri + airbag = full protection. Just airbag = dangerous.</strong></p>
+<h5>2. Ön germeli emniyet kemerleri (Pre-tensioning seatbelts)</h5>
+<p>A modern seatbelt has a <strong>pyrotechnic pre-tensioner</strong> — a small explosive charge that <strong>pulls the seatbelt tight</strong> in the first milliseconds of a crash, <strong>before</strong> the occupant starts to move forward. This:<br />
+- Removes any slack in the belt<br />
+- Locks the occupant firmly into the seat<br />
+- Prepares the body for the airbag deployment</p>
+<p>Then, the belt has a <strong>load limiter</strong> that <strong>slightly releases tension</strong> if the force on the belt exceeds a safe threshold — preventing broken ribs while still keeping the occupant in place.</p>
+<p><strong>Plain English:</strong> "ön germeli" = "front-tensioning" = the belt tightens forcefully at the start of a crash, then controls the release.</p>
+<h5>3. Arttırılmış kabin mukavemeti (Reinforced passenger cell)</h5>
+<p>The <strong>passenger safety cell</strong> — the rigid box of steel around where the occupants sit. Made of <strong>ultra high strength steel (UHSS)</strong> and <strong>boron steel</strong> (see <a href="11-süspansiyon-sistemi.md">11-süspansiyon-sistemi.md</a> slide 7 on Günümüz Otomobil Yapısı). Its job is to <strong>resist deformation</strong> during a crash, so the occupants' survival space is preserved even as the front and rear of the car crumple.</p>
+<p><strong>This ties directly to the "şase" concept</strong> — the rigid cabin + crumple zones idea from slide 4 of the süspansiyon file.</p>
+<h5>4. Kapı içi çelik barlar (Door impact beams)</h5>
+<p><strong>Steel reinforcement bars</strong> welded into the inside of every car door. Their job: resist <strong>side-impact intrusion</strong>. If another car T-bones yours, the door impact beams prevent the door from being pushed into the occupant's body. Often made of <strong>bor çelik (boron steel)</strong> for maximum strength.</p>
+<h5>5. Teleskopik katlanır direksiyon kolonu (Telescopic collapsing steering column)</h5>
+<p>The <strong>direksiyon mili (steering shaft)</strong> is designed to <strong>collapse / telescope inward</strong> during a frontal crash. This prevents the steering wheel from being <strong>pushed into the driver's chest</strong> by the engine bay deforming. Instead, the wheel stays where it is while the shaft compresses behind it — a <strong>"broken pencil"</strong> design where the shaft folds or slides into itself.</p>
+<p>Before this invention, drivers were commonly killed or severely injured by the steering column being driven into their chest during head-on collisions. The collapsing column was one of the most important safety innovations of the 20th century.</p>
+<h5>6. Kaza esnasında arkaya katlanır pedal sistemi (Pedals fold back during crash)</h5>
+<p>In a frontal crash, the engine bay crumples and pushes inward — without this system, the <strong>pedals (debriyaj, fren, gaz)</strong> would be pushed <strong>backward into the driver's legs and feet</strong>, causing severe lower-leg and foot injuries.</p>
+<p>Modern cars have a <strong>collapsible pedal mechanism</strong> where the pedals are designed to <strong>break away and fold out of the way</strong> toward the floor (or toward the firewall) during a crash impact, preventing leg injuries.</p>
+<h5>7. Motor kulak dizaynı (Breakaway engine mounts)</h5>
+<blockquote>
+<p><strong>Kaza anında koparak motorun devrilmesini sağlayan motor kulak dizaynı.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> the <strong>motor kulakları (engine mounts)</strong> are the rubber-and-metal components that hold the engine to the chassis. In a modern safety design, the mounts are engineered to <strong>break away / fail in a controlled way during a frontal crash</strong>, allowing the entire engine block to <strong>drop downward and backward</strong> under the car — <strong>away from the passenger compartment</strong>.</p>
+<p><strong>Why this is critical:</strong> without breakaway mounts, the engine would be <strong>pushed backward into the firewall</strong>, and potentially into the driver's legs and lap. With the breakaway design, the engine <strong>falls out of the crash path</strong> and ends up under the car rather than inside it.</p>
+<p><strong>"Motor kulak" literally means "engine ears"</strong> — the Turkish automotive slang for engine mounts (they look like small pointed "ears" sticking out from the engine block).</p>
+<hr />
+<h3>Quick-reference comparison table</h3>
+<table>
+<thead>
+<tr>
+<th>Aktif güvenlik (active)</th>
+<th>Pasif güvenlik (passive)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prevents</strong> accidents</td>
+<td><strong>Reduces injuries during</strong> accidents</td>
+</tr>
+<tr>
+<td>Works <strong>before</strong> the crash</td>
+<td>Works <strong>during and after</strong> the crash</td>
+</tr>
+<tr>
+<td>ABS, ASR, VSC, EMS</td>
+<td>Airbag, emniyet kemeri, kabin, kapı barları, direksiyon kolonu, pedal, motor kulak</td>
+</tr>
+<tr>
+<td><strong>"Kazanın olmasını engeller"</strong></td>
+<td><strong>"Kaza anında yaralanmayı azaltır"</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Exam rule of thumb</h3>
+<p>If an exam question describes a system and asks "aktif mi pasif mi?", apply this mental test:</p>
+<blockquote>
+<p><strong>Would this system help me if the crash NEVER happened?</strong><br />
+- Yes → <strong>AKTİF</strong> (it's preventing the crash)<br />
+- No, it only matters when the crash is happening → <strong>PASİF</strong> (it's managing injury)</p>
+</blockquote>
+<p><strong>Examples:</strong><br />
+- <strong>ABS</strong> → Would it help if I never crashed? <strong>Yes, it shortens stopping distance on dry roads too.</strong> → <strong>AKTİF</strong><br />
+- <strong>Airbag</strong> → Would it help if I never crashed? <strong>No, it just sits there doing nothing.</strong> → <strong>PASİF</strong><br />
+- <strong>ESP</strong> → Would it help if I never crashed? <strong>Yes, it keeps me on the road during sharp turns.</strong> → <strong>AKTİF</strong><br />
+- <strong>Emniyet kemeri</strong> → Would it help if I never crashed? <strong>No, it just holds me in place during normal driving.</strong> → <strong>PASİF</strong></p>
+<h3>Critical exam facts — memorize ALL of these</h3>
+<blockquote>
+<p><strong>Aktif güvenlik = kazayı önleyen sistemler. Pasif güvenlik = kaza anında yaralanmayı azaltan sistemler.</strong></p>
+<p><strong>Aktif sistemler: ABS, ASR, VSC (ESP), TRC, EMS.</strong></p>
+<p><strong>Pasif sistemler: Airbag, ön germeli emniyet kemeri, kabin mukavemeti, kapı çelik barları, teleskopik direksiyon kolonu, geri katlanır pedallar, motor kulak dizaynı.</strong></p>
+<p><strong>Aktif sistemin 3 amacı: fren güvenliği, patinaj önleme, savrulma-devrilme kontrolü.</strong></p>
+</blockquote>
+<hr />
+<h2>4O. SLIDE 16 — RODAJ (YENİ ALINAN ARAÇ) — Break-In Period for a New Car</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"RODAJ (YENİ ALINAN ARAÇ)"</strong>. A 3-point bullet list defining <strong>rodaj (break-in period)</strong>, the rules that apply during it, and an alternative definition.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Rodaj:</strong> Zamanı aracın fabrika çıkışından sonra belirli kilometre kadar geçen süreye denir.</p>
+<ul>
+<li>Rodaj zamanında <strong>ani duruş kalkış yapılmaz. Fazla sürat yapılmaz.</strong></li>
+<li>Rodaj, aracın fabrika çıkışından sonra <strong>motor parçalarının birbirlerine alışma sürecine</strong> de denir.</li>
+</ul>
+<p><strong>Rodaj (Break-in Period):</strong> The period of time from when the vehicle leaves the factory until it has covered a certain number of kilometers.</p>
+<ul>
+<li>During the rodaj period, <strong>no sudden stops or starts</strong>. <strong>Don't drive too fast.</strong></li>
+<li>Rodaj is also the name for the process of the <strong>engine parts adapting to each other</strong> after the car leaves the factory.</li>
+</ul>
+</blockquote>
+<h3>Clean English explanation — what rodaj actually is</h3>
+<p>When a car rolls off the factory assembly line, its engine parts (pistons, silindirler, biyel kolu, krank mili, vites dişlileri, etc.) are <strong>brand new and not yet "worn in" to each other</strong>. The machined surfaces still have tiny imperfections that need to <strong>smooth out and settle</strong> against each other. This is the <strong>rodaj (break-in) period</strong>.</p>
+<p><strong>Purpose of rodaj:</strong><br />
+- Let the <strong>motor parçaları</strong> (engine parts) <strong>wear in to each other</strong> in a controlled way<br />
+- Allow the <strong>piston rings</strong> to seat properly against the cylinder walls<br />
+- Let the <strong>bearings</strong> (yataklar) establish their running surfaces<br />
+- Break in the <strong>vites kutusu gears</strong>, <strong>debriyaj</strong>, and <strong>fren balataları</strong> too</p>
+<p>If you abuse a brand-new car during its rodaj period, you can cause <strong>permanent damage</strong> that reduces the engine's lifespan, increases oil consumption, and reduces power. Done correctly, rodaj extends the engine's life significantly.</p>
+<h3>The 2 rodaj rules from the slide</h3>
+<h4>Rule 1 — No sudden stops / starts (Ani duruş kalkış yapılmaz)</h4>
+<p><strong>Plain English:</strong> Don't slam the accelerator, don't slam the brakes, don't do hard launches, don't race off from traffic lights. Everything should be <strong>smooth and gentle</strong> during the rodaj period. Each hard start/stop puts massive load on new engine parts before they've bedded in.</p>
+<h4>Rule 2 — No high speeds (Fazla sürat yapılmaz)</h4>
+<p><strong>Plain English:</strong> Don't redline the engine. Don't cruise at top speed. Don't do long high-speed highway runs in the first 1000–3000 km. The engine should run at <strong>modest RPM</strong> (below ~3000 rpm per the portal) and <strong>modest speeds</strong>.</p>
+<h3>More rodaj detail (from the portal)</h3>
+<p>From <a href="../../e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md">e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md</a>, the full rodaj rules are:</p>
+<ol>
+<li><strong>First 1000–3000 km:</strong> don't exceed <strong>3000 RPM</strong> — gentle throttle only</li>
+<li><strong>Don't floor the accelerator</strong> — pedal to the floor is extremely damaging in rodaj</li>
+<li><strong>Let the engine warm up for 30 sn – 1 dk</strong> before driving off</li>
+<li><strong>First 2000 km:</strong> use <strong>varying speeds</strong> instead of constant cruise — this helps the parts bed in without any single RPM hot spot</li>
+<li><strong>Avoid long high-speed stretches</strong> — the friction between piston rings and cylinder walls is highest at high speed, and can score the cylinders if done before break-in</li>
+</ol>
+<h3>The two definitions of rodaj (memorize both)</h3>
+<p>The slide gives <strong>two complementary definitions</strong>:</p>
+<ol>
+<li><strong>Time/kilometer based:</strong> <em>"Fabrika çıkışından sonra belirli kilometre kadar geçen süreye denir"</em> → A period measured from factory departure until a specific km count is reached</li>
+<li><strong>Mechanical process based:</strong> <em>"Motor parçalarının birbirlerine alışma sürecine denir"</em> → The process of engine parts adapting to each other</li>
+</ol>
+<p>Both definitions describe the <strong>same thing from different angles</strong> — one talks about the time/distance, one talks about what's physically happening inside the engine during that time.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Rodaj:</strong> Aracın fabrika çıkışından sonra belirli kilometre kadar geçen süre; motor parçalarının birbirine alışma süreci.<br />
+<em>Rodaj: The period from when the car leaves the factory until a certain km is reached; the process of engine parts adapting to each other.</em></p>
+<p><strong>Rodaj sırasında:</strong> ani duruş-kalkış yapılmaz, fazla sürat yapılmaz, yüksek devire çıkılmaz (≤3000 rpm), ilk 30 sn – 1 dk motor ısınması beklenir.</p>
+</blockquote>
+<p><strong>Exam trigger phrases:</strong><br />
+- <em>"Rodaj nedir?"</em> → <strong>Aracın fabrika çıkışından sonra motor parçalarının birbirine alışması için geçen süredir.</strong><br />
+- <em>"Rodaj döneminde nelere dikkat edilir?"</em> → <strong>Ani hızlanma, ani fren, yüksek devir, yüksek hız yapılmamalıdır.</strong></p>
+<hr />
+<h2>4P. SLIDE 17 — BAKIMLAR (Maintenance: Günlük + Haftalık + Akü Detail)</h2>
+<h3>What the slide showed</h3>
+<p>Title in red: <strong>"BAKIMLAR"</strong>. Text-only slide split into 2 main sections:</p>
+<ol>
+<li><strong>Günlük bakım</strong> (daily maintenance) — what to check every day</li>
+<li><strong>Haftalık bakım</strong> (weekly maintenance) — vantilatör kayışı + detailed <strong>akü bakımı</strong> procedure</li>
+</ol>
+<p>The akü bakımı section is a dense paragraph covering 7+ specific rules about battery care.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>BAKIMLAR</strong></p>
+<p><strong>Günlük bakımda</strong> motorun yağına, suyuna, fren hidroliğine, yakıtına, lastik hava basınçlarına, ışık ve ikaz sistemlerine bakılır.</p>
+<p><strong>Haftalık bakımda</strong> vantilatör kayışı gerginliği, akü bakımı yapılır.<br />
+Akü bakımı yaparken:<br />
+- akü dış yüzeylerinin ve kutup başlarındaki oksitlerin <strong>sodalı su ve sıcak su</strong> ile temizlenmesine,<br />
+- plakaların <strong>1 cm üzerine kadar saf su</strong> ilave edilmesine,<br />
+- eleman kapak deliklerinin <strong>açık tutulmasına</strong>,<br />
+- kışın akü donmasın diye akü <strong>tam şarj ettirilir</strong>,<br />
+- <strong>dijital göstergeli araçta asla akü takviyesi yapılmaz</strong>.<br />
+- Akü kendiliğinden boşanıyorsa akünün <strong>üst kısmında pislik birikmiştir</strong>.<br />
+- Kısa devreden dolayı yangın olursa <strong>akü kutup başları çıkarılır</strong>.<br />
+- Akü 2 kutup başı arasında her iki kutup başına değen bir madeni parça konsa akü <strong>kısa devre olup patlar</strong>.</p>
+<p><strong>MAINTENANCE</strong></p>
+<p><strong>Daily maintenance</strong> — check the engine oil, coolant water, brake fluid, fuel, tire pressures, and the lighting + warning systems.</p>
+<p><strong>Weekly maintenance</strong> — check the fan belt tension and perform battery maintenance. When doing battery maintenance:<br />
+- The outer surfaces and the oxidation on the terminal posts are cleaned with <strong>soda water and hot water</strong><br />
+- Add <strong>distilled water up to 1 cm above the plates</strong><br />
+- Keep the cell cap holes <strong>open / unblocked</strong><br />
+- In winter, <strong>fully charge the battery</strong> to prevent it from freezing<br />
+- <strong>Never jump-start a car with a digital dashboard gauge</strong><br />
+- If the battery discharges by itself, <strong>dirt has built up on the top surface</strong><br />
+- If a fire starts due to a short circuit, <strong>remove the battery terminal posts (disconnect the battery)</strong><br />
+- If a metal object is placed across both terminal posts, the battery <strong>short-circuits and explodes</strong></p>
+</blockquote>
+<hr />
+<h3>Part 1 — Günlük Bakım (Daily Maintenance) — 6 items</h3>
+<p><strong>Plain English:</strong> Before driving the car every day, check these 6 things. They're quick visual or gauge-based checks that take 2–3 minutes total. This list is <strong>memorize-all-6</strong> territory on the exam.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Motor yağı</strong></td>
+<td>Engine oil</td>
+<td>Check level via dipstick — oil is what keeps the engine alive</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Motor suyu (soğutma suyu)</strong></td>
+<td>Coolant / radiator water</td>
+<td>Check level in the expansion tank — prevents overheating</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Fren hidroliği (fren yağı)</strong></td>
+<td>Brake fluid</td>
+<td>Check level in the master cylinder reservoir — low level = leak = brake failure risk</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Yakıt</strong></td>
+<td>Fuel</td>
+<td>Check the gauge — don't run out, especially on diesels (air lock risk, see <a href="01-yakıt-sistemi.md">01-yakıt-sistemi.md</a>)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Lastik hava basınçları</strong></td>
+<td>Tire air pressures</td>
+<td>Visual check at minimum; every few days use a gauge</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Işık ve ikaz sistemleri</strong></td>
+<td>Lights &amp; warning indicators</td>
+<td>Brake lights, signals, headlights, dashboard warnings</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> this matches the <strong>"Aracın Günlük Kontrolleri"</strong> list from the portal (see <a href="../../e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md">e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md</a> section 8), though the portal version lists 9 items (adds cam silecek suyu, sıvı sızıntı, motor altında canlı kontrolü).</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Günlük bakımda hangi kontroller yapılır?"</em> → memorize at least 5 of the items above.</p>
+<hr />
+<h3>Part 2 — Haftalık Bakım (Weekly Maintenance) — 2 main items</h3>
+<h4>Item 1 — Vantilatör kayışı gerginliği (Fan belt tension)</h4>
+<p><strong>Vantilatör kayışı</strong> = the <strong>V-belt / drive belt</strong> that runs off the krank mili pulley and drives the <strong>radyatör fanı</strong>, the <strong>alternatör (şarj dinamosu)</strong>, and sometimes other accessories. Over time the belt <strong>stretches</strong> and becomes loose — a loose belt slips on the pulleys, causing:</p>
+<ul>
+<li>Alternator not spinning fast enough → <strong>şarj ikazı (charge warning)</strong> starts coming on</li>
+<li>Fan not spinning fast enough → engine <strong>overheats</strong> in stop-and-go traffic</li>
+<li>A <strong>squealing noise</strong> from the engine bay (especially on cold starts)</li>
+</ul>
+<p>The weekly check: press on the belt between two pulleys with your thumb — it should flex about <strong>1 cm</strong> under moderate pressure. If more → tension the belt (or replace if cracked / glazed).</p>
+<h4>Item 2 — Akü bakımı (Battery maintenance) — the big one</h4>
+<p>This is the detailed part of the slide. See breakdown below.</p>
+<hr />
+<h3>Part 3 — Akü Bakımı (Battery Maintenance) Deep Dive</h3>
+<p>This is a high-density slide with <strong>7+ specific rules</strong> about battery care. Each rule corresponds to a possible exam question.</p>
+<h4>Rule 1 — Clean oxide with soda + hot water</h4>
+<blockquote>
+<p><strong>Akü dış yüzeylerinin ve kutup başlarındaki oksitlerin sodalı su ve sıcak su ile temizlenmesi.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> Over time, <strong>green-white oxidation</strong> (battery acid fumes reacting with metal) builds up on the <strong>kutup başları (battery terminal posts)</strong> and around the top of the battery. This oxidation:</p>
+<ul>
+<li>Adds <strong>electrical resistance</strong> at the terminal contacts</li>
+<li>Reduces the current flowing to the marş motoru (starter)</li>
+<li>Can cause starting problems and electrical faults</li>
+</ul>
+<p><strong>To clean it:</strong> use a mixture of <strong>sodalı su (soda water = water + baking soda)</strong> and <strong>sıcak su (hot water)</strong>. The soda <strong>neutralizes</strong> the acidic residue, and the hot water + mechanical scrubbing removes the crusty deposits. A stiff-bristled wire brush helps. Afterward, the terminals should be shiny metal.</p>
+<p><strong>Why soda water?</strong> Because battery acid is sulfuric acid (H₂SO₄). Baking soda (NaHCO₃) is a mild base that neutralizes the acid safely. Plain water would spread the acid around without neutralizing it.</p>
+<h4>Rule 2 — Add distilled water to 1 cm above the plates</h4>
+<blockquote>
+<p><strong>Plakaların 1 cm üzerine kadar saf su ilave edilmesi.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> Traditional (non-sealed) batteries use a <strong>sulfuric acid + water electrolyte</strong>. Over time, the water <strong>evaporates</strong> (especially in hot weather and during use), leaving the electrolyte <strong>too concentrated</strong>. This exposes the <strong>plakaları (internal lead plates)</strong> to air, which <strong>damages them permanently</strong>.</p>
+<p><strong>The fix:</strong> add <strong>saf su (distilled water / pure water)</strong> — NEVER tap water (tap water has minerals that contaminate the electrolyte). Add just enough water to cover the plates by <strong>1 cm</strong>. The "1 cm above the plates" is a specific exam number to memorize.</p>
+<p><strong>Why distilled water:</strong> tap water contains calcium, iron, chlorine, and other minerals that react with the battery chemistry, reducing capacity and lifespan.</p>
+<h4>Rule 3 — Keep cell cap holes open</h4>
+<blockquote>
+<p><strong>Eleman kapak deliklerinin açık tutulması.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> Each cell of the battery has a <strong>cap (eleman kapağı)</strong> with a small <strong>vent hole (kapak deliği)</strong>. During charging, the battery produces <strong>hidrojen gazı (hydrogen gas)</strong> — an extremely <strong>flammable</strong> gas. The vent holes let that gas escape harmlessly to the atmosphere.</p>
+<p><strong>If the vent holes are clogged</strong> (by dirt, corrosion, debris):<br />
+- Hydrogen gas builds up inside the battery<br />
+- Pressure rises<br />
+- The battery can <strong>explode</strong> from any spark or static discharge</p>
+<p><strong>Always keep the vent holes open and clean</strong> — check them during weekly bakım.</p>
+<h4>Rule 4 — Keep the battery fully charged in winter to prevent freezing</h4>
+<blockquote>
+<p><strong>Kışın akü donmasın diye akü tam şarj ettirilir.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> Battery electrolyte is mostly <strong>sulfuric acid + water</strong>. The <strong>freezing point</strong> of this mixture depends on its <strong>concentration</strong>:</p>
+<ul>
+<li><strong>Fully charged</strong> battery → electrolyte is strong acid (~35% sulfuric) → freezes at about <strong>−60°C</strong></li>
+<li><strong>Discharged</strong> battery → electrolyte is mostly water → freezes at about <strong>−5°C</strong></li>
+</ul>
+<p><strong>In winter</strong>, a <strong>discharged battery can actually freeze</strong> in very cold weather. The frozen electrolyte expands and <strong>cracks the battery case</strong>, destroying it. To prevent this:</p>
+<ul>
+<li>Keep the battery <strong>fully charged</strong> throughout winter</li>
+<li>A full charge = strong electrolyte = very low freezing point = safe</li>
+</ul>
+<p>This is why in cold climates, you should <strong>run your car regularly in winter</strong> to keep the battery topped up, or use a trickle charger.</p>
+<h4>Rule 5 — Don't jump-start a car with digital dashboard gauges</h4>
+<blockquote>
+<p><strong>Dijital göstergeli araçta asla akü takviyesi yapılmaz.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> This is <strong>CRITICAL</strong> and often exam-tested. <strong>Modern cars with digital / electronic dashboard gauges</strong> have <strong>sensitive electronic control units (ECU)</strong> that can be <strong>damaged by voltage spikes</strong> during a traditional jump-start.</p>
+<p>When you jump-start a car from another car's battery:<br />
+- The sudden connection can cause a <strong>voltage spike</strong> (brief surge above 14V)<br />
+- On older cars with analog gauges, this didn't matter<br />
+- On modern cars with digital/computerized systems, this <strong>spike can fry the ECU, dashboard, or other electronics</strong></p>
+<p><strong>The rule:</strong> <strong>ASLA (NEVER) jump-start a car with a digital gauge panel.</strong> Instead:</p>
+<ul>
+<li>Use a <strong>proper battery charger</strong> (slow, regulated charging)</li>
+<li>Tow the car to a service center</li>
+<li>Have a professional charge the battery properly</li>
+</ul>
+<p>Attempting to jump-start a modern computerized car can cause <strong>thousands of lira in electronic damage</strong>. It's a very expensive mistake.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Dijital göstergeli araçta akü takviyesi yapılır mı?"</em> → <strong>Hayır, asla yapılmaz. Elektronik sistemlere zarar verir.</strong></p>
+<h4>Rule 6 — Self-discharge = dirt on top of battery</h4>
+<blockquote>
+<p><strong>Akü kendiliğinden boşanıyorsa akünün üst kısmında pislik birikmiştir.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> If your battery <strong>discharges by itself</strong> when the car is sitting parked (overnight / over a weekend), the cause is usually <strong>dirt, moisture, and oxide buildup on the top surface of the battery</strong>. This creates a <strong>faint electrical path</strong> between the two terminals across the top of the battery case, causing a slow <strong>self-discharge</strong> over time.</p>
+<p><strong>The fix:</strong> clean the top of the battery thoroughly with soda water (rule 1) and keep it dry.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Akü kendiliğinden boşalıyorsa sebebi nedir?"</em> → <strong>Akünün üst kısmında pislik birikmiştir.</strong></p>
+<h4>Rule 7 — Fire from short circuit → remove terminal posts</h4>
+<blockquote>
+<p><strong>Kısa devreden dolayı yangın olursa akü kutup başları çıkarılır.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> If a <strong>short circuit</strong> anywhere in the car's electrical system starts a <strong>fire</strong>, the first thing to do is <strong>disconnect the battery</strong> — specifically, <strong>remove both kutup başları (terminal posts)</strong> from the battery. This:</p>
+<ul>
+<li><strong>Cuts the power source</strong> feeding the short-circuit fire</li>
+<li>Prevents the fire from spreading via more electrical arcing</li>
+<li>Buys you time to extinguish it</li>
+</ul>
+<p><strong>Order of disconnection:</strong> remove the <strong>eksi (−, negative)</strong> kutup first, then the <strong>artı (+, positive)</strong>. This prevents accidental short-circuits while you're working.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Kısa devre nedeniyle araçta yangın çıkarsa ne yapılır?"</em> → <strong>Akünün kutup başları çıkarılır (akü bağlantısı kesilir).</strong></p>
+<h4>Rule 8 — Never place metal across both terminals → explosion risk</h4>
+<blockquote>
+<p><strong>Akü 2 kutup başı arasında her iki kutup başına değen bir madeni parça konsa akü kısa devre olup patlar.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> This is a <strong>safety warning</strong>. If you place any <strong>metal object</strong> (wrench, screwdriver, key, tool) in a position where it <strong>touches both kutup başları (terminal posts) at the same time</strong>, you create a <strong>direct short circuit</strong> through that metal object.</p>
+<p><strong>What happens in a short circuit:</strong><br />
+- The battery tries to dump its <strong>entire stored energy</strong> through the metal object instantly<br />
+- The metal gets <strong>red-hot in a fraction of a second</strong><br />
+- The <strong>electrolyte inside the battery boils and pressurizes</strong><br />
+- The <strong>battery explodes</strong>, spraying sulfuric acid and battery case fragments</p>
+<p><strong>This can cause:</strong><br />
+- Severe <strong>acid burns</strong> to your face, eyes, and body<br />
+- Blindness<br />
+- Flying shrapnel injuries<br />
+- Fire</p>
+<p><strong>Safety rule:</strong> when working around the battery, <strong>keep tools away from the terminals</strong>. If you must use a tool on one terminal, cover or remove the other terminal first. This is why mechanics <strong>always disconnect the eksi (negative) terminal first</strong> — to eliminate the short-circuit risk while working on the artı (positive) side.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Akünün iki kutup başına madeni parça değdirilirse ne olur?"</em> → <strong>Akü kısa devre olup patlar. Çok tehlikelidir.</strong></p>
+<hr />
+<h3>The Akü Bakımı cheat sheet (8 rules)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Rule</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Temizlik</td>
+<td><strong>Sodalı su + sıcak su</strong> kullan</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Su seviyesi</td>
+<td><strong>Plakaların 1 cm üstüne kadar saf su</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Hava deliği</td>
+<td>Eleman kapak deliklerini <strong>açık tut</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Kış</td>
+<td>Akü <strong>tam şarj</strong> — donmayı önler</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Dijital gösterge</td>
+<td><strong>ASLA takviye yapma</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kendiliğinden boşalma</td>
+<td><strong>Üstte pislik</strong> birikmiştir</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Yangın</td>
+<td><strong>Kutup başlarını çıkar</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Madeni parça 2 kutba değerse</td>
+<td><strong>Kısa devre olup patlar</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Günlük bakım:</strong> yağ, su, fren hidroliği, yakıt, lastik basıncı, ışık/ikaz sistemleri.</p>
+<p><strong>Haftalık bakım:</strong> vantilatör kayışı gerginliği + akü bakımı.</p>
+<p><strong>Akü suyu olarak sadece SAF SU kullanılır, plakaların 1 cm üstüne kadar.</strong></p>
+<p><strong>Dijital göstergeli araçta asla akü takviyesi yapılmaz.</strong></p>
+<p><strong>Kısa devre yangınında ilk iş: akü kutup başlarını çıkar.</strong></p>
+</blockquote>
+<hr />
+<h3>Cross-reference note</h3>
+<p>The akü-related rules on this slide also connect back to <strong>şarj sistemi</strong> — see <a href="04-şarj-sistemi.md">04-şarj-sistemi.md</a> for how the akü is charged during normal operation, how the alternatör works, and the two-name trap (akü = akümülatör).</p>
+<hr />
+<h2>4Q. SLIDE 18 — KARLI GÜNLER İÇİN ÖNLEMLER (Pre-Winter Preparation)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"Karlı günler için önlemler"</strong> (Precautions for snowy days). A dense bullet list of <strong>6 preparations</strong> you should do <strong>before</strong> winter arrives or before heading into snowy conditions — antifreeze, weather reports, wiper fluid, wiper protection, snow chain acquisition, phone charger.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Karlı günler için önlemler</strong></p>
+<ul>
+<li>Radyatör suyuna mutlaka <strong>antifriz</strong> koydurun ya da var olan antifrizin değerini ölçtürüp tüver (takviye) yaptırın.</li>
+<li>Meteorolojiden alınan <strong>hava tahmin raporlarını</strong> kış aylarında daha çok dikkate alın.</li>
+<li>Don tehlikesi veya kar yağma ihtimali varsa <strong>silecek suyuna donmayı önleyici kimyasal maddelerden ilave edin</strong>. Böylece silecek suyu depolarınızda ve donma borularında donmaz.</li>
+<li>Silecekleri <strong>yukarı kaldırarak</strong> cama yapışmasını önleyin. Mümkünse aracınızı kapalı bir yere çekin.</li>
+<li>Yoğun kar yağışı veya don ihtimali varsa <strong>patinaj zincirini (kar zinciri)</strong> bir an önce alın, yoksa zinciri <strong>karaborsadan</strong> almak zorunda kalırsınız.</li>
+<li><strong>GSM telefonunuzun araç şarj cihazını</strong> yanınıza almayı ihmal etmeyin. Ya da <strong>yedek bataryanız</strong> varsa yanınıza alın.</li>
+</ul>
+<p><strong>Precautions for snowy days</strong></p>
+<ul>
+<li>Make sure the radiator has <strong>antifreeze</strong>, or have the current antifreeze's strength measured and topped up (takviye).</li>
+<li>Pay close attention to <strong>weather forecasts</strong> during the winter months.</li>
+<li>If freezing or snow is expected, add <strong>anti-freeze chemicals to the wiper fluid</strong>. This way the fluid won't freeze in the reservoir or the supply lines.</li>
+<li><strong>Lift the wipers off the windshield</strong> to prevent them from freezing and sticking to the glass. If possible, park the car in a <strong>covered area (closed parking)</strong>.</li>
+<li>If heavy snow or freezing is expected, buy a <strong>snow chain (kar zinciri / patinaj zinciri)</strong> early — otherwise you'll end up having to buy one at <strong>black-market prices (karaborsa)</strong>.</li>
+<li>Always bring your <strong>mobile phone's car charger</strong> with you. Or bring a <strong>backup battery / power bank</strong>.</li>
+</ul>
+</blockquote>
+<h3>The 6 winter preparation items — detail</h3>
+<h4>Item 1 — Radyatör / antifriz check</h4>
+<p><strong>Plain English:</strong> Before winter, verify your radiator has <strong>antifreeze (antifriz)</strong> at the correct concentration. If the concentration is too weak (diluted from adding water over the year), take it to a service to be <strong>tested and topped up</strong>. Antifreeze lowers the freezing point of the coolant — without it, the coolant can freeze, expand, and <strong>crack the engine block</strong> (which is a catastrophic failure requiring a full engine rebuild).</p>
+<p><strong>The term "tüver yaptırın"</strong> in the slide is Turkish auto-shop slang for <strong>"takviye yaptırın"</strong> — "have it topped up / reinforced".</p>
+<p>See [slide 19 below] for the full antifriz definition.</p>
+<h4>Item 2 — Weather forecasts</h4>
+<p><strong>Plain English:</strong> Check <strong>meteorological weather reports</strong> (hava tahmin raporları) more actively in winter. Snow, ice, and fog can dramatically change driving conditions within hours. Don't get caught off guard — check the forecast before every morning commute.</p>
+<p><strong>Sources in Turkey:</strong> MGM (Meteoroloji Genel Müdürlüğü), mgm.gov.tr, weather apps.</p>
+<h4>Item 3 — Silecek suyu (wiper fluid) with anti-freeze additive</h4>
+<p><strong>Plain English:</strong> Regular <strong>silecek suyu (windshield washer fluid)</strong> is mostly water. In freezing weather, it will <strong>freeze in the reservoir and in the supply tubes</strong>, and when you try to spray it, nothing comes out. Worse, the freezing expansion can <strong>crack the plastic reservoir</strong>.</p>
+<p><strong>The fix:</strong> add a <strong>winter washer fluid concentrate</strong> (an alcohol-based chemical) to the silecek suyu. This lowers the freezing point of the wiper fluid, so it stays liquid down to −15°C or −20°C depending on the concentration.</p>
+<p><strong>Common choices:</strong> commercial "kış silecek suyu" bottles sold at fuel stations, or methanol/isopropyl alcohol mixes.</p>
+<h4>Item 4 — Lift the wipers off the glass</h4>
+<p><strong>Plain English:</strong> If the car is going to sit outside overnight in freezing temperatures, <strong>pull the wiper arms up away from the windshield</strong> so the rubber blades don't freeze to the glass. If you don't:</p>
+<ul>
+<li>The blades freeze solid to the glass</li>
+<li>In the morning you turn on the wipers</li>
+<li>The motor strains against the frozen blade</li>
+<li>Either the <strong>wiper motor burns out</strong> OR the <strong>rubber of the blade rips off</strong> OR both</li>
+<li>Either way you now have a broken wiper</li>
+</ul>
+<p>Lifting the wipers is a 2-second precaution that prevents expensive damage.</p>
+<p><strong>Bonus tip:</strong> if possible, park in a <strong>kapalı bir yer (enclosed / covered parking)</strong> — a garage, under a canopy, in a parking structure. This eliminates most cold-weather problems entirely.</p>
+<h4>Item 5 — Buy the snow chain EARLY</h4>
+<p><strong>Plain English:</strong> <strong>Kar zinciri (patinaj zinciri) = snow chain</strong>. In Turkey, as soon as it snows heavily, <strong>demand spikes</strong> and snow chains either <strong>sell out</strong> or go to <strong>karaborsa (black market)</strong> at inflated prices. Smart drivers buy their snow chain in <strong>autumn (Ekim-Kasım)</strong> before the first snowfall and keep it in the trunk.</p>
+<p><strong>Key vocabulary:</strong><br />
+- <strong>Kar zinciri / patinaj zinciri</strong> = snow chain<br />
+- <strong>Karaborsa</strong> = black market (things sold under the counter at inflated prices)</p>
+<p>See [slide 21 below] for installation details.</p>
+<h4>Item 6 — Phone car charger + backup battery</h4>
+<p><strong>Plain English:</strong> If you get <strong>stuck in snow</strong> (stranded) in a remote area or on a blocked highway, your <strong>phone is your lifeline</strong> for calling for help. A dead phone in a winter breakdown is dangerous.</p>
+<p><strong>Precautions:</strong><br />
+- Always have the <strong>araç şarj cihazı (car charger)</strong> in the glove box<br />
+- Or carry a <strong>yedek batarya / power bank</strong> charged and ready<br />
+- Don't let your phone drop below 50% battery in winter<br />
+- Know the emergency number: <strong>112</strong> (universal emergency)</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kışa hazırlık:</strong> antifriz, kış silecek suyu, silecekleri kaldırma, kar zinciri, telefon şarj cihazı/yedek batarya — ve hava raporu takibi.<br />
+<em>Winter preparation: antifreeze, winter wiper fluid, lift wipers, snow chain, phone charger / power bank — and watching the weather report.</em></p>
+</blockquote>
+<hr />
+<h2>4R. SLIDE 19 — ANTİFRİZ NEDİR? (What is Antifreeze?)</h2>
+<h3>What the slide showed</h3>
+<p>Title in red: <strong>"Antifriz nedir?"</strong> A paragraph-long definition with the chemical formula of ethylene glycol and the minimum freezing temperature it achieves. This is the <strong>first full coverage of soğutma sistemi</strong> content in the notes — the soğutma sistemi file (07) was listed as "not yet covered" in the README.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Antifriz nedir?</strong><br />
+<strong>Radyatörde</strong> bulunan suyun soğuk günlerde <strong>donmasını</strong> ve sıcak günlerde <strong>kaynamasını</strong> önleyen <strong>su ve etilen glikol karışımıdır</strong>.<br />
+Etilen glikol <strong>(HO(CH₂CH₂O)ₙH)</strong> çok <strong>zehirli</strong> bir maddedir.<br />
+Bu madde radyatörde bulunan suyun <strong>donma derecesini düşürür</strong>. <strong>Kaynama derecesini yükseltir.</strong><br />
+En düşük donma derecesi yaklaşık <strong>−53 derecedir</strong>.</p>
+<p><strong>What is antifreeze?</strong><br />
+Antifreeze is a <strong>mixture of water and ethylene glycol</strong> that prevents the water in the <strong>radiator</strong> from <strong>freezing</strong> in cold weather and from <strong>boiling</strong> in hot weather.<br />
+Ethylene glycol <strong>(HO(CH₂CH₂O)ₙH)</strong> is a <strong>highly toxic</strong> substance.<br />
+It <strong>lowers the freezing point</strong> of the water in the radiator and <strong>raises the boiling point</strong>.<br />
+The lowest achievable freezing point is approximately <strong>−53 °C</strong>.</p>
+</blockquote>
+<h3>Clean English explanation — what antifreeze actually does</h3>
+<p><strong>Antifriz</strong> is NOT pure water. It's a <strong>carefully balanced mixture</strong> of:</p>
+<ul>
+<li><strong>Water</strong> (su) — the primary coolant, carries heat away from the engine</li>
+<li><strong>Ethylene glycol</strong> (etilen glikol) — the chemical additive that modifies the water's physical properties</li>
+<li><strong>Corrosion inhibitors</strong> — protect metal parts from rust</li>
+<li><strong>Colorant</strong> — usually green, pink, red, or blue (different manufacturers use different colors)</li>
+</ul>
+<p>The magic is in <strong>mixing</strong> water and ethylene glycol together — the combination has very different physical properties from either alone.</p>
+<h4>The 3 jobs of antifreeze</h4>
+<h5>Job 1 — Lowers the freezing point (donma derecesini düşürür)</h5>
+<p>Pure water freezes at <strong>0 °C</strong>. A 50/50 water-ethylene-glycol mix freezes at about <strong>−37 °C</strong>. Higher glycol concentrations can push the freezing point down to about <strong>−53 °C</strong> (the slide's stated minimum).</p>
+<p><strong>Why this matters:</strong> if the water in your radiator <strong>freezes</strong>, it <strong>expands by 9%</strong>, which can:<br />
+- Crack the <strong>motor bloğu</strong> (engine block) — a multi-thousand-lira catastrophic failure<br />
+- Burst the <strong>radiator</strong> and its tanks<br />
+- Split the <strong>hoses</strong><br />
+- Rupture the <strong>water pump (su pompası)</strong></p>
+<p>A car with proper antifriz won't freeze even in the coldest Turkish winters — Erzurum, Ağrı, Kars.</p>
+<h5>Job 2 — Raises the boiling point (kaynama derecesini yükseltir)</h5>
+<p>Pure water boils at <strong>100 °C</strong>. A 50/50 antifreeze mix boils at about <strong>107 °C</strong> (pressurized in the radiator, more like 125 °C). Higher concentrations push it even higher.</p>
+<p><strong>Why this matters:</strong> modern engines run <strong>hot</strong> — coolant temperatures of <strong>90–105 °C</strong> are normal. If your cooling system used pure water, it would be <strong>right at the boiling point</strong> during normal operation, and any small increase would cause <strong>boiling and overheating</strong>. Antifreeze provides a <strong>safety margin</strong> of 10–20 °C above normal operating temperature.</p>
+<h5>Job 3 — Protects against corrosion, rust, and limescale</h5>
+<p>Covered in <a href="../../e-kitap/03-araç-tekniği/01-aracla-ilgili-temel-bilgiler.md">01-yakıt-sistemi.md / portal e-kitap</a>: <em>"Antifriz donmayı önlemenin yanı sıra soğutma sıvısının geçtiği yerlerde korozyonu, paslanmayı ve kireç oluşumunu da engelleyerek parçaların ömrünü artırmaktadır."</em></p>
+<p>Pure water + metal = <strong>rust</strong> over time. Pure water + minerals = <strong>limescale</strong> (kireç) that clogs the radiator and coolant passages. Antifreeze contains <strong>chemical inhibitors</strong> that:<br />
+- <strong>Passivate</strong> metal surfaces (stops oxidation)<br />
+- <strong>Chelate</strong> mineral ions (prevents them from forming deposits)<br />
+- <strong>Buffer</strong> pH (keeps the mixture neutral to slightly alkaline)</p>
+<p><strong>This is the reason antifreeze is used ALL YEAR ROUND</strong>, not just in winter. Even in summer, you need antifreeze for the corrosion and boiling protection.</p>
+<h4>The "zehirli / toxic" warning</h4>
+<blockquote>
+<p><strong>Etilen glikol çok zehirli bir maddedir.</strong><br />
+<em>Ethylene glycol is highly toxic.</em></p>
+</blockquote>
+<p><strong>Ethylene glycol is extremely poisonous</strong> — lethal dose for an adult is about <strong>100 ml</strong> (less for children or pets). Tragically, it tastes <strong>sweet</strong>, which is why cats and dogs sometimes drink it from puddles on the ground and die. <strong>Humans have also accidentally poisoned themselves</strong> with antifreeze, or have been poisoned by others using it as a murder weapon (it's a recurring topic in criminal cases).</p>
+<p><strong>Safety rules:</strong><br />
+- <strong>Never leave antifreeze in open containers</strong> where children or pets can reach it<br />
+- <strong>Clean up spills immediately</strong> with absorbent material + plenty of water<br />
+- <strong>Don't siphon antifreeze from a radiator using your mouth</strong> (classic mistake)<br />
+- <strong>Dispose of used antifreeze at a hazardous waste facility</strong>, not down the drain</p>
+<h4>The chemical formula</h4>
+<blockquote>
+<p><strong>HO(CH₂CH₂O)ₙH</strong> — ethylene glycol (or polyethylene glycol) formula</p>
+</blockquote>
+<p>The "n" subscript indicates it's actually a <strong>polymer</strong> form of ethylene glycol, which is why the slide writes it as a repeating unit. Pure <strong>ethylene glycol</strong> is <strong>HOCH₂CH₂OH</strong> (n=1). Antifreeze uses the monomer + water mixture.</p>
+<p>You don't need to memorize the chemistry — just know that <strong>ethylene glycol is the active ingredient</strong>.</p>
+<h3>The −53 °C number</h3>
+<blockquote>
+<p><strong>En düşük donma derecesi yaklaşık −53 derecedir.</strong><br />
+<em>The lowest freezing point is approximately −53 °C.</em></p>
+</blockquote>
+<p>This is a <strong>memorize-the-number</strong> exam fact. At the maximum useful concentration of ethylene glycol (about 68%), a water + glycol mixture freezes at <strong>−53 °C</strong>. Lower concentrations give higher freezing points:</p>
+<table>
+<thead>
+<tr>
+<th>Water : Glycol</th>
+<th>Freezing point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100% water</td>
+<td>0 °C</td>
+</tr>
+<tr>
+<td>70% : 30%</td>
+<td>−16 °C</td>
+</tr>
+<tr>
+<td>50% : 50%</td>
+<td>−37 °C</td>
+</tr>
+<tr>
+<td>40% : 60%</td>
+<td>−53 °C (approximately the max)</td>
+</tr>
+<tr>
+<td>30% : 70%</td>
+<td>starts to rise again (too little water to dissolve the glycol)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> you don't want a glycol concentration above ~70% — the mixture becomes <strong>more viscous</strong> and actually provides <strong>worse cooling</strong> because glycol has lower heat capacity than water.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Antifriz, radyatördeki suyun donmasını ve kaynamasını önleyen SU + ETİLEN GLİKOL karışımıdır.</strong><br />
+<em>Antifreeze is a water + ethylene glycol mixture that prevents the water in the radiator from freezing and boiling.</em></p>
+<p><strong>Etilen glikol ÇOK ZEHİRLİDİR.</strong><br />
+<em>Ethylene glycol is highly toxic.</em></p>
+<p><strong>Antifriz donma derecesini DÜŞÜRÜR, kaynama derecesini YÜKSELTİR.</strong><br />
+<em>Antifreeze LOWERS the freezing point and RAISES the boiling point.</em></p>
+<p><strong>En düşük donma derecesi yaklaşık −53 °C.</strong></p>
+<p><strong>Antifriz yaz-kış kullanılır</strong> (korozyon, paslanma, kireç korumasını da sağlar — see <a href="../../e-kitap/03-araç-tekniği/01-aracla-ilgili-temel-bilgiler.md">portal e-kitap</a>).</p>
+</blockquote>
+<hr />
+<h2>4S. SLIDE 20 — KARLI VE BUZLU YOLLARDA YAPMANIZ GEREKENLER (Driving on Snow / Ice)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"Karlı ve buzlu yollarda yapmanız gerekenler"</strong> (Things you must do on snowy and icy roads). A dense paragraph covering <strong>8 rules</strong> for driving in winter conditions — from "don't drive if you don't have to" to specific technique for braking and cornering.</p>
+<h3>Verbatim Turkish → English (cleaned up from the OCR-scrambled slide)</h3>
+<blockquote>
+<p><strong>Karlı ve buzlu yollarda yapmanız gerekenler</strong></p>
+<ul>
+<li><strong>Mecbur kalmadıkça aracınızla bu tür havada yola çıkmayın.</strong></li>
+<li>Ne kadar tedbir alırsanız alın, sizden başka sürücüler aynı duyarlılığı göstermeyebilir.</li>
+<li>Eğer aracınızla çıkmanız şartsa, aracınızı <strong>uygun bir yere park</strong> edin, <strong>silecekleri kaldırın</strong>, sabah daha rahat bir şekilde yola koyulursunuz.</li>
+<li>Aracınızın camlarını, kapı aynalarını mutlaka <strong>kardan ve buzdan arındırın</strong>. Var ise kar <strong>çözücü solüsyonunuzu</strong> ve silecek suyuna <strong>buz çözücü madde</strong> ilave edin.</li>
+<li>Motoru çalıştırdıktan sonra <strong>tam ısınmasını bekleyin</strong>.</li>
+<li><strong>Kış lastiği</strong> kullanın. Lastik diş derinliği yeterli olmalı, havaya uygun lastik kullanın.</li>
+<li>Sürüşte <strong>ani manevralar yapmayın, gaza çok bastırmayın</strong>. Aracın yere tutunmasını sağlayın.</li>
+<li>Camları ve iç ayna ile <strong>kalorifer camlara sıcak hava</strong> verin (buğu çözme).</li>
+</ul>
+<p><strong>Things to do on snowy and icy roads</strong></p>
+<ul>
+<li><strong>Don't drive in such weather unless you have to.</strong></li>
+<li>No matter how many precautions you take, other drivers may not be as careful.</li>
+<li>If you must drive, park the car in a <strong>suitable place</strong>, lift the <strong>wipers off the glass</strong>, so the next morning you can set off more easily.</li>
+<li>Clear the <strong>windows and door mirrors</strong> of snow and ice completely. If you have <strong>de-icing solution</strong>, use it. Add <strong>de-icing additive</strong> to the wiper fluid.</li>
+<li>After starting the engine, <strong>wait for it to warm up completely</strong>.</li>
+<li>Use <strong>winter tires</strong> with adequate tread depth suited to the weather conditions.</li>
+<li>While driving, <strong>make no sudden maneuvers</strong> and <strong>don't accelerate aggressively</strong>. Keep the car grounded.</li>
+<li>Direct <strong>warm air from the heater onto the windshield and side windows</strong> to defrost and demist them.</li>
+</ul>
+</blockquote>
+<h3>The 8 winter driving rules — detail</h3>
+<h4>Rule 1 — Don't drive if you don't have to</h4>
+<p><strong>Plain English:</strong> Rule #1 of winter driving is: <strong>if you can avoid it, don't drive</strong>. Use public transport, stay home, work remotely. The safest snow-driving strategy is not driving. This is also reinforced by the next point — even if you're careful, <strong>other drivers may not be</strong>, so your safety isn't fully in your hands.</p>
+<h4>Rule 2 — Other drivers are the biggest risk</h4>
+<p><strong>Plain English:</strong> You can be the most cautious driver in the world, but if the driver next to you slides into your lane, you're still in an accident. Winter roads have many inexperienced drivers panicking, making mistakes, and losing control. <strong>Give other cars extra space</strong> — double or triple the normal following distance.</p>
+<h4>Rule 3 — Park somewhere sheltered + lift wipers overnight</h4>
+<p>Already covered in slide 18 (item 4) — lift wipers, park in covered area if possible.</p>
+<h4>Rule 4 — Clear ALL snow and ice before driving</h4>
+<p><strong>Plain English:</strong> Before driving off in winter:</p>
+<ol>
+<li><strong>Clear ALL snow</strong> from the windshield, all side and rear windows, and both dış aynalar (side mirrors)</li>
+<li><strong>Clear ice</strong> — use an ice scraper (<strong>buz kazıyıcı</strong>), not hot water (hot water on ice-cold glass can <strong>crack the glass</strong>)</li>
+<li><strong>Clear snow from the roof</strong> — otherwise chunks will slide forward onto your windshield when you brake</li>
+<li><strong>Clear snow from the headlights and taillights</strong> — you need to be visible</li>
+<li>Use <strong>buz çözücü solüsyon</strong> (de-icer spray) for stubborn ice</li>
+<li>Add <strong>buz çözücü</strong> additive to the washer fluid</li>
+</ol>
+<p><strong>Exam angle:</strong> <em>"Karlı havada yola çıkmadan önce ne yapılır?"</em> → <strong>Tüm camlar, aynalar, farlar kardan ve buzdan temizlenir.</strong></p>
+<h4>Rule 5 — Wait for engine warm-up</h4>
+<p><strong>Plain English:</strong> In cold weather, the engine needs <strong>longer than 30 seconds</strong> to warm up properly — more like <strong>1–3 minutes</strong>. Let the engine reach a stable idle before driving off. A cold engine has <strong>thick oil</strong> that can't lubricate properly, and revving it hard before warm-up causes premature wear.</p>
+<p><strong>This ties back to <a href="#4i-slide-11--kontak-anahtarını-çevirme-prosedürü-ignition-key-procedure">slide 11 of this file</a></strong> about the normal 30-second-1-minute warm-up, but in winter it should be longer.</p>
+<h4>Rule 6 — Winter tires with adequate tread depth</h4>
+<p><strong>Plain English:</strong> <strong>Kış lastikleri (winter tires)</strong> are a <strong>legal requirement</strong> in some Turkish provinces during winter months for commercial vehicles, and strongly recommended for everyone. Winter tires:</p>
+<ul>
+<li>Have <strong>deeper tread</strong> (minimum <strong>4 mm</strong> by law, vs 3 mm for summer — see <a href="08b-lastikler.md">08b-lastikler.md</a>)</li>
+<li>Use a <strong>softer rubber compound</strong> that stays flexible in cold temperatures (summer tires <strong>harden</strong> below 7 °C and lose grip)</li>
+<li>Have <strong>sipes</strong> (small slits in the tread blocks) that bite into snow and ice</li>
+<li>Are marked with a <strong>snowflake + mountain</strong> symbol on the sidewall</li>
+</ul>
+<p><strong>Legal minimum tread depths:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Season</th>
+<th>Minimum tread</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Yaz lastiği</strong> (summer)</td>
+<td>3 mm</td>
+</tr>
+<tr>
+<td><strong>Kış lastiği</strong> (winter)</td>
+<td>4 mm</td>
+</tr>
+<tr>
+<td><strong>Legal absolute minimum (any tire)</strong></td>
+<td>1.6 mm</td>
+</tr>
+</tbody>
+</table>
+<p>Reference: <a href="08b-lastikler.md">08b-lastikler.md</a> for the full tire discussion.</p>
+<h4>Rule 7 — Smooth driving, no sudden inputs</h4>
+<p><strong>Plain English:</strong> On snow/ice, the <strong>friction between tire and road is tiny</strong>. Any sudden input (hard brake, hard steering, hard gas) <strong>breaks that friction</strong> and the car starts sliding. Winter driving technique:</p>
+<ul>
+<li><strong>Accelerate gently</strong> — no "hard launches". On ice, pressing the gas too hard just spins the drive wheels without moving the car forward.</li>
+<li><strong>Brake gently and early</strong> — leave 5× the normal following distance. Use <strong>engine braking</strong> (downshifting) instead of or together with the foot brake.</li>
+<li><strong>Steer gently</strong> — smooth, slow steering inputs. No jerking the wheel.</li>
+<li><strong>If you must brake hard</strong> — ABS will help (pulsing pedal), but braking distance is still <strong>3–5× longer</strong> on ice than on dry asphalt.</li>
+</ul>
+<p><strong>Aracın yere tutunmasını sağlayın</strong> = <em>"keep the car stuck to the road"</em> → minimize anything that breaks contact between tires and asphalt.</p>
+<h4>Rule 8 — Defrost the windows with the heater</h4>
+<p><strong>Plain English:</strong> Winter cabin = humid breathing + cold windows = <strong>buğu (fog/condensation)</strong> on the inside of all the glass. To keep visibility clear:</p>
+<ul>
+<li><strong>Kalorifer (heater)</strong> set to <strong>full hot</strong></li>
+<li><strong>Fan</strong> set to high</li>
+<li><strong>Air direction</strong> to <strong>ön cam (windshield)</strong> + <strong>yan camlar (side windows)</strong></li>
+<li>If available, <strong>use the klima (A/C)</strong> alongside the heater — the A/C removes humidity from the cabin air, clearing fog much faster</li>
+<li>On many modern cars there's a dedicated <strong>defroster / buğu çözücü</strong> button that automatically sets this up</li>
+</ul>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Araç camlarında buğu oluştuğunda ne yapılır?"</em> → <strong>Kalorifer sıcak konumda çalıştırılır ve hava ön cama yönlendirilir. Klima da açılabilir.</strong></p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Karlı/buzlu havada mecbur kalmadıkça yola çıkılmaz. Kış lastiği ve yeterli diş derinliği zorunludur. Ani manevra, ani fren, ani gaz yapılmaz. Camlar ve aynalar mutlaka kardan arındırılır.</strong></p>
+</blockquote>
+<hr />
+<h2>4T. SLIDE 21 — KAR ZİNCİRİ NASIL TAKILIR (How to Install Snow Chains)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"KAR ZİNCİRİ NASIL TAKILIR"</strong>. A 7-step numbered installation procedure with small diagrams / photos at each step showing how to wrap the chain around the tire. Colors are referenced — <strong>kırmızı (red)</strong>, <strong>sarı (yellow)</strong>, <strong>yeşil (green)</strong> plastic coatings on different parts of the chain for identification.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>KAR ZİNCİRİ NASIL TAKILIR</strong></p>
+<ol>
+<li>Çekiş olduğu lastiğin <strong>arkasından</strong> zinciri <strong>öne doğru</strong> yatırın.</li>
+<li>Esnek çelik halatın <strong>kırmızı olan bölümünü jant hizasında kilitleyin</strong>.</li>
+<li><strong>Sarı renkli halatın ucunu</strong> yine <strong>kırmızı olan kısımlara</strong> takarak ileri alın.</li>
+<li>Gelde halatı geriye doğru <strong>kilitli hale gelene kadar sıkıştırın</strong>.</li>
+<li><strong>Yeşil renkli germe zincirinin</strong> yeşil fosfor boyalı uçlarına geçirerek kilitleyin.</li>
+<li>Yeşil germe zincirinin ucundaki <strong>yeşil fosfor boyalı plastik kılavuz yuvasından</strong> geçirerek ileri alın, lastik kasasını çevre zincirine takın.</li>
+<li><strong>100 m sonra</strong> zinciri <strong>tekrar gerin</strong>.</li>
+</ol>
+<p><strong>HOW TO INSTALL A SNOW CHAIN</strong></p>
+<ol>
+<li>Lay the chain <strong>behind</strong> the drive tire, spreading it <strong>forward</strong> toward the tire.</li>
+<li><strong>Lock the red section</strong> of the flexible steel cable <strong>at the wheel rim (jant)</strong> level.</li>
+<li>Pull the <strong>yellow cable end</strong> forward and attach it to the <strong>red sections</strong>.</li>
+<li>Tighten the cable <strong>backwards until it locks in place</strong>.</li>
+<li><strong>Engage the green tensioning chain</strong> into its green phosphor-painted ends and lock it.</li>
+<li>Route the end of the green tensioning chain through the <strong>green phosphor-painted plastic guide sleeve</strong> and pull it forward, attaching the tire casing to the surrounding chain.</li>
+<li><strong>After 100 meters of driving, re-tighten the chain.</strong></li>
+</ol>
+</blockquote>
+<h3>Clean English explanation — high level</h3>
+<p>A <strong>kar zinciri (snow chain)</strong> is a set of linked steel chains that wrap around a tire's circumference, providing <strong>additional grip</strong> on snow and ice by physically <strong>biting into the surface</strong>. Modern snow chains are <strong>color-coded</strong> with red / yellow / green plastic coatings on different parts to make installation easier — you just follow the colors in order.</p>
+<p>The 7-step procedure is roughly:</p>
+<ol>
+<li><strong>Position the chain</strong> behind the tire (drive wheels only)</li>
+<li><strong>Lock the red section</strong> behind the rim</li>
+<li><strong>Attach the yellow cable</strong> to red points</li>
+<li><strong>Tighten</strong> by pulling</li>
+<li><strong>Lock the green tensioner</strong> into place</li>
+<li><strong>Route the final tensioner</strong> through the guide sleeve</li>
+<li><strong>Drive 100 m, then re-tighten</strong> (because the chain settles and loosens during the first few meters)</li>
+</ol>
+<h3>The "çekiş olduğu lastik" rule — which wheels to install on</h3>
+<p>The first word of the slide is <strong>critical</strong>: <strong>"çekiş olduğu lastiğin arkasından"</strong> — <em>"behind the drive wheel"</em>.</p>
+<blockquote>
+<p><strong>Kar zinciri sadece çekici (drive) lastiklere takılır.</strong></p>
+</blockquote>
+<ul>
+<li><strong>Önden çekişli (FWD) araç</strong> → kar zinciri <strong>ön iki tekerleğe</strong> takılır (most modern cars)</li>
+<li><strong>Arkadan çekişli (RWD) araç</strong> → kar zinciri <strong>arka iki tekerleğe</strong> takılır (most trucks, some older cars)</li>
+<li><strong>4 çekişli (4WD/AWD) araç</strong> → ideally all 4, in practice just the front 2 if you only have one set</li>
+</ul>
+<p><strong>You install the chain on the wheels that GET POWER from the engine</strong>, not the other ones — because the other wheels are just "along for the ride" and chains there don't help you accelerate, climb hills, or get unstuck.</p>
+<p>This is already covered in <a href="08b-lastikler.md">08b-lastikler.md</a> as an exam trap. In modern Turkish city cars (FWD), the answer to <em>"kar zinciri hangi tekerleklere takılır?"</em> is <strong>ön tekerlekler</strong>.</p>
+<h3>The "100 m sonra tekrar ger" rule</h3>
+<p><strong>Plain English:</strong> After installing the chain and driving the first 100 meters, <strong>stop and re-tighten the chain</strong>. This is because:</p>
+<ul>
+<li>When first installed, the chain is positioned but not fully seated</li>
+<li>During the first few meters of driving, the chain <strong>settles</strong> into the tire tread and <strong>shifts around</strong></li>
+<li>This causes the chain to become <strong>slightly loose</strong></li>
+<li>A loose chain can <strong>fly off</strong> the wheel at high speed, damaging the car's wheel well, brake lines, or suspension</li>
+</ul>
+<p><strong>Always re-check + re-tighten at ~100 m.</strong> After that, the chain should stay tight for the rest of the trip.</p>
+<h3>The color-coding system (simplified for exam)</h3>
+<p>Real snow chain installation varies by manufacturer, but the exam focuses on the <strong>general concept</strong>: <strong>"zinciri çekiş lastiklerine takarız, 100 m sonra tekrar geririz"</strong>. You don't need to memorize the red/yellow/green sequence for the exam — just know:</p>
+<ul>
+<li><strong>Kar zinciri = çekiş lastiklerine</strong> (snow chain on drive wheels)</li>
+<li><strong>Patinaj zinciri</strong> is another name for the same thing</li>
+<li>Modern chains are <strong>color-coded</strong> for easy installation</li>
+<li>After 100 m, <strong>re-tighten</strong></li>
+</ul>
+<h3>Kar zinciri alternatives (from the portal)</h3>
+<p>From <a href="../../e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md">e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md</a>, <strong>patinaj önleyiciler (anti-skid devices)</strong> include:</p>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>Turkish</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zincir</strong></td>
+<td>Snow chain</td>
+<td>Classic steel chain</td>
+</tr>
+<tr>
+<td><strong>Kar çorabı</strong></td>
+<td>Snow sock</td>
+<td>Fabric tire cover — easier to install, less effective</td>
+</tr>
+<tr>
+<td><strong>Patinaj önleyici sprey</strong></td>
+<td>Anti-skid spray</td>
+<td>Aerosol spray that adds grip temporarily (very limited use)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam note:</strong> zincir is the strongest and most exam-tested; kar çorabı and sprey are less common.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Kar zinciri çekiş (drive) lastiklerine takılır.</strong> (FWD cars → ön tekerlekler.)<br />
+<em>Snow chains are installed on the drive wheels.</em></p>
+<p><strong>Kar zinciri taktıktan 100 m sonra tekrar gerilir.</strong><br />
+<em>After installing snow chains, re-tighten after 100 meters of driving.</em></p>
+<p><strong>Patinaj önleyici seçenekler:</strong> zincir, kar çorabı, patinaj önleyici sprey.</p>
+</blockquote>
+<h3>Cross-references</h3>
+<ul>
+<li><strong><a href="08b-lastikler.md">08b-lastikler.md</a></strong> — full tire discussion including kar zinciri + kış lastiği rules</li>
+<li><strong><a href="11-süspansiyon-sistemi.md">11-süspansiyon-sistemi.md</a></strong> — how süspansiyon keeps the tire in contact with the road (critical in winter)</li>
+</ul>
+<hr />
+<h2>4U. Hoca's Live Class Additions (2026-04-14) — Class 2 Full Transcript Review</h2>
+<h3>Addition 1 — ⭐⭐⭐ BIG ONE: "Yokuş Kalkış Desteği" is an AKTİF güvenlik sistemi not on the slide</h3>
+<p>This is <strong>NEW content</strong> not listed on slide 15's 4-item active-safety list. When explaining aktif güvenlik, hoca pointed at <strong>Hill Start Assist</strong> as a concrete real-world example, specifically relevant to <strong>otomatik vites ehliyet</strong> candidates:</p>
+<blockquote>
+<p><em>"Mesela şimdi otomatik vites ehliyet alacak arkadaşlarım var aramızda. Kurumdaki otomatik olan araçların ne özelliği var biliyor musunuz? </em><em>Yokuş kalkış desteği</em><em> özelliği. Yani yokuşta duracaksınız, 'hadi' diyecek komisyon size, 'araca hareket ettirttir'. Araba milim kaymayacak otomatik kullananların. Niye? Çünkü arabanın kendi sisteminde yokuş kalkış desteği var. Bak bu sürüş emniyetini arttırıyor mu? Şoföre yardımcı oluyor mu? Evet, o zaman bu aktif bir sistem."</em></p>
+</blockquote>
+<p><strong>Plain English — what yokuş kalkış desteği is:</strong></p>
+<p><strong>Yokuş kalkış desteği (Hill Start Assist / HSA / HHC)</strong> is a feature where:</p>
+<ul>
+<li>You stop the car <strong>on an uphill slope</strong> (e.g., at a red light on a hill)</li>
+<li>You release the brake pedal</li>
+<li><strong>For about 2 seconds</strong>, the car <strong>automatically holds the brakes on</strong> — preventing the car from rolling backward</li>
+<li>In those 2 seconds, you press the gas pedal (or, on a manual, engage the clutch)</li>
+<li>The car takes off forward cleanly</li>
+<li>The held brake releases once the engine torque is enough to propel the car uphill</li>
+</ul>
+<p><strong>Result:</strong> the car doesn't <strong>roll back</strong> even by a centimeter during the 2-second window.</p>
+<h3>Why this is a big deal for ehliyet candidates</h3>
+<p>The <strong>direksiyon sınavı (practical driving exam)</strong> includes a <strong>yokuş kalkış</strong> test — the committee parks you on a hill and asks you to move off. If the car <strong>rolls backward even 30 cm</strong>, you <strong>fail</strong> the exam.</p>
+<h4>For manuel vites (stick-shift) candidates</h4>
+<p>On a manual car <strong>without</strong> yokuş kalkış desteği, you must perform the <strong>yarım debriyaj (half-clutch) hill start</strong> technique:</p>
+<ol>
+<li>Car stopped on the hill, clutch fully pressed, in 1st gear, foot on brake</li>
+<li>Start releasing clutch until you feel the yarım debriyaj point</li>
+<li>At that exact moment, release the brake (car doesn't roll because half-clutch holds it)</li>
+<li>Press gas + release clutch fully</li>
+<li>Car moves forward without rolling back</li>
+</ol>
+<p><strong>This is HARD.</strong> Beginners roll back several meters until they learn it. The committee expects <strong>zero rollback</strong> — so manual drivers must perfect this technique through practice.</p>
+<h4>For otomatik vites candidates</h4>
+<p>On an otomatik with HSA, you just:</p>
+<ol>
+<li>Press the brake, stop on the hill</li>
+<li>Release the brake (HSA holds the car)</li>
+<li>Press gas — car moves off smoothly</li>
+<li><strong>Zero rollback, zero skill required</strong></li>
+</ol>
+<p>This is why <strong>otomatik ehliyet is significantly easier</strong> for the direksiyon sınavı — the hardest skill on the exam (hill start) is automatic.</p>
+<h3>Why it qualifies as "aktif güvenlik"</h3>
+<p>Using the test from slide 15:</p>
+<blockquote>
+<p><em>"Would this system help me if the accident NEVER happened?"</em><br />
+<strong>Yes</strong> — it helps me drive off smoothly on hills, every day, regardless of any accident. It's <strong>assisting my driving</strong>, not protecting me in a crash. → <strong>AKTİF güvenlik</strong>.</p>
+</blockquote>
+<h3>Updated list of aktif güvenlik systems</h3>
+<p>Based on hoca's class expansion, the full list of aktif güvenlik systems is:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>System</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>ABS</strong></td>
+<td>Prevents wheel lock-up during hard braking</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ASR / TRC / TC / TCS</strong></td>
+<td>Traction control — stops drive wheels spinning</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>VSC / ESP / VDC / ESC</strong></td>
+<td>Stability control — prevents skids</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>EMS</strong></td>
+<td>Electronically-controlled suspension</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>⭐ Yokuş Kalkış Desteği (HSA / HHC)</strong></td>
+<td><strong>Hill Start Assist</strong> — prevents rollback on uphill starts</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Yokuş kalkış desteği, otomatik vitesli araçlarda yokuşta geri kaymayı önleyen bir AKTİF güvenlik sistemidir.</strong><br />
+<em>Hill start assist is an ACTIVE safety system in automatic vehicles that prevents rollback on hills.</em></p>
+</blockquote>
+<hr />
+<h3>Addition 2 — ⭐ Metal ring / watch warning when working on the battery</h3>
+<p>Already partially covered in <a href="#4p-slide-17--bakımlar-maintenance-günlük--haftalık--akü-detail">slide 17 / rule 8 of akü bakımı</a>, but hoca re-emphasized in very direct terms:</p>
+<blockquote>
+<p><em>"Yalnız aküyle eğer uğraşacaksanız elinizde bir metal yüzüktür, saattir vesairedir bunları elinizden çıkartmanız lazım. Değmemesi lazım. Kısa devre yapar yoksa."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> Before working on the battery (adding water, cleaning, jump-starting, any hands-on):</p>
+<ul>
+<li><strong>Remove metal rings (yüzük)</strong> from your fingers</li>
+<li><strong>Remove metal watches (saat)</strong> from your wrist</li>
+<li><strong>Remove metal bracelets, chains, necklaces</strong> — anything conductive on your hands/arms</li>
+</ul>
+<p><strong>Why:</strong> if you accidentally <strong>touch both battery terminals (+ and −) with a metal object while it's still touching your skin</strong>, the object becomes a <strong>short circuit</strong> — and it instantly <strong>heats to thousands of degrees</strong>. A metal ring on your finger that shorts across terminals will:</p>
+<ul>
+<li><strong>Burn into your skin</strong> (instant severe burn)</li>
+<li><strong>Weld itself to the battery posts</strong> — you can't pull your hand away</li>
+<li><strong>The current flows through YOU</strong> instead of the battery</li>
+<li><strong>The battery explodes</strong> from the internal short</li>
+</ul>
+<p>This is how people <strong>lose fingers</strong> or get <strong>third-degree burns</strong> from battery maintenance. Just take the jewelry off. Takes 5 seconds and saves your hand.</p>
+<hr />
+<h3>Addition 3 — ⭐ Winter prep: go down to the car 10 min EARLIER than usual</h3>
+<p>Already in slide 18 in general, but hoca gave a <strong>specific timing rule</strong>:</p>
+<blockquote>
+<p><em>"Kışa veya ki yola çıkacaksam normal çıktığım saatten bir on dakika daha önce aşağı ineyim arabamın başına. Kar varsa sağında solunda küreyim. Arabayı birazcık ısıtayım değil mi? Bir beş, on dakika. Bunu zaten hani görürsünüz. Bunları yapmanız lazım."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> On winter mornings when you have somewhere to be, <strong>leave home 10 minutes earlier</strong> than your usual departure time. Use those 10 minutes to:</p>
+<ol>
+<li><strong>Shovel / brush snow</strong> from around the car (and from ON the car — roof, windows, hood, trunk)</li>
+<li><strong>Clear ice</strong> from the windshield with a scraper</li>
+<li><strong>Start the engine</strong> and let it run to warm up for <strong>5–10 minutes</strong></li>
+<li><strong>Let the kalorifer defrost</strong> the windows from the inside</li>
+<li><strong>Check the tire pressures</strong> (cold-weather pressure drops)</li>
+</ol>
+<p><strong>Then</strong> you drive off with:<br />
+- A clear windshield<br />
+- A warm cabin<br />
+- A properly lubricated engine<br />
+- No ice on the glass</p>
+<p><strong>Without these 10 minutes</strong>, you either drive with ice-blind glass (dangerous and illegal), or you arrive at work 15 minutes late because you did all this at the last second while stressed.</p>
+<p><strong>Winter rule:</strong> <strong>10 dakika erken in, aracı hazırla, rahat git.</strong></p>
+<hr />
+<h3>Addition 4 — Winter emergency kit: also include a BATTANİYE</h3>
+<p>The slide 18 list mentioned telefon charger + yedek batarya. Hoca verbally added:</p>
+<blockquote>
+<p><em>"Aracında bir zincir bulundur. Ne bileyim bir battaniye bulunsun. Telefonunu şarj et. Ola ki sıkıntı yaşarsan önlem almış ol."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> The winter emergency kit should include:</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Turkish</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Snow chain</td>
+<td><strong>Kar zinciri</strong></td>
+<td>Traction on snow/ice</td>
+</tr>
+<tr>
+<td><strong>Blanket</strong></td>
+<td><strong>Battaniye</strong></td>
+<td>If stranded in cold, prevents hypothermia</td>
+</tr>
+<tr>
+<td>Phone + charger</td>
+<td><strong>Telefon + şarj cihazı</strong></td>
+<td>Emergency communication</td>
+</tr>
+<tr>
+<td>Power bank</td>
+<td><strong>Yedek batarya</strong></td>
+<td>Backup charging</td>
+</tr>
+<tr>
+<td>Water</td>
+<td><strong>Su</strong></td>
+<td>Dehydration is a concern even in winter</td>
+</tr>
+<tr>
+<td>Food (non-perishable)</td>
+<td><strong>Yiyecek (çerez, kraker)</strong></td>
+<td>Long waits for rescue</td>
+</tr>
+<tr>
+<td>Flashlight</td>
+<td><strong>El feneri</strong></td>
+<td>Night emergencies</td>
+</tr>
+<tr>
+<td>De-icer spray</td>
+<td><strong>Buz çözücü sprey</strong></td>
+<td>Stuck frozen locks, glass</td>
+</tr>
+<tr>
+<td>Scraper</td>
+<td><strong>Buz kazıyıcı</strong></td>
+<td>Clear ice</td>
+</tr>
+<tr>
+<td>Small shovel</td>
+<td><strong>Küçük kürek</strong></td>
+<td>Dig out from snow</td>
+</tr>
+<tr>
+<td>Hi-viz vest</td>
+<td><strong>Fosforlu yelek</strong></td>
+<td>Visibility if you're walking for help</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The battaniye is the key addition:</strong> if you break down in a snow storm far from help, the engine may need to be off for hours (fuel running out, mechanical failure). Without heating, hypothermia can set in surprisingly fast. A blanket can literally save your life in those conditions.</p>
+<hr />
+<h3>Addition 5 — "Emanuel kullanan arkadaşım ne yapacak?" — the manual driver's disadvantage</h3>
+<p>Hoca contrasted manual drivers with automatic drivers explicitly:</p>
+<blockquote>
+<p><em>"Emanuel kullanan arkadaşım ne yapacak? Debriyajı ayarlamak zorunda ayağıyla birlikte. Yani o kavramayı kendisi ayarlamak zorunda. Ayar biraz önce bahsettim ya, çok aşağıda olursa araç geriye doğru kayacak ama bunu kaydırmamanız gerekiyor."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> On a <strong>manuel (stick-shift)</strong> car, the driver must <strong>manually control the yarım debriyaj position</strong> with their left foot during:</p>
+<ul>
+<li>Hill starts</li>
+<li>Slow maneuvers in parking</li>
+<li>Creeping through heavy traffic</li>
+<li>Moving off from a complete stop</li>
+</ul>
+<p>If the clutch release timing is wrong (released too fast, or not enough gas, or not at the friction point), the car either:<br />
+- <strong>Stalls</strong> (engine dies)<br />
+- <strong>Rolls backward</strong> (on a hill)<br />
+- <strong>Jerks forward</strong> (too much gas)</p>
+<p><strong>On an automatic</strong>, none of this applies — the car handles clutch coordination automatically.</p>
+<p><strong>This is why the yarım debriyaj skill takes dozens of practice lessons</strong> to master, and why hoca kept emphasizing it throughout class 2.</p>
+<hr />
+<h3>Addition 6 — Class-ending summary and next-class info</h3>
+<p>Hoca ended the class with the usual closing, plus important logistics:</p>
+<blockquote>
+<p><em>"Araç tekniği dersimize ait konu başlıklarımızı tamamlamış olduk. Benden sonra </em><em>Muharrem Hoca</em><em>sa trafik çevre bilgisini online'a girecek arkadaşlar için söylüyorum. O anlatacak."</em></p>
+</blockquote>
+<p><strong>Plain English — class schedule update:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Date</th>
+<th>Subject</th>
+<th>Hoca</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2026-04-13</strong> ✅</td>
+<td>Araç Tekniği Bilgisi (Class 1)</td>
+<td><strong>İnayet Öğretmen</strong></td>
+</tr>
+<tr>
+<td><strong>2026-04-14</strong> ✅</td>
+<td>Araç Tekniği Bilgisi (Class 2 — THIS CLASS)</td>
+<td><strong>İnayet Öğretmen</strong></td>
+</tr>
+<tr>
+<td><strong>2026-04-15</strong></td>
+<td>Trafik ve Çevre Bilgisi (Class 3)</td>
+<td><strong>Muharrem Hoca</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Takeaway:</strong> araç tekniği chapter is <strong>complete</strong>. No more classes on vehicle technology — the next class is a <strong>different subject (Trafik ve Çevre Bilgisi)</strong> with a <strong>different hoca (Muharrem Hoca)</strong>.</p>
+<hr />
+<h3>Addition 7 — Hoca's slide-sharing policy (personal data boundary)</h3>
+<p>When a student asked in class chat to share the PDF slides, hoca was direct:</p>
+<blockquote>
+<p><em>"Benim sizden link ya da PDF paylaşma gibi bir durumum yok. Hiçbirinizin mail adresini bilmiyorum. Hiçbirinizin telefonunu bilmiyorum. Siz evinizdesiniz. Ben evimdeyim. Şu an kurumda bile değilim. Nasıl paylaşayım sizlerle? Yüz yüze derse gelirseniz elinizde flaş bellek getirirsiniz. Oradan alabilirsiniz. Ya da kurumu aradığınızda, kayıt olduğunuz kurumu aradığınızda oradaki arkadaşlar, eğer ki varsa ellerinde PDF, siz de atabilirlerse atabilirler."</em></p>
+</blockquote>
+<p><strong>Plain English — how to get the slides:</strong></p>
+<ol>
+<li><strong>Attend a yüz yüze (in-person) lesson</strong> at the kurum (Özel Sancaktepe Göksen MTSK)</li>
+<li><strong>Bring a flaş bellek (USB stick)</strong> to copy the slides from the classroom computer</li>
+<li>OR <strong>call the kurum phone line</strong> and ask the staff to email the PDF (if available)</li>
+</ol>
+<p>Hoca does NOT personally share slides via WhatsApp, email, or other direct means — she doesn't have students' contact info and policy-wise won't collect it.</p>
+<p><strong>Practical implication for us:</strong> if we want the original slides, go to a yüz yüze ders with a USB stick. Otherwise rely on our own screen captures and ders notes.</p>
+<hr />
+<h3>Addition 8 — Study strategy from hoca</h3>
+<blockquote>
+<p><em>"Çıkan soruları birazcık okuyun. PDF'ler daha detaylı, PDF'leri okuyun. Zaten havada karada soruları rahatlıkla çözeceksinizdir."</em></p>
+</blockquote>
+<p><strong>Plain English — hoca's recommended exam prep method:</strong></p>
+<ol>
+<li><strong>Read past exam questions (çıkan sorular)</strong> — practice the question format and recognize exam traps</li>
+<li><strong>Read the PDFs</strong> (more detailed than the class slides themselves)</li>
+<li>Doing both → you'll solve <strong>any question, anywhere, any time</strong> ("havada karada")</li>
+</ol>
+<p><strong>Tie-in to our app:</strong> this is exactly what <a href="https://musabaku.github.io/ehliyet-pratik/">ehliyet-pratik</a> does — 4,450 past exam questions, categorized, searchable, with the exact answer patterns. Pair the app with the portal's <a href="../../e-kitap/">e-kitap/</a> PDFs and the <a href="./">ders-notes/</a> we're building, and the exam becomes trivial.</p>
+<hr />
+<h2>5. Why this matters for the exam</h2>
+<p>Typical exam question patterns:</p>
+<ol>
+<li><strong>"Araca binmeden önce hangi kontroller yapılır?"</strong> → Lastikler, fren/stop lambaları, sinyaller, benzin deposu kapağı, yağ akıntısı, aracın altı (kedi-köpek).</li>
+<li><strong>"Aracın altı neden kontrol edilir?"</strong> → Kedi, köpek veya herhangi bir engelin olmadığını görmek için.</li>
+<li><strong>"Sürücü koltuğunun sırt açısı kaç derece olmalıdır?"</strong> → Yaklaşık <strong>90°</strong>.</li>
+<li><strong>"Sürüş esnasında sol ayak nerede olmalıdır?"</strong> → Ayak dayama yerinde (dead pedal), vücudu koltuğa yapıştıracak şekilde.</li>
+<li><strong>"Koltuk ileri-geri ayarı nasıl yapılmalıdır?"</strong> → Kol uzatıldığında bilek direksiyonun üst noktasına gelmelidir.</li>
+<li><strong>"Doğru sürüş pozisyonunun faydası nedir?"</strong> → Reaksiyon süresini kısaltır, sert manevralarda öne savrulmayı önler, vücudun rahat hareket etmesini sağlar.</li>
+<li><strong>"Sürüş sırasında omuzlar koltuk sırtından ayrılırsa ne olur?"</strong> → Araç kontrolü zorlaşır, direksiyon üzerinde yeterli güç uygulanamaz.</li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>Araca binmeden önce:</strong> lastik, fren lambası, stop lambası, sinyal, benzin depo kapağı, yağ akıntısı, aracın altı (kedi-köpek) kontrol edilir.<br />
+<em>Before getting in the car: tires, brake lamp, stop lamp, signals, fuel cap, oil leaks, under the car (cats &amp; dogs) are checked.</em></p>
+<p><strong>Koltuk sırt açısı:</strong> yaklaşık <strong>90°</strong>.<br />
+<em>Seat back angle: approximately 90°.</em></p>
+<p><strong>Omuzlar koltuk sırtına yapışık olmalıdır.</strong><br />
+<em>Shoulders must stay in contact with the seat back.</em></p>
+<p><strong>Sol ayak, ayak dayama yerinde (dead pedal) vücudu koltuğa iter.</strong><br />
+<em>The left foot on the dead pedal pushes the body into the seat.</em></p>
+<p><strong>Koltuk ileri-geri ayarı:</strong> kol uzatıldığında bilek direksiyonun üst noktasında olmalıdır.<br />
+<em>Seat forward/back adjustment: when the arm is extended, the wrist should rest on the top of the steering wheel.</em></p>
+<p><strong>Doğru oturma pozisyonu reaksiyon süresini KISALTIR</strong> (slide'daki "uzatır" ifadesi bir hatadır).<br />
+<em>The correct seating position SHORTENS reaction time (the slide's "lengthens" is a typo).</em></p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Araca binmeden önce</td>
+<td>Before getting into the car</td>
+<td>Pre-drive walk-around phase</td>
+</tr>
+<tr>
+<td>Göz kontrolü</td>
+<td>Visual inspection</td>
+<td>Quick look-over without tools</td>
+</tr>
+<tr>
+<td>Fren lambası</td>
+<td>Brake lamp (rear red light)</td>
+<td>Lights up when you press the brake</td>
+</tr>
+<tr>
+<td>Stop lambası</td>
+<td>Stop lamp (same as fren lambası)</td>
+<td>Alternate name, exam uses both</td>
+</tr>
+<tr>
+<td>Sinyal lambası</td>
+<td>Turn signal / indicator</td>
+<td>Flashing amber lamp</td>
+</tr>
+<tr>
+<td>Benzin depo kapağı</td>
+<td>Fuel tank cap</td>
+<td>Must be securely closed</td>
+</tr>
+<tr>
+<td>Yağ akıntısı</td>
+<td>Oil leak (on the ground)</td>
+<td>Dark puddle under the engine</td>
+</tr>
+<tr>
+<td>Aracın altı</td>
+<td>Under the car</td>
+<td>Check for cats, dogs, objects</td>
+</tr>
+<tr>
+<td>Araç dışı kontrol</td>
+<td>External (exterior) check</td>
+<td>Walk-around inspection</td>
+</tr>
+<tr>
+<td>Araç içi kontrol</td>
+<td>Interior check</td>
+<td>Things to check from the driver seat</td>
+</tr>
+<tr>
+<td>Oturuş pozisyonu</td>
+<td>Seating position</td>
+<td>How the driver sits</td>
+</tr>
+<tr>
+<td>Koltuk sırt ayarı</td>
+<td>Seat back angle</td>
+<td>Recline angle of the seat</td>
+</tr>
+<tr>
+<td>90 derece</td>
+<td>90 degrees</td>
+<td>Correct seat back angle</td>
+</tr>
+<tr>
+<td>Omuz</td>
+<td>Shoulder</td>
+<td>Must stay against seat back</td>
+</tr>
+<tr>
+<td>Koltuk sırtı / sırtlık</td>
+<td>Seat back</td>
+<td>The upright part of the seat</td>
+</tr>
+<tr>
+<td>Ayak dayama yeri</td>
+<td>Foot-rest / dead pedal</td>
+<td>Where the left foot braces</td>
+</tr>
+<tr>
+<td>Sol ayak</td>
+<td>Left foot</td>
+<td>The bracing foot</td>
+</tr>
+<tr>
+<td>Direksiyon simidi</td>
+<td>Steering wheel</td>
+<td>The wheel the driver holds</td>
+</tr>
+<tr>
+<td>Direksiyon üst bölümü</td>
+<td>Top of the steering wheel</td>
+<td>Reach reference point</td>
+</tr>
+<tr>
+<td>Kavramak</td>
+<td>To grip / grasp</td>
+<td>How hands hold the wheel</td>
+</tr>
+<tr>
+<td>Reaksiyon süresi</td>
+<td>Reaction time</td>
+<td>Time between seeing a hazard and responding</td>
+</tr>
+<tr>
+<td>Sert manevra</td>
+<td>Hard maneuver</td>
+<td>Sharp turn or emergency swerve</td>
+</tr>
+<tr>
+<td>Öne savrulma</td>
+<td>Forward throw</td>
+<td>Being thrown forward in a sudden stop</td>
+</tr>
+<tr>
+<td>Koltuk kafalığı / başlık</td>
+<td>Headrest</td>
+<td>Protects the neck in rear-end impacts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li><strong><a href="09-fren-sistemi.md">09-fren-sistemi.md</a></strong> — aktif vs pasif güvenlik: correct seating position interacts with passive safety (emniyet kemeri, koltuk kafalığı, hava yastığı) — wrong posture defeats all three</li>
+<li><strong><a href="11-süspansiyon-sistemi.md">11-süspansiyon-sistemi.md</a></strong> — the şase + karoser structure is designed around a properly-seated driver; crumple zones only work if the occupant is in the designed position</li>
+<li><strong>Portal reference:</strong> <a href="../../e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md">e-kitap/03-araç-tekniği/02-guvenli-arac-kullanma-arac-bakim-ve-kontrolleri.md</a> — section 1 "ARAÇ KULLANMAYA HAZIRLIK" has the full checklist including emniyet kemerleri, ayna ayarları, direksiyon ayarı, koltuk ve başlık ayarı — more sub-topics likely coming in the next slides</li>
+</ul>
+<hr />
+<p><em>Next slides expected in this file: koltuk ve başlık (headrest) ayarı, emniyet kemeri kullanımı, ayna ayarları (iç ayna, yan aynalar, kör nokta), direksiyon ayarı ve tutuş pozisyonu, aracı çalıştırma prosedürü, aydınlatma-ikaz ışıkları recap, periyodik bakım, rodaj, kış-yaz hazırlığı, günlük kontroller.</em></p>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

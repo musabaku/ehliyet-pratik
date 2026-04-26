@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Güç Aktarma Organları — Drivetrain / Power Transmission | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 08-güç-aktarma-organları</span>
+</div>
+<div class="content">
+<h1>Güç Aktarma Organları — Drivetrain / Power Transmission</h1>
+<p><strong>Last updated:</strong> 2026-04-14 (class 2)<br />
+<strong>Slides covered:</strong> Güç aktarma organları diagram (class 1), Vites kutusu tanımı + şanzıman (class 2 slide A), Vites kullanım hızları — her vitesin hız aralığı (class 2 slide B)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Güç aktarma organları:</strong> Motorda üretilen hareketi (gücü) tekerleklere ileterek aracın hareket etmesini sağlayan parçaların tümüdür.<br />
+<em>(Drivetrain: the whole group of parts that transmits the motion/power generated in the engine to the wheels, enabling the vehicle to move.)</em></p>
+</blockquote>
+<p><strong>Güç aktarma organları</strong> literally translates as "power transmission organs" — collectively the <strong>drivetrain</strong>. It's the chain of mechanical components that takes the spinning output of the engine and routes it to the wheels that push the car forward.</p>
+<h3>The big picture</h3>
+<p>The engine produces spinning motion (rotation) on a shaft called the <strong>krank mili (crankshaft)</strong>. But the engine sits in one place and the wheels are elsewhere. You also need to:<br />
+- <strong>Engage/disengage</strong> the connection (so you can stop without killing the engine) → <strong>Debriyaj (clutch)</strong><br />
+- <strong>Change the gear ratio</strong> (so the engine can run at efficient RPM whether you're crawling or cruising) → <strong>Vites kutusu (gearbox)</strong><br />
+- <strong>Carry the rotation backward</strong> to the rear axle (in rear-wheel-drive cars) → <strong>Şaft (drive shaft)</strong><br />
+- <strong>Split the power</strong> between the two rear wheels, allowing them to spin at different speeds when cornering → <strong>Diferansiyel (differential)</strong><br />
+- <strong>Connect the differential to the wheels</strong> → <strong>Aks (axle)</strong><br />
+- <strong>Put the power on the road</strong> → <strong>Tekerlekler (wheels)</strong></p>
+<p>That chain is the güç aktarma organları.</p>
+<hr />
+<h2>2. SLIDE — Güç Aktarma Organları Diagram</h2>
+<h3>What the slide showed</h3>
+<p>A cutaway illustration of a rear-wheel-drive car's drivetrain from engine to rear wheels, with the following parts labeled:<br />
+- <strong>Motor</strong> (engine) — left<br />
+- <strong>Vites Kutusu</strong> (gearbox / transmission) — next to engine<br />
+- <strong>Şaft</strong> (drive shaft) — long middle shaft<br />
+- <strong>Diferansiyel</strong> (differential) — rear<br />
+- <strong>Aks</strong> (axle) — connecting to wheels<br />
+- <strong>Tekerlekler</strong> (wheels) — right<br />
+- Caption: <strong>Güç Aktarma Organları</strong></p>
+<h3>The full drivetrain chain (memorize it!)</h3>
+<pre><code>MOTOR ─▶ DEBRİYAJ ─▶ VİTES KUTUSU ─▶ ŞAFT ─▶ DİFERANSİYEL ─▶ AKS ─▶ TEKERLEKLER
+(engine) (clutch)  (gearbox)       (drive  (differential) (axle) (wheels)
+                                    shaft)
+</code></pre>
+<p><strong>Note:</strong> The slide shows 6 parts — it leaves out <strong>debriyaj (clutch)</strong>, but the debriyaj is almost always included in exam questions about the drivetrain because it's the critical connection point between engine and gearbox in manual cars.</p>
+<h3>The 7 parts explained</h3>
+<h4>1. <strong>MOTOR</strong> — Engine</h4>
+<p>The power source. Converts fuel into rotational motion on the crankshaft. This is the starting point of every drivetrain.</p>
+<h4>2. <strong>DEBRİYAJ</strong> — Clutch <em>(on manual cars)</em></h4>
+<p>The <strong>coupling</strong> that connects/disconnects the engine from the gearbox. When you press the clutch pedal, the engine is temporarily disconnected from the wheels — that's how you can stop the car without stalling the engine, and how you change gears. Automatic cars use a torque converter instead but the concept is similar.</p>
+<h4>3. <strong>VİTES KUTUSU</strong> — Gearbox / Transmission</h4>
+<p><strong>Changes the gear ratio</strong> between the engine and the wheels. Low gears (1st, 2nd) give more torque for starting and climbing hills but low top speed. High gears (5th, 6th) give higher speed but less torque. Without a gearbox, the engine would be screaming at highway speeds and stalling at crawl speeds.</p>
+<h4>4. <strong>ŞAFT</strong> — Drive Shaft / Propeller Shaft</h4>
+<p>The long rotating <strong>metal rod</strong> that carries rotation from the gearbox (near the engine) to the differential (at the rear axle) in rear-wheel-drive cars. Front-wheel-drive cars <strong>don't have a long şaft</strong> — the gearbox and differential are combined into a "transaxle" next to the engine.</p>
+<h4>5. <strong>DİFERANSİYEL</strong> — Differential</h4>
+<p>A clever gear assembly that <strong>splits the rotation from the şaft between the two rear wheels</strong>, while allowing them to turn at <strong>different speeds</strong>. This is critical when cornering — the outer wheel must travel farther than the inner wheel, so they can't be locked together.</p>
+<h4>6. <strong>AKS</strong> — Axle (Half-shafts)</h4>
+<p>The <strong>short rotating shafts</strong> that connect the differential to each wheel. There are two — one for the left wheel, one for the right.</p>
+<h4>7. <strong>TEKERLEKLER</strong> — Wheels (with tires)</h4>
+<p>The final delivery point. The tires grip the road and push the car forward (or backward). Every bit of engine power eventually has to pass through the tires' contact patch with the road.</p>
+<h3>FWD vs RWD (front-wheel vs rear-wheel drive)</h3>
+<p>The slide illustration shows a <strong>rear-wheel drive</strong> layout (engine front, long şaft, rear differential). Most modern everyday cars are actually <strong>front-wheel drive</strong>, where:<br />
+- The engine and gearbox sit together as a "transaxle" at the front<br />
+- There's no long şaft — power goes directly to the front wheels via short half-shafts (aks)<br />
+- The rear wheels don't receive any engine power</p>
+<p>Both layouts use the same core concepts — only the arrangement differs.</p>
+<h3>Hoca's live note: modern cars are almost all FWD</h3>
+<blockquote>
+<p><em>"Günümüzdeki arabaların hepsi önden çekişli arkadaşlar, bilginiz olsun. Öndeki tekerlekler motordan gücünü alıyor. Arkadakiler onunla birlikte hareket ediyorlar."</em></p>
+</blockquote>
+<p><strong>Practical implication for snow chains:</strong> If the exam asks "which wheels do snow chains go on for a modern city car?" the answer is <strong>ön tekerleklere</strong> (front wheels) — because modern cars are <strong>önden çekiş</strong> and the front wheels are the <strong>çekici lastikler</strong> (driving/traction wheels). See <a href="08b-lastikler.md">08b-lastikler.md</a> slide 4 for the full rule.</p>
+<hr />
+<h2>2A. BONUS — Amortisör (Shock Absorber), a Related Part</h2>
+<p>Not technically part of güç aktarma organları (it belongs to the <strong>süspansiyon sistemi</strong>), but the hoca pointed at it while explaining the drivetrain diagram:</p>
+<blockquote>
+<p><em>"Şu tekerleklerin üzerindeki yaylara ne diyoruz? Amortisör diyoruz."</em></p>
+</blockquote>
+<p><strong>Amortisör</strong> = <strong>Shock absorber</strong>. The coiled springs + hydraulic dampers that sit above each wheel, connecting the wheel to the car's body/chassis.</p>
+<p><strong>Purpose (görev):</strong><br />
+- <strong>Absorb road shocks and bumps</strong> so passengers don't feel every pothole<br />
+- <strong>Keep the tires in contact with the road</strong> (prevents the tire from bouncing off the asphalt)<br />
+- <strong>Improve ride comfort</strong> and vehicle stability</p>
+<p>If the amortisör fails, the car bounces excessively after bumps, tires wear unevenly, and handling becomes unpredictable. <strong>Worn shocks are a safety issue</strong>, not just a comfort one.</p>
+<p>This topic belongs to <strong>Süspansiyon Sistemi</strong> — a file to build out later when the hoca covers it.</p>
+<hr />
+<h2>2B. BONUS — Visual Trick for Motor Cooling Type (Hava Soğutmalı vs Su Soğutmalı)</h2>
+<p>The hoca shared an exam tactic for engine-identification questions:</p>
+<blockquote>
+<p><em>"Pervane varsa ne demiştik? Hava soğutmalı bir motor demiştik."</em></p>
+</blockquote>
+<p><strong>The trick:</strong> Exam questions often show a picture of a motor and ask "what type of cooling does this engine use?"</p>
+<table>
+<thead>
+<tr>
+<th>Visual cue</th>
+<th>Engine cooling type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>You can <strong>see a large fan (pervane) / propeller-like blades</strong> visible on the engine</td>
+<td><strong>Hava soğutmalı</strong> (air-cooled)</td>
+</tr>
+<tr>
+<td>No visible fan, but you see <strong>hoses, pipes, and a radiator</strong></td>
+<td><strong>Su soğutmalı</strong> (water-cooled / liquid-cooled)</td>
+</tr>
+</tbody>
+</table>
+<p>Modern cars are almost all water-cooled. Air-cooled engines are now rare (older VW Beetles, some motorcycles, some industrial/garden equipment). But the exam may still show older images.</p>
+<h3>Inline vs V vs boxer engine layouts</h3>
+<p>The hoca also mentioned three cylinder arrangements:</p>
+<ul>
+<li><strong>Sıra (sıralı) tipi</strong> — cylinders arranged in a straight row → <strong>Inline engine</strong> (most common in small cars, e.g., inline-4)</li>
+<li><strong>V tipi</strong> — cylinders in two rows forming a V shape → <strong>V-engine</strong> (e.g., V6, V8 — common in larger/sportier cars)</li>
+<li><strong>Boksör tipi</strong> — cylinders horizontally opposed on both sides → <strong>Boxer engine</strong> (Subaru, older Porsche/VW Beetle)</li>
+</ul>
+<p>If the exam shows an image of neat cylinders in a line, it's <strong>sıra tipi</strong> — the single most common engine arrangement.</p>
+<hr />
+<h2>2C. Part-Level Detail (from portal E-Kitap Subject 5)</h2>
+<p>The hoca's class slide showed the drivetrain chain at a high level. The portal E-Kitap article has <strong>much deeper part-by-part detail</strong> that isn't on the slides but will be on the exam. Every one of these sub-parts and fault scenarios is testable.</p>
+<h3>1. Debriyaj (Clutch) System — details</h3>
+<p><strong>Görev:</strong> Motor çalışırken motorun hareketini tekerleklere iletmek veya kesmek. Aracı vitese geçirmeyi sağlar. Vites değiştirilirken debriyaja basılır.<br />
+<em>(Task: To transmit or disconnect the engine's motion from the wheels while the engine is running. Enables gear shifting. The clutch is pressed when changing gear.)</em></p>
+<p><strong>Parçaları (Parts) — memorize these 3:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Baskı</strong></td>
+<td>Pressure plate</td>
+<td>Clamps the clutch disc against the flywheel</td>
+</tr>
+<tr>
+<td><strong>Balata</strong></td>
+<td>Clutch disc / friction disc</td>
+<td>The friction surface that grips the flywheel</td>
+</tr>
+<tr>
+<td><strong>Bilye</strong></td>
+<td>Release bearing (throwout bearing)</td>
+<td>Releases the pressure plate when you press the pedal</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Exam trap:</strong> "Baskı" literally means "pressure/printing" and "Balata" also means "brake pad" in the brake system — but in clutch context they mean <strong>pressure plate</strong> and <strong>clutch disc</strong> respectively. Don't confuse contexts.</p>
+</blockquote>
+<p><strong>Location:</strong> The clutch (kavrama) sits <strong>between the gearbox and the flywheel (volan)</strong>, mounted on top of the volan. This is important for exam questions that ask "where is the clutch located?"</p>
+<p><strong>Bakımı ve Arızaları (Maintenance &amp; Faults) — all exam-tested:</strong></p>
+<ol>
+<li>
+<p><em>"Vites değiştirilirken ses geliyorsa debriyaj pedalına tam basılmamıştır veya debriyaj ayarsızdır."</em><br />
+   → <strong>If there's noise when shifting gears:</strong> pedal not fully pressed OR clutch out of adjustment</p>
+</li>
+<li>
+<p><em>"Vitese geçişte zorluk varsa kavrama ayırtmıyordur."</em><br />
+   → <strong>If gears are hard to shift:</strong> the clutch isn't fully disengaging (ayırtmıyor)</p>
+</li>
+<li>
+<p><em>"Araç hareket halinde iken ayak devamlı debriyaj pedalında tutulursa debriyaj balatası aşınır."</em><br />
+   → <strong>Riding the clutch</strong> (resting your foot on the pedal while driving) → wears out the <strong>clutch disc (balata)</strong></p>
+</li>
+<li>
+<p><em>"Ani ve sert kalkış yapılırsa yakıt sarfiyatı artar. Kaçırma ve kayma nedeni balatanın yağlanmasıdır."</em><br />
+   → <strong>Hard/sudden starts</strong> → fuel consumption rises. The reason for clutch <strong>slipping (kaçırma/kayma)</strong> is that the <strong>clutch disc is oil-contaminated (yağlanmış)</strong></p>
+</li>
+<li>
+<p><em>"Motor aniden çekişten düşerse balata yağlanmıştır."</em><br />
+   → <strong>If the engine suddenly loses traction mid-drive:</strong> the clutch disc is oil-contaminated</p>
+</li>
+<li>
+<p><em>"Debriyaj teli kopmuşsa araç vitese geçmez."</em><br />
+   → <strong>If the clutch cable is broken:</strong> the car won't shift into gear</p>
+</li>
+<li>
+<p><em>"Debriyaj en alt noktada kavrıyorsa ayarı bozuktur."</em><br />
+   → <strong>If the clutch only engages near the floor of its travel:</strong> it's out of adjustment</p>
+</li>
+<li>
+<p><em>"Araç geri vitese geçmiyorsa debriyaj pedalından ayak çekilir, yeniden basılır."</em><br />
+   → <strong>If reverse gear won't engage:</strong> release the clutch pedal and press it again (trick to get the synchronizers to catch)</p>
+</li>
+</ol>
+<hr />
+<h3>2. Vites Kutusu (Gearbox / Transmission) — details</h3>
+<p><strong>Görev:</strong> Aracın hızını yük ve yol durumuna göre ayarlamak, aracın geri hareketini temin etmek.<br />
+<em>(Task: To adjust the vehicle's speed according to load and road conditions, and to provide reverse motion.)</em></p>
+<p><strong>Parçaları (Parts) — 5 internal components:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Prizdirek mili</strong></td>
+<td>Primary shaft / input shaft</td>
+<td>The shaft that receives rotation from the clutch</td>
+</tr>
+<tr>
+<td><strong>Senkromeç</strong></td>
+<td>Synchromesh / synchronizer</td>
+<td>Matches gear speeds during shifting so gears engage smoothly</td>
+</tr>
+<tr>
+<td><strong>Grup dişlisi</strong></td>
+<td>Group gear / cluster gear</td>
+<td>The set of constant-mesh gears</td>
+</tr>
+<tr>
+<td><strong>Geri vites dişlisi</strong></td>
+<td>Reverse gear</td>
+<td>The dedicated gear for reverse</td>
+</tr>
+<tr>
+<td><strong>Çıkış mili</strong></td>
+<td>Output shaft</td>
+<td>The shaft that sends rotation to the drive shaft/differential</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bakım ve Arızaları:</strong></p>
+<ol>
+<li><strong>Uses dişli yağı</strong> (gear oil) — a specific type of oil, not engine oil</li>
+<li><strong>Change according to user manual</strong> (kullanma kılavuzuna göre değiştirilir)</li>
+<li><em>"Vites kutusundan ses geliyorsa yağ kalmamıştır."</em><br />
+   → <strong>Noise from the gearbox = oil is empty</strong> (yağsız kalırsa ses yapar)</li>
+<li><strong>Check for leaks</strong> (kaçak olmamalıdır) during maintenance</li>
+<li><em>"Aracın kilometre saati değer göstermiyorsa teli kopmuş demektir."</em><br />
+   → <strong>If the speedometer (kilometre saati) stops showing a value:</strong> the cable to the gearbox is broken</li>
+</ol>
+<hr />
+<h3>3. Şaft / Kardan Mili (Drive Shaft) — detailed özellikleri</h3>
+<p><strong>Görev:</strong> Şanzımandan aldığı hareketi diferansiyele iletir.<br />
+<em>(Task: Transmits rotation from the gearbox (şanzıman) to the differential.)</em></p>
+<p><strong>4 Design properties the exam tests:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Turkish</th>
+<th>Why it matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Must rotate smoothly</td>
+<td><strong>Çok düzgün dönmelidir</strong></td>
+<td>Any wobble = imbalance = noise + vibration</td>
+</tr>
+<tr>
+<td>Must be able to lengthen and shorten</td>
+<td><strong>Boyu uzayıp kısalabilmelidir</strong></td>
+<td>The distance between gearbox and differential changes as the suspension moves</td>
+</tr>
+<tr>
+<td>Must be able to rotate at an angle</td>
+<td><strong>Açılı dönebilmelidir</strong></td>
+<td>Joints (mafsallar) allow power transmission even when the axle isn't perfectly straight</td>
+</tr>
+<tr>
+<td>Must be hollow pipe construction</td>
+<td><strong>İçi boş borudan yapılmalıdır</strong></td>
+<td>Lighter weight + better torsional strength than solid</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arızaları:</strong></p>
+<ol>
+<li><em>"Şaftın kopması anında araç devrilebilir."</em><br />
+   → ⚠️ <strong>If the drive shaft snaps while driving, the vehicle can overturn</strong> (devrilmek). This is a <strong>critical safety fact</strong> on the exam.</li>
+<li><em>"Şaft balansı bozuk olursa belirli hızlarda şafttan ses gelir."</em><br />
+   → <strong>If the drive shaft is imbalanced:</strong> noise at specific speeds (just like the tire vibration pattern from 08b-lastikler)</li>
+<li><em>"Motor ile diferansiyelin çok yakın olduğu araçlarda şaft olmaz."</em><br />
+   → <strong>FWD cars don't have a long drive shaft</strong> (because the motor and differential are combined as a transaxle right next to each other)</li>
+<li><em>"Şaftın üzerindeki mafsalların görevi değişik açılarda hareket iletmektir."</em><br />
+   → <strong>The joints (mafsallar) on the drive shaft</strong> exist to transmit rotation at different angles — think of them as flexible couplings</li>
+</ol>
+<hr />
+<h3>4. Diferansiyel (Differential) — detailed</h3>
+<p><strong>Görev:</strong> Şafttan aldığı hareketi <strong>90 derece kırıp</strong> tekerleklere iletmek. Dönüşlerde içteki tekerin az, dıştaki tekerin fazla dönmesini sağlamak.<br />
+<em>(Task: To bend the drive shaft's rotation by </em><em>90 degrees</em><em> and transmit it to the wheels. During turns, the inner wheel rotates less and the outer wheel rotates more.)</em></p>
+<blockquote>
+<p><strong>Key concept:</strong> The drive shaft rotates along the car's long axis (front-to-back). The wheels need to rotate along the car's short axis (side-to-side). The differential's <strong>first job</strong> is to turn this rotation by <strong>90°</strong>. The <strong>second job</strong> is to split the rotation between the two wheels and let them spin at different speeds when cornering.</p>
+</blockquote>
+<p><strong>Parçaları (Parts) — 5 internal components:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ayna dişli</strong></td>
+<td>Ring gear</td>
+<td>The large round gear that receives rotation from the shaft</td>
+</tr>
+<tr>
+<td><strong>Mahruti dişli</strong></td>
+<td>Pinion drive gear / bevel pinion</td>
+<td>Meshes with the ring gear and causes the 90° bend</td>
+</tr>
+<tr>
+<td><strong>Aks dişli</strong></td>
+<td>Axle gear / side gear</td>
+<td>One for each wheel</td>
+</tr>
+<tr>
+<td><strong>Pinyon dişli</strong></td>
+<td>Pinion gear (spider gears)</td>
+<td>The small gears that allow the differential action (inner/outer wheel speed difference)</td>
+</tr>
+<tr>
+<td><strong>Aks mili</strong></td>
+<td>Axle shaft</td>
+<td>Connects the differential to each wheel</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bakım ve Arızaları:</strong></p>
+<ol>
+<li><strong>Uses dişli yağı</strong> (gear oil)</li>
+<li><em>"Dişliler arasında aşınma olur ve yağsız kalırsa öter (ses yapar)."</em><br />
+   → <strong>If the gears wear down or run dry of oil, the differential howls/whines (öter)</strong> — a whining sound is a classic symptom of differential oil depletion</li>
+</ol>
+<hr />
+<h3>5. Akslar (Axles)</h3>
+<p><strong>Görev:</strong> Diferansiyelden aldığı hareketi tekerleklere iletir.<br />
+<em>(Task: Transmits rotation from the differential to the wheels.)</em></p>
+<p>Short half-shafts, one on each side of the differential. The final mechanical link before the wheels themselves. FWD cars have only front axles; RWD have only rear axles; AWD/4WD have both.</p>
+<hr />
+<h3>Summary: the full detailed drivetrain chain</h3>
+<pre><code>MOTOR (engine)
+  │
+  ▼
+VOLAN (flywheel)
+  │
+  ▼
+DEBRİYAJ — Baskı + Balata + Bilye
+  │    (clutch: pressure plate + clutch disc + release bearing)
+  ▼
+VİTES KUTUSU — Prizdirek mili + Senkromeç + Grup dişlisi + Geri vites dişlisi + Çıkış mili
+  │    (gearbox: primary shaft + synchros + cluster + reverse + output shaft)
+  ▼
+ŞAFT (drive shaft — hollow pipe, joints, can lengthen/shorten)
+  │
+  ▼
+DİFERANSİYEL — Ayna dişli + Mahruti dişli + Aks dişli + Pinyon dişli + Aks mili
+  │    (differential: ring gear + pinion drive + side gears + spider gears + axle shaft)
+  │    (90° bend + inner/outer wheel speed split)
+  ▼
+AKSLAR (axles — half-shafts)
+  │
+  ▼
+TEKERLEKLER + LASTİKLER (wheels + tires)
+</code></pre>
+<p>Memorize this expanded chain — it's the single most complete picture of güç aktarma organları the exam will test against.</p>
+<hr />
+<h2>2D. SLIDE (2026-04-14) — VİTES KUTUSU tanımı + "Şanzıman"</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>VİTES KUTUSU</strong>. A short one-sentence definition at the top, and a <strong>3D cutaway illustration of a gearbox</strong> showing the internal gear wheels (dişliler), the input shaft on the left, and the output shafts running along the length of the housing. A small <strong>H-pattern shift diagram</strong> in the corner labeled "R 1 3 / 2 4" (reverse, 1st, 3rd on top row; 2nd, 4th on bottom row) with the caption <strong>"Click on numbers to change speed"</strong> — indicating this was an interactive animation in the original hoca presentation.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>VİTES KUTUSU</strong><br />
+Araba'nın hızını ayarlamaya yarayan dişlilerin bulunduğu kutudur. <strong>"Şanzıman" da denir.</strong></p>
+<p><strong>GEARBOX (Vites Kutusu)</strong><br />
+It is the <strong>box that contains the gears used to regulate the speed of the car</strong>. It is <strong>also called "şanzıman"</strong>.</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>The <strong>vites kutusu</strong> is the <strong>transmission / gearbox</strong> — the metal housing sitting right after the engine in the drivetrain chain (<a href="#the-full-drivetrain-chain-memorize-it">full chain</a>: Motor → Debriyaj → <strong>Vites Kutusu</strong> → Şaft → Diferansiyel → Aks → Tekerlekler). Inside, it contains a set of <strong>dişliler (gears)</strong> of different sizes. By engaging different combinations of those gears, the driver can change the <strong>gear ratio</strong> between the engine and the wheels:</p>
+<ul>
+<li><strong>Low gears (1, 2)</strong> — the engine spins many times for each wheel revolution → high torque, low speed → used for starting off, slow maneuvering, climbing steep hills</li>
+<li><strong>Middle gears (3, 4)</strong> — balanced ratio → used for normal city driving</li>
+<li><strong>High gears (5, 6)</strong> — the engine spins fewer times per wheel revolution → high speed, low torque → used for highway cruising</li>
+<li><strong>Reverse (R / geri vites)</strong> — reverses the direction of rotation so the car can back up</li>
+</ul>
+<p>Without a gearbox, the engine would be stuck at one fixed ratio to the wheels, meaning it would <strong>scream at highway speed</strong> and <strong>stall at walking speed</strong>. The vites kutusu is what makes a single engine workable across the full range of driving conditions.</p>
+<h3>The "Şanzıman" two-name trap</h3>
+<p>The slide explicitly says: <strong>"Şanzıman da denir"</strong> — <em>(it is also called Şanzıman)</em>.</p>
+<p><strong>Two names for the same thing:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Turkish term</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vites kutusu</strong></td>
+<td>Gearbox / Transmission</td>
+</tr>
+<tr>
+<td><strong>Şanzıman</strong></td>
+<td>(Same thing — French-origin word used in Turkish auto shops)</td>
+</tr>
+</tbody>
+</table>
+<p>This is a classic <strong>two-name trap</strong> exam question:</p>
+<blockquote>
+<p><em>"Arabanın hızını ayarlamaya yarayan dişlilerin bulunduğu kutuya ne denir?"</em><br />
+→ <em>A) Vites kutusu   B) Şanzıman   C) Her ikisi de doğru   D) Hiçbiri</em><br />
+→ <strong>Correct answer: C — both are correct.</strong></p>
+</blockquote>
+<p>Memorize that <strong>vites kutusu = şanzıman</strong>, just like:<br />
+- <strong>Alternatör = Şarj dinamosu</strong> (charging system)<br />
+- <strong>Akü = Akümülatör</strong> (battery)<br />
+- <strong>Marş motoru = Starter</strong> (starting motor)</p>
+<h3>The H-pattern shift diagram</h3>
+<p>The small diagram in the corner shows the standard <strong>H-pattern</strong> for a <strong>5-speed manual (5 ileri + 1 geri)</strong>:</p>
+<pre><code>   R  |  1  |  3
+  ────┼─────┼────
+      |  2  |  4
+</code></pre>
+<p>Plus 5th gear (not shown in the "click-on-numbers" demo) usually sits to the right of 3rd/4th. The H-pattern is the <strong>most common manual shift layout</strong>, and on the exam you should know:</p>
+<ul>
+<li><strong>1. vites</strong> — top-left</li>
+<li><strong>2. vites</strong> — bottom-left</li>
+<li><strong>3. vites</strong> — top-center</li>
+<li><strong>4. vites</strong> — bottom-center</li>
+<li><strong>5. vites</strong> — top-right</li>
+<li><strong>R (geri)</strong> — usually either top-left (to the left of 1st) or bottom-right, depending on the car. Often requires <strong>pressing down</strong> or pulling a collar to engage it — as a safety measure against accidentally shifting into reverse while moving forward.</li>
+</ul>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Vites kutusu = arabanın hızını ayarlamaya yarayan dişlilerin bulunduğu kutudur.</strong><br />
+<em>The gearbox is the box containing the gears used to regulate the car's speed.</em></p>
+<p><strong>Vites kutusu ≡ Şanzıman</strong> (iki isim de doğrudur)<br />
+<em>Vites kutusu ≡ Şanzıman (both names are correct).</em></p>
+<p><strong>Vites kutusuna dişli yağı konulur.</strong> (See also <a href="10-direksiyon-ön-düzen-sistemi.md">10-direksiyon-ön-düzen-sistemi.md</a> — direksiyon kutusu also uses dişli yağı.)<br />
+<em>Gear oil goes in the gearbox.</em></p>
+</blockquote>
+<hr />
+<h2>2E. SLIDE (2026-04-14) — VİTES KULLANIM HIZLARI (Which Gear at Which Speed)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>VİTES KULLANIM HIZLARI</strong> (Gear Usage Speeds). A numbered text block explaining that <strong>1. vites is the starting gear</strong>, that each gear has its own speed range, and a list of the <strong>approximate speed range for each gear</strong>. A closing line about what comes after shifting.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<ol>
+<li>vites <strong>kalkış vitesidir</strong>, istediğiniz her vitesle durabilir ancak kalkarken vitesinizi <strong>muhakkak 1'e almanız gerekir</strong>. Her vitesin kendine göre bir hız limiti vardır.</li>
+</ol>
+<p><strong>Örnek:</strong><br />
+- <strong>1. vites</strong> 0–20 km arası<br />
+- <strong>2. vites</strong> 20–40 km arası<br />
+- <strong>3. vites</strong> 40–60 km arası<br />
+- <strong>4. vites</strong> 60–80 km arası<br />
+- <strong>5. vites</strong> 80 km ve üzeri</p>
+<p>Vitesten sonra ise <strong>ışıklı sistemlere geçelim: sinyal, far vs.</strong></p>
+<p><strong>1st gear is the starting gear</strong> — you can stop the car in any gear you want, but when starting from a standstill you <strong>must</strong> shift into <strong>1st</strong>. Each gear has its own <strong>speed limit range</strong>.</p>
+<p><strong>Example speed ranges:</strong><br />
+- <strong>1st gear:</strong> 0–20 km/h<br />
+- <strong>2nd gear:</strong> 20–40 km/h<br />
+- <strong>3rd gear:</strong> 40–60 km/h<br />
+- <strong>4th gear:</strong> 60–80 km/h<br />
+- <strong>5th gear:</strong> 80 km/h and above</p>
+<p>After gears, let's move on to the <strong>lighting systems: signals, headlights, etc.</strong></p>
+</blockquote>
+<h3>The 5-gear speed range — memorize this exact table</h3>
+<p>This is a <strong>memorize-the-numbers</strong> exam question. The Turkish driving curriculum uses these specific ranges:</p>
+<table>
+<thead>
+<tr>
+<th>Vites</th>
+<th>Hız aralığı (km/h)</th>
+<th>English</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. vites</strong></td>
+<td><strong>0 – 20 km/h</strong></td>
+<td>1st gear</td>
+<td><strong>Kalkış (move-off)</strong>, crawling, hill starts, parking</td>
+</tr>
+<tr>
+<td><strong>2. vites</strong></td>
+<td><strong>20 – 40 km/h</strong></td>
+<td>2nd gear</td>
+<td>Low-speed maneuvering, slow city traffic, tight corners</td>
+</tr>
+<tr>
+<td><strong>3. vites</strong></td>
+<td><strong>40 – 60 km/h</strong></td>
+<td>3rd gear</td>
+<td>Normal city driving</td>
+</tr>
+<tr>
+<td><strong>4. vites</strong></td>
+<td><strong>60 – 80 km/h</strong></td>
+<td>4th gear</td>
+<td>Fast city / slow highway</td>
+</tr>
+<tr>
+<td><strong>5. vites</strong></td>
+<td><strong>80+ km/h</strong></td>
+<td>5th gear</td>
+<td>Highway cruising</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong> these are <strong>exam reference speeds</strong>, not strict rules. In real driving you shift based on <strong>engine RPM</strong> (typically 2000–2500 RPM for upshifts in a normal car), not strict speed. But for the exam, memorize the 20/40/60/80 breakpoints.</p>
+<h3>Rule 1 — "1. vites kalkış vitesidir" (1st gear is the starting gear)</h3>
+<p>This is the <strong>most important single sentence</strong> on the slide. The rule has two parts:</p>
+<h4>Part A — "Kalkarken vitesinizi muhakkak 1'e almanız gerekir"</h4>
+<blockquote>
+<p><em>When starting from a standstill, you must shift into 1st gear.</em></p>
+</blockquote>
+<p>You <strong>cannot</strong> start a car from a standstill in 2nd, 3rd, or higher gear without abusing the clutch. The mechanical reason:</p>
+<ul>
+<li><strong>1st gear has the highest torque multiplication</strong> — the lowest gear ratio, meaning the engine's torque is multiplied the most to overcome the car's inertia</li>
+<li>Higher gears don't have enough torque to overcome static friction → you'll either <strong>stall the engine</strong> or burn out the clutch by slipping it excessively</li>
+<li>On a <strong>slope</strong> (upward), starting in 2nd is almost impossible — you need all the torque 1st can give you</li>
+</ul>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Kalkış hangi viteste yapılır?"</em> → <strong>1. vites (birinci vites)</strong><br />
+- <em>"Araç duruştan sonra hangi vitese alınır?"</em> → <strong>1. vites</strong></p>
+<h4>Part B — "İstediğiniz her vitesle durabilirsiniz"</h4>
+<blockquote>
+<p><em>You can stop the car in any gear.</em></p>
+</blockquote>
+<p>This is the opposite direction: when <strong>stopping</strong> the car (coming to a halt), you <strong>don't need to shift down through every gear</strong>. You can brake from 5th gear to a stop without touching the gear lever — just press the clutch + brake together as you slow down. Once the car has stopped, you shift back to <strong>neutral (boş)</strong>, and when ready to move again, shift to <strong>1st</strong> (per rule A).</p>
+<p><strong>Exam clarification:</strong> Some older driving curricula teach "shift down through each gear" (5 → 4 → 3 → 2 → 1) as the correct way to slow down. Modern teaching (and this slide) says: <strong>you can just brake; you don't need to downshift through every gear</strong>. Downshifting is useful for <strong>engine braking</strong> on long downhills, but it's not required for a normal stop.</p>
+<h3>Rule 2 — "Her vitesin kendine göre bir hız limiti vardır"</h3>
+<blockquote>
+<p><em>Each gear has its own speed limit.</em></p>
+</blockquote>
+<p>The point here is: <strong>don't stay in a low gear at a high speed</strong>. If you're in <strong>1. vites</strong> and you keep accelerating past <strong>20 km/h</strong> without upshifting, you'll:</p>
+<ul>
+<li><strong>Over-rev the engine</strong> (engine RPM goes way too high)</li>
+<li>Hear the engine screaming</li>
+<li>Burn fuel unnecessarily (fuel consumption skyrockets at high RPM)</li>
+<li>Risk damaging the engine over time</li>
+<li>Produce the classic symptom: <em>"motor yüksek devirde"</em> (engine at high RPM) — which is one of the exam trigger phrases for <strong>"wrong gear for the speed"</strong></li>
+</ul>
+<p>Similarly, <strong>don't stay in a high gear at a low speed</strong> — if you're crawling at 15 km/h in 4. vites, the engine will:<br />
+- <strong>Labour</strong> (struggle, not enough torque)<br />
+- <strong>Shake</strong> / vibrate (titreşim)<br />
+- <strong>Stall</strong> if you lose more speed<br />
+- Wear out the clutch faster</p>
+<p><strong>Rule of thumb:</strong> match the gear to the speed using the table above. 20 km/h intervals per gear is a good starting heuristic.</p>
+<h3>Rule 3 — Transition to lighting systems</h3>
+<p>The slide ends with <strong>"Vitesten sonra ise ışıklı sistemlere geçelim: sinyal, far vs"</strong> — hoca is <strong>announcing the next chapter</strong>: after gears, we move on to <strong>signaling and lighting systems</strong> (sinyal, far, etc.). Expect the next slides to cover:</p>
+<ul>
+<li>Sinyal (turn signals) — left, right, 4-way flashers</li>
+<li>Far (headlights) — kısa far, uzun far, selektör</li>
+<li>Sis lambası (fog lights)</li>
+<li>Aydınlatma + ikaz ışıkları recap (which we already have in <a href="05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a>)</li>
+</ul>
+<h3>Critical exam facts — the two big rules</h3>
+<blockquote>
+<p><strong>1. vites kalkış vitesidir. Kalkarken muhakkak 1'e almak gerekir.</strong><br />
+<em>1st gear is the starting gear. When moving off, you must shift into 1st.</em></p>
+<p><strong>İstediğiniz her vitesle durabilirsiniz — durmak için vites düşürmeye gerek yoktur.</strong><br />
+<em>You can stop in any gear — downshifting through every gear is not necessary to stop.</em></p>
+<p><strong>Vites hız aralıkları:</strong> 1→0-20, 2→20-40, 3→40-60, 4→60-80, 5→80+ km/h.<br />
+<em>Gear speed ranges: 1st→0-20, 2nd→20-40, 3rd→40-60, 4th→60-80, 5th→80+ km/h.</em></p>
+</blockquote>
+<hr />
+<h2>2F. Hoca's Live Class Additions (2026-04-14) — Vites Kullanımı &amp; Kalkış</h2>
+<h3>Addition 1 — EXAM CRITICAL: Maximum 2 stops in the direksiyon sınavı. 3rd stop = direct fail.</h3>
+<p>This is the single most important operational fact hoca gave all class. It is NOT in the slides.</p>
+<blockquote>
+<p><em>"Sınavda iki tane en fazla stop edebiliyorsunuz. Bir kere daha başka bir yerde aracı stop ettirirsen ne oldu? Bitti sınavda. Direksiyon sınavından kalmış oluyorsun. O yüzden vites geçişlerini çok seri bir şekilde yapmanızı bekliyor komisyondaki hocalar sizlerden."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Stop count</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1st stop</strong></td>
+<td>Warning, points deducted — exam continues</td>
+</tr>
+<tr>
+<td><strong>2nd stop</strong></td>
+<td>Another warning, more points — exam continues</td>
+</tr>
+<tr>
+<td><strong>3rd stop</strong></td>
+<td><strong>Direkt kalma (direct fail)</strong> — exam is over, you've failed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>You are allowed a maximum of 2 stop (stall) events during the direksiyon sınavı.</strong> The 3rd stall, anywhere, at any point, ends your exam immediately. You don't finish the course — you fail on the spot.</p>
+<p><strong>Why this rule exists:</strong> the committee interprets a stall as "the candidate doesn't have basic clutch/gas coordination". One or two is forgivable (nerves, unfamiliar car). Three means you're not ready to drive independently, so there's no point continuing the test.</p>
+<p><strong>How to avoid stalling:</strong><br />
+1. <strong>Always start in 1st gear</strong> (not 2nd, not 3rd — <strong>muhakkak 1. vitese al</strong>)<br />
+2. <strong>Release the clutch slowly</strong> (yarım kontak point), don't snap-release<br />
+3. <strong>Give enough gas</strong> to keep the engine above ~1500 RPM during engagement<br />
+4. <strong>If you've just stopped</strong> (red light, pedestrian, etc.), always shift back to 1st before moving again — never try to move off in the gear you were in when you stopped<br />
+5. <strong>If you feel the engine dying</strong>, immediately press the clutch back down to save yourself from a stall</p>
+<p><strong>Exam-day expectation from the committee:</strong></p>
+<blockquote>
+<p><em>"Vites geçişlerini çok seri bir şekilde yapmanızı bekliyor komisyondaki hocalar."</em><br />
+<em>Committee expects you to do gear changes quickly and smoothly.</em></p>
+</blockquote>
+<p>Hesitant, slow, crunchy shifts are a sign of poor clutch control. Smooth and quick shifts (the engine briefly drops RPM, then rises again smoothly in the new gear) are what the committee wants to see.</p>
+<hr />
+<h3>Addition 2 — EXAM CRITICAL: The "2nd gear move-off mistake" that causes failure</h3>
+<p>Hoca described the classic scenario that kills many exam candidates:</p>
+<blockquote>
+<p><em>"İşte yine sınavda yapılan hatalardan biri, aday ikinci viteste duruyor, tekrardan gaza basıyor, arabası stop ediyor. Gitti bir stop."</em></p>
+</blockquote>
+<p><strong>Plain English — the exact scenario:</strong></p>
+<ol>
+<li>Candidate is driving in <strong>3rd gear</strong> at ~50 km/h</li>
+<li>A <strong>red light or hazard</strong> requires them to stop</li>
+<li>Candidate brakes to a stop but <strong>forgets to shift down through 2 → 1</strong></li>
+<li>Light turns green, candidate presses gas + releases clutch</li>
+<li><strong>The car is in 3rd gear at 0 km/h — there's not enough torque, the engine stalls</strong></li>
+<li>That's <strong>one stop (stall)</strong> — committee notes it, exam continues</li>
+</ol>
+<p>Do this twice more and you fail. Do it three more times total and you fail.</p>
+<p><strong>The rule (from slide 11 "Vites Kullanım Hızları"):</strong></p>
+<blockquote>
+<p><em>"İstediğiniz her vitesle durabilirsiniz ama kalkarken vitesinizi muhakkak 1'e almanız gerekir."</em><br />
+<em>You can stop the car in any gear, but when moving off again, you must shift into 1st.</em></p>
+</blockquote>
+<p><strong>The habit to build:</strong> every time the car comes to a full stop, your hand moves the gear lever to <strong>1. vites</strong> (and the clutch is still pressed down to hold 1st without engaging). When the light turns green, you're already in 1st and ready to go cleanly.</p>
+<p><strong>Mental rule of thumb:</strong></p>
+<blockquote>
+<p><strong>STOP → BOŞA → 1. VİTESE → KALKIŞ.</strong><br />
+<em>Stop → neutral → 1st gear → move off.</em></p>
+</blockquote>
+<hr />
+<h3>Addition 3 — 1st gear is for 50–100 meters max, then shift to 2nd</h3>
+<p>Hoca gave a <strong>specific distance rule</strong> that's not in the slides:</p>
+<blockquote>
+<p><em>"Ne kadar hareket eder birinci viteste? En fazla 50 metre, 100 metreliktir. Hemen vitesi ikiye çekmen lazım."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> You should NOT stay in 1st gear for more than about <strong>50–100 meters</strong>. 1st gear is a <strong>kalkış vitesi (starting gear)</strong> — its job is to get the car moving from a standstill. Once the car has momentum, you immediately shift to 2nd gear.</p>
+<p><strong>Why the 50–100 meter rule:</strong></p>
+<ul>
+<li><strong>1st gear RPM climbs fast</strong> — even gentle acceleration will put the engine at 3000+ RPM within seconds</li>
+<li><strong>High RPM in low gear = wasted fuel, loud engine, wear on parts</strong></li>
+<li><strong>You're already over 20 km/h</strong> (1st gear's upper limit) well before 100 meters of driving</li>
+</ul>
+<p><strong>Practical upshift timing:</strong></p>
+<ul>
+<li>From a full stop → engage 1st → release clutch → gas → car rolls forward</li>
+<li>Within <strong>3–5 seconds or ~20 km/h</strong>, shift to 2nd</li>
+<li>In 50 meters you should already be in 2nd gear</li>
+</ul>
+<p><strong>Exam tie-in:</strong> the committee watches for candidates who "lug" the car in 1st gear for too long (engine screaming, slow upshifts). Crisp transitions are what they want to see.</p>
+<hr />
+<h3>Addition 4 — Yarım debriyaj (half-clutch) detailed technique</h3>
+<p>Hoca explained the <strong>yarım debriyaj</strong> concept in depth — this is the single hardest skill for beginner manual drivers and is NOT detailed in the slides. See also <a href="05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a> section 4D for the driving-test "yarım kontak" usage.</p>
+<blockquote>
+<p><em>"Gaza hafif hafif dokunduğunda debriyajdaki ayağını birden çekme arkadaşım. Birden çekersen araba stop eder. Debriyajdaki ayağını da yarım debriyajın üstünde duracak şekilde tutarsan... şurada pedal tam gözükmüyor ama buraya kadar indiriyorsun sen bastığında. Ayağını birden bu yukarıya kadar çekmeyeceksin. Ya ne yapacaksın? Ha buralarda, bunun yarısında. Ha böyle bak hep yarım. Yarım debriyaj diyoruz biz buna. Yarım debriyaj. Ayağın şu açıda ne olsun? Dursun. Diğer ayağın işte orada gaza yüklensin. Ayağını birden çektiğinde stop ediyor. Bu ilk derslerinizde oluyor maalesef. Sonra sonra sonra sonra ayak da oraya artık uyum sağlıyor. Siz de orayı algılıyorsunuz."</em></p>
+</blockquote>
+<p><strong>Plain English — the yarım debriyaj concept:</strong></p>
+<p>The <strong>debriyaj (clutch) pedal</strong> has 3 positions, not 2:</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Name</th>
+<th>What's happening</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fully down (pedal all the way to the floor)</strong></td>
+<td><strong>Basılı / Full clutch</strong></td>
+<td>Engine completely disconnected from wheels. No power flows. You can shift gears, sit at a red light, coast.</td>
+</tr>
+<tr>
+<td><strong>About halfway up</strong></td>
+<td><strong>Yarım debriyaj / Half-clutch / Friction point</strong></td>
+<td>Clutch is <strong>partially engaged</strong>. Engine is partially connected to wheels. Car starts to creep forward. RPM drops slightly.</td>
+</tr>
+<tr>
+<td><strong>Fully up</strong></td>
+<td><strong>Çekilmiş / Full release</strong></td>
+<td>Clutch completely engaged. Full engine power goes to wheels. Normal driving position.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The critical skill — kalkış (moving off from standstill):</strong></p>
+<ol>
+<li>Clutch fully down, car in 1st, handbrake released</li>
+<li><strong>Slowly</strong> release the clutch pedal upward (don't just let it pop up!)</li>
+<li>When you reach the <strong>yarım debriyaj</strong> point, you'll feel the car start to move and the engine RPM drop slightly — this is the <strong>friction point</strong></li>
+<li><strong>HOLD the clutch at that position</strong> — don't let it come up any further yet</li>
+<li><strong>Simultaneously add gas</strong> — lightly, just enough to keep the engine RPM from dropping too low</li>
+<li>Once the car has built up some speed (~5–10 km/h), <strong>gradually release the clutch the rest of the way</strong></li>
+<li>Now the clutch is fully up, the car is rolling, add more gas, and you're driving normally</li>
+</ol>
+<p><strong>Hoca's warning:</strong></p>
+<blockquote>
+<p><em>"Ayağını birden çektiğinde stop ediyor. Bu ilk derslerinizde oluyor maalesef."</em><br />
+<em>If you release your foot suddenly, it stalls. This will happen in your first few lessons, unfortunately.</em></p>
+</blockquote>
+<p><strong>But:</strong></p>
+<blockquote>
+<p><em>"Sonra sonra sonra ayak da oraya artık uyum sağlıyor. Siz de orayı algılıyorsunuz."</em><br />
+<em>Eventually your foot adapts to the position. You start to feel where the friction point is.</em></p>
+</blockquote>
+<p><strong>Practical tip:</strong> yarım debriyaj is a <strong>muscle memory skill</strong>, not a math skill. You develop it by doing dozens of move-offs per lesson. After <strong>~20 practice moves</strong>, your left foot will "know" where the friction point is without you consciously thinking about it.</p>
+<p><strong>Use cases for yarım debriyaj</strong> beyond moving off:<br />
+- <strong>Hill start</strong> — hold the car on a slope using yarım debriyaj + gas, instead of rolling back<br />
+- <strong>Slow maneuvering in parks</strong> — control the car at walking pace without touching the gas<br />
+- <strong>Parallel park / L park</strong> — creeping forward or back millimeter by millimeter<br />
+- <strong>Geri geri manevra</strong> — the 25-meter reverse maneuver at the sınav</p>
+<hr />
+<h3>Addition 5 — The hoca's mental model of the clutch pedal during kalkış</h3>
+<p>Hoca drew out the clutch pedal's travel in class:</p>
+<blockquote>
+<p><em>"Siz pedala bastığınız zaman kulakçık öne doğru iniyor zaten. Buraya kadar indiriyorsun sen bastığında. Ve o arada ne yapıyorsun? Vitesini değiştiriyorsun. İşte ayağını birden bu yukarıya kadar çekmeyeceksin. Ya ne yapacaksın? Ha buralarda, bunun yarısında. Ha böyle bak hep yarım."</em></p>
+</blockquote>
+<p><strong>Plain English mental picture:</strong></p>
+<pre><code>[clutch fully up, engaged]   ←  this is where you normally drive
+        ↑
+        │
+[yarım debriyaj point]       ←  HOLD here during move-off
+        ↑
+        │
+[clutch fully pressed down]  ←  for shifting / starting / at rest
+</code></pre>
+<p><strong>During a gear change</strong> while driving:<br />
+1. Press clutch fully down<br />
+2. Move the vites kolu to the new gear<br />
+3. <strong>Slowly</strong> release the clutch back up past the yarım debriyaj point<br />
+4. Simultaneously lift off the gas slightly then add it back on</p>
+<p>Crisp gear changes take about 1 second. Slow, hesitant changes take 3+ seconds and will be penalized on the exam.</p>
+<hr />
+<h3>Addition 6 — Automatic transmission position details (P, N, D, R — not NDR/NDS)</h3>
+<p>Hoca briefly explained <strong>otomatik vites</strong> for students taking the automatic-only ehliyet:</p>
+<blockquote>
+<p><em>"Benim ehliyetim otomatik olacak. Sen de biraz önceki saydığım genel kontrolleri yapacaksın. Ayna, emniyet kemeri, koltuk, her şeyin birebir aynı. Sadece aracı çalıştırırken sizde debriyaj yok ya, senin soldaki ayağın boşta kalacak. Sağ ayağınla fren-gaz, fren-gaz, fren-gaz yapacaksın. Üç tane ileri geri gidecek vites kolu, öyle düşünün. İleri için... öne doğru NDS zaten. Geri mi manevra yapacaksın? O zaman yine düğmesine buradan basıp geriye doğru kolu alman lazım. İleri doğru gittin, kasis var, frene bastın araba yavaşlıyor. Sen tekrar ayağını gaza bastığında kendiliğinden hızlanıyor. Yani araç kendi vitesini kendisi ayarlıyor."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong></p>
+<p>In an <strong>otomatik vitesli (automatic)</strong> car:</p>
+<ul>
+<li><strong>No clutch pedal</strong> — only brake and gas</li>
+<li><strong>Left foot stays on the dead pedal</strong> (bracing the body, see slide 3 rule 3)</li>
+<li><strong>Right foot handles both brake and gas</strong> (fren-gaz alternation)</li>
+<li><strong>Gear lever has lettered positions</strong>, not numbered 1-5:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Turkish</th>
+<th>English</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P</strong></td>
+<td>Park</td>
+<td>Park</td>
+<td>When fully stopped (parking, engine off)</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>Reverse</td>
+<td>Reverse</td>
+<td>Backing up — often press a button on the lever to engage</td>
+</tr>
+<tr>
+<td><strong>N</strong></td>
+<td>Neutral</td>
+<td>Neutral</td>
+<td>Free-rolling; used at red lights in some driving styles</td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Drive</td>
+<td>Drive</td>
+<td>Normal forward driving — this is the main position</td>
+</tr>
+<tr>
+<td><strong>S / O</strong></td>
+<td>Speed/Sport or Overdrive</td>
+<td>Sport / Overdrive</td>
+<td>Performance or fuel-saving mode on some cars</td>
+</tr>
+</tbody>
+</table>
+<p>See also <a href="../../e-kitap/03-araç-tekniği/01-aracla-ilgili-temel-bilgiler.md">e-kitap/03-araç-tekniği/01-aracla-ilgili-temel-bilgiler.md</a> for the full portal text on automatic transmission.</p>
+<p><strong>Key operational rule for automatics:</strong></p>
+<blockquote>
+<p><em>"Araç kendi vitesini kendisi ayarlıyor."</em><br />
+<em>The car adjusts its own gears.</em></p>
+</blockquote>
+<p>You press the gas, the car figures out which gear to be in. You press the brake, it downshifts automatically. All the manual-transmission complexity (clutch, yarım debriyaj, shifting 1→2→3) disappears. This is why otomatik ehliyet is <strong>much easier</strong> for beginners — the single hardest skill (clutch coordination) is removed.</p>
+<p><strong>Downside of otomatik ehliyet:</strong> <strong>you can ONLY drive automatic cars with it</strong> — you're legally prohibited from driving a manual. With a <strong>manuel ehliyet</strong>, you can drive <strong>both</strong> manual and automatic cars. Most students take manuel ehliyet for this reason, even though it's harder to learn.</p>
+<hr />
+<h2>3. Why this matters for the exam</h2>
+<p>Common question patterns:</p>
+<ol>
+<li><em>"Güç aktarma organlarının görevi nedir?"</em><br />
+   → <strong>Motorda üretilen hareketi tekerleklere iletmektir.</strong></li>
+<li><em>"Aşağıdakilerden hangisi güç aktarma organlarından değildir?"</em> (distractor trap)<br />
+   → Trap answers: karbüratör, alternatör, yağ pompası, radyatör, marş motoru</li>
+<li><em>"Motordan gelen hareketi tekerleklere ileten parça hangisidir?"</em><br />
+   → <strong>Şaft / diferansiyel / aks</strong> (any drivetrain component)</li>
+<li><em>"Vites kutusunun görevi nedir?"</em><br />
+   → <strong>Motor ile tekerlekler arasındaki hız/tork oranını değiştirmektir</strong> (to change the speed/torque ratio between engine and wheels)</li>
+<li><em>"Diferansiyelin görevi nedir?"</em><br />
+   → <strong>Dönüşlerde arka tekerleklerin farklı hızlarda dönmesini sağlamak.</strong> (To allow the rear wheels to rotate at different speeds when cornering.)</li>
+<li><em>"Debriyajın görevi nedir?"</em><br />
+   → <strong>Motorun hareketini vites kutusuna bağlamak veya kesmek.</strong> (To engage or disengage the engine's motion from the gearbox.)</li>
+<li><em>"Hangi parça motordan gelen dönmeyi sağ ve sol tekerleklere iki farklı hızda iletebilir?"</em><br />
+   → <strong>Diferansiyel</strong> (the differential)</li>
+</ol>
+<hr />
+<h2>4. Memorize These</h2>
+<blockquote>
+<p><strong>Güç aktarma organlarının görevi:</strong> Motorda üretilen hareketi (gücü) tekerleklere ileterek aracın hareket etmesini sağlamaktır.<br />
+<em>(The job of the drivetrain is to transmit the motion/power generated in the engine to the wheels, enabling the vehicle to move.)</em></p>
+<p><strong>The chain:</strong> Motor → Debriyaj → Vites Kutusu → Şaft → Diferansiyel → Aks → Tekerlekler.</p>
+<p><strong>Debriyaj:</strong> Motor ile vites kutusu arasındaki bağlantıyı sağlayan / kesen parçadır.<br />
+<em>(The clutch is the part that engages/disengages the connection between the engine and the gearbox.)</em></p>
+<p><strong>Vites kutusu:</strong> Hız ve tork oranını (gear ratio) değiştiren parçadır.<br />
+<em>(The gearbox changes the speed and torque ratio between engine and wheels.)</em></p>
+<p><strong>Şaft:</strong> Motorun dönme hareketini gearboxtan diferansiyele ileten uzun mil.<br />
+<em>(The drive shaft is the long rod that transmits rotational motion from the gearbox to the differential.)</em></p>
+<p><strong>Diferansiyel:</strong> Dönüşlerde iki tekerleğin farklı hızlarda dönmesini sağlayan parçadır.<br />
+<em>(The differential allows the two wheels to rotate at different speeds during cornering.)</em></p>
+</blockquote>
+<hr />
+<h2>5. Consolidated Exam Vocabulary — Drivetrain</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Güç aktarma organları</td>
+<td>Drivetrain / power transmission</td>
+<td>The whole chain</td>
+</tr>
+<tr>
+<td>Güç</td>
+<td>Power</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>Aktarmak</td>
+<td>To transmit / transfer</td>
+<td>Key verb</td>
+</tr>
+<tr>
+<td>Aktarma</td>
+<td>Transmission / transfer</td>
+<td>Noun form</td>
+</tr>
+<tr>
+<td>Organ</td>
+<td>Organ / component group</td>
+<td>Body-system style word for part-group</td>
+</tr>
+<tr>
+<td>İletmek</td>
+<td>To convey / transmit</td>
+<td>Synonym for aktarmak</td>
+</tr>
+<tr>
+<td>Motor</td>
+<td>Engine</td>
+<td>The power source</td>
+</tr>
+<tr>
+<td>Motorda üretilen</td>
+<td>Produced in the engine</td>
+<td>Exam phrase</td>
+</tr>
+<tr>
+<td>Hareket</td>
+<td>Motion / movement</td>
+<td>The rotation</td>
+</tr>
+<tr>
+<td>Tekerlek</td>
+<td>Wheel</td>
+<td>Singular</td>
+</tr>
+<tr>
+<td>Tekerlekler</td>
+<td>Wheels</td>
+<td>Plural</td>
+</tr>
+<tr>
+<td>Debriyaj</td>
+<td>Clutch</td>
+<td>Engine ↔ gearbox coupling</td>
+</tr>
+<tr>
+<td>Vites</td>
+<td>Gear</td>
+<td>As in "1st gear, 2nd gear"</td>
+</tr>
+<tr>
+<td>Vites kutusu</td>
+<td>Gearbox / transmission</td>
+<td>The gear-changing box</td>
+</tr>
+<tr>
+<td>Vites değiştirmek</td>
+<td>To change gears</td>
+<td>Verb phrase</td>
+</tr>
+<tr>
+<td>Şaft</td>
+<td>Drive shaft / propeller shaft</td>
+<td>Long middle rotating rod</td>
+</tr>
+<tr>
+<td>Kardan mili</td>
+<td>Cardan shaft</td>
+<td>Alternate name for şaft</td>
+</tr>
+<tr>
+<td>Diferansiyel</td>
+<td>Differential</td>
+<td>Splits power to two wheels</td>
+</tr>
+<tr>
+<td>Aks</td>
+<td>Axle</td>
+<td>Short shaft to each wheel</td>
+</tr>
+<tr>
+<td>Dönüş</td>
+<td>Rotation / turn</td>
+<td>As in cornering</td>
+</tr>
+<tr>
+<td>Dönüşlerde</td>
+<td>During turns/corners</td>
+<td></td>
+</tr>
+<tr>
+<td>Farklı hızlarda</td>
+<td>At different speeds</td>
+<td></td>
+</tr>
+<tr>
+<td>Hız</td>
+<td>Speed</td>
+<td></td>
+</tr>
+<tr>
+<td>Tork</td>
+<td>Torque</td>
+<td>Rotational force</td>
+</tr>
+<tr>
+<td>Oran</td>
+<td>Ratio</td>
+<td>Gear ratio</td>
+</tr>
+<tr>
+<td>Bağlantı</td>
+<td>Connection / linkage</td>
+<td></td>
+</tr>
+<tr>
+<td>Bağlamak</td>
+<td>To connect</td>
+<td></td>
+</tr>
+<tr>
+<td>Kesmek</td>
+<td>To cut / disengage</td>
+<td>"bağlantıyı kesmek"</td>
+</tr>
+<tr>
+<td>Arka tekerlek</td>
+<td>Rear wheel</td>
+<td>RWD</td>
+</tr>
+<tr>
+<td>Ön tekerlek</td>
+<td>Front wheel</td>
+<td>FWD</td>
+</tr>
+<tr>
+<td>Önden çekiş</td>
+<td>Front-wheel drive (FWD)</td>
+<td></td>
+</tr>
+<tr>
+<td>Arkadan itiş</td>
+<td>Rear-wheel drive (RWD)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dört çeker</td>
+<td>Four-wheel drive (4WD / AWD)</td>
+<td></td>
+</tr>
+<tr>
+<td>Hareket etmek</td>
+<td>To move</td>
+<td>What the car does</td>
+</tr>
+<tr>
+<td>Krank mili</td>
+<td>Crankshaft</td>
+<td>Engine output shaft</td>
+</tr>
+<tr>
+<td>Mil</td>
+<td>Shaft</td>
+<td>Generic rotating rod</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>6. Cross-references</h2>
+<ul>
+<li><strong>Depends on:</strong> <a href="01-yakıt-sistemi.md">01-yakıt-sistemi.md</a> — the engine's power source</li>
+<li><strong>Initiated by:</strong> <a href="03-marş-sistemi.md">03-marş-sistemi.md</a> — the marş motoru spins the volan to get the engine started; once running, the güç aktarma organları take over</li>
+<li><strong>Shared component:</strong> The <strong>volan (flywheel)</strong> from the marş sistemi is physically located between the motor and the debriyaj — it's where engine side and clutch side meet</li>
+<li><strong>Common confusion:</strong> "Aktarma organları" (drivetrain) vs "ikaz sistemi" (warning system) — different topics, but students sometimes mix up because both use the word "sistem" or "organlar" in exam phrasing</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

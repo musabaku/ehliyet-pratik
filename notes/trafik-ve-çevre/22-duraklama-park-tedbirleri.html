@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Duraklama ve Alınacak Tedbirler — Stopping (Short-halt) and Precautions | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 22-duraklama-park-tedbirleri</span>
+</div>
+<div class="content">
+<h1>Duraklama ve Alınacak Tedbirler — Stopping (Short-halt) and Precautions</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — Duraklamada alınacak 3 tedbir grubu (yer seçimi, motor+vites+el freni+takoz, diğerlerine zarar verme yasağı) · SLIDE 2 — Duraklamanın yasak olduğu yerler (9-maddelik yasak yer listesi + kritik mesafeler: 5m / 100m / 15m / 100m) · SLIDE 3 — Park etmede alınacak tedbirler (direksiyon kaldırıma çevirme + motor stop + el freni + vites: inişte geri / yokuşta 1 + cam-kapı kilit) · SLIDE 4 — Park etmenin yasak olduğu yerler (yangın musluğu 5m, durak levhası 15m, geçiş üstünlüğü levhası 15m, 3+ şeritte sağ-şerit dışı, başkasının çıkışını engelleme)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Turkish traffic law distinguishes <strong>two</strong> kinds of non-moving stops:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning</th>
+<th>Typical duration</th>
+<th>Driver stays?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duraklama</strong></td>
+<td>Short halt (pick up / drop off, brief pause)</td>
+<td><strong>≤ 5 minutes</strong></td>
+<td>Usually yes</td>
+</tr>
+<tr>
+<td><strong>Park etme</strong></td>
+<td>Parking (long-term stop)</td>
+<td>&gt; 5 minutes</td>
+<td>Usually no</td>
+</tr>
+</tbody>
+</table>
+<p>This slide covers <strong>DURAKLAMA</strong> — the short pause, typically to let a passenger out, quickly grab something, or wait for a light to clear. Even this brief stop has <strong>mandatory precautions</strong> because a poorly-chosen duraklama spot can:<br />
+- Block traffic flow behind you.<br />
+- Block a pedestrian walkway.<br />
+- Cause your parked car to roll (if on a slope).<br />
+- Damage the road surface (heavy loads).</p>
+<p>The slide enumerates <strong>3 groups of precautions</strong>, which map cleanly to: <strong>where</strong> you stop, <strong>what</strong> you do to the vehicle, and <strong>how</strong> you avoid harming others.</p>
+<hr />
+<h2>2. SLIDE 1 — Duraklamada Alınacak Tedbirler</h2>
+<h3>What the slide showed</h3>
+<p>A "<strong>DURAKLAMA VE ALINACAK TEDBİRLER</strong>" header, then a pink sub-header "<strong>DURAKLAMA DA ALINACAK TEDBİRLER:</strong>" followed by 3 bullet groups.</p>
+<h4>Group 1 — Choose the right spot</h4>
+<blockquote>
+<p><strong>En uygun yerin seçilmesi, bulunulan şeritte en az yer işgal edilmesi, varsa banketten yararlanılması.</strong></p>
+<p><em>Select the most suitable spot; </em><em>occupy as little of the lane as possible</em><em>; use the </em><em>banket (shoulder)</em><em> when one exists.</em></p>
+</blockquote>
+<h4>Group 2 — What to do to the vehicle (if the halt will be long)</h4>
+<blockquote>
+<p><strong>Duraklama amacı uzun süre beklemeyi gerektiriyorsa;</strong></p>
+<ul>
+<li><strong>Motorun durdurulması</strong> — shut off the engine.</li>
+<li><strong>Uygun vitese takılması</strong> — leave it in an appropriate gear.</li>
+<li><strong>El freni ile tespit edilmesi</strong> — engage the parking (hand) brake.</li>
+<li><strong>Gerekli hallerde park ışıklarının yakılması</strong> — when needed, turn on the <strong>park lights</strong> (side markers).</li>
+<li><strong>Yolun eğimi gerektiriyorsa, uygun tekerleklere uygun yönde TAKOZ konulması</strong> — if on a slope, place a <strong>wheel chock (takoz)</strong> on the appropriate wheels in the appropriate direction.</li>
+</ul>
+</blockquote>
+<h4>Group 3 — Don't harm others</h4>
+<blockquote>
+<p><strong>Diğer araçların geçişini ve yayaların yürümesini zorlaştırmayacak, yüklerin boşaltılması veya yüklenmesi sırasında başkalarına zarar vermeyecek, karayolu yapısını bozmayacak ve kirletmeyecek şekilde tedbirler alınması zorunludur.</strong></p>
+<p><em>Measures must be taken so that: (a) other vehicles' passage is not obstructed, (b) pedestrians' movement is not obstructed, (c) during loading/unloading no one is harmed, (d) the </em><em>road structure is not damaged</em><em> (e.g. heavy loads cracking asphalt), (e) the road is </em><em>not polluted</em><em> (e.g. fuel/oil leaks).</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Group 1 — "En uygun yer" (the spot-selection principle)</h4>
+<ul>
+<li><strong>En uygun yer</strong> — a spot where you won't block traffic or obscure sight lines. Not on a curve, not on a tepe üstü (hilltop), not within 5 m of a kavşak or pedestrian crossing (see [yasak duraklama/park yerleri] — to be covered in a later slide).</li>
+<li><strong>En az yer işgal edilmesi</strong> — if your lane is narrow, pull as far right as safely possible. Don't stop in the middle.</li>
+<li><strong>Banket varsa kullan</strong> — if the road has a <strong>banket</strong> (paved or compacted shoulder), pull onto it. This gets you completely out of the traffic lane. Only roads without a banket (city streets, narrow lanes) force you to duraklama in-lane.</li>
+</ul>
+<h4>Group 2 — The 5-step vehicle-preparation sequence</h4>
+<p>The order matters (this is also the standard driving-school direksiyon test procedure):</p>
+<ol>
+<li><strong>Motorun durdurulması</strong> — engine OFF. Saves fuel, reduces emissions, reduces noise, reduces accidental-ignition risk.</li>
+<li><strong>Uygun vitese takılması</strong> — leave in gear. <strong>Manuel arabalar:</strong> 1. vites or R (uphill = 1, downhill = R). <strong>Otomatik:</strong> P (Park). This is the <strong>backup</strong> to the hand brake — if the cable snaps, the transmission's compression holds the car.</li>
+<li><strong>El freni ile tespit</strong> — parking brake ON. The primary restraint.</li>
+<li><strong>Park ışıkları (gerekli hallerde)</strong> — side markers if low visibility (dusk, fog, rain, unlit road). In a bright parking lot you don't need them. On a dark shoulder of a rural road, you absolutely do.</li>
+<li><strong>Takoz (gerekli hallerde)</strong> — wheel chocks on a slope. <strong>Direction rule:</strong> chocks go on the DOWNHILL side of the wheels, against the direction the car would roll.</li>
+</ol>
+<h4>The takoz direction rule (exam-favorite detail)</h4>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Chock where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Uphill (yokuş yukarı), driver facing UP</td>
+<td>Behind the rear wheels (car would roll back)</td>
+</tr>
+<tr>
+<td>Downhill (yokuş aşağı), driver facing DOWN</td>
+<td>In front of the front wheels (car would roll forward)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>One chock is legally enough</strong>, but safety-conscious drivers (especially trucks) use two.</p>
+<h4>Group 3 — The "don't harm others" checklist</h4>
+<p>The slide's Group 3 is effectively a <strong>"consideration" rule</strong> covering 5 distinct harms:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">#</th>
+<th>Harm to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Blocking other vehicles' passage</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Blocking pedestrians' passage</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Injuring people during cargo loading/unloading</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Damaging the road structure (heavy axle loads, oil drips eating asphalt)</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>Polluting the road (littering, spills, effluent)</td>
+</tr>
+</tbody>
+</table>
+<p>All five can bring a fine even if the duraklama itself is in a technically-legal spot.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Duraklamada 3 tedbir grubu:</strong></p>
+<p>(1) <strong>Yer seçimi:</strong> en uygun yer + şeritte en az yer işgali + varsa <strong>banket</strong>.<br />
+(2) <strong>Uzun beklemede araç:</strong> motoru kapat + uygun vitese tak + <strong>el freni</strong> + park ışıkları (gerekirse) + yokuşta <strong>takoz</strong>.<br />
+(3) <strong>Zarar vermeme:</strong> diğer araç/yaya geçişini engelleme + yükleme-boşaltmada zarar verme + yolu bozma/kirletme yasağı.</p>
+</blockquote>
+<hr />
+<h2>3. SLIDE 2 — Duraklamanın Yasak Olduğu Yerler</h2>
+<h3>What the slide showed</h3>
+<p>Header "<strong>DURAKLAMANIN YASAK OLDUĞU YERLER</strong>" followed by a 9-item bullet list, with critical distances in pink (<strong>5 m, 100 m, 15 m, 100 m</strong>). Bottom-right shows the red-X-on-blue <strong>duraklama yasak</strong> sign and a photo of trucks illegally stopped along a roadside.</p>
+<h3>The 9 forbidden duraklama places</h3>
+<blockquote>
+<ol>
+<li><strong>Duraklamanın yasak olduğu bir trafik işaretleriyle belirtilen yerlerde</strong> — wherever a <strong>"duraklama yasak"</strong> sign (red X inside a blue circle) is posted.</li>
+<li><strong>Sol şeritte</strong> — in the <strong>left lane</strong> (left lane is for overtaking / high-speed flow; never stop there).</li>
+<li><strong>Yaya ve okul geçitleri ile diğer geçitlerde</strong> — on <strong>pedestrian</strong>, <strong>school</strong>, and other crossings (including railway crossings).</li>
+<li><strong>Kavşak, tünel, köprü ve bağlantı yollarına</strong> — near junctions, tunnels, bridges, and connecting/ramp roads:</li>
+<li><strong>Yerleşim yerleri içinde: 5 m</strong> mesafe içinde</li>
+<li><strong>Yerleşim yerleri dışında: 100 m</strong> mesafe içinde</li>
+<li><strong>Görüşün yeterli olmadığı tepe üstlerine yakın yerlerde ve dönemeçlerde</strong> — near <strong>hilltops</strong> where visibility is poor and on <strong>curves/bends</strong>.</li>
+<li><strong>Otobüs, tramvay ve taksi duraklarında</strong> — at <strong>bus, tram, and taxi stops</strong>.</li>
+<li><strong>Duraklayan veya park eden araçların yol tarafındaki yanında</strong> — <strong>alongside</strong> (on the road side of) an already-stopped or parked vehicle — this is the <strong>"no double-parking"</strong> rule.</li>
+<li><strong>İşaret levhalarına</strong> mesafe:</li>
+<li><strong>Yerleşim yeri içinde: 15 m</strong></li>
+<li><strong>Yerleşim yeri dışında: 100 m</strong></li>
+<li><strong>Zorunlu haller dışında yerleşim yerleri dışındaki karayollarında, taşıt yolu üzerinde</strong> — outside towns (on highways), never stop <strong>on the carriageway itself</strong> unless forced by an emergency — pull onto the <strong>banket</strong>.</li>
+</ol>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>The list is structured around <strong>4 kinds of danger</strong>: blocked traffic flow (lane/junction/bridge), blocked sight lines (hill/curve/tunnel), blocked services (crossings, stops, signs, fire services), and forced double-blocking (next to another parked car).</p>
+<h4>The critical-distance table (memorize cold)</h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;"><strong>Yerleşim içi</strong> (in town)</th>
+<th style="text-align: center;"><strong>Yerleşim dışı</strong> (outside town)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kavşak / tünel / köprü / bağlantı yolu</td>
+<td style="text-align: center;"><strong>5 m</strong></td>
+<td style="text-align: center;"><strong>100 m</strong></td>
+</tr>
+<tr>
+<td>İşaret levhaları</td>
+<td style="text-align: center;"><strong>15 m</strong></td>
+<td style="text-align: center;"><strong>100 m</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mnemonic:</strong> in-town distances are small (5 m / 15 m) because spaces are tight; outside-town distances are both <strong>100 m</strong> because highway speeds mean a driver needs far more warning to see around a stopped vehicle.</p>
+<h4>The "sol şerit" trap</h4>
+<p>Left lane is <strong>never</strong> for duraklama — not in town, not on highways, not even "for a second." Exam answers that say "sol şerite yanaşarak durulabilir" are always wrong. You <strong>always</strong> stop to the right (sağa yanaşarak).</p>
+<h4>The "double-parking" rule (item 7)</h4>
+<p>If another car is already legally stopped or parked on the side of the road, <strong>you may not stop alongside it on the road side</strong> — that would force a third vehicle behind you to swerve into oncoming traffic. This is called <strong>çift sıra duraklama/park etme</strong> and is one of the most cited duraklama violations.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Duraklama yasak yerleri 4 mesafe:</strong> kavşak/tünel/köprü → <strong>5 m</strong> (içinde) / <strong>100 m</strong> (dışında); işaret levhası → <strong>15 m</strong> (içinde) / <strong>100 m</strong> (dışında).<br />
+<strong>Sol şerit, durak (otobüs/tramvay/taksi), tepe üstü/dönemeç, geçit (yaya/okul), yol tarafındaki yanında</strong> → her zaman yasak.</p>
+</blockquote>
+<hr />
+<h2>4. SLIDE 3 — Park Etmede Alınacak Tedbirler</h2>
+<h3>What the slide showed</h3>
+<p>Header "<strong>PARK ETME</strong>" with pink sub-header "<strong>Park etmede alınacak tedbirler:</strong>" and a 2-bullet list. Below it, a top-down illustration of a car parallel-parking between two others (red/green proximity arcs around its corners).</p>
+<blockquote>
+<ol>
+<li><strong>Park için yasak olmayan ve güvenli bir yer tercih edilmelidir.</strong> — <em>Choose a spot that's not in a no-parking zone and is genuinely safe.</em></li>
+<li><strong>Araç durdurulduktan sonra, direksiyon kaldırım taşına doğru çevrilir. Motor stop edilir. El freni ile araç sabitlenir. Eğimli yollarda inişte geri, yokuşta birinci vitese takılır. Camlar ve kapılar kilitlenir.</strong></li>
+</ol>
+</blockquote>
+<h3>The 6-step park-etme sequence (in order)</h3>
+<ol>
+<li><strong>Yer seçimi</strong> — a spot that's not yasak (see SLIDE 4) and is güvenli (visible, level if possible, no falling-tree risk, etc.).</li>
+<li><strong>Direksiyonu kaldırım taşına doğru çevir</strong> — <strong>turn the steering wheel toward the curb</strong>. If the parking brake fails, the front wheels bite the kaldırım (curb stone) instead of rolling into the street.</li>
+<li><strong>Motoru stop et</strong> — engine OFF.</li>
+<li><strong>El freni ile sabitle</strong> — engage the parking brake firmly (not just "a click"). This is the primary restraint for a parked car.</li>
+<li><strong>Uygun vitese tak (eğimli yollarda):</strong></li>
+<li><strong>İnişte (downhill / yokuş aşağı) → geri vitese (R)</strong></li>
+<li><strong>Yokuşta (uphill / yokuş yukarı) → birinci vitese (1)</strong></li>
+<li><em>(On level ground, 1st or R; automatic → P.)</em></li>
+<li><strong>Cam ve kapıları kilitle</strong> — close the windows, lock the doors. Theft prevention.</li>
+</ol>
+<h3>Clean English explanation</h3>
+<h4>Why the steering wheel goes toward the curb</h4>
+<p>This is the <strong>#1 most-tested park-etme detail</strong>. If the hand brake fails and the car starts to roll:<br />
+- <strong>Wheels turned toward curb</strong> → car rolls a few cm, hits the curb, stops.<br />
+- <strong>Wheels straight</strong> → car rolls down the road, hits someone or something.<br />
+- <strong>Wheels turned away from curb</strong> → car rolls into the road, becomes a moving obstacle.</p>
+<p>So: <strong>direksiyonu her zaman kaldırıma çevir.</strong></p>
+<h4>Why the gear choice depends on slope direction</h4>
+<p>A manual car's transmission acts as a compression brake. The choice of gear directs that compression against the direction the car wants to roll:<br />
+- <strong>Yokuş yukarı (uphill)</strong> — car wants to roll <strong>backward</strong>. <strong>Birinci vites (1)</strong> resists forward motion, which is the opposite of rolling backward — but 1 has the highest torque multiplication and is standard practice.<br />
+- <strong>Yokuş aşağı (downhill / iniş)</strong> — car wants to roll <strong>forward</strong>. <strong>Geri vites (R)</strong> resists forward motion directly.<br />
+- Either way, gear + parking brake = redundant safety.</p>
+<h4>Level ground vs slope</h4>
+<p>On flat ground, the dikram-to-curb + motor off + hand brake is enough; vites is a precaution but the slope rule is what the exam cares about.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Park etme 6 adımı:</strong> güvenli yer → <strong>direksiyon kaldırıma</strong> → motor stop → <strong>el freni</strong> → vites (<strong>iniş = R, yokuş = 1</strong>) → cam + kapı kilit.<br />
+Exam-favorite: <strong>"Eğimli yolda park eden aracın direksiyonu hangi yöne çevrilir?"</strong> → <strong>kaldırım tarafına.</strong></p>
+</blockquote>
+<hr />
+<h2>5. SLIDE 4 — Park Etmenin Yasak Olduğu Yerler</h2>
+<h3>What the slide showed</h3>
+<p>Header "<strong>PARK ETMENİN YASAK OLDUĞU YERLER</strong>" with pink sub-header "<strong>Park etmenin yasak olduğu yer ve haller:</strong>" and an 8-bullet list. Top-right shows an illustration of a car parked near a traffic sign with a "?" over it. Bottom-center shows both Turkish parking-prohibition signs side by side:<br />
+- <strong>Red X on blue circle</strong> = <strong>Duraklama yasak</strong> (no stopping AT ALL — so of course no parking)<br />
+- <strong>Red diagonal slash on blue circle</strong> = <strong>Park etme yasak</strong> (no parking — but brief duraklama allowed)</p>
+<h3>The 8 forbidden park-etme places</h3>
+<blockquote>
+<ol>
+<li><strong>Duraklamanın yasak olduğu yerlerde</strong> — <strong>everywhere duraklama is forbidden is automatically park-forbidden too</strong> (so SLIDE 2's whole 9-item list applies here as well).</li>
+<li><strong>Park etmenin trafik işareti ile yasaklandığı yerlerde</strong> — wherever the <strong>park etme yasak</strong> sign (red diagonal slash, blue circle) is posted.</li>
+<li><strong>Geçiş yolu önünde ve üzerinde</strong> — in front of and on a <strong>crossing path</strong> (driveway, pedestrian entry, gated passage).</li>
+<li><strong>Yangın musluklarına her iki yönden 5 m mesafe içinde</strong> — within <strong>5 m</strong> (both directions) of a <strong>fire hydrant</strong>.</li>
+<li><strong>Yolcu taşıma araçlarının duraklarını belirten levhalara her iki yönden 15 m mesafe içinde</strong> — within <strong>15 m</strong> (both directions) of a <strong>bus/tram/taxi stop sign</strong>.</li>
+<li><strong>Geçiş üstünlüğü olan araçların giriş ve çıkışlarının yapıldığı yerleri belirten işaret levhalarına 15 m mesafe içinde</strong> — within <strong>15 m</strong> of the sign marking entrances/exits of <strong>emergency vehicles</strong> (fire station, hospital ambulance bay, police garage).</li>
+<li><strong>Üç veya daha fazla şeritli yollarda aksine bir işaret bulunmadıkça gidişe ayrılmış en sağ şerit dışındaki şeritlerde</strong> — on roads with <strong>3 or more lanes</strong> (per direction), you may only park on the <strong>rightmost lane</strong> of your direction of travel; any other lane is forbidden unless a sign says otherwise.</li>
+<li><strong>Kurallara uygun olarak park etmiş araçların çıkışına engel olacak şekilde</strong> — in any way that would <strong>block the exit of a legally parked vehicle</strong>.</li>
+</ol>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The "duraklama forbidden → park also forbidden" rule (item 1)</h4>
+<p>This is the single most important structural point on the whole two-slide pair: <strong>every place on SLIDE 2's list is automatically on SLIDE 4's list too</strong>, plus SLIDE 4 adds <strong>7 more places</strong> on top. So:</p>
+<blockquote>
+<p><strong>Park yasak yerler = Duraklama yasak yerler + 7 ek yer.</strong></p>
+</blockquote>
+<p>You can halt briefly (duraklama) in a park-only-forbidden spot (e.g. within 5 m of a fire hydrant). You cannot halt <em>at all</em> in a duraklama-forbidden spot (e.g. on a crosswalk).</p>
+<h4>The critical distances (memorize)</h4>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Distance</th>
+<th style="text-align: center;">Both sides?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Yangın musluğu</strong> (fire hydrant)</td>
+<td style="text-align: center;"><strong>5 m</strong></td>
+<td style="text-align: center;">evet (her iki yönden)</td>
+</tr>
+<tr>
+<td><strong>Yolcu taşıma durağı levhası</strong> (bus/tram/taxi stop sign)</td>
+<td style="text-align: center;"><strong>15 m</strong></td>
+<td style="text-align: center;">evet</td>
+</tr>
+<tr>
+<td><strong>Geçiş üstünlüğü levhası</strong> (emergency-vehicle entry/exit sign)</td>
+<td style="text-align: center;"><strong>15 m</strong></td>
+<td style="text-align: center;">evet</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mnemonic:</strong> Fire hydrant (smallest, most local) = <strong>5 m</strong>. Sign-posted services (durak + geçiş üstünlüğü) = <strong>15 m</strong>.</p>
+<h4>The 3+ lane rule (item 7)</h4>
+<p>On roads with 3 or more lanes in your direction, parking is only allowed in the <strong>rightmost lane</strong> of your direction. The middle and inner lanes are for moving traffic. Left-lane parking on a multi-lane road is an automatic violation.</p>
+<h4>The "blocking exit" rule (item 8)</h4>
+<p>Even on a legal parking spot, if your car's position prevents another legally-parked car from leaving, your parking is illegal. A common example: parking perpendicular behind a row of parallel-parked cars, trapping one.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Park yasak mesafeler:</strong> yangın musluğu <strong>5 m</strong>, durak levhası <strong>15 m</strong>, geçiş üstünlüğü aracı giriş/çıkış levhası <strong>15 m</strong> — her iki yönden.<br />
+<strong>Rule:</strong> Duraklama yasaksa park da yasaktır; tersi değildir. 3+ şeritli yolda sadece <strong>en sağ şerite</strong> park edilebilir.</p>
+</blockquote>
+<h4>The two signs — don't mix them up</h4>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Appearance</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duraklama yasak</strong></td>
+<td>Red <strong>X</strong> on blue circle</td>
+<td>No stopping at all — not even for 1 second</td>
+</tr>
+<tr>
+<td><strong>Park etme yasak</strong></td>
+<td>Red <strong>diagonal slash</strong> on blue circle</td>
+<td>No parking — brief duraklama (≤5 dk) still allowed</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam trap:</strong> the two signs look nearly identical at a glance. The <strong>X (kesişme)</strong> is stricter than the <strong>slash (tek çizgi)</strong>.</p>
+<hr />
+<h2>5B. SLIDE 4 — Park Etmenin Yasak Olduğu Yerler (devamı / page 2)</h2>
+<h3>What the slide showed</h3>
+<p>Same "<strong>PARK ETMENİN YASAK OLDUĞU YERLER</strong>" header, continuing the bullet list with <strong>8 more items</strong> plus a closing paragraph about trucks/tow trucks/buses/tractors/work machines.</p>
+<h3>The 8 additional forbidden park-etme places</h3>
+<blockquote>
+<ol>
+<li><strong>Park, bahçe, garaj, sinema, fabrika, atölye, iş hanı, okul, hastane vb. tesis ve işyerlerinin giriş ve çıkış kapılarına her iki yönde 5 m mesafe içinde</strong> — within <strong>5 m</strong> (both sides) of entrance/exit gates of <strong>parks, gardens, garages, cinemas, factories, workshops, offices, schools, hospitals</strong> and similar facilities.</li>
+<li><strong>Alt ve üst geçitler ile köprülere 10 m mesafe içinde</strong> — within <strong>10 m</strong> of <strong>underpasses, overpasses, and bridges</strong>.</li>
+<li><strong>Zorunlu haller dışında yerleşim yerleri dışındaki karayollarında taşıt yolu üzerinde</strong> — outside towns (highways), never on the <strong>carriageway itself</strong> except in emergencies (mirrors the duraklama rule — but even stricter for parking).</li>
+<li><strong>Yaya yollarında</strong> — on <strong>pedestrian pathways / sidewalks</strong>.</li>
+<li><strong>Park etmek için ayrılmış yerlerde, şekle aykırı olarak</strong> — in designated parking spots but <strong>not parked in the marked shape</strong> (crooked / sideways / across lines).</li>
+<li><strong>Ücretli park yerlerinde ücret ödemeden veya süresi dışında</strong> — at <strong>paid parking lots</strong> without paying, or after the paid time has expired.</li>
+<li><strong>Engelli araçları için ayrılmış park yerlerinde (engelli araçları hariç)</strong> — in <strong>disabled-driver-only</strong> spots (unless you are a disabled driver).</li>
+<li><strong>Belirli kişi, kurum ve kuruluşlara ait araçlara trafik komisyonları kararları ile ayrılmış ve bir işaretle belirlenmiş bulunan park yerlerinde (izin verilen araçlar hariç)</strong> — in parking spots <strong>reserved by traffic-commission decision</strong> for specific persons/institutions/organizations and marked with a sign (unless you are an authorized vehicle).</li>
+</ol>
+<p><strong>…Park yapması yasaktır.</strong></p>
+</blockquote>
+<h3>Closing clause — kamyon, çekici, otobüs, lastik tekerlekli traktör, iş makineleri</h3>
+<blockquote>
+<p><strong>Bir trafik işareti ile izin verilmedikçe kamyon, çekici, otobüs, lastik tekerlekli traktör ve iş makinelerinin yerleşim birimleri içindeki karayollarında park etmesi yasaktır. (Köy kasaba gibi küçük yerleşim birimleri bu hükmün dışındadır.)</strong></p>
+<p><em>Unless a traffic sign expressly permits it, </em><em>trucks (kamyon), tow trucks (çekici), buses (otobüs), rubber-wheeled tractors (lastik tekerlekli traktör), and work machines (iş makineleri)</em><em> may not park on roads </em><em>inside settled areas</em><em>. Small villages/towns (köy, kasaba) are exempt from this rule.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The new distance (item 2): bridges/underpasses/overpasses = <strong>10 m</strong></h4>
+<p>This is the <strong>only "10 m"</strong> in the entire duraklama+park rulebook, and the exam loves it. Distinguish carefully:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th style="text-align: center;">Duraklama yasak</th>
+<th style="text-align: center;">Park yasak</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kavşak / tünel / köprü / bağlantı yolu</td>
+<td style="text-align: center;"><strong>5 m</strong> içinde</td>
+<td style="text-align: center;">— (covered by duraklama rule)</td>
+</tr>
+<tr>
+<td><strong>Alt geçit / üst geçit / köprü</strong></td>
+<td style="text-align: center;">— (in duraklama list as "köprü")</td>
+<td style="text-align: center;"><strong>10 m</strong> içinde (slide 4B)</td>
+</tr>
+<tr>
+<td>Yangın musluğu</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><strong>5 m</strong> içinde, her iki yönden</td>
+</tr>
+<tr>
+<td>Durak levhası / geçiş üstünlüğü levhası</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><strong>15 m</strong> içinde, her iki yönden</td>
+</tr>
+<tr>
+<td>İşaret levhası (genel)</td>
+<td style="text-align: center;"><strong>15 m</strong> (içi) / <strong>100 m</strong> (dışı)</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td>Tesis/işyeri giriş-çıkış kapısı</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;"><strong>5 m</strong> içinde, her iki yönden</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mnemonic:</strong> Fire hydrant + facility gates = <strong>5 m</strong>; bridges/underpasses = <strong>10 m</strong>; service-indication signs (durak, geçiş üstünlüğü) = <strong>15 m</strong>.</p>
+<h4>The 5 accessibility/compliance rules (items 4–8)</h4>
+<p>Items 4–8 are <strong>compliance-based</strong>, not distance-based:<br />
+- <strong>Yaya yolu = sidewalk</strong> (never park there, no exception for "brief" halts).<br />
+- <strong>"Şekle aykırı"</strong> (item 5) means parked crookedly in a marked spot — still a ticketable offense even in a legal area.<br />
+- <strong>Ücret ödemeden / süre dışı</strong> (item 6) = not paying, or overstaying the meter.<br />
+- <strong>Engelli park yeri</strong> (item 7) — huge fines, exam-favorite detail. Only <strong>disabled</strong> drivers (with the badge) may use them.<br />
+- <strong>Rezerve park</strong> (item 8) — spots reserved by commission decision for specific institutions (e.g. consulate, hospital staff, police).</p>
+<h4>The heavy-vehicle rule (closing clause)</h4>
+<p>Inside cities/towns, heavy vehicles — <strong>kamyon, çekici, otobüs, lastik tekerlekli traktör, iş makinesi</strong> — cannot be parked on city roads unless a sign specifically allows it. The rule exists because these vehicles block sight lines, narrow lanes, and damage pavement. <strong>Exception:</strong> small villages and towns (köy, kasaba) are out of scope of this rule, because they don't have dedicated heavy-vehicle lots.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Park yasak mesafeler (tam liste):</strong><br />
+- <strong>5 m</strong> — yangın musluğu (her iki yön), tesis/işyeri giriş-çıkış kapısı (her iki yön).<br />
+- <strong>10 m</strong> — alt/üst geçit, köprü.<br />
+- <strong>15 m</strong> — yolcu taşıma durağı levhası, geçiş üstünlüğü levhası (her iki yön).</p>
+<p><strong>Yerler (mesafesiz):</strong> yaya yolu, engelli park yeri, rezerve park yeri, ücretli parkta ödemesiz, şekle aykırı park.<br />
+<strong>Ağır araçlar (kamyon/çekici/otobüs/traktör/iş makinesi):</strong> yerleşim içi karayolunda yasak, izin işareti yoksa. Köy/kasaba muaf.</p>
+</blockquote>
+<hr />
+<h2>5C. SLIDE 5 — Yasak Yerlerde Park Edilen Araçların Kaldırılması</h2>
+<h3>What the slide showed</h3>
+<p>Photo of a long row of cars parallel-parked along a tree-lined street, with a traffic officer walking between them inspecting. Two bullet points below describe the <strong>enforcement / tow-away</strong> procedure.</p>
+<h3>The enforcement procedure</h3>
+<blockquote>
+<ol>
+<li><strong>Yasaklanmış yerlerde ve hallerde park edilen araçlar yetkililerce kaldırılır. Araçların yetkililerce kaldırılıp götürülmesi sebebiyle yapılmış olan bütün masrafları, aracın sürücüsü veya sahibi ödemek zorundadır.</strong></li>
+</ol>
+<p><em>Vehicles parked in forbidden places or situations are </em><em>towed/removed by the authorities</em><em>. </em><em>All costs</em><em> caused by this removal (tow fees, storage fees, administrative fees) must be paid by the </em><em>driver or owner</em><em> of the vehicle.</em></p>
+<ol>
+<li><strong>Araç kaldırılıp götürülmeden veya götürüldüğü esnada sahibinin gelmesi durumunda trafik idari para cezası karar tutanağı kendisine tebliğ edilmek ve varsa yapılan masraflar ödettirilmek suretiyle sahibine teslim edilir.</strong></li>
+</ol>
+<p><em>If the </em><em>owner arrives</em><em> before the tow truck leaves (or during the removal), the vehicle is returned — but only after the </em><em>traffic fine decision document (karar tutanağı)</em><em> has been served and any removal costs already incurred are paid.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>This slide codifies the <strong>enforcement escalation ladder</strong> for illegal parking:</p>
+<ol>
+<li><strong>Find car in yasak yer</strong> → officer issues para cezası (administrative fine).</li>
+<li><strong>Car still there / owner absent</strong> → call tow truck (çekici).</li>
+<li><strong>Owner shows up during tow</strong> → stop the tow, serve the fine document, charge any costs incurred so far, release car.</li>
+<li><strong>Owner absent / too late</strong> → car gets taken to impound (otopark), owner must pay fine + tow + storage to reclaim.</li>
+</ol>
+<p><strong>Key financial rule:</strong> all costs (tow, impound storage, admin) fall on <strong>sürücü veya sahibi</strong> — the driver OR the owner. If the driver and owner are different people (e.g. company car), the owner is still liable.</p>
+<p><strong>Exam-favorite subtlety:</strong> "karar tutanağı kendisine tebliğ edilmek" means the fine document must be <strong>officially served</strong> — not just left on the windshield. If the owner arrives mid-tow, they sign it in person.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Yasak yerde park eden aracın akıbeti:</strong><br />
+1. Yetkililerce <strong>kaldırılır</strong> (towed).<br />
+2. <strong>Bütün masrafları</strong> sürücü veya sahip öder.<br />
+3. Sahibi zamanında gelirse → <strong>karar tutanağı</strong> tebliğ + varsa masraflar ödenip araç teslim edilir.</p>
+</blockquote>
+<hr />
+<h2>6. Duraklama vs Park — the two-term distinction (critical for exam)</h2>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th><strong>Duraklama</strong></th>
+<th><strong>Park Etme</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Süre</td>
+<td>Kısa (≤ 5 dk)</td>
+<td>Uzun (&gt; 5 dk veya sürücüsüz)</td>
+</tr>
+<tr>
+<td>Sürücü araçta mı?</td>
+<td>Genelde evet</td>
+<td>Genelde hayır</td>
+</tr>
+<tr>
+<td>Yolcu indirme/bindirme, yük alma</td>
+<td><strong>Duraklama sayılır</strong></td>
+<td>—</td>
+</tr>
+<tr>
+<td>Motor çalışır mı?</td>
+<td>Kısa sürede evet, uzunda kapatılır</td>
+<td>Her zaman kapalı</td>
+</tr>
+<tr>
+<td>Yasak yerleri</td>
+<td>Ayrı liste (kavşaklar, geçitler, köprüler…)</td>
+<td>Ayrı liste (daha geniş)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam trap:</strong> soru "duraklamada ne yapılmalı" diye sorarsa, SLIDE 1'deki 3 grup geçerlidir. "Park etme" diye sorarsa ek kurallar var (motor daima kapalı, sürücü araçta değil, vb. — to be captured when that slide appears).</p>
+<hr />
+<h2>4. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Duraklamada aracın motoru hangi durumda durdurulur?"</strong> → <strong>Duraklama uzun süre beklemeyi gerektiriyorsa.</strong></li>
+<li><strong>"Yolun eğimli olduğu bir duraklamada sürücü ne yapmalıdır?"</strong> → <strong>Uygun tekerleklere uygun yönde TAKOZ koyar.</strong></li>
+<li><strong>"Duraklama sırasında yolun hangi kısmı kullanılmalıdır?"</strong> → <strong>Bulunulan şeritte en az yer işgal edilmeli, varsa BANKET kullanılmalıdır.</strong></li>
+<li><strong>"Duraklamada el freni kullanımı zorunlu mudur?"</strong> → <strong>Uzun süreli beklemelerde evet.</strong></li>
+<li><strong>"Duraklama sırasında hangi durumda park ışığı yakılır?"</strong> → <strong>Gerekli hallerde (gece, sis, karanlık yerlerde).</strong></li>
+<li><strong>"Yükleme/boşaltma sırasında nelere dikkat edilir?"</strong> → <strong>Başkalarına zarar verilmemesi, trafik ve yaya geçişinin engellenmemesi, yol yapısının bozulmaması, yolun kirletilmemesi.</strong></li>
+<li><strong>"Duraklama ile park etme arasındaki fark nedir?"</strong> → <strong>Duraklama kısa süreli (amaç yolcu indirme/bindirme, kısa bekleme); park etme uzun süreli (sürücü genellikle araçta değil).</strong></li>
+</ol>
+<hr />
+<h2>5. Memorize These</h2>
+<blockquote>
+<p><strong>DURAKLAMA 3 TEDBİR GRUBU:</strong></p>
+<p>(1) <strong>Yer:</strong> uygun yer seçimi + şeritte az yer işgali + <strong>BANKET</strong> varsa kullan.<br />
+(2) <strong>Araç (uzun beklemede):</strong> motor kapat + vites tak + <strong>el freni</strong> + park ışığı (gerekirse) + <strong>takoz</strong> (yokuşta).<br />
+(3) <strong>Zarar verme yasağı:</strong> diğer araç/yaya engellenmez, yükleme/boşaltmada kimse zarar görmez, yol yapısı bozulmaz, yol kirletilmez.</p>
+<p><strong>Takoz yönü:</strong> Yokuş <strong>yukarı</strong> → <strong>arka</strong> tekerleğin arkasına · Yokuş <strong>aşağı</strong> → <strong>ön</strong> tekerleğin önüne.</p>
+<p><strong>Duraklama ≤ 5 dk; park etme &gt; 5 dk veya sürücüsüz.</strong></p>
+</blockquote>
+<hr />
+<h2>6. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duraklama</td>
+<td>Short halt / brief stopping</td>
+<td>≤ 5 minutes</td>
+</tr>
+<tr>
+<td>Park etme</td>
+<td>Parking</td>
+<td>Long-term stop</td>
+</tr>
+<tr>
+<td>Duraklama amacı</td>
+<td>Purpose of the halt</td>
+<td>Passenger drop-off, loading, etc.</td>
+</tr>
+<tr>
+<td>Tedbir</td>
+<td>Precaution / measure</td>
+<td>Safety action</td>
+</tr>
+<tr>
+<td>En uygun yer</td>
+<td>The most suitable spot</td>
+<td>Spot-selection principle</td>
+</tr>
+<tr>
+<td>Bulunulan şerit</td>
+<td>The current lane</td>
+<td>Where you're stopping</td>
+</tr>
+<tr>
+<td>En az yer işgal etmek</td>
+<td>Occupy as little space as possible</td>
+<td>Lane-use principle</td>
+</tr>
+<tr>
+<td>Banket</td>
+<td>Road shoulder</td>
+<td>Paved/compacted side of the road</td>
+</tr>
+<tr>
+<td>Motoru durdurmak</td>
+<td>To turn off the engine</td>
+<td>Kill ignition</td>
+</tr>
+<tr>
+<td>Uygun vites</td>
+<td>Appropriate gear</td>
+<td>1st/R manual, P automatic</td>
+</tr>
+<tr>
+<td>El freni</td>
+<td>Parking brake / handbrake</td>
+<td>The mechanical brake</td>
+</tr>
+<tr>
+<td>Tespit etmek</td>
+<td>To secure / fix in place</td>
+<td>Lock the vehicle</td>
+</tr>
+<tr>
+<td>Park ışıkları</td>
+<td>Parking lights / side markers</td>
+<td>Low-level visibility lights</td>
+</tr>
+<tr>
+<td>Yolun eğimi</td>
+<td>Road slope</td>
+<td>Gradient / incline</td>
+</tr>
+<tr>
+<td>Takoz</td>
+<td>Wheel chock</td>
+<td>Wedge placed against a tire</td>
+</tr>
+<tr>
+<td>Uygun tekerleklere</td>
+<td>On the appropriate wheels</td>
+<td>Depends on slope direction</td>
+</tr>
+<tr>
+<td>Uygun yönde</td>
+<td>In the appropriate direction</td>
+<td>Against potential roll</td>
+</tr>
+<tr>
+<td>Yüklerin boşaltılması</td>
+<td>Unloading of cargo</td>
+<td>Removing goods</td>
+</tr>
+<tr>
+<td>Yüklenmesi</td>
+<td>Loading</td>
+<td>Putting goods in</td>
+</tr>
+<tr>
+<td>Karayolu yapısı</td>
+<td>Road structure</td>
+<td>Asphalt, base, markings</td>
+</tr>
+<tr>
+<td>Kirletmek</td>
+<td>To pollute / dirty</td>
+<td>Spill fluids, drop litter</td>
+</tr>
+<tr>
+<td>Zarar vermek</td>
+<td>To cause damage</td>
+<td>Harm to people/property</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. Cross-references</h2>
+<ul>
+<li>Park etme kuralları + yasak yerleri → <em>not yet captured</em> (coming slide)</li>
+<li>Duraklamanın yasak olduğu yerler (kavşak 5 m, yaya geçidi 5 m, tepe üstü, dönemeç, köprü, tünel vb.) → <em>not yet captured</em></li>
+<li>El freni + park freni (araç tekniği açısından) → <a href="../araç-tekniği/09-fren-sistemi.md">09-fren-sistemi.md</a> <em>(araç tekniği — to be added)</em></li>
+<li>Uygun vites / motor freni — duraklama ve yokuş başlangıcı → <a href="../araç-tekniği/08-güç-aktarma-organları.md">08-güç-aktarma-organları.md</a></li>
+<li>Banket + yol bölümleri → <a href="02-karayolu-bölümleri.md">02-karayolu-bölümleri.md</a></li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

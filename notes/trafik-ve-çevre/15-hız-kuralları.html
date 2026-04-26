@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hız Kuralları — Speed Rules (by vehicle class × road type) | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 15-hız-kuralları</span>
+</div>
+<div class="content">
+<h1>Hız Kuralları — Speed Rules (by vehicle class × road type)</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — HIZ KURALLARI table (12 vehicle classes × 4 road types); SLIDE 2 — Extra speed rules (asgari hız, römork, boş hazmat, geçme istisnası) + speed-violation penalty ladder (%10 / %10-30 / %30-50 / &gt;%50) + speed-detector ban; SLIDE 3 — Türkiye Otoyolları Haritası (2022-07-01 güncellemesi: 120 → 130/140 km/h hız artışları); SLIDE 4 — Hızın azaltılması gereken yerler (6 zorunlu durum) + sürücünün hız ayarlama kriterleri</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Turkish traffic law does <strong>not</strong> give a single speed limit for the road — it gives a speed limit for <strong>your vehicle class on that road type</strong>. The four road types are:</p>
+<ol>
+<li><strong>Yerleşim yeri içi</strong> — inside city / inhabited area</li>
+<li><strong>Yerleşim yeri dışı, iki yönlü yol</strong> — outside city, two-way road</li>
+<li><strong>Yerleşim yeri dışı, bölünmüş yol</strong> — outside city, divided road</li>
+<li><strong>Otoyol</strong> — motorway (the highest class)</li>
+</ol>
+<p>The exam will show you this grid and ask "an X on a Y road — what's the speed limit?" — the answer is always a specific number memorized from this table. There are <strong>12 vehicle classes</strong> to know.</p>
+<p><strong>The universal rule:</strong> yerleşim yeri içi = <strong>50 km/h</strong> for almost every passenger/light vehicle (the only exceptions are slow vehicles — motorsuz bisiklet, tehlikeli madde, traktör, iş makinesi, arızalı araç çekenler).</p>
+<hr />
+<h2>2. SLIDE 1 — Hız Kuralları (the full table)</h2>
+<h3>What the slide showed</h3>
+<p>A four-column speed-limit grid. The column headers were:</p>
+<p>| Araç Cinsi | Yerleşim Yeri İçi | Yerleşim Yeri Dışı — İki Yönlü Yol | Yerleşim Yeri Dışı — Bölünmüş Yol | Otoyol |</p>
+<p>Twelve rows of vehicle classes. The numbers below are speeds in km/h.</p>
+<h3>The canonical table (memorize)</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Vehicle class (Araç Cinsi)</th>
+<th style="text-align: right;">Yer. içi</th>
+<th style="text-align: right;">İki yönlü</th>
+<th style="text-align: right;">Bölünmüş</th>
+<th style="text-align: right;">Otoyol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Otomobil</strong> (M1, M1G)</td>
+<td style="text-align: right;"><strong>50</strong></td>
+<td style="text-align: right;"><strong>90</strong></td>
+<td style="text-align: right;"><strong>110</strong></td>
+<td style="text-align: right;"><strong>120</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Minibüs</strong> (M2), <strong>Otobüs</strong> (M3)</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Kamyonet</strong> (N1, N1G)</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Panelvan</strong> (N1)</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">110</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Kamyon, Çekici</strong> (N2, N3)</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">90</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Motosiklet L3</strong> <em>(silindir hacmi 50 cm³'ü geçen, sepetsiz iki tekerlekli)</em></td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Motosiklet L4, L5, L7</strong> <em>(sepetli 2T, 3T, 4T, elektrikli)</em></td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">70</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Motorlu Bisiklet</strong> (L1, L2, L6), <strong>Motorsuz Bisiklet</strong> <em>(≤50 cm³ 2T/4T, içten yanmalı veya elektrikli)</em></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;"><strong>Giremez</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Tehlikeli madde taşıyan araçlar</strong> <em>(belgelerinde aksine hüküm yoksa)</em></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">70</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Özel yük taşıma izin belgesi ile karayoluna çıkan araçlar</strong></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">60</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Lastik tekerlekli traktör</strong></td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;"><strong>Giremez</strong></td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Arızalı araçları çeken araçlar</strong></td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>İş makineleri</strong></td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;"><em>Yolun yapım, bakım veya işletmesinden izin alınmadan giremez</em></td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>Servis freni bozuk araçları çeken araçlar</strong></td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">—</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Rows 13–14 were partially visible at the bottom of the slide.)</em></p>
+<h3>Clean English explanation</h3>
+<h4>The row that matters most — <strong>Otomobil (M1)</strong> — 50 / 90 / 110 / 120</h4>
+<p>This is the single most-tested row in the whole exam. Memorize it as <strong>"50, 90, 110, 120"</strong> — a staircase of +40, +20, +10.</p>
+<h4>The "M2/M3/L3" grouping — 50 / 80 / 90 / 100</h4>
+<p>Minibuses, buses, and big motorcycles all share the <strong>50 / 80 / 90 / 100</strong> pattern. One family of numbers covers 3 vehicle classes.</p>
+<h4>Kamyonet (N1) vs Panelvan (N1) — small but tested</h4>
+<p>Both are "N1" category light goods vehicles, but:<br />
+- <strong>Kamyonet (open bed, pickup):</strong> 50 / 80 / 85 / 95<br />
+- <strong>Panelvan (enclosed, paneled):</strong> 50 / 85 / 100 / 110 → <strong>nearly as fast as an otomobil</strong></p>
+<p>The exam likes this trap because the two are often confused. Panelvans are aerodynamically closer to cars, so they get higher limits.</p>
+<h4>Kamyon + Çekici (N2, N3) — the heavy-truck class</h4>
+<p><strong>50 / 80 / 85 / 90</strong> — heavier than kamyonet, slower on highways.</p>
+<h4>The two motosiklet rows — L3 vs L4/L5/L7</h4>
+<ul>
+<li><strong>L3</strong> (normal 2-wheel motosiklet, engine &gt; 50 cm³): <strong>50 / 80 / 90 / 100</strong> — same as otobüs.</li>
+<li><strong>L4/L5/L7</strong> (sidecars, 3-wheelers, 4-wheelers, electric): <strong>50 / 70 / 80 / 80</strong> — slower because of stability.</li>
+</ul>
+<h4>Motorlu bisiklet (moped) / motorsuz bisiklet — OTOYOLA GİREMEZ</h4>
+<p><strong>30 / 45 / 45 / Giremez.</strong> Two-letter memory hook: <strong>bisikletler otoyola giremez.</strong></p>
+<h4>Tehlikeli madde (hazardous-goods truck) — 30 / 50 / 60 / 70</h4>
+<p>Unless the vehicle's documents say otherwise, hazmat trucks are restricted to these lower speeds. Slower than a normal kamyon because a crash has much worse consequences.</p>
+<h4>Lastik tekerlekli traktör — otoyola giremez</h4>
+<p><strong>20 / 30 / 40 / Giremez.</strong> Same otoyol exclusion as bicycles.</p>
+<h4>Arızalı araçları çeken araçlar — tow trucks towing broken vehicles</h4>
+<p><strong>20 / 20 / 30 / 40.</strong> The towed car is not secured for high speed, so the combination is heavily restricted. Note the speeds are <strong>the same in-town and on two-way outside town</strong> (both 20) — this is a favorite exam trap.</p>
+<h4>İş makineleri — work machines</h4>
+<p><strong>20 everywhere</strong>, and they cannot enter an otoyol without permission from the road-operating authority.</p>
+<h4>Servis freni bozuk — brake-broken tow (bottom row)</h4>
+<p>If the towed vehicle's service brake is <strong>broken</strong>, the limit drops to <strong>15 km/h</strong> everywhere, and otoyol is off-limits. This row is a classic exam question disguised as a safety scenario.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Otomobil (M1) hız limitleri: 50 / 90 / 110 / 120</strong> (yer. içi / iki yönlü / bölünmüş / otoyol). <strong>Bu dört sayıyı ezberle — sınavın en çok sorulan hız sorusu.</strong></p>
+<p><strong>Bisikletler ve traktörler otoyola GİREMEZ.</strong> İş makineleri ancak izin alındığında girebilir.</p>
+</blockquote>
+<hr />
+<h2>2B. SLIDE 2 — Extra speed rules + speeding penalty ladder</h2>
+<h3>What the slide showed</h3>
+<p>A pink-bulleted block of <strong>four extra speed rules</strong>, then a blue subheading "<strong>Hız sınırlarını;</strong>" followed by a 4-tier penalty ladder for drivers who exceed the limit.</p>
+<h4>The four extra rules</h4>
+<blockquote>
+<p><strong>Şehirlerarası karayolunu kullanan motorlu araçlarda, araç cinsi gözetmeksizin ASGARİ HIZ SINIRI 15 km/saattir. Otoyollarda ise 40 km/saattir.</strong></p>
+<p><em>On intercity roads, regardless of vehicle class, the </em><em>minimum speed</em><em> is </em><em>15 km/h</em><em>. On motorways it is </em><em>40 km/h</em><em>.</em></p>
+<p><strong>Araçlara römork veya yarı römork takıldığında, azami hız sınırından saatte 10 km/s düşülmesi gerekir.</strong></p>
+<p><em>When a trailer or semi-trailer is attached, the maximum speed limit drops by </em><em>10 km/h</em><em>.</em></p>
+<p><strong>Tehlikeli madde taşımaya mahsus olup, boş olarak trafiğe çıkan araçlar kendi sınıfındaki araçlara ait hız ile sürülebilirler.</strong></p>
+<p><em>Hazardous-goods vehicles that are driving </em><em>empty</em><em> may use the speed limits of their regular vehicle class (i.e. they are NOT restricted to the lower hazmat speeds of 30/50/60/70 when unloaded).</em></p>
+<p><strong>İki yönlü karayolunda geçme sırasında, geçme kuralının mecbur kıldığı şartlar dolayısıyla, araç için belirtilen hız sınırlarını aşan taşıt sürücülerine 2918 sayılı Kanunun 51 inci maddesine göre işlem yapılmaz.</strong> (RG-19/2/2014-28918)</p>
+<p><em>On two-way roads during a </em><em>legal overtake</em><em>, if exceeding the speed limit is necessary to complete the overtake safely, the driver is </em><em>not</em><em> penalized under Article 51 of Law 2918.</em></p>
+</blockquote>
+<h4>The speeding penalty ladder ("Hız sınırlarını;")</h4>
+<table>
+<thead>
+<tr>
+<th>Amount over the limit</th>
+<th style="text-align: right;">Fine</th>
+<th style="text-align: right;">Ceza puanı</th>
+<th>Statute</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Up to <strong>%10</strong> aşma</td>
+<td style="text-align: right;"><strong>No penalty</strong></td>
+<td style="text-align: right;">0</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>%10 – %30</strong> aşma</td>
+<td style="text-align: right;"><strong>2.719 TL</strong> hafif para cezası</td>
+<td style="text-align: right;"><strong>10 puan</strong></td>
+<td><strong>Madde 51/2-a</strong></td>
+</tr>
+<tr>
+<td><strong>%30 – %50</strong> aşma</td>
+<td style="text-align: right;"><strong>5.662 TL</strong> hafif para cezası</td>
+<td style="text-align: right;"><strong>15 puan</strong></td>
+<td><strong>Madde 51/2-b</strong></td>
+</tr>
+<tr>
+<td><strong>Over %50</strong> aşma</td>
+<td style="text-align: right;"><strong>11.629 TL</strong> hafif para cezası</td>
+<td style="text-align: right;"><strong>15 puan</strong></td>
+<td><strong>Madde 51/2-c</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>The "5-times in a year" rule</h4>
+<blockquote>
+<p><strong>Hız sınırını %30'dan fazla aşmak suretiyle ihlal suçunun işlendiği tarihten geriye doğru bir yıl içerisinde 5 defa ihlal ettiği tespit edilenlerin sürücü belgeleri 1 yıl süre ile geri alınır.</strong> Süresi sonunda <strong>psikoteknik</strong> değerlendirmeden ve <strong>psikiyatri</strong> uzmanının muayenesinden geçirilerek sürücü belgesi almasına mani hali olmadığı anlaşılanların belgeleri iade edilir.</p>
+<p><em>If a driver exceeds the speed limit by more than </em><em>30%</em><em> on </em><em>5 occasions within the past 12 months</em><em>, the license is </em><em>suspended for 1 year</em><em>. To get it back the driver must pass </em><em>both a psikoteknik assessment and a psychiatric examination</em><em>.</em></p>
+</blockquote>
+<h4>The radar-detector ban</h4>
+<blockquote>
+<p><strong>Hız sınırlarının aşılıp aşılmadığını tespit etmekte kullanılan cihazların yerini tespit eden her türlü cihazın imali, ithali ve araçlarda bulundurulması YASAKTIR.</strong></p>
+<p><em>Manufacturing, importing, or keeping in a vehicle any </em><em>device that locates speed-detection equipment</em><em> (i.e. radar detectors / jammers) is FORBIDDEN.</em></p>
+<ul>
+<li><strong>Makers / importers:</strong> idari para cezası + <strong>6–8 ay hapis cezası</strong>.</li>
+<li><strong>Drivers caught with such a device:</strong> para cezası + <strong>4–6 ay hafif hapis cezası</strong> + <strong>10 ceza puanı</strong>.</li>
+</ul>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Asgari hız (minimum speed) — the opposite of a speed limit</h4>
+<p>On intercity roads and especially otoyols, driving <strong>too slowly</strong> is also dangerous (you become a rolling obstacle). So Türkiye defines a floor:<br />
+- <strong>Şehirlerarası (intercity roads):</strong> 15 km/h minimum.<br />
+- <strong>Otoyol:</strong> 40 km/h minimum.</p>
+<p>This is the number behind the <strong>mavi daire asgari hız</strong> sign (see <a href="09-trafik-tanzim-işaretleri-emir.md">09-trafik-tanzim-işaretleri-emir.md</a>).</p>
+<h4>Römork = azami hız − 10 km/h</h4>
+<p>Any vehicle towing a römork or yarı römork is <strong>10 km/h slower</strong> than its normal max. An otomobil on otoyol (120) towing a camping-trailer = <strong>110</strong>. Reason: the trailer's stopping distance and sway behavior at the full speed are unsafe.</p>
+<h4>Empty hazmat = normal class</h4>
+<p>When a tanker or ADR truck is <strong>running empty</strong>, the elevated risk is gone, so it reverts to normal kamyon/çekici limits (80/85/90 instead of 50/60/70). This is a classic exam trap — "an empty tanker truck on a divided road" → <strong>85 km/h</strong>, not 60.</p>
+<h4>Legal overtake speed exception</h4>
+<p>If you are on a <strong>two-way road</strong> and the geçme kuralı forces you to briefly exceed the limit to complete the overtake safely and return to your lane, no penalty. This exists because overtaking slowly is more dangerous than overtaking quickly — you want minimum time in the oncoming lane.</p>
+<p><strong>Important:</strong> this exception applies to <strong>iki yönlü yol only</strong>, only during an actual <strong>geçme</strong>, and only as much as the geçme requires. It is not a general license to speed.</p>
+<h4>The %10 grace band</h4>
+<p>The first 10% over the limit is <strong>not ticketed</strong>. On a 90 km/h road that's up to 99. On an otomobil otoyol (120) that's up to <strong>132 km/h</strong>. Above that, the ladder kicks in.</p>
+<h4>The 5-times-in-a-year rule</h4>
+<p>Chronic speeders get their ehliyet taken away for a year AND need to be cleared by both a psikoteknik test and a psychiatric exam. This is specifically for people who speed by <strong>more than 30%</strong> (not the minor 10–30% tier).</p>
+<h4>Radar-detector ban</h4>
+<p>Radar detectors and jammers are banned not as an annoyance but as a <strong>criminal</strong> matter — prison time applies. Even merely having one in your car earns a 4–6 month light prison sentence + 10 ceza puanı.</p>
+<h3>Critical exam facts (slide 2)</h3>
+<blockquote>
+<p><strong>Asgari hız = 15 km/h (şehirlerarası), 40 km/h (otoyol), araç cinsi fark etmez.</strong></p>
+<p><strong>Römork / yarı römork takılırsa, azami hızdan 10 km/s düşülür.</strong></p>
+<p><strong>Boş hazmat aracı kendi sınıfının normal hızında sürülebilir.</strong></p>
+<p><strong>İki yönlü yolda GEÇME sırasında hız aşımı 2918/51 kapsamında cezalandırılmaz.</strong></p>
+<p><strong>Hız sınırı ceza merdiveni: %10 cezasız · %10–30 = 2.719 TL + 10 puan · %30–50 = 5.662 TL + 15 puan · &gt;%50 = 11.629 TL + 15 puan.</strong></p>
+<p><strong>%30'dan fazla aşma + 1 yıl içinde 5 defa → ehliyet 1 yıl geri alınır; geri almak için psikoteknik + psikiyatri raporu şarttır.</strong></p>
+<p><strong>Radar detektörü bulundurmak YASAKTIR — 4–6 ay hafif hapis + para cezası + 10 puan.</strong></p>
+</blockquote>
+<hr />
+<h2>2C. SLIDE 3 — Türkiye Otoyolları Haritası (2022-07-01 hız güncellemesi)</h2>
+<h3>What the slide showed</h3>
+<p>A map of Türkiye with selected motorway segments highlighted in <strong>red</strong> and <strong>green</strong>, under the banner "<strong>TÜRKİYE OTOYOLLARI HARİTASI — 1 Temmuz 2022 tarihi itibarıyla</strong>". Two side-by-side info boxes explained the upgrade:</p>
+<h4>Red sections — raised from 120 → <strong>130 km/h</strong> (+10 km/h)</h4>
+<blockquote>
+<p><strong>Türkiye otoyollarından;</strong> — kesimlerinde <strong>120 km/s</strong> olan hız sınırı <strong>10 km/s artırılarak 130 km/s</strong>'e çıkarılmaktadır.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Otoyol</th>
+<th>Route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O-3 / E80</td>
+<td><strong>Edirne – İstanbul</strong> (Avrupa Otoyolu)</td>
+</tr>
+<tr>
+<td>O-4 / E80-E88</td>
+<td><strong>İstanbul – Ankara</strong> (Anadolu Otoyolu)</td>
+</tr>
+<tr>
+<td>O-21 / E90</td>
+<td><strong>Niğde – Tarsus</strong></td>
+</tr>
+<tr>
+<td>O-52 / E90</td>
+<td><strong>Tarsus – Şanlıurfa</strong></td>
+</tr>
+<tr>
+<td>O-32 / E881</td>
+<td><strong>Çeşme – İzmir</strong></td>
+</tr>
+<tr>
+<td>O-31 / E87</td>
+<td><strong>İzmir – Aydın</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>Green sections — raised from 120 → <strong>140 km/h</strong> (+20 km/h)</h4>
+<blockquote>
+<p><strong>Türkiye otoyollarından; geometrik standartları daha yüksek projelendirilen</strong> — kesimlerinde <strong>120 km/s</strong> olan hız sınırı <strong>20 km/s artırılarak 140 km/s</strong>'e çıkarılmaktadır.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Otoyol</th>
+<th>Route</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O-7</td>
+<td><strong>Sakarya – Kurtköy – Odayeri – Kınalı</strong> (Kuzey Marmara Otoyolu)</td>
+</tr>
+<tr>
+<td>O-6</td>
+<td><strong>Malkara – Çanakkale</strong></td>
+</tr>
+<tr>
+<td>O-5 / E881</td>
+<td><strong>Gebze – İzmir</strong> + <strong>O-33 / E87 Menemen – Çandarlı</strong></td>
+</tr>
+<tr>
+<td>O-21 / E90</td>
+<td><strong>Ankara – Niğde</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Clean English explanation</h3>
+<p>Since <strong>2022-07-01</strong> certain otoyol sections in Türkiye have a <strong>higher maximum speed</strong> than the canonical 120 km/h for otomobil. The two tiers exist because newer otoyols are built to higher <strong>geometrik standartlar</strong> (gentler curves, wider shoulders, better banking) which make 140 safe, while slightly older ones cap at 130.</p>
+<p><strong>What this does NOT do:</strong><br />
+- It does <strong>not</strong> change the standard table's 120 figure — on any otoyol that isn't specifically listed, M1 azami = <strong>120</strong>.<br />
+- It does <strong>not</strong> change other vehicle classes — only otomobiller (and similar M1 cars) benefit.<br />
+- The <strong>−10 km/h römork rule</strong> still applies — towing a trailer on a 130 otoyol = 120.</p>
+<p>On the exam, when the question asks "otoyolda otomobil için azami hız kaçtır?" the default answer is still <strong>120 km/h</strong>. The 130/140 rule appears only if the question explicitly names one of these otoyols (O-3, O-4, O-5, O-6, O-7, O-21, O-31, O-32, O-33, O-52).</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>1 Temmuz 2022'den itibaren belirli otoyol kesimlerinde hız sınırı 130 km/s (+10) veya 140 km/s (+20) olarak uygulanmaktadır.</strong></p>
+<p><strong>Red (130 km/h):</strong> Edirne-İstanbul (O-3), İstanbul-Ankara (O-4), Niğde-Mersin-Şanlıurfa (O-21, O-52), Çeşme-İzmir-Aydın (O-32, O-31).<br />
+<strong>Green (140 km/h):</strong> Kuzey Marmara (O-7), Malkara-Çanakkale (O-6), Gebze-İzmir (O-5) + Menemen-Çandarlı (O-33), Ankara-Niğde (O-21).</p>
+<p><strong>Bunun dışında kalan otoyollarda otomobil için azami hız 120 km/s olarak kalır.</strong></p>
+</blockquote>
+<hr />
+<h2>2D. SLIDE 4 — Hızın Azaltılması Gereken Yerler (where you MUST slow down)</h2>
+<h3>What the slide showed</h3>
+<p>A red-headered rule block ("<strong>Sürücüler:</strong>") listing <strong>six places / conditions</strong> where drivers are legally required to reduce their speed — even if the posted azami hız allows more. A second red block ("<strong>Sürücüler Hızlarını:</strong>") stated the general speed-adjustment principle. The right-hand illustration showed a car slowing down at a curve with warning chevrons, and the bottom filmstrip illustrated the six scenarios (highway car slowing, school crossing, train crossing, tunnel, construction).</p>
+<h3>The six "hızını azaltmak zorundadır" situations</h3>
+<blockquote>
+<p><strong>Sürücüler:</strong><br />
+- <strong>Kavşaklara yaklaşırken</strong> — when approaching intersections<br />
+- <strong>Dönemeçlere girerken ve dönemeçli yollarda ilerlerken</strong> — when entering curves and on winding roads<br />
+- <strong>Yaya, okul ve demiryolu geçitlerine yaklaşırken</strong> — when approaching pedestrian, school, and railway crossings<br />
+- <strong>Tünel, dar köprü ve menfezlere yaklaşırken</strong> — when approaching tunnels, narrow bridges, and culverts<br />
+- <strong>Tepe üstüne ve görüşün yetersiz olduğu yerlere yaklaşırken</strong> — when approaching hilltops and places with insufficient visibility<br />
+- <strong>Yapım, bakım ve onarım çalışmaları yapılan yol kesimlerine yaklaşırken</strong> — when approaching road-work / construction zones</p>
+<p>→ <strong>hızlarını azaltmak ZORUNDADIRLAR.</strong></p>
+</blockquote>
+<h3>The general principle (Sürücüler Hızlarını:)</h3>
+<blockquote>
+<p><strong>Kullandıkları aracın cinsine, yük durumuna, hava-yol durumu ve trafiğin yoğunluğuna göre ayarlamak zorundadır.</strong></p>
+<p><em>Drivers must adjust their speed according to: (1) the </em><em>vehicle class</em><em>, (2) the </em><em>load state</em><em> (empty vs loaded), (3) the </em><em>weather and road condition</em><em>, and (4) the </em><em>density of traffic</em><em>.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>The six listed situations share a common theme: <strong>reduced visibility, increased obstacle density, or limited maneuvering room</strong>. In all of them, the posted limit is an <strong>upper ceiling</strong>, not a target. The law explicitly obliges you to go slower than the limit when any of these conditions apply.</p>
+<h4>Kavşak (intersection)</h4>
+<p>You don't know who's coming from the crossing street — you may need to yield, stop for a red light, or react to a sudden cut-in. Slow down and get your foot near the brake.</p>
+<h4>Dönemeç (curve / bend)</h4>
+<p>Centrifugal force = v². Double the speed, quadruple the sideways push. Dönemeçli yollar (winding roads) combine this with limited sight distance.</p>
+<h4>Yaya / okul / demiryolu geçidi (pedestrian, school, railway crossings)</h4>
+<p>Pedestrians and children are unpredictable; a train is un-avoidable. The law treats these as mandatory slowdown zones regardless of whether someone is visible at that instant.</p>
+<h4>Tünel, dar köprü, menfez (tunnel, narrow bridge, culvert)</h4>
+<p>Reduced width = no escape space. Inside tunnels, eye adaptation takes a few seconds. On narrow bridges you cannot swerve around obstacles.</p>
+<h4>Tepe üstü, görüş yetersiz (hilltops, poor visibility)</h4>
+<p>You literally cannot see what's on the other side. Must be able to stop within <strong>your own visible distance</strong>.</p>
+<h4>Yapım, bakım, onarım çalışmaları (construction / maintenance)</h4>
+<p>Workers on the road, equipment, uneven surfaces, lane shifts. Always slow down plus increase following distance.</p>
+<h4>The 4 speed-adjustment criteria (memorize)</h4>
+<ol>
+<li><strong>Aracın cinsi</strong> — a kamyon needs more margin than an otomobil.</li>
+<li><strong>Yük durumu</strong> — loaded vehicles brake longer; top-heavy loads tip on curves.</li>
+<li><strong>Hava ve yol durumu</strong> — rain, snow, fog, black ice, wet leaves.</li>
+<li><strong>Trafiğin yoğunluğu</strong> — dense traffic means more reaction demands.</li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kavşak, dönemeç, yaya/okul/demiryolu geçidi, tünel/dar köprü/menfez, tepe üstü/görüş yetersiz, yol çalışması</strong> — bu altı durumda <strong>azami hız sınırından düşük bile olsa, sürücü hızını azaltmak ZORUNDADIR.</strong></p>
+<p><strong>Hız ayarlama kriterleri:</strong> araç cinsi · yük durumu · hava/yol durumu · trafik yoğunluğu (4 kriter).</p>
+</blockquote>
+<hr />
+<h2>2E. Hoca's Live Class Additions (2026-04-18)</h2>
+<h3>The "hız arttırılır" answer heuristic (NOT on the slides)</h3>
+<blockquote>
+<p><em>"Şimdi size sorulacak olan sorularda hız arttırılır diye bir seçenek varsa bilin ki o seçenek yanlıştır. Yüzde doksan dokuz diyeyim. Dolayısıyla hız arttırılır diye bir seçenek olmaz trafikte ama hızın azaltılması gereken bir sürü yerler var."</em></p>
+</blockquote>
+<p><strong>Translation:</strong> If any multiple-choice answer says <em>"hız arttırılır"</em> (<strong>speed is increased</strong>) — it is <strong>wrong 99% of the time</strong>. The exam almost never rewards "speed up" as the correct action. The correct answer is always some form of <em>"hızı azaltır"</em> (slow down) or <em>"hızını aracın cinsine / yol-hava durumuna göre ayarlar"</em> (adjust speed to conditions).</p>
+<h3>Critical exam heuristic</h3>
+<blockquote>
+<p><strong>"Hız arttırılır" cevap şıkkı = %99 yanlış. Doğru cevap her zaman "hızı azaltır" veya "ayarlar" yönünde.</strong></p>
+</blockquote>
+<hr />
+<h2>3. The "yerleşim yeri içi = 50" rule (with its exceptions)</h2>
+<p>For most passenger-class vehicles, <strong>şehir içi hız sınırı 50 km/h</strong>'dir. The exceptions (all of them <strong>slower</strong>, not faster) are:</p>
+<table>
+<thead>
+<tr>
+<th>Vehicle</th>
+<th style="text-align: right;">Yer. içi limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Motorlu / motorsuz bisiklet</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>Tehlikeli madde taşıyan araç</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>Özel yük izin belgeli araç</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>Traktör</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Arızalı çeken araç</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>İş makinesi</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr>
+<td>Servis freni bozuk çeken</td>
+<td style="text-align: right;">15</td>
+</tr>
+</tbody>
+</table>
+<p>No vehicle is allowed <strong>faster than 50</strong> inside a yerleşim yeri unless a special sign permits it.</p>
+<hr />
+<h2>4. The otoyol exclusion list (who CANNOT enter)</h2>
+<p>Three categories are <strong>outright banned</strong> from motorways:</p>
+<ol>
+<li><strong>Motorlu bisiklet (moped) + motorsuz bisiklet</strong> — too slow and unprotected.</li>
+<li><strong>Lastik tekerlekli traktör</strong> — too slow, designed for field use.</li>
+<li><strong>İş makineleri</strong> — can only enter with explicit permission from the <strong>yolun yapım, bakım veya işletmesi</strong>.</li>
+</ol>
+<p>Everyone else has a numerical limit. <strong>Arızalı araçları çeken araçlar</strong> can enter the otoyol but only at 40 km/h.</p>
+<hr />
+<h2>5. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Otomobil ile yerleşim yeri dışı iki yönlü bir yolda azami hız kaçtır?"</strong> → <strong>90 km/h.</strong></li>
+<li><strong>"Otoyolda otomobil için azami hız?"</strong> → <strong>120 km/h.</strong></li>
+<li><strong>"Yerleşim yeri içinde otobüs için hız limiti?"</strong> → <strong>50 km/h</strong> (same as otomobil inside town).</li>
+<li><strong>"Otoyolda bisikletli biri ile karşılaşabilir misiniz?"</strong> → <strong>Hayır — bisikletler otoyola giremez.</strong></li>
+<li><strong>"Arızalı bir aracı çeken aracın yerleşim yeri dışı iki yönlü yolda azami hızı?"</strong> → <strong>20 km/h.</strong></li>
+<li><strong>"Panelvan otoyolda kaç km/h ile gidebilir?"</strong> → <strong>110 km/h</strong> (trap — higher than kamyonet 95).</li>
+<li><strong>"Tehlikeli madde taşıyan aracın bölünmüş yolda hızı?"</strong> → <strong>60 km/h.</strong></li>
+<li><strong>"Lastik tekerlekli traktör hangi yola giremez?"</strong> → <strong>Otoyola.</strong></li>
+<li><strong>"Servis freni bozuk aracı çeken araç için azami hız?"</strong> → <strong>15 km/h.</strong></li>
+<li><strong>"Motosiklet L3 ile otoyolda hız?"</strong> → <strong>100 km/h</strong> (aynı otobüs).</li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>Otomobil (M1): 50 – 90 – 110 – 120</strong> <em>(yerleşim içi / iki yönlü / bölünmüş / otoyol)</em></p>
+<p><strong>Minibüs, Otobüs, Motosiklet L3: 50 – 80 – 90 – 100</strong> <em>(aynı aile, üç araç sınıfı)</em></p>
+<p><strong>Kamyonet 50-80-85-95 ≠ Panelvan 50-85-100-110.</strong> <em>Panelvan hemen hemen otomobil hızında.</em></p>
+<p><strong>Kamyon / Çekici: 50 – 80 – 85 – 90.</strong></p>
+<p><strong>Bisiklet, moped, traktör OTOYOLA GİREMEZ. İş makinesi ancak izinle girer.</strong></p>
+<p><strong>Tehlikeli madde: 30 – 50 – 60 – 70.</strong> <em>(Ağır yük + risk → kamyondan daha yavaş.)</em></p>
+<p><strong>Arızalı çeken: 20 – 20 – 30 – 40.</strong> <em>(Yerleşim içi ve iki yönlü yol aynı: 20.)</em></p>
+<p><strong>Servis freni bozuk çeken: 15 – 15 – 15 – girmez.</strong></p>
+<p><strong>Yerleşim yeri içi = 50 km/h (çoğu araç için).</strong> İstisnalar hep daha yavaş (30 / 20 / 15), asla daha hızlı değil.</p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hız kuralları</td>
+<td>Speed rules</td>
+<td>This whole subject</td>
+</tr>
+<tr>
+<td>Azami hız</td>
+<td>Maximum speed</td>
+<td>Upper legal limit</td>
+</tr>
+<tr>
+<td>Araç cinsi</td>
+<td>Vehicle class</td>
+<td>Categories M1/M2/N1/L3 etc.</td>
+</tr>
+<tr>
+<td>Yerleşim yeri içi</td>
+<td>Inside inhabited area</td>
+<td>"In town"</td>
+</tr>
+<tr>
+<td>Yerleşim yeri dışı</td>
+<td>Outside inhabited area</td>
+<td>Intercity</td>
+</tr>
+<tr>
+<td>İki yönlü yol</td>
+<td>Two-way road</td>
+<td>Single carriageway, both directions</td>
+</tr>
+<tr>
+<td>Bölünmüş yol</td>
+<td>Divided road</td>
+<td>Physical median between directions</td>
+</tr>
+<tr>
+<td>Otoyol</td>
+<td>Motorway / expressway</td>
+<td>Highest road class</td>
+</tr>
+<tr>
+<td>Otomobil (M1)</td>
+<td>Automobile</td>
+<td>Passenger car up to 8+1 seats</td>
+</tr>
+<tr>
+<td>Minibüs (M2)</td>
+<td>Minibus</td>
+<td>9–17 seats</td>
+</tr>
+<tr>
+<td>Otobüs (M3)</td>
+<td>Bus</td>
+<td>17+ seats</td>
+</tr>
+<tr>
+<td>Kamyonet (N1)</td>
+<td>Light truck / pickup</td>
+<td>Goods vehicle ≤3.5 t, open bed</td>
+</tr>
+<tr>
+<td>Panelvan (N1)</td>
+<td>Panel van</td>
+<td>Enclosed light goods van ≤3.5 t</td>
+</tr>
+<tr>
+<td>Kamyon (N2/N3)</td>
+<td>Truck</td>
+<td>Medium/heavy goods vehicle</td>
+</tr>
+<tr>
+<td>Çekici (N2/N3)</td>
+<td>Tractor unit / semi-tractor</td>
+<td>Road tractor pulling a semi-trailer</td>
+</tr>
+<tr>
+<td>Motosiklet L3</td>
+<td>Motorcycle (standard 2-wheel)</td>
+<td>&gt;50 cm³, sepetsiz</td>
+</tr>
+<tr>
+<td>Motosiklet L4/L5/L7</td>
+<td>Motorcycle (sidecar / 3-wheel / 4-wheel / electric)</td>
+<td>Larger-footprint motorcycles</td>
+</tr>
+<tr>
+<td>Motorlu bisiklet</td>
+<td>Motorized bicycle / moped</td>
+<td>≤50 cm³ or ≤4 kW</td>
+</tr>
+<tr>
+<td>Motorsuz bisiklet</td>
+<td>Non-motorized bicycle</td>
+<td>Pedal bike</td>
+</tr>
+<tr>
+<td>Tehlikeli madde</td>
+<td>Dangerous goods</td>
+<td>Hazmat cargo (ADR)</td>
+</tr>
+<tr>
+<td>Özel yük taşıma izin belgesi</td>
+<td>Special cargo permit</td>
+<td>Oversized/abnormal load permit</td>
+</tr>
+<tr>
+<td>Lastik tekerlekli traktör</td>
+<td>Rubber-wheeled tractor</td>
+<td>Agricultural tractor</td>
+</tr>
+<tr>
+<td>Arızalı araç çekme</td>
+<td>Towing a broken vehicle</td>
+<td>Pulling a disabled vehicle</td>
+</tr>
+<tr>
+<td>İş makinesi</td>
+<td>Work machine</td>
+<td>Excavator, loader, forklift, etc.</td>
+</tr>
+<tr>
+<td>Servis freni</td>
+<td>Service brake</td>
+<td>Main foot brake</td>
+</tr>
+<tr>
+<td>Giremez</td>
+<td>Cannot enter</td>
+<td>Absolute prohibition from that road type</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li>Vehicle-class definitions (M1, N1, L3, etc. — seat and mass boundaries) → <a href="03-araç-tanımları.md">03-araç-tanımları.md</a></li>
+<li>Road-type definitions (yerleşim yeri, bölünmüş yol, otoyol) → <a href="02-karayolu-bölümleri.md">02-karayolu-bölümleri.md</a></li>
+<li>Speed-limit signs (azami hız, asgari hız, okul bölgesi) → <a href="08-trafik-tanzim-işaretleri-yasaklama.md">08-trafik-tanzim-işaretleri-yasaklama.md</a></li>
+<li>Karayolu kullanım kuralları (hız-appropriate lane rule) → <a href="14-karayolu-kullanım-kuralları.md">14-karayolu-kullanım-kuralları.md</a></li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yağlama Sistemi — Lubrication System | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 02-yağlama-sistemi</span>
+</div>
+<div class="content">
+<h1>Yağlama Sistemi — Lubrication System</h1>
+<p><strong>Last updated:</strong> 2026-04-13<br />
+<strong>Slides covered:</strong> Intro/görev, Başlıca parçaları (6 parts), Yağ çubuğu (dipstick usage)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Yağlama sistemi:</strong> Motorumuzdaki hareketli parçaların hareketlerini kolaylaştırmak, temizliğini sağlamak, soğutmasına yardımcı olmak ve aşınmalarını önlemek için, karterdeki yağı yağ pompası yardımıyla hareketli parçalara gönderen bir sistemdir.</p>
+</blockquote>
+<p>In plain English: the <strong>lubrication system</strong> uses the <strong>oil pump (yağ pompası)</strong> to send oil from the <strong>oil pan (karter)</strong> to the moving parts of the engine, in order to:</p>
+<ol>
+<li><strong>Kolaylaştırmak</strong> — facilitate their movement (reduce friction)</li>
+<li><strong>Temizliğini sağlamak</strong> — keep them clean (wash away metal particles, carbon)</li>
+<li><strong>Soğutmasına yardımcı olmak</strong> — help cool them (oil carries heat away)</li>
+<li><strong>Aşınmalarını önlemek</strong> — prevent wear (prevent metal-on-metal contact)</li>
+</ol>
+<p>These <strong>4 görev</strong> are heavily exam-tested. Memorize all four.</p>
+<hr />
+<h2>2. SLIDE 1 — Yağlama Sistemi: Intro</h2>
+<p><strong>Slide title:</strong> YAĞLAMA SİSTEMİ</p>
+<h3>What the slide showed</h3>
+<p>Engine illustration with these 4 bullet points on the left:<br />
+- Motorumuzdaki hareketli parçaların hareketlerini kolaylaştırmak<br />
+- Temizliğini sağlamak<br />
+- Soğutmasına yardımcı olmak<br />
+- Aşınmalarını önlemek<br />
+- "...için karterdeki yağı yağ pompası yardımıyla hareketli parçalara gönderen bir sistemdir"</p>
+<h3>Clean English explanation</h3>
+<p>Every time your engine runs, thousands of metal parts are sliding against each other at high speed — pistons in cylinders, camshaft lobes, bearings, valve stems. Without a thin film of oil between them, they'd grind themselves to dust in minutes.</p>
+<p>The lubrication system solves this by continuously pumping oil to every moving part. The oil does <strong>4 jobs at once</strong>: lubricate (kolaylaştırmak), clean (temizlemek), cool (soğutmak), and protect from wear (aşınmayı önlemek).</p>
+<p>The <strong>oil pump (yağ pompası)</strong> is the heart of the system — it's what pressurizes the oil and pushes it up from the karter to wherever it's needed.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>The lubrication system has <strong>4 görev</strong>: kolaylaştırmak, temizliğini sağlamak, soğutmaya yardımcı olmak, aşınmalarını önlemek.</p>
+</blockquote>
+<hr />
+<h2>3. SLIDE 2 — Başlıca Parçaları (Main Parts)</h2>
+<p><strong>Slide title:</strong> BAŞLICA PARÇALARI</p>
+<h3>What the slide showed</h3>
+<p>A list of 6 main components:<br />
+- KARTER<br />
+- YAĞ POMPASI<br />
+- YAĞ FİLTRESİ<br />
+- YAĞ ÇUBUĞU<br />
+- YAĞ BASINÇ GÖSTERGESİ<br />
+- YAĞ MÜŞÜRÜ</p>
+<h3>The 6 parts explained</h3>
+<h4>1. <strong>KARTER</strong> — Oil Pan / Crankcase</h4>
+<p>The metal "bowl" at the bottom of the engine that <strong>stores the engine oil</strong>. Think of it as the oil reservoir. When the engine is off, all the oil drains down and sits in here. The yağ pompası draws oil from the karter.</p>
+<h4>2. <strong>YAĞ POMPASI</strong> — Oil Pump</h4>
+<p>The <strong>pump</strong> that pulls oil from the karter and pushes it under pressure to all moving parts. Without it, oil would just sit in the pan and nothing would be lubricated. It's the one active component — everything else is passive plumbing, sensors, or gauges.</p>
+<h4>3. <strong>YAĞ FİLTRESİ</strong> — Oil Filter</h4>
+<p><strong>Cleans the oil</strong> as it circulates. Catches metal particles, carbon, and dirt so contaminated oil doesn't damage bearings and cylinder walls. Must be <strong>replaced periodically</strong> (usually with every oil change — around every 10–15,000 km).</p>
+<h4>4. <strong>YAĞ ÇUBUĞU</strong> — Oil Dipstick</h4>
+<p>The <strong>stick you pull out</strong> to check how much oil is in the engine. Has MIN and MAX marks near the bottom. See <strong>Slide 3</strong> below for full details on how to use it — this is heavily exam-tested.</p>
+<h4>5. <strong>YAĞ BASINÇ GÖSTERGESİ</strong> — Oil Pressure Gauge</h4>
+<p>The <strong>dashboard warning light / gauge</strong> that tells you if oil pressure is OK. If it lights up red while driving → <strong>stop the car immediately</strong>. An engine running without oil pressure can seize (permanent damage) within minutes.</p>
+<h4>6. <strong>YAĞ MÜŞÜRÜ</strong> — Oil Pressure Sender / Sensor</h4>
+<p>The <strong>sensor</strong> that measures the actual oil pressure in the engine and sends that signal to the dashboard gauge (#5). It's the "eyes" that feed data to the gauge. Together, #5 and #6 are the driver's only warning that the oil system is failing.</p>
+<h3>Exam trap</h3>
+<p>A classic question: <em>"Aşağıdakilerden hangisi yağlama sisteminin parçası değildir?"</em> (Which is NOT a part of the lubrication system?) — the distractor will be something like <strong>karbüratör, buji, radyatör, alternatör, enjektör</strong>. Make sure you can recognize the 6 yağlama parts above vs. parts from other systems.</p>
+<hr />
+<h2>4. SLIDE 3 — Yağ Çubuğu (Dipstick Usage)</h2>
+<p><strong>Slide content:</strong></p>
+<blockquote>
+<p><em>"Yağ çubuğu silindir bloğu üzerinde olup kartere kadar uzanır. Yağ seviyesi çubuk üzerinde MAX ve MİN işareti arasında olmalıdır. Seviye kontrolleri yapılırken araç düz bir zeminde bulunmalıdır."</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>The <strong>yağ çubuğu (dipstick)</strong> is a long metal rod that:<br />
+- Sits on top of the <strong>silindir bloğu</strong> (cylinder block — the main engine body)<br />
+- <strong>Extends all the way down into the karter</strong> (oil pan)<br />
+- Has two marks near the bottom: <strong>MİN</strong> (minimum) and <strong>MAX</strong> (maximum)</p>
+<h3>Correct procedure for checking oil level</h3>
+<ol>
+<li>Park the car on <strong>flat, level ground</strong> (düz zemin) — otherwise the reading is wrong</li>
+<li>Turn the engine <strong>off</strong>, wait about a minute so all the oil settles back into the karter</li>
+<li><strong>Pull the dipstick out</strong> and wipe it clean with a cloth</li>
+<li><strong>Push it fully back in</strong>, then pull it out again</li>
+<li>Look at the oil film on the tip — the level must be <strong>between MİN and MAX</strong></li>
+</ol>
+<h3>The 3 scenarios (shown as a column of 3 dipsticks on the slide)</h3>
+<table>
+<thead>
+<tr>
+<th>Reading</th>
+<th>State</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong> — above MAX</td>
+<td>Too much oil</td>
+<td>Bad — can cause oil foaming, seal damage, high pressure problems</td>
+</tr>
+<tr>
+<td><strong>B</strong> — between MİN and MAX</td>
+<td>✅ Correct</td>
+<td>Everything fine</td>
+</tr>
+<tr>
+<td>Below MİN</td>
+<td>Too little oil</td>
+<td>Bad — engine wear, overheating, potential seizure. Add oil.</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>The oil level must be checked on FLAT ground (düz zeminde).</strong><br />
+<strong>The oil level is checked WITH THE DIPSTICK (yağ çubuğu ile).</strong><br />
+<strong>The oil level must be BETWEEN MİN and MAX (MİN ile MAX arasında).</strong></p>
+</blockquote>
+<p>All three are separately testable facts. Expect at least one of them on your exam.</p>
+<h3>Hoca's live class additions (2026-04-13)</h3>
+<p><strong>(A) Wait for the oil to drain back before reading</strong></p>
+<p>If the engine was just running, <strong>don't check the oil level immediately</strong>. Turn the engine off and <strong>wait</strong> — the oil clinging to the moving parts (pistons, valves, camshaft) needs time to <strong>drain back (süzülmek) into the karter</strong>. Otherwise the dipstick reads artificially low because a lot of oil is still up in the engine, not down in the pan.</p>
+<p>Hoca's analogy:</p>
+<blockquote>
+<p><em>"Eve yağ alırız, bidonda biraz yağ kalır. Bunu yağ yatırır biraz, bekleriz değil mi? Azıcık süzülsün deriz. Aynı onun gibi düşünebilirsiniz — hareketli parçalardaki yağın süzülmesini bekleyeceğiz."</em><br />
+(When you pour cooking oil, you wait for the last drops to trickle down. Same idea — wait for the oil on the engine's moving parts to drain back down.)</p>
+</blockquote>
+<p><strong>(B) Aim for the middle of the stick, not just "above MIN"</strong></p>
+<p>The textbook rule is "anywhere between MIN and MAX." In practice the hoca recommends:</p>
+<blockquote>
+<p><em>"Çubuğun yarısından, yarısından birazcık altına kadar yağımız varsa idare eder ama asla minimuma kadar olmaması lazım."</em><br />
+(If the oil is at <strong>half the stick or slightly below half</strong>, it's fine — but it should <strong>never</strong> drop down to MIN.)</p>
+</blockquote>
+<p>Target the <strong>middle</strong> of the MIN–MAX window, not the bottom edge. If you're at or near MIN, add oil immediately.</p>
+<hr />
+<h2>5. Memorize These (Lubrication System)</h2>
+<blockquote>
+<p><strong>Yağlama sisteminin görevi:</strong> Motorumuzdaki hareketli parçaların hareketlerini kolaylaştırmak, temizliğini sağlamak, soğutmasına yardımcı olmak ve aşınmalarını önlemektir.<br />
+<em>(The job of the lubrication system is to facilitate, clean, cool, and prevent wear on the engine's moving parts.)</em></p>
+<p><strong>Yağlama sisteminin parçaları:</strong> Karter, yağ pompası, yağ filtresi, yağ çubuğu, yağ basınç göstergesi, yağ müşürü.<br />
+<em>(The parts are: oil pan, oil pump, oil filter, dipstick, pressure gauge, pressure sender.)</em></p>
+<p><strong>Yağ seviyesi kontrolü, düz zeminde, yağ çubuğu ile, MİN ile MAX arasında olacak şekilde yapılır.</strong><br />
+<em>(The oil level is checked on flat ground, with the dipstick, and must read between MIN and MAX.)</em></p>
+</blockquote>
+<hr />
+<h2>6. Consolidated Exam Vocabulary — Lubrication System</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yağlama sistemi</td>
+<td>Lubrication system</td>
+<td>The whole system</td>
+</tr>
+<tr>
+<td>Yağ</td>
+<td>Oil</td>
+<td>Engine oil</td>
+</tr>
+<tr>
+<td>Motor yağı</td>
+<td>Engine oil</td>
+<td>Explicit form</td>
+</tr>
+<tr>
+<td>Yağ pompası</td>
+<td>Oil pump</td>
+<td>Pressurizes and circulates the oil</td>
+</tr>
+<tr>
+<td>Karter</td>
+<td>Oil pan / crankcase</td>
+<td>The oil storage reservoir</td>
+</tr>
+<tr>
+<td>Yağ filtresi</td>
+<td>Oil filter</td>
+<td>Cleans the oil</td>
+</tr>
+<tr>
+<td>Yağ çubuğu</td>
+<td>Oil dipstick</td>
+<td>Measuring rod for oil level</td>
+</tr>
+<tr>
+<td>Yağ basınç göstergesi</td>
+<td>Oil pressure gauge</td>
+<td>Dashboard indicator</td>
+</tr>
+<tr>
+<td>Yağ müşürü</td>
+<td>Oil pressure sender / sensor</td>
+<td>Feeds data to the gauge</td>
+</tr>
+<tr>
+<td>Hareketli parçalar</td>
+<td>Moving parts</td>
+<td>Pistons, valves, bearings, etc.</td>
+</tr>
+<tr>
+<td>Hareket</td>
+<td>Movement</td>
+<td>As in "moving parts"</td>
+</tr>
+<tr>
+<td>Kolaylaştırmak</td>
+<td>To facilitate / make easier</td>
+<td>Job #1</td>
+</tr>
+<tr>
+<td>Temizlik</td>
+<td>Cleanliness</td>
+<td>"Temizliğini sağlamak"</td>
+</tr>
+<tr>
+<td>Temizliğini sağlamak</td>
+<td>To keep clean</td>
+<td>Job #2</td>
+</tr>
+<tr>
+<td>Soğutma</td>
+<td>Cooling</td>
+<td></td>
+</tr>
+<tr>
+<td>Soğutmaya yardımcı olmak</td>
+<td>To help cool</td>
+<td>Job #3</td>
+</tr>
+<tr>
+<td>Aşınma</td>
+<td>Wear</td>
+<td>Metal wearing down</td>
+</tr>
+<tr>
+<td>Aşınmaları önlemek</td>
+<td>To prevent wear</td>
+<td>Job #4</td>
+</tr>
+<tr>
+<td>Önlemek</td>
+<td>To prevent</td>
+<td>Key verb</td>
+</tr>
+<tr>
+<td>Silindir bloğu</td>
+<td>Cylinder block</td>
+<td>Main engine body</td>
+</tr>
+<tr>
+<td>Üzerinde</td>
+<td>On top of</td>
+<td>"bloğun üzerinde"</td>
+</tr>
+<tr>
+<td>Uzanmak</td>
+<td>To extend / stretch</td>
+<td>"kartere kadar uzanır"</td>
+</tr>
+<tr>
+<td>Kartere kadar</td>
+<td>Down to the oil pan</td>
+<td>Extent marker</td>
+</tr>
+<tr>
+<td>Yağ seviyesi</td>
+<td>Oil level</td>
+<td>How much oil there is</td>
+</tr>
+<tr>
+<td>Seviye</td>
+<td>Level</td>
+<td>Generic "level"</td>
+</tr>
+<tr>
+<td>MAX (maksimum)</td>
+<td>Max / maximum</td>
+<td>Upper mark on dipstick</td>
+</tr>
+<tr>
+<td>MİN (minimum)</td>
+<td>Min / minimum</td>
+<td>Lower mark on dipstick</td>
+</tr>
+<tr>
+<td>İşaret</td>
+<td>Mark / indicator</td>
+<td>The MIN / MAX marks</td>
+</tr>
+<tr>
+<td>Arasında</td>
+<td>Between</td>
+<td>"MİN ile MAX arasında"</td>
+</tr>
+<tr>
+<td>Olmalıdır</td>
+<td>Must be</td>
+<td>Exam's favorite verb ending</td>
+</tr>
+<tr>
+<td>Bulunmalıdır</td>
+<td>Must be (located)</td>
+<td>Same concept, different verb</td>
+</tr>
+<tr>
+<td>Kontrol</td>
+<td>Check</td>
+<td>Inspection</td>
+</tr>
+<tr>
+<td>Kontrol etmek</td>
+<td>To check</td>
+<td>Verb form</td>
+</tr>
+<tr>
+<td>Kontrolleri yapılırken</td>
+<td>When doing the checks</td>
+<td>"While checking"</td>
+</tr>
+<tr>
+<td>Düz zemin</td>
+<td>Flat / level ground</td>
+<td>Where the car must be parked for checks</td>
+</tr>
+<tr>
+<td>Araç</td>
+<td>Vehicle</td>
+<td>The car</td>
+</tr>
+<tr>
+<td>Fazla</td>
+<td>Too much / excess</td>
+<td>Over-max oil</td>
+</tr>
+<tr>
+<td>Az</td>
+<td>Too little</td>
+<td>Under-min oil</td>
+</tr>
+<tr>
+<td>Belirli kilometrelerde</td>
+<td>At certain mileages</td>
+<td>When to replace filters</td>
+</tr>
+<tr>
+<td>Değiştirilmek</td>
+<td>To be replaced</td>
+<td>Passive form</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. Cross-references</h2>
+<ul>
+<li>Don't confuse with <a href="01-yakıt-sistemi.md">01-yakıt-sistemi.md</a> — yakıt deposu vs yağ karteri are different reservoirs for different fluids</li>
+<li>The <strong>dashboard oil pressure light</strong> complements the <strong>şarj lambası</strong> (charge light) from <a href="04-şarj-sistemi.md">04-şarj-sistemi.md</a> — both are critical engine warning lights that require immediate action if lit while driving</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

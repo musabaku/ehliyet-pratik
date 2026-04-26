@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ekonomik Araç Kullanma — Fuel-Efficient Driving | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 13-ekonomik-araç-kullanma</span>
+</div>
+<div class="content">
+<h1>Ekonomik Araç Kullanma — Fuel-Efficient Driving</h1>
+<p><strong>Last updated:</strong> 2026-04-14 (class 2)<br />
+<strong>Covered in class:</strong> Araçtan kaynaklanan kusurlar (slide 1), Sürücüden kaynaklanan kusurlar (slide 2), Ekonomik sürüş için alınacak önlemler (slide 3), Araçta yakıt tasarrufu 8-item checklist (slide 4), Closing ekonomik sürüş tips — 90 km/h + kaliteli yakıt + dolu depo (slide 5 — FINAL SLIDE OF THE CLASS)</p>
+<hr />
+<h2>1. Overview — What is "ekonomik sürüş"?</h2>
+<p><strong>Ekonomik sürüş (fuel-efficient driving)</strong> is about <strong>minimizing fuel consumption</strong> (yakıt tüketimi) without sacrificing safety or vehicle lifespan. The Turkish MEB curriculum treats this as its own subject (<strong>Ekonomik Araç Kullanma</strong> — Araç Tekniği Bilgisi subject 4/6) because fuel is expensive, fuel efficiency affects both your wallet AND the environment (emissions), and most drivers significantly over-consume fuel due to <strong>bad habits</strong> and <strong>poor vehicle maintenance</strong>.</p>
+<p><strong>The core insight:</strong> fuel consumption is determined by two things:</p>
+<ol>
+<li><strong>The car</strong> — how efficiently the engine, fuel system, and aerodynamics work</li>
+<li><strong>The driver</strong> — how the car is operated (shifting, braking, accelerating, speed)</li>
+</ol>
+<p>Fix either one and you save fuel. Fix both and you can cut fuel consumption by <strong>30–40%</strong> compared to a poorly-maintained car with a careless driver.</p>
+<p>Reference: <a href="../../e-kitap/03-araç-tekniği/04-ekonomik-arac-kullanma.md">e-kitap/03-araç-tekniği/04-ekonomik-arac-kullanma.md</a> — the portal's dedicated subject on this topic.</p>
+<hr />
+<h2>2. SLIDE 1 — Araçtan Kaynaklanan Kusurlar (Vehicle-Side Causes of High Fuel Consumption)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"Aracın fazla yakıt yakmasının nedenleri"</strong> (Reasons a vehicle burns excess fuel). Subtitle: <strong>"Araçtan kaynaklanan kusurlar"</strong> (Vehicle-related faults). A bulleted list of <strong>9 mechanical/maintenance faults</strong> that cause fuel wastage.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Aracın fazla yakıt yakmasının nedenleri</strong><br />
+Taşıtlarda fazla yakıt sarfiyatına yol açan nedenler aşağıdaki iki grup altında toplanabilir.</p>
+<p><strong>Araçtan kaynaklanan kusurlar:</strong><br />
+- Karbüratörün bakımsız ve eski olması.<br />
+- Bujilerin bozuk ve ayarsız olmasından dolayı ateşlemeyi düzgün yapamaması.<br />
+- Lastik hava basıncının az olmasından dolayı sürtünmenin artması.<br />
+- Fren ayarının bozuk olması (sıkı olması).<br />
+- Hava filtresinin tıkalı olması.<br />
+- Distribütör platin ayarının katalog değerinde olmaması.<br />
+- Akümülatör ve bağlantı kablolarının bozuk olması.<br />
+- Rölanti devrinin katalog değerinde olmaması.<br />
+- Debriyajın kaçırması.</p>
+</blockquote>
+<h3>The 9 vehicle-side faults that waste fuel</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Why it wastes fuel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Karbüratörün bakımsız ve eski olması</strong></td>
+<td>Worn / un-serviced <strong>carburetor</strong></td>
+<td>Wrong fuel/air mixture → engine runs rich → excess fuel burned</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Bujilerin bozuk ve ayarsız olması</strong></td>
+<td>Faulty / mis-gapped <strong>spark plugs</strong></td>
+<td>Weak or delayed ignition → incomplete combustion → wasted fuel + lost power</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Lastik hava basıncının az olması</strong></td>
+<td>Under-inflated <strong>tires</strong></td>
+<td>Increased rolling resistance → engine works harder to maintain speed → more fuel used</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Fren ayarının sıkı olması</strong></td>
+<td>Over-tight brake adjustment</td>
+<td>Brakes constantly dragging → engine fights against constant friction → see <a href="09-fren-sistemi.md">09-fren-sistemi.md</a> slide 3 fault 3</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Hava filtresinin tıkalı olması</strong></td>
+<td>Clogged <strong>air filter</strong></td>
+<td>Engine starves for air → runs rich → wastes fuel, loses power</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Distribütör platin ayarının katalog değerinde olmaması</strong></td>
+<td>Distributor points mis-adjusted</td>
+<td>Ignition timing off → engine runs inefficiently</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Akümülatör ve bağlantı kablolarının bozuk olması</strong></td>
+<td>Faulty <strong>battery / cables</strong></td>
+<td>Weak electrical feed → weak sparks → poor combustion</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Rölanti devrinin katalog değerinde olmaması</strong></td>
+<td>Idle RPM set incorrectly</td>
+<td>Idling too high → wastes fuel at every stop</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Debriyajın kaçırması</strong></td>
+<td><strong>Clutch slipping</strong></td>
+<td>Engine power doesn't fully reach wheels → have to press gas more for same speed</td>
+</tr>
+</tbody>
+</table>
+<h3>Key terms explained</h3>
+<p><strong>Rölanti (idle):</strong> the engine's running speed when no gas is applied — typically 700–900 RPM for modern cars. If this is set too high (e.g., 1500 RPM), the engine is <strong>constantly burning fuel at a higher rate</strong> even when the car is sitting still.</p>
+<p><strong>Distribütör platin:</strong> an old-school ignition component (points-based distributor) that times the spark. Found on older cars; modern cars use electronic ignition. Still on the exam because older cars are still common.</p>
+<p><strong>Debriyaj kaçırması (clutch slipping):</strong> when the clutch is worn out, it no longer fully grips — so even when the pedal is fully released, some engine power is <strong>lost as heat</strong> in the clutch plate instead of being delivered to the wheels. You feel it as the engine revving but the car not accelerating proportionally.</p>
+<p><strong>Karbüratör:</strong> an older mechanical fuel-air mixing device. Modern cars use <strong>fuel injection (enjektör)</strong> instead. The exam still references karbüratör because the curriculum is old.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Aracın fazla yakıt yakmasının araçtan kaynaklanan 9 nedeni:</strong> karbüratör, bujiler, lastik basıncı, fren ayarı, hava filtresi, distribütör platin, akü/kablolar, rölanti devri, debriyaj kaçırması.</p>
+</blockquote>
+<hr />
+<h2>3. SLIDE 2 — Sürücüden Kaynaklanan Kusurlar (Driver-Side Causes)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"Sürücüden kaynaklanan kusurlar"</strong> (Driver-related faults). A bulleted list of <strong>6 habits</strong> that waste fuel, plus a transition line to the "yakıt tasarrufu için neler yapılmalıdır" (fuel-saving tips) section.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Sürücüden kaynaklanan kusurlar:</strong><br />
+- <strong>Düşük vitesle seyretmek</strong> (motoru yüksek devirde tutmak)<br />
+- <strong>Şehir içerisinde yapılan duraklamalarda motoru kapatarak, tekrar çalıştırmak</strong><br />
+- <strong>Aniden hızlanmak, gereksiz yere fren yapmak, marşa gereğinden fazla basarak motoru boğmak</strong><br />
+- <strong>Klimanın bilinçsiz kullanılması</strong><br />
+- <strong>Arabayı çalıştırırken gaza basmak</strong><br />
+- <strong>Yakıt tasarrufu için neler yapılmalıdır</strong></p>
+<p><strong>Driver-related faults:</strong><br />
+- <strong>Driving in a low gear</strong> (keeping the engine at high RPM)<br />
+- <strong>In city stops, turning the engine off and restarting it</strong> (thinking this saves fuel)<br />
+- <strong>Sudden acceleration, unnecessary braking, over-cranking the starter and flooding the engine</strong><br />
+- <strong>Using the A/C carelessly / unconsciously</strong><br />
+- <strong>Pressing the gas while starting the engine</strong><br />
+- <strong>What should be done for fuel savings</strong></p>
+</blockquote>
+<h3>The 5 driver-side faults — detail</h3>
+<h4>1. Düşük vitesle seyretmek (driving in a low gear)</h4>
+<p><strong>Plain English:</strong> Staying in 1st or 2nd gear when you should be in 3rd, 4th, or 5th. The engine is running at <strong>too high an RPM for the speed</strong>, which means:</p>
+<ul>
+<li>More fuel per second is being burned</li>
+<li>The engine is straining / screaming</li>
+<li>Premature engine wear</li>
+</ul>
+<p><strong>The fix:</strong> shift up promptly. See <a href="08-güç-aktarma-organları.md">08-güç-aktarma-organları.md</a> section 2E for the correct 0-20 / 20-40 / 40-60 / 60-80 / 80+ km/h gear speed ranges.</p>
+<p><strong>Exam trigger:</strong> <em>"Düşük viteste seyretmek yakıta etkisi nedir?"</em> → <strong>Yakıt tüketimini artırır.</strong></p>
+<hr />
+<h4>2. Turning the engine off at every city stop</h4>
+<p><strong>Plain English:</strong> Counter-intuitive but <strong>important</strong>: some drivers think that <strong>turning off the engine at every red light or short stop</strong> saves fuel. It does NOT — it actually <strong>wastes fuel</strong> because:</p>
+<ul>
+<li>Restarting the engine takes a <strong>burst of fuel</strong> (enrichment for cold start)</li>
+<li>The marş motoru draws energy from the akü, which then has to be re-charged by the engine running harder</li>
+<li>Stop-start cycles are harder on the starter and battery than just idling</li>
+</ul>
+<p><strong>Modern note:</strong> many new cars have <strong>start-stop sistemi</strong> (automatic start-stop at red lights) — this IS efficient because it's computer-controlled and optimized. But <strong>manually</strong> cycling the ignition off-on is not.</p>
+<p><strong>The exam rule:</strong> don't manually stop/start the engine at short city stops. Let it idle.</p>
+<hr />
+<h4>3. Sudden acceleration + unnecessary braking + over-cranking</h4>
+<p>Three related habits:</p>
+<h5>Aniden hızlanmak (sudden acceleration)</h5>
+<p>Flooring the gas pedal causes the fuel-air mixture to go <strong>rich</strong> (more fuel than air), which wastes fuel AND produces <strong>excess emissions</strong>. Gentle, progressive acceleration uses less fuel for the same end speed.</p>
+<p><strong>The habit to build:</strong> accelerate as if there's an egg between your foot and the gas pedal. Gentle, smooth.</p>
+<h5>Gereksiz yere fren yapmak (unnecessary braking)</h5>
+<p>Every time you brake, you're <strong>throwing away kinetic energy as heat</strong>. The energy you burned fuel to create is being dissipated at the brake disc. Then you have to burn more fuel to re-accelerate. Unnecessary braking = double waste.</p>
+<p><strong>The habit to build:</strong> <strong>look ahead</strong> and anticipate. If you see a red light 300 m away, lift off the gas instead of racing up to it and braking hard.</p>
+<h5>Marşa gereğinden fazla basarak motoru boğmak (over-cranking → flooding the engine)</h5>
+<p>When you crank the starter for too long on a reluctant engine, the engine becomes <strong>boğulmuş (flooded)</strong> — the cylinders fill with too much fuel relative to air, and the spark plugs can't ignite the over-rich mixture. You waste <strong>fuel + battery power + starter motor life</strong>.</p>
+<p><strong>The rule (from <a href="03-marş-sistemi.md">03-marş-sistemi.md</a>):</strong> never crank for more than <strong>10–15 saniye</strong> continuously. If the engine doesn't start in that time, <strong>release the key, wait 30 seconds, and try again</strong>. If it still won't start, there's a real problem — don't just keep cranking.</p>
+<hr />
+<h4>4. Klimanın bilinçsiz kullanılması (careless A/C use)</h4>
+<p><strong>Plain English:</strong> The A/C compressor is <strong>driven by the engine</strong> — it adds load, and therefore <strong>increases fuel consumption</strong>. The penalty is real:</p>
+<ul>
+<li>Running the A/C at city speeds can increase fuel consumption by <strong>10–20%</strong></li>
+<li>At highway speeds, A/C is cheaper than driving with windows open (aerodynamic drag penalty of open windows is worse)</li>
+</ul>
+<p><strong>The rules for smart A/C use:</strong><br />
+- <strong>Don't leave the A/C on all the time</strong> — turn it off when you don't need it<br />
+- <strong>Park in shade</strong> so the cabin isn't hot to start with<br />
+- <strong>Open windows for the first minute</strong> to flush out hot air before turning on A/C<br />
+- <strong>Recirculation mode (iç hava dolaşımı)</strong> is slightly more efficient than fresh air mode<br />
+- <strong>At city speeds (below 60 km/h)</strong>, windows open is fine<br />
+- <strong>At highway speeds (above 80 km/h)</strong>, A/C + windows closed is more efficient</p>
+<hr />
+<h4>5. Arabayı çalıştırırken gaza basmak (pressing the gas while starting)</h4>
+<p><strong>Plain English:</strong> Some drivers <strong>press the gas pedal while cranking the starter</strong>, thinking this helps the car start. On <strong>modern fuel-injected cars</strong>, this is <strong>wrong</strong> and wastes fuel — the ECU is already delivering the correct starting mixture, and adding throttle just pumps extra fuel into the cylinders unnecessarily.</p>
+<p><strong>On older carbureted cars</strong>, a brief tap of the gas pedal to prime the carb was sometimes needed, but it's obsolete on modern cars.</p>
+<p><strong>The rule:</strong> <strong>don't touch the gas pedal while starting the engine</strong>. Just turn the key and wait for it to start. If it won't start, investigate — don't pump the pedal.</p>
+<hr />
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Aracın fazla yakıt yakmasının sürücüden kaynaklanan nedenleri:</strong> düşük vitesle seyretme, gereksiz motor kapat-aç, ani hızlanma, gereksiz fren, gereğinden fazla marşa basma, bilinçsiz klima kullanımı, marş sırasında gaza basma.</p>
+</blockquote>
+<hr />
+<h2>4. SLIDE 3 — Ekonomik Sürüş İçin Alınacak Önlemler (Fuel-Saving Measures)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"Ekonomik sürüş için alınacak önlemler"</strong> (Measures for fuel-efficient driving). Subtitle: <strong>"İşte az yakıtı an önlemler"</strong> (Here are the fuel-saving measures). A bulleted list of <strong>7 concrete habits</strong> to minimize fuel consumption.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Ekonomik sürüş için alınacak önlemler</strong></p>
+<ul>
+<li>Zorunlu olmadıkça otomobiliniz <strong>2000-3000 devir aralığında</strong> kullanın.</li>
+<li>Hep <strong>yeşil ışıklarda</strong> geçmek, kırmızıya yakalanıp ışık kentlerdeki <strong>yeşil dalga hizasına</strong> dikkat edin.</li>
+<li><strong>Çok uzun süre yanan kırmızı ışıklarda</strong> kesinlikle <strong>motoru stop etmeyin</strong>.</li>
+<li>Otomobilinizin bagajında <strong>gereksiz yükler bulundurmayın</strong>.</li>
+<li>Şehir içinde, <strong>kırmızı ışık görür görmez gazdan ayağınızı çekin</strong> ve aracınız momentum ile yaklaşsın.</li>
+<li><strong>Motoru tam ısınmadan</strong> aracınızı yola çıkarmayın.</li>
+<li><strong>Yüksek hızda pencere camları açık seyretmeyin</strong> (aerodinamik kayıpları).</li>
+</ul>
+</blockquote>
+<h3>The 7 fuel-saving habits</h3>
+<h4>1. Keep the engine in the 2000–3000 RPM range</h4>
+<blockquote>
+<p><strong>Zorunlu olmadıkça otomobiliniz 2000-3000 devir aralığında kullanın.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> Modern gasoline engines are most efficient around <strong>2000-3000 RPM</strong>. Below that, the engine is <strong>lugging</strong> (struggling at low RPM) and above that, it's burning fuel inefficiently. Shift up or down to keep the RPM in this sweet spot during normal driving.</p>
+<p><strong>Exam-ready fact:</strong> the <strong>ideal ekonomik sürüş RPM range is 2000–3000 RPM</strong>.</p>
+<hr />
+<h4>2. Try to hit green lights / follow the "yeşil dalga" (green wave)</h4>
+<p><strong>Plain English:</strong> In modern cities, many traffic lights are <strong>synchronized</strong> to create a <strong>yeşil dalga (green wave)</strong> — if you drive at the recommended speed (usually 50 km/h), you hit green lights one after another without stopping. <strong>Every avoided red light = no stop-and-start fuel waste.</strong> Pay attention to the timing patterns in your city.</p>
+<hr />
+<h4>3. Don't stop the engine at long red lights</h4>
+<blockquote>
+<p><strong>Çok uzun süre yanan kırmızı ışıklarda kesinlikle motoru stop etmeyin.</strong></p>
+</blockquote>
+<p><strong>This is the same rule as slide 2, driver fault #2</strong> — restating the point. <strong>Don't manually cycle the ignition off/on</strong>, it wastes more fuel than it saves.</p>
+<hr />
+<h4>4. Don't carry unnecessary weight in the trunk</h4>
+<blockquote>
+<p><strong>Otomobilinizin bagajında gereksiz yükler bulundurmayın.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> Every kilo of extra weight means the engine has to <strong>work harder</strong> to accelerate the car. If you're driving around with <strong>50 kg of junk in the trunk</strong> that doesn't need to be there, you're burning <strong>~3–5% extra fuel</strong> constantly.</p>
+<p><strong>Rule:</strong> clean out your trunk regularly. Keep only essentials: yedek lastik, kriko, bijon anahtarı, ilk yardım çantası, reflektör, yangın söndürücü, yedek ampul. Everything else comes out.</p>
+<hr />
+<h4>5. Lift off the gas the moment you see a red light ahead</h4>
+<blockquote>
+<p><strong>Kırmızı ışık görür görmez gazdan ayağınızı çekin ve aracınız momentum ile yaklaşsın.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> The <strong>single biggest ekonomik sürüş habit</strong> is: <strong>anticipate stops</strong> and <strong>coast (engine braking)</strong> toward them instead of continuing at full speed and then braking hard.</p>
+<p><strong>When you lift off the gas:</strong><br />
+- The engine stops injecting fuel (or injects very little)<br />
+- The car <strong>coasts</strong> forward using its momentum<br />
+- The engine braking slowly reduces speed<br />
+- You arrive at the red light at a low speed<br />
+- Minimal (or no) actual brake pedal needed</p>
+<p><strong>Compare to the wasteful way:</strong><br />
+- Keep the gas on until close to the light<br />
+- Stomp on the brake at the last moment<br />
+- Throw away all the kinetic energy as brake heat<br />
+- Start from zero on green, burning a lot of fuel to re-accelerate</p>
+<p><strong>Exam angle:</strong> look-ahead driving is the key habit that separates efficient drivers from fuel-wasting drivers.</p>
+<hr />
+<h4>6. Don't drive off before the engine is warmed up</h4>
+<blockquote>
+<p><strong>Motoru tam ısınmadan aracınızı yola çıkarmayın.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> A <strong>cold engine</strong> runs <strong>rich</strong> (extra fuel) for its first minute or two, because cold oil has high viscosity and the fuel doesn't atomize well. During this warm-up period, <strong>fuel consumption is 30-50% higher than normal</strong>. If you drive off aggressively while the engine is cold, you:</p>
+<ul>
+<li>Burn much more fuel than normal</li>
+<li>Cause premature engine wear (cold oil isn't flowing properly)</li>
+<li>Produce more emissions</li>
+</ul>
+<p><strong>The rule:</strong> let the engine idle for <strong>30 sn – 1 dk</strong> (see <a href="12-güvenli-araç-kullanma.md">12-güvenli-araç-kullanma.md</a> slide 11 on the warm-up rule), or at least <strong>drive very gently</strong> for the first 2 minutes until the engine is at operating temperature.</p>
+<p><strong>In winter:</strong> the warm-up period is longer, up to 2–3 minutes. Don't rush it.</p>
+<hr />
+<h4>7. Don't drive at high speed with windows open</h4>
+<blockquote>
+<p><strong>Yüksek hızda pencere camları açık seyretmeyin</strong> (aerodynamik kayıpları).</p>
+</blockquote>
+<p><strong>Plain English:</strong> At speeds above <strong>~80 km/h</strong>, <strong>open windows create significant aerodynamic drag</strong> — the wind rushes into the cabin and pushes against the inside of the car. This drag can increase fuel consumption by <strong>5–10%</strong> at highway speeds.</p>
+<p><strong>The rule:</strong><br />
+- <strong>City speeds (below 60 km/h)</strong> → open windows is fine (A/C penalty is higher)<br />
+- <strong>Highway speeds (above 80 km/h)</strong> → close windows, use A/C (A/C penalty is lower than drag penalty)</p>
+<p><strong>The crossover point is around 60-80 km/h.</strong> Below that, windows open; above that, windows closed + A/C if needed.</p>
+<hr />
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Ekonomik sürüş devir aralığı:</strong> <strong>2000-3000 devir</strong>.</p>
+<p><strong>Ekonomik sürüş altın kuralı:</strong> önceden görüp gazdan ayağını çek (look-ahead driving + coasting).</p>
+<p><strong>Yüksek hızda pencereler kapalı, A/C açık</strong> (aerodynamic drag &gt; A/C penalty above ~80 km/h).</p>
+</blockquote>
+<hr />
+<h2>5. SLIDE 4 — ARAÇTA YAKIT TASARRUFU (Fuel-Saving Checklist — 8 Items)</h2>
+<h3>What the slide showed</h3>
+<p>Title: <strong>"ARAÇTA YAKIT TASARRUFU"</strong>. A header <strong>"Yakıt tasarrufu sağlamak için şunlara dikkat edilmelidir:"</strong> and then an <strong>8-item numbered checklist</strong> of concrete vehicle-maintenance actions that improve fuel economy.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>ARAÇTA YAKIT TASARRUFU</strong><br />
+<strong>Yakıt tasarrufu sağlamak için şunlara dikkat edilmelidir:</strong></p>
+<ol>
+<li><strong>Bujiler temizlenmeli</strong> (belirli kilometrede <strong>değiştirilmelidir</strong>).</li>
+<li><strong>Hava filtresi tıkalı olmamalıdır</strong> (belirli kilometrede değiştirilmelidir).</li>
+<li><strong>Araç uygun viteste ve hızda kullanılmalıdır.</strong></li>
+<li><strong>Lastiklerin hava basıncı normal değerde olmalı.</strong></li>
+<li><strong>Fren ayarları sıkı olmamalı.</strong></li>
+<li><strong>Karbüratör ayarları (Rölanti) doğru yapılmalıdır.</strong></li>
+<li><strong>Jikle çekili unutulmamalıdır.</strong></li>
+<li><strong>Kavrama (debriyaj) kaçırmamalıdır.</strong></li>
+</ol>
+</blockquote>
+<h3>The 8-item checklist — detail</h3>
+<p>This is the <strong>summary / synthesis slide</strong> — it combines the best advice from slides 1–3 into one compact list. <strong>Memorize all 8 items</strong>; this is high-frequency exam material.</p>
+<h4>1. Bujiler temizlenmeli (Spark plugs cleaned / replaced)</h4>
+<p><strong>Plain English:</strong> <strong>Bujiler (spark plugs)</strong> are the components that create the spark to ignite the fuel-air mixture in <strong>gasoline engines</strong> (not diesels — diesels have no bujiler). Over time they develop <strong>carbon deposits</strong> (karbon birikintisi) that weaken the spark. Weak spark → incomplete combustion → wasted fuel.</p>
+<p><strong>Maintenance:</strong><br />
+- <strong>Clean</strong> at every periyodik bakım<br />
+- <strong>Replace</strong> at the manufacturer-specified interval (typically <strong>40,000–100,000 km</strong> depending on plug type)</p>
+<hr />
+<h4>2. Hava filtresi tıkalı olmamalı (Air filter not clogged)</h4>
+<p><strong>Plain English:</strong> The <strong>hava filtresi (air filter)</strong> cleans the air entering the engine. Over time, it gets clogged with dust. A clogged filter <strong>restricts airflow</strong>, causing:</p>
+<ul>
+<li>The engine to run <strong>rich</strong> (too much fuel relative to air)</li>
+<li><strong>Fuel wastage</strong> (extra unburned fuel exits via exhaust)</li>
+<li><strong>Power loss</strong></li>
+<li><strong>Emissions increase</strong></li>
+</ul>
+<p><strong>Maintenance:</strong> check at every periyodik bakım, replace every <strong>15,000–30,000 km</strong> or when it looks dirty.</p>
+<hr />
+<h4>3. Araç uygun viteste ve hızda kullanılmalı (Use correct gear at correct speed)</h4>
+<p><strong>Plain English:</strong> match gear to speed using the <strong>0-20/20-40/40-60/60-80/80+ km/h rule</strong> from <a href="08-güç-aktarma-organları.md">08-güç-aktarma-organları.md</a> slide 2E. Don't lug the engine in high gears at low speeds, and don't scream the engine in low gears at high speeds.</p>
+<hr />
+<h4>4. Lastiklerin hava basıncı normal değerde olmalı (Tire pressure at normal value)</h4>
+<p><strong>Plain English:</strong> <strong>Under-inflated tires</strong> create excess <strong>rolling resistance</strong> — they flex more against the road, generating heat instead of rolling freely. The engine has to work harder to maintain speed. A 0.5 bar pressure drop from optimal can increase fuel consumption by <strong>3–5%</strong>.</p>
+<p><strong>Rule:</strong> check tire pressure <strong>weekly</strong>, especially before long trips. See <a href="08b-lastikler.md">08b-lastikler.md</a> for the correct pressures and contact-patch illustrations.</p>
+<hr />
+<h4>5. Fren ayarları sıkı olmamalı (Brakes not adjusted too tight)</h4>
+<p><strong>Plain English:</strong> If the brake adjustment is too tight, the balatas are <strong>constantly touching</strong> the disc / drum even when the pedal is released. This creates <strong>continuous drag</strong> — the engine has to work harder against that drag, wasting fuel.</p>
+<p>See <a href="09-fren-sistemi.md">09-fren-sistemi.md</a> slide 3 fault 3: <em>"Fren ayarları sıkıysa balatalar aşınır, fazla yakıt sarf eder"</em> — this is the same fault being re-stated.</p>
+<p><strong>Maintenance:</strong> if you notice your car has less coasting distance than before (slows down quickly when you lift off the gas), check the brake adjustment.</p>
+<hr />
+<h4>6. Karbüratör (rölanti) ayarları doğru olmalı (Carburetor / idle set correctly)</h4>
+<p><strong>Plain English:</strong> The <strong>rölanti (idle speed)</strong> should be set to the manufacturer's specified value — typically <strong>700-900 RPM</strong>. If the idle is too high, the engine is burning fuel faster than necessary every time you sit at a red light. If too low, the engine may stall.</p>
+<p><strong>Modern note:</strong> fuel-injected engines have electronically-controlled idle speeds that rarely drift out of spec. Older carbureted engines need manual adjustment.</p>
+<hr />
+<h4>7. Jikle çekili unutulmamalı (Don't leave the choke engaged)</h4>
+<p><strong>Plain English:</strong> The <strong>jikle (choke)</strong> is an <strong>old-school</strong> carburetor component that <strong>restricts air intake</strong> to create a richer fuel mixture for <strong>cold starting</strong>. Once the engine is warm, you're supposed to <strong>push the jikle back in</strong> (disengage it).</p>
+<p><strong>If you forget to release the jikle:</strong><br />
+- The engine keeps running <strong>rich</strong> all the time<br />
+- <strong>Excess fuel</strong> is burned every second<br />
+- Power is reduced<br />
+- Exhaust smells of unburned fuel<br />
+- Fuel economy tanks</p>
+<p><strong>Modern note:</strong> fuel-injected cars don't have a manual jikle — the ECU handles cold enrichment automatically. But the exam still tests this because older cars (especially in rural Turkey) still have manual chokes.</p>
+<p><strong>Rule:</strong> after the engine warms up (~1-2 minutes), <strong>push the jikle button back in</strong>. Don't forget.</p>
+<hr />
+<h4>8. Kavrama (debriyaj) kaçırmamalı (Clutch should not slip)</h4>
+<p><strong>Plain English:</strong> A <strong>slipping clutch</strong> doesn't fully transfer engine power to the wheels — some of it is lost as friction heat in the clutch disc. Symptoms:</p>
+<ul>
+<li>The engine revs but the car accelerates slowly</li>
+<li>A burning smell under the hood</li>
+<li>The car doesn't pull strongly uphill</li>
+<li>Fuel consumption goes up because you have to press the gas more for the same speed</li>
+</ul>
+<p><strong>Fix:</strong> replace the worn clutch assembly. It's expensive but necessary — a slipping clutch only gets worse with time, and eventually the car won't move at all.</p>
+<hr />
+<h3>Memory device: the 8-item checklist</h3>
+<p>Organize it mentally into 3 groups:</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>Items</th>
+<th>Theme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Combustion efficiency</strong></td>
+<td>1. Bujiler, 2. Hava filtresi, 6. Rölanti, 7. Jikle</td>
+<td>The engine's ability to burn fuel cleanly</td>
+</tr>
+<tr>
+<td><strong>Mechanical drag</strong></td>
+<td>4. Lastik hava, 5. Fren ayarı, 8. Debriyaj</td>
+<td>Things that create unnecessary friction</td>
+</tr>
+<tr>
+<td><strong>Driver behavior</strong></td>
+<td>3. Uygun vites ve hız</td>
+<td>The one driver-side item</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Critical exam facts — the 8-item summary</h3>
+<blockquote>
+<p><strong>Yakıt tasarrufu için 8 madde:</strong><br />
+1. Bujiler temiz<br />
+2. Hava filtresi temiz<br />
+3. Uygun vites ve hız<br />
+4. Normal lastik basıncı<br />
+5. Fren ayarı sıkı olmamalı<br />
+6. Rölanti doğru<br />
+7. Jikle çekili unutulmamalı<br />
+8. Debriyaj kaçırmamalı</p>
+</blockquote>
+<hr />
+<h2>5B. SLIDE 5 — Final Closing Tips (The Last Slide of Class 2)</h2>
+<h3>What the slide showed</h3>
+<p>A simple 5-bullet closing list of ekonomik sürüş tips — three of which are <strong>new</strong> and two of which recap earlier rules. Hoca showed this as the final ders content before the <strong>"DERSİMİZ BİTTİ / HERKESE SINAVLARDA BAŞARILAR DİLERİZ — @İNAYET ÖĞRETMEN"</strong> end card.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<ul>
+<li><strong>Ani gaza basmak yakıt sarfiyatını artırır.</strong></li>
+<li><strong>Yakıtımızı dolu bulundurmalıyız.</strong></li>
+<li><strong>Kaliteli yakıt almalıyız.</strong></li>
+<li><strong>Aracımızı uygun devirde kullanmalıyız.</strong></li>
+<li>
+<p><strong>90 km/saat üzerine çıkmamaya özen göstermeliyiz...</strong></p>
+</li>
+<li>
+<p><strong>Sudden acceleration increases fuel consumption.</strong></p>
+</li>
+<li><strong>We should keep our fuel tank full.</strong></li>
+<li><strong>We should use quality fuel.</strong></li>
+<li><strong>We should use the car at the correct engine RPM.</strong></li>
+<li><strong>We should take care not to exceed 90 km/h.</strong></li>
+</ul>
+</blockquote>
+<h3>The 5 closing tips — what's new vs recap</h3>
+<h4>Tip 1 — Ani gaz = daha fazla yakıt (RECAP)</h4>
+<p>Already covered in slide 2 (driver-side fault #3) and slide 3 (anticipate stops, don't brake hard). Restated here as a simple one-liner for final emphasis.</p>
+<hr />
+<h4>Tip 2 — ⭐ NEW: Yakıt deposunu DOLU bulundur (Keep the fuel tank FULL)</h4>
+<p><strong>Plain English:</strong> Counter-intuitive but real — <strong>keeping the fuel tank full (or at least half-full) saves fuel and protects the fuel system</strong>. Here's why:</p>
+<ol>
+<li>
+<p><strong>Less air space = less evaporation.</strong> A nearly-empty tank has a lot of air above the fuel. Gasoline slowly <strong>evaporates</strong> into that air space, and the fumes <strong>escape</strong> through the tank vent (even on modern cars with recovery systems, some is lost). Full tank = minimal air space = minimal evaporation loss.</p>
+</li>
+<li>
+<p><strong>Less water condensation.</strong> In temperature swings (cold nights, warm days), <strong>humid air</strong> in a partially-empty tank <strong>condenses water droplets</strong> on the inner tank walls. That water eventually drops into the fuel, contaminating it. Contaminated fuel = <strong>clogged filters, rusted fuel lines, rough running, hard starting</strong>. <strong>Especially important for dizel</strong> (see <a href="01-yakıt-sistemi.md">01-yakıt-sistemi.md</a> — "yakıt deposundan günlük su boşaltılmalıdır"), but also relevant for gasoline.</p>
+</li>
+<li>
+<p><strong>Safety.</strong> If you run out of fuel on a remote road, you're <strong>stranded</strong>. A diesel that runs dry <strong>"hava yapar"</strong> (air-lock in the fuel system) and may need professional bleeding. A half-full tank is your insurance against running out unexpectedly.</p>
+</li>
+<li>
+<p><strong>Battery / starter protection.</strong> Running a car until the fuel gauge hits zero means your fuel pump is <strong>sucking the bottom of the tank</strong> where any sediment accumulates — you're feeding the engine dirty fuel and debris.</p>
+</li>
+</ol>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Yakıt deposunu neden dolu bulundurmalıyız?"</em> → <strong>Deposu dolu tutmak evaporasyonu, su yoğunlaşmasını ve kirli yakıt sorunlarını önler.</strong></p>
+<p><strong>Practical rule:</strong> never let the fuel gauge drop below <strong>1/4 full</strong> for regular driving. Fill up whenever it hits 1/4 — not when it hits empty.</p>
+<hr />
+<h4>Tip 3 — ⭐ NEW: Kaliteli yakıt kullanın (Use quality fuel)</h4>
+<p><strong>Plain English:</strong> <strong>Not all fuel is equal.</strong> Cheap gas stations sometimes sell <strong>contaminated, low-octane, or watered-down fuel</strong> that can damage your engine and reduce fuel economy.</p>
+<p><strong>Why quality matters:</strong><br />
+- <strong>Higher octane</strong> in gasoline means more resistance to "knock / vuruntu" (pre-ignition) — the engine runs more efficiently<br />
+- <strong>Cleaner fuel</strong> means less wear on bujiler, injectors, fuel filters<br />
+- <strong>Additives</strong> in premium fuels (detergents, corrosion inhibitors) keep the fuel system clean<br />
+- <strong>Watered-down fuel</strong> is a real problem in Turkey at unreliable stations — literally diluted with water → engine won't run properly</p>
+<p><strong>Rule:</strong> buy fuel from <strong>reputable branded stations</strong> (BP, Shell, Opet, Petrol Ofisi, Total, etc.) in Turkey. Avoid remote / unknown stations unless you have no other choice.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Kaliteli yakıt kullanmanın faydası nedir?"</em> → <strong>Motor verimi artar, yakıt tüketimi düşer, motor ömrü uzar.</strong></p>
+<hr />
+<h4>Tip 4 — Uygun devirde kullanmak (RECAP — the 2000-3000 RPM rule)</h4>
+<p>Already covered in slide 3 (2000-3000 devir aralığı). Restated for emphasis.</p>
+<hr />
+<h4>Tip 5 — ⭐ NEW: 90 km/saat üzerine çıkma (Don't exceed 90 km/h)</h4>
+<p><strong>Plain English:</strong> <strong>Aerodynamic drag grows quadratically with speed.</strong> A car at 90 km/h experiences much less drag than at 120 km/h, even though the speed difference is only 33%. The physics:</p>
+<blockquote>
+<p>Drag force ∝ <strong>v²</strong></p>
+</blockquote>
+<p>That means:<br />
+- <strong>60 km/h</strong> → baseline drag<br />
+- <strong>90 km/h</strong> → <strong>2.25×</strong> baseline (50% faster, 125% more drag)<br />
+- <strong>120 km/h</strong> → <strong>4×</strong> baseline (100% faster, 300% more drag)</p>
+<p>At higher speeds, the engine is <strong>fighting against massively more air resistance</strong>, and fuel consumption scales accordingly. The <strong>fuel-efficient sweet spot</strong> for most Turkish passenger cars is around <strong>80-90 km/h</strong> on the highway — that's where aerodynamic losses are still manageable and the engine is in a high gear at a comfortable RPM.</p>
+<p><strong>Beyond 90 km/h:</strong><br />
+- Fuel consumption <strong>increases dramatically</strong> (a 120 km/h cruise can burn 30-50% more fuel than 90 km/h)<br />
+- Engine RPM rises, making it work harder<br />
+- Brake distances grow (kinetic energy scales with v²)<br />
+- Tire wear accelerates<br />
+- Turkish highway speed limits are often 110 or 120, but <strong>efficient ≠ maximum legal</strong> — legal and efficient are different concepts</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Ekonomik sürüş için azami hangi hızda seyretmek tavsiye edilir?"</em> → <strong>90 km/saat</strong></p>
+<p><strong>Practical rule:</strong> on long highway trips, cruise at <strong>85-90 km/h</strong> even if the speed limit is higher. You'll arrive only a few minutes later but save 20-30% on fuel.</p>
+<hr />
+<h3>Why these 5 tips work together</h3>
+<p>This final slide is a <strong>condensed summary</strong> of the entire ekonomik sürüş topic:</p>
+<table>
+<thead>
+<tr>
+<th>Tip</th>
+<th>Covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Ani gaz kaçın</td>
+<td><strong>Driving style</strong> (see slide 2)</td>
+</tr>
+<tr>
+<td>2. Depo dolu</td>
+<td><strong>Fuel system care</strong> (NEW)</td>
+</tr>
+<tr>
+<td>3. Kaliteli yakıt</td>
+<td><strong>Fuel quality</strong> (NEW)</td>
+</tr>
+<tr>
+<td>4. Uygun devir</td>
+<td><strong>Shift discipline</strong> (see slide 3)</td>
+</tr>
+<tr>
+<td>5. ≤90 km/h</td>
+<td><strong>Speed management</strong> (NEW)</td>
+</tr>
+</tbody>
+</table>
+<p>Together, these 5 rules cover <strong>driving style + fuel quality + vehicle care + shift discipline + speed management</strong> — all the pillars of fuel-efficient driving.</p>
+<h3>Critical exam facts — the 3 NEW ones from this slide</h3>
+<blockquote>
+<p><strong>Yakıt deposu dolu tutulur</strong> — buharlaşma, su yoğunlaşması, kirli yakıt ve yolda kalma risklerini azaltır.</p>
+<p><strong>Kaliteli yakıt kullanılır</strong> — motor verimi artar, tüketim düşer, motor ömrü uzar.</p>
+<p><strong>Ekonomik sürüş için azami hız: 90 km/saat.</strong> Daha yüksek hızlar aerodinamik dirençle yakıt tüketimini dramatik biçimde artırır.</p>
+</blockquote>
+<hr />
+<h3>🎓 DERSİMİZ BİTTİ — End of Class 2 (2026-04-14)</h3>
+<p>Hoca's closing slide:</p>
+<blockquote>
+<p><strong>DERSİMİZ BİTTİ.</strong><br />
+<strong>HERKESE SINAVLARDA BAŞARILAR DİLERİZ.</strong><br />
+<strong>— @İNAYET ÖĞRETMEN</strong></p>
+<p><strong>CLASS IS OVER.</strong><br />
+<strong>WE WISH EVERYONE SUCCESS IN THEIR EXAMS.</strong><br />
+<strong>— Teacher İnayet</strong></p>
+</blockquote>
+<p><strong>Hoca's name is İnayet Öğretmen</strong> — captured for future reference.</p>
+<p><strong>Summary of Araç Tekniği class 2 (2026-04-14) content covered:</strong></p>
+<ol>
+<li><strong>Fren sistemi</strong> (4 slides + live story)</li>
+<li><strong>Ön düzen + direksiyon sistemi</strong> (2 slides)</li>
+<li><strong>Süspansiyon + şase + karoser + malzemeler</strong> (7 slides)</li>
+<li><strong>Güvenli araç kullanma</strong> (13 slides — oturma, kemer, 9:15, aynalar, kör nokta, çalıştırma, kalkış)</li>
+<li><strong>Aktif + pasif güvenlik sistemleri</strong> (2 slides)</li>
+<li><strong>Rodaj + günlük/haftalık bakım + akü bakımı</strong> (2 slides)</li>
+<li><strong>Karlı günler + antifriz + kar zinciri</strong> (4 slides)</li>
+<li><strong>Lastik değişimi</strong> (8+ slides — full 10-step procedure)</li>
+<li><strong>Lastik önemi recap</strong> (1 slide)</li>
+<li><strong>Ampul değişimi</strong> (1 slide)</li>
+<li><strong>Göstergeler + 3-renk kuralı + uzun far mavi + check engine + glow plug + balata aşınma + farlar açık</strong> (8+ slides)</li>
+<li><strong>Fren/stop/geri vites/römork lambaları</strong> (3 slides)</li>
+<li><strong>Ekonomik sürüş + yakıt tasarrufu</strong> (5 slides)</li>
+</ol>
+<p><strong>Total: ~60 slides across Fren, Direksiyon, Süspansiyon, Güvenli Araç Kullanma, Güvenlik Sistemleri, Bakım, Kış Sürüş, Lastik, Aydınlatma, Ekonomik Sürüş.</strong></p>
+<p><strong>Files updated:</strong> <a href="05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a>, <a href="08-güç-aktarma-organları.md">08-güç-aktarma-organları.md</a>, <a href="08b-lastikler.md">08b-lastikler.md</a>, <a href="09-fren-sistemi.md">09-fren-sistemi.md</a>, <a href="10-direksiyon-ön-düzen-sistemi.md">10-direksiyon-ön-düzen-sistemi.md</a>, <a href="11-süspansiyon-sistemi.md">11-süspansiyon-sistemi.md</a>, <a href="12-güvenli-araç-kullanma.md">12-güvenli-araç-kullanma.md</a>, <a href="13-ekonomik-araç-kullanma.md">13-ekonomik-araç-kullanma.md</a>.</p>
+<p><strong>Next class:</strong> Trafik ve Çevre Bilgisi — 2026-04-15, Session ID 76 186 597 209, Password tV4jqp.</p>
+<hr />
+<h2>5C. Hoca's Live Class Additions (2026-04-14) — ⭐⭐⭐ EXAM PATTERN-RECOGNITION TRICK</h2>
+<h3>The heuristic — identify the correct answer from sentence structure alone</h3>
+<p>This is the <strong>single highest-value exam-taking trick</strong> hoca gave all class 2. It works even if you don't know the specific facts.</p>
+<blockquote>
+<p><em>"Araçtan kaynaklanan sıkıntı arabanın teknik özelliğinde olması gereken bir şeyin olmamasıyla ilgilidir. Yani mesela lastikler hava basıncı olması gereken de değildir. Ne bileyim işte distribütör kapağı vesair olması gereken de değildir gibi gibi. </em><em>Olması gereken bir şey olmaması gereken durumdaysa hep olumsuz cümleler vardır. Konuyu bilmeseniz bile buradan soruyu yakalayabilirsiniz.</em><em> Ya da sürücü yapması gereken bir şeyi yapmamıştır. Mesela bakımlarını yaptırmamıştır. Filtreleri değiştirmemiştir. Hani normal hızla gitmesi gerekiyordur. Yüksek hızda gitmiştir. Değil mi? Sürücünün uyması gereken bir şey vardır. Sürücü bunu yapmamıştır. </em><em>İnanın şu dört slaytı okumasam bile soru gelse buradan hepiniz çok temiz mis gibi bu soruları kaçırmadan yaparsınız.</em><em>"</em></p>
+</blockquote>
+<p>And later:</p>
+<blockquote>
+<p><em>"Bu sefer de olumlu cümleleri dediğim gibi okuyorum... teknik özelliğinin aslında olması gereken değerde olması durumunda araç zaten yakıt tasarrufu [sağlar]."</em></p>
+</blockquote>
+<h3>Plain English — the pattern</h3>
+<p>On the exam, questions about <strong>fuel consumption</strong> have two possible directions:</p>
+<ol>
+<li><strong>"What causes excess fuel consumption?"</strong> → answer is a <strong>NEGATIVE / problem statement</strong></li>
+<li><strong>"What saves fuel?"</strong> → answer is a <strong>POSITIVE / correct-state statement</strong></li>
+</ol>
+<p><strong>The trick:</strong> even if you don't know the specific topic, you can <strong>identify which direction the question is going</strong> from the <strong>sentence structure of the answer options</strong>, and pick the matching one.</p>
+<h3>The pattern in detail</h3>
+<h4>Pattern 1 — Questions about <strong>"fazla yakıt yakma nedeni"</strong> (why the car burns excess fuel)</h4>
+<p><strong>Correct answers always have NEGATIVE / problem sentence structure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Negative phrasing</th>
+<th>What it describes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>"...olmaması"</strong></td>
+<td>Something that should exist, but doesn't</td>
+</tr>
+<tr>
+<td><strong>"...bozuk olması"</strong></td>
+<td>Something broken</td>
+</tr>
+<tr>
+<td><strong>"...ayarsız olması"</strong></td>
+<td>Something not adjusted</td>
+</tr>
+<tr>
+<td><strong>"...tıkalı olması"</strong></td>
+<td>Something clogged</td>
+</tr>
+<tr>
+<td><strong>"...az olması"</strong></td>
+<td>Something below the correct level</td>
+</tr>
+<tr>
+<td><strong>"...bakımsız olması"</strong></td>
+<td>Something not serviced</td>
+</tr>
+<tr>
+<td><strong>"...kaçırması"</strong></td>
+<td>Something leaking/slipping (like debriyaj)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example question:</strong></p>
+<blockquote>
+<p><em>"Aşağıdakilerden hangisi aracın fazla yakıt yakmasının sebebidir?"</em><br />
+A) Hava filtresinin temiz olması<br />
+B) <strong>Hava filtresinin tıkalı olması</strong> ← <strong>tıkalı olması</strong> = negative structure → <strong>CORRECT</strong><br />
+C) Bujilerin yeni olması<br />
+D) Rölantinin doğru ayarlı olması</p>
+</blockquote>
+<p>Options A, C, D all have <strong>positive sentence structure</strong> ("clean", "new", "correctly adjusted"). Only option B has <strong>negative structure</strong> ("tıkalı olması" = "being clogged"). <strong>B is the answer</strong> — and you can pick it without even knowing what a hava filtresi is.</p>
+<h4>Pattern 2 — Questions about <strong>"yakıt tasarrufu"</strong> (fuel saving)</h4>
+<p><strong>Correct answers always have POSITIVE / correct-state sentence structure:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Positive phrasing</th>
+<th>What it describes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>"...olması"</strong></td>
+<td>Something that exists / is present</td>
+</tr>
+<tr>
+<td><strong>"...doğru ayarlı olması"</strong></td>
+<td>Something correctly adjusted</td>
+</tr>
+<tr>
+<td><strong>"...temiz olması"</strong></td>
+<td>Something clean</td>
+</tr>
+<tr>
+<td><strong>"...normal değerde olması"</strong></td>
+<td>Something at the correct value</td>
+</tr>
+<tr>
+<td><strong>"...sıkı olmaması"</strong></td>
+<td>Something not too tight (note: this is a "not" statement but describes a correct state — subtle case)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example question:</strong></p>
+<blockquote>
+<p><em>"Aşağıdakilerden hangisi yakıt tasarrufunu sağlar?"</em><br />
+A) Bujilerin ayarsız olması<br />
+B) Hava filtresinin tıkalı olması<br />
+C) <strong>Lastiklerin hava basıncının normal değerde olması</strong> ← positive structure → <strong>CORRECT</strong><br />
+D) Debriyajın kaçırması</p>
+</blockquote>
+<p>Options A, B, D have <strong>negative structure</strong> ("ayarsız", "tıkalı", "kaçırması"). Only C has <strong>positive structure</strong> ("normal değerde olması" = "being at the normal value"). <strong>C is the answer.</strong></p>
+<h3>The full decision tree</h3>
+<pre><code>Reading the question:
+│
+├── Contains &quot;fazla yakıt&quot;, &quot;yakıt israfı&quot;, &quot;yakıt sarfiyatı artar&quot;
+│   └── PICK the option with NEGATIVE structure (bozuk, tıkalı, ayarsız, olmaması)
+│
+├── Contains &quot;yakıt tasarrufu&quot;, &quot;ekonomik sürüş&quot;, &quot;yakıtı azaltmak&quot;
+│   └── PICK the option with POSITIVE structure (temiz, doğru, normal değerde, düzenli)
+│
+└── Contains &quot;sürücü hatası&quot; / &quot;sürücü kaynaklı&quot;
+    └── PICK the option that describes a BAD HABIT (ani hızlanma, düşük viteste, marşa fazla basma)
+</code></pre>
+<h3>Why this works — the deeper pattern</h3>
+<p>Every fact you've learned about ekonomik sürüş is <strong>symmetric</strong>:</p>
+<ul>
+<li><strong>Hava filtresi tıkalı</strong> (wastes fuel) ↔ <strong>Hava filtresi temiz</strong> (saves fuel)</li>
+<li><strong>Lastik basıncı az</strong> (wastes fuel) ↔ <strong>Lastik basıncı normal</strong> (saves fuel)</li>
+<li><strong>Fren ayarı sıkı</strong> (wastes fuel) ↔ <strong>Fren ayarı uygun</strong> (saves fuel)</li>
+<li><strong>Düşük viteste seyretmek</strong> (wastes fuel) ↔ <strong>Uygun viteste seyretmek</strong> (saves fuel)</li>
+</ul>
+<p>Every "correct state" has a mirror "broken state". Exam writers use the same 9 vehicle faults and 5 driver habits — just flipping them for positive vs negative questions. Once you know the pattern, you <strong>recognize the answer from the sentence direction alone</strong>.</p>
+<h3>Hoca's confidence</h3>
+<p>Hoca literally said:</p>
+<blockquote>
+<p><em>"İnanın şu dört slaytı okumasam bile soru gelse buradan hepiniz çok temiz mis gibi bu soruları kaçırmadan yaparsınız."</em><br />
+<em>"Trust me, even if I hadn't read these 4 slides at all, if a question comes from here, all of you would answer it cleanly without missing it."</em></p>
+</blockquote>
+<p>She was emphasizing that <strong>pattern recognition + common sense</strong> is enough to solve most ekonomik sürüş questions, even without full memorization.</p>
+<h3>Critical exam takeaway</h3>
+<blockquote>
+<p><strong>Yakıt sarfiyatı soruları: olumsuz cümle yapısı → doğru cevap.</strong><br />
+<strong>Yakıt tasarrufu soruları: olumlu cümle yapısı → doğru cevap.</strong><br />
+<strong>Sürücü kaynaklı hatalar: kötü alışkanlık içeren ifade → doğru cevap.</strong></p>
+</blockquote>
+<p>Apply this and you'll catch most exam questions even without full memorization.</p>
+<hr />
+<h2>6. Why this matters for the exam</h2>
+<p>The <strong>Ekonomik Araç Kullanma</strong> topic is a full exam subject with several reliable question patterns:</p>
+<ol>
+<li><strong>"Aşağıdakilerden hangisi yakıt tüketimini artırır?"</strong> → pick any of the 9 vehicle-side faults OR the 5 driver-side habits from slides 1–2</li>
+<li><strong>"Ekonomik sürüşte hangi devir aralığı tercih edilir?"</strong> → <strong>2000-3000 devir</strong></li>
+<li><strong>"Yakıt tasarrufu için ne yapılmalıdır?"</strong> → recite any of the 8 items from slide 4</li>
+<li><strong>"Jikle çekili unutulursa ne olur?"</strong> → <strong>Motor rich çalışır, yakıt tüketimi artar.</strong></li>
+<li><strong>"Düşük hava basınçlı lastiklerin yakıta etkisi nedir?"</strong> → <strong>Sürtünmeyi artırır, yakıt tüketimini artırır.</strong></li>
+<li><strong>"Sıkı fren ayarı yakıta nasıl etki eder?"</strong> → <strong>Balatalar aşınır, motor sürekli dirençle çalışır, yakıt tüketimi artar.</strong></li>
+<li><strong>"Uzun süre motoru stop etmek yakıta etki eder mi?"</strong> → <strong>Hayır, aksine restart daha çok yakıt harcar.</strong></li>
+<li><strong>"Ani hızlanmak yakıt tüketimini etkiler mi?"</strong> → <strong>Evet, artırır.</strong></li>
+<li><strong>"Yüksek hızda camların açık olması yakıta etki eder mi?"</strong> → <strong>Evet, aerodynamik drag nedeniyle tüketimi artırır.</strong></li>
+<li><strong>"Marşa gereğinden fazla basmak ne yapar?"</strong> → <strong>Motoru boğar, yakıt ve akü israfı olur.</strong></li>
+</ol>
+<hr />
+<h2>7. Memorize These</h2>
+<blockquote>
+<p><strong>Ekonomik sürüş devir aralığı:</strong> 2000-3000 RPM.</p>
+<p><strong>Yakıt tasarrufunun 8 maddelik kontrolü:</strong> bujiler, hava filtresi, uygun vites ve hız, lastik basıncı, fren ayarı, rölanti, jikle, debriyaj.</p>
+<p><strong>Driver's golden rule:</strong> kırmızı ışık görür görmez gazdan ayağını çek — anticipate stops, coast, don't brake hard.</p>
+<p><strong>Cold engine:</strong> motoru tam ısınmadan yola çıkma (30 sn – 1 dk bekle).</p>
+<p><strong>Manuel start-stop yapma</strong> — kısa duraklamalarda motoru kapatıp tekrar çalıştırma, daha çok yakıt harcar.</p>
+<p><strong>Yüksek hızda</strong> (80+ km/h) pencereler kapalı, A/C açık. <strong>Şehir içinde</strong> (&lt;60 km/h) pencereler açık OK.</p>
+<p><strong>Bagajda gereksiz yük taşıma</strong> — her kilo = ekstra yakıt.</p>
+</blockquote>
+<hr />
+<h2>8. Consolidated Exam Vocabulary — Ekonomik Sürüş</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yakıt tasarrufu</td>
+<td>Fuel saving / fuel economy</td>
+<td>Reducing fuel consumption</td>
+</tr>
+<tr>
+<td>Yakıt tüketimi</td>
+<td>Fuel consumption</td>
+<td>How much fuel the car burns</td>
+</tr>
+<tr>
+<td>Ekonomik sürüş</td>
+<td>Fuel-efficient / economical driving</td>
+<td>Driving to save fuel</td>
+</tr>
+<tr>
+<td>Devir (rpm)</td>
+<td>RPM (revolutions per minute)</td>
+<td>Engine speed</td>
+</tr>
+<tr>
+<td>Rölanti</td>
+<td>Idle</td>
+<td>Engine speed when no gas is applied</td>
+</tr>
+<tr>
+<td>Buji</td>
+<td>Spark plug</td>
+<td>Ignites fuel in gasoline engines</td>
+</tr>
+<tr>
+<td>Distribütör platin</td>
+<td>Distributor points</td>
+<td>Older ignition timing component</td>
+</tr>
+<tr>
+<td>Karbüratör</td>
+<td>Carburetor</td>
+<td>Older mechanical fuel-air mixer</td>
+</tr>
+<tr>
+<td>Enjektör</td>
+<td>Fuel injector</td>
+<td>Modern fuel delivery component</td>
+</tr>
+<tr>
+<td>Jikle</td>
+<td>Choke</td>
+<td>Cold-start enrichment (older cars)</td>
+</tr>
+<tr>
+<td>Hava filtresi</td>
+<td>Air filter</td>
+<td>Cleans intake air</td>
+</tr>
+<tr>
+<td>Debriyaj kaçırması</td>
+<td>Clutch slipping</td>
+<td>Worn clutch losing grip</td>
+</tr>
+<tr>
+<td>Yeşil dalga</td>
+<td>Green wave</td>
+<td>Synchronized green-light pattern in cities</td>
+</tr>
+<tr>
+<td>Aerodinamik kayıp</td>
+<td>Aerodynamic loss</td>
+<td>Drag at high speed</td>
+</tr>
+<tr>
+<td>Momentum</td>
+<td>Momentum</td>
+<td>Coasting energy</td>
+</tr>
+<tr>
+<td>Sürtünme</td>
+<td>Friction</td>
+<td>Drag from tires, brakes, etc.</td>
+</tr>
+<tr>
+<td>Rich / zengin çalışma</td>
+<td>Rich running</td>
+<td>Too much fuel in the mixture</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>9. Cross-references</h2>
+<ul>
+<li><strong><a href="01-yakıt-sistemi.md">01-yakıt-sistemi.md</a></strong> — the fuel system itself (tank → pump → filter → injector/karbüratör)</li>
+<li><strong><a href="08-güç-aktarma-organları.md">08-güç-aktarma-organları.md</a></strong> — vites kullanım hızları (gear speed ranges, section 2E)</li>
+<li><strong><a href="08b-lastikler.md">08b-lastikler.md</a></strong> — lastik basıncı + sürtünme + contact patch</li>
+<li><strong><a href="09-fren-sistemi.md">09-fren-sistemi.md</a></strong> — sıkı fren ayarı → yakıt israfı (slide 3, fault 3)</li>
+<li><strong><a href="12-güvenli-araç-kullanma.md">12-güvenli-araç-kullanma.md</a></strong> — rodaj rules (§4O), warm-up rules (§4I slide 11)</li>
+<li><strong>Portal reference:</strong> <a href="../../e-kitap/03-araç-tekniği/04-ekonomik-arac-kullanma.md">e-kitap/03-araç-tekniği/04-ekonomik-arac-kullanma.md</a> — the portal's dedicated subject on ekonomik araç kullanma</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

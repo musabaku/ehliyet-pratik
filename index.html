@@ -321,6 +321,28 @@ body{
 }
 .q-translation.show{display:block}
 
+.q-refs{
+  display:none;margin-top:12px;padding:12px 14px;
+  background:#fff8ec;border:1px solid #e4dac8;border-radius:8px;
+}
+.q-refs.show{display:block}
+.q-refs-title{
+  font-size:12px;font-weight:600;color:#11472d;
+  margin-bottom:8px;display:flex;align-items:center;gap:6px;
+}
+.q-refs ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.q-refs li{font-size:13px;line-height:1.45}
+.q-refs a{
+  color:#0a7f44;text-decoration:none;font-weight:500;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.q-refs a:hover{text-decoration:underline}
+.q-refs .ref-icon{font-size:14px}
+.q-refs .ref-label{color:var(--muted);font-weight:400;margin-right:4px}
+.q-refs .ref-score{
+  font-size:10px;color:var(--muted);background:#f0e8d8;
+  padding:1px 6px;border-radius:8px;margin-left:6px;
+}
 .q-media{
   display:none;margin:0 0 18px;border:1px solid var(--line);border-radius:var(--radius2);
   overflow:hidden;background:var(--surface2);
@@ -452,6 +474,7 @@ body{
       <div class="q-media" id="q-media"></div>
       <div class="options" id="q-opts"></div>
       <div class="feedback" id="q-fb"></div>
+      <div class="q-refs" id="q-refs"></div>
     </div>
     <div class="nav-bar">
       <button class="btn" id="btn-prev" onclick="prevQ()"><span data-tr="&larr; Onceki" data-en="&larr; Previous">&larr; Onceki</span></button>
@@ -581,7 +604,7 @@ body{
 </div><!-- /container -->
 
 <!-- Cache-bust version tags — bump these whenever questions_data.js or vocab_data.js changes -->
-<script src="questions_data.js?v=4450m845"></script>
+<script src="questions_data.js?v=4450m845r4345"></script>
 <script src="vocab_data.js?v=1366"></script>
 <script>
 /* ═══════════════════════════════════════════
@@ -857,6 +880,47 @@ function renderMedia(q){
   box.className='q-media show';
 }
 
+function renderRefs(q, sel){
+  const box = document.getElementById('q-refs');
+  if (!box) return;
+  // Only show after answer is revealed AND not in exam mode
+  if (sel === undefined || E.mode === 'exam' || !q.refs){
+    box.innerHTML = ''; box.className = 'q-refs'; return;
+  }
+  const refs = q.refs;
+  const items = [];
+  // Build ref links — order: ekitap (best), notes, slides, pdf
+  if (refs.ekitap){
+    const slug = refs.ekitap.slug;
+    const url = 'ekitap/' + slug + '.html?back=' + encodeURIComponent(location.pathname);
+    const label = slug.split('/').pop().replace(/-/g, ' ');
+    items.push(`<li><a href="${url}" target="_blank"><span class="ref-icon">📖</span><span class="ref-label">Konu (E-Kitap):</span> ${escapeHTML(label)}<span class="ref-score">${refs.ekitap.score}</span></a></li>`);
+  }
+  if (refs.notes){
+    const slug = refs.notes.slug;
+    const url = 'notes/' + slug + '.html?back=' + encodeURIComponent(location.pathname);
+    const label = slug.split('/').pop().replace(/-/g, ' ');
+    items.push(`<li><a href="${url}" target="_blank"><span class="ref-icon">📝</span><span class="ref-label">Ders Notu:</span> ${escapeHTML(label)}<span class="ref-score">${refs.notes.score}</span></a></li>`);
+  }
+  if (refs.slides){
+    const url = refs.slides.path + '/';
+    items.push(`<li><a href="${url}" target="_blank"><span class="ref-icon">🖼️</span><span class="ref-label">Slaytlar:</span> ${escapeHTML(refs.slides.label)}</a></li>`);
+  }
+  if (refs.pdf){
+    const m = /^([\w-]+)#p(\d+)$/.exec(refs.pdf.slug);
+    if (m){
+      const pdfFile = m[1], page = m[2];
+      // Sources are not deployed to GH Pages — link to GitHub repo for now
+      const url = `https://github.com/musabaku/ehliyet-pratik/blob/main/sources/pdfs/${pdfFile}.pdf`;
+      items.push(`<li><a href="${url}" target="_blank"><span class="ref-icon">📄</span><span class="ref-label">Ders Kitabı:</span> ${escapeHTML(pdfFile)} sayfa ${page}<span class="ref-score">${refs.pdf.score}</span></a></li>`);
+    }
+  }
+  if (!items.length){ box.innerHTML=''; box.className='q-refs'; return; }
+  const titleTr = uiLang === 'en' ? 'Learn more about this topic' : 'Bu konu hakkında daha fazla';
+  box.innerHTML = `<div class="q-refs-title">💡 ${titleTr}</div><ul>${items.join('')}</ul>`;
+  box.className = 'q-refs show';
+}
+
 function optionMediaHTML(q,L){
   const items=q.option_media&&q.option_media[L]?q.option_media[L]:[];
   const html=mediaHTML(items);
@@ -961,6 +1025,7 @@ function renderQ(){
     fb.className=sel===q.answer?'feedback show correct-fb':'feedback show wrong-fb';
     fb.textContent=sel===q.answer?'Dogru!':'Yanlis. Dogru: '+q.answer;
   }
+  renderRefs(q, sel);
   document.getElementById('progress-bar').style.width=((E.idx+1)/E.questions.length*100)+'%';
   document.getElementById('btn-prev').style.visibility=E.idx>0?'visible':'hidden';
   document.getElementById('btn-next').textContent=E.idx===E.questions.length-1?'Bitir':'Sonraki \u2192';
