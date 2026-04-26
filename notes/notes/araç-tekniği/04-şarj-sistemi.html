@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Şarj Sistemi — Charging System | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 04-şarj-sistemi</span>
+</div>
+<div class="content">
+<h1>Şarj Sistemi — Charging System</h1>
+<p><strong>Last updated:</strong> 2026-04-13<br />
+<strong>Slides covered:</strong> Full şarj sistemi slide (görev + parçaları + sistemin çalışması)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Şarj sistemi:</strong> Motor çalıştığı sürece, araç için gerekli olan elektrik enerjisini üretir ve aküyü şarj eder.<br />
+<em>(The charging system, as long as the engine runs, produces the electrical energy needed by the vehicle and charges the battery.)</em></p>
+</blockquote>
+<p>The şarj sistemi is what <strong>keeps the battery full while the engine is running</strong>. It's the mirror counterpart of the marş sistemi:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Direction</th>
+<th>Key part</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Marş sistemi</strong> <em>(Starter system)</em></td>
+<td><strong>Akü → Motor</strong> <em>(Battery → Engine — uses stored power to crank the engine)</em></td>
+<td><strong>Marş motoru</strong> <em>(starter motor)</em></td>
+</tr>
+<tr>
+<td><strong>Şarj sistemi</strong> <em>(Charging system)</em></td>
+<td><strong>Motor → Akü</strong> <em>(Engine → Battery — uses the running engine to refill the battery)</em></td>
+<td><strong>Alternatör</strong> <em>(alternator, also called şarj dinamosu)</em></td>
+</tr>
+</tbody>
+</table>
+<p>Without the şarj sistemi, your battery would drain within minutes of driving — headlights, wipers, radio, ignition, and lighting would all pull from the akü with no replenishment.</p>
+<hr />
+<h2>2. SLIDE — Şarj Sistemi (Full slide)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-033.png" alt="Slayt — Sayfa 33: ġARJ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 33: ġARJ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<p><strong>Slide title:</strong> ŞARJ SİSTEMİ</p>
+<h3>What the slide said</h3>
+<p><strong>Görevi:</strong></p>
+<blockquote>
+<p><em>"Motor çalıştığı sürece, araç için gerekli olan elektrik enerjisini üretir ve aküyü şarj eder."</em></p>
+</blockquote>
+<p><strong>Parçaları:</strong><br />
+- Alternatör (Şarj Dinamosu)<br />
+- Konjonktör (Regülatör)<br />
+- Sigorta<br />
+- Şarj Müşürü<br />
+- Şarj Göstergesi<br />
+- Vantilatör Kayışı<br />
+- Akümülatör<br />
+- Kontak Anahtarı</p>
+<p><strong>Sistemin Çalışması:</strong></p>
+<blockquote>
+<p><em>"Motor çalıştığı andan itibaren Alternatör elektrik üretmeye başlar. Üretilen elektrik akımı, Konjonktör (Regülatör) aracılığıyla ateşleme ve aydınlatma sistemlerinin elektrik beslemesini sağlar. Ayrıca akü şarj edilir."</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>When the engine starts running, a belt connects the crankshaft to the <strong>alternatör</strong>, making the alternator spin. A spinning alternator <strong>generates electricity</strong> (mechanical → electrical — the opposite direction of the starter motor). That electricity then flows through the <strong>konjonktör (regulator)</strong> which controls the voltage so the system isn't over- or under-charged. The regulated electricity is then used in two ways:</p>
+<ol>
+<li><strong>Powers the ignition and lighting systems</strong> (ateşleme ve aydınlatma) live while driving</li>
+<li><strong>Recharges the akü</strong> so it's ready for the next start</li>
+</ol>
+<p>So the akü is really only used for the first few seconds of driving (to start the engine). After that, the alternator takes over and the akü is just being topped back up.</p>
+<hr />
+<h2>3. The 8 Parts (Memorize this list!)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Alternatör (Şarj dinamosu)</strong></td>
+<td>Alternator</td>
+<td>Generates electricity from engine rotation</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Konjonktör (Regülatör)</strong></td>
+<td>Regulator</td>
+<td>Controls voltage, prevents overcharge</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sigorta</strong></td>
+<td>Fuse</td>
+<td>Protects circuit from overload</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Şarj Müşürü</strong></td>
+<td>Charge sender / sensor</td>
+<td>Measures charging status</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Şarj Göstergesi</strong></td>
+<td>Charge indicator</td>
+<td>Dashboard gauge / warning light</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Vantilatör Kayışı</strong></td>
+<td>Fan belt</td>
+<td>Transfers engine rotation to alternator</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Akümülatör</strong></td>
+<td>Battery</td>
+<td>Stores the generated electricity</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Kontak Anahtarı</strong></td>
+<td>Ignition switch</td>
+<td>Connects/disconnects the system</td>
+</tr>
+</tbody>
+</table>
+<h3>Component notes</h3>
+<ul>
+<li><strong>Alternatör (Şarj dinamosu)</strong> — this part has two Turkish names. "Alternatör" is modern, "şarj dinamosu" is older. Both appear on exams.</li>
+<li><strong>Konjonktör (Regülatör)</strong> — also has two names. Both mean the same voltage regulator component.</li>
+<li><strong>Vantilatör kayışı</strong> — this single belt often drives both the alternator AND the water pump (cooling). That means if it breaks, both the şarj sistemi AND the soğutma sistemi fail at the same time.</li>
+<li><strong>Akümülatör</strong> — the same akü mentioned in marş sistemi. The two systems share this component.</li>
+<li><strong>Kontak anahtarı</strong> — also the same as in marş sistemi. Shared component.</li>
+</ul>
+<hr />
+<h2>4. How the system flows (Sistemin Çalışması)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-033.png" alt="Slayt — Sayfa 33: ġARJ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 33: ġARJ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-033.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<pre><code>Motor çalışır (engine runs)
+       │
+       ▼
+Vantilatör kayışı (fan belt) transfers rotation
+       │
+       ▼
+ALTERNATÖR spins → generates electricity (AC)
+       │
+       ▼
+KONJONKTÖR (REGÜLATÖR) regulates voltage
+       │
+       ├─▶ AKÜYÜ ŞARJ EDER (charges the battery)
+       │
+       └─▶ ATEŞLEME + AYDINLATMA sistemlerini besler
+           (powers ignition + lighting systems)
+</code></pre>
+<h3>The ŞARJ LAMBASI (Charge Warning Light)</h3>
+<p>The red <strong>şarj lambası</strong> on the dashboard is the driver's warning. Rules:</p>
+<ul>
+<li>When you first turn the key to <strong>ON</strong>, the charge light <strong>turns on</strong> (normal)</li>
+<li>When the engine <strong>starts running</strong>, the alternator starts working and the charge light <strong>turns off</strong> (normal)</li>
+<li>If the light <strong>stays on OR turns on while driving</strong>, the charging system has failed → <strong>stop the car and check the alternatör and vantilatör kayışı</strong></li>
+</ul>
+<h3>What happens if the vantilatör kayışı breaks (critical exam scenario)</h3>
+<p>If the belt snaps while driving:<br />
+1. <strong>Alternator stops spinning</strong> → no more electricity generation<br />
+2. <strong>Battery starts draining</strong> (no recharge, and electricity is being used)<br />
+3. <strong>Şarj lambası turns on</strong> (red warning)<br />
+4. <strong>If the same belt also drives the water pump</strong> → engine starts overheating<br />
+5. You have maybe a few minutes of driving before the battery dies OR the engine overheats</p>
+<p><strong>Correct action:</strong> Pull over, stop the engine, call for roadside assistance or tow. Do not keep driving.</p>
+<hr />
+<h2>4B. Hoca's Live Class Additions (2026-04-13)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Slayt — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>Vantilatör Kayışı tension test (practical maintenance check)</h3>
+<p>The hoca gave a very practical diagnostic for checking the fan belt:</p>
+<blockquote>
+<p><em>"Çok gergin olmayacak. Çok yumuşak da olmayacak. Parmağınla üzerine dokunduğunda, lastiğin bir santim içeriye doğru esneyecek esneklikte olması lazım."</em></p>
+</blockquote>
+<p><strong>The 1 cm rule:</strong> Press on the belt with your finger. It should give (esnemek = stretch/flex) about <strong>1 cm</strong> inward and spring back.</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Test result</th>
+<th>Consequence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Correct tension</strong></td>
+<td>Presses down ~1 cm with finger pressure</td>
+<td>Alternator spins properly, no noise</td>
+</tr>
+<tr>
+<td><strong>Too tight</strong> (çok gergin)</td>
+<td>Doesn't give at all, hard as metal</td>
+<td><strong>Belt snaps (kopar)</strong> under stress</td>
+</tr>
+<tr>
+<td><strong>Too loose</strong> (çok gevşek / yumuşak)</td>
+<td>Sags more than 1 cm, feels soft</td>
+<td>Belt slips on the pulley, alternator doesn't spin enough</td>
+</tr>
+</tbody>
+</table>
+<h3>Squeaking noise from the belt area</h3>
+<blockquote>
+<p><em>"Bazen araçlar çalışınca çok gergindir, ses gelir bir yerden. Fışık böyle bir değişik ses, lastik seti gibi."</em></p>
+</blockquote>
+<p>If you hear a <strong>high-pitched squeaking or whistling</strong> sound when the engine is running (especially at startup or under acceleration), it's usually the <strong>vantilatör kayışı</strong> — either too tight, too loose, or worn. Time to inspect and replace.</p>
+<h3>Şarj lambası (Charge light) startup behavior — what's NORMAL</h3>
+<blockquote>
+<p><em>"Arabayı çalıştırdım. Bir, iki saniye yanıyor, tıpkı sönüyor. Yanıp sönüyorsa zaten hiçbir sıkıntı yok."</em></p>
+</blockquote>
+<p><strong>Normal behavior at startup:</strong><br />
+1. You turn the key to ON → şarj lambası turns <strong>ON</strong> (red, because engine isn't running yet → no charging yet)<br />
+2. Engine starts → alternator spins → şarj lambası <strong>turns OFF</strong> within 1–2 seconds<br />
+3. Drive normally → lamp stays off</p>
+<p><strong>Abnormal behavior (danger):</strong><br />
+- Lamp <strong>stays ON</strong> after engine starts → charging system failure, STOP the car<br />
+- Lamp <strong>turns ON mid-drive</strong> → alternator/belt failure, STOP the car</p>
+<p>So a brief 1–2 second flash at startup is <strong>normal</strong> and expected — don't panic if you see it.</p>
+<h3>⚠️ Two-name exam trap strategy</h3>
+<p>The hoca specifically warned about this exam trap that students miss:</p>
+<blockquote>
+<p><em>"İki tane ismi olanlara dikkat edelim. Ezber yaparken sadece bir ismi ezberliyor, ikinci isme dikkat etmiyor. E adam bu sefer bu sefer onu yazmıyor da ikincisini yazıyor. 'Böyle bir şey mi vardı ya? Şarj dinamo vardı, regülatör diye bir şey mi vardı?' Böyle bir sıkıntıya düşüyor adaylar."</em></p>
+</blockquote>
+<p><strong>Translation:</strong> Several şarj sistemi parts have <strong>two valid Turkish names</strong>. Students memorize one name, skim the other, then panic on exam day when the question uses the alternate name.</p>
+<p><strong>The two-name components in şarj sistemi:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Primary name</th>
+<th>Alternate name (exam trap!)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Alternatör</strong></td>
+<td><strong>Şarj Dinamosu</strong></td>
+</tr>
+<tr>
+<td><strong>Konjonktör</strong></td>
+<td><strong>Regülatör</strong></td>
+</tr>
+<tr>
+<td><strong>Akü</strong></td>
+<td><strong>Akümülatör</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>The rule:</strong> When you see an exam option with a name you don't immediately recognize, <strong>check if it's the alternate name for a part you already know</strong>. All six names in the table above are valid şarj sistemi components. Don't eliminate "regülatör" just because you only memorized "konjonktör."</p>
+<p>This trap isn't just in şarj sistemi — it applies to <strong>any component with two names</strong> across all of Araç Tekniği (e.g., şaft ↔ kardan mili, yakıt deposu ↔ depo, aks ↔ dingil, etc.).</p>
+<hr />
+<h2>5. Why this matters for the exam</h2>
+<p>Very high-frequency question types:</p>
+<ol>
+<li>
+<p><em>"Şarj sisteminin görevi nedir?"</em><br />
+   → <strong>Motor çalıştığı sürece aracın elektrik enerjisini üretmek ve aküyü şarj etmektir.</strong></p>
+</li>
+<li>
+<p><em>"Aracın elektrik enerjisini üreten parça hangisidir?"</em><br />
+   → <strong>Alternatör (şarj dinamosu)</strong></p>
+</li>
+<li>
+<p><em>"Mekanik enerjiyi elektrik enerjisine çeviren parça?"</em><br />
+   → <strong>Alternatör</strong></p>
+</li>
+<li>
+<p><em>"Alternatörü hangi parça döndürür?"</em><br />
+   → <strong>Vantilatör kayışı (fan belt)</strong></p>
+</li>
+<li>
+<p><em>"Vantilatör kayışı koparsa ne olur?"</em><br />
+   → Alternator stops, battery stops charging, engine overheats (belt also drives water pump in most cars), <strong>şarj lambası yanar</strong></p>
+</li>
+<li>
+<p><em>"Şarj lambası yandığında ne yapılmalı?"</em><br />
+   → Stop the car, check alternator + fan belt</p>
+</li>
+<li>
+<p><em>"Aşağıdakilerden hangisi şarj sisteminin parçası değildir?"</em> (Which is NOT a part?)<br />
+   → They'll list the 8 parts above + 1 trap (karbüratör, enjektör, radyatör, yağ pompası, etc.)</p>
+</li>
+<li>
+<p><em>"Gerilim regülatörü hangi sistemde bulunur?"</em><br />
+   → <strong>Şarj sisteminde</strong> (konjonktör = regülatör)</p>
+</li>
+</ol>
+<hr />
+<h2>6. Memorize These (Charging System)</h2>
+<blockquote>
+<p><strong>Şarj sisteminin görevi:</strong> Motor çalıştığı sürece aracın elektrik enerjisini üretmek ve aküyü şarj etmektir.<br />
+<em>(The charging system's job is to produce the electrical energy needed by the vehicle and charge the battery as long as the engine runs.)</em></p>
+<p><strong>Alternatör:</strong> Mekanik enerjiyi elektrik enerjisine çeviren parçadır.<br />
+<em>(The alternator converts mechanical energy into electrical energy.)</em></p>
+<p><strong>Alternatörü vantilatör kayışı döndürür.</strong><br />
+<em>(The fan belt rotates the alternator.)</em></p>
+<p><strong>Konjonktör (regülatör) gerilimi ayarlar.</strong><br />
+<em>(The conjunctor/regulator adjusts the voltage.)</em></p>
+</blockquote>
+<p><strong>The golden contrast:</strong></p>
+<blockquote>
+<p><strong>Marş motoru</strong> = elektrik → mekanik<br />
+<strong>Alternatör</strong> = mekanik → elektrik</p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary — Charging System</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Şarj sistemi</td>
+<td>Charging system</td>
+<td>The whole system</td>
+</tr>
+<tr>
+<td>Şarj</td>
+<td>Charge / charging</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>Şarj etmek</td>
+<td>To charge</td>
+<td>"aküyü şarj eder"</td>
+</tr>
+<tr>
+<td>Görev</td>
+<td>Job / duty</td>
+<td>"Its görev is…"</td>
+</tr>
+<tr>
+<td>Motor çalıştığı sürece</td>
+<td>As long as the engine runs</td>
+<td>Key phrase</td>
+</tr>
+<tr>
+<td>Motor çalıştığı andan itibaren</td>
+<td>From the moment the engine starts</td>
+<td>Variant phrase</td>
+</tr>
+<tr>
+<td>Gerekli olan</td>
+<td>That is needed</td>
+<td>Exam-flavored phrasing</td>
+</tr>
+<tr>
+<td>Üretmek</td>
+<td>To produce / generate</td>
+<td>What the alternator does</td>
+</tr>
+<tr>
+<td>Üretir</td>
+<td>It produces</td>
+<td>"Elektrik üretir"</td>
+</tr>
+<tr>
+<td>Üretilen</td>
+<td>Produced / generated</td>
+<td>Passive participle</td>
+</tr>
+<tr>
+<td>Aküyü şarj eder</td>
+<td>Charges the battery</td>
+<td>Common answer phrase</td>
+</tr>
+<tr>
+<td>Alternatör</td>
+<td>Alternator</td>
+<td>The electricity generator</td>
+</tr>
+<tr>
+<td>Şarj dinamosu</td>
+<td>Charge dynamo</td>
+<td>Older name for alternator</td>
+</tr>
+<tr>
+<td>Konjonktör</td>
+<td>Conjunctor / regulator</td>
+<td>Voltage regulator</td>
+</tr>
+<tr>
+<td>Regülatör</td>
+<td>Regulator</td>
+<td>Same thing as konjonktör</td>
+</tr>
+<tr>
+<td>Gerilim</td>
+<td>Voltage</td>
+<td>Electrical pressure</td>
+</tr>
+<tr>
+<td>Sigorta</td>
+<td>Fuse</td>
+<td>Protects from overcurrent</td>
+</tr>
+<tr>
+<td>Şarj müşürü</td>
+<td>Charge sender / sensor</td>
+<td>Feeds data to the gauge</td>
+</tr>
+<tr>
+<td>Şarj göstergesi</td>
+<td>Charge indicator</td>
+<td>Dashboard gauge</td>
+</tr>
+<tr>
+<td>Şarj lambası</td>
+<td>Charge warning light</td>
+<td>The red dashboard light</td>
+</tr>
+<tr>
+<td>Vantilatör kayışı</td>
+<td>Fan belt</td>
+<td>Drives alternator (and usually water pump)</td>
+</tr>
+<tr>
+<td>Kayış</td>
+<td>Belt</td>
+<td>Generic belt</td>
+</tr>
+<tr>
+<td>Akümülatör</td>
+<td>Battery</td>
+<td>Same as akü</td>
+</tr>
+<tr>
+<td>Kontak anahtarı</td>
+<td>Ignition switch</td>
+<td>Shared with marş sistemi</td>
+</tr>
+<tr>
+<td>Aracılığıyla</td>
+<td>By means of / through</td>
+<td>"Regülatör aracılığıyla"</td>
+</tr>
+<tr>
+<td>Besleme</td>
+<td>Supply / feed</td>
+<td>Electrical supply</td>
+</tr>
+<tr>
+<td>Sağlamak</td>
+<td>To provide / supply</td>
+<td>"Beslemesini sağlar"</td>
+</tr>
+<tr>
+<td>Ayrıca</td>
+<td>Also / additionally</td>
+<td>Transition word</td>
+</tr>
+<tr>
+<td>Ateşleme sistemi</td>
+<td>Ignition system</td>
+<td>Lights the fuel/air mixture</td>
+</tr>
+<tr>
+<td>Aydınlatma sistemi</td>
+<td>Lighting system</td>
+<td>Headlights, interior, etc.</td>
+</tr>
+<tr>
+<td>Elektrik akımı</td>
+<td>Electrical current</td>
+<td>The flow of electricity</td>
+</tr>
+<tr>
+<td>Çeviren</td>
+<td>That converts</td>
+<td>"mekanik enerjiyi elektrik enerjisine çeviren"</td>
+</tr>
+<tr>
+<td>Döndürmek</td>
+<td>To rotate / spin</td>
+<td>What the belt does to the alternator</td>
+</tr>
+<tr>
+<td>Kopmak</td>
+<td>To snap / break</td>
+<td>Fan belt breaking fault</td>
+</tr>
+<tr>
+<td>Yanmak</td>
+<td>To be lit (light) / to burn</td>
+<td>"Lamba yanar" = the light comes on</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li><strong>Mirror system:</strong> <a href="03-marş-sistemi.md">03-marş-sistemi.md</a> — marş sistemi uses the akü, şarj sistemi refills the akü. Together they form the complete battery-power cycle.</li>
+<li><strong>Shared components:</strong> The akü and kontak anahtarı appear in BOTH marş sistemi and şarj sistemi — they're shared parts of the broader electrical system.</li>
+<li><strong>Interaction with cooling:</strong> In most cars, the <strong>vantilatör kayışı</strong> drives both the alternator AND the water pump, so a broken belt fails both the şarj sistemi and the soğutma sistemi simultaneously. This is a favorite multi-system exam trap.</li>
+<li><strong>Warning lights:</strong> The <strong>şarj lambası</strong> (charge warning) is one of the three critical "stop immediately" dashboard warnings, along with the <strong>oil pressure light</strong> (see <a href="02-yağlama-sistemi.md">02-yağlama-sistemi.md</a>) and engine temperature warning.</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/arac-teknigi/page-033.html">📄 Sayfa 33: şARJ SİSTEMİ<span class="score">133.5</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-036.html">📄 Sayfa 36: MARş SİSTEMİ<span class="score">106.6</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-015.html">📄 Sayfa 15: ATEşLEME SİSTEMİNİN PARÇALARI<span class="score">79.1</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-030.html">📄 Sayfa 30: SOĞUTMA SİSTEMİNİN PARÇALARI<span class="score">65.2</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-025.html">📄 Sayfa 25: DİZEL MOTORLARIN YAKIT SİSTEMİ<span class="score">63.4</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-047.html">📄 Sayfa 47: TEKERLEKLER VE LASTİKLER<span class="score">60.9</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/arac-teknigi-kitabi/06-sarj-mars/index.html">🖼️ Şarj & Marş<span class="score">5 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/index.html">🖼️ Yakıt Sistemi<span class="score">4 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/02-atesleme-aku/index.html">🖼️ Ateşleme & Akü<span class="score">3 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

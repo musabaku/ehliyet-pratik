@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araçların Yüklenmesi — Vehicle Loading | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 24-araçların-yüklenmesi</span>
+</div>
+<div class="content">
+<h1>Araçların Yüklenmesi — Vehicle Loading</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — 5-maddelik yükleme kuralı (taşıma sınırı yasağı, dingil/toplam ağırlık yasağı, standart dışı yük → <strong>Karayolları Genel Müdürlüğü</strong> izni, ağırlık kontrolü <strong>KGM</strong>, radyoaktif yük → <strong>Atom Enerjisi Komisyonu</strong> izni)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Every vehicle has two weight limits stamped by the factory:<br />
+- <strong>Taşıma sınırı (istiap haddi)</strong> — maximum passenger or cargo weight the vehicle is built to carry.<br />
+- <strong>Dingil ağırlığı</strong> — maximum load allowed on each <strong>axle</strong> (front and rear separately).<br />
+- <strong>Toplam ağırlık</strong> — full vehicle mass (empty + maximum load).</p>
+<p>Exceeding any of these:<br />
+- Damages the road surface (heavy axle = asphalt rutting).<br />
+- Damages the vehicle (broken suspensions, snapped axles, blown tires).<br />
+- Causes accidents (brakes can't stop the extra weight; weight shifts on corners).<br />
+- Is <strong>illegal</strong> and fined.</p>
+<p>For loads that exceed standard size or weight, special permission and escort are required.</p>
+<hr />
+<h2>2. SLIDE 1 — Araçların Yüklenmesi</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-129.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-129.png" alt="Slayt — Sayfa 129: ARAÇLARIN YÜKLENMESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 129: ARAÇLARIN YÜKLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-129.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Header "<strong>ARAÇLARIN YÜKLENMESİ</strong>" with 5 bullet rules. Below is a striking photo of a heavy-haul truck carrying a full-sized <strong>fishing boat</strong> on a flatbed, passing under an İstanbul/Ankara highway sign — the textbook example of "standart dışı yük."</p>
+<h3>The 5 loading rules</h3>
+<blockquote>
+<ol>
+<li><strong>Araçlara, taşıma sınırı üstünde yolcu veya yük alınması,</strong> — Taking on passengers or cargo <strong>above the vehicle's rated taşıma sınırı</strong> is forbidden.</li>
+<li><strong>Aracın toplam ve dingil ağırlıklarını aşacak şekilde yük yüklenmesi yasaktır.</strong> — Loading in a way that exceeds the vehicle's <strong>total</strong> or <strong>axle</strong> weight is forbidden.</li>
+<li><strong>Ağırlık ve boyutları bakımından standart dışı yüklerin karayolu ile taşınması için <em>Karayolları Genel Müdürlüğü</em>'nden izin alınması zorunludur.</strong> — Transporting loads that are <strong>outside standard weight or dimensions</strong> requires a permit from the <strong>KGM (Karayolları Genel Müdürlüğü — General Directorate of Highways)</strong>.</li>
+<li><strong>Araçların ağırlık kontrolleri <em>Karayolları Genel Müdürlüğü</em>'nce yapılır.</strong> — <strong>Vehicle weight checks</strong> (weighing stations / tartı) are conducted by the <strong>KGM</strong>.</li>
+<li><strong>Radyoaktif maddelerin yüklenmesi, boşaltılması ve taşınabilmesi için <em>Atom Enerjisi Komisyonu</em>'ndan izin alınması zorunludur.</strong> — <strong>Loading, unloading, and transport of radioactive materials</strong> requires a permit from the <strong>Atom Enerjisi Komisyonu (Atomic Energy Commission)</strong>.</li>
+</ol>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The 3 weight limits — know the terminology cold</h4>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Ne ölçer</th>
+<th>Exam keyword</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Taşıma sınırı</strong> (istiap haddi)</td>
+<td>How much cargo <strong>or passengers</strong> the vehicle can carry</td>
+<td>"yolcu veya yük"</td>
+</tr>
+<tr>
+<td><strong>Dingil ağırlığı</strong></td>
+<td>Load on <strong>one axle</strong></td>
+<td>"dingil"</td>
+</tr>
+<tr>
+<td><strong>Toplam ağırlık</strong></td>
+<td>Boş araç + yük toplam kütlesi</td>
+<td>"toplam"</td>
+</tr>
+</tbody>
+</table>
+<p>Rule: you cannot exceed <strong>any</strong> of them. Even if total weight is under limit, if one axle is overloaded (all cargo packed in the back) it's still illegal.</p>
+<h4>The 2 permit-issuing authorities — don't confuse them</h4>
+<table>
+<thead>
+<tr>
+<th>Yük türü</th>
+<th>İzin makamı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ağırlık/boyutları standart dışı yük</strong> (oversized/overweight cargo — boats, turbines, transformers, prefab homes)</td>
+<td><strong>Karayolları Genel Müdürlüğü (KGM)</strong></td>
+</tr>
+<tr>
+<td><strong>Radyoaktif madde</strong> (nuclear fuel, medical isotopes, industrial sources)</td>
+<td><strong>Atom Enerjisi Komisyonu</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam trap:</strong> both authorities sound official, but only ONE handles each domain. KGM = roads/size. Atom Enerjisi Komisyonu = radioactive. A question like "Radyoaktif madde taşıma izni kim verir?" has the answer <strong>Atom Enerjisi Komisyonu</strong> — not KGM.</p>
+<h4>Who does the weighing (rule 4)?</h4>
+<p><strong>Karayolları Genel Müdürlüğü (KGM)</strong> — through highway weigh stations (kantarlar / tartı istasyonları). Police can stop for a weight inspection but the authority to run the scales and issue the reading is KGM's.</p>
+<h4>What counts as "standart dışı yük"?</h4>
+<p>Loads that are:<br />
+- <strong>Wider</strong> than the legal gabari (typically wider than 2.55 m).<br />
+- <strong>Taller</strong> than standard (typically above 4 m).<br />
+- <strong>Longer</strong> than standard (trailer protruding front/rear beyond limits).<br />
+- <strong>Heavier</strong> than the vehicle's limit even if proportionally loaded.</p>
+<p>These need a <strong>special escort permit</strong> (refakat) from KGM, often with time-of-day restrictions and escort vehicles.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Yükleme yasakları (3):</strong><br />
+- Taşıma sınırı üstünde yolcu/yük alma <strong>YASAK</strong>.<br />
+- Toplam ağırlık veya dingil ağırlığı aşacak şekilde yükleme <strong>YASAK</strong>.<br />
+- Standart dışı yük → <strong>Karayolları Genel Müdürlüğü</strong> izni zorunlu.</p>
+<p><strong>Ağırlık kontrolünü yapan:</strong> <strong>Karayolları Genel Müdürlüğü</strong>.<br />
+<strong>Radyoaktif madde izni:</strong> <strong>Atom Enerjisi Komisyonu</strong>.</p>
+</blockquote>
+<hr />
+<h2>3. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Araçların ağırlık kontrolü hangi kurumca yapılır?"</strong> → <strong>Karayolları Genel Müdürlüğü.</strong></li>
+<li><strong>"Standart dışı yüklerin karayolunda taşınması için hangi kurumdan izin alınır?"</strong> → <strong>Karayolları Genel Müdürlüğü.</strong></li>
+<li><strong>"Radyoaktif maddelerin taşınması için hangi kurumdan izin alınır?"</strong> → <strong>Atom Enerjisi Komisyonu.</strong></li>
+<li><strong>"Araçlara taşıma sınırı üzerinde yolcu veya yük almak yasal mıdır?"</strong> → <strong>Hayır, yasaktır.</strong></li>
+<li><strong>"Araçta hangi ağırlık değerleri aşılamaz?"</strong> → <strong>Toplam ağırlık ve dingil ağırlığı.</strong></li>
+<li><strong>"Dingil ağırlığı ne demektir?"</strong> → <strong>Bir dingil (aks) üstüne düşen ağırlık.</strong></li>
+</ol>
+<hr />
+<h2>4. Memorize These</h2>
+<blockquote>
+<p><strong>AĞIRLIK LİMİTLERİ:</strong> Taşıma sınırı · Toplam ağırlık · <strong>Dingil</strong> ağırlığı — üçü de aşılamaz.</p>
+<p><strong>İZİN MAKAMLARI:</strong><br />
+- Standart dışı yük (ağırlık/boyut) → <strong>Karayolları Genel Müdürlüğü</strong>.<br />
+- Radyoaktif madde → <strong>Atom Enerjisi Komisyonu</strong>.</p>
+<p><strong>AĞIRLIK KONTROLÜ:</strong> <strong>Karayolları Genel Müdürlüğü</strong>.</p>
+</blockquote>
+<hr />
+<h2>5. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yüklenme / yükleme</td>
+<td>Loading</td>
+<td>Putting cargo on</td>
+</tr>
+<tr>
+<td>Boşaltma</td>
+<td>Unloading</td>
+<td>Taking cargo off</td>
+</tr>
+<tr>
+<td>Taşıma sınırı</td>
+<td>Carrying capacity / load limit</td>
+<td>Factory-rated max load</td>
+</tr>
+<tr>
+<td>İstiap haddi</td>
+<td>Carrying capacity (synonym of taşıma sınırı)</td>
+<td>Older term, same meaning</td>
+</tr>
+<tr>
+<td>Toplam ağırlık</td>
+<td>Total weight</td>
+<td>Empty vehicle + max load</td>
+</tr>
+<tr>
+<td>Dingil ağırlığı</td>
+<td>Axle weight</td>
+<td>Load on one axle</td>
+</tr>
+<tr>
+<td>Dingil</td>
+<td>Axle</td>
+<td>Mechanical axle (aks)</td>
+</tr>
+<tr>
+<td>Standart dışı yük</td>
+<td>Non-standard cargo</td>
+<td>Oversized/overweight</td>
+</tr>
+<tr>
+<td>Boyut</td>
+<td>Dimension</td>
+<td>Size (length/width/height)</td>
+</tr>
+<tr>
+<td>Ağırlık kontrolü</td>
+<td>Weight inspection</td>
+<td>Weighing at a station</td>
+</tr>
+<tr>
+<td>İzin</td>
+<td>Permit / permission</td>
+<td>Official authorization</td>
+</tr>
+<tr>
+<td>Karayolları Genel Müdürlüğü (KGM)</td>
+<td>General Directorate of Highways</td>
+<td>Road authority</td>
+</tr>
+<tr>
+<td>Atom Enerjisi Komisyonu</td>
+<td>Atomic Energy Commission</td>
+<td>Nuclear authority</td>
+</tr>
+<tr>
+<td>Radyoaktif madde</td>
+<td>Radioactive material</td>
+<td>Nuclear/medical/industrial sources</td>
+</tr>
+<tr>
+<td>Yolcu</td>
+<td>Passenger</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Yük</td>
+<td>Cargo / load</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Zorunlu</td>
+<td>Mandatory</td>
+<td>Required by law</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>6. Cross-references</h2>
+<ul>
+<li>Gabari ve ağırlık tanımları → <a href="04-gabari-ve-ağırlık.md">04-gabari-ve-ağırlık.md</a></li>
+<li>Araç tanımları (kamyon, çekici, römork, yarı römork) → <a href="03-araç-tanımları.md">03-araç-tanımları.md</a></li>
+<li>Yasak duraklama/park yerleri (ağır araçlar için ek kurallar) → <a href="22-duraklama-park-tedbirleri.md">22-duraklama-park-tedbirleri.md</a></li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-129.html">📄 Sayfa 129: ARAÇLARIN YÜKLENMESİ<span class="score">162.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-029.html">📄 Sayfa 29: Gabari: Araçların yüklü veya yüksüz olarak karayolunda güvenli seyirlerini temin amacı<span class="score">62.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-173.html">📄 Sayfa 173: 4- Karayolları Genel Müdürlüğü:<span class="score">51.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-130.html">📄 Sayfa 130: YÜKLEME SIRASINDA DİKKAT EDİLECEK HUSUSLAR:<span class="score">48.8</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-128.html">📄 Sayfa 128: ARAÇLARIN BOYUT ÖLÇÜ VE AĞIRLIKLARI:<span class="score">44.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html">📄 Sayfa 83: HIZ KURALLARI<span class="score">39.8</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">2 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/index.html">🖼️ Durma, Park, Işıklandırma<span class="score">2 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

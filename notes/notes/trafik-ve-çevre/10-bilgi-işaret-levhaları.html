@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilgi İşaret Levhaları — Informational Signs + Otoyol + Duraklama/Park + Yol Numaraları | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 10-bilgi-işaret-levhaları</span>
+</div>
+<div class="content">
+<h1>Bilgi İşaret Levhaları — Informational Signs + Otoyol + Duraklama/Park + Yol Numaraları</h1>
+<p><strong>Last updated:</strong> 2026-04-15<br />
+<strong>Slides covered:</strong> 7 slides from 2026-04-15 class — settlement (meskun mahal) signs, geographic signs, distance signs, facility signs (hospital, pedestrian zone, yaya geçidi), priority road signs, emergency phone numbers, otoyol signs, parking/stopping signs, and road numbering system</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p><strong>Bilgi işaret levhaları</strong> are the <strong>third main category</strong> of trafik işaret levhaları (after tehlike uyarı and trafik tanzim). They do not warn or command — they <strong>inform</strong>. They tell you where you are, what's nearby, and what services are available.</p>
+<h3>Universal visual signature</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Shape</strong></td>
+<td><strong>Dikdörtgen (rectangle) or kare (square)</strong></td>
+</tr>
+<tr>
+<td><strong>Colour</strong></td>
+<td>Varies by sub-type — <strong>mavi (blue)</strong> for most info, <strong>yeşil (green)</strong> for otoyol/distance, <strong>kahverengi (brown)</strong> for geographic/touristic</td>
+</tr>
+<tr>
+<td><strong>Meaning</strong></td>
+<td><strong>Information</strong> — no obligation, no prohibition, just guidance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>2. SLIDE 1 — Meskun Mahal Levhaları (Settlement Signs)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/page-043.png" alt="Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The 6 signs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B-9a</strong></td>
+<td>Meskun Mahal Levhası (İl Merkezi)</td>
+<td>Settlement sign — province centre</td>
+<td><strong>ANKARA</strong> — Nüfus: 3,016,000 · Rakım: 840. White text on blue</td>
+</tr>
+<tr>
+<td><strong>B-9b</strong></td>
+<td>Meskun Mahal Levhası (İlçe Merkezi)</td>
+<td>Settlement sign — district centre</td>
+<td><strong>NALLIHAN</strong> — Nüfus: 16,900</td>
+</tr>
+<tr>
+<td><strong>B-9c</strong></td>
+<td>Meskun Mahal Levhası (Köy/Belde/Küçük Merkez)</td>
+<td>Settlement sign — village/town</td>
+<td><strong>SARIYER</strong></td>
+</tr>
+<tr>
+<td><strong>B-10a</strong></td>
+<td>Meskun Mahal Sonu Levhası (İl Merkezi)</td>
+<td>End of settlement — province</td>
+<td>Blue sign with <strong>red diagonal line</strong> through "ANKARA"</td>
+</tr>
+<tr>
+<td><strong>B-10b</strong></td>
+<td>Meskun Mahal Sonu Levhası (İlçe Merkezi)</td>
+<td>End of settlement — district</td>
+<td>Red line through "NALLIHAN"</td>
+</tr>
+<tr>
+<td><strong>B-10c</strong></td>
+<td>Meskun Mahal Sonu Levhası (Köy/Belde)</td>
+<td>End of settlement — village</td>
+<td>Red line through "SARIYER"</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Meskun mahal = yerleşim yeri.</strong> When you pass a meskun mahal sign, <strong>speed limits change</strong> (typically 50 km/h inside built-up areas vs 90 km/h outside). When you pass the <strong>sonu</strong> (end) sign (the one with the red line), the higher speed limit resumes.</p>
+<p>The exam asks: <em>"Kırmızı çizgiyle üstü çizilmiş mavi yerleşim yeri işareti ne anlama gelir?"</em> → <strong>Meskun mahalin sona erdiğini bildirir</strong> — you are now <strong>outside</strong> the settlement.</p>
+<p><strong>Hoca's live clarification (2026-04-15) — nüfus/rakım no longer shown:</strong><br />
+<em>"Buna nüfus ve rakım yazılmıyor. Sadece il merkezinin ismi yazıyor."</em><br />
+Current-generation meskun mahal signs <strong>only show the name</strong> of the settlement — population and elevation are no longer printed. The slide showed old-format signs with nüfus/rakım for teaching, but the real road signs have been simplified.</p>
+<p><strong>Speed limits by road type (Türkiye'de geçerli hız sınırları):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Road type</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yerleşim yeri içi (built-up)</td>
+<td><strong>50 km/h</strong></td>
+</tr>
+<tr>
+<td>İki yönlü yol (two-lane)</td>
+<td><strong>90 km/h</strong></td>
+</tr>
+<tr>
+<td>Bölünmüş yol (divided)</td>
+<td><strong>110 km/h</strong></td>
+</tr>
+<tr>
+<td>Otoyol (motorway)</td>
+<td><strong>120 km/h</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Hoca noted that some otoyol sections have been raised to <strong>130 km/h</strong> in certain locations.</p>
+</blockquote>
+<hr />
+<h2>3. SLIDE 2 — Coğrafi Bilgi · Mesafe Levhaları</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The 6 signs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B-11a</strong></td>
+<td>Coğrafi Bilgi Levhası (Dağ Geçidi)</td>
+<td>Geographic info — mountain pass</td>
+<td><strong>Sertavul Geçidi · Rakım 1610</strong> — elevation info</td>
+</tr>
+<tr>
+<td><strong>B-11b</strong></td>
+<td>Coğrafi Bilgi Levhası (Nehir)</td>
+<td>Geographic info — river</td>
+<td><strong>Kızılırmak</strong></td>
+</tr>
+<tr>
+<td><strong>B-11c</strong></td>
+<td>Coğrafi Bilgi Levhası (Dağ)</td>
+<td>Geographic info — mountain</td>
+<td><strong>Bolu Dağı</strong></td>
+</tr>
+<tr>
+<td><strong>B-11d</strong></td>
+<td>Coğrafi Bilgi Levhası (Göl)</td>
+<td>Geographic info — lake</td>
+<td><strong>Tuz Gölü</strong></td>
+</tr>
+<tr>
+<td><strong>B-15a</strong></td>
+<td>Meskun Mahal ve Kavşak Çıkış Mesafe Levhası</td>
+<td>Settlement and junction distance sign</td>
+<td><strong>Bolu 36 · İstanbul 298</strong> — distance in km</td>
+</tr>
+<tr>
+<td><strong>B-15b</strong></td>
+<td>Mesafe Levhası</td>
+<td>Distance sign</td>
+<td><strong>Bolu 28 · İstanbul 290</strong> — updated distances after passing a point</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam nuance</h3>
+<ul>
+<li><strong>Green signs = otoyol / mesafe.</strong> Blue signs = general bilgi. Brown signs = coğrafi/turizm. The colour coding is tested: <em>"Yeşil levhalar ne tür bilgi verir?"</em> → <strong>Otoyol ve mesafe bilgisi.</strong></li>
+</ul>
+<hr />
+<h2>4. SLIDE 3 — Facility Signs (Yaya Geçidi, Okul, Hastane, Tek Yön, Yaya Bölgesi)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-015.png" alt="Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ:" loading="lazy"></a><figcaption>Slayt — Sayfa 15: YAYA-OKUL GEÇİTLERİ: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-015.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The 8 signs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B-14</strong></td>
+<td>Yaya Geçidi</td>
+<td>Pedestrian crossing</td>
+<td>Blue rectangle with zebra-crossing icon</td>
+</tr>
+<tr>
+<td><strong>B-14a</strong></td>
+<td>Okul Geçidi</td>
+<td>School crossing</td>
+<td>Blue rectangle with children icon</td>
+</tr>
+<tr>
+<td><strong>B-15</strong></td>
+<td>Hastane</td>
+<td>Hospital</td>
+<td>Blue square with H</td>
+</tr>
+<tr>
+<td><strong>B-16</strong></td>
+<td>Tek Yönlü Yol</td>
+<td>One-way street</td>
+<td>Blue rectangle with white arrow</td>
+</tr>
+<tr>
+<td><strong>B-14a</strong></td>
+<td>Yaya Bölgesi (Günün Belirli Saatleri)</td>
+<td>Pedestrian zone — certain hours</td>
+<td>Sign with clock/time restriction</td>
+</tr>
+<tr>
+<td><strong>B-14b</strong></td>
+<td>Yaya Bölgesi (Yasaklar)</td>
+<td>Pedestrian zone — prohibitions shown</td>
+<td>Lists what is forbidden in the zone</td>
+</tr>
+<tr>
+<td><strong>B-14c</strong></td>
+<td>Yaya Bölgesi (İzinler)</td>
+<td>Pedestrian zone — permissions shown</td>
+<td>Lists what is allowed (e.g., delivery vehicles 06:00–10:00)</td>
+</tr>
+<tr>
+<td><strong>B-14d</strong></td>
+<td>Yaya Bölgesi (Toplu Taşıma)</td>
+<td>Pedestrian zone — public transport allowed</td>
+<td>Public transport may pass through</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam nuance</h3>
+<ul>
+<li><strong>Yaya bölgesi sub-signs</strong> are rectangular blue signs with white sub-panels listing <strong>restrictions, permissions, and time windows</strong>. The exam may show a yaya bölgesi sign with a time sub-panel and ask <em>"Bu saatler dışında araç girebilir mi?"</em> — read the sub-panel carefully.</li>
+</ul>
+<hr />
+<h2>5. SLIDE 4 — Priority Road · Emergency Services · Institutions</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-174.png" alt="Slayt — Sayfa 174: 5- Milli Eğitim Bakanlığı :" loading="lazy"></a><figcaption>Slayt — Sayfa 174: 5- Milli Eğitim Bakanlığı : <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The 8 signs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B-17</strong></td>
+<td>Öncelikli Olan Yön</td>
+<td>Priority direction</td>
+<td>Arrow sign showing which direction has right of way at a narrow passage</td>
+</tr>
+<tr>
+<td><strong>B-30</strong></td>
+<td>Anayol</td>
+<td>Priority road (main road)</td>
+<td><strong>Yellow diamond</strong> — you are on the priority road; side roads yield to you</td>
+</tr>
+<tr>
+<td><strong>B-30s</strong></td>
+<td>Anayol Sonu</td>
+<td>End of priority road</td>
+<td>Yellow diamond with black bar — your priority ends</td>
+</tr>
+<tr>
+<td><strong>B-46</strong></td>
+<td>Jandarma (156)</td>
+<td>Gendarmerie — phone 156</td>
+<td>Emergency contact for rural areas</td>
+</tr>
+<tr>
+<td><strong>B-41</strong></td>
+<td>Polis</td>
+<td>Police station</td>
+<td>Blue sign with "Polis"</td>
+</tr>
+<tr>
+<td><strong>B-42</strong></td>
+<td>Yangın Tehlikesi (177)</td>
+<td>Fire danger — phone 177</td>
+<td>Fire emergency phone</td>
+</tr>
+<tr>
+<td><strong>B-23</strong></td>
+<td>112 Acil Yardım</td>
+<td>112 Emergency</td>
+<td>The universal emergency number in Turkey</td>
+</tr>
+<tr>
+<td><strong>B-44</strong></td>
+<td>Kaymakamlık / Türk Darphane</td>
+<td>Government office / institution</td>
+<td>General institutional sign</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>B-30 (yellow diamond) = ANAYOL.</strong> This is one of the most-tested signs. When you are on the anayol, vehicles on <strong>tali yollar (side roads) must yield to you</strong>. When you see <strong>B-30s (diamond with bar)</strong>, your anayol priority ends — at the next intersection, normal rules apply (sağdan gelen = right-of-way).</p>
+<p><strong>Yellow diamond shape = priority.</strong> No other sign uses this shape/colour combo. If the exam shows a yellow diamond, the answer involves "anayol" or "öncelikli yol."</p>
+<p><strong>Emergency numbers to memorize:</strong><br />
+- <strong>112</strong> — Acil yardım (universal emergency)<br />
+- <strong>155</strong> — Polis<br />
+- <strong>156</strong> — Jandarma (rural/military police)<br />
+- <strong>177</strong> — Orman yangını (forest fire)<br />
+- <strong>110</strong> — İtfaiye (fire department)</p>
+<p><strong>Hoca's live addition (2026-04-15) — say "bir-bir-iki" not "yüz on iki":</strong><br />
+<em>"Eskiden yüz on iki diyorduk ama bunu değiştirmişler, bir-bir-iki demek gerekiyor. Neden? Çünkü küçük çocuklar ona kadar saymayı biliyor ama yüz on ikiyi diyemez. Onun için bir-bir-iki demek gerekiyor. Çocuklara da öyle öğretmek gerekiyor."</em></p>
+<p>The official way to say the emergency number is now <strong>"bir-bir-iki"</strong> (1-1-2), not "yüz on iki" (112). Small children can say single digits but not "one hundred and twelve." Teach it as <strong>three separate digits</strong>.</p>
+</blockquote>
+<hr />
+<h2>6. SLIDE 5 — Otoyol, Tünel, Şerit Düzenleme, Kaçış Rampası</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-135.png" alt="Slayt — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ" loading="lazy"></a><figcaption>Slayt — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The 7 signs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B-60</strong></td>
+<td>Otoyol / Tünel</td>
+<td>Motorway / tunnel ahead</td>
+<td>Blue rectangle with tunnel or motorway icon</td>
+</tr>
+<tr>
+<td><strong>B-60s</strong></td>
+<td>Şerit Düzenlemesi</td>
+<td>Lane arrangement</td>
+<td>Blue sign showing how lanes merge/split</td>
+</tr>
+<tr>
+<td><strong>B-61</strong></td>
+<td>Araç Bakım Levhası</td>
+<td>Vehicle service station</td>
+<td>Blue info sign for rest areas</td>
+</tr>
+<tr>
+<td><strong>B-80</strong></td>
+<td>Kaçış Rampası 500 m</td>
+<td>Escape ramp — 500 m ahead</td>
+<td>Yellow sign — escape ramp for brake failure</td>
+</tr>
+<tr>
+<td><strong>B-80a</strong></td>
+<td>Kaçış Rampası</td>
+<td>Escape ramp — here</td>
+<td>The actual ramp location</td>
+</tr>
+<tr>
+<td><strong>B-81a</strong></td>
+<td>Kaçış Rampası (at ramp)</td>
+<td>Escape ramp turn-off</td>
+<td>Directional sign at the ramp entry</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact — Kaçış Rampası</h3>
+<blockquote>
+<p><strong>Kaçış rampası (escape ramp):</strong> a long uphill gravel strip built on steep descents for vehicles whose <strong>brakes have failed</strong> (fren arızası). The slide defines it:</p>
+<p><em>"Fren arızası nedeni ile oluşabilecek can ve mal kayıplı kazaların önüne geçmek için yapılmıştır, fren kontrolünü yitirmiş ağır araçların trafik koridorundan ayrılarak izole edilmesi ve aracın kontrollü bir şekilde durdurulmasını temin eden yapılardır."</em></p>
+<p><em>(Built to prevent fatal/costly accidents caused by brake failure; it isolates runaway heavy vehicles from the traffic corridor and brings them to a controlled stop.)</em></p>
+<p>These are posted on <strong>mountain descents</strong> (tehlikeli eğim / iniş). The signs come in a sequence: <strong>500 m → ramp approach → ramp itself</strong>.</p>
+</blockquote>
+<hr />
+<h2>7. SLIDE 6 — Duraklama ve Park Etme İşaret Levhaları</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-018.png" alt="Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan" loading="lazy"></a><figcaption>Slayt — Sayfa 18: Park Yeri (Otopark): Araçların park etmesi için kullanılan açık veya kapalı alan <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-018.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The 7 signs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>P-1</strong></td>
+<td>Park Etmek Yasaktır</td>
+<td>No parking</td>
+<td>Red-bordered blue circle with single red diagonal slash over P</td>
+</tr>
+<tr>
+<td><strong>P-2</strong></td>
+<td>Duraklama ve Park Etme Yasaktır</td>
+<td>No stopping or parking</td>
+<td><strong>Double red diagonal slash</strong> over blue circle — both stopping AND parking forbidden</td>
+</tr>
+<tr>
+<td><strong>P-3a</strong></td>
+<td>Park Yeri</td>
+<td>Parking area</td>
+<td>White P on blue square — parking is available</td>
+</tr>
+<tr>
+<td><strong>P-7a</strong></td>
+<td>Kapalı Park Yeri</td>
+<td>Covered / indoor parking</td>
+<td>P with a roof icon</td>
+</tr>
+<tr>
+<td><strong>P-7b</strong></td>
+<td>Park Yeri + Metro</td>
+<td>Park and ride (Metro)</td>
+<td>P + Metro icon — park here and take metro</td>
+</tr>
+<tr>
+<td><strong>P-7c</strong></td>
+<td>Park Yeri (belveder/yabancinlar için)</td>
+<td>Parking for specific users</td>
+<td>P with a sub-panel indicating who may park</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam nuances</h3>
+<ul>
+<li><strong>P-1 (single slash) = park yasak, duraklama serbest.</strong> You CAN stop briefly (duraklama — under 5 minutes for loading/unloading), but you CANNOT park (leave your vehicle).</li>
+<li><strong>P-2 (double slash) = duraklama ve park BOTH yasak.</strong> You cannot stop at all — not even briefly.</li>
+</ul>
+<p>This is the classic <strong>durma / duraklama / park etme</strong> three-way trap from <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a>:<br />
+  - <strong>Durma</strong> = forced stop (traffic light, police) — always allowed<br />
+  - <strong>Duraklama</strong> = voluntary brief stop (≤5 min, loading/unloading, dropping off passengers)<br />
+  - <strong>Park etme</strong> = leaving the vehicle standing</p>
+<p><strong>P-1 bans park but allows duraklama. P-2 bans both.</strong></p>
+<hr />
+<h2>8. SLIDE 7 — Otoyol İşaretleri</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/page-083.png" alt="Slayt — Sayfa 83: HIZ KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 83: HIZ KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-083.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The 6 signs</h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>OT-1</strong></td>
+<td>Otoyol Başlangıcı ve Yasakları</td>
+<td>Motorway start + prohibitions</td>
+<td>Green sign showing motorway icon + list of banned vehicles/actions</td>
+</tr>
+<tr>
+<td><strong>OT-2</strong></td>
+<td>Otoyol Belgesi</td>
+<td>Motorway symbol</td>
+<td>Green oval with motorway icon</td>
+</tr>
+<tr>
+<td><strong>OT-3</strong></td>
+<td>Otoyol Hız Sınırları (40/120)</td>
+<td>Motorway speed limits</td>
+<td><strong>Asgari 40 — Azami 120 km/h</strong></td>
+</tr>
+<tr>
+<td><strong>OT-4</strong></td>
+<td>Otoyol Yaklaşım Levhası</td>
+<td>Motorway approach sign</td>
+<td>Green distance sign showing motorway ahead</td>
+</tr>
+<tr>
+<td><strong>OT-5</strong></td>
+<td>Otoyol Sonu</td>
+<td>Motorway end</td>
+<td>Green sign with red bar — motorway rules no longer apply</td>
+</tr>
+<tr>
+<td><strong>OT-6</strong></td>
+<td>Otoyol Çıkış Levhası</td>
+<td>Motorway exit sign</td>
+<td>Green sign showing exit name, destinations, distances</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Otoyol speed limits:</strong><br />
+- <strong>Azami (max): 120 km/h</strong> (for otomobil — trucks/buses may have lower limits)<br />
+- <strong>Asgari (min): 40 km/h</strong> — if your vehicle cannot sustain 40 km/h, you <strong>cannot use the otoyol</strong></p>
+<p><strong>Vehicles BANNED from otoyol:</strong> pedestrians, bicycles, mopeds, tractors, animal-drawn carts, any vehicle that cannot reach 40 km/h. The exam loves: <em>"Otoyolda en düşük hız sınırı kaçtır?"</em> → <strong>40 km/h.</strong></p>
+<p><strong>Otoyol sign colour = yeşil (green).</strong> Regular bilgi signs = mavi (blue). If you see a green sign on the exam, it's either an otoyol sign or a distance sign.</p>
+</blockquote>
+<hr />
+<h2>9. SLIDE 8 — Yol Numaraları (Road Numbering System)</h2>
+<h3>The 5 number types</h3>
+<table>
+<thead>
+<tr>
+<th>Code Format</th>
+<th>Colour</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>O.1</strong></td>
+<td>Green</td>
+<td>Otoyol Numarası</td>
+<td>Motorway number</td>
+<td>O.1 = İstanbul–Ankara otoyolu</td>
+</tr>
+<tr>
+<td><strong>E.90</strong></td>
+<td>Green</td>
+<td>Uluslararası Yol Numarası</td>
+<td>International road number</td>
+<td>E.90 = European route</td>
+</tr>
+<tr>
+<td><strong>D.400</strong></td>
+<td>Blue</td>
+<td>Devlet Yolu Numarası</td>
+<td>State road number</td>
+<td>D.400 = a national highway</td>
+</tr>
+<tr>
+<td><strong>06.80</strong></td>
+<td>Orange</td>
+<td>İl Yolu Numarası</td>
+<td>Provincial road number</td>
+<td>06 = Ankara il kodu</td>
+</tr>
+<tr>
+<td><strong>K.16</strong></td>
+<td>White</td>
+<td>Kavşak Numarası</td>
+<td>Junction number</td>
+<td>K.16 = junction ID</td>
+</tr>
+</tbody>
+</table>
+<h3>Exam question on maps</h3>
+<blockquote>
+<p>On a map, shapes encode road type:<br />
+- <strong>A = Otoyol</strong> (oval shape)<br />
+- <strong>B = Demir yolu</strong> (railway — dashed line)<br />
+- <strong>C = Devlet yolu</strong> (shield shape)<br />
+- <strong>D = Uluslararası yol</strong> (rectangular)</p>
+<p><em>"Haritalarda gösterilen şekillerden D100 hangisine aittir?"</em> — check the shape.</p>
+</blockquote>
+<hr />
+<h2>10. Why this matters for the exam</h2>
+<ol>
+<li><strong>Meskun mahal = speed limit change:</strong> entering → 50 km/h; exiting (red line through name) → 90 km/h (two-lane) / 110 km/h (divided) / 120 km/h (otoyol).</li>
+<li><strong>Anayol (yellow diamond):</strong> tali yoldan gelenler yol verir.</li>
+<li><strong>Otoyol asgari hız:</strong> 40 km/h minimum — anything below that cannot enter.</li>
+<li><strong>Duraklama vs park (P-1 vs P-2):</strong> single slash = park yasak only; double slash = both yasak.</li>
+<li><strong>Kaçış rampası = fren arızası için.</strong></li>
+<li><strong>Emergency numbers:</strong> 112, 155, 156, 177, 110.</li>
+<li><strong>Green sign = otoyol/mesafe. Blue = general bilgi. Brown = coğrafi/turizm.</strong></li>
+</ol>
+<hr />
+<h2>11. Memorize These</h2>
+<blockquote>
+<p><strong>Meskun mahal levhası</strong> = yerleşim yeri başlıyor → hız sınırı düşer (50 km/h).<br />
+<strong>Meskun mahal sonu</strong> (kırmızı çizgili) = yerleşim yeri bitiyor → hız sınırı yükselir.</p>
+<p><strong>Anayol = sarı baklava (diamond).</strong> Tali yoldan gelenler sana yol verir.<br />
+<strong>Anayol sonu = sarı baklava + siyah çizgi.</strong> Önceliğin bitti, normal kurallar geçerli.</p>
+<p><strong>Otoyol: asgari 40, azami 120.</strong> 40 altı araçlar otoyola giremez.</p>
+<p><strong>P-1 (tek çizgi) = park yasak, duraklama serbest.</strong><br />
+<strong>P-2 (çift çizgi) = duraklama ve park ikisi de yasak.</strong></p>
+<p><strong>Kaçış rampası</strong> = fren arızasında ağır araçlar için acil çıkış (dağ inişlerinde).</p>
+<p><strong>Acil numaralar: 112 (genel), 155 (polis), 156 (jandarma), 177 (orman yangını), 110 (itfaiye).</strong></p>
+</blockquote>
+<hr />
+<h2>12. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bilgi işaret levhası</td>
+<td>informational sign</td>
+<td>rank 3 — informs only</td>
+</tr>
+<tr>
+<td>meskun mahal</td>
+<td>built-up area / settlement</td>
+<td>speed changes</td>
+</tr>
+<tr>
+<td>meskun mahal sonu</td>
+<td>end of settlement</td>
+<td>red diagonal line</td>
+</tr>
+<tr>
+<td>coğrafi bilgi</td>
+<td>geographic info</td>
+<td>mountains, rivers, lakes</td>
+</tr>
+<tr>
+<td>mesafe levhası</td>
+<td>distance sign</td>
+<td>km to destinations</td>
+</tr>
+<tr>
+<td>yaya geçidi</td>
+<td>pedestrian crossing</td>
+<td>B-14</td>
+</tr>
+<tr>
+<td>okul geçidi</td>
+<td>school crossing</td>
+<td>B-14a</td>
+</tr>
+<tr>
+<td>hastane</td>
+<td>hospital</td>
+<td>B-15 — H sign</td>
+</tr>
+<tr>
+<td>tek yönlü yol</td>
+<td>one-way street</td>
+<td>B-16</td>
+</tr>
+<tr>
+<td>yaya bölgesi</td>
+<td>pedestrian zone</td>
+<td>no vehicles</td>
+</tr>
+<tr>
+<td>öncelikli olan yön</td>
+<td>priority direction</td>
+<td>B-17</td>
+</tr>
+<tr>
+<td>anayol</td>
+<td>priority / main road</td>
+<td>yellow diamond</td>
+</tr>
+<tr>
+<td>anayol sonu</td>
+<td>end of priority road</td>
+<td>diamond with bar</td>
+</tr>
+<tr>
+<td>tali yol</td>
+<td>minor / side road</td>
+<td>yields to anayol</td>
+</tr>
+<tr>
+<td>otoyol</td>
+<td>motorway</td>
+<td>azami 120 / asgari 40</td>
+</tr>
+<tr>
+<td>otoyol başlangıcı</td>
+<td>motorway start</td>
+<td>OT-1</td>
+</tr>
+<tr>
+<td>otoyol sonu</td>
+<td>motorway end</td>
+<td>OT-5</td>
+</tr>
+<tr>
+<td>otoyol çıkış levhası</td>
+<td>motorway exit sign</td>
+<td>OT-6</td>
+</tr>
+<tr>
+<td>kaçış rampası</td>
+<td>escape ramp</td>
+<td>brake failure safety</td>
+</tr>
+<tr>
+<td>fren arızası</td>
+<td>brake failure</td>
+<td>reason for kaçış rampası</td>
+</tr>
+<tr>
+<td>park etmek yasaktır</td>
+<td>no parking</td>
+<td>P-1, single slash</td>
+</tr>
+<tr>
+<td>duraklama ve park yasaktır</td>
+<td>no stopping or parking</td>
+<td>P-2, double slash</td>
+</tr>
+<tr>
+<td>park yeri</td>
+<td>parking area</td>
+<td>P-3a</td>
+</tr>
+<tr>
+<td>yol numarası</td>
+<td>road number</td>
+<td>O/E/D/K prefix</td>
+</tr>
+<tr>
+<td>devlet yolu</td>
+<td>state road</td>
+<td>D.400</td>
+</tr>
+<tr>
+<td>uluslararası yol</td>
+<td>international road</td>
+<td>E.90</td>
+</tr>
+<tr>
+<td>il yolu</td>
+<td>provincial road</td>
+<td>06.80</td>
+</tr>
+<tr>
+<td>kavşak numarası</td>
+<td>junction number</td>
+<td>K.16</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>13. Cross-references</h2>
+<ul>
+<li><strong>Sign hierarchy:</strong> <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a> — bilgi signs are rank 3.</li>
+<li><strong>Tehlike uyarı signs:</strong> <a href="07-tehlike-uyarı-işaretleri.md">07-tehlike-uyarı-işaretleri.md</a> — warning triangle family.</li>
+<li><strong>Tanzim yasaklama:</strong> <a href="08-trafik-tanzim-işaretleri-yasaklama.md">08-trafik-tanzim-işaretleri-yasaklama.md</a>.</li>
+<li><strong>Tanzim emir (blue):</strong> <a href="09-trafik-tanzim-işaretleri-emir.md">09-trafik-tanzim-işaretleri-emir.md</a>.</li>
+<li><strong>Durma/duraklama/park definitions:</strong> <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a>.</li>
+<li><strong>Karayolu bölümleri (otoyol definition):</strong> <a href="02-karayolu-bölümleri.md">02-karayolu-bölümleri.md</a>.</li>
+<li><strong>Anayol / tali yol definitions:</strong> <a href="02-karayolu-bölümleri.md">02-karayolu-bölümleri.md</a>.</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-123.html">📄 Sayfa 123: PARK ETMENİN YASAK OLDUĞU YERLER<span class="score">66.7</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-015.html">📄 Sayfa 15: YAYA-OKUL GEÇİTLERİ:<span class="score">65.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-043.html">📄 Sayfa 43: IŞIKLI TRAFİK İŞARETLERİ<span class="score">65.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-120.html">📄 Sayfa 120: DURAKLAMANIN YASAK OLDUĞU YERLER<span class="score">62.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-080.html">📄 Sayfa 80: KARAYOLU KULLANIM KURALLARI<span class="score">57.5</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-122.html">📄 Sayfa 122: PARK ETMENİN YASAK OLDUĞU YERLER<span class="score">49.3</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/03-trafik-isaret-levhalari/index.html">🖼️ Trafik İşaret Levhaları<span class="score">6 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/index.html">🖼️ Durma, Park, Işıklandırma<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

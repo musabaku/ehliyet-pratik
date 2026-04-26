@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aydınlatma ve İkaz Sistemi — Lighting & Warning System | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 05-aydınlatma-ikaz-sistemi</span>
+</div>
+<div class="content">
+<h1>Aydınlatma ve İkaz Sistemi — Lighting &amp; Warning System</h1>
+<p><strong>Last updated:</strong> 2026-04-14 (class 2)<br />
+<strong>Slides covered:</strong> Görev + 8 parts, Arızaları (fault diagnosis flow), Göstergeler sistemi (dashboard), 4 critical warning icons, composite icons, sinyal/far indicators (class 1); Göstergelerin 3 renk kuralı, Aydınlatma sisteminin görevi, Uzun far + 100m + mavi, Far ayarı + 25/100m + sinyal/sigorta, Fren lambası + müşir, Geri vites lambası + paslanma, Römork elektrik + gres yağı, Göstergeler recap (yağ/şarj/hararet/yakıt/fren), Hararet → klima kapat + kalorifer aç, Motor arıza lambası (sarı check engine), Fren balatası aşınma göstergesi, Kızdırma bujisi (diesel), Farlar açık uyarı lambası (class 2 post-break)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Aydınlatma ve ikaz sistemi:</strong> Güvenli bir sürüş için yolun aydınlatılması ve sinyallerin hareketlerinin bildirilmesini sağlar.<br />
+<em>(For safe driving, it provides illumination of the road and indication of signal movements.)</em></p>
+</blockquote>
+<p>This system has <strong>two jobs in one</strong>:</p>
+<ol>
+<li><strong>Aydınlatma (lighting)</strong> — lights up the road so <strong>you</strong> can see (headlights, fog lights)</li>
+<li><strong>İkaz (warning/signaling)</strong> — lets <strong>others</strong> see you and understand your intentions (brake lights, turn signals, reverse light, horn, hazard lights)</li>
+</ol>
+<p>Both jobs share the same 8 components.</p>
+<h3>Connection to şarj sistemi</h3>
+<p>Four components are shared with the şarj sistemi: <strong>akü, kontak anahtarı, sigorta, kablolar</strong>. These are the general electrical-wiring parts of the car, sometimes grouped under "elektrik tesisatı" (electrical installation). The difference is that şarj sistemi <em>generates</em> the electricity while aydınlatma-ikaz sistemi <em>consumes</em> it.</p>
+<hr />
+<h2>2. SLIDE 1 — Görev + Parçaları</h2>
+<h3>What the slide showed</h3>
+<p><strong>AYDINLATMA VE İKAZ SİSTEMİ</strong><br />
+- <strong>Görevi:</strong> Güvenli bir sürüş için yolun aydınlatılması, sinyallerin hareketlerinin bildirilmesini sağlar.<br />
+- <strong>Parçaları:</strong><br />
+  - Akü<br />
+  - Kontak Anahtarı<br />
+  - Sigorta<br />
+  - Lambalar<br />
+  - Flaşör<br />
+  - Fren ve Geri Vites Müşürü<br />
+  - Kablolar<br />
+  - Korna</p>
+<h3>The 8 parts explained</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Akü</strong></td>
+<td>Battery</td>
+<td>Power source (shared with marş + şarj sistemi)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Kontak Anahtarı</strong></td>
+<td>Ignition switch</td>
+<td>Gates the electrical circuit (shared)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sigorta</strong></td>
+<td>Fuse</td>
+<td>Protects the circuit from overcurrent</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Lambalar</strong></td>
+<td>Lamps / bulbs</td>
+<td>All the lights: headlights, taillights, turn signals, brake lights, reverse, interior, fog</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Flaşör</strong></td>
+<td>Flasher relay</td>
+<td>Makes the turn signals and hazard lights blink on/off at the right rhythm</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Fren ve Geri Vites Müşürü</strong></td>
+<td>Brake &amp; reverse gear switch</td>
+<td>Sensors that detect pedal press / reverse gear and turn on the corresponding lamps</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Kablolar</strong></td>
+<td>Cables / wires</td>
+<td>Carry electricity from the fuse panel to every bulb</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Korna</strong></td>
+<td>Horn</td>
+<td>Audio warning device (sesli ikaz)</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact — the definition phrase</h3>
+<blockquote>
+<p><strong>Güvenli bir sürüş için yolun aydınlatılmasını ve sinyallerin bildirilmesini sağlar.</strong></p>
+</blockquote>
+<p>Memorize this word-for-word. Key verbs: <strong>aydınlatmak</strong> (to illuminate) and <strong>bildirmek</strong> (to inform/announce).</p>
+<h3>Exam trap — which is NOT a part?</h3>
+<p>Common distractors in "değildir" questions:<br />
+- <strong>Marş motoru</strong> (wrong — that's marş sistemi)<br />
+- <strong>Alternatör</strong> (wrong — that's şarj sistemi)<br />
+- <strong>Karbüratör</strong> (wrong — that's yakıt sistemi)<br />
+- <strong>Yağ pompası</strong> (wrong — that's yağlama sistemi)</p>
+<p>Memorize the 8 parts above so you can instantly spot what doesn't belong.</p>
+<hr />
+<h2>3. SLIDE 2 — Arızaları (Fault Diagnosis Flow)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide said</h3>
+<blockquote>
+<p><strong>Arızaları:</strong><br />
+- Lambalardan biri geçmiş ise yenisi ile değiştirilir.<br />
+- Aynı hattaki lambaların hiçbiri yanmıyorsa sigorta ve kabloları kontrol edilir.<br />
+- Fren lambası sağlam olduğu halde yanmıyorsa fren müşürü arızalıdır.<br />
+- Geri vites lambası sağlam olduğu halde yanmıyorsa geri vites müşürü arızalıdır.</p>
+</blockquote>
+<h3>Clean English translation</h3>
+<ol>
+<li><strong>"If one of the lamps has burned out, it should be replaced with a new one."</strong></li>
+<li><strong>"If none of the lamps on the same circuit are lighting, the fuse and cables should be checked."</strong></li>
+<li><strong>"If the brake lamp is intact but still doesn't light, the brake switch (fren müşürü) is faulty."</strong></li>
+<li><strong>"If the reverse lamp is intact but still doesn't light, the reverse gear switch (geri vites müşürü) is faulty."</strong></li>
+</ol>
+<h3>How to diagnose a dead light — decision tree</h3>
+<pre><code>Light isn't working?
+│
+├─ One single lamp dead?
+│   └─▶ Bulb burned out → REPLACE BULB (ampul değiştirilir)
+│
+├─ Multiple lamps on the same circuit dead?
+│   └─▶ CHECK FUSE + WIRING (sigorta + kablolar kontrol edilir)
+│
+├─ Brake light alone dead + bulb is intact?
+│   └─▶ FREN MÜŞÜRÜ (brake switch) arızalıdır
+│
+└─ Reverse light alone dead + bulb is intact?
+    └─▶ GERİ VİTES MÜŞÜRÜ (reverse gear switch) arızalıdır
+</code></pre>
+<h3>Key concept — "müşür" (switch/sender)</h3>
+<p>A <strong>müşür</strong> is a small switch/sensor that detects a driver action and turns on a light in response:</p>
+<ul>
+<li><strong>Fren müşürü</strong> — detects when you press the brake pedal → turns on the brake light</li>
+<li><strong>Geri vites müşürü</strong> — detects when you shift into reverse → turns on the reverse light</li>
+</ul>
+<p>If the müşür is broken, the bulb is physically fine but nothing ever tells it "turn on now." That's why the slide uses the phrase <em>"sağlam olduğu halde yanmıyorsa"</em> — "even though it is intact, if it doesn't light."</p>
+<h3>Classic exam questions from this slide</h3>
+<ol>
+<li><em>"Fren lambası yanmıyor ve ampulü sağlam. Arıza nerededir?"</em><br />
+   → <strong>Fren müşüründe</strong> (in the brake switch)</li>
+<li><em>"Geri vites lambası yanmıyor, ampulü sağlam. Arıza nerededir?"</em><br />
+   → <strong>Geri vites müşüründe</strong></li>
+<li><em>"Aynı hattaki tüm lambalar yanmıyorsa ilk kontrol edilecek şey?"</em><br />
+   → <strong>Sigorta ve kablolar</strong></li>
+<li><em>"Bir lamba yanmıyor, diğerleri çalışıyor. Ne yapılır?"</em><br />
+   → <strong>Ampul yenisiyle değiştirilir</strong></li>
+</ol>
+<hr />
+<h2>4. SLIDE 3 — Göstergeler Sistemi (Dashboard / Indicators System)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Title: <strong>GÖSTERGELER SİSTEMİ</strong><br />
+Image: car dashboard cluster (gauges) + grid of warning light icons</p>
+<h3>Clean English explanation</h3>
+<p>The <strong>göstergeler sistemi (indicators system)</strong> is the driver's dashboard — the information display that sits behind the steering wheel. It's not a "working" system like yağlama or şarj. Instead, it collects data from sensors all over the car (yağ müşürü, şarj müşürü, hız sensörü, yakıt seviyesi sensörü, etc.) and shows it to the driver through gauges and warning lights.</p>
+<h3>A. Göstergeler (Gauges — analog dials)</h3>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>What it shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hız göstergesi (kilometre saati)</strong></td>
+<td>Speedometer</td>
+<td>Current speed in km/h</td>
+</tr>
+<tr>
+<td><strong>Devir göstergesi (takometre)</strong></td>
+<td>Tachometer</td>
+<td>Engine RPM</td>
+</tr>
+<tr>
+<td><strong>Yakıt göstergesi</strong></td>
+<td>Fuel gauge</td>
+<td>Fuel level in the tank</td>
+</tr>
+<tr>
+<td><strong>Hararet göstergesi (sıcaklık)</strong></td>
+<td>Temperature gauge</td>
+<td>Engine coolant temperature</td>
+</tr>
+<tr>
+<td><strong>Yağ basınç göstergesi</strong></td>
+<td>Oil pressure gauge</td>
+<td>Oil pressure (or a red warning light instead)</td>
+</tr>
+<tr>
+<td><strong>Şarj göstergesi</strong></td>
+<td>Charge gauge</td>
+<td>Battery charging state (often a light)</td>
+</tr>
+<tr>
+<td><strong>Kilometre sayacı</strong></td>
+<td>Odometer</td>
+<td>Total distance driven</td>
+</tr>
+</tbody>
+</table>
+<h3>B. İkaz ve uyarı lambaları (Warning / indicator lights)</h3>
+<p>Color-coded by severity:</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Meaning</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔴 <strong>Kırmızı (Red)</strong></td>
+<td>DANGER — immediate problem</td>
+<td>STOP the car when safe</td>
+</tr>
+<tr>
+<td>🟡 <strong>Sarı/Turuncu (Yellow/Orange)</strong></td>
+<td>WARNING — needs attention</td>
+<td>Can keep driving briefly, fix soon</td>
+</tr>
+<tr>
+<td>🟢 <strong>Yeşil (Green)</strong></td>
+<td>OK — a system is active</td>
+<td>Informational (e.g., turn signal, headlights)</td>
+</tr>
+<tr>
+<td>🔵 <strong>Mavi (Blue)</strong></td>
+<td>High-beam headlights on</td>
+<td>Informational</td>
+</tr>
+</tbody>
+</table>
+<h3>The most-tested dashboard warning lights</h3>
+<table>
+<thead>
+<tr>
+<th>Light</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Color</th>
+<th>Action if lit while driving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oil can</td>
+<td><strong>Yağ basınç lambası</strong></td>
+<td>Oil pressure warning</td>
+<td>🔴 Red</td>
+<td>STOP — engine has no oil pressure</td>
+</tr>
+<tr>
+<td>Battery</td>
+<td><strong>Şarj lambası (akü lambası)</strong></td>
+<td>Charge/battery warning</td>
+<td>🔴 Red</td>
+<td>STOP — alternator or belt has failed</td>
+</tr>
+<tr>
+<td>Thermometer</td>
+<td><strong>Hararet lambası (sıcaklık)</strong></td>
+<td>Engine temperature warning</td>
+<td>🔴 Red</td>
+<td>STOP — engine overheating</td>
+</tr>
+<tr>
+<td>(P)</td>
+<td><strong>El freni lambası</strong></td>
+<td>Handbrake warning</td>
+<td>🔴 Red</td>
+<td>Handbrake is still engaged</td>
+</tr>
+<tr>
+<td>Person + belt</td>
+<td><strong>Emniyet kemeri lambası</strong></td>
+<td>Seatbelt warning</td>
+<td>🔴 Red</td>
+<td>Fasten seatbelt</td>
+</tr>
+<tr>
+<td>ABS</td>
+<td><strong>ABS lambası</strong></td>
+<td>ABS warning</td>
+<td>🟡 Yellow</td>
+<td>ABS brake fault — get checked soon</td>
+</tr>
+<tr>
+<td>Car skidding</td>
+<td><strong>ESP / çekiş kontrolü</strong></td>
+<td>Stability / traction control</td>
+<td>🟡 Yellow</td>
+<td>System active or fault</td>
+</tr>
+<tr>
+<td>Fuel pump</td>
+<td><strong>Yakıt lambası</strong></td>
+<td>Low fuel</td>
+<td>🟡 Yellow</td>
+<td>Fill up soon</td>
+</tr>
+<tr>
+<td>Double-beam</td>
+<td><strong>Uzun far lambası</strong></td>
+<td>High beam on</td>
+<td>🔵 Blue</td>
+<td>High beams are on — dim for oncoming cars</td>
+</tr>
+<tr>
+<td>Arrow</td>
+<td><strong>Sinyal lambaları</strong></td>
+<td>Turn signal</td>
+<td>🟢 Green</td>
+<td>Turn signal is blinking</td>
+</tr>
+</tbody>
+</table>
+<h3>⚠️ CRITICAL EXAM RULE — the "3 red light" rule</h3>
+<p>If ANY of these three red lights turns on <strong>while driving</strong>, you must <strong>stop the car immediately</strong> to prevent permanent engine damage:</p>
+<ol>
+<li>🔴 <strong>Yağ basınç lambası</strong> (oil pressure)</li>
+<li>🔴 <strong>Şarj / akü lambası</strong> (charging/battery)</li>
+<li>🔴 <strong>Hararet lambası</strong> (engine temperature)</li>
+</ol>
+<p>Ignoring any of these can destroy the engine within minutes. This is one of the single most common exam questions in the Araç Tekniği section.</p>
+<hr />
+<h2>4A. SLIDE 4 — The 4 Critical Warning Light Icons (Detailed)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Four large warning light icons with labels:<br />
+- 🔴 <strong>ŞARJ GÖSTERGESİ</strong> — red battery icon (with + and − terminals)<br />
+- 🔴 <strong>YAĞ GÖSTERGESİ</strong> — orange oil can icon with a drop<br />
+- 🔴 <strong>HARARET GÖSTERGESİ</strong> — thermometer over wavy water lines<br />
+- 🟡 <strong>YAKIT GÖSTERGESİ</strong> — fuel pump (gas station nozzle)</p>
+<h3>Clean English explanation</h3>
+<p>This slide is a visual drill of the <strong>4 warning lights you absolutely must recognize on the exam</strong>. They are the four most frequent "what does this light mean?" questions in Araç Tekniği.</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Color</th>
+<th>Action if lit while driving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🔋 Battery with +/−</td>
+<td><strong>Şarj göstergesi</strong></td>
+<td>Charge / battery warning</td>
+<td>🔴 Red</td>
+<td>STOP — alternator or fan belt failure</td>
+</tr>
+<tr>
+<td>🛢️ Oil can with drop</td>
+<td><strong>Yağ göstergesi</strong></td>
+<td>Oil pressure warning</td>
+<td>🔴 Red</td>
+<td>STOP — no oil pressure, engine will seize</td>
+</tr>
+<tr>
+<td>🌡️ Thermometer over waves</td>
+<td><strong>Hararet göstergesi</strong></td>
+<td>Engine temperature warning</td>
+<td>🔴 Red</td>
+<td>STOP — engine overheating</td>
+</tr>
+<tr>
+<td>⛽ Fuel pump</td>
+<td><strong>Yakıt göstergesi</strong></td>
+<td>Low fuel warning</td>
+<td>🟡 Yellow</td>
+<td>Fill up at nearest station</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reminder:</strong> The "wavy water lines" under the thermometer represent coolant — that's how you recognize hararet göstergesi (engine coolant temperature). Don't confuse it with washer fluid icons that also use wavy lines.</p>
+<h3>Critical exam fact</h3>
+<p>Three of these four lights (<strong>şarj, yağ, hararet</strong>) are the <strong>"3 red light rule"</strong> — if any turns on while driving, stop the car immediately. The fourth (<strong>yakıt</strong>) is yellow — important but not an emergency.</p>
+<hr />
+<h2>4B. SLIDE 5 — Composite Dashboard Icons (Fuel Gauge + Signals + Misc Warnings)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-043.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-043.png" alt="Slayt — Sayfa 43: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 43: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-043.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A mixed layout with:<br />
+- Analog <strong>fuel gauge dial</strong> (clock face with F/E and a pump symbol)<br />
+- Two large <strong>green turn-signal arrow indicators</strong> (left and right)<br />
+- A grid of 6 additional warning icons: door-open warning, washer fluid, hazard triangle, water/coolant level, low-beam headlight, fog lights</p>
+<h3>Clean English explanation</h3>
+<p>This is a <strong>visual recognition drill</strong> — the exam may show any of these icons in isolation and ask "what does this indicate?"</p>
+<p>Additional icons to recognize (beyond the 4 on Slide 4):</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Turkish</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Open door with arrows</td>
+<td><strong>Kapı açık uyarısı</strong></td>
+<td>Door-open warning</td>
+</tr>
+<tr>
+<td>Windshield with jet</td>
+<td><strong>Cam suyu (silecek suyu) uyarısı</strong></td>
+<td>Washer fluid level</td>
+</tr>
+<tr>
+<td>Red triangle</td>
+<td><strong>Dörtlü sinyal / tehlike uyarı</strong></td>
+<td>Hazard flasher warning</td>
+</tr>
+<tr>
+<td>Thermometer/water level</td>
+<td><strong>Motor soğutma suyu seviyesi</strong></td>
+<td>Engine coolant level</td>
+</tr>
+<tr>
+<td>Headlight with lines down</td>
+<td><strong>Kısa far göstergesi</strong></td>
+<td>Low-beam headlight indicator</td>
+</tr>
+<tr>
+<td>Fog light with waves</td>
+<td><strong>Sis far göstergesi</strong></td>
+<td>Fog lights on</td>
+</tr>
+</tbody>
+</table>
+<h3>Turn signal arrows (sinyal ok göstergesi)</h3>
+<p>The two large green arrows are the <strong>turn signal indicators</strong> — they blink in sync with your actual exterior turn signals so you know which way you've signaled. If one blinks <em>faster than normal</em>, it usually means one of the exterior bulbs has burned out.</p>
+<hr />
+<h2>4C. SLIDE 6 — Signal, Hazard &amp; Headlight Indicator Lights</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Four labeled indicator lights:<br />
+- 🟢 <strong>SİNYAL GÖSTERGESİ</strong> — green arrow-in-box icon (turn signal indicator)<br />
+- 🔺 <strong>DÖRTLÜ SİNYAL</strong> — red triangle (hazard flashers)<br />
+- 🟢 <strong>PARK VE KISA FARLAR</strong> — green headlight icon + "sun-style" icon (parking lights + low beam)<br />
+- 🔵 <strong>UZUN FARLAR</strong> — blue headlight icon (high beam)</p>
+<h3>Clean English explanation</h3>
+<p>This slide maps the <strong>4 colors of headlight/signal indicators</strong> to their meanings. The color is itself an exam question — Turkish exams ask "which color is the high-beam indicator?" → <strong>mavi (blue)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Color</th>
+<th>When it's on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrow</td>
+<td><strong>Sinyal göstergesi</strong></td>
+<td>Turn signal indicator</td>
+<td>🟢 Green</td>
+<td>You activated a turn signal (blinks)</td>
+</tr>
+<tr>
+<td>Red triangle</td>
+<td><strong>Dörtlü sinyal (tehlike uyarı lambası)</strong></td>
+<td>Four-way flashers / hazard lights</td>
+<td>🔺 Red/Green blinking</td>
+<td>Emergency or stopped on the road</td>
+</tr>
+<tr>
+<td>Headlight + sun</td>
+<td><strong>Park ve kısa farlar</strong></td>
+<td>Parking + low-beam headlights</td>
+<td>🟢 Green</td>
+<td>Normal night driving, city</td>
+</tr>
+<tr>
+<td>Headlight forward</td>
+<td><strong>Uzun farlar</strong></td>
+<td>High-beam headlights</td>
+<td>🔵 Blue</td>
+<td>Rural / highway night driving</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<ol>
+<li><strong>Uzun far göstergesi mavidir</strong> — the high-beam indicator is <strong>BLUE</strong>. This is a favorite exam question.</li>
+<li><strong>Uzun farlar (high beam)</strong> must be <strong>dimmed to kısa farlar (low beam)</strong> when:</li>
+<li>A vehicle is coming toward you (oncoming traffic)</li>
+<li>You are following another vehicle close behind</li>
+<li>You are in a city/built-up area</li>
+<li>There is fog/heavy rain (use sis farları instead)</li>
+<li><strong>Dörtlü sinyal (hazard flashers)</strong> is used when:</li>
+<li>The car is stopped on the road due to emergency / breakdown</li>
+<li>Warning other drivers of imminent danger ahead</li>
+<li><strong>NOT</strong> a substitute for parking illegally</li>
+<li><strong>Sinyal göstergesi</strong> blinks faster than normal → one of the exterior signal bulbs is burned out.</li>
+</ol>
+<hr />
+<h2>4D. Hoca's Live Class Addition — Yarım Kontak (Half-Ignition) in the Driving Test</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/06-sarj-mars/page-036.png" alt="Slayt — Sayfa 36: MARġ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 36: MARġ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-036.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<p>This is a practical/exam concept that isn't on the slides but comes up <strong>on the actual driving test</strong> (direksiyon sınavı):</p>
+<blockquote>
+<p><em>"Komisyon diyecek ki: yarım kontak yap, bekle. Yani sen anahtarını ikinci tur şuraya çevirdiğinde aracın çalışacak. Yarım kontakta seni bekletiyor. Niye bekletiyor? Göstergeni çalıştırabiliyorsun çünkü yarım kontaktayken. Sana göstergeden sorular soruyor — bu ışıkların anlamlarını."</em></p>
+</blockquote>
+<h3>What is "Yarım Kontak"?</h3>
+<p><strong>Yarım kontak</strong> ("half-ignition") = the <strong>ON / Accessory position</strong> of the ignition switch. It's the position the key sits in between OFF and START. In this position:</p>
+<ul>
+<li>The car's <strong>electrical accessories</strong> are powered on (dashboard, gauges, radio, lights)</li>
+<li>The engine is <strong>NOT running</strong> (you haven't turned all the way to the marş position yet)</li>
+<li>All the <strong>warning lights on the dashboard light up</strong> so the driver can see them</li>
+</ul>
+<h3>Why the examiner asks for it</h3>
+<p>During your driving test (direksiyon sınavı), <strong>before you start the car</strong>, the examiner (komisyon) will say:</p>
+<blockquote>
+<p><strong>"Yarım kontak yap, bekle."</strong><br />
+(Make half-ignition, wait.)</p>
+</blockquote>
+<p>Then they'll point at <strong>warning light icons</strong> on your dashboard and ask you to identify them:<br />
+- <em>"Bu ne?"</em> (What's this?) → şarj lambası / yağ lambası / hararet lambası / etc.<br />
+- <em>"Bu ne işe yarıyor?"</em> (What does this do?)<br />
+- <em>"Sağa sinyal ver."</em> (Give a right turn signal.)<br />
+- <em>"Sola sinyal ver."</em> (Give a left turn signal.)</p>
+<p><strong>You must know every single warning light</strong> on the dashboard — including the three red ones from the "3 red light rule," plus the yellow ones (fuel, door-open, etc.), the blue one (uzun far), and the green ones (sinyal, kısa far).</p>
+<h3>Rule to memorize</h3>
+<blockquote>
+<p><strong>Yarım kontak = engine off, dashboard ON. This is when the examiner tests your knowledge of dashboard warning lights before you start the engine.</strong></p>
+</blockquote>
+<p>This is why the göstergeler content (slides 4, 4A-4C and the 3-red-light rule) aren't just an exam topic — they're also a <strong>practical test requirement</strong>. You have to identify each warning light by sight, in Turkish, on the day of the driving test.</p>
+<h3>Hoca's key quote</h3>
+<blockquote>
+<p><em>"Bu dersi sadece e-sınavda sınavı geçeyim, on tane soruyu çözeyim gibi düşünmeyin lütfen. Araç kullanırken bu bilgiler çok çok işinize yarayacak."</em><br />
+(Don't think of this lesson as just "pass the e-exam by solving 10 questions." When you actually drive, this information will be very useful.)</p>
+</blockquote>
+<hr />
+<h2>4E. SLIDE (2026-04-14) — GÖSTERGELER: The 3-Color Rule</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Title in red: <strong>"GÖSTERGELER…!!"</strong> (Indicators…!!). Below, a <strong>3-rule color-coded list</strong> explaining what it means when a dashboard indicator light is <strong>off, red, or yellow</strong> — a simple traffic-light-style rule for interpreting any warning lamp on any car.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>GÖSTERGELER…!!</strong></p>
+<p><strong>1 — SÖNMÜŞ İSE:</strong> ARIZALI HERHANGİ BİR SİSTEMİMİZ YOK DEMEKTİR</p>
+<p><strong>2 — KIRMIZI İSE:</strong> O SİSTEM ARIZALI DEMEKTİR. SERVİSE GİDİLMELİ, ARAÇ O HALDE SÜRÜLMEMELİDİR.</p>
+<p><strong>3 — SARI İSE:</strong> UYARI IŞIĞIDIR. ACİL DEĞİLSE EN KISA ZAMANDA SERVİSE GİDİLMESİ GEREKTİĞİNİ BİLDİRİR.</p>
+<p><strong>INDICATORS…!!</strong></p>
+<p><strong>1 — IF OFF (SÖNMÜŞ):</strong> Nothing in our systems is faulty.</p>
+<p><strong>2 — IF RED (KIRMIZI):</strong> That system is <strong>faulty</strong>. You <strong>must go to a service center</strong>, and <strong>the car should not be driven in this condition</strong>.</p>
+<p><strong>3 — IF YELLOW (SARI):</strong> It is a <strong>warning light</strong>. If not an emergency, it informs you that you need to go to a service center <strong>as soon as possible</strong>.</p>
+</blockquote>
+<h3>Clean English explanation — the universal 3-color rule</h3>
+<p>This is one of the most <strong>exam-tested</strong> pieces of dashboard knowledge because it's a <strong>simple rule</strong> you can apply to <strong>any</strong> warning light on <strong>any</strong> car without memorizing each specific icon. The traffic-light logic:</p>
+<table>
+<thead>
+<tr>
+<th>Renk / Color</th>
+<th>Meaning</th>
+<th>Action</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sönmüş (off)</strong></td>
+<td>System is operating normally — no fault detected</td>
+<td><strong>Keep driving</strong></td>
+<td>Normal</td>
+</tr>
+<tr>
+<td><strong>Sarı (yellow/amber)</strong></td>
+<td><strong>Uyarı</strong> — warning. There's something that needs attention but it's <strong>not urgent</strong></td>
+<td>Go to service <strong>en kısa zamanda</strong> (as soon as possible)</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><strong>Kırmızı (red)</strong></td>
+<td><strong>Arıza</strong> — fault. Something is broken or dangerous <strong>right now</strong></td>
+<td><strong>Stop driving</strong>, go to service <strong>immediately</strong></td>
+<td>Urgent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The analogy:</strong> traffic lights work the same way — <strong>red = stop, yellow = slow down / warning, green/off = go</strong>. Your dashboard lights use the same color code.</p>
+<h3>Rule 1 — "Sönmüş ise" (If it's off)</h3>
+<p>If a warning light is <strong>not illuminated</strong>, the system it represents is <strong>working correctly</strong>. This is why, after you turn the key to ignition (position 2, see <a href="12-güvenli-araç-kullanma.md">12-güvenli-araç-kullanma.md</a> slide 11), all the warning lamps light up for a brief <strong>self-test</strong> — and then they all <strong>go out</strong> once the engine starts. All-off = all systems nominal.</p>
+<h3>Rule 2 — "Kırmızı ise" (If it's red)</h3>
+<p>A <strong>red</strong> warning light means <strong>the car should not be driven</strong>. Red indicators are reserved for faults that:<br />
+- Pose an <strong>immediate safety risk</strong> (brake failure, steering failure)<br />
+- Will cause <strong>immediate engine/mechanical damage</strong> if you keep driving (low oil pressure, overheating, charge failure, broken timing belt)<br />
+- Prevent the car from being controlled properly (airbag failure, ABS failure)</p>
+<p><strong>The 3 red lights you already know</strong> (see slide 4):</p>
+<ol>
+<li><strong>Yağ ikazı (oil pressure warning)</strong> — RED — stop immediately, engine will seize</li>
+<li><strong>Şarj ikazı (charge / battery warning)</strong> — RED — alternator failure, engine will die when battery drains</li>
+<li><strong>Hararet ikazı (temperature warning)</strong> — RED — engine overheating, stop and let it cool</li>
+</ol>
+<p>If any <strong>red</strong> light is on → <strong>pull over safely + stop engine + do not drive until repaired.</strong></p>
+<h3>Rule 3 — "Sarı ise" (If it's yellow)</h3>
+<p>A <strong>yellow / amber</strong> warning light is a <strong>softer warning</strong>. The system is degraded or needs attention, but it's not an immediate danger. You can continue driving carefully, but you should <strong>visit a service station as soon as possible</strong>.</p>
+<p><strong>Common yellow warnings:</strong><br />
+- <strong>Check engine / motor arıza lambası</strong> — engine management has detected a fault (often a sensor or emissions issue)<br />
+- <strong>ABS uyarı lambası</strong> — ABS is disabled; normal brakes still work, but the anti-lock assist is off<br />
+- <strong>Yakıt seviyesi düşük</strong> — low fuel warning<br />
+- <strong>Lastik basıncı uyarı (TPMS)</strong> — tire pressure is low<br />
+- <strong>Ön cam yıkama suyu</strong> — washer fluid is empty<br />
+- <strong>Emniyet kemeri hatırlatma</strong> — seatbelt reminder (yellow on many cars; sometimes red with sound)</p>
+<p><strong>The action:</strong> <em>"Acil değilse en kısa zamanda servise gidilmesi gerektiğini bildirir"</em> → if it's not urgent, go to service soon — don't ignore it, but you don't need to pull over immediately.</p>
+<h3>How this rule works with the 3-red-light system</h3>
+<p>The <strong>3-red-light rule</strong> from slide 4 of this file (yağ, şarj, hararet) is a <strong>special case</strong> of the universal rule:</p>
+<ul>
+<li><strong>All three are RED</strong> → all three follow the "kırmızı ise" rule → <strong>stop immediately, don't drive</strong></li>
+</ul>
+<p>You already memorized those three specifically because they're <strong>the ones that kill your engine fastest</strong> if ignored. But the universal 3-color rule gives you a fallback for <strong>any other light</strong> you might see on an unfamiliar dashboard: if it's red, stop; if it's yellow, visit service soon; if it's off, everything is fine.</p>
+<h3>Exam question patterns</h3>
+<p>This slide maps directly to <strong>several high-frequency exam questions</strong>:</p>
+<ol>
+<li>
+<p><strong>"Gösterge panelindeki kırmızı renkli uyarı ışığı ne anlama gelir?"</strong><br />
+   → <em>O sistemin arızalı olduğunu, aracın kullanılmaması gerektiğini bildirir.</em></p>
+</li>
+<li>
+<p><strong>"Sarı renkli uyarı ışığı yandığında sürücü ne yapmalıdır?"</strong><br />
+   → <em>Acil değilse en kısa zamanda servise gitmelidir.</em></p>
+</li>
+<li>
+<p><strong>"Göstergelerin tamamı söndüğünde bu ne anlama gelir?"</strong><br />
+   → <em>Arızalı bir sistem yoktur (tüm sistemler normal çalışıyor).</em></p>
+</li>
+<li>
+<p><strong>"Sürüş sırasında kırmızı şarj ikazı yandı, ne yapılmalıdır?"</strong><br />
+   → <em>Araç durdurulmalı, motor kapatılmalı, yetkili servise götürülmelidir.</em> (Kırmızı = arızalı → sürülmemeli.)</p>
+</li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Göstergelerin 3-renk kuralı:</strong><br />
+- <strong>Sönmüş</strong> → sistem normal<br />
+- <strong>Sarı</strong> → uyarı, en kısa zamanda servise<br />
+- <strong>Kırmızı</strong> → arıza, araç sürülmemeli, derhal servise</p>
+<p><strong>The 3-color rule for dashboard lights:</strong><br />
+- <strong>Off</strong> → system normal<br />
+- <strong>Yellow</strong> → warning, go to service ASAP<br />
+- <strong>Red</strong> → fault, car must not be driven, go to service immediately</p>
+</blockquote>
+<hr />
+<h2>4F. SLIDE (2026-04-14) — AYDINLATMA SİSTEMİNİN GÖREVİ (Görev Recap Slide)</h2>
+<h3>What the slide showed</h3>
+<p>A full-slide, text-only transition slide — red underlined title <strong>"AYDINLATMA SİSTEMİNİN GÖREVİ"</strong> on top, and underneath, in large black capital letters, the <strong>one-sentence görev (purpose) definition</strong>. Hoca showed this as the introduction to the <strong>Aydınlatma Sistemleri (Lighting Systems)</strong> chapter after covering göstergeler and the 3-color rule.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>AYDINLATMA SİSTEMİNİN GÖREVİ</strong><br />
+ARACIN EMNİYETLİ SEYRİNİ SAĞLAMAK İÇİN KULLANILAN IŞIKLANDIRMALARDIR</p>
+<p><strong>PURPOSE OF THE LIGHTING SYSTEM</strong><br />
+It is the set of lights used to ensure <strong>safe movement</strong> of the vehicle.</p>
+</blockquote>
+<h3>Why hoca showed this slide as a recap</h3>
+<p>The görev definition is already covered in <strong>section 1 (Overview)</strong> of this file, but hoca showed it again as a <strong>chapter opener</strong> when transitioning from göstergeler (the 3-color rule slide) to the <strong>actual lighting systems</strong> — far, sinyal, dörtlü, sis lambası, etc.</p>
+<p>Think of this slide as a <strong>bookmark</strong>: "We're done with warning/indicator systems. Now we start the lighting (aydınlatma) systems — and here's why they exist in the first place." Everything that follows (kısa far, uzun far, selektör, sis lambası, dörtlü) belongs under this umbrella görev.</p>
+<h3>Key vocabulary from the slide</h3>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Emniyetli seyir</strong></td>
+<td>Safe movement / safe travel</td>
+</tr>
+<tr>
+<td><strong>Seyir</strong></td>
+<td>Travel / movement / progress</td>
+</tr>
+<tr>
+<td><strong>Işıklandırma</strong></td>
+<td>Lighting / illumination (the noun form of "aydınlatma")</td>
+</tr>
+<tr>
+<td><strong>Görev</strong></td>
+<td>Purpose / duty</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Aydınlatma sisteminin görevi: aracın emniyetli seyrini sağlamak için kullanılan ışıklandırmalardır.</strong><br />
+<em>The purpose of the lighting system is the set of lights used to ensure safe movement of the vehicle.</em></p>
+</blockquote>
+<hr />
+<h2>4G. Hoca's Live Class Additions (2026-04-14) — Göstergeler &amp; Yarım Kontak Exam Test</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>Addition 1 — The "yarım kontak" (half-ignition) sınav testi: exact committee questions</h3>
+<p>We already know from class 1 (section 4D of this file) that the committee stops you at <strong>yarım kontak</strong> and quizzes you on the dashboard. Hoca gave more detail in class 2 about <strong>exactly what the committee asks</strong>:</p>
+<blockquote>
+<p><em>"İlk çevirdiğimde bazı elektronik aksamları ve aydınlatmaları devreye sokacağız ve burada komisyon sana 'yarım kontak, çevir, dur' diyor. Çünkü burada şu göstergesi, bu göstergesi, sağa sinyal ver, sola sinyal ver, ayağının altındaki pedalları sayar mısın, uzun farlarını açar mısın, kısa farlarını açar mısın, iç aydınlatma nerede gibi araçla ilgili arabayı tanıyor musunuz diye sorular soracağım der."</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> At the driving exam, the committee will tell you to turn the ignition key to the <strong>yarım kontak (half-ignition / position 1 or 2)</strong> position — NOT to full start. While the key is in half-ignition, all the dashboard warning lamps are lit up, all the lighting controls are powered, but the engine is NOT running. Then the committee will fire a barrage of <strong>"find and show me"</strong> questions while you sit there. They want to see if you actually know the car you're about to drive.</p>
+<p><strong>Known exam questions at the yarım kontak test:</strong></p>
+<ol>
+<li><strong>"Şu ikaz/gösterge lambası ne anlama gelir?"</strong> — "What does this warning/indicator icon mean?" (they point to one on the dashboard)</li>
+<li><strong>"Sağa sinyal ver"</strong> — "Signal right" (you must operate the sinyal kolu to the right)</li>
+<li><strong>"Sola sinyal ver"</strong> — "Signal left"</li>
+<li><strong>"Ayağının altındaki pedalları say"</strong> — "Name the pedals under your feet" (answer: soldan sağa debriyaj, fren, gaz)</li>
+<li><strong>"Uzun farları aç"</strong> — "Turn on the high beams"</li>
+<li><strong>"Kısa farları aç"</strong> — "Turn on the low beams"</li>
+<li><strong>"İç aydınlatma nerede?"</strong> — "Where is the interior light?"</li>
+<li><strong>Likely also:</strong> dörtlü (hazard) lambası, sis lambası, cam sileceği (wiper), korna (horn), el freni pozisyonu, far selektörü.</li>
+</ol>
+<p><strong>Critical rule:</strong> you pass this test ONLY if you already know the car. If you sit down in the exam car for the first time and start fumbling for the fog light switch, you'll already be losing points before the car even moves. The remedy: during every direksiyon lesson, spend 30 seconds at the start asking your hoca <strong>"where is X?"</strong> for every switch, lever, and button until you know them by heart.</p>
+<p><strong>Tie-in to the göstergeler 3-color rule:</strong> if the committee points to a lit warning light and asks what it means, you can fall back on the universal rule:<br />
+- <strong>Kırmızı</strong> → that system is faulty, araç sürülmemeli<br />
+- <strong>Sarı</strong> → uyarı, en kısa zamanda servise<br />
+- <strong>Sönmüş</strong> → arıza yok</p>
+<p>Even if you don't recognize the specific icon, you can apply the color rule and still give a correct answer.</p>
+<h3>Addition 2 — "Sürekli yanan bir kırmızı ışık, bir uyarı, bir ikaz görüyorsan arıza var demektir. O zaman aracı hareket ettirmeyeceğim bile."</h3>
+<p>Hoca reinforced the göstergeler 3-color rule with a stronger phrasing:</p>
+<blockquote>
+<p><em>"Sürekli yanan bir kırmızı ışık, bir uyarı, bir ikaz görüyorsan arıza var demektir. O zaman aracı hareket ettirmeyeceğim bile."</em><br />
+<em>If you see a red light that stays on — a warning, an indicator — it means there's a fault. In that case I wouldn't even start driving the car.</em></p>
+</blockquote>
+<p><strong>Exam angle:</strong> this is the exam-ready phrasing of the "if red → don't drive" rule. Use it verbatim if asked "if you see a red warning light, what do you do?" → <strong>"Aracı hareket ettirmem, en kısa zamanda servise götürürüm."</strong></p>
+<hr />
+<h2>4H. SLIDE (2026-04-14 post-break) — Uzun Far Göstergesi + 100m Aydınlatma + Mavi Lamba</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-042.png" alt="Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 42: GÖSTERGELER SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-042.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A blue-text paragraph at the top describing the <strong>uzun far (high beam)</strong> dashboard indicator, followed by a <strong>large black-and-white icon</strong> showing the classic high-beam symbol — a <strong>D-shape with horizontal lines</strong> pointing forward (these horizontal lines represent the straight, far-reaching beam of light pointing forward, as opposed to the angled-down low-beam pattern).</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p>Uzun farların yandığını bildiren göstergedir. Araçta uzun farlar <strong>100 metreyi</strong> aydınlatır. Uzun farlar yakıldığında gösterge panelinde <strong>mavi renk lamba</strong> yanar.</p>
+<p>This is the indicator that shows the <strong>high beams (uzun farlar)</strong> are on. In a vehicle, high beams illuminate <strong>100 meters</strong> ahead. When high beams are turned on, a <strong>blue-colored lamp</strong> lights up on the dashboard.</p>
+</blockquote>
+<h3>Clean English explanation — the 3 facts on this slide</h3>
+<h4>Fact 1 — Uzun farlar 100 metreyi aydınlatır</h4>
+<p><strong>High beams (uzun far)</strong> illuminate the road for <strong>100 meters</strong> ahead. This is the <strong>exam answer</strong> memorize-this number. High beams use a <strong>straight, parallel beam pattern</strong> that throws light far down the road — perfect for dark highway driving where there's no oncoming traffic.</p>
+<h4>Fact 2 — Uzun far göstergesi = mavi renkli lamba</h4>
+<p>When you turn on the high beams, a <strong>BLUE (mavi)</strong> indicator lights up on the dashboard. The blue color is <strong>universal and standardized</strong> across all cars and all countries — it's never any other color. If you see a blue lamp on the dashboard while driving, <strong>it means your high beams are on</strong>.</p>
+<p><strong>Why blue:</strong> blue is the only dashboard warning color reserved for a <strong>single function</strong> (high beams). Other colors have multiple uses (red = various faults, yellow = various warnings, green = various active systems), but <strong>blue = uzun far</strong>, always.</p>
+<h4>Fact 3 — The D-shaped icon</h4>
+<p>The <strong>D-shaped symbol with 5 horizontal parallel lines</strong> pointing forward is the <strong>international high-beam indicator</strong>. The lines represent <strong>parallel, straight rays of light</strong> going far into the distance — unlike the <strong>low-beam symbol</strong> (same D-shape but with 5 <strong>angled lines pointing down-and-forward</strong>), which represents light aimed at the road surface close to the car.</p>
+<p><strong>How to remember:</strong><br />
+- <strong>Horizontal lines = uzun far (far-reaching)</strong><br />
+- <strong>Angled-down lines = kısa far (aimed at the road nearby)</strong></p>
+<h3>When to use uzun far (and when NOT to)</h3>
+<p><strong>USE uzun far:</strong><br />
+- On <strong>dark rural roads</strong> with no street lighting<br />
+- When there is <strong>no oncoming traffic</strong> within 150 meters<br />
+- When there is <strong>no car ahead of you</strong> within 150 meters</p>
+<p><strong>DO NOT USE uzun far:</strong><br />
+- In <strong>city driving</strong> (always use kısa far in cities — they're not needed and they blind other drivers)<br />
+- When there's <strong>oncoming traffic</strong> within 150 meters — switch to kısa far to avoid blinding them<br />
+- When there's a <strong>car ahead of you</strong> within 150 meters — you'll blind them through their rearview mirror<br />
+- In <strong>fog, rain, or snow</strong> — high beams reflect off the water droplets and make visibility worse, not better</p>
+<p><strong>The switching rule (very common exam question):</strong></p>
+<blockquote>
+<p>Karşıdan gelen araca 150 m mesafeye girildiğinde uzun farlar <strong>kısa farla değiştirilmelidir</strong>.<br />
+When approaching oncoming traffic at 150 m, high beams must be switched to low beams.</p>
+</blockquote>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Uzun farlar 100 metreyi aydınlatır.</strong><br />
+<em>High beams illuminate 100 meters.</em></p>
+<p><strong>Uzun far göstergesi MAVİ renklidir.</strong><br />
+<em>The high-beam indicator is BLUE.</em></p>
+<p><strong>Karşıdan gelen araca 150 metreye girildiğinde uzun farlar kısa farla değiştirilmelidir.</strong><br />
+<em>When approaching oncoming traffic within 150 meters, high beams must be switched to low beams.</em></p>
+</blockquote>
+<hr />
+<h2>4I. SLIDE (2026-04-14 post-break) — Farlarda Yapılan Ayarlara: FAR AYARI</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-040.png" alt="Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 40: AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-040.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A text-only slide titled <strong>"FARLARDA YAPILAN AYARLARA: FAR AYARI DENİR"</strong> (The adjustments made to headlights are called "headlight alignment"). Below, a <strong>5-bullet list</strong> covering the core rules about far ayarı, the distances, the indicator colors, the sinyal fault symptom, and the sigorta replacement rule. Some words are highlighted in colors (BLUE = key concepts, RED = warnings).</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>FARLARDA YAPILAN AYARLARA: FAR AYARI DENİR</strong></p>
+<ul>
+<li><strong>KISA FARLAR 25M, UZUN FARLAR 100M GÖSTERİR.</strong></li>
+<li><strong>KISA FARLAR YEŞİL, UZUN FARLAR MAVİ RENKLE GÖSTERİR.</strong></li>
+<li><strong>SİNYAL LAMBASI SIK YANIP SÖNÜYORSA LAMBALARIN BİRİ YANMIYORDUR.</strong></li>
+<li><strong>SİGORTA ATTIĞI ZAMAN MUTLAKA AYNI AMPER SİGORTA İLE DEĞİŞMELİDİR…!!!!!!</strong></li>
+</ul>
+<p><strong>THE ADJUSTMENTS MADE TO HEADLIGHTS ARE CALLED "FAR AYARI" (HEADLIGHT ALIGNMENT)</strong></p>
+<ul>
+<li><strong>Low beams illuminate 25 m, high beams illuminate 100 m.</strong></li>
+<li><strong>Low beams are indicated by a GREEN lamp, high beams by a BLUE lamp on the dashboard.</strong></li>
+<li><strong>If the turn signal blinks unusually fast (flashes quickly), it means one of the signal bulbs is burned out.</strong></li>
+<li><strong>When a fuse blows, it must ALWAYS be replaced with a fuse of the SAME AMPERAGE…!!!!!!</strong></li>
+</ul>
+</blockquote>
+<h3>Fact 1 — "Far ayarı" definition</h3>
+<blockquote>
+<p><strong>Farlarda yapılan ayarlara FAR AYARI denir.</strong><br />
+<em>The adjustments made to headlights are called "far ayarı" (headlight alignment).</em></p>
+</blockquote>
+<p><strong>Plain English:</strong> <strong>Far ayarı</strong> is the process of <strong>aiming the headlights</strong> at the correct angle — not too high (blinds oncoming drivers), not too low (not enough road illumination). This is a routine service item that should be checked at every periyodik bakım — see <a href="12-güvenli-araç-kullanma.md">12-güvenli-araç-kullanma.md</a> section on kışa hazırlık, where "far ayarları kontrol edilmeli" is explicitly listed.</p>
+<p><strong>Why far ayarı matters:</strong><br />
+- <strong>Too high</strong> → blinds oncoming traffic, causes accidents, illegal<br />
+- <strong>Too low</strong> → you can't see far enough ahead to react to hazards<br />
+- <strong>Misaligned left/right</strong> → your beam is pointing into a ditch or into the opposite lane</p>
+<p>Far ayarı is done at a yetkili servis (authorized service center) with a <strong>special alignment machine</strong> that projects the beam onto a calibrated wall target.</p>
+<hr />
+<h3>Fact 2 — The 25m / 100m distance rule (EXAM NUMBER)</h3>
+<blockquote>
+<p><strong>Kısa farlar 25 metre, uzun farlar 100 metre gösterir / aydınlatır.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Far türü</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Aydınlatma mesafesi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kısa far</strong></td>
+<td>Short / Low beam</td>
+<td>Low beam / Dipped headlight</td>
+<td><strong>25 metre</strong></td>
+</tr>
+<tr>
+<td><strong>Uzun far</strong></td>
+<td>Long / High beam</td>
+<td>High beam / Main beam</td>
+<td><strong>100 metre</strong></td>
+</tr>
+</tbody>
+</table>
+<p>This is <strong>memorize-the-exact-numbers</strong> territory. The exam will ask <strong>"Kısa farlar kaç metre aydınlatır?"</strong> and the only correct answer is <strong>25</strong>. Same for uzun farlar → <strong>100</strong>.</p>
+<p><strong>Mental model:</strong><br />
+- <strong>25 metre = about 4-5 car lengths</strong> → enough for city speeds (up to ~50 km/h)<br />
+- <strong>100 metre = about a football field</strong> → enough for highway speeds (80+ km/h)</p>
+<hr />
+<h3>Fact 3 — The color rule for dashboard indicators</h3>
+<blockquote>
+<p><strong>Kısa farlar YEŞİL, uzun farlar MAVİ renkle gösterilir.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Far türü</th>
+<th>Dashboard indicator color</th>
+<th>Memory hook</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kısa far</strong> (low beam)</td>
+<td><strong>YEŞİL</strong> (green)</td>
+<td>Safe, friendly, "go ahead" color</td>
+</tr>
+<tr>
+<td><strong>Uzun far</strong> (high beam)</td>
+<td><strong>MAVİ</strong> (blue)</td>
+<td>Bright, attention-grabbing color</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Two-color trap on the exam:</strong> a question will show you a picture of a blue dashboard lamp and ask what it means. The answer is <strong>uzun farlar açık</strong> (high beams on), <strong>NOT</strong> "coolant temperature low" or "some other warning". Blue = uzun far, always.</p>
+<p><strong>Related lamp colors on the dashboard:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Yeşil</strong></td>
+<td>Kısa far açık (low beams on) — OR — sistem aktif (signals flashing, etc.)</td>
+</tr>
+<tr>
+<td><strong>Mavi</strong></td>
+<td><strong>Uzun far açık</strong> (high beams on) — ONLY this</td>
+</tr>
+<tr>
+<td><strong>Sarı</strong></td>
+<td>Uyarı, en kısa zamanda servise (see section 4E the 3-color rule)</td>
+</tr>
+<tr>
+<td><strong>Kırmızı</strong></td>
+<td>Arıza, araç sürülmemeli (see section 4E)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3>Fact 4 — Sinyal lambası sık yanıp sönüyorsa → one bulb is burned out</h3>
+<blockquote>
+<p><strong>Sinyal lambası sık yanıp sönüyorsa lambaların biri yanmıyordur.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> When you turn on your left or right turn signal, it should blink at a <strong>normal, steady rhythm</strong> (about once per second — tik-tok, tik-tok). If instead it blinks <strong>unusually fast / rapidly</strong> (tiktiktik-tiktiktik), that's a <strong>fault indicator</strong> — specifically, it means <strong>one of the two signal bulbs (front or rear)</strong> is <strong>burned out / not lighting up</strong>.</p>
+<p><strong>Why this happens (the electrical reason):</strong> the signal flasher is designed to flash at a fixed rate based on the <strong>combined electrical load</strong> of two bulbs (one front + one rear, both flashing together). When one bulb burns out, the total load drops in half, and the flasher runs <strong>faster</strong> to compensate. This rapid blinking is the car's way of <strong>telling you without a warning light</strong> that a bulb is blown.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Sinyal lambası normalden daha hızlı yanıp sönüyorsa ne arızalıdır?"</em> → <strong>Sinyal lambalarından biri yanmıyordur.</strong> (One of the signal bulbs is burned out.)<br />
+- <em>"Sinyali açtığımda normalden hızlı yanıp sönmesi ne anlama gelir?"</em> → <strong>Lambalardan biri arızalıdır, değiştirilmelidir.</strong> (One of the bulbs is faulty and must be replaced.)</p>
+<p><strong>What to do:</strong> go around the car with the signal on — left side front/rear, then right side front/rear — and see which bulb is not lighting up. Replace that bulb and the blink rate returns to normal.</p>
+<hr />
+<h3>Fact 5 — SİGORTA: always replace with the same amperage</h3>
+<blockquote>
+<p><strong>Sigorta attığı zaman mutlaka AYNI AMPER sigorta ile değiştirilmelidir…!!!!!!</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> A <strong>sigorta (fuse)</strong> is a <strong>deliberately weak electrical connection</strong> designed to <strong>"blow" (break)</strong> when too much current flows through it — protecting the rest of the circuit from burning up. Each fuse is rated for a specific <strong>amper (amperage)</strong> — like <strong>5A, 10A, 15A, 20A, 25A</strong> — and is <strong>color-coded</strong> on modern cars.</p>
+<p><strong>The rule:</strong> when a sigorta atar (the fuse blows), the replacement fuse <strong>must be the same amperage as the original</strong>. Never:</p>
+<ul>
+<li><strong>Higher amperage</strong> ❌ — the circuit can now carry more current than it was designed for, and <strong>something else in the circuit will burn up instead</strong> (wiring, switch, or the actual device). This has started many car fires.</li>
+<li><strong>Lower amperage</strong> ❌ — the new fuse will immediately blow again as soon as you use the circuit, because normal current exceeds the new fuse's rating.</li>
+<li><strong>No fuse / wire trick</strong> ❌ — bypassing the fuse with a piece of wire removes the protection entirely. <strong>Never do this.</strong> This is the #1 cause of electrical fires in older cars.</li>
+</ul>
+<p><strong>The correct reaction to a blown fuse:</strong></p>
+<ol>
+<li><strong>Identify which circuit</strong> the blown fuse protects (radio? horn? signals? brake lights?)</li>
+<li><strong>Replace it with the exact same amperage</strong> from your spare fuse kit (stored in the glove box or fuse panel door)</li>
+<li><strong>If it immediately blows again</strong> → there's a short circuit somewhere in that wiring, <strong>stop using that circuit and go to an electrician</strong> to find and fix the short. Don't keep replacing fuses.</li>
+</ol>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Sigorta atar ise nasıl bir sigorta ile değiştirilir?"</em> → <strong>Aynı amperdeki sigorta ile değiştirilir.</strong><br />
+- <em>"Sigortayı bir telle değiştirmek caiz midir?"</em> → <strong>Hayır, çok tehlikelidir. Yangına sebep olur.</strong></p>
+<hr />
+<h3>Critical exam facts (cluster this slide's 5 rules together)</h3>
+<blockquote>
+<p><strong>1. Far ayarı</strong> = farlara yapılan ayar işlemi.<br />
+<strong>2. Kısa far 25 m, uzun far 100 m aydınlatır.</strong><br />
+<strong>3. Kısa far göstergesi YEŞİL, uzun far göstergesi MAVİ.</strong><br />
+<strong>4. Sinyal lambası hızlı yanıp sönüyorsa → bir sinyal ampulü arızalıdır.</strong><br />
+<strong>5. Atan sigorta = aynı amperli sigorta ile değiştirilir. ASLA farklı amper / tel kullanma.</strong></p>
+</blockquote>
+<p>These 5 rules together = one of the highest-density exam-question slides in the whole curriculum. Memorize all 5.</p>
+<hr />
+<h3>Note on the Aydınlatma Sisteminin Görevi recap slide</h3>
+<p>The third image shared is the <strong>same slide I already saved as section 4F</strong> (görev definition — "aracın emniyetli seyrini sağlamak için kullanılan ışıklandırmalardır"). Hoca re-showed it after the break as the chapter intro before moving into far/sinyal/sigorta content. No new content to capture — it's already in section 4F.</p>
+<hr />
+<h2>4J. SLIDE (2026-04-14 post-break) — FREN LAMBASI (Brake Lamp)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Title at top: <strong>"FREN LAMBASI"</strong>. Below, a rear-view cartoon illustration of a hatchback car with <strong>3 red/pink rectangular lights lit up</strong>: two at the corners of the rear (left and right <strong>fren/stop lambaları</strong>) and a <strong>third red light mounted in the middle of the rear window</strong> (the <strong>3. stop / üçüncü fren lambası</strong>, required by law on all modern cars). Underneath, a 3-sentence text block explaining what the brake lamps do and 2 common faults.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>FREN LAMBASI</strong><br />
+Aracın arkasındaki <strong>kırmızı</strong> lambaların yanması diğer sürücülere araçta <strong>frenleme</strong> yapıldığını bildirir.<br />
+Fren pedalına basıldığında fren lambalarından biri yanmıyorsa yanmayan lambanın <strong>ampulü arızalanmıştır</strong>.<br />
+<strong>Fren müşirinin arızalı olması</strong> fren lambalarının yanmamasına sebep olabilir.</p>
+<p><strong>BRAKE LAMP</strong><br />
+The <strong>red</strong> lamps at the rear of the vehicle lighting up tell other drivers that <strong>braking is being applied</strong>.<br />
+When you press the brake pedal, if <strong>one</strong> of the brake lamps isn't lighting up, the <strong>bulb of the non-lit lamp has failed</strong>.<br />
+A <strong>faulty fren müşiri (brake light switch)</strong> can cause the brake lamps <strong>not to light up at all</strong>.</p>
+</blockquote>
+<h3>The 3 key points</h3>
+<h4>Point 1 — Purpose: signal to following traffic that you're braking</h4>
+<p><strong>Plain English:</strong> Brake lamps are a <strong>safety communication device</strong>. When you press the brake pedal, all the red rear lamps <strong>light up brightly and instantly</strong>, telling the driver behind you: <em>"I'm slowing down or stopping — be ready to react."</em> This gives the following driver <strong>critical reaction time</strong> to avoid rear-ending you. Without working brake lamps:</p>
+<ul>
+<li>The driver behind has no warning you're slowing</li>
+<li>By the time they realize, they have to brake harder</li>
+<li>If they're distracted, they crash into you</li>
+</ul>
+<p><strong>Rear lamp color rule (universal):</strong> brake lamps are <strong>ALWAYS RED</strong>. It's one of the most standardized colors in automotive engineering worldwide, and it contrasts sharply with the park/plaka lights so it's unmistakable.</p>
+<p><strong>The 3 rear lights on a modern car:</strong><br />
+1. <strong>Sol fren lambası</strong> — left rear brake light<br />
+2. <strong>Sağ fren lambası</strong> — right rear brake light<br />
+3. <strong>3. stop lambası / üçüncü fren lambası</strong> — the third brake light, mounted high (rear window, spoiler, or roof), required by law on all cars since the 1990s. It's higher up so drivers 2-3 cars back can see it over the roof of the car directly behind you.</p>
+<hr />
+<h4>Point 2 — "One brake lamp not lighting = that bulb is blown"</h4>
+<blockquote>
+<p><strong>Fren pedalına basıldığında fren lambalarından biri yanmıyorsa → yanmayan lambanın ampulü arızalanmıştır.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> If you press the brake pedal and <strong>only one</strong> of the brake lights is lighting up (say, the right one lights but the left doesn't), the problem is simple: the <strong>bulb (ampul)</strong> in the non-working lamp has <strong>burned out</strong>. Replace the bulb.</p>
+<p><strong>Contrast with point 3 (below):</strong> one bulb out = ampul arızası. NO bulbs out at all = müşir arızası. Important distinction.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Fren pedalına basıldığında fren lambalarından biri yanmıyorsa arıza nedir?"</em> → <strong>Yanmayan lambanın ampulü arızalıdır.</strong></p>
+<hr />
+<h4>Point 3 — "No brake lamps lighting at all = fren müşiri arızalı"</h4>
+<blockquote>
+<p><strong>Fren müşirinin arızalı olması fren lambalarının yanmamasına sebep olabilir.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> The <strong>fren müşiri (brake light switch)</strong> is a small electrical switch mounted <strong>above or behind the brake pedal</strong>. When you press the pedal, the pedal arm moves a tiny amount and <strong>mechanically closes the müşir's contacts</strong>, completing the electrical circuit that powers the brake lamps.</p>
+<p>If the müşir is <strong>faulty, loose, misaligned, or broken</strong>:<br />
+- You press the pedal → the switch doesn't close → no power gets to <strong>any</strong> of the brake lamps<br />
+- <strong>None of the 3 rear brake lights light up</strong> when you press the brake<br />
+- The car <strong>still brakes normally</strong> — the müşir only controls the LIGHTS, not the braking itself<br />
+- But you're now <strong>invisible to following traffic</strong> — extremely dangerous</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Fren pedalına basıldığında hiçbir fren lambası yanmıyorsa arıza nedir?"</em> → <strong>Fren müşiri arızalıdır.</strong></p>
+<h3>The diagnostic rule (memorize this cleanly)</h3>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Fault</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>One brake lamp not lit</strong>, others work</td>
+<td>That lamp's <strong>ampul (bulb)</strong> is burned out</td>
+</tr>
+<tr>
+<td><strong>No brake lamps lit at all</strong>, pedal presses normally</td>
+<td><strong>Fren müşiri (brake light switch)</strong> is faulty</td>
+</tr>
+<tr>
+<td><strong>Brake pedal stuck down / brake lamps stay on constantly</strong></td>
+<td><strong>Fren müşiri stuck closed</strong> (rare)</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Fren lambaları kırmızı renklidir ve frenleme yapıldığını diğer sürücülere bildirir.</strong><br />
+<em>Brake lamps are red and signal to other drivers that braking is being applied.</em></p>
+<p><strong>Bir fren lambası yanmıyorsa → ampul arızalıdır. Hiçbir fren lambası yanmıyorsa → fren müşiri arızalıdır.</strong><br />
+<em>If one brake lamp isn't lit → the bulb is faulty. If no brake lamps are lit → the brake light switch is faulty.</em></p>
+</blockquote>
+<hr />
+<h2>4K. SLIDE (2026-04-14 post-break) — GERİ VİTES LAMBASI (Reverse Lamp)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Title at top: <strong>"GERİ VİTES LAMBASI"</strong>. A rear-view cartoon illustration of a car with <strong>two white/beyaz lamps lit up at the rear corners</strong> (with radiating "shine" lines to indicate they're on). Underneath, a 2-sentence text block about purpose and one common fault.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>GERİ VİTES LAMBASI</strong><br />
+Aracın arkasında yanmakta olan <strong>beyaz</strong> lambalar diğer sürücülere öndeki aracın <strong>geri vitese takıldığını</strong> bildirir.<br />
+Geri vites lambalarından biri <strong>parlak</strong> diğeri <strong>sönük</strong> yanıyorsa lamba bağlantısında <strong>paslanma</strong> vardır.</p>
+<p><strong>REVERSE LAMP</strong><br />
+The <strong>WHITE</strong> lamps lit up at the rear of the vehicle tell other drivers that the vehicle in front <strong>has been shifted into reverse gear</strong>.<br />
+If one reverse lamp is <strong>bright</strong> and the other is <strong>dim</strong>, there is <strong>corrosion / rust (paslanma)</strong> in the lamp's electrical connection.</p>
+</blockquote>
+<h3>The 3 key points</h3>
+<h4>Point 1 — Purpose: signal that you've shifted into reverse</h4>
+<p><strong>Plain English:</strong> When you shift the gear lever into <strong>R (geri vites)</strong>, an electrical switch in the vites kutusu closes and powers up the two <strong>beyaz (white)</strong> lamps at the rear of the car. These white lamps serve two purposes:</p>
+<ol>
+<li><strong>Signal to drivers behind you</strong> and pedestrians that the car is <strong>about to move backward</strong> (or is already moving backward) — don't walk behind it, don't drive up close behind it</li>
+<li><strong>Illuminate the area behind the car</strong> so you can see while reversing in the dark</li>
+</ol>
+<p><strong>The color rule:</strong> geri vites lambası is <strong>ALWAYS WHITE (beyaz)</strong>. Not red (that's fren lambası). Not yellow (that's sinyal). White reverse lamps are a universal standard.</p>
+<hr />
+<h4>Point 2 — The color summary table (rear lamps)</h4>
+<table>
+<thead>
+<tr>
+<th>Lamp</th>
+<th>Color</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fren / stop lambası</strong></td>
+<td><strong>KIRMIZI</strong> (red)</td>
+<td>Brake being applied</td>
+</tr>
+<tr>
+<td><strong>Arka park lambası</strong></td>
+<td><strong>KIRMIZI</strong> (red, dimmer than fren)</td>
+<td>Parking / headlights on</td>
+</tr>
+<tr>
+<td><strong>Geri vites lambası</strong></td>
+<td><strong>BEYAZ</strong> (white)</td>
+<td>Car shifted into reverse</td>
+</tr>
+<tr>
+<td><strong>Arka sinyal</strong></td>
+<td><strong>SARI / TURUNCU</strong> (yellow / amber)</td>
+<td>Turn signal (left or right)</td>
+</tr>
+<tr>
+<td><strong>Plaka lambası</strong></td>
+<td><strong>BEYAZ</strong> (white, small)</td>
+<td>Illuminates the license plate at night</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam trap:</strong> the exam loves to ask "what does a white light at the rear mean?" — it's asking about <strong>geri vites lambası</strong>, not plaka lambası (though plaka lambası is also white, the question context usually makes it clear).</p>
+<hr />
+<h4>Point 3 — "One bright, one dim = paslanma (corrosion) in the connection"</h4>
+<blockquote>
+<p><strong>Geri vites lambalarından biri parlak diğeri sönük yanıyorsa → lamba bağlantısında paslanma vardır.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> If you shift into reverse and you see:</p>
+<ul>
+<li><strong>Left reverse lamp = bright and normal</strong></li>
+<li><strong>Right reverse lamp = dimmer / weaker than the other</strong></li>
+</ul>
+<p>...or vice versa, the problem is <strong>corrosion / rust (paslanma)</strong> in the <strong>electrical connection</strong> at the dim lamp's socket. Rust at the bulb contacts adds <strong>electrical resistance</strong>, which <strong>reduces the voltage</strong> reaching the bulb, which makes it <strong>dimmer</strong>. The bulb itself is still working, but it's not getting full power.</p>
+<p><strong>Why rust happens at rear lamps:</strong><br />
+- Rear lamps are at the back of the car → exposed to road spray, rain, snow<br />
+- Water gets past worn seals into the lamp housing<br />
+- Metal bulb contacts corrode over time<br />
+- Result: dim, flickering, or occasionally-failing lamp</p>
+<p><strong>The fix:</strong> clean the lamp socket contacts with a wire brush or contact cleaner, re-seat the bulb, check that the housing seal is still water-tight. If the corrosion is severe, replace the socket.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Geri vites lambalarından biri parlak, diğeri sönük yanıyorsa arıza nedir?"</em> → <strong>Lamba bağlantısında paslanma vardır.</strong></p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Geri vites lambaları BEYAZ renklidir.</strong><br />
+<em>Reverse lamps are WHITE.</em></p>
+<p><strong>Geri vites lambalarından biri parlak, diğeri sönük yanıyorsa lamba bağlantısında paslanma vardır.</strong><br />
+<em>If one reverse lamp is bright and the other is dim, there is corrosion in the lamp's connection.</em></p>
+</blockquote>
+<hr />
+<h2>4L. SLIDE (2026-04-14 post-break) — RÖMORK (Trailer): Electric Connection + Gres Yağı</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A text block with colored keywords describing what you must do when you attach a <strong>römork (trailer)</strong> to your vehicle — connect its electrical system to the tow vehicle's socket, ensure the signal / stop / park lamps work on the trailer, and <strong>lubricate the tow ball with gres yağı</strong>. Below the text, a photograph of a <strong>pickup truck with a box / kulübe (animal crate) trailer attached to the back</strong>.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>ARACIMIZA RÖMORK TAKTIĞIMIZ ZAMAN ELEKTRİK SİSTEMİNİ PRİZE TAKMAK LAZIMDIR</strong><br />
+<strong>SİNYAL LAMBALARI, STOP, PARK</strong> LAMBALARI ÇALIŞTIRMAK ZORUNLUDUR.<br />
+RÖMORKU BAĞLADIĞIMIZ <strong>ÇEKİ DEMİRİNE</strong>: <strong>GRES YAĞI</strong> SÜRÜLÜR.</p>
+<p><strong>WHEN WE ATTACH A TRAILER (RÖMORK) TO OUR VEHICLE, WE MUST CONNECT ITS ELECTRICAL SYSTEM TO THE SOCKET (PLUG).</strong><br />
+It is <strong>mandatory</strong> that the <strong>SIGNAL LAMPS, STOP LAMPS, and PARK LAMPS</strong> on the trailer are working.<br />
+<strong>GREASE (gres yağı)</strong> is applied to the <strong>tow ball (çeki demiri)</strong> where we attach the trailer.</p>
+</blockquote>
+<h3>The 3 key points</h3>
+<h4>Point 1 — Electrical connection (priz) is mandatory</h4>
+<p><strong>Plain English:</strong> When you attach a <strong>römork (trailer)</strong> to your car, you <strong>must plug the trailer's electrical harness into the car's trailer socket</strong>. Every car that can legally tow has a <strong>7-pin or 13-pin trailer socket</strong> mounted near the tow ball. The trailer has a matching cable with a plug on the end.</p>
+<p><strong>Why this matters:</strong> when the trailer is attached, it <strong>blocks the view of the car's own rear lights</strong> from the vehicles behind. The drivers behind you can no longer see your brake lights, turn signals, or parking lights — they can only see the <strong>trailer's own lights</strong>. So the trailer must have its <strong>own set of</strong> signal, brake, and park lamps, and those lamps must be powered <strong>through the electrical connection</strong> to the car's lighting system.</p>
+<p><strong>If you tow a trailer without connecting the electrical plug:</strong><br />
+- No brake lights visible to following traffic → <strong>rear-end collision risk</strong><br />
+- No turn signals visible → following traffic doesn't know you're turning<br />
+- No parking lights at night → the trailer is invisible in the dark<br />
+- <strong>This is illegal</strong> under Turkish traffic law and is an immediate fine + possible accident liability</p>
+<hr />
+<h4>Point 2 — Required lamps: sinyal + stop + park (all 3 MUST work)</h4>
+<blockquote>
+<p><strong>Sinyal lambaları, stop lambaları, park lambaları çalıştırmak zorunludur.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> When you hook up a trailer, <strong>3 types of lamps on the trailer must be working</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sinyal lambaları</strong></td>
+<td>Turn signal lamps</td>
+<td>Show the following driver you're turning left or right</td>
+</tr>
+<tr>
+<td><strong>Stop / fren lambaları</strong></td>
+<td>Brake / stop lamps</td>
+<td>Show you're braking (same purpose as car fren lambası — replaces the car's hidden rear brake lights)</td>
+</tr>
+<tr>
+<td><strong>Park lambaları</strong></td>
+<td>Parking / tail lamps</td>
+<td>Show the trailer's outline at night / in fog so drivers can see where it is</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Before starting the trip, check all 3:</strong><br />
+- Turn your signal on — both the car's AND the trailer's signals should flash together<br />
+- Press the brake — both the car's AND the trailer's brake lights should come on<br />
+- Turn on park lights — both should glow</p>
+<p>If any of them is not working on the trailer, <strong>do not drive</strong> until fixed.</p>
+<hr />
+<h4>Point 3 — Gres yağı (grease) on the çeki demiri (tow ball)</h4>
+<blockquote>
+<p><strong>Römorku bağladığımız çeki demirine gres yağı sürülür.</strong></p>
+</blockquote>
+<p><strong>Plain English:</strong> The <strong>çeki demiri</strong> is the <strong>tow ball / tow hitch</strong> — the metal ball sticking out from the back of the car that the trailer's coupling locks onto. It's a <strong>metal-on-metal pivot joint</strong> that has to rotate and flex as the trailer moves behind the car.</p>
+<p><strong>To keep it moving smoothly and protect it from wear and rust:</strong><br />
+- Apply a <strong>coat of gres yağı (grease)</strong> to the surface of the ball <strong>before attaching the trailer</strong><br />
+- The grease:<br />
+  - <strong>Reduces friction</strong> between the ball and the trailer's cup-shaped coupling<br />
+  - <strong>Protects against rust</strong> in wet weather<br />
+  - <strong>Quiets noise</strong> (a dry tow ball squeaks)<br />
+  - <strong>Extends the life</strong> of both the ball and the coupling</p>
+<p><strong>What grease:</strong> any automotive grease works — <strong>gres yağı</strong> is the generic Turkish term for <strong>lithium-based chassis grease</strong>, which you can buy in small tubs at any car parts store.</p>
+<p><strong>Don't confuse "gres yağı" with other "yağ" types:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Yağ</th>
+<th>Used in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Motor yağı</strong></td>
+<td>Engine oil — in the engine (karter)</td>
+</tr>
+<tr>
+<td><strong>Fren yağı / hidrolik yağı</strong></td>
+<td>Brake fluid — in the brake system</td>
+</tr>
+<tr>
+<td><strong>Dişli yağı</strong></td>
+<td>Gear oil — in the vites kutusu (see <a href="08-güç-aktarma-organları.md">08-güç-aktarma-organları.md</a>) AND the direksiyon kutusu (see <a href="10-direksiyon-ön-düzen-sistemi.md">10-direksiyon-ön-düzen-sistemi.md</a>)</td>
+</tr>
+<tr>
+<td><strong>Gres yağı</strong></td>
+<td>Chassis grease — on the <strong>çeki demiri (tow ball)</strong>, wheel bearings, chassis joints</td>
+</tr>
+<tr>
+<td><strong>Antifriz</strong></td>
+<td>Coolant — in the radiator (soğutma sistemi)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam trigger phrases:</strong><br />
+- <em>"Römork çekerken aracın elektrik sistemi nasıl bağlanır?"</em> → <strong>Römorkun fişini aracın prizine takarız. Sinyal, stop ve park lambaları çalışmalıdır.</strong><br />
+- <em>"Çeki demirine hangi yağ sürülür?"</em> → <strong>Gres yağı.</strong><br />
+- <em>"Römork çekerken hangi lambaların çalışması zorunludur?"</em> → <strong>Sinyal, stop (fren) ve park lambaları.</strong></p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Römork taktığımızda elektrik sistemi mutlaka prize takılmalıdır. Trailerdaki sinyal, stop ve park lambaları çalışmak zorundadır.</strong><br />
+<em>When attaching a trailer, the electrical system must be connected to the socket. The trailer's signal, brake, and park lamps must be working.</em></p>
+<p><strong>Çeki demirine gres yağı sürülür.</strong><br />
+<em>Grease is applied to the tow ball.</em></p>
+</blockquote>
+<hr />
+<h2>4M. SLIDE GROUP (2026-04-14 post-break) — ARAÇTA BULUNAN GÖSTERGELER Recap + New Icons</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/page-053.png" alt="Slayt — Sayfa 53: FREN SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 53: FREN SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-053.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What hoca presented</h3>
+<p>A chapter-header slide titled <strong>"ARAÇTA BULUNAN GÖSTERGELER"</strong> (Indicators Found in the Vehicle), followed by a series of individual warning-light slides covering each icon with a verbatim description + a big B&amp;W icon image. The slides in order:</p>
+<ol>
+<li><strong>Yağ Göstergesi</strong> — oil pressure warning</li>
+<li><strong>Şarj Göstergesi</strong> — charging system warning</li>
+<li><strong>(ISI) Hararet Göstergesi</strong> — engine temperature warning</li>
+<li><strong>Yakıt Göstergesi</strong> — fuel level gauge</li>
+<li><strong>Fren Lambaları</strong> (el freni + hidrolik) — handbrake + brake fluid warning</li>
+<li><strong>Motor Arıza Lambası</strong> — check engine (ENGINE malfunction) warning</li>
+<li><strong>Fren balatası aşınma göstergesi</strong> — brake pad wear indicator</li>
+<li><strong>Kızdırma (Isıtma) Bujisi</strong> — glow plug indicator (diesel only)</li>
+<li><strong>Farlar Açık Uyarı Lambası</strong> — headlights-left-on warning</li>
+</ol>
+<p>Icons 1, 2, 3, 4, 5 are <strong>already covered in detail in section 4A (The 4 Critical Warning Light Icons)</strong> of this file — the class 1 notes. Hoca showed them again as recap with more precise verbatim wording. Icons 6, 7, 8, 9 are <strong>NEW content not covered in class 1</strong> and are added below.</p>
+<hr />
+<h3>Recap: The 3 Red-Light Rule (verbatim from the new slides)</h3>
+<h4>🔴 Yağ Göstergesi (oil pressure) — RED</h4>
+<blockquote>
+<p><strong>Yağ Göstergesi:</strong> Motor yağ basıncının çok düşük olduğunu, karterde yağ kalmadığını bildiren göstergedir.<br />
+Marşa basılıp motor çalıştığında yağ göstergesinin sönmesi beklenir.<br />
+Eğer sönmüyorsa ya da yolda giderken yanarsa, trafik kurallarına uymak şartıyla <strong>derhâl durulmalıdır</strong>.</p>
+<p><strong>Oil Gauge:</strong> Indicates that the <strong>engine oil pressure is very low</strong>, or that there is <strong>no oil left in the karter (oil sump)</strong>.<br />
+When you press the starter and the engine runs, the oil light is expected to go off.<br />
+If it does not go off, or comes on while driving, you must <strong>stop immediately</strong> (while obeying traffic rules).</p>
+</blockquote>
+<p><strong>Icon:</strong> the classic <strong>white oil-can / Aladdin's lamp</strong> with a dripping drop — universal oil-pressure symbol.</p>
+<hr />
+<h4>🔴 Şarj Göstergesi (charging system) — RED</h4>
+<blockquote>
+<p><strong>Şarj Göstergesi:</strong> Akünün şarj olamadığını bildiren göstergedir.<br />
+Marşa basılıp motor çalıştığında şarj göstergesinin sönmesi beklenir.<br />
+Akü şarj ikaz ışığı sönmüyorsa ya da yolda giderken yanarsa, trafik kurallarına uymak şartıyla <strong>derhâl durulması gerekir</strong>.<br />
+<strong>Araç sürülmeye devam edecek olursa akü boşalır.</strong></p>
+<p><strong>Charging Gauge:</strong> Indicates that the <strong>battery is not being charged</strong>.<br />
+When the engine starts, the light is expected to go off.<br />
+If the battery charge warning does not go off, or comes on while driving, <strong>stop immediately</strong> (traffic permitting).<br />
+<strong>If you continue driving, the battery will drain.</strong></p>
+</blockquote>
+<p><strong>Icon:</strong> the classic <strong>white battery symbol with + and –</strong> on it.</p>
+<p><strong>Important new detail from this slide:</strong> <em>"Araç sürülmeye devam edecek olursa akü boşalır"</em> — if you ignore the şarj light and keep driving, the battery will slowly drain (because the alternator is not refilling it), and within 15–30 minutes the car will die completely as the battery runs out of reserve charge.</p>
+<hr />
+<h4>🔴 (ISI) Hararet Göstergesi — RED + with NEW practical fix</h4>
+<blockquote>
+<p><strong>(ISI) HARARET GÖSTERGESİ</strong><br />
+Seyir halindeyken hararet lambasının yanması <strong>soğutma suyunun sıcaklığının aşırı yükseldiğini</strong> bildirir.<br />
+Trafik kurallarına uymak şartıyla <strong>derhâl durulmalıdır</strong>.</p>
+<p><strong>Bilgi:</strong> Motorun hararetlendiğinde;<br />
+Klima açık ise kapatılır, Kalorifer sıcak konumda çalıştırılır.</p>
+<p><strong>Uyarı:</strong><br />
+Hararet göstergesi çalışmıyorsa <strong>hararet müşiri arızalıdır</strong>.</p>
+<p><strong>TEMPERATURE GAUGE</strong><br />
+While driving, the temperature lamp lighting up means <strong>the coolant temperature has risen abnormally high</strong>.<br />
+You must <strong>stop immediately</strong> (traffic permitting).</p>
+<p><strong>Info:</strong> When the engine overheats:<br />
+If the A/C (klima) is on, <strong>turn it off</strong>. Turn the <strong>heater (kalorifer) on at the HOT setting</strong>.</p>
+<p><strong>Warning:</strong> If the temperature gauge isn't working, the <strong>hararet müşiri (temperature sensor switch)</strong> is faulty.</p>
+</blockquote>
+<p><strong>Icon:</strong> the white <strong>thermometer over wavy water lines</strong> symbol, OR the analog needle gauge showing °C.</p>
+<h5>⭐ NEW: The klima + kalorifer emergency trick</h5>
+<p>This is <strong>NOT</strong> in the class 1 notes and is a <strong>high-value practical exam fact</strong>:</p>
+<blockquote>
+<p><strong>Motorun hararetlendiğinde: klima açık ise kapatılır, kalorifer sıcak konumda çalıştırılır.</strong></p>
+</blockquote>
+<p><strong>Why this works — the physics:</strong></p>
+<ol>
+<li>
+<p><strong>Klima (A/C)</strong> uses the engine to compress refrigerant → this adds <strong>load</strong> to the engine → makes the engine work harder → generates <strong>more heat</strong>. When overheating, turning off the A/C <strong>removes that extra load</strong>.</p>
+</li>
+<li>
+<p><strong>Kalorifer (heater/heat)</strong> works by circulating <strong>hot coolant</strong> from the engine through a small radiator inside the cabin → a fan blows cabin air through it → the air gets warm and the coolant gets cooler. Turning the heater to <strong>FULL HOT + FULL FAN</strong> essentially adds <strong>a second radiator</strong> to the cooling system, using the passenger cabin to dump heat out of the engine.</p>
+</li>
+</ol>
+<p><strong>Result:</strong> the engine coolant temperature drops slightly because:<br />
+- Less load (no A/C drawing power)<br />
+- More heat dissipation (cabin acts as extra radiator)</p>
+<p><strong>It's uncomfortable for the passengers</strong> (the cabin gets very hot), but it <strong>buys you time to pull over safely</strong> when the engine is overheating.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Motor hararet yaptığında ne yapılır?"</em> → <strong>Araç trafik kurallarına uyarak derhâl durdurulur. Klima kapatılır, kalorifer sıcak konumda açılır.</strong></p>
+<h5>⭐ NEW: "Hararet göstergesi çalışmıyorsa → hararet müşiri arızalıdır"</h5>
+<p>Another NEW diagnostic rule: if the temperature gauge <strong>is not responding at all</strong> (needle stays at 0 / cold regardless of engine temperature), the <strong>hararet müşiri (temperature sensor switch)</strong> is faulty. The sensor is the small electrical component that reads coolant temperature and sends the signal to the dashboard gauge. When it fails, the gauge flatlines.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Hararet göstergesi çalışmıyorsa arıza nedir?"</em> → <strong>Hararet müşiri arızalıdır.</strong></p>
+<p><strong>The "müşir" pattern on the exam:</strong> several dashboard gauges use a "müşir" (sensor switch) to read their state. When the gauge doesn't respond → <strong>müşir arızalı</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Gauge</th>
+<th>Müşir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fren lambası</strong> (none of them light)</td>
+<td><strong>Fren müşiri arızalı</strong></td>
+</tr>
+<tr>
+<td><strong>Hararet göstergesi</strong> (doesn't respond)</td>
+<td><strong>Hararet müşiri arızalı</strong></td>
+</tr>
+<tr>
+<td><strong>Yağ göstergesi</strong> (doesn't respond)</td>
+<td><strong>Yağ müşiri arızalı</strong> (similar pattern, sometimes asked)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Memorize this exam pattern:</strong> <em>"Göstergesi çalışmıyor → ilgili müşir arızalıdır."</em></p>
+<hr />
+<h3>Recap: Yakıt Göstergesi (fuel level) — plain gauge</h3>
+<blockquote>
+<p><strong>Yakıt Göstergesi:</strong> Depodaki yakıt miktarını gösterir.<br />
+<em>Fuel Gauge: Shows the amount of fuel in the tank.</em></p>
+</blockquote>
+<p><strong>Icon:</strong> an analog gauge showing <strong>0 → 1/2 → 1</strong> (empty → half → full) with a small <strong>yakıt pompası (fuel pump)</strong> icon on the bottom left.</p>
+<p><strong>Note:</strong> this is a <strong>gauge, not a warning light</strong> — it always shows a value. When the fuel gets very low, a separate <strong>yakıt azaldı uyarı lambası</strong> (low fuel warning light, usually yellow/amber) lights up.</p>
+<hr />
+<h3>Recap: FREN LAMBALARI (El Freni + Hidrolik) — RED</h3>
+<blockquote>
+<p><strong>FREN LAMBALARI</strong><br />
+El frenin çekili olduğunu ya da <strong>hidrolik seviyesinde düşüş olduğunu</strong> bildiren göstergedir.</p>
+<p><strong>BRAKE LAMPS (dashboard warning)</strong><br />
+Indicates either that the <strong>handbrake is engaged</strong>, or that there is a <strong>drop in the hydraulic fluid level</strong>.</p>
+</blockquote>
+<p><strong>Icon:</strong> a <strong>circle with a "!" in the middle</strong>, with a pair of half-parentheses on either side — the <strong>universal brake-system warning icon</strong>.</p>
+<p><strong>Important dual-function insight (new wording):</strong> this one warning light has <strong>TWO meanings</strong>:<br />
+1. <strong>El freni çekili</strong> — handbrake is still engaged (most common reason it's on)<br />
+2. <strong>Fren hidrolik seviyesinde düşüş</strong> — brake fluid level has dropped below minimum</p>
+<p>So when you see this light:<br />
+- <strong>Check the handbrake first</strong> — is it released? (the light should go out when you release it)<br />
+- <strong>If the handbrake is already down and the light is still on</strong> → the fren hidroliği is low. <strong>Do not drive.</strong> You have a <strong>leak in the brake system</strong>, and driving can lead to complete brake failure. Go to service.</p>
+<p><strong>Exam trigger phrase:</strong><br />
+- <em>"Fren ikaz lambası sürekli yanıyorsa ne kontrol edilir?"</em> → <strong>Önce el freni (çekili mi?), sonra fren hidrolik yağı seviyesi kontrol edilir.</strong></p>
+<hr />
+<h3>⭐ NEW: MOTOR ARIZA LAMBASI (Check Engine Light) — YELLOW</h3>
+<p>This icon is <strong>NOT covered in class 1</strong> and is added now as a separate slide.</p>
+<h3>What the slide showed</h3>
+<p>Title in red: <strong>"MOTOR ARIZA LAMBASI"</strong>. Below, a large <strong>yellow/amber outline of an engine block</strong> — the universal <strong>"check engine"</strong> symbol.</p>
+<h3>Description</h3>
+<p>The <strong>motor arıza lambası (check engine light)</strong> is a <strong>yellow/amber warning</strong> that lights up when the car's engine management computer (<strong>ECU</strong>) has detected a fault somewhere in the engine's <strong>sensors, fuel injection, emissions, ignition, or related systems</strong>.</p>
+<h3>Key facts</h3>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Color</strong></td>
+<td><strong>Sarı (yellow/amber)</strong> — so it follows the 3-color rule: warning, go to service ASAP, but not immediate emergency</td>
+</tr>
+<tr>
+<td><strong>Icon</strong></td>
+<td>Yellow/amber silhouette of an <strong>engine block</strong> (literally looks like an engine)</td>
+</tr>
+<tr>
+<td><strong>What it means</strong></td>
+<td>Engine management has detected a fault — could be sensor, injector, ignition coil, oxygen sensor, catalytic converter, emissions, or anything the ECU monitors</td>
+</tr>
+<tr>
+<td><strong>Urgency</strong></td>
+<td>Not immediate — you can continue driving carefully, but go to an <strong>OBD diagnostic</strong> service as soon as possible</td>
+</tr>
+<tr>
+<td><strong>What NOT to do</strong></td>
+<td>Don't ignore it for weeks. Small faults become big faults if neglected.</td>
+</tr>
+</tbody>
+</table>
+<h3>Typical causes</h3>
+<ul>
+<li><strong>Loose or missing fuel cap</strong> (this alone can trigger motor arıza!)</li>
+<li><strong>Oxygen sensor (O2 sensörü) fault</strong></li>
+<li><strong>Spark plug (buji) worn out</strong> — on gasoline engines</li>
+<li><strong>Catalytic converter (katalitik konvertör) degraded</strong></li>
+<li><strong>Mass airflow sensor fault</strong></li>
+<li><strong>Emissions control system issue</strong></li>
+</ul>
+<h3>Exam trigger phrase</h3>
+<ul>
+<li><em>"Motor arıza lambası sarı renkli yanıyorsa ne yapılır?"</em> → <strong>Acil değilse en kısa zamanda servise gidilmesi gerekir</strong> (from the 3-color rule).</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Motor arıza lambası SARI renklidir. Acil değildir ama en kısa zamanda yetkili servise götürülmelidir.</strong><br />
+<em>The check engine light is yellow/amber. It's not an emergency, but must be taken to authorized service ASAP.</em></p>
+</blockquote>
+<hr />
+<h3>⭐ NEW: FREN BALATASI AŞINMA GÖSTERGESİ (Brake Pad Wear Warning)</h3>
+<h3>What the slide showed</h3>
+<p>A text line <strong>"Fren balatalarının aşınmış olduğunu bildiren göstergedir"</strong> with a <strong>large white icon</strong> that looks like a circle flanked by dashed/broken parentheses on both sides — this represents a <strong>brake disc with worn pad sensors</strong>.</p>
+<h3>Description</h3>
+<blockquote>
+<p><strong>Fren balatalarının aşınmış olduğunu bildiren göstergedir.</strong><br />
+<em>This is the indicator that shows the brake pads have worn down.</em></p>
+</blockquote>
+<h3>How it works</h3>
+<p>Some modern cars have a <strong>wear sensor</strong> embedded in the brake balatas. When the balata wears down to its <strong>minimum safe thickness</strong> (typically 3 mm remaining), the sensor contacts the disc and completes an electrical circuit, lighting this dashboard warning. It's the car's way of telling you: <strong>"your brake pads are almost gone, replace them before they fail."</strong></p>
+<h3>Distinguishing this icon from the fren/el freni icon</h3>
+<p>The two icons look similar and are easy to confuse:</p>
+<table>
+<thead>
+<tr>
+<th>Icon</th>
+<th>Meaning</th>
+<th>Visual difference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fren ikaz (el freni + hidrolik)</strong></td>
+<td>Handbrake on OR brake fluid low</td>
+<td>Solid circle with "!" + solid parentheses</td>
+</tr>
+<tr>
+<td><strong>Fren balatası aşınma göstergesi</strong></td>
+<td>Brake pads worn, need replacement</td>
+<td>Solid circle flanked by <strong>dashed / broken / fragmented</strong> parentheses (representing worn material)</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>dashed / broken pattern</strong> in the balata aşınma icon is the visual metaphor for "worn-out brake material".</p>
+<h3>Urgency</h3>
+<ul>
+<li><strong>Not immediately dangerous</strong> — the brakes still work, you just need to replace the pads soon</li>
+<li><strong>But don't delay</strong> — once the wear sensor contacts the disc, you have maybe <strong>1,000–2,000 km</strong> before the balata is completely gone and metal is grinding on metal, which damages the disc and makes braking very dangerous</li>
+<li><strong>Action:</strong> go to a service center and get the pads replaced within a week or two of seeing this light</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Fren balatası aşınma göstergesi yandığında balataların değiştirilmesi gerekir.</strong><br />
+<em>When the brake pad wear indicator lights up, the pads must be replaced.</em></p>
+</blockquote>
+<hr />
+<h3>⭐ NEW: KIZDIRMA (ISITMA) BUJİSİ — Glow Plug Indicator (DIESEL ONLY)</h3>
+<h3>What the slide showed</h3>
+<p>Title in red: <strong>"Kızdırma (Isıtma) Bujisi:"</strong> with a 2-sentence description and a <strong>large white coil icon</strong> that looks like two connected loops / spirals — the universal glow-plug symbol.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>Kızdırma (Isıtma) Bujisi:</strong><br />
+Soğuk havalarda silindir içindeki havayı ısıtarak motorun kolay çalışmasını sağlar.<br />
+Dizel motorlu araçlarda marşa basmadan önce gösterge panelinde kızdırma bujisi lambasının sönmesi beklenir.</p>
+<p><strong>Glow Plug (Heating Plug):</strong><br />
+In cold weather, it <strong>heats the air inside the cylinder</strong> to help the engine start easily.<br />
+In <strong>diesel-engine vehicles</strong>, before pressing the starter, you must <strong>wait for the glow plug lamp on the dashboard to go off</strong>.</p>
+</blockquote>
+<h3>Clean English explanation — glow plugs on diesel engines</h3>
+<p><strong>This is a DIESEL-SPECIFIC topic.</strong> It does NOT apply to benzinli (gasoline) cars. Let's walk through why diesel engines need glow plugs:</p>
+<h4>Background: how diesels ignite fuel</h4>
+<p>As covered in <a href="01-yakıt-sistemi.md">01-yakıt-sistemi.md</a>:<br />
+- <strong>Benzinli motorlarda</strong> (gasoline engines): fuel ignites from a <strong>spark plug (buji)</strong> — the spark provides the heat<br />
+- <strong>Dizel motorlarda</strong> (diesel engines): fuel ignites from <strong>compressed, superheated air</strong> — no spark plug needed; the air in the cylinder is compressed so hard it becomes hot enough to ignite the injected mazot</p>
+<h4>The cold-weather problem with diesels</h4>
+<p>On <strong>cold mornings</strong> (below ~5°C), the <strong>air entering the diesel cylinder is already very cold</strong>. Even after being compressed, it may not reach the temperature needed to ignite the mazot — or the engine will run very rough / smoke heavily / refuse to start.</p>
+<h4>The solution: kızdırma bujisi (glow plug)</h4>
+<p>A <strong>kızdırma bujisi (glow plug)</strong> is a <strong>small electrical heating element</strong> inside each cylinder of a diesel engine. When you turn the key to position 2 (kontak açık) on a <strong>cold diesel</strong>, the glow plugs turn on and <strong>heat up red-hot inside the cylinders</strong> for about 5–15 seconds. This <strong>pre-heats the air</strong> inside the cylinder so that when you then crank the starter, compression is enough to ignite the fuel.</p>
+<h4>The dashboard indicator — critical procedure</h4>
+<p>The <strong>kızdırma bujisi lambası</strong> is a <strong>dashboard warning light</strong> that lights up when the glow plugs are active. The procedure for starting a cold diesel:</p>
+<ol>
+<li>Turn the key to <strong>kontak açık (position 2)</strong></li>
+<li>The <strong>kızdırma bujisi lambası</strong> lights up — glow plugs are heating</li>
+<li><strong>WAIT</strong> for the light to <strong>go out</strong> (5–15 seconds depending on how cold)</li>
+<li><strong>NOW</strong> crank the starter — the engine will start smoothly</li>
+<li>If you try to crank while the glow plug light is still on, the engine will start hard or refuse to start</li>
+</ol>
+<p><strong>The exam rule:</strong></p>
+<blockquote>
+<p><strong>Dizel motorlu araçlarda marşa basmadan önce kızdırma bujisi lambasının sönmesi beklenir.</strong><br />
+<em>In diesel-engined vehicles, you must wait for the glow plug light to go off before pressing the starter.</em></p>
+</blockquote>
+<h3>Gasoline vs diesel start procedure — contrast</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Benzinli (gasoline)</th>
+<th>Dizel (diesel)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Key to kontak açık</td>
+<td>Key to kontak açık</td>
+</tr>
+<tr>
+<td>2</td>
+<td>(Nothing to wait for)</td>
+<td><strong>WAIT for kızdırma bujisi lamba söner</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Crank starter</td>
+<td>Crank starter</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Engine starts</td>
+<td>Engine starts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The key difference:</strong> diesel drivers must watch the glow plug light and wait. Gasoline drivers can go straight from kontak to crank.</p>
+<h3>Icon description</h3>
+<p>The icon looks like <strong>two connected coils/loops</strong> — a visual representation of the <strong>glow plug's heating coil element</strong>. It's sometimes called the "pretzel" or "glasses" icon informally.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kızdırma bujisi sadece dizel motorlarda bulunur. Marşa basmadan önce kızdırma bujisi lambasının sönmesi beklenir.</strong><br />
+<em>Glow plugs are only found in diesel engines. Before pressing the starter, wait for the glow plug lamp to go off.</em></p>
+</blockquote>
+<hr />
+<h3>⭐ NEW: FARLAR AÇIK UYARI LAMBASI (Headlights-Left-On Warning)</h3>
+<h3>What the slide showed</h3>
+<p>Title in red: <strong>"Farlar Açık Uyarı lambası"</strong> with subtitle <strong>"Farlar Açık Kaldığında Bu Lamba Sürekli Yanar"</strong> (When the headlights are left on, this lamp stays continuously on). Below, a photograph of a car with headlights on at night (showing the beam pattern on the road) and the <strong>kısa far dashboard icon</strong> (D-shape with angled-down lines) in a black box.</p>
+<h3>Description</h3>
+<blockquote>
+<p><strong>Farlar Açık Uyarı Lambası</strong><br />
+<strong>Farlar Açık Kaldığında Bu Lamba Sürekli Yanar.</strong></p>
+<p><strong>Headlights-On Warning Lamp</strong><br />
+When the headlights are left on, this lamp stays continuously lit.</p>
+</blockquote>
+<h3>Clean English explanation — two different "farlar açık" scenarios</h3>
+<p>This warning is a <strong>reminder lamp</strong> that serves two purposes:</p>
+<h4>Purpose 1 — While driving: confirms the headlights are ON</h4>
+<p>During normal night driving, when you turn on your <strong>kısa farlar (low beams)</strong>, a <strong>green indicator</strong> lights up on the dashboard. This tells you "your lights are on" — so you can confirm without looking outside.</p>
+<h4>Purpose 2 — After parking: reminds you that you forgot to turn them off</h4>
+<p>The more important use: if you <strong>park and exit the car with the headlights still on</strong>, many modern cars will:<br />
+- Play a <strong>buzzer/beeper</strong> when you open the driver's door<br />
+- <strong>Keep the dashboard lamp lit</strong> as a reminder<br />
+- Some cars automatically turn the headlights off when the key is removed (dropping this warning)</p>
+<p><strong>The problem this solves:</strong> if you leave the headlights on overnight with the engine off, they will <strong>drain the battery completely</strong> within a few hours. When you come back in the morning, the car will not start — the battery is dead. You'll need a <strong>jump start (akü takviyesi)</strong>.</p>
+<p><strong>Why this happens more at night:</strong> at night, you remember to turn on the lights, but when you park you're focused on locking the car and walking away, and you forget to turn them off. The warning exists to prevent this.</p>
+<h3>Exam context</h3>
+<p>This isn't a major exam topic, but hoca showed it as part of the dashboard-icons tour. The exam may ask:<br />
+- <em>"Farlar açık uyarı lambasının görevi nedir?"</em> → <strong>Farların açık unutulduğunu sürücüye bildirir.</strong><br />
+- <em>"Aracı park ettikten sonra farlar açık kalırsa ne olur?"</em> → <strong>Akü boşalır ve araç çalışmaz.</strong></p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Farlar açık uyarı lambası, farların sürekli açık kaldığını bildirir. Farlar kapatılmadan araç terk edilirse akü boşalır.</strong><br />
+<em>The headlights-on warning indicates that the headlights are continuously on. If you leave the car without turning them off, the battery drains.</em></p>
+</blockquote>
+<hr />
+<h2>4N. SLIDE (2026-04-14) — AMPUL DEĞİŞİMİ (How to Replace a Headlight Bulb)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/page-039.png" alt="Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ" loading="lazy"></a><figcaption>Slayt — Sayfa 39: ELEKTRĠK - AYDINLATMA VE ĠKAZ SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-039.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Title: <strong>"AMPUL DEĞİŞİMİ"</strong>. Below, a <strong>3-step procedure</strong> for replacing a burned-out headlight bulb with two small photographs showing the process: the back of a headlight housing with electrical connector + rubber boot, and a hand removing the bulb.</p>
+<h3>Verbatim Turkish → English</h3>
+<blockquote>
+<p><strong>AMPUL DEĞİŞİMİ</strong><br />
+Değiştirme İşlemi Sırasında:<br />
+- Far ampulünün fişi çekilir.<br />
+- Ampulün lastiği çıkarılır.<br />
+- Yanan ampul çıkarılır. Aracınızda bulunan yedek ampul ile değiştirilir. Ampulü taktıktan sonra sırasıyla lastik ve fiş takılır.</p>
+<p><strong>BULB REPLACEMENT</strong><br />
+During the replacement procedure:<br />
+- The <strong>electrical plug</strong> of the headlight bulb is <strong>pulled out</strong>.<br />
+- The <strong>rubber seal (lastik / boot)</strong> of the bulb is <strong>removed</strong>.<br />
+- The <strong>burned-out bulb</strong> is taken out. It is replaced with the <strong>spare bulb</strong> from the car. After installing the new bulb, the <strong>rubber seal</strong> and the <strong>electrical plug</strong> are put back <strong>in that order</strong>.</p>
+</blockquote>
+<h3>Clean English explanation — the 3-step procedure</h3>
+<p>The slide outlines the <strong>standard bulb replacement sequence</strong> for a typical halogen far ampulü (headlight bulb). The sequence has <strong>3 removal steps and 3 re-installation steps</strong> (in mirror order).</p>
+<h4>Removal sequence</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step (Turkish)</th>
+<th>Step (English)</th>
+<th>What you're doing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Far ampulünün fişi çekilir</strong></td>
+<td>Pull out the electrical plug</td>
+<td>Disconnect the wiring harness from the back of the bulb</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Ampulün lastiği çıkarılır</strong></td>
+<td>Remove the rubber seal / dust boot</td>
+<td>Take off the rubber cover that seals the headlight housing against water and dust</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Yanan ampul çıkarılır</strong></td>
+<td>Remove the burned-out bulb</td>
+<td>Release the spring clip or twist the bulb base to free it</td>
+</tr>
+</tbody>
+</table>
+<h4>Re-installation sequence (mirror order)</h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step</th>
+<th>What you do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>Install the <strong>yedek ampul</strong> (spare bulb)</td>
+<td>Slot the new bulb into the headlight housing, secure the clip or twist it into place</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Put the rubber seal back on</strong></td>
+<td>Seat the boot around the bulb base — must be water-tight</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Plug the electrical connector back in</strong></td>
+<td>Reconnect the wiring harness</td>
+</tr>
+</tbody>
+</table>
+<h3>Key safety and practical rules (not explicitly on slide but critical)</h3>
+<h4>1. Don't touch the glass of the new bulb with bare fingers</h4>
+<p><strong>Halojen (halogen) ampulleri</strong> are extremely sensitive to <strong>finger grease</strong>. The tiny amount of oil from your skin, when the bulb heats up, can create a <strong>hot spot</strong> that causes the glass to expand unevenly and <strong>crack / shatter</strong> the bulb — often within hours of installation.</p>
+<p><strong>Always handle new bulbs by the metal base</strong> or wear gloves. If you accidentally touch the glass, <strong>clean it with alcohol</strong> before installing.</p>
+<h4>2. Replace bulbs in pairs</h4>
+<p>If one far ampulü has burned out, the other one is <strong>likely nearing its end of life</strong> too (both have been running the same hours). Replace them <strong>as a pair</strong> so:<br />
+- Both headlights have equal brightness<br />
+- You don't have to do this job twice in a few weeks<br />
+- The light pattern on the road is symmetric</p>
+<h4>3. Check the correct ampul type</h4>
+<p>Different cars use different bulb types:<br />
+- <strong>H1</strong> — single filament<br />
+- <strong>H4</strong> — dual filament (kısa + uzun far in one bulb)<br />
+- <strong>H7</strong> — single filament, very common in modern cars<br />
+- <strong>HB3 / HB4</strong> — used on some Japanese cars<br />
+- <strong>LED / Xenon</strong> — modern types, often not user-replaceable</p>
+<p>Check the <strong>kullanım kılavuzu</strong> or the markings on the old bulb to find the correct replacement type.</p>
+<h4>4. Spare bulbs stored in the car</h4>
+<p>Many cars (and it's a legal requirement in some EU countries) come with a <strong>yedek ampul kiti (spare bulb kit)</strong> stored in the trunk or under a seat. This kit contains one of each bulb type used on the car (headlight, tail, signal, plate, interior). <strong>Know where your spare bulb kit is</strong> — you might need it on the road.</p>
+<h3>Why the "fiş → lastik → ampul" order matters</h3>
+<p>The order of removal (plug first, then boot, then bulb) exists because:</p>
+<ol>
+<li><strong>Pulling the plug first</strong> disconnects electrical power — <strong>safety first</strong>. The bulb can't accidentally light up while you're touching it.</li>
+<li><strong>Removing the rubber boot second</strong> gives you access to the bulb's spring clip or twist base.</li>
+<li><strong>Removing the bulb last</strong> is self-explanatory.</li>
+</ol>
+<p>Re-installation is the <strong>mirror order</strong> (bulb → boot → plug) so that:</p>
+<ol>
+<li>The <strong>bulb</strong> is seated first (needs to be fully inserted before anything else)</li>
+<li>The <strong>rubber boot</strong> seals against moisture (must go on before the electrical plug for water-tight protection)</li>
+<li>The <strong>plug</strong> is connected last — power returns only after everything else is in place</li>
+</ol>
+<h3>Exam relevance</h3>
+<p>Ampul değişimi is <strong>not a major exam topic</strong> — you won't get asked the exact 3-step sequence. But it does feed into related exam questions:</p>
+<ul>
+<li><em>"Far ampulü yanarsa ne yapılır?"</em> → <strong>Yedek ampul ile değiştirilir.</strong></li>
+<li><em>"Aracınızda bulundurmanız gereken malzemeler nelerdir?"</em> → <strong>Yedek ampul, yedek sigorta, ilk yardım çantası, reflektör, yangın söndürücü</strong> (the legally required onboard items)</li>
+</ul>
+<h3>Cross-reference</h3>
+<ul>
+<li><strong><a href="../../e-kitap/03-araç-tekniği/06-aracta-bulundurmasi-zorunlu-arac-ve-gerecler.md">Portal: Araçta Bulundurması Zorunlu Araç ve Gereçler</a></strong> — the full list of mandatory onboard items</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Far ampulü yandığında, aracın yedek ampul kitinden yeni ampul ile değiştirilir. Değiştirme sırası: fiş çıkar → lastik çıkar → ampul çıkar → yeni ampul tak → lastik tak → fiş tak.</strong></p>
+</blockquote>
+<hr />
+<h2>5. Why this matters for the exam</h2>
+<p>Very high-frequency question types:</p>
+<ol>
+<li><em>"Aydınlatma ve ikaz sisteminin görevi nedir?"</em> → Road illumination + signal indication</li>
+<li><em>"Aydınlatma ve ikaz sisteminin parçası değildir?"</em> → trap with marş motoru / alternatör / karbüratör</li>
+<li><em>"Flaşörün görevi nedir?"</em> → makes turn signals blink</li>
+<li><em>"Kornanın görevi nedir?"</em> → sesli ikaz (audio warning)</li>
+<li><em>"Fren lambası yanmıyor, ampul sağlam. Arıza nerede?"</em> → fren müşüründe</li>
+<li><em>"Geri vites lambası yanmıyor, ampul sağlam. Arıza nerede?"</em> → geri vites müşüründe</li>
+<li><em>"Sürüş sırasında yağ basınç / şarj / hararet lambası yanarsa ne yapılmalı?"</em> → araç derhal durdurulmalıdır</li>
+<li><em>"Hız göstergesinin görevi nedir?"</em> → aracın hızını gösterir</li>
+<li><em>"Devir (takometre) göstergesinin görevi nedir?"</em> → motor devrini (RPM) gösterir</li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>Aydınlatma ve ikaz sisteminin görevi:</strong> Güvenli bir sürüş için yolun aydınlatılması ve sinyallerin hareketlerinin bildirilmesini sağlamaktır.<br />
+<em>(The job is to illuminate the road and indicate signals for safe driving.)</em></p>
+<p><strong>Fault flow (memorize the 4 rules):</strong><br />
+- Bir lamba yanmıyor → <strong>ampul değiştirilir</strong><br />
+- Aynı hattaki lambalar yanmıyor → <strong>sigorta ve kablolar kontrol edilir</strong><br />
+- Fren lambası yanmıyor + ampul sağlam → <strong>fren müşürü arızalıdır</strong><br />
+- Geri vites lambası yanmıyor + ampul sağlam → <strong>geri vites müşürü arızalıdır</strong></p>
+<p><strong>The 3-red-light rule:</strong><br />
+Sürüş sırasında yağ basınç lambası, şarj lambası veya hararet lambası yanarsa <strong>araç derhal durdurulmalıdır</strong>.</p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aydınlatma</td>
+<td>Lighting / illumination</td>
+<td>Making the road visible</td>
+</tr>
+<tr>
+<td>Aydınlatmak</td>
+<td>To illuminate</td>
+<td>Verb form</td>
+</tr>
+<tr>
+<td>Aydınlatılması</td>
+<td>Illumination (noun)</td>
+<td>"yolun aydınlatılması" = illumination of the road</td>
+</tr>
+<tr>
+<td>İkaz</td>
+<td>Warning / alert</td>
+<td>Like horn, hazard lights</td>
+</tr>
+<tr>
+<td>İkaz sistemi</td>
+<td>Warning system</td>
+<td></td>
+</tr>
+<tr>
+<td>Aydınlatma ve ikaz sistemi</td>
+<td>Lighting &amp; warning system</td>
+<td>Full name</td>
+</tr>
+<tr>
+<td>Güvenli sürüş</td>
+<td>Safe driving</td>
+<td>"güvenli bir sürüş için" = for safe driving</td>
+</tr>
+<tr>
+<td>Yol</td>
+<td>Road</td>
+<td></td>
+</tr>
+<tr>
+<td>Sinyaller</td>
+<td>Signals</td>
+<td>Turn signals, hazard signals</td>
+</tr>
+<tr>
+<td>Bildirmek</td>
+<td>To inform / announce</td>
+<td>Key verb</td>
+</tr>
+<tr>
+<td>Bildirilmesi</td>
+<td>Notification / announcement (noun form)</td>
+<td>"sinyallerin bildirilmesi"</td>
+</tr>
+<tr>
+<td>Lamba</td>
+<td>Lamp / bulb</td>
+<td>Any light</td>
+</tr>
+<tr>
+<td>Lambalar</td>
+<td>Lamps</td>
+<td>Plural</td>
+</tr>
+<tr>
+<td>Ampul</td>
+<td>Light bulb</td>
+<td>The replaceable bulb inside a lamp</td>
+</tr>
+<tr>
+<td>Flaşör</td>
+<td>Flasher relay</td>
+<td>Makes turn signals blink</td>
+</tr>
+<tr>
+<td>Korna</td>
+<td>Horn</td>
+<td>Audio warning</td>
+</tr>
+<tr>
+<td>Kablo</td>
+<td>Cable / wire</td>
+<td></td>
+</tr>
+<tr>
+<td>Kablolar</td>
+<td>Cables / wires</td>
+<td></td>
+</tr>
+<tr>
+<td>Sigorta</td>
+<td>Fuse</td>
+<td>Circuit protection</td>
+</tr>
+<tr>
+<td>Müşür</td>
+<td>Switch / sender</td>
+<td>Small sensor-switch</td>
+</tr>
+<tr>
+<td>Fren müşürü</td>
+<td>Brake switch</td>
+<td>Triggers brake lights when braking</td>
+</tr>
+<tr>
+<td>Geri vites müşürü</td>
+<td>Reverse gear switch</td>
+<td>Triggers reverse light in reverse</td>
+</tr>
+<tr>
+<td>Fren lambası</td>
+<td>Brake light</td>
+<td>Red light at the back</td>
+</tr>
+<tr>
+<td>Geri vites lambası</td>
+<td>Reverse light</td>
+<td>White light at the back</td>
+</tr>
+<tr>
+<td>Geri vites</td>
+<td>Reverse gear</td>
+<td></td>
+</tr>
+<tr>
+<td>Arıza</td>
+<td>Fault</td>
+<td></td>
+</tr>
+<tr>
+<td>Arızalı</td>
+<td>Faulty</td>
+<td></td>
+</tr>
+<tr>
+<td>Arızaları</td>
+<td>Its faults</td>
+<td>"arızaları" = faults section</td>
+</tr>
+<tr>
+<td>Geçmek</td>
+<td>To burn out</td>
+<td>"Lamba geçmiş" = bulb burned out</td>
+</tr>
+<tr>
+<td>Geçmiş</td>
+<td>Has burned out</td>
+<td>Past participle</td>
+</tr>
+<tr>
+<td>Yenisi ile değiştirilir</td>
+<td>Is replaced with a new one</td>
+<td>Standard fix phrase</td>
+</tr>
+<tr>
+<td>Aynı hat</td>
+<td>Same line / circuit</td>
+<td>Same electrical circuit</td>
+</tr>
+<tr>
+<td>Yanmak</td>
+<td>To light up / to burn</td>
+<td>"Lamba yanar"</td>
+</tr>
+<tr>
+<td>Yanmıyor</td>
+<td>Doesn't light</td>
+<td></td>
+</tr>
+<tr>
+<td>Hiçbiri</td>
+<td>None of them</td>
+<td></td>
+</tr>
+<tr>
+<td>Sağlam</td>
+<td>Intact / sound / fine</td>
+<td>"Ampul sağlam" = bulb is fine</td>
+</tr>
+<tr>
+<td>Olduğu halde</td>
+<td>Even though it is</td>
+<td>"sağlam olduğu halde"</td>
+</tr>
+<tr>
+<td>Kontrol edilir</td>
+<td>Is checked</td>
+<td>Passive instruction form</td>
+</tr>
+<tr>
+<td>Göstergeler sistemi</td>
+<td>Indicators system</td>
+<td>Dashboard gauges + lights</td>
+</tr>
+<tr>
+<td>Gösterge</td>
+<td>Gauge / indicator</td>
+<td></td>
+</tr>
+<tr>
+<td>Hız göstergesi</td>
+<td>Speedometer</td>
+<td></td>
+</tr>
+<tr>
+<td>Kilometre saati</td>
+<td>Speedometer (alternate name)</td>
+<td></td>
+</tr>
+<tr>
+<td>Devir göstergesi</td>
+<td>Tachometer</td>
+<td>RPM gauge</td>
+</tr>
+<tr>
+<td>Takometre</td>
+<td>Tachometer</td>
+<td></td>
+</tr>
+<tr>
+<td>Devir</td>
+<td>Revolution / RPM</td>
+<td>Engine revolutions</td>
+</tr>
+<tr>
+<td>Yakıt göstergesi</td>
+<td>Fuel gauge</td>
+<td></td>
+</tr>
+<tr>
+<td>Hararet göstergesi</td>
+<td>Temperature gauge</td>
+<td>Engine coolant temp</td>
+</tr>
+<tr>
+<td>Sıcaklık</td>
+<td>Temperature</td>
+<td>Synonym for hararet</td>
+</tr>
+<tr>
+<td>Yağ basınç göstergesi</td>
+<td>Oil pressure gauge</td>
+<td></td>
+</tr>
+<tr>
+<td>Şarj göstergesi</td>
+<td>Charge gauge</td>
+<td>Battery state</td>
+</tr>
+<tr>
+<td>Kilometre sayacı</td>
+<td>Odometer</td>
+<td>Total km</td>
+</tr>
+<tr>
+<td>Hız</td>
+<td>Speed</td>
+<td></td>
+</tr>
+<tr>
+<td>Yağ basınç lambası</td>
+<td>Oil pressure warning light</td>
+<td>🔴 STOP if lit</td>
+</tr>
+<tr>
+<td>Şarj lambası</td>
+<td>Charge warning light</td>
+<td>🔴 STOP if lit</td>
+</tr>
+<tr>
+<td>Akü lambası</td>
+<td>Battery warning light</td>
+<td>Same as şarj lambası</td>
+</tr>
+<tr>
+<td>Hararet lambası</td>
+<td>Temperature warning light</td>
+<td>🔴 STOP if lit</td>
+</tr>
+<tr>
+<td>El freni lambası</td>
+<td>Handbrake warning light</td>
+<td></td>
+</tr>
+<tr>
+<td>Emniyet kemeri lambası</td>
+<td>Seatbelt warning light</td>
+<td></td>
+</tr>
+<tr>
+<td>İkaz lambası</td>
+<td>Warning light</td>
+<td>Generic warning light</td>
+</tr>
+<tr>
+<td>Uyarı lambası</td>
+<td>Warning light (alternate)</td>
+<td>Synonym</td>
+</tr>
+<tr>
+<td>Uyarı</td>
+<td>Warning</td>
+<td></td>
+</tr>
+<tr>
+<td>Derhal</td>
+<td>Immediately</td>
+<td>"derhal durdurulmalıdır"</td>
+</tr>
+<tr>
+<td>Durdurulmak</td>
+<td>To be stopped</td>
+<td>Passive — "must be stopped"</td>
+</tr>
+<tr>
+<td>Kırmızı</td>
+<td>Red</td>
+<td></td>
+</tr>
+<tr>
+<td>Sarı</td>
+<td>Yellow</td>
+<td></td>
+</tr>
+<tr>
+<td>Yeşil</td>
+<td>Green</td>
+<td></td>
+</tr>
+<tr>
+<td>Mavi</td>
+<td>Blue</td>
+<td></td>
+</tr>
+<tr>
+<td>Uzun far</td>
+<td>High beam</td>
+<td>Blue indicator</td>
+</tr>
+<tr>
+<td>Sinyal lambası</td>
+<td>Turn signal lamp</td>
+<td>Green indicator</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li><strong>Shared components</strong> with <a href="03-marş-sistemi.md">03-marş-sistemi.md</a> and <a href="04-şarj-sistemi.md">04-şarj-sistemi.md</a>: akü, kontak anahtarı, sigorta, kablolar</li>
+<li><strong>The 3-red-light rule</strong> combines warnings from THIS system (göstergeler) with info from <a href="02-yağlama-sistemi.md">02-yağlama-sistemi.md</a> (oil pressure) and <a href="04-şarj-sistemi.md">04-şarj-sistemi.md</a> (charging) — you need all three files' info to answer dashboard questions correctly</li>
+<li><strong>Not to be confused:</strong> "İkaz sistemi" (warning system in the car) vs "ikaz levhaları" (warning traffic signs on the road) — different topics on different exam subjects</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/arac-teknigi/page-040.html">📄 Sayfa 40: AYDINLATMA VE İKAZ SİSTEMİ<span class="score">204.1</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-053.html">📄 Sayfa 53: FREN SİSTEMİ<span class="score">169.0</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-036.html">📄 Sayfa 36: MARş SİSTEMİ<span class="score">160.8</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-039.html">📄 Sayfa 39: ELEKTRİK - AYDINLATMA VE İKAZ SİSTEMİ<span class="score">147.1</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-042.html">📄 Sayfa 42: GÖSTERGELER SİSTEMİ<span class="score">125.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-023.html">📄 Sayfa 23: BENZİNLİ MOTOR<span class="score">111.6</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/arac-teknigi-kitabi/07-egzoz-aydinlatma-gosterge/index.html">🖼️ Egzoz, Aydınlatma, Göstergeler<span class="score">5 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/01-motor-genel/index.html">🖼️ Motor: Sınıflandırma & Çalışma<span class="score">5 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/06-sarj-mars/index.html">🖼️ Şarj & Marş<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İnsan Vücudu — Human Body (Anatomy Basics) | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 02-insan-vucudu</span>
+</div>
+<div class="content">
+<h1>İnsan Vücudu — Human Body (Anatomy Basics)</h1>
+<p><strong>Last updated:</strong> 2026-04-25<br />
+<strong>Slides covered:</strong> SLIDE 10 (hücre/doku/organ/sistem), SLIDE 12 (vücudumuzun sistemleri ve görevleri), SLIDE 15 (dolaşım sistemi damar haritası), SLIDE 17 (sindirim + boşaltım sistemleri)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Before learning how to fix a body in an emergency, you must know <strong>how a body is organized</strong>. The exam tests this hierarchy as a definition question (one term → one definition match).</p>
+<blockquote>
+<p><strong>Hücre → Doku → Organ → Sistem → İnsan</strong><br />
+<em>(Cell → Tissue → Organ → System → Human)</em></p>
+</blockquote>
+<p>Each level is built from the level below it. The smallest <strong>living</strong> unit is the cell; the largest functional unit is the system; everything together makes up the human.</p>
+<hr />
+<h2>2. SLIDE 10 — Hücre, Doku, Organ, Sistem</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>İNSAN VÜCUDU:</strong></p>
+<p><strong>Hücre:</strong> Bağımsız olarak yaşayabilen, vücudumuzun en küçük canlı birimidir. Hücre zarı vasıtasıyla beslenir.</p>
+<p><strong>Doku:</strong> Aynı tip hücrelerin bir araya gelerek meydana getirdikleri yapıya <strong>doku</strong> denir.</p>
+<p><strong>Organ:</strong> Aynı görevi yapan dokuların birleşmesiyle <strong>organ</strong> oluşur.</p>
+<p><strong>Sistem:</strong> Aynı amaç için bir yapı içerisinde çalışan organların tümü sistemi oluşturur.</p>
+<p><strong>Hücre → Doku → Organ → Sistem → İnsan</strong></p>
+<p>(Diagram: cell + tissue + organ → human body)</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Turkish</th>
+<th>Definition (memorize)</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Hücre</strong> (cell)</td>
+<td>Independently living, the <strong>smallest living unit</strong> of our body. Feeds through the <strong>cell membrane (hücre zarı)</strong>.</td>
+<td>a single liver cell, a red blood cell</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Doku</strong> (tissue)</td>
+<td>A structure formed when <strong>same type of cells</strong> come together.</td>
+<td>muscle tissue, nervous tissue, bone tissue</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Organ</strong></td>
+<td>Formed when <strong>tissues that do the same job</strong> combine.</td>
+<td>heart, liver, lung, kidney</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Sistem</strong> (system)</td>
+<td>All organs working <strong>toward the same goal within one structure</strong>.</td>
+<td>dolaşım sistemi (circulatory), solunum sistemi (respiratory), sindirim sistemi (digestive)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>İnsan</strong> (human)</td>
+<td>All systems working together.</td>
+<td>the whole body</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Build-up logic:</strong><br />
+- Cells of the same kind cluster → tissue.<br />
+- Tissues with the same function combine → organ.<br />
+- Organs with the same purpose work together → system.<br />
+- Systems together = the human body.</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Smallest living unit = Hücre</strong> (not atom, not molecule, not doku — hücre is the answer).</li>
+<li><strong>Doku = aynı TİP hücreler.</strong> "Aynı görev" doku için DEĞİL, organ için.</li>
+<li><strong>Organ = aynı GÖREVİ yapan dokular.</strong></li>
+<li><strong>Sistem = aynı AMAÇ için çalışan organlar.</strong></li>
+<li>The exam will swap "tip" / "görev" / "amaç" between definitions to trick you. Match each level to its <strong>specific</strong> keyword.</li>
+</ul>
+<p>The hierarchy is always tested in this exact order: <strong>Hücre → Doku → Organ → Sistem → İnsan.</strong> A wrong option may put Organ before Doku — don't fall for it.</p>
+<hr />
+<h2>3. SLIDE 12 — İnsan Vücudu Sistem ve Organları (the 5 systems)</h2>
+<h3>What the slide showed</h3>
+<p>A circular diagram titled <strong>"VÜCUDUMUZUN SİSTEMLERİ VE GÖREVLERİ"</strong> with 5 lobes:</p>
+<table>
+<thead>
+<tr>
+<th>Sistem</th>
+<th>Organlar</th>
+<th>Görev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hareket sistemi</strong></td>
+<td><strong>Kemik, eklem ve kaslardan</strong> oluşur</td>
+<td><strong>Hareket ve destek</strong> görevi vardır.</td>
+</tr>
+<tr>
+<td><strong>Dolaşım sistemi</strong></td>
+<td><strong>Kalp, damar ve kandan</strong> oluşur</td>
+<td>Dokulara <strong>oksijen ve besin elemanları taşır</strong> ve dokularda oluşan <strong>atıkları (zararlı maddeleri) toplar</strong>.</td>
+</tr>
+<tr>
+<td><strong>Sinir sistemi</strong></td>
+<td><strong>Beyin, beyincik ve omurilik soğanından</strong> oluşur</td>
+<td><strong>Anlama, algılama ve dengeyi sağlama</strong> görevi vardır. Ayrıca <strong>kalbin çalışması ve solunumda da</strong> görevi vardır.</td>
+</tr>
+<tr>
+<td><strong>Solunum sistemi</strong></td>
+<td><strong>Akciğer, soluk borusu, burun ve ağızdan</strong> oluşur</td>
+<td><strong>Dokuların oksijenlenmesini</strong> sağlar.</td>
+</tr>
+<tr>
+<td><strong>Sindirim sistemi</strong></td>
+<td><strong>Ağız, yutak, yemek borusu, mide, ince ve kalın bağırsaklar</strong></td>
+<td><strong>Gıdaların alınmasını, sindirilmesini, atıkların dışarı atılmasını</strong> sağlar.</td>
+</tr>
+</tbody>
+</table>
+<h3>Clean English explanation</h3>
+<p>The body has <strong>5 main systems</strong> the exam tests by name → organs → function. Master each one as a triplet.</p>
+<h4>1. Hareket Sistemi — Movement / Musculoskeletal System</h4>
+<ul>
+<li><strong>Organs:</strong> Kemik (bone), eklem (joint), kas (muscle).</li>
+<li><strong>Job:</strong> Hareket (movement) + destek (support / structure).</li>
+<li>Memory hook: <strong>K-E-K</strong> — Kemik, Eklem, Kas.</li>
+</ul>
+<h4>2. Dolaşım Sistemi — Circulatory System</h4>
+<ul>
+<li><strong>Organs:</strong> Kalp (heart), damar (blood vessels), kan (blood).</li>
+<li><strong>Job:</strong> Carries <strong>oxygen + nutrients (besin elemanları)</strong> TO tissues, and collects <strong>waste (atık / zararlı madde)</strong> FROM tissues.</li>
+<li>This is the system that fails first in cardiac arrest — central to first aid.</li>
+</ul>
+<h4>3. Sinir Sistemi — Nervous System</h4>
+<ul>
+<li><strong>Organs:</strong> Beyin (brain), beyincik (cerebellum), omurilik soğanı (medulla oblongata / brainstem).</li>
+<li><strong>Job:</strong> <strong>Anlama, algılama, denge</strong> (understanding, perception, balance).</li>
+<li><strong>Critical:</strong> also controls <strong>kalbin çalışması ve solunum</strong> — heartbeat and breathing.</li>
+<li>This is why head trauma is so dangerous: damage here can stop the heart and lungs even when they're physically intact.</li>
+</ul>
+<h4>4. Solunum Sistemi — Respiratory System</h4>
+<ul>
+<li><strong>Organs:</strong> Akciğer (lung), soluk borusu (trachea), burun (nose), ağız (mouth).</li>
+<li><strong>Job:</strong> <strong>Dokuların oksijenlenmesi</strong> — getting oxygen into the tissues.</li>
+<li>The respiratory system feeds the circulatory system with oxygen.</li>
+</ul>
+<h4>5. Sindirim Sistemi — Digestive System</h4>
+<ul>
+<li><strong>Organs (in order):</strong> Ağız → yutak (pharynx) → yemek borusu (esophagus) → mide (stomach) → ince bağırsak (small intestine) → kalın bağırsak (large intestine).</li>
+<li><strong>Job:</strong> <strong>Gıdaların alınması (intake) → sindirilmesi (digestion) → atıkların dışarı atılması (excretion).</strong></li>
+</ul>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Hareket sistemi = kemik + eklem + kas.</strong> "Damar" or "akciğer" being put here is a trap.</li>
+<li><strong>Dolaşım sistemi'nin organları = kalp + damar + kan.</strong> Lungs are NOT part of the circulatory system on this exam — they're respiratory.</li>
+<li><strong>Sinir sistemi</strong> = beyin + beyincik + omurilik soğanı. It controls <strong>heart and breathing</strong> even though those organs belong to other systems — this overlap is heavily tested.</li>
+<li><strong>Solunum sistemi'nin görevi</strong> = "dokuların <strong>oksijenlenmesi</strong>" (NOT "dokulara besin taşıma" — that's dolaşım).</li>
+<li><strong>Sindirim sistemi'nin sırası</strong> = ağız → yutak → yemek borusu → mide → ince bağırsak → kalın bağırsak. Don't swap mide with bağırsaklar.</li>
+<li>A common combo question: <strong>"Kalbin çalışmasını ve solunumu hangi sistem kontrol eder?"</strong> → <strong>Sinir sistemi</strong> (not dolaşım, not solunum).</li>
+</ul>
+<hr />
+<h2>4. SLIDE 15 — Dolaşım Sistemi (vücut damar haritası)</h2>
+<h3>What the slide showed</h3>
+<p>A full-body anatomical diagram with red (atardamar) and blue (toplardamar) vessels labeled, plus the closing line:</p>
+<blockquote>
+<p><strong>"Bütün vücutta faaliyet gösteren sistem dolaşım sistemidir."</strong></p>
+</blockquote>
+<p>Labeled major vessels:<br />
+- <strong>Şah damarı</strong> (carotid artery — neck)<br />
+- <strong>Aort</strong> (aorta — main artery from heart)<br />
+- <strong>Kalp</strong> (heart)<br />
+- <strong>Ana toplardamar</strong> (vena cava — main vein returning to heart)<br />
+- <strong>Kol toplardamarı</strong> / <strong>Kol atardamarı</strong> (arm vein / arm artery)<br />
+- <strong>Bilek atardamarı</strong> (wrist artery — radial)<br />
+- <strong>Kasık (uyluk) atardamarı</strong> (groin/femoral artery)</p>
+<h3>Clean English explanation</h3>
+<h4>Why dolaşım sistemi is special</h4>
+<p>The slide's headline states the most-tested fact: <strong>dolaşım sistemi</strong> is the <strong>only system that operates throughout the ENTIRE body</strong> — every cell, every tissue, every organ depends on it. This is why circulation failure causes death the fastest.</p>
+<h4>Damar (vessel) types — the two-name pair the exam loves</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What it carries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Artery</td>
+<td><strong>Atardamar</strong></td>
+<td>Artery</td>
+<td><strong>Oxygen-rich blood AWAY</strong> from the heart (pulses with each heartbeat).</td>
+</tr>
+<tr>
+<td>Vein</td>
+<td><strong>Toplardamar</strong></td>
+<td>Vein</td>
+<td><strong>Oxygen-poor blood BACK TO</strong> the heart.</td>
+</tr>
+<tr>
+<td>Capillary</td>
+<td><strong>Kılcal damar</strong></td>
+<td>Capillary</td>
+<td>tiny vessels where exchange happens between blood and tissues.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Memory hook:</strong> <strong>At</strong>ardamar = blood is <strong>At</strong>ılan (thrown out) from heart. <strong>Topla</strong>rdamar = blood is <strong>topla</strong>nan (collected) back.</p>
+<h4>Pulse points — where you can feel a pulse (= an atardamar near the surface)</h4>
+<table>
+<thead>
+<tr>
+<th>Konum</th>
+<th>Damar</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boyun</td>
+<td><strong>Şah damarı (karotis)</strong></td>
+<td>Adult CPR pulse check — fastest way to check the heart.</td>
+</tr>
+<tr>
+<td>Bilek</td>
+<td><strong>Bilek atardamarı (radial)</strong></td>
+<td>Routine pulse check (calm patient).</td>
+</tr>
+<tr>
+<td>Kasık / uyluk</td>
+<td><strong>Kasık atardamarı (femoral)</strong></td>
+<td>Severe arm-injury patients, infants.</td>
+</tr>
+<tr>
+<td>Kol</td>
+<td><strong>Kol atardamarı (brakial)</strong></td>
+<td>Used in infants for pulse, also where blood-pressure cuff goes.</td>
+</tr>
+</tbody>
+</table>
+<p>A bleeding <strong>atardamar</strong> spurts in time with the heartbeat (bright red, high pressure). A bleeding <strong>toplardamar</strong> flows steadily (dark red, low pressure). The kit's <strong>turnike</strong> is for arterial bleeds.</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Dolaşım sistemi = bütün vücutta faaliyet gösteren tek sistem.</strong> This exact wording is a stock exam answer.</li>
+<li><strong>Atardamar = oksijenli kan, kalpten dokulara.</strong> <strong>Toplardamar = oksijensiz kan, dokulardan kalbe.</strong> A swap here is the standard trap.</li>
+<li><strong>Şah damarı (boyun) and kasık atardamarı</strong> are the two big arteries; cutting these = death within minutes.</li>
+<li><strong>Yetişkinde nabız → şah damarından (karotis).</strong> <strong>Çocukta/bebekte nabız → kol atardamarından (brakial).</strong></li>
+</ul>
+<hr />
+<h2>5. SLIDE 17 — Sindirim Sistemi + Boşaltım Sistemi</h2>
+<h3>What the slide showed</h3>
+<blockquote>
+<p><strong>SİNDİRİM SİSTEMİ:</strong> Vücudun yaşamını sürdürebilmesi için gerekli olan <strong>gıdaların alınması, sindirilmesi ve atıkların dışarı atılmasını</strong> sağlayan sistemdir.</p>
+<p><strong>Sindirim Sistemi Organları:</strong> Ağız, yutak, yemek borusu, mide, ince bağırsaklar, <strong>tükürük bezleri, karaciğer, pankreas</strong>.</p>
+<p><strong>Boşaltım sistemi organları:</strong> <strong>Kalın bağırsaklar, anüs.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Sindirim sistemi — full organ list (note the additions)</h4>
+<p>The simple version (slide 12) listed only the food-tube organs. This slide <strong>adds the digestive glands</strong> that don't sit in the food path but secrete substances into it:</p>
+<table>
+<thead>
+<tr>
+<th>Organ</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ağız</strong> (mouth)</td>
+<td>Mechanical chewing + saliva mixes in.</td>
+</tr>
+<tr>
+<td><strong>Yutak</strong> (pharynx)</td>
+<td>Swallowing junction.</td>
+</tr>
+<tr>
+<td><strong>Yemek borusu</strong> (esophagus)</td>
+<td>Tube to stomach.</td>
+</tr>
+<tr>
+<td><strong>Mide</strong> (stomach)</td>
+<td>Acid + enzymes break down food.</td>
+</tr>
+<tr>
+<td><strong>İnce bağırsak</strong> (small intestine)</td>
+<td>Main absorption of nutrients.</td>
+</tr>
+<tr>
+<td><strong>Tükürük bezleri</strong> (salivary glands)</td>
+<td>Make saliva — start of digestion.</td>
+</tr>
+<tr>
+<td><strong>Karaciğer</strong> (liver)</td>
+<td>Makes bile (safra), processes nutrients.</td>
+</tr>
+<tr>
+<td><strong>Pankreas</strong> (pancreas)</td>
+<td>Releases digestive enzymes + insulin.</td>
+</tr>
+</tbody>
+</table>
+<h4>Boşaltım sistemi (excretory system) — what's separated out</h4>
+<p>The slide separates the <strong>boşaltım</strong> organs as those that handle <strong>waste removal</strong>, not nutrient absorption:</p>
+<table>
+<thead>
+<tr>
+<th>Organ</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kalın bağırsak</strong> (large intestine / colon)</td>
+<td>Reabsorbs water, forms stool.</td>
+</tr>
+<tr>
+<td><strong>Anüs</strong></td>
+<td>Final exit.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note the trap:</strong> kalın bağırsak is shown here under <strong>boşaltım</strong>, not sindirim. The slide is using a narrow definition: "sindirim" = breakdown + absorption (small intestine and the glands), "boşaltım" = waste exit (large intestine + anus). Real exams sometimes group them differently (kalın bağırsak under sindirim) — go with whichever side the question's phrasing supports.</p>
+</blockquote>
+<h4>Sindirim'in 3 görevi (the slide's headline definition)</h4>
+<ol>
+<li><strong>Gıdaların alınması</strong> — food intake.</li>
+<li><strong>Sindirilmesi</strong> — breaking food down into absorbable molecules.</li>
+<li><strong>Atıkların dışarı atılması</strong> — excreting waste.</li>
+</ol>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Tükürük bezleri, karaciğer, pankreas</strong> are part of <strong>sindirim sistemi</strong> even though food doesn't pass through them — they secrete digestive substances. The exam tests this.</li>
+<li><strong>Boşaltım sistemi = kalın bağırsak + anüs</strong> in this slide's framing. (Real boşaltım sistemi anatomy includes kidneys + urinary tract; this slide is simplified to the digestive-tract end.)</li>
+<li><strong>Sindirim'in görevi 3 ana adım: alınma → sindirilme → atıkların atılması.</strong></li>
+</ul>
+<hr />
+<h2>2B. Hoca's Live Class Additions (2026-04-25)</h2>
+<p>These topics aren't on slides 10–17 but the hoca taught them as the on-scene <strong>assessment protocol</strong> before any TYD intervention. They belong here because they use the anatomy you just learned.</p>
+<h3>1. Bilinç Değerlendirme — 3-Level Consciousness Check</h3>
+<blockquote>
+<p><em>"İlk önce kişinin bilincine bakıyoruz. İyi misin diyoruz. Cevap verirse demek ki sözlü uyaranlara cevap veriyor — birinci derece bilinç kaybı. Cevap vermedi, omzunu sıkıyoruz veya bebeklerde ayağının altına vuruyoruz. Burada bir tepki alırsak ikinci derece. Bunda da tepki alamazsak üçüncü derece bilinç kaybı."</em></p>
+</blockquote>
+<p><strong>The 3 levels of bilinç kaybı (consciousness loss):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Derece</th>
+<th>Test</th>
+<th>If they respond...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. derece</strong></td>
+<td><strong>Sözlü uyaran:</strong> lean close, loud "iyi misin?"</td>
+<td>They reply → 1st-degree (mild)</td>
+</tr>
+<tr>
+<td><strong>2. derece</strong></td>
+<td><strong>Ağrılı uyaran:</strong> <strong>omzunu sık</strong> (squeeze shoulder); <strong>for infants → ayağının altına vur</strong> (tap sole of foot)</td>
+<td>They wince, twitch eyebrow, move face → 2nd-degree</td>
+</tr>
+<tr>
+<td><strong>3. derece</strong></td>
+<td>Neither sözlü NOR ağrılı uyarana tepki</td>
+<td>No response → 3rd-degree → <strong>proceed to ABC</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Critical rule:</strong> Only after <strong>3rd-degree bilinç kaybı</strong> is confirmed do you start <strong>ilk yardımın A-B-C'si</strong> (airway → breathing → circulation). Don't skip the bilinç check.</p>
+<p><strong>Bebek ipucu:</strong> Don't squeeze a baby's shoulder — <strong>tap the sole of the foot</strong> instead.</p>
+<h3>2. Nabız Alma — How to Take a Pulse</h3>
+<blockquote>
+<p><em>"Üç parmakla beş saniye süreyle nabız alıyoruz. Nereden? El bileğimiz, ayak bileğimiz, kasık, uyluk, şakak, şah damarı, koltuk altı."</em></p>
+</blockquote>
+<p><strong>Technique:</strong><br />
+- <strong>3 parmakla</strong> (3 fingers — index, middle, ring; NOT thumb, the thumb has its own pulse and confuses you).<br />
+- <strong>5 saniye süre</strong> — count for 5 seconds.</p>
+<p><strong>Pulse points (memorize the list — overlaps with basınç noktaları):</strong><br />
+1. <strong>El bileği</strong> (wrist — radial)<br />
+2. <strong>Ayak bileği</strong> (ankle — posterior tibial)<br />
+3. <strong>Kasık / uyluk</strong> (groin / thigh — femoral)<br />
+4. <strong>Şakak</strong> (temple — superficial temporal)<br />
+5. <strong>Şah damarı / boyun</strong> (carotid — neck) ← easiest in adults<br />
+6. <strong>Koltuk altı</strong> (axillary — armpit)<br />
+7. <strong>Diz arkası</strong> (popliteal)<br />
+8. <strong>Dirsek arkası</strong> (brachial)</p>
+<h3>3. Nabız Tanımı (definition the hoca recited)</h3>
+<blockquote>
+<p><em>"Nabız: kalbin kanı bütün vücudumuza pompalarken </em><em>damar duvarına yapmış olduğu basıncın bizim tarafımızdan hissedilmesidir</em><em>."</em></p>
+</blockquote>
+<p>(Pulse = the rhythmic pressure the heart exerts on the artery wall as it pumps blood, felt by your fingers.)</p>
+<h3>Critical exam fact (from this section)</h3>
+<ul>
+<li><strong>"Bilinç kaç derecede değerlendirilir?"</strong> → <strong>3 derece.</strong> (Sözlü → ağrılı → ikisine de yok.)</li>
+<li><strong>"Bebekte ağrılı uyaran nasıl verilir?"</strong> → <strong>Ayağının altına vurarak</strong> (NOT shoulder squeeze).</li>
+<li><strong>"Nabız nasıl alınır?"</strong> → <strong>3 parmakla, 5 saniye.</strong> Trap option: "başparmakla" → wrong (başparmağın kendi nabzı vardır).</li>
+<li><strong>"Yetişkinde en kolay nabız?"</strong> → <strong>şah damarı / boyun.</strong></li>
+<li><strong>"Bebek/çocukta nabız?"</strong> → <strong>kol atardamarı (brakial)</strong> veya <strong>şah damarı</strong>.</li>
+</ul>
+<hr />
+<h2>3. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Vücudumuzun en küçük canlı birimi nedir?"</strong> → <strong>Hücre.</strong></li>
+<li><strong>"Aynı tip hücrelerin bir araya gelmesiyle ne oluşur?"</strong> → <strong>Doku.</strong></li>
+<li><strong>"Aynı görevi yapan dokular birleşince ne oluşur?"</strong> → <strong>Organ.</strong></li>
+<li><strong>"Aynı amaç için çalışan organların tümü neyi oluşturur?"</strong> → <strong>Sistem.</strong></li>
+<li><strong>"Vücudun yapı taşlarının küçükten büyüğe doğru sıralaması?"</strong> → <strong>Hücre → Doku → Organ → Sistem → İnsan.</strong></li>
+</ol>
+<hr />
+<h2>4. Memorize These</h2>
+<blockquote>
+<p><strong>Hücre:</strong> Bağımsız yaşayabilen, en küçük canlı birim. Hücre zarı ile beslenir.<br />
+<em>Cell: smallest independently living unit, fed through the cell membrane.</em></p>
+<p><strong>Doku:</strong> Aynı <strong>tip</strong> hücrelerin oluşturduğu yapı.<br />
+<em>Tissue: structure made of same-type cells.</em></p>
+<p><strong>Organ:</strong> Aynı <strong>görevi</strong> yapan dokuların birleşimi.<br />
+<em>Organ: combination of tissues that do the same job.</em></p>
+<p><strong>Sistem:</strong> Aynı <strong>amaç</strong> için çalışan organların tümü.<br />
+<em>System: all organs working toward the same goal.</em></p>
+<p><strong>Hiyerarşi:</strong> Hücre → Doku → Organ → Sistem → İnsan.</p>
+</blockquote>
+<hr />
+<h2>5. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>insan vücudu</td>
+<td>human body</td>
+<td>the whole organism</td>
+</tr>
+<tr>
+<td>hücre</td>
+<td>cell</td>
+<td>smallest living unit</td>
+</tr>
+<tr>
+<td>hücre zarı</td>
+<td>cell membrane</td>
+<td>through which the cell feeds</td>
+</tr>
+<tr>
+<td>bağımsız</td>
+<td>independent</td>
+<td>self-sustaining</td>
+</tr>
+<tr>
+<td>canlı birim</td>
+<td>living unit</td>
+<td>living building block</td>
+</tr>
+<tr>
+<td>doku</td>
+<td>tissue</td>
+<td>same-type cells together</td>
+</tr>
+<tr>
+<td>aynı tip</td>
+<td>same type</td>
+<td>key word for doku</td>
+</tr>
+<tr>
+<td>organ</td>
+<td>organ</td>
+<td>same-job tissues combined</td>
+</tr>
+<tr>
+<td>aynı görev</td>
+<td>same function/job</td>
+<td>key word for organ</td>
+</tr>
+<tr>
+<td>sistem</td>
+<td>system</td>
+<td>same-goal organs working together</td>
+</tr>
+<tr>
+<td>aynı amaç</td>
+<td>same purpose/goal</td>
+<td>key word for sistem</td>
+</tr>
+<tr>
+<td>beslenmek</td>
+<td>to feed/nourish</td>
+<td>how the cell gets nutrients</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>6. Cross-references</h2>
+<ul>
+<li>Portal verbatim: <code>e-kitap/02-ilk-yardım/01-ilk-yardim-ile-ilgili-kavramlar.md</code> (anatomy section)</li>
+<li>Next expected: specific <strong>sistemler</strong> — dolaşım sistemi, solunum sistemi, sinir sistemi (these get their own slides).</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

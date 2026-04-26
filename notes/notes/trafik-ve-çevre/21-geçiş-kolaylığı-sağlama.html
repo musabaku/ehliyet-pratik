@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gelen Trafikle Karşılaşma — Geçiş Kolaylığı Sağlama Kuralı | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 21-geçiş-kolaylığı-sağlama</span>
+</div>
+<div class="content">
+<h1>Gelen Trafikle Karşılaşma — Geçiş Kolaylığı Sağlama Kuralı</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — Dar taşıt yolunda gelen trafikle karşılaşma: 9-basamaklı araç öncelik hiyerarşisi (Otomobil &gt; minibüs &gt; kamyonet &gt; otobüs &gt; kamyon &gt; arazi taşıtı &gt; LTT &gt; iş makinesi &gt; motorsuz) + "↓↑ / ↑↓" karşılaşma levhaları · SLIDE 2 — Tehlikeli eğimli (yokuş) dar yollarda karşılaşma: inen araç çıkan araca yol verir + sığınma cebi &gt; sağa yanaşma &gt; geri gitme kademeli kuralı</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>On a <strong>dar taşıt yolu</strong> (narrow road) — especially one where <strong>only one vehicle at a time</strong> can pass through — two vehicles coming from opposite directions eventually meet. One has to <strong>pull over and wait</strong> while the other passes. This slide answers the question: <strong>which one yields?</strong></p>
+<p>The rule is an <strong>explicit 9-level priority hierarchy</strong> based on vehicle class. It's completely separate from:<br />
+- <strong>Geçiş hakkı</strong> (kavşak priority) — that's in <a href="19-kavşak-geçiş-hakkı.md">19-kavşak-geçiş-hakkı.md</a><br />
+- <strong>Geçiş üstünlüğü</strong> (emergency priority) — that's in <a href="20-geçiş-üstünlüğüne-sahip-araçlar.md">20-geçiş-üstünlüğüne-sahip-araçlar.md</a><br />
+- <strong>Yokuş kuralları</strong> (hill meeting rules) — separate topic (yokuş aşağı araç, yokuş yukarı araca yol verir)</p>
+<p>The slide ALSO introduces <strong>two related trafik işaretleri</strong>:<br />
+- <strong>↓↑ (blue rectangle)</strong> — <em>"Gelen trafiğe göre önceliğiniz var"</em> — you have priority over oncoming traffic.<br />
+- <strong>↓↑ (red circle with slash)</strong> — <em>"Gelen trafiğe öncelik verin"</em> — yield to oncoming traffic.</p>
+<hr />
+<h2>2. SLIDE 1 — Dar taşıt yolunda geçiş kolaylığı hiyerarşisi</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-116.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-116.png" alt="Slayt — Sayfa 116: GELEN TRAFİKLE KARŞILAŞMA HALİNDE" loading="lazy"></a><figcaption>Slayt — Sayfa 116: GELEN TRAFİKLE KARŞILAŞMA HALİNDE <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-116.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A title "<strong>GELEN TRAFİKLE KARŞILAŞMA HALİNDE GEÇİŞ KOLAYLIĞI SAĞLAMA KURALI</strong>" with a pink sub-header specifying the scope, a vertical list of 9 vehicle classes (each first letter highlighted in bold pink), and on the right a diagram of a narrow chokepoint between two wide green areas, with car <strong>1</strong> on the left already in the narrow section and car <strong>2</strong> on the right approaching. The two "↓↑" signs (blue square + red circle) appear on the far right.</p>
+<h4>The scope condition (pink sub-header)</h4>
+<blockquote>
+<p><strong>Düz eğimsiz, dar taşıt yollarında aksini gösteren bir trafik işareti yoksa;</strong></p>
+<p><em>On </em><em>flat, non-sloped, narrow</em><em> roads where </em><em>no traffic sign indicates otherwise</em><em>…</em></p>
+</blockquote>
+<p>Three conditions must all hold for this hierarchy to apply:<br />
+1. <strong>Düz</strong> — the road is <strong>flat</strong> (not a hill — yokuş rules override this).<br />
+2. <strong>Eğimsiz</strong> — <strong>no incline</strong> (same as above).<br />
+3. <strong>Aksini gösteren trafik işareti yok</strong> — no sign (↓↑ blue or red circle) already assigns priority.</p>
+<h4>The 9-level hierarchy (verbatim, in priority order, highest first)</h4>
+<blockquote>
+<p><strong>Otomobil,</strong><br />
+<strong>minibüs,</strong><br />
+<strong>kamyonet,</strong><br />
+<strong>otobüs,</strong><br />
+<strong>kamyon,</strong><br />
+<strong>arazi taşıtı,</strong><br />
+<strong>LTT</strong> (Lastik Tekerlekli Traktör),<br />
+<strong>iş makinelerini sürenler,</strong><br />
+<strong>Motorsuz araçları sürenler</strong></p>
+<p><strong>yazılış sırasına göre kendisinden öncekilere, geçiş hakkı vermek suretiyle geçiş kolaylığı sağlamak zorundadırlar.</strong></p>
+<p><em>…must — in the order listed — give way to those listed before them by yielding and providing ease of passage.</em></p>
+</blockquote>
+<p>Meaning: <strong>each class yields to every class listed ABOVE it.</strong> Motorsuz yields to everyone. Otomobil yields to no one (on this slide).</p>
+<h3>Clean English explanation</h3>
+<h4>The hierarchy (from greatest priority to least)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Rank</th>
+<th>Vehicle</th>
+<th>Yields to</th>
+<th>Is yielded-to-by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1</strong></td>
+<td><strong>Otomobil</strong></td>
+<td>(no one on this list)</td>
+<td>everyone below</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2</strong></td>
+<td><strong>Minibüs</strong></td>
+<td>Otomobil</td>
+<td>everyone below</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3</strong></td>
+<td><strong>Kamyonet</strong></td>
+<td>Otomobil, minibüs</td>
+<td>everyone below</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4</strong></td>
+<td><strong>Otobüs</strong></td>
+<td>Otomobil, minibüs, kamyonet</td>
+<td>everyone below</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5</strong></td>
+<td><strong>Kamyon</strong></td>
+<td>Otomobil, minibüs, kamyonet, otobüs</td>
+<td>everyone below</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6</strong></td>
+<td><strong>Arazi taşıtı</strong></td>
+<td>all 5 above</td>
+<td>everyone below</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>7</strong></td>
+<td><strong>LTT</strong> (Lastik Tekerlekli Traktör)</td>
+<td>all 6 above</td>
+<td>iş makinesi, motorsuz</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>8</strong></td>
+<td><strong>İş makinesi</strong></td>
+<td>all 7 above</td>
+<td>motorsuz</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>9</strong></td>
+<td><strong>Motorsuz araç</strong></td>
+<td>everyone</td>
+<td>(no one)</td>
+</tr>
+</tbody>
+</table>
+<h4>The memory hook: <strong>"OmKokaLiM"</strong></h4>
+<p>Take the first letter of each vehicle:<br />
+<strong>O</strong>tomobil → <strong>m</strong>inibüs → <strong>k</strong>amyonet → <strong>o</strong>tobüs → <strong>k</strong>amyon → <strong>a</strong>razi taşıtı → <strong>L</strong>TT → <strong>i</strong>ş makinesi → <strong>M</strong>otorsuz<br />
+= <strong>O m k o k a L i M</strong> — memorize this 9-letter sequence and you own this slide.</p>
+<h4>Why this order?</h4>
+<p>Two axes combined:<br />
+- <strong>Speed / agility:</strong> faster, more maneuverable vehicles at top.<br />
+- <strong>Commercial urgency:</strong> passenger cars and public transport over cargo, cargo over agriculture / work, agriculture over non-motorized.</p>
+<p><strong>Interesting subtleties:</strong><br />
+- <strong>Otomobil (1) beats otobüs (4)</strong> even though otobüs carries more passengers. The slide's logic is that the car is the "base standard" for the road network.<br />
+- <strong>Otobüs (4) beats kamyon (5)</strong> — passenger service ranks above cargo.<br />
+- <strong>Arazi taşıtı (6) beats LTT (7)</strong> — a 4x4 off-roader is treated as more road-compatible than a tractor.<br />
+- <strong>Motorsuz (9) is dead last</strong> — matches the equal-arms hierarchy from <a href="19-kavşak-geçiş-hakkı.md">19-kavşak-geçiş-hakkı.md</a>.</p>
+<h4>The matching trafik işaretleri on the right of the slide</h4>
+<table>
+<thead>
+<tr>
+<th>Sign</th>
+<th>Shape</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>↑↓ (blue rectangle)</strong></td>
+<td>Mavi kare / Bilgi işareti</td>
+<td><em>"Gelen trafiğe göre önceliğiniz var"</em> — you have priority. Passed an oncoming "yield" sign.</td>
+</tr>
+<tr>
+<td><strong>↓↑ (red circle, downward arrow red)</strong></td>
+<td>Kırmızı daire / Yasaklama</td>
+<td><em>"Gelen trafiğe öncelik veriniz"</em> — yield to oncoming traffic. You must stop / pull over.</td>
+</tr>
+</tbody>
+</table>
+<p>These two signs explicitly assign priority on narrow roads. Where they exist, the 9-level class hierarchy is <strong>overridden by the sign</strong>.</p>
+<p><strong>Memory hook:</strong> the red-circle sign has the <strong>red arrow</strong> pointing toward YOU = you must yield. The blue sign has the <strong>black arrow</strong> pointing toward YOU = you go; the oncoming red arrow yields.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Düz-eğimsiz dar yolda (işaret yoksa) geçiş sırası:</strong><br />
+<strong>O m k o k a L i M</strong> = <strong>Otomobil → minibüs → kamyonet → otobüs → kamyon → arazi taşıtı → LTT → iş makinesi → motorsuz.</strong></p>
+<p>Her araç <strong>kendisinden öncekine yol verir</strong> (motorsuz herkese, otomobil hiç kimseye yol vermez).</p>
+<p><strong>Eğer "↓↑" işareti varsa:</strong> <strong>kırmızı daire</strong> = YOL VER · <strong>mavi kare</strong> = GEÇ.</p>
+</blockquote>
+<hr />
+<h2>2B. SLIDE 2 — Tehlikeli Eğimli (Yokuş) Dar Yolda Karşılaşma</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-118.png" alt="Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA" loading="lazy"></a><figcaption>Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A "<strong>GEÇİŞ KOLAYLIĞI SAĞLAMA</strong>" header with the <strong>tehlikeli eğim</strong> (dangerous slope) rule in two paragraphs, and a diagram of a steep narrow road: <strong>otomobil "1"</strong> climbing uphill (çıkan araç) from the bottom with a warning-triangle sign beside it, and <strong>kamyon "2"</strong> descending (inen araç) from the top.</p>
+<h4>The full rule (verbatim)</h4>
+<blockquote>
+<p><strong>Tehlikeli eğimli yollarda karşılaşma hallerinde;</strong> çıkan araç için geçiş güç veya mümkün değilse, güvenli geçişi sağlamak için, <strong>inen araçlar varsa sığınma cebine girmek, sığınma cebi yoksa sağ tarafa yanaşıp durmak, çıkan araç için manevra imkânı bulunmadığının açıkça anlaşılması halinde de geri gitmek zorundadırlar.</strong></p>
+<p><strong>Tehlikeli eğimli ve dar yollarda İNEN ARAÇ, ÇIKAN ARACA yol vermelidir.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The core rule — INEN YİELDS TO ÇIKAN</h4>
+<p>On a <strong>dangerously sloped narrow road</strong>, the <strong>descending vehicle (inen araç)</strong> gives way to the <strong>ascending vehicle (çıkan araç)</strong>. This is the <strong>exact opposite</strong> of what a casual driver might assume ("gravity helps the descender, let them keep going") — the reason is the opposite: the uphill vehicle is <strong>fighting gravity</strong>, and if it has to stop mid-climb it risks:<br />
+- Losing momentum and stalling.<br />
+- Rolling back.<br />
+- Being unable to restart on the grade (especially a loaded truck).</p>
+<p>The descender, on the other hand, can stop and restart downhill with no difficulty.</p>
+<h4>The 3-level action ladder (what the inen araç does, in order)</h4>
+<p>When the inen araç has to yield, it follows this cascade:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Priority</th>
+<th>Action</th>
+<th>Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td><strong>Sığınma cebine gir</strong> — pull into a refuge bay / pullout</td>
+<td>If one exists on the inen araç's side</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td><strong>Sağ tarafa yanaş + dur</strong> — pull right and stop</td>
+<td>If no refuge bay is available</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td><strong>Geri git</strong> — reverse</td>
+<td>If the çıkan araç clearly cannot maneuver past even after you've stopped</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sığınma cebi</strong> = a short widened shoulder section (a "pullout") cut into mountain roads specifically for this purpose. Common on dağ geçitleri (mountain passes) and viaduct approaches.</p>
+<p>The escalation is deliberate:<br />
+- <strong>Sığınma cebi</strong> is the cleanest solution — you completely clear the road.<br />
+- <strong>Sağa yanaşma</strong> is the fallback when there's no cebi.<br />
+- <strong>Geri gitme</strong> (reversing on a slope) is the last resort — it's dangerous, but on a narrow mountain road sometimes unavoidable.</p>
+<h4>Why this overrides the 9-level class hierarchy</h4>
+<p>The SLIDE 1 hierarchy (<strong>O m k o k a L i M</strong>) applies to <strong>düz-eğimsiz</strong> flat roads. On a yokuş (slope), the class ranking is <strong>overridden</strong>:<br />
+- A <strong>kamyon climbing uphill</strong> beats an <strong>otomobil descending downhill</strong> — even though otomobil &gt; kamyon in the class hierarchy.<br />
+- A <strong>traktör climbing</strong> beats an <strong>otomobil descending</strong>.</p>
+<p>The exam loves this inversion. If the question says <em>"tehlikeli eğimli dar yolda otomobil ile kamyon karşılaşırsa"</em>, the answer depends on <strong>which direction each vehicle is going</strong>, NOT on the class.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Tehlikeli eğimli dar yolda: İNEN ARAÇ → ÇIKAN ARACA yol verir.</strong> (Slope rule overrides the class hierarchy.)</p>
+<p><strong>İnen aracın kademe kademe yapacakları:</strong><br />
+(1) <strong>Sığınma cebine gir.</strong><br />
+(2) Cebi yoksa <strong>sağa yanaş ve dur.</strong><br />
+(3) Çıkan araç manevra yapamıyorsa <strong>geri git.</strong></p>
+</blockquote>
+<hr />
+<h2>2C. Hoca's Live Class Additions (2026-04-18)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-118.png" alt="Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA" loading="lazy"></a><figcaption>Slayt — Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-118.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The "tır vs motosiklet" extreme example — why inen gives way</h3>
+<p>The hoca gave a deliberately extreme worked example to lock in the rampada rule:</p>
+<blockquote>
+<p><em>"Diyelim ki motosiklet geliyor aşağıdan yukarıya ve yukarıdan aşağıya bir tane tır iniyor. Bunlar karşılaştılar ve motosiklet hiç hareket edemiyor. O noktada kural çok nettir: </em><em>tır geri vitesi takacak, geri geri gidecek, motosiklete yol verecek.</em><em>"</em></p>
+</blockquote>
+<p><strong>The counter-intuitive part:</strong> the tır is vastly bigger, heavier, and slower — yet the tır <strong>reverses uphill</strong> to let a motorcycle climb past. The rule ignores vehicle class on a slope.</p>
+<h3>The "why" — reversing uphill is safer than reversing downhill</h3>
+<p>The hoca's physical reasoning (new, not on the slide):</p>
+<blockquote>
+<p><em>"Çünkü yokuş aşağı geri vitesle gitmek çok zordur, ama yukarıya doğru geri vitesle gitmek rahattır, tehlikesizdir."</em></p>
+</blockquote>
+<p><strong>Mechanics:</strong><br />
+- <strong>Yokuş aşağı geri vites</strong> → gravity adds to your reverse speed → easy to lose control, hard to brake, easy to jackknife a trailer. <strong>Dangerous.</strong><br />
+- <strong>Yokuş yukarı geri vites</strong> → gravity fights your motion → the engine's reverse gear + the slope itself act as brakes → you creep back slowly, controllably. <strong>Safe.</strong></p>
+<p>So "<strong>inen araç çıkan araca yol verir</strong>" isn't arbitrary — it's the law's way of saying <em>the descender, if it has to reverse, reverses UPHILL, which is the safe direction</em>. The ascender never has to reverse downhill (which would be dangerous).</p>
+<p><strong>How to remember:</strong> if you ever second-guess the rule, imagine yourself reversing on a 12% grade. Which direction do you trust? <strong>Uphill, every time.</strong> That's why the inen araç (who would reverse <em>uphill</em> back to where they came from) yields.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Rampada: inen araç çıkana yol verir çünkü</strong> geri vitesle <strong>yokuş yukarı gitmek</strong> (inen aracın yapması gereken manevra) güvenli; <strong>yokuş aşağı gitmek</strong> (çıkan aracın yapması gerekecek olan) <strong>tehlikelidir.</strong></p>
+<p>Bu kural araç sınıfını (kamyon vs motor) <strong>tamamen geçersiz kılar</strong> — düz yoldaki OmKokaLiM hiyerarşisi yokuşta işlemez.</p>
+</blockquote>
+<hr />
+<h2>3. When this hierarchy does NOT apply</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<p>The 9-level list is <strong>only</strong> the default rule on a flat narrow road without signs. It's overridden by:</p>
+<ol>
+<li><strong>A traffic sign</strong> — ↓↑ red circle means "stop, yield"; ↑↓ blue means "you go first." The sign wins.</li>
+<li><strong>A hill / slope (yokuş)</strong> — different rule: <strong>yokuş aşağı indiği araç, yokuş yukarı çıkan araca yol verir</strong> (the downhill-descending vehicle yields to the uphill-climbing vehicle), because the uphill driver risks losing momentum. This overrides the class hierarchy entirely.</li>
+<li><strong>A geçiş üstünlüğü vehicle</strong> — ambulans/itfaiye/polis on duty overrides every other rule (except trafik polisi's direct talimatı).</li>
+<li><strong>A kavşak</strong> — inside an intersection, use the kavşak rules from <a href="19-kavşak-geçiş-hakkı.md">19</a>, not this list.</li>
+</ol>
+<hr />
+<h2>4. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Düz eğimsiz dar bir yolda otomobil ile kamyon karşılaşırsa geçiş hakkı kimindir?"</strong> → <strong>Otomobil.</strong></li>
+<li><strong>"Aynı yolda traktör (LTT) ile iş makinesi karşılaşırsa?"</strong> → <strong>LTT</strong> (7 &gt; 8).</li>
+<li><strong>"Motorsuz bir araç sürücüsü, gelen bir otomobile ne yapmalıdır?"</strong> → <strong>Yol vermek, geçiş kolaylığı sağlamak.</strong></li>
+<li><strong>"Kamyon ile otobüs karşılaşırsa hangisi önce geçer?"</strong> → <strong>Otobüs.</strong> (rank 4 &gt; rank 5)</li>
+<li><strong>"Arazi taşıtı ile kamyonet karşılaşırsa?"</strong> → <strong>Kamyonet</strong> (3 &gt; 6) — trap: arazi taşıtı looks more "rugged" but is lower priority.</li>
+<li><strong>"↓↑ kırmızı daireli işaret ne anlama gelir?"</strong> → <strong>Gelen trafiğe öncelik ver.</strong></li>
+<li><strong>"↑↓ mavi kare işaret ne anlama gelir?"</strong> → <strong>Gelen trafiğe göre önceliğin var — geçebilirsin.</strong></li>
+<li><strong>"Dar yolda bir trafik işareti varsa hiyerarşi nasıl değişir?"</strong> → <strong>İşaret hiyerarşinin üstündedir</strong> — ne diyorsa onu yaparsın.</li>
+<li><strong>"Yokuşta bu kural geçerli midir?"</strong> → <strong>Hayır, yokuşta ayrı kural var</strong> (yokuş aşağı, yokuş yukarıya yol verir).</li>
+</ol>
+<hr />
+<h2>5. Memorize These</h2>
+<blockquote>
+<p><strong>O m k o k a L i M</strong> = <strong>Otomobil · minibüs · kamyonet · otobüs · kamyon · arazi taşıtı · LTT · iş makinesi · motorsuz.</strong> Her araç <strong>kendinden öncekine yol verir</strong>.</p>
+<p><strong>Şart:</strong> Düz, eğimsiz, dar yol, <strong>aksini gösteren trafik işareti yok.</strong></p>
+<p><strong>Motorsuz</strong> herkese yol verir · <strong>Otomobil</strong> kimseye yol vermez.</p>
+<p><strong>↓↑ KIRMIZI DAİRE</strong> = gelen trafiğe öncelik ver (SEN DUR).<br />
+<strong>↑↓ MAVİ KARE</strong> = sen geç (gelen yolu versin).</p>
+<p><strong>Yokuşta bu hiyerarşi geçmez — yokuş aşağı, yukarıya yol verir.</strong></p>
+</blockquote>
+<hr />
+<h2>6. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dar taşıt yolu</td>
+<td>Narrow road</td>
+<td>One-lane-at-a-time passage</td>
+</tr>
+<tr>
+<td>Düz eğimsiz yol</td>
+<td>Flat non-sloped road</td>
+<td>Scope condition for this rule</td>
+</tr>
+<tr>
+<td>Gelen trafik</td>
+<td>Oncoming traffic</td>
+<td>Cross direction</td>
+</tr>
+<tr>
+<td>Geçiş kolaylığı sağlamak</td>
+<td>To provide ease of passage</td>
+<td>Yielding on a narrow road</td>
+</tr>
+<tr>
+<td>Otomobil</td>
+<td>Automobile / passenger car</td>
+<td>Priority rank 1</td>
+</tr>
+<tr>
+<td>Minibüs</td>
+<td>Minibus</td>
+<td>Rank 2</td>
+</tr>
+<tr>
+<td>Kamyonet</td>
+<td>Light goods truck</td>
+<td>Rank 3</td>
+</tr>
+<tr>
+<td>Otobüs</td>
+<td>Bus</td>
+<td>Rank 4</td>
+</tr>
+<tr>
+<td>Kamyon</td>
+<td>Truck</td>
+<td>Rank 5</td>
+</tr>
+<tr>
+<td>Arazi taşıtı</td>
+<td>Off-road vehicle / 4x4</td>
+<td>Rank 6</td>
+</tr>
+<tr>
+<td>LTT</td>
+<td>Lastik Tekerlekli Traktör</td>
+<td>Rubber-tyred tractor, rank 7</td>
+</tr>
+<tr>
+<td>İş makinesi</td>
+<td>Work machine</td>
+<td>Rank 8</td>
+</tr>
+<tr>
+<td>Motorsuz araç</td>
+<td>Non-motorized vehicle</td>
+<td>Rank 9 (lowest)</td>
+</tr>
+<tr>
+<td>Yazılış sırasına göre</td>
+<td>In the order written</td>
+<td>The priority is the list order</td>
+</tr>
+<tr>
+<td>Kendisinden öncekilere</td>
+<td>To those before it</td>
+<td>Who to yield to</td>
+</tr>
+<tr>
+<td>Gelen trafiğe öncelik ver</td>
+<td>Yield to oncoming traffic</td>
+<td>Red circle "↓↑" sign</td>
+</tr>
+<tr>
+<td>Gelen trafiğe göre önceliğiniz var</td>
+<td>You have priority over oncoming</td>
+<td>Blue square "↑↓" sign</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. Cross-references</h2>
+<ul>
+<li>Kavşakta eşit kollu hiyerarşi (motorsuz, LTT, sağdan gelen) → <a href="19-kavşak-geçiş-hakkı.md">19-kavşak-geçiş-hakkı.md</a> § 2F</li>
+<li>Geçiş üstünlüğü araçları (8-kategorili liste) → <a href="20-geçiş-üstünlüğüne-sahip-araçlar.md">20-geçiş-üstünlüğüne-sahip-araçlar.md</a></li>
+<li>Dar köprü/tünel geçişleri (geçme yasağı bağlamında) → <a href="17-geçme-kuralları.md">17-geçme-kuralları.md</a></li>
+<li>Trafik tanzim / bilgi işaretleri (↓↑ işaretleri) → <a href="08-trafik-tanzim-işaretleri-yasaklama.md">08-trafik-tanzim-işaretleri-yasaklama.md</a> + <a href="10-bilgi-işaret-levhaları.md">10-bilgi-işaret-levhaları.md</a></li>
+<li>Yokuş kuralları (ayrı hiyerarşi) → <em>not yet captured</em> (to add when slide appears)</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-118.html">📄 Sayfa 118: GEÇİŞ KOLAYLIĞI SAĞLAMA<span class="score">157.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-116.html">📄 Sayfa 116: GELEN TRAFİKLE KARŞILAŞMA HALİNDE<span class="score">134.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html">📄 Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI<span class="score">79.8</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html">📄 Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME<span class="score">76.6</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-080.html">📄 Sayfa 80: KARAYOLU KULLANIM KURALLARI<span class="score">65.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html">📄 Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER<span class="score">60.7</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/index.html">🖼️ Kavşaklarda İlk Geçiş Hakkı<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/03-trafik-isaret-levhalari/index.html">🖼️ Trafik İşaret Levhaları<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/07-gecme-manevralar/index.html">🖼️ Geçme & Manevralar<span class="score">3 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

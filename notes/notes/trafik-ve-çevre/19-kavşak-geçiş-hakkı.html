@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kavşaklarda İlk Geçiş Hakkı Kuralları — Right-of-Way at Intersections | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 19-kavşak-geçiş-hakkı</span>
+</div>
+<div class="content">
+<h1>Kavşaklarda İlk Geçiş Hakkı Kuralları — Right-of-Way at Intersections</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — Kavşaklara yaklaşan sürücünün genel yükümlülükleri + obey-order hiyerarşisi (görevli &gt; ışık &gt; levha &gt; yer) · SLIDE 2 — Kontrolsüz kavşakta 7-maddelik ilk geçiş hakkı önceliği (geçiş üstünlüğü, tali→anayol, tramvay, bölünmüş yol, dönel kavşak, iz/mülkten çıkan, dönüş yapan) · SLIDE 3 — Bölünmüş yola çıkış (rule 4 illustrated) · SLIDE 4 — İz/mülkten karayoluna çıkış (rule 6 illustrated) · SLIDE 5 — Dönel kavşak (rule 5 illustrated) · SLIDE 6 — Kavşak kolları eşit ise: motorsuz→motorlu→traktör→sağdan gelen + yayaya öncelik + kavşağı tıkama yasağı</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p><strong>Geçiş hakkı (right of way)</strong> is the single most-tested concept in the Trafik ve Çevre subject after signs. The exam presents intersection diagrams constantly, asking "which car goes first?". There are two distinct regimes:</p>
+<ol>
+<li><strong>Kontrollü kavşak</strong> — kavşakta <strong>polis</strong>, <strong>ışık</strong> veya <strong>levha</strong> var → obey the control in a fixed priority order (Police &gt; Light &gt; Sign &gt; Ground marking).</li>
+<li><strong>Kontrolsüz kavşak</strong> — none of the above. You apply the <strong>7-rule priority list</strong> from SLIDE 2.</li>
+</ol>
+<p>Pair this with:<br />
+- <strong>Geçiş üstünlüğü vs geçiş hakkı</strong> two-name trap → <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a><br />
+- <strong>Polisin 8 hareketi + kontrol hiyerarşisi</strong> → <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a><br />
+- <strong>Sağdan gelene öncelik</strong> (appears inside the sola dönüş rules) → <a href="18-manevralar-dönüşler.md">18-manevralar-dönüşler.md</a></p>
+<hr />
+<h2>2. SLIDE 1 — Kavşaklara Yaklaşan Sürücünün Genel Yükümlülükleri</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-096.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-096.png" alt="Slayt — Sayfa 96: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 96: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-096.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A header "<strong>KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI</strong>" with a general duty paragraph, then a numbered list of 4 sources of authority a driver must obey (in priority order), and a trafik polisi illustration.</p>
+<h4>The general duty (verbatim)</h4>
+<blockquote>
+<p><strong>Kavşaklara yaklaşan sürücüler, yavaşlamak, dikkatli olmak, geçiş hakkı olan araçların önce geçmesine imkan vermek zorundadırlar.</strong></p>
+<p><em>Drivers approaching an intersection must </em><em>slow down, be attentive, and allow vehicles with right-of-way to pass first</em><em>.</em></p>
+</blockquote>
+<h4>The 4-step authority hierarchy</h4>
+<blockquote>
+<p><strong>Kavşaklara yaklaşan sürücüler;</strong></p>
+<ol>
+<li><strong>Görevli kişilerin verecekleri talimatlara</strong> — instructions from authorized personnel (trafik polisi).</li>
+<li><strong>Trafik ışıklı işaret cihazlarına</strong> — traffic lights.</li>
+<li><strong>Trafik işaret levhalarına</strong> — traffic signs (boards).</li>
+<li><strong>Yol ve yer işaretlerine</strong> — road and ground markings.</li>
+</ol>
+<p>→ <strong>Uymak zorundadır.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The 3-word duty: YAVAŞLA, DİKKAT ET, İZİN VER</h4>
+<p>When you approach any kavşak:<br />
+- <strong>Yavaşla</strong> — reduce speed (this is also a <a href="15-hız-kuralları.md">hızın azaltılması gereken yerler</a> situation).<br />
+- <strong>Dikkat et</strong> — scan all approaches before entering.<br />
+- <strong>İzin ver</strong> — yield to vehicles that hold right-of-way.</p>
+<h4>The hierarchy — "Human &gt; Machine &gt; Board &gt; Ground"</h4>
+<p>This is the same hierarchy from <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a> — memorize it cold:</p>
+<ol>
+<li><strong>GÖREVLİ</strong> (polis / trafik zabıtası) — a live officer <strong>overrides everything</strong>.</li>
+<li><strong>IŞIK</strong> (trafik ışığı) — overrides signs and ground markings.</li>
+<li><strong>LEVHA</strong> (işaret levhası) — overrides ground markings.</li>
+<li><strong>YER</strong> (yol çizgileri, yer işaretleri) — lowest in the hierarchy.</li>
+</ol>
+<p><strong>Exam trap:</strong> if a polis waves you through a red light, you obey the polis. If a sign conflicts with the yellow centerline, you obey the sign.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kavşağa yaklaşan sürücü: YAVAŞLAR, DİKKATLİ OLUR, geçiş hakkı olan araçlara geçiş izni VERİR.</strong></p>
+<p><strong>Uyulacak sıra (kontrol hiyerarşisi):</strong> <strong>1-Görevli → 2-Işık → 3-Levha → 4-Yer işareti.</strong></p>
+</blockquote>
+<hr />
+<h2>2B. SLIDE 2 — Kontrolsüz Kavşakta İlk Geçiş Hakkı (7 rule)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A header "<strong>KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI</strong>" with a pink sub-header naming the scope:</p>
+<blockquote>
+<p><strong>Trafik zabıtası, ışıklı işaret cihazları ve trafik işaret levhası bulunmayan (KONTROLSÜZ) kavşaklarda;</strong></p>
+<p><em>At intersections with </em><em>no</em><em> traffic officer, no traffic light, and no traffic sign (i.e., uncontrolled kavşaklar)…</em></p>
+</blockquote>
+<p>Then a 7-bullet priority list, ending with "<strong>İLK GEÇİŞ HAKKINI VERMEK ZORUNDADIR.</strong>"</p>
+<h4>The 7 yield rules (verbatim, in priority order)</h4>
+<blockquote>
+<ol>
+<li><strong>Bütün sürücüler, geçiş üstünlüğüne sahip olan araçlara</strong> — all drivers yield to priority (emergency) vehicles.</li>
+<li><strong>Tali yoldan anayola çıkan sürücüler anayoldan gelen araçlara</strong> — drivers entering a main road from a side road yield to main-road traffic.</li>
+<li><strong>Doğru geçmekte olan tramvaylara ve bu yoldan geçen araçlara</strong> — yield to trams going straight and to traffic on the tram road.</li>
+<li><strong>Bölünmüş yola çıkan sürücüler bu yoldan gelen araçlara</strong> — drivers entering a divided road yield to traffic already on the divided road.</li>
+<li><strong>Dönel kavşağa gelen sürücüler dönel kavşak içindeki araçlara</strong> — drivers entering a roundabout yield to vehicles already circulating inside.</li>
+<li><strong>Bir iz veya mülkten karayoluna çıkan sürücüler karayolundan gelen araçlara</strong> — drivers leaving a track or private property yield to traffic on the main road.</li>
+<li><strong>Dönüş yapan sürücüler, doğru geçmekte olan araçlara</strong> — turning drivers yield to through-traffic.</li>
+</ol>
+<p>→ <strong>İLK GEÇİŞ HAKKINI VERMEK ZORUNDADIR.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The logic: "who's already established on the main flow?"</h4>
+<p>Every rule on this list has the same structure: <strong>a driver who is entering, merging, or changing direction yields to a driver who is already on the dominant flow</strong>. Memorize it as pairs:</p>
+<table>
+<thead>
+<tr>
+<th>Who yields</th>
+<th>…to whom</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Everyone</td>
+<td>Emergency (geçiş üstünlüğüne sahip) vehicles</td>
+</tr>
+<tr>
+<td>Tali yol</td>
+<td>Anayol</td>
+</tr>
+<tr>
+<td>Any road</td>
+<td>Through-tram on tram road</td>
+</tr>
+<tr>
+<td>Entering divided road</td>
+<td>Traffic already on it</td>
+</tr>
+<tr>
+<td>Entering roundabout</td>
+<td>Roundabout inside</td>
+</tr>
+<tr>
+<td>Mülk / iz</td>
+<td>Karayolu</td>
+</tr>
+<tr>
+<td>Dönüş yapan</td>
+<td>Doğru geçen</td>
+</tr>
+</tbody>
+</table>
+<h4>Rule 1 — geçiş üstünlüğü &gt; everyone</h4>
+<p>Ambulans, itfaiye, polis, askeri konvoy (while on duty, with siren/lights) override every other rule on this slide. Even a polis at the intersection stops traffic to let them through.</p>
+<h4>Rule 2 — tali yoldan anayola çıkan</h4>
+<p>A <strong>tali yol</strong> is a side road (marked with YOL VER ▽ or DUR ⬡ signs at its junction with an <strong>anayol</strong>). If you're on the tali yol, you wait.</p>
+<h4>Rule 3 — tramvay</h4>
+<p>Trams running on fixed rails in the middle of the road have priority because they cannot steer around an obstacle. This is also one of the <strong>3 sağdan geçme istisnaları</strong> from <a href="17-geçme-kuralları.md">17-geçme-kuralları.md</a>.</p>
+<h4>Rule 4 — bölünmüş yol</h4>
+<p>Entering from an undivided cross-road onto a bölünmüş yol → yield. The bölünmüş yol is implicitly the higher-class road.</p>
+<h4>Rule 5 — dönel kavşak</h4>
+<p>Inside a roundabout, circulating traffic has priority over entering traffic. This is the universal modern roundabout rule (and also flows from the previous <a href="18-manevralar-dönüşler.md">18-manevralar-dönüşler.md</a> lesson).</p>
+<h4>Rule 6 — iz / mülk</h4>
+<p>"İz" = a track/trail; "mülk" = private property (driveway, parking lot, field). Pulling out of a driveway onto a public road → you yield.</p>
+<h4>Rule 7 — dönüş yapan</h4>
+<p>Any driver making a right or left turn yields to drivers proceeding straight. This ties directly to the sola dönüş rule "<strong>karşı yönden gelen araçları bekle</strong>" from SLIDE 2 of <a href="18-manevralar-dönüşler.md">18-manevralar-dönüşler.md</a>.</p>
+<h4>The unstated 8th rule: sağdan gelen araca öncelik</h4>
+<p>Not on this slide, but ALWAYS in the exam: when TWO vehicles both hold the same status (e.g., both are on the main road, no signs, no lights), the one on the <strong>RIGHT</strong> has priority. This is the universal Turkish intersection fallback rule.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>KONTROLSÜZ KAVŞAK — 7 öncelik kuralı:</strong><br />
+(1) <strong>Geçiş üstünlüğü olan araç</strong> (2) <strong>Anayol</strong> (vs tali) (3) <strong>Doğru giden tramvay</strong> (4) <strong>Bölünmüş yol</strong> (5) <strong>Dönel kavşak içindeki araç</strong> (6) <strong>Karayolu</strong> (vs iz/mülk) (7) <strong>Doğru geçen araç</strong> (vs dönüş yapan).</p>
+<p><strong>Eşit statülü iki araç çakıştığında: SAĞDAN GELENE ÖNCELİK.</strong></p>
+</blockquote>
+<hr />
+<h2>2C. SLIDE 3 — Bölünmüş Yola Çıkış (Rule 4 illustrated)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-100.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-100.png" alt="Slayt — Sayfa 100: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 100: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-100.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Header "KAVŞAKLARDA İLK GEÇİŞ HAKKI" with a single bullet and a right-side diagram of a normal road meeting a divided (median-separated) road, numbered "3" — a car entering a bölünmüş yol from a side street.</p>
+<blockquote>
+<p><strong>Normal bir yoldan bölünmüş kara yoluna çıkan araçlar, bölünmüş yoldaki araçlara ilk geçiş hakkını verirler.</strong></p>
+<p><em>Vehicles entering a divided highway from a normal road must yield to vehicles already on the divided road.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>This is the visual reinforcement of <strong>Rule 4</strong> from the 7-rule slide. A <strong>bölünmüş yol</strong> is a road physically separated by a refüj (median / central barrier) — it carries the higher-class traffic flow. If you're crossing from a single-carriageway side road onto the bölünmüş yol, you yield. The car on the bölünmüş yol does <strong>not</strong> slow down for you.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Normal yol → bölünmüş yol = sen bekle, bölünmüş yoldaki geçer.</strong></p>
+</blockquote>
+<hr />
+<h2>2D. SLIDE 4 — İz veya Mülkten Karayoluna Çıkış (Rule 6 illustrated)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Two side-by-side diagrams:<br />
+- <strong>Left (gray, numbered 1 &amp; 2):</strong> car 1 pulling out of a petrol station / driveway onto a main road where car 2 is already travelling.<br />
+- <strong>Right (green):</strong> a car exiting a house driveway onto the street.</p>
+<blockquote>
+<p><strong>Bir iz veya mülkten karayoluna çıkan sürücüler, karayolundaki araçlara ilk geçiş hakkını verirler.</strong></p>
+<p><em>Drivers exiting a track or private property onto a public road must yield to vehicles on the public road.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>Visual of <strong>Rule 6</strong>. "İz" = a dirt track / unpaved trail; "mülk" = private property (driveway, parking lot, petrol station, field exit). In both images the pulling-out car is the one that must wait. Think of it as: <strong>the public road always wins over private access</strong>.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Benzinlik, otopark, ev girişi, tarla yolu çıkışı → karayolundaki araç önce geçer, sen beklersin.</strong></p>
+</blockquote>
+<hr />
+<h2>2E. SLIDE 5 — Dönel Kavşak (Rule 5 illustrated)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-102.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-102.png" alt="Slayt — Sayfa 102: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 102: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-102.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Two side-by-side roundabout diagrams. Left (gray) shows a car approaching a roundabout with another circulating inside; right (green, aerial view) shows the same layout at a four-arm dönel kavşak.</p>
+<blockquote>
+<p><strong>Dönel kavşak dışındaki sürücüler, dönel kavşak içindeki araçlara ilk geçiş hakkını verirler.</strong></p>
+<p><em>Drivers outside a roundabout must yield to vehicles already inside the roundabout.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>Visual of <strong>Rule 5</strong>. Inside the dönel kavşak = circulating flow = priority. Outside the dönel kavşak = entering = must wait. This is the modern European roundabout standard and the universal Turkish exam answer.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Dönel kavşakta: İÇERİDEKİ ARAÇ her zaman ÖNCE GEÇER. Dışarıdan girecek sürücü YOL VERİR.</strong></p>
+</blockquote>
+<hr />
+<h2>2F. SLIDE 6 — Kavşak Kolları Eşit İse (Equal-arms hierarchy + do-not-block rule)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Header "KAVŞAKLARDA İLK GEÇİŞ HAKKI" with a pink sub-header "<strong>Kavşak Kolları Eşit ise</strong>" followed by 4 bullets and an "Ayrıca;" clause at the bottom.</p>
+<blockquote>
+<p><strong>Kavşak kolları eşit ise:</strong><br />
+1. <strong>Motorsuz araç sürücüleri, motorlu araçlara,</strong><br />
+2. <strong>Traktör ve iş makineleri diğer motorlu araçlara,</strong><br />
+3. <strong>Motorlu araçlardan soldaki, sağdan gelen araca,</strong><br />
+4. <strong>Kavşağa gelen sürücüler, kurallara uygun olarak karşıya geçen yayalara,</strong></p>
+<p><strong>…ilk geçiş hakkını vermek zorundadırlar.</strong></p>
+<p><strong>Ayrıca;</strong> <em>Işıklı trafik işaretleri izin verse bile trafik akımı, kendisini kavşak içinde durmaya zorlayacak veya diğer doğrultudaki trafiğin geçişine engel olacak ise, sürücünün kavşağa girmeleri </em><em>yasaktır</em><em>.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>When does "equal arms" apply?</h4>
+<p>When the kavşak is <strong>kontrolsüz</strong> (no polis, no light, no sign) <strong>AND</strong> all arms of the intersection are the same class (no anayol/tali distinction, not divided, not a roundabout, no tram). In that case the 7 rules from SLIDE 2 don't resolve the priority — so this "eşit kollar" hierarchy kicks in.</p>
+<h4>The 4-level hierarchy (top yields to bottom)</h4>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Yields to…</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Motorsuz</strong> (bicycle, horse cart)</td>
+<td><strong>Motorlu</strong> (all motor vehicles)</td>
+<td>Non-motorized gives way to motorized</td>
+</tr>
+<tr>
+<td><strong>Traktör / iş makinesi</strong></td>
+<td><strong>Diğer motorlu araçlar</strong> (cars, trucks, buses)</td>
+<td>Slow / heavy machinery yields to normal traffic</td>
+</tr>
+<tr>
+<td><strong>Soldaki motorlu araç</strong></td>
+<td><strong>Sağdan gelen motorlu araç</strong></td>
+<td>The famous <strong>sağdan gelene öncelik</strong> rule — now codified on the slide</td>
+</tr>
+<tr>
+<td><strong>All drivers</strong></td>
+<td><strong>Yaya</strong> (pedestrian on a proper crossing)</td>
+<td>Pedestrian on a legal crossing always wins</td>
+</tr>
+</tbody>
+</table>
+<p>This slide is the <strong>first time "sağdan gelene öncelik" appears as an explicit written rule</strong> in our notes — previously I flagged it as the "unstated 8th rule" in section 2B; it's actually stated here, it just applies only when arms are equal.</p>
+<h4>The "Ayrıca" clause — kavşağı tıkama yasağı</h4>
+<p>Even when your light is <strong>green</strong>, if entering the intersection would leave you stuck inside (because traffic ahead isn't moving) and block cross-traffic, <strong>you are forbidden from entering</strong>. This is a separate offense from running a red light. Wait behind the stop line until there's room on the other side.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Eşit kollu kontrolsüz kavşakta öncelik sırası: MOTORSUZ → TRAKTÖR/İŞ MAKİNESİ → SAĞDAN GELEN → YAYA (yaya en önce).</strong></p>
+<p><strong>Yeşil ışıkta bile, kavşak içinde takılıp kalacaksan KAVŞAĞA GİRME — yasak.</strong></p>
+</blockquote>
+<hr />
+<h2>2G. SLIDE 7 — Motorsuz &amp; LTT Visual (equal-arms rules 1–2 illustrated)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Two diagrams on the same "KAVŞAKLARDA İLK GEÇİŞ HAKKI" layout, now listing rules 2 and 3 of the equal-arms hierarchy:</p>
+<blockquote>
+<ul>
+<li><strong>Motorsuz taşıt sürücüleri, motorlu araçlara,</strong></li>
+<li><strong>LTT ve iş makineleri sürücüleri, diğer motorlu araçlara ilk geçiş hakkını vermek zorundadır.</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li><strong>Left diagram:</strong> a four-arm kavşak. Car <strong>1</strong> (red, from top) faces a horse-drawn cart / motorsuz taşıt <strong>2</strong> (from left). The motorsuz vehicle yields → <strong>car 1 goes first</strong>.</li>
+<li><strong>Right diagram:</strong> a Y-junction. A motorcycle <strong>2</strong> and a tractor <strong>1</strong> approach. The LTT (tractor) yields to the motorcycle → <strong>motorcycle goes first</strong>.</li>
+</ul>
+<h3>Clean English explanation</h3>
+<p><strong>LTT = Lastik Tekerlekli Traktör</strong> (rubber-tyred tractor) — a new vocabulary item on the exam. Grouped with <strong>iş makinesi</strong> (construction / work machinery: excavator, grader, loader, forklift). Both are <strong>slower / bulkier / limited-maneuver</strong> vehicles, so at an equal-arm kavşak they <strong>yield to normal motor vehicles</strong> (cars, motorcycles, trucks, buses).</p>
+<p>Combined with the earlier rule:<br />
+1. <strong>Motorsuz</strong> (bicycle, horse cart, handcart) → yields to ALL motorized vehicles.<br />
+2. <strong>LTT / iş makinesi</strong> → yields to <strong>other</strong> motorized vehicles (otomobil, motosiklet, kamyon, otobüs).<br />
+3. Between two normal motor vehicles → <strong>soldaki sağdakine</strong> verir (left yields to right).</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>LTT (Lastik Tekerlekli Traktör) ve iş makineleri = diğer motorlu araçlara YOL VERİR.</strong></p>
+<p><strong>Motorsuz taşıt (at arabası, bisiklet) = motorlu araçların HEPSİNE yol verir.</strong></p>
+</blockquote>
+<hr />
+<h2>2H. SLIDE 8 — Worked Exam Question (sağdan gelene öncelik)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Title bullet: <strong>"Motorlu araçlardan soldaki, sağdan gelen araca ilk geçiş hakkı verilmelidir."</strong> Two diagrams and a sample question:</p>
+<ul>
+<li><strong>Left diagram:</strong> equal-arm 4-way kavşak with yellow-black curb markings. Red car from top, green car from right, white car from bottom. All motor vehicles, equal roads → <strong>green (from the right) has priority</strong> over everyone.</li>
+<li><strong>Right diagram:</strong> a Y-junction. A <strong>motosiklet</strong> travelling straight meets an <strong>otomobil</strong> approaching from the motorcycle's RIGHT.</li>
+</ul>
+<blockquote>
+<p><strong>Şekildeki motosiklet sürücüsü ne yapmalıdır?</strong></p>
+<p>A) Geçiş hakkını kendi kullanmalıdır.<br />
+B) <strong>Otomobilin geçmesini beklemelidir.</strong> ✅<br />
+C) Kavşağa önce girmek için hızlanmalıdır.<br />
+D) İkazda bulunup otomobili yavaşlatmalıdır.</p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>The otomobil is on the motorcycle's <strong>right</strong>. Both are motor vehicles on equal roads at a kontrolsüz kavşak → <strong>sağdan gelen = otomobil has priority</strong>. The motorcyclist must <strong>wait for the car to pass</strong> (B).</p>
+<p>Trap answers:<br />
+- <strong>A</strong> "use your right of way" — wrong, you don't have it.<br />
+- <strong>C</strong> "speed up to enter first" — the universal wrong answer on every kavşak question.<br />
+- <strong>D</strong> "honk and force the car to slow" — aggressive driving, always wrong on the exam.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Eşit kollu kontrolsüz kavşakta sağdan gelen araç → SEN BEKLE. "Hızlanıp önce girmek" ve "ikazda bulunmak" her zaman YANLIŞ CEVAP.</strong></p>
+</blockquote>
+<hr />
+<h2>2H2. SLIDE 9 — Two More Worked Exam Questions (motorsuz &amp; LTT)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Two side-by-side kavşak diagrams, each with a multiple-choice question.</p>
+<h4>Left diagram — bisiklet vs otomobil</h4>
+<p>An equal-arm 4-way kavşak. A <strong>bisikletli</strong> (cyclist) approaches from the right; an <strong>otomobil</strong> approaches from the bottom-left.</p>
+<blockquote>
+<p><strong>Şekle göre bisiklet sürücüsü ne yapmalıdır?</strong></p>
+<p>A) <strong>Otomobilin geçmesini beklemelidir.</strong> ✅<br />
+B) Geçiş hakkını kendi kullanmalıdır.<br />
+C) Hızını artırmalıdır.<br />
+D) Otomobil sürücüsünün ikazını beklemelidir.</p>
+</blockquote>
+<p><strong>Reasoning:</strong> Kontrolsüz + eşit kollu kavşak → apply the equal-arms hierarchy. The bicycle is <strong>motorsuz</strong>; the car is <strong>motorlu</strong>. <strong>Motorsuz yields to motorlu</strong> (rule 1 of the 4-level hierarchy from SLIDE 6 / section 2F). Answer: <strong>A</strong>.</p>
+<p>Trap answers to memorize:<br />
+- <strong>B</strong> "use my right of way" — never the answer when you're the lower-priority party.<br />
+- <strong>C</strong> "speed up" — see the hız-arttırılır heuristic in <a href="15-hız-kuralları.md#2e-hocas-live-class-additions-2026-04-18">15-hız-kuralları.md</a>.<br />
+- <strong>D</strong> "wait for the other driver to signal/honk at me" — you can't transfer your duty to the other driver; you must decide yourself.</p>
+<h4>Right diagram — traktör (LTT) vs otomobil</h4>
+<p>A <strong>traktör "1"</strong> travelling leftward on the upper road; an <strong>otomobil "2"</strong> approaches from the lower-right.</p>
+<blockquote>
+<p><strong>Şekildeki 1 numaralı aracın sürücüsü ne yapmalıdır?</strong></p>
+<p>A) İkazda bulunup 2 numaralı aracı yavaşlatmalıdır.<br />
+B) <strong>Geçiş hakkını 2 numaralı araca vermelidir.</strong> ✅<br />
+C) İkazda bulunup kavşağa önce girmelidir.<br />
+D) Geçiş hakkını kendi kullanmalıdır.</p>
+</blockquote>
+<p><strong>Reasoning:</strong> Traktör (<strong>LTT</strong>) is in rule 2 of the equal-arms hierarchy — <strong>LTT/iş makinesi yields to other motorlu araçlar</strong>. Both are motorized but the otomobil wins. Answer: <strong>B</strong>.</p>
+<p>Trap answers:<br />
+- <strong>A / C</strong> "honk and force the other vehicle to slow / enter first" — aggressive driving, always wrong.<br />
+- <strong>D</strong> "use my right of way" — LTT never has priority over a normal motor vehicle on equal arms.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Bisiklet (motorsuz) + otomobil → bisiklet bekler. Traktör (LTT) + otomobil → traktör bekler.</strong> Her iki durumda da diğer seçenekler ("hızlan", "ikaz et", "önce gir") TUZAKTIR.</p>
+</blockquote>
+<hr />
+<h2>2H3. SLIDE 10 — Full 4-vehicle hierarchy exam questions</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Slayt — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Two 4-way kavşak diagrams, each with 4 different vehicles approaching from the 4 arms, testing the full equal-arms hierarchy.</p>
+<h4>Left diagram — iş makinesi + otobüs + traktör + at arabası</h4>
+<blockquote>
+<p><strong>Şekildeki karşılaşmada hangi araç öncelikle geçiş hakkını kullanmalıdır?</strong></p>
+<p>A) Tarım traktörü<br />
+B) <strong>Otobüs</strong> ✅<br />
+C) İş makinesi<br />
+D) At arabası</p>
+</blockquote>
+<p><strong>Reasoning chain</strong> (apply SLIDE 6 hierarchy from section 2F):<br />
+1. <strong>At arabası</strong> = <strong>motorsuz</strong> → yields to ALL motorlu → eliminated.<br />
+2. <strong>Tarım traktörü (LTT)</strong> + <strong>iş makinesi</strong> → yield to other motorlu araçlar → eliminated.<br />
+3. <strong>Otobüs</strong> = normal motorlu araç → only one left → <strong>wins</strong>.</p>
+<p>Answer: <strong>B) Otobüs</strong>.</p>
+<p>The trap is that a real-world driver might think "the iş makinesi is biggest / strongest" or "the traktör is on a specific road." None of that matters — the hierarchy is <strong>categorical</strong>, not size-based.</p>
+<h4>Right diagram — kamyonet + motosiklet + otomobil + at arabası</h4>
+<blockquote>
+<p><strong>Şekildeki kontrolsüz kavşakta ilk geçiş hakkını hangi araç kullanmalıdır?</strong></p>
+<p>A) At arabası<br />
+B) Otomobil<br />
+C) <strong>Motosiklet</strong> ✅<br />
+D) Kamyonet</p>
+</blockquote>
+<p><strong>Reasoning chain:</strong><br />
+1. <strong>At arabası</strong> = motorsuz → yields to all motorlu → eliminated.<br />
+2. The three remaining are all <strong>normal motorlu araçlar</strong> (kamyonet, motosiklet, otomobil) → no class hierarchy separates them → apply <strong>"soldaki sağdan gelene yol verir"</strong>.<br />
+3. Trace each vehicle's <strong>right-hand neighbor</strong>:<br />
+   - Kamyonet's right = otomobil (motorlu, has priority) → kamyonet waits.<br />
+   - Otomobil's right = motosiklet (motorlu, has priority) → otomobil waits.<br />
+   - Motosiklet's right = at arabası (motorsuz — already yielded) → <strong>nothing to yield to</strong> → motosiklet goes.</p>
+<p>Answer: <strong>C) Motosiklet</strong>.</p>
+<p>The motosiklet wins because the only vehicle on ITS right is the motorsuz at arabası, which has already yielded. So the motorsuz simultaneously (a) loses to all motorlu AND (b) clears the right-hand-priority chain for whichever motorlu is "to the left of" it.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>4 araç + motorsuz bulunan kavşaklarda sıra:</strong><br />
+(1) <strong>motorsuz</strong> (at arabası/bisiklet) hep sona kalır.<br />
+(2) <strong>traktör + iş makinesi</strong> diğer motorlulara yol verir.<br />
+(3) Geri kalan <strong>normal motorlu araçlar</strong> arasında <strong>sağdan gelene öncelik</strong> uygulanır — en hızlı yöntem: her aracın sağındakine bak, motorsuz olan aracın "solundaki" motorlu ilk geçer.</p>
+</blockquote>
+<hr />
+<h2>2H4. SLIDE 11 — Dönüş-yapan vs doğru-geçen priority (sequence questions)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Two 4-way kavşak diagrams with numbered vehicles. Both test <strong>Rule 7</strong> of the 7-rule list: <em>"Dönüş yapan sürücüler, doğru geçmekte olan araçlara ilk geçiş hakkını verir."</em></p>
+<h4>Left diagram — who does the left-turning motosiklet yield to?</h4>
+<p>Three vehicles: <strong>motosiklet "1"</strong> (wants to turn LEFT), <strong>otomobil "2"</strong> (going straight), <strong>otomobil "3"</strong> (going straight from the other side).</p>
+<blockquote>
+<p><strong>Şekle göre sola dönüş yapmak isteyen 1 numaralı motosiklet sürücüsü ne yapmalıdır?</strong></p>
+<p>A) Geçiş hakkını kendi kullanmalıdır.<br />
+B) Diğer araçların durmasını sağlamalıdır.<br />
+C) <strong>2 ve 3 numaralı araçların geçmesini beklemelidir.</strong> ✅<br />
+D) 3 numaralı araca yol verip, 2 numaralı araçtan önce dönmelidir.</p>
+</blockquote>
+<p><strong>Reasoning:</strong> The motosiklet is <strong>dönüş yapan</strong>; cars 2 and 3 are <strong>doğru geçmekte</strong>. By Rule 7 <strong>and</strong> Rule 8 of SLIDE 2 of <a href="18-manevralar-dönüşler.md">18-manevralar-dönüşler.md</a> (sola dönüşte sağdan ve karşıdan gelen doğru-geçene öncelik), motosiklet yields to BOTH straight-through vehicles. Answer: <strong>C</strong>.</p>
+<p>Trap <strong>D</strong> is classic — it tries to pick ONE of the two (yield to 3, cut in front of 2). Wrong — both go before the turner.</p>
+<h4>Right diagram — full 3-vehicle sequence</h4>
+<p>Three vehicles at an equal-armed kavşak: <strong>motosiklet "1"</strong> (turning left), <strong>otomobil "2"</strong> (going straight from one direction), <strong>otomobil "3"</strong> (going straight from another, positioned on 2's right).</p>
+<blockquote>
+<p><strong>Şekildeki araçların geçiş hakkı sırası nasıl olmalıdır?</strong></p>
+<p>A) 1 – 2 – 3<br />
+B) 2 – 3 – 1<br />
+C) 3 – 1 – 2<br />
+D) <strong>3 – 2 – 1</strong> ✅</p>
+</blockquote>
+<p><strong>Reasoning chain:</strong><br />
+1. <strong>Motosiklet 1</strong> is turning (dönüş yapan) → goes <strong>last</strong>.<br />
+2. Between the two doğru-geçen cars (2 and 3), apply <strong>sağdan gelene öncelik</strong>. Car <strong>3</strong> is on car <strong>2</strong>'s right → <strong>3 goes first</strong>, then <strong>2</strong>.<br />
+3. Final order: <strong>3 → 2 → 1</strong>. Answer: <strong>D</strong>.</p>
+<p>The chat-confirmed mnemonic the hoca endorsed:<br />
+- <em>"Dönüş yapanlar düz gidenlere öncelik vermeli"</em> — turners yield to through-traffic.<br />
+- <em>"Sağında araç olan yol verir"</em> — whoever has a vehicle on their right yields.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Sıralama soruları 2 adımda çözülür:</strong><br />
+(1) <strong>Dönüş yapan</strong> her zaman <strong>en sona</strong> kalır (Rule 7).<br />
+(2) <strong>Doğru geçenler</strong> arasında <strong>sağdan gelene öncelik</strong> uygulanır.</p>
+<p><strong>Üç araçlı tipik cevap kalıbı: sağdaki doğru-geçen → soldaki doğru-geçen → dönüş yapan.</strong></p>
+</blockquote>
+<hr />
+<h2>2H5. SLIDE 12 — Geçiş Üstünlüğü at a kavşak (Rule 1 illustrated)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-115.png" alt="Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME" loading="lazy"></a><figcaption>Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Single bullet at top + aerial diagram of a 4-way kavşak with 4 numbered vehicles, all visually candidates for geçiş üstünlüğü (except one trap):</p>
+<blockquote>
+<p><strong>Bütün sürücüler geçiş üstünlüğüne sahip araçlara ilk geçiş hakkını vermek zorundadır.</strong></p>
+</blockquote>
+<p>The four vehicles:<br />
+- <strong>1 — İtfaiye</strong> (fire truck, from the south)<br />
+- <strong>2 — İş makinesi</strong> (wheel loader, from the west)<br />
+- <strong>3 — Ambulans</strong> (from the east/top)<br />
+- <strong>4 — Polis</strong> (from the south-east)</p>
+<h3>Clean English explanation</h3>
+<p>This slide is the <strong>visual reinforcement of Rule 1</strong> of the 7-rule list (section 2B): <em>"Bütün sürücüler geçiş üstünlüğüne sahip olan araçlara yol verir."</em> To solve it, apply the <strong>8-category priority order</strong> from <a href="20-geçiş-üstünlüğüne-sahip-araçlar.md">20-geçiş-üstünlüğüne-sahip-araçlar.md</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Vehicle</th>
+<th>Category</th>
+<th style="text-align: center;">Priority rank</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ambulans (3)</strong></td>
+<td>Cat. 1 — yaralı/hasta taşıyan</td>
+<td style="text-align: center;"><strong>1st</strong></td>
+</tr>
+<tr>
+<td><strong>İtfaiye (1)</strong></td>
+<td>Cat. 3 — itfaiye ve acil müdahale</td>
+<td style="text-align: center;"><strong>2nd</strong></td>
+</tr>
+<tr>
+<td><strong>Polis (4)</strong></td>
+<td>Cat. 4 — zabıta</td>
+<td style="text-align: center;"><strong>3rd</strong></td>
+</tr>
+<tr>
+<td><strong>İş makinesi (2)</strong></td>
+<td><em>NOT a priority vehicle</em> — just a regular work machine</td>
+<td style="text-align: center;"><strong>4th (last)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solving order: 3 → 1 → 4 → 2.</strong></p>
+<h4>The key trap on this slide</h4>
+<p>The iş makinesi (vehicle 2) <strong>looks</strong> important because it's big and industrial — but a regular wheel loader is <strong>NOT</strong> on the 8-category list. Only <strong>kar-buz mücadele araçları</strong> (snow/ice clearing) and <strong>acil müdahale gerektiren yol bakım araçları</strong> (emergency road-maintenance) have geçiş üstünlüğü (Category 6). A loader on a construction site is just iş makinesi — lowest priority, yields to all normal motor vehicles AND to all üstünlüklü araçlar.</p>
+<p>So vehicle 2 goes <strong>last</strong> — below even the normal motor-vehicle rank — because of its equal-arms-hierarchy position (LTT/iş makinesi yields to other motorlu araçlar).</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kavşakta geçiş üstünlüğü sırası = 8-li kategori sırası.</strong> Ambulans &gt; itfaiye &gt; zabıta &gt; trafik hizmetleri &gt; kar mücadele &gt; afet &gt; koruma konvoyu.</p>
+<p><strong>TUZAK:</strong> Sıradan <strong>iş makinesi</strong> (inşaat yükleyicisi vb.) geçiş üstünlüğüne sahip DEĞİLDİR. Sadece <strong>kar-buz mücadele</strong> veya <strong>acil yol bakımı</strong> yapan araçlar bu kategoriye girer.</p>
+</blockquote>
+<hr />
+<h2>2I. Hoca's Live Class Additions (2026-04-18)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-103.png" alt="Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI" loading="lazy"></a><figcaption>Slayt — Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-103.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The "don't invent classifications" rule — how to read kavşak exam diagrams</h3>
+<p>When a student answered the sample motosiklet question (SLIDE 8 / section 2H) with reasoning like <em>"because it's a motorcycle vs a car"</em> or <em>"because the car is on the main road"</em>, the hoca pushed back hard. The exam diagram gives you <strong>only what it shows</strong>. You do NOT invent road classifications or vehicle-class hierarchies that aren't visible.</p>
+<blockquote>
+<p><em>"Bakın araca yol verilmeli diyor. Biri dört teker, diğeri iki teker. Ben mesela bu anlattığım kurallarda hiç dört teker, iki teker diye bir şeyden bahsetmedim. … Hocam motorbisiklet sağdan geliyor, araba normal yoldan. Nereden biliyorsun hangi yol normaldir, hangi yol anormaldir? … Başka kafanıza göre şey uydurmayın çünkü bu tür şeylerde çok soru çıkıyor sınavdan. Onun için siz kafanıza göre uydurmayın. Benim sadece burada zikrettiğim şeyler geçerli."</em></p>
+</blockquote>
+<h4>The 4 traps the hoca explicitly warned about</h4>
+<ol>
+<li><strong>"4 teker &gt; 2 teker"</strong> → <strong>NOT a rule.</strong> Car-vs-motorcycle is irrelevant to priority. Both are "motorlu araç."</li>
+<li><strong>"The bigger road is the anayol"</strong> → <strong>NOT a rule</strong> unless the diagram shows an anayol sign (sarı baklava), a YOL VER, or a DUR. Don't assume.</li>
+<li><strong>"Road without lane markings must be tali yol"</strong> → <strong>NOT a rule</strong> — painted lines alone don't define tali vs anayol.</li>
+<li><strong>"The car that's going straight is more important"</strong> → only applies between a dönüş-yapan and a doğru-geçen on the <strong>same status</strong>; never between two different roads.</li>
+</ol>
+<h4>The only rules that apply</h4>
+<p>Decide using <strong>exactly</strong> the priority stack in section 3 of this file, in order. If the diagram doesn't show a polis, light, sign, or visible road classification, fall back to the <strong>eşit kollu hierarchy</strong> (section 2F): motorsuz → LTT/iş makinesi → sağdan gelen → yaya.</p>
+<p>In the SLIDE 8 sample question, the correct reasoning chain is:<br />
+1. No polis, no light, no sign visible → kontrolsüz kavşak.<br />
+2. Both vehicles are motorlu; no traktör, no motorsuz.<br />
+3. Equal arms (nothing marks one as anayol).<br />
+4. → Apply "soldaki sağdan gelene yol verir."<br />
+5. Car is on motorcycle's right → motorcycle yields → <strong>answer B</strong> (otomobilin geçmesini beklemelidir).</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kavşak sorusunda SADECE diyagramda görünen bilgiyi kullan.</strong> Araç tipine, "büyük yol kim" tahminine veya "normal/anormal yol" hissine göre karar verme — bunlar hep TUZAK. Sadece bu not dosyasındaki 12-basamaklı öncelik yığınını uygula.</p>
+</blockquote>
+<hr />
+<h2>2J. Hoca's Live Class Additions — Part 2 (2026-04-18, 20:30-21:00)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The bisiklet vs motosiklet identification trap</h3>
+<p>The hoca caught himself mid-class making an error on the sample question from SLIDE 10: he initially identified the small two-wheeler in the diagram as a <strong>bisiklet</strong> (and gave answer B), then corrected himself — it's actually a <strong>motosiklet</strong>, which changes the reasoning and the answer.</p>
+<blockquote>
+<p><em>"Bu arada ben demin bunu bisiklet zannettim, dedim ki doğrudur o cevap — ama doğru değil, o B cevap doğru değil."</em></p>
+</blockquote>
+<p><strong>The identification rule:</strong><br />
+- <strong>Bisiklet</strong> (bicycle) = <strong>motorsuz</strong> → yields to ALL motorlu araçlar by rule 1 of the equal-arms hierarchy.<br />
+- <strong>Motosiklet</strong> (motorcycle) = <strong>motorlu</strong> → treated like any other motor vehicle; priority decided by the <strong>soldaki-sağdakine</strong> rule.</p>
+<p>In the worked example the hoca walked through:<br />
+- Motosikletin sağında → kimse yok (at arabası motorsuz, zaten elenir).<br />
+- Otomobilin sağında → <strong>motosiklet</strong> var.<br />
+- → Soldaki sağdakine yol verir → <strong>otomobil bekler, motosiklet geçer</strong>.<br />
+- → Doğru cevap <strong>A — geçiş hakkını kendi kullanmalıdır</strong> (motosiklet için).</p>
+<p><strong>What to take from this:</strong> on kavşak diagrams, <strong>confirm the vehicle type first</strong> (especially for small 2-wheelers — look for the engine/exhaust in the icon). Misreading a motosiklet as a bisiklet (or vice versa) flips the answer completely.</p>
+<h3>The "4 temel kural" enumeration (hoca's re-framing)</h3>
+<p>The hoca reframed the equal-arms hierarchy from SLIDE 6 as a <strong>flat list of 4 base rules</strong> that handle <em>all</em> kontrolsüz kavşak questions:</p>
+<blockquote>
+<p><strong>"Toplamda temelde 4 tane temel kural var."</strong></p>
+<ol>
+<li><strong>Motorsuz araçlar, motorlu araçlara</strong> geçiş hakkını verir.</li>
+<li><strong>Traktör ve iş makineleri, diğer motorlu araçlara</strong> geçiş hakkını verir.</li>
+<li><strong>Soldaki, sağdakine</strong> geçiş hakkını verir (eşit statülü motorlu araçlar arasında).</li>
+<li><strong>Dönüş yapan, doğru geçmekte olana</strong> geçiş hakkını verir.</li>
+</ol>
+</blockquote>
+<p><strong>Apply them in this exact order</strong> on every kontrolsüz kavşak question. Eliminate vehicles one rule at a time:<br />
+- Rule 1 eliminates the at arabası / bisiklet.<br />
+- Rule 2 eliminates the traktör / iş makinesi.<br />
+- Rule 3 orders the remaining motorlu araçlar by right-hand priority.<br />
+- Rule 4 sends dönüş-yapan to the end.</p>
+<h3>The "any sign/light/zabıta overrides everything" reminder</h3>
+<p>The hoca re-emphasized (multiple times): these 4 rules apply <strong>only</strong> to kontrolsüz kavşak diagrams — diagrams showing NO trafik zabıtası, NO ışık, NO işaret levhası.</p>
+<blockquote>
+<p><em>"Eğer şu resimlerin herhangi bir noktasına bir tabela koysam, ya da bir tane ışık koysam, bütün bu bahsettiklerim geçersizdir. Çünkü artık kontrollü bir kavşaktır. Oradaki ışık ne diyorsa onu yapacaksınız. Oradaki trafik zabıtası ne diyorsa onu yapacaksınız. Oradaki tabela ne diyorsa onu yapacaksınız."</em></p>
+</blockquote>
+<p>This restates the control hierarchy from section 2 of this file, but as a <strong>question-reading instinct</strong>: before you count vehicles, <strong>scan the diagram for a polis, ışık, or levha</strong>. If any is present, the 4 temel kural are IRRELEVANT — obey the control.</p>
+<h3>"Mantık aramıyoruz" — philosophy of exam reasoning</h3>
+<p>When a student tried to reason from logic/traffic-flow intuition ("wouldn't it make more sense if the tractor went first to clear the road?"), the hoca shut it down:</p>
+<blockquote>
+<p><em>"Mantık aramıyoruz burada arkadaşlar. Burada amacımız belli — sınava gireceğiz, doğru cevabı vereceğiz, ehliyeti alacağız. Kendinize göre kural uydurmayın. Kurallar net."</em></p>
+</blockquote>
+<p><strong>Takeaway:</strong> memorize the 4 rules, apply them mechanically. Don't try to find a "fair" or "efficient" order based on real-world driving intuition. The MEB exam rewards rule-following, not engineering judgment.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Diagram okuma sıralaması:</strong><br />
+(1) Polis / ışık / levha var mı? <strong>Evet</strong> → onu uygula; kuralları bırak.<br />
+(2) <strong>Hayır</strong> → kontrolsüz kavşak → <strong>4 temel kural sırayla:</strong> motorsuz → traktör/iş mak. → soldaki/sağdakine → dönüş/doğru-giden.<br />
+(3) Araç tipini doğrula (bisiklet ≠ motosiklet).</p>
+</blockquote>
+<hr />
+<h2>3. The combined priority stack (from highest to lowest)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/page-097.png" alt="Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-097.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<p>When two competing claims appear at a kavşak, resolve in this order:</p>
+<ol>
+<li><strong>GÖREVLİ / POLİS</strong> — always wins.</li>
+<li><strong>IŞIK</strong> — next.</li>
+<li><strong>LEVHA</strong> — next (DUR, YOL VER, anayol işareti).</li>
+<li><strong>YER İŞARETİ</strong> — lowest control authority.</li>
+<li><strong>GEÇİŞ ÜSTÜNLÜĞÜ</strong> — emergency vehicles during duty override everything below this line even at green lights.</li>
+<li><strong>ANAYOL &gt; TALİ YOL.</strong></li>
+<li><strong>TRAMVAY</strong> going straight &gt; crossing traffic.</li>
+<li><strong>BÖLÜNMÜŞ YOL</strong> traffic &gt; entering traffic.</li>
+<li><strong>DÖNEL KAVŞAK İÇİNDEKİ</strong> &gt; entering.</li>
+<li><strong>KARAYOLU</strong> &gt; iz/mülk.</li>
+<li><strong>DOĞRU GEÇEN</strong> &gt; dönüş yapan.</li>
+<li><strong>SAĞDAN GELEN</strong> &gt; soldan gelen (fallback tie-breaker).</li>
+</ol>
+<hr />
+<h2>4. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Kavşağa yaklaşan sürücü ilk önce ne yapmalıdır?"</strong> → <strong>Yavaşlar, dikkatli olur, geçiş hakkı olana izin verir.</strong></li>
+<li><strong>"Kavşakta polis, ışık ve levha varsa hangisine uyulur?"</strong> → <strong>Polise</strong> (hiyerarşide en üstte).</li>
+<li><strong>"Kontrolsüz bir kavşakta tali yoldan anayola çıkan sürücü kime öncelik verir?"</strong> → <strong>Anayoldan gelen araçlara.</strong></li>
+<li><strong>"Dönel kavşağa giren sürücü kime ilk geçiş hakkını verir?"</strong> → <strong>Dönel kavşak içindeki araçlara.</strong></li>
+<li><strong>"Park yerinden / mülkten karayoluna çıkarken öncelik kimindir?"</strong> → <strong>Karayolundan gelen araçların.</strong></li>
+<li><strong>"Sola dönüş yapan sürücü karşıdan doğru gelen araca göre ne yapar?"</strong> → <strong>Doğru geçene öncelik verir.</strong></li>
+<li><strong>"Kontrolsüz kavşakta aynı statülü iki araçtan hangisi geçer?"</strong> → <strong>Sağdan gelen.</strong></li>
+<li><strong>"Tramvay ve diğer araçlar kesişiyorsa öncelik kimindir?"</strong> → <strong>Doğru geçmekte olan tramvayın.</strong></li>
+<li><strong>"Geçiş üstünlüğü olan araç polisin dur işaretinde ne yapar?"</strong> → <strong>Trafik polisinin talimatlarına uyar — ama genelde polis onları geçirir.</strong> (Polis her zaman en üstte.)</li>
+</ol>
+<hr />
+<h2>5. Memorize These</h2>
+<blockquote>
+<p><strong>Kavşağa yaklaşan sürücü = YAVAŞLA + DİKKAT ET + GEÇİŞ HAKKI OLANA İZİN VER.</strong></p>
+<p><strong>Kontrol hiyerarşisi:</strong> <strong>POLİS &gt; IŞIK &gt; LEVHA &gt; YER İŞARETİ.</strong></p>
+<p><strong>Kontrolsüz kavşakta 7 öncelik:</strong> (1) geçiş üstünlüğü · (2) anayol &gt; tali · (3) doğru giden tramvay · (4) bölünmüş yol &gt; katılan · (5) dönel kavşak içindeki &gt; giren · (6) karayolu &gt; iz/mülk · (7) doğru geçen &gt; dönüş yapan.</p>
+<p><strong>Fallback:</strong> aynı statülü iki araç → <strong>SAĞDAN GELEN geçer.</strong></p>
+<p><strong>Geçiş üstünlüğü</strong> (ambulans/itfaiye/polis ARKASINDA SİREN) = başka her şeyin üstünde (polisin talimatı hariç).</p>
+</blockquote>
+<hr />
+<h2>6. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kavşak</td>
+<td>Intersection</td>
+<td>Where roads meet</td>
+</tr>
+<tr>
+<td>Kontrollü kavşak</td>
+<td>Controlled intersection</td>
+<td>Has polis/light/sign</td>
+</tr>
+<tr>
+<td>Kontrolsüz kavşak</td>
+<td>Uncontrolled intersection</td>
+<td>No polis/light/sign</td>
+</tr>
+<tr>
+<td>Geçiş hakkı</td>
+<td>Right of way</td>
+<td>Priority at a kavşak</td>
+</tr>
+<tr>
+<td>Geçiş üstünlüğü</td>
+<td>Priority (emergency)</td>
+<td>Ambulans, itfaiye, polis on duty</td>
+</tr>
+<tr>
+<td>Görevli</td>
+<td>Authorized personnel</td>
+<td>Traffic officer</td>
+</tr>
+<tr>
+<td>Trafik zabıtası</td>
+<td>Traffic police</td>
+<td>Polis</td>
+</tr>
+<tr>
+<td>Işıklı işaret cihazı</td>
+<td>Traffic light</td>
+<td>Red/yellow/green signal</td>
+</tr>
+<tr>
+<td>İşaret levhası</td>
+<td>Sign board</td>
+<td>DUR, YOL VER, etc.</td>
+</tr>
+<tr>
+<td>Yol ve yer işareti</td>
+<td>Road &amp; ground marking</td>
+<td>Çizgiler, yer yazıları</td>
+</tr>
+<tr>
+<td>Anayol</td>
+<td>Main road</td>
+<td>Higher-priority road (yellow diamond sign)</td>
+</tr>
+<tr>
+<td>Tali yol</td>
+<td>Side road</td>
+<td>Lower-priority road, gives way</td>
+</tr>
+<tr>
+<td>Bölünmüş yol</td>
+<td>Divided road</td>
+<td>Median-separated road</td>
+</tr>
+<tr>
+<td>Tramvay</td>
+<td>Tram</td>
+<td>Rail vehicle on the road</td>
+</tr>
+<tr>
+<td>Dönel kavşak</td>
+<td>Roundabout</td>
+<td>Circular intersection</td>
+</tr>
+<tr>
+<td>İz</td>
+<td>Track / trail</td>
+<td>Rough non-road path</td>
+</tr>
+<tr>
+<td>LTT</td>
+<td>Lastik Tekerlekli Traktör</td>
+<td>Rubber-tyred tractor (yields to other motor vehicles)</td>
+</tr>
+<tr>
+<td>İş makinesi</td>
+<td>Work/construction machine</td>
+<td>Excavator, loader, grader — yields to other motor vehicles</td>
+</tr>
+<tr>
+<td>Motorsuz taşıt</td>
+<td>Non-motorized vehicle</td>
+<td>Bicycle, horse cart — yields to all motorized</td>
+</tr>
+<tr>
+<td>Mülk</td>
+<td>Private property</td>
+<td>Driveway, parking lot, field</td>
+</tr>
+<tr>
+<td>Doğru geçen araç</td>
+<td>Through-traffic vehicle</td>
+<td>Not turning</td>
+</tr>
+<tr>
+<td>Dönüş yapan araç</td>
+<td>Turning vehicle</td>
+<td>Right or left turner</td>
+</tr>
+<tr>
+<td>Sağdan gelen</td>
+<td>Coming from the right</td>
+<td>Default tie-breaker priority</td>
+</tr>
+<tr>
+<td>İlk geçiş hakkı</td>
+<td>First right of passage</td>
+<td>Priority</td>
+</tr>
+<tr>
+<td>Vermek zorundadır</td>
+<td>Must give</td>
+<td>Hard duty marker</td>
+</tr>
+<tr>
+<td>Yavaşlamak</td>
+<td>To slow down</td>
+<td>Duty on approaching kavşak</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. Cross-references</h2>
+<ul>
+<li>Geçiş üstünlüğü vs geçiş hakkı (the 2-term trap) → <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a></li>
+<li>Polisin 8 hareketi + kontrol hiyerarşisi → <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a></li>
+<li>DUR + YOL VER işaretleri → <a href="08-trafik-tanzim-işaretleri-yasaklama.md">08-trafik-tanzim-işaretleri-yasaklama.md</a></li>
+<li>Anayol işareti (sarı baklava) ve sonu → <a href="10-bilgi-işaret-levhaları.md">10-bilgi-işaret-levhaları.md</a></li>
+<li>Dönel kavşak iç şerit kuralları → <a href="18-manevralar-dönüşler.md">18-manevralar-dönüşler.md</a></li>
+<li>Sola dönüşte karşı yöne ve sağdan gelene öncelik → <a href="18-manevralar-dönüşler.md">18-manevralar-dönüşler.md</a></li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-103.html">📄 Sayfa 103: KAVŞAKLARDA İLK GEÇİŞ HAKKI<span class="score">170.5</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-097.html">📄 Sayfa 97: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI<span class="score">168.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html">📄 Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI<span class="score">129.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html">📄 Sayfa 167: ASLİ KUSUR SAYILAN HALLER<span class="score">116.7</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-145.html">📄 Sayfa 145: YAYALARLA İLGİLİ KURALLAR<span class="score">105.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-096.html">📄 Sayfa 96: KAVŞAKLARDA İLK GEÇİŞ HAKKI KURALLARI<span class="score">104.9</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/index.html">🖼️ Kavşaklarda İlk Geçiş Hakkı<span class="score">7 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/index.html">🖼️ Trafik Görevlisi & Işıklı İşaretler<span class="score">5 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

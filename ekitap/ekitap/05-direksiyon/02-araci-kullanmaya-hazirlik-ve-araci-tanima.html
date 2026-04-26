@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aracı Kullanmaya Hazırlık ve Aracı Tanıma | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ E-Kitap dizini</a>
+  <span class="crumb">05-direksiyon / 02-araci-kullanmaya-hazirlik-ve-araci-tanima</span>
+</div>
+<div class="content">
+<hr />
+<p>lesson: Direksiyon Uygulama Eğitimi<br />
+subject: Aracı Kullanmaya Hazırlık ve Aracı Tanıma<br />
+subject_number: 2<br />
+subject_id: 69244488adf9f0d052b5f72165ddb694<br />
+lesson_id: d7d22a79590d47a4c36ee6eb7be6bbda<br />
+url: https://e-tusekon.com/user/read-article.php?lesson=d7d22a79590d47a4c36ee6eb7be6bbda&amp;subject=69244488adf9f0d052b5f72165ddb694<br />
+language: tr</p>
+<hr />
+<h1>Aracı Kullanmaya Hazırlık ve Aracı Tanıma</h1>
+<blockquote>
+<p><strong>Ders:</strong> Direksiyon Uygulama Eğitimi (Practical Driving) — Subject 2/29</p>
+<p><strong>English translation:</strong> <em>pending — will be added in a later pass</em></p>
+</blockquote>
+<hr />
+<h2>Turkish Original (Türkçe)</h2>
+<p>Direksiyon Uygulama Eğitimi<br />
+Aracı Kullanmaya Hazırlık ve Aracı Tanıma<br />
+ARAÇ KULLANMAYA HAZIRLIK VE ARACI TANIMA<br />
+Sürücü adayı motorun fonksiyonlarını, aracın kontak, gaz, debriyaj, vites özelliklerini, fren sistemlerini öğrenmeli ve aracı sağlıklı ve doğru biçimde kullanabilmelidir. Araçta yasal olarak bulunması gerekli olan donanım ve bazı temel sorunların neden kaynaklanabileceği hakkında bilgili olmalıdır. Araç kullanımından önce kontrol edilmesi gerekli olan parçaları bilmeli ve azami güvenlik sağlanması ile ilgili temel bilgileri öğrenmelidir.<br />
+ARAÇ KULLANMAYA BAŞLAMADAN YAPILACAK HAZIRLIKLAR<br />
+Ayakkabı Seçimi<br />
+Otomobil kullanacağınız ayakkabılar: ne aynı anda iki pedala birden basacak kadar aşırı geniş, ne hissi azaltacak kadar aşırı kalın tabanlı, ne de ayakların hareketini engelleyecek kadar uzun topuklu olmamalıdır. Eğer bu durumlardan bir veya birkaçı mevcut ise daha sakin ve tehlike arz etmeyecek bir sürüşle yolculuk tamamlanmalıdır.<br />
+a) Motor ve araç kontrolünün yapılması.<br />
+Aracınızın motoru<br />
+Ø Yüklü yüksüz<br />
+Ø Yokuş aşağı yokuş yukarı<br />
+Ø Klima açık klima kapalı<br />
+Durumlarında aracınızın hızlanabilme kabiliyetini iyi ölçün.<br />
+Farlar, ışıklar, camlar ve silecekler:<br />
+Ø Daha önce ve etkili görebilmek için gündüz de kısa farlarınızı yakınız.<br />
+Ø Her zaman temiz ve çalışır durumda olmasını sağlayınız.<br />
+Ø Karşıdan gelenin farları gözünüzü alırsa sinirlenmeyin ve onunla uğraşmayın.<br />
+Ø Aracınızın camları da temiz olmalı, görüşünüzü engelleyecek hiçbir cisim cama yapıştırılmamalı ve asılmamalıdır.<br />
+Ø Silecekler görüşün kapanması beklenmeden çalıştırılmalıdır.<br />
+Kalorifer, Rezistans<br />
+İhtiyacınız olduğunda çalışır durumda olmaları gerekir. Rezistans arka camların buğusunu çözen sistemdir.<br />
+İlkyardım çantası, Yangın söndürücü<br />
+İlkyardım çantası göstermelik değil, gerçek bir ilk yardım çantası bulundurunuz.<br />
+Yangın söndürücü ise güvenilir ve yeterli olmalıdır.<br />
+b) Koltuğun ayarlanması ve oturma şekli.<br />
+Doğru oturma pozisyonu; sürücünün her an tehlikelere karşı hazır olabileceği vücut için en ergonomik ve yorucu olmayan pozisyonudur. Doğru koltuk pozisyonu direksiyon, vites ve pedalların doğru ve rahat kullanımı, gerekli görüş açısını ve manevra güvenliğini sağlar.<br />
+Araca sol taraftan binip sürücü yerine oturunuz. Koltuğu ayarlamak için alt yanındaki mandalı yukarı çekerek koltuğu ayarlayınız<br />
+Koltuk uzaklığı:<br />
+Ø Önce sol ayak, düz vitesli motorlu taşıtlarda en çok kullanılan pedal olan debriyaj pedalına sonuna kadar basar. Bacak bu durumda düz olmamalı, dizden hafif kırık olmalıdır. Koltuk ayarı bu pozisyona göre ayarlanır. Bacak dik olarak uzanıyorsa çok çabuk yorulur ve acil durumlarda etkin fren yapılamaz. Kaza anında bacak düz vaziyette olursa yaralanma riski artar.<br />
+Ø Koltuk uzaklık ayarı otomatik vitesli otolarda sol ayak fren pedalına basılı durumda yapılır.<br />
+Sırt ayarı:<br />
+Ø Omuzlar koltuğa yaslanır ve omuz tam dayalı durumda, sağ kol direksiyonun en üstüne; yani saate göre 12 noktasına uzatılır. Avucun bilekle birleştiği kısım direksiyonun en üst noktasına erişmelidir. Koltuk sırt ayarı bu pozisyona göre ayarlanır. Direksiyon 9:15 pozisyonunda tutulduğunda kollarda 120-130 derecelik bir açı, yani kırıklık oluşur.<br />
+Ø Vites kolu en uzak pozisyondayken (çoğunlukla 5. vitesteyken) sağ elin vites topuzunu rahatça kavrayabilmesi gerekir.<br />
+Ø Direksiyona çok yakın veya çok uzak oturmak sürüş güvenliğini olumsuz etkiler.<br />
+c) Aynaların ayarlanması.<br />
+Sürücü yerinde yan aynaların ve iç aynaların arkayı doğru gösterip göstermediğini kontrol ediniz. İç ayna elle arka camı olduğu gibi göstermelidir. Dış aynalar mekanik veya elektrik kontrollü olabilir. Ayarlamayı unutmayınız.<br />
+Sürücü koltuğuna oturduğunuz an ayarladığınız gözlem aynası, yani iç ayna ile arka camı tamamen görebileceğiniz alan iç ayna görüş sahasıdır.<br />
+Dış ayna ile görüş sahası, aracın sağ ön ve sol ön camlarının dışına takılı olan aynalarda görüş alanı, sağ dış aynanın sağ tekeri ve sağ arka tamponu, sol dış aynanın da sol arka tekeri ve sol tampon ile arkasından gelecek aracı görebilecek şekilde olmalıdır.<br />
+Sol omuz üzerinden görüş sahası sürücünün sol omuzu üzerinden baktığı zaman kendisini geçmekte olduğu araç veya herhangi bir şeyin emniyetli olduğunu görebileceği mesafedir. Sağ omuz üzerinden görüş sahası ise sürücünün kendisini yetiştirmesinde oldukça özen göstermesi gereken tahmin mesafesidir. Çünkü, sürücü bulunduğu yer itibarıyla sağ tarafta geçeceği araca, park ederken yanaşacağı platform veya bankete oldukça uzaktır.<br />
+Ø Trafik 360 derecedir.<br />
+Ø En geç her 10 saniyede bir aynalarınızı kontrol ediniz.<br />
+Ø Şerit değiştirirken kör noktaya mutlaka başınızı çevirip bakınız.<br />
+d) Emniyet kemerinin ayarlanması.<br />
+Ø Emniyet kemeri sürücü koltuğunun solunda topludur.<br />
+Ø Maşalı veya spiralli olan kemeri sol omzunuzdan sağ koltuk altınıza doğru çekerek mandallı kısmı el freni boşluğunda bulunan yuvasına takınız.<br />
+Ø El ile çalışıp çalışmadığını kontrol ediniz.<br />
+Ø Otomobilin içerisinde bulunan herkesin takmasını sağlayınız.<br />
+Ø 50 km hızla meydana gelen çarpışmada, araç içinde bulunan herhangi bir kişinin veya cismin ağırlığının 50 katına ulaşacağını unutmayınız.<br />
+e) Baş desteklerinin ayarlanması.<br />
+Kaza anında kazazedenin başı önce ileri daha sonrada yüksek bir hız ile geriye doğru hareket etmektedir. Bu denli yüksek bir hızda kazazedelerin boyunlarının kırılma ihtimalleri çok yüksektir. Kullanılan araçlara arkadan çarpıldığı anda ise koltuk başlarının varlığı ve konumu daha da bir önem kazanmaktadır. Araç koltuk başlarına baş kısmını yaslamak doğru değildir. Başın koltuk başından 2-3 santim mesafede durması en idealidir. Bu şekilde oluşan olumsuz durumlarda sürücünün ve personelin boyun kırılmasını koltuk başları önlemektedir. Sürücü dâhil her koltuğun kesinlikle bir koltuk başı olması gereklidir.<br />
+Oturmadan veya aracınızı çalıştırmadan önce baş desteğini tamamen ayarlayınız. Bu bir çarpışma durumunda boyun yaralanmaları tehlikesini en aza indirecektir.<br />
+Baş desteğini, üst kısmı başınızın üst kısmı ile aynı hizada olacak şekilde ayarlayınız</p>
+<hr />
+<p><em>Extracted from E-TUSEKON portal on 2026-04-13 via Playwright + authenticated curl. See <a href="../../playwright-analysis.md">../../playwright-analysis.md</a> for methodology.</em></p>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geçiş Üstünlüğüne Sahip Araçlar — Priority (Emergency) Vehicles | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 20-geçiş-üstünlüğüne-sahip-araçlar</span>
+</div>
+<div class="content">
+<h1>Geçiş Üstünlüğüne Sahip Araçlar — Priority (Emergency) Vehicles</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — Geçiş Üstünlüğüne Sahip Araçlar (8-maddelik resmi sıralama + temsilî fotoğraflar: ambulans, itfaiye, zabıta, kar-buz mücadele aracı, koruma/korunan araç) · SLIDE 2 — Tepe Lambaları (150 m görüş/duyma şartı + 4 renk kodu: mavi-kırmızı/mavi/kırmızı/sarı + sarı ışık istisnası) · SLIDE 3 — Geçiş Üstünlüğüne Sahip Araçlara Yol Verme (yer açma/durma/kavşağı boşaltma kuralı + işaretsiz hasta taşıyan araçların üstünlük kullanımı)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p><strong>Geçiş üstünlüğü (priority right)</strong> is the HIGHEST form of right-of-way in Turkish traffic law. A vehicle with geçiş üstünlüğü — while <strong>actively performing its duty</strong> with <strong>siren/flashing lights (sesli + ışıklı uyarı cihazı)</strong> — overrides:</p>
+<ul>
+<li>Normal geçiş hakkı (right of way at kavşak)</li>
+<li>Speed limits</li>
+<li>Traffic light colors (but NOT the trafik polisi's direct hand signals)</li>
+<li>Lane-use rules</li>
+<li>No-parking / no-stopping signs</li>
+</ul>
+<p>This is the term that gets confused with <strong>geçiş hakkı</strong> on every exam (the "two-name trap" from <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a>). Remember:<br />
+- <strong>Geçiş hakkı</strong> = normal priority at a kavşak (who goes first).<br />
+- <strong>Geçiş üstünlüğü</strong> = emergency/duty override (ambulance, fire, police etc.).</p>
+<p>The slide lists the <strong>8 official categories</strong> of vehicles that hold geçiş üstünlüğü.</p>
+<hr />
+<h2>2. SLIDE 1 — Geçiş Üstünlüğüne Sahip Araçlar (the 8-item list)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-112.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-112.png" alt="Slayt — Sayfa 112: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 112: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-112.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A blue-bordered header "<strong>GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLAR</strong>" over a numbered list of 8 vehicle categories, with a bottom filmstrip showing 5 representative photos: <strong>ambulans</strong>, <strong>itfaiye aracı</strong>, <strong>zabıta (polis) aracı</strong>, <strong>kar-buz mücadele aracı</strong>, and a <strong>black limousine</strong> (koruma aracı / korunan araç).</p>
+<h4>The 8 categories (verbatim, in official priority order)</h4>
+<blockquote>
+<ol>
+<li>
+<p><strong>Yaralı veya acil hastaların taşınması ve bunlara ilk ve acil yardımın yapılması için kullanılan ambulans ve özel amaçlı taşıtlarla, yaralı ve acil hasta taşıyan diğer araçlar,</strong></p>
+</li>
+<li>
+<p><strong>Organ ve doku nakil araçları,</strong></p>
+</li>
+<li>
+<p><strong>İtfaiye araçları ile benzeri acil müdahale araçları,</strong></p>
+</li>
+<li>
+<p><strong>Sanık veya suçluları takip eden veya genel güvenlik ve asayiş için olay yerine giden zabıta araçları,</strong></p>
+</li>
+<li>
+<p><strong>Trafik güvenliğini koruma veya trafik kazasına el koyma amacıyla olay veya kaza yerine giden trafik hizmetlerine ait araçlar,</strong></p>
+</li>
+<li>
+<p><strong>Yolun yapım ve bakımından sorumlu kuruluşa ait kar ve buz mücadelesi araçları ile acil müdahale gerektiren çalışmalarda görevli araçlar,</strong></p>
+</li>
+<li>
+<p><strong>Afet ve acil durum hallerinde afet ve acil durum hizmetlerinde görevli araçlar,</strong></p>
+</li>
+<li>
+<p><strong>Hizmetin devamı süresince koruma araçları ile korunan araçlar.</strong></p>
+</li>
+</ol>
+</blockquote>
+<h3>Clean English explanation</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Key example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ambulans + yaralı/hasta taşıyan diğer araçlar</td>
+<td><strong>Ambulance</strong> + any vehicle carrying a wounded or critical patient</td>
+<td>112 ambulans, air-ambulance helicopter</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Organ ve doku nakil araçları</td>
+<td><strong>Organ &amp; tissue transport</strong> vehicles</td>
+<td>Transplant couriers</td>
+</tr>
+<tr>
+<td>3</td>
+<td>İtfaiye ve acil müdahale araçları</td>
+<td><strong>Fire brigade</strong> + similar emergency-response vehicles</td>
+<td>110 itfaiye, HAZMAT response</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Suç takibi / asayiş için giden zabıta araçları</td>
+<td><strong>Police (zabıta) pursuing suspects</strong> or responding to public-safety incidents</td>
+<td>155 polis, 156 jandarma</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Olay/kaza yerine giden trafik hizmetleri araçları</td>
+<td><strong>Traffic-service vehicles</strong> going to a crash / incident</td>
+<td>Trafik polisi kaza ekibi</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Kar-buz mücadele + acil müdahale gerektiren yol bakım araçları</td>
+<td><strong>Snow/ice clearing</strong> + urgent road-maintenance vehicles</td>
+<td>Kardoğan, belediye kar küreyicisi</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Afet ve acil durum hizmetlerinde görevli araçlar</td>
+<td><strong>Disaster &amp; emergency management</strong> vehicles</td>
+<td>AFAD araçları, UMKE</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Koruma araçları ve korunan araçlar</td>
+<td><strong>Protection</strong> (escort) vehicles + the <strong>protected</strong> vehicle itself</td>
+<td>Cumhurbaşkanlığı konvoyu, korumalı VIP araç</td>
+</tr>
+</tbody>
+</table>
+<h4>What "hizmetin devamı süresince" means (the duty-state condition)</h4>
+<p>Every entry on this list is qualified by an implicit phrase: <em>"hizmetin devamı süresince"</em> — <strong>only while actively performing the duty</strong>. An ambulans parked at the hospital has no geçiş üstünlüğü. An itfaiye aracı returning empty from a non-emergency has no geçiş üstünlüğü. The privilege exists <strong>only when the siren + flashing light are engaged and the vehicle is en route to or from an emergency</strong>.</p>
+<p>For the escort case (#8), "hizmetin devamı süresince" means the escort convoy keeps priority throughout the protection assignment — both the lead/trail escort vehicles AND the VIP being protected.</p>
+<h4>Why the order matters (probably)</h4>
+<p>The list is <strong>not random</strong>. It's organized roughly by:<br />
+1–3 — <strong>saving lives directly</strong> (patient, organ, fire)<br />
+4–5 — <strong>public safety &amp; law enforcement</strong><br />
+6 — <strong>clearing the road / enabling other emergency access</strong><br />
+7 — <strong>wide-scope disaster response</strong><br />
+8 — <strong>state-protection / dignitary escort</strong></p>
+<p>In a theoretical conflict (two priority vehicles meet), the <strong>lower-numbered category</strong> has precedence. In practice, emergency dispatchers coordinate so this rarely happens.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Geçiş üstünlüğüne sahip 8 araç grubu (ezberle, sırayla):</strong> (1) <strong>ambulans</strong> + yaralı/hasta taşıyan · (2) <strong>organ/doku nakil</strong> · (3) <strong>itfaiye</strong> · (4) <strong>zabıta</strong> (suç takibi/asayiş) · (5) <strong>trafik hizmetleri</strong> (kazaya giden) · (6) <strong>kar-buz mücadele / acil yol bakım</strong> · (7) <strong>afet ve acil durum</strong> · (8) <strong>koruma araçları ve korunan araç</strong>.</p>
+<p>Tüm bu araçlar üstünlüğü <strong>hizmetin devamı süresince + sesli+ışıklı uyarı cihazı açıkken</strong> kullanır.</p>
+</blockquote>
+<hr />
+<h2>2B. SLIDE 2 — Tepe Lambaları (beacon-light color codes)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A "<strong>TEPE LAMBALARI</strong>" header over a rule block followed by 4 colored light-bar photos (red-blue, blue, red, yellow on a tow truck + tractor).</p>
+<h4>The 150 m visibility/audibility rule</h4>
+<blockquote>
+<p><strong>Geçiş üstünlüğüne sahip araçların ışık ve sesi 150 m'den görülebilecek ve duyulabilecek şekilde olmalıdır.</strong></p>
+<p><em>The lights and siren of priority vehicles must be </em><em>visible and audible from 150 m</em><em>.</em></p>
+</blockquote>
+<h4>The 4 color codes (verbatim)</h4>
+<blockquote>
+<ul>
+<li><strong>Ambulans, organ ve doku nakil araçları, trafik ve genel zabıtaya ait araçlarda → MAVİ-KIRMIZI veya MAVİ</strong></li>
+<li><strong>Karayolları Genel Müdürlüğü'nün trafik hizmetlerine ait araçlarında → MAVİ</strong></li>
+<li><strong>İtfaiye ve afet ve acil durum hizmetlerinde görevli bulunan araçlarda → KIRMIZI</strong> renk ışık veren tepe lambaları bulunur.</li>
+<li><strong>SARI</strong> renkli tepe lambası: <strong>Lastik Tekerlekli Traktör</strong>, yol bakım-onarım araçları, kurtarıcı araçlar, ağırlık ve boyutları bakımından özel izinle karayoluna çıkan araçlara eskortluk eden araçlarda bulunur. <strong>Sarı ışık, geçiş üstünlüğü hakkı VERMEZ.</strong></li>
+</ul>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>Every priority vehicle in Türkiye carries a rooftop warning lamp (<strong>tepe lambası</strong>). The color tells you WHAT the vehicle is and WHETHER it holds geçiş üstünlüğü.</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Vehicle types</th>
+<th style="text-align: center;">Geçiş üstünlüğü?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mavi-Kırmızı</strong> or <strong>Mavi</strong></td>
+<td>Ambulans · organ/doku nakil · trafik zabıtası · genel zabıta (polis)</td>
+<td style="text-align: center;">✅ Evet</td>
+</tr>
+<tr>
+<td><strong>Mavi</strong> (only)</td>
+<td>Karayolları Genel Müdürlüğü trafik hizmet araçları</td>
+<td style="text-align: center;">✅ Evet</td>
+</tr>
+<tr>
+<td><strong>Kırmızı</strong></td>
+<td>İtfaiye · afet ve acil durum hizmetleri (AFAD)</td>
+<td style="text-align: center;">✅ Evet</td>
+</tr>
+<tr>
+<td><strong>Sarı</strong></td>
+<td>LTT (tarım traktörü) · yol bakım-onarım · kurtarıcı (çekici) · ağır/büyük boy özel izinli araç eskortu</td>
+<td style="text-align: center;">❌ <strong>HAYIR</strong></td>
+</tr>
+</tbody>
+</table>
+<h4>The SARI IŞIK trap (the highest-yield exam fact on this slide)</h4>
+<p><strong>Sarı (yellow) tepe lambası = UYARI, NOT üstünlük.</strong> A yellow rooftop light means <em>"I'm a slow / oversized / non-standard vehicle, please be careful"</em> — but the driver is <strong>NOT</strong> a priority vehicle. You do NOT have to yield to a tow truck with its yellow lamp flashing. You do NOT have to pull over for a tractor with a yellow beacon.</p>
+<p>Sarı lamba taşıyan araçlar:<br />
+- <strong>LTT</strong> (Lastik Tekerlekli Traktör) — slow-moving agricultural vehicle<br />
+- <strong>Yol bakım-onarım araçları</strong> — routine road-maintenance (NOT "acil müdahale gerektiren"; that's separate and uses kırmızı)<br />
+- <strong>Kurtarıcı araç (çekici)</strong> — tow truck / breakdown recovery<br />
+- <strong>Ağırlık/boyut bakımından özel izinli araç eskortu</strong> — escorts for oversized-load permits</p>
+<p>The hoca typically says this rule 3 times in a row because "sarı ışık üstünlük vermez" is one of the most frequently-failed exam questions.</p>
+<h4>150 m — why?</h4>
+<p>At otoyol speed (120 km/h = 33 m/s), 150 m gives other drivers ~4.5 seconds to react — enough to clear the lane. Siren and light are redundant so a deaf-walled-in driver OR a blocked-by-truck driver still gets warned.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Tepe Lambası Renk Kodu:</strong><br />
+<strong>MAVİ / MAVİ-KIRMIZI</strong> → Ambulans, organ nakil, zabıta, trafik hizmetleri → ✅ üstünlük.<br />
+<strong>KIRMIZI</strong> → İtfaiye + AFAD → ✅ üstünlük.<br />
+<strong>SARI</strong> → Traktör, yol bakım, kurtarıcı, eskort → ❌ <strong>ÜSTÜNLÜK VERMEZ — sadece uyarıdır.</strong></p>
+<p><strong>Geçiş üstünlüğü araçlarının ışık+sesi 150 m'den görülüp duyulmalıdır.</strong></p>
+</blockquote>
+<hr />
+<h2>2C. SLIDE 3 — Geçiş Üstünlüğüne Sahip Araçlara YOL VERME (what regular drivers must do)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-115.png" alt="Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME" loading="lazy"></a><figcaption>Slayt — Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-115.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A "<strong>GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME</strong>" header over two verbatim regulation paragraphs, with an ambulans photo at the bottom showing the blue-red flashing lights above its cab.</p>
+<h4>Paragraph 1 — the general yielding duty</h4>
+<blockquote>
+<p><strong>Geçiş üstünlüğüne sahip bir aracın duyulur veya görülür işaretini alan sürücüler, bu araçların kolayca ilerlemelerini sağlamak için taşıt yolu üzerinde yer açmak, gerekiyorsa durmak ve bu araçlar tarafından tamamen geçilinceye kadar beklemek zorundadırlar.</strong></p>
+<p><strong>Bir kavşakta iken böyle bir işaret alan araç sürücüleri, derhal kavşağı boşaltmak ve gerekiyorsa emniyetli bir mesafe uzaklaştıktan sonra geçişi engellemeyecek şekilde durmak ve bu araçlar tamamen geçinceye kadar beklemek zorundadır.</strong></p>
+</blockquote>
+<h4>Paragraph 2 — unmarked hospital-transport vehicles</h4>
+<blockquote>
+<p><strong>Ambulans dışında, yaralı ve acil hasta taşıyan ve geçiş üstünlüğüne sahip oldukları ayrım işaretiyle belirlenmemiş olan araçlar, geçiş üstünlüğü hakkını, gereksiz olmamak şartı ile kendilerine taşıt yolu üzerinde yer açılmasını sağlamak için yeterli şekilde ses cihazlarını ve ışık işaretlerini kullanarak, gerektiğinde el ve kol işareti yaparak, karayolunu kullananları uyarmak suretiyle kullanılır.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The 4-step yielding procedure (when you see/hear a priority vehicle)</h4>
+<p>When <strong>any</strong> vehicle on the 8-category list approaches with its siren and/or lights active, every other driver must:</p>
+<ol>
+<li><strong>Yer aç</strong> — make room on the road (pull right to the edge).</li>
+<li><strong>Gerekiyorsa dur</strong> — stop if necessary.</li>
+<li><strong>Tam olarak geçene kadar bekle</strong> — wait until the priority vehicle has fully passed.</li>
+<li><strong>Kavşaktaysan DERHAL kavşağı boşalt</strong> — if you're inside a kavşak when the signal reaches you, <strong>immediately clear</strong> the intersection. Move to a safe distance, stop where you will not block the priority vehicle, and wait.</li>
+</ol>
+<p>The <strong>"derhal kavşağı boşaltmak"</strong> duty is what the hoca emphasizes — don't freeze in place. The worst behavior is stopping <em>inside</em> the kavşak and blocking the ambulans from crossing.</p>
+<h4>The unmarked-hospital-car rule (Paragraph 2)</h4>
+<p>A civilian car <strong>carrying a seriously wounded or critically ill passenger</strong> (someone rushing their injured relative to the hospital) is <strong>NOT</strong> formally a priority vehicle — no siren, no flashing blue-red, no official markings. But Turkish law gives them a <strong>conditional üstünlük</strong>:</p>
+<ul>
+<li>They <strong>may</strong> use geçiş üstünlüğü to clear their path.</li>
+<li>But <strong>only when genuinely necessary</strong> ("gereksiz olmamak şartı ile").</li>
+<li>They must use whatever warning tools they have: <strong>car horn</strong>, <strong>headlight flash (selektör)</strong>, <strong>4-way flashers (dörtlü ikaz)</strong>, and if needed <strong>hand/arm signals</strong> out the window.</li>
+<li>Other drivers should yield if they can recognize the emergency.</li>
+</ul>
+<p><strong>Why this exists:</strong> if a family member suffers a heart attack in a rural area 45 min from the nearest ambulans, the driver shouldn't have to wait at every red light. The law allows this informal üstünlük as a safety valve — but it's fragile: if abused or misused, the driver loses both the üstünlük AND liability protection.</p>
+<h4>"Duyulur veya görülür işaret" — either one suffices</h4>
+<p>The legal trigger is <strong>siren OR lights</strong>, not "and." Even if the siren is off (e.g. night residential zone), a visible flashing light alone is enough to activate the yielding duty.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Geçiş üstünlüğü aracı gören/duyan sürücü:</strong> (1) <strong>yer açar</strong> · (2) gerekirse <strong>durur</strong> · (3) araç <strong>tamamen geçene kadar bekler</strong> · (4) <strong>kavşaktaysa DERHAL kavşağı boşaltır</strong>, sonra emniyetli mesafede geçişi engellemeyecek şekilde durur.</p>
+<p><strong>Ambulans olmayan ama yaralı/hasta taşıyan sivil araçlar</strong> da geçiş üstünlüğünü <strong>sadece gerçekten gerektiğinde</strong>, <strong>korna + selektör + dörtlü + el-kol işareti</strong> ile diğer sürücüleri uyararak kullanabilir.</p>
+</blockquote>
+<hr />
+<h2>2D. Hoca's Live Class Additions (2026-04-18)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>The "Can / Canan" mnemonic for the 8-category order</h3>
+<p>To make the official 8-item list memorable, the hoca offered a 2-phase mnemonic:</p>
+<blockquote>
+<p><em>"Önce Can, ondan sonra Canan. Yani önce </em><em>Can</em><em> — yaralı/acil hasta, organ/doku nakil araçları. Ondan sonra </em><em>Canan</em><em> — itfaiye ve benzeri acil müdahale araçları."</em></p>
+</blockquote>
+<p><strong>How it works:</strong><br />
+- <strong>Can</strong> (life / the person) = categories <strong>1 and 2</strong> — ambulans + yaralı/hasta taşıyan, then organ/doku nakil. Both are about <strong>saving a specific life</strong>.<br />
+- <strong>Canan</strong> (beloved, the one dear to you) = category <strong>3</strong> — itfaiye ve benzeri acil müdahale. This covers "protecting what you love" (property, neighborhood, broader rescue). It's also the natural word that rhymes with Can.<br />
+- Categories <strong>4–8</strong> then follow as <strong>guardians / state</strong> (zabıta, trafik hizmetleri, kar-mücadele, afet, koruma konvoyu).</p>
+<p>Not a perfect mapping for all 8 ranks, but the "Can → Canan" pair locks <strong>ambulans/organ BEFORE itfaiye</strong> in your head — which is the single most-tested ordering on this topic (itfaiye feels important but still loses to ambulans).</p>
+<h3>Sarı ışık — "sadece dikkat çekmek için"</h3>
+<p>The hoca reinforced the yellow-light rule verbatim three times, paraphrasing:</p>
+<blockquote>
+<p><em>"Tepesinde sarı ışık olan herhangi bir araç o geçiş üstünlüğüne sahip DEĞİL. O sadece dikkat çekmek için. Eskortluk yapıyor, bazen büyük boyutlu şeyler taşınıyor karayollarında. Ona sadece dikkat çekmek, insanların dikkat etmesi için, yoksa onun geçiş üstünlüğü yoktur sarı ışığı."</em></p>
+</blockquote>
+<p><strong>Exam framing:</strong> if an answer option equates sarı tepe lambasıyla geçiş üstünlüğü, it is <strong>always wrong</strong>. Sarı = yavaş/büyük araç uyarısı, <strong>üstünlük değil</strong>.</p>
+<h3>The civilian "I'm the ambulance now" activation rule</h3>
+<p>The hoca expanded on Paragraph 2 of SLIDE 3 (unmarked hospital-transport vehicles). If you are personally rushing a seriously wounded/ill person to hospital in your own car:</p>
+<blockquote>
+<p><em>"Siz eğer hastaneye kendi aracınızla acil bir hasta yetiştiriyorsanız, siz de ambulans konumuna geçiyorsunuz. Dolayısıyla kornaya çalarak, ışıklarla selektör yaparak, el kol hareketi yaparak yolları diğerlerinin size yardımcı olması ve anlaması için bu hakkı kullanabilirsiniz. </em><em>Ama gereksiz olmamak şartıyla</em><em> — 'bir yere yetişeceğim diye dur ben şunu yapayım, numara yapayım nereye kalırsanız cezayı yersiniz.'"</em></p>
+</blockquote>
+<p><strong>Activation toolkit (the 4 signals):</strong><br />
+1. <strong>Korna</strong> (horn).<br />
+2. <strong>Selektör</strong> (headlight flashing, kısa ↔ uzun alternating).<br />
+3. <strong>Dörtlü ikaz</strong> (4-way hazard flashers).<br />
+4. <strong>El ve kol işareti</strong> (hand/arm signals out the window).</p>
+<p><strong>Abuse warning:</strong> if you fake this to beat traffic (and no genuine medical emergency exists), you get fined — and lose the legal protection if caught lying. "Gereksiz olmamak şartıyla" is the hard limit.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>"Can → Canan" mnemoniği:</strong> önce yaralı/hasta + organ nakil (1 ve 2), sonra itfaiye (3).<br />
+<strong>Sarı tepe lambası</strong> = sadece uyarı, <strong>üstünlük vermez</strong>.<br />
+<strong>Kendi aracınla yaralı taşıyorsan</strong>: korna + selektör + dörtlü + el-kol → geçiş üstünlüğünü geçici kullanabilirsin — <strong>gereksiz olmamak şartıyla</strong>.</p>
+</blockquote>
+<hr />
+<h2>3. Geçiş üstünlüğü vs geçiş hakkı (the two-name trap)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-167.png" alt="Slayt — Sayfa 167: ASLİ KUSUR SAYILAN HALLER" loading="lazy"></a><figcaption>Slayt — Sayfa 167: ASLİ KUSUR SAYILAN HALLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Geçiş Hakkı</strong></th>
+<th><strong>Geçiş Üstünlüğü</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kim kullanır?</td>
+<td>Her sürücü (kavşakta kurallara göre)</td>
+<td>Sadece 8-li listedeki araçlar</td>
+</tr>
+<tr>
+<td>Ne zaman?</td>
+<td>Her zaman kavşak kurallarına göre</td>
+<td>Sadece <strong>görev sırasında</strong> (siren + ışık açık)</td>
+</tr>
+<tr>
+<td>Neyi geçer?</td>
+<td>Kavşaktaki diğer sıradan araçları</td>
+<td>Kırmızı ışık, hız sınırı, şerit kuralları, diğer geçiş hakkı — hemen hemen her şey</td>
+</tr>
+<tr>
+<td>İstisnası?</td>
+<td>Trafik polisi · trafik ışığı · levha</td>
+<td><strong>Trafik polisinin verdiği talimat</strong> (polis yine en üstte)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam trap:</strong> soru <em>"geçiş hakkı"</em> mi <em>"geçiş üstünlüğü"</em> mü kullanıyor — cevabı bu iki kavramdan hangisinin olduğuna dikkat et. Ambulansın sıradan bir araca "geçiş hakkı verdim" demek yanlıştır; ambulansın kullandığı şey <strong>geçiş üstünlüğüdür</strong>.</p>
+<hr />
+<h2>4. The duty-state conditions (when üstünlük is active)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/page-114.png" alt="Slayt — Sayfa 114: TEPE LAMBALARI" loading="lazy"></a><figcaption>Slayt — Sayfa 114: TEPE LAMBALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-114.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<p>For any vehicle on the list to actually hold geçiş üstünlüğü, <strong>three</strong> things must be true simultaneously:</p>
+<ol>
+<li><strong>Görev başında olmalı</strong> — actively carrying out the emergency / protection duty.</li>
+<li><strong>Sesli uyarı cihazı (siren) açık olmalı</strong> — siren sounding.</li>
+<li><strong>Işıklı uyarı cihazı (mavi/kırmızı flaşör) açık olmalı</strong> — flashing lights engaged.</li>
+</ol>
+<p>If any of these is missing, the vehicle must <strong>obey normal traffic rules like any other driver</strong>. An ambulans on its way to the grocery store is just a Mercedes-Benz van.</p>
+<p><strong>Exception:</strong> in plain-clothes / covert operations (sivil zabıta araçları), radio-coordinated pursuit may occur without visible markers, but the legal framework still requires the "görevde olma" condition.</p>
+<hr />
+<h2>5. What OTHER drivers must do when they see a geçiş üstünlüğü vehicle</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-088.png" alt="Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI" loading="lazy"></a><figcaption>Slayt — Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-088.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<p>(Though not listed on this specific slide, memorize for the exam.)</p>
+<ul>
+<li><strong>Sağa yanaş + yavaşla</strong> — pull right and slow down.</li>
+<li><strong>Gerekirse dur</strong> — stop if necessary.</li>
+<li><strong>Kavşakta bekliyorsan kavşağı temizle</strong> — if in an intersection, clear it.</li>
+<li><strong>Işıklı kavşakta kırmızı yansa bile</strong> siren'li araca yol ver — give way even if you have the red light.</li>
+<li><strong>Takip etmek YASAK</strong> — you cannot follow / tailgate the emergency vehicle to exploit the clear road.</li>
+<li><strong>Konvoyu bölmek YASAK</strong> — you cannot cut through a protected convoy (#8).</li>
+</ul>
+<hr />
+<h2>6. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Geçiş üstünlüğüne sahip araçlar kaç gruptur?"</strong> → <strong>8 grup</strong> (listede 8 madde).</li>
+<li><strong>"Hangi araç grubu 1. sırada geçiş üstünlüğüne sahiptir?"</strong> → <strong>Ambulans + yaralı/hasta taşıyan diğer araçlar.</strong></li>
+<li><strong>"Organ ve doku nakil araçları geçiş üstünlüğüne sahip midir?"</strong> → <strong>Evet, 2. sırada.</strong></li>
+<li><strong>"İtfaiye ile ambulans çakışırsa hangisi önce geçer?"</strong> → <strong>Ambulans</strong> (1. sıra &gt; 3. sıra).</li>
+<li><strong>"Geçiş üstünlüğü ile geçiş hakkı aynı mı?"</strong> → <strong>Hayır.</strong> Geçiş üstünlüğü yalnız 8-li listedeki araçların görevde kullandığı özel üstünlüktür.</li>
+<li><strong>"Kar mücadele aracı geçiş üstünlüğüne sahip midir?"</strong> → <strong>Evet, 6. sırada</strong> (yol bakım + kar-buz mücadele).</li>
+<li><strong>"Korunan araç + koruma aracı konvoyu geçiş üstünlüğüne sahip midir?"</strong> → <strong>Evet, 8. sırada</strong> — hizmetin devamı süresince.</li>
+<li><strong>"Sivil bir sürücü siren çalan ambulansı gördüğünde ne yapmalıdır?"</strong> → <strong>Sağa yanaşır, yavaşlar, gerekirse durur.</strong></li>
+<li><strong>"Ambulans kırmızı ışıkta geçebilir mi?"</strong> → <strong>Evet, geçiş üstünlüğü kırmızı ışığı geçmesine izin verir</strong> (ancak trafik polisinin talimatı en üsttedir).</li>
+<li><strong>"Hangi durumda bir ambulansın geçiş üstünlüğü YOKTUR?"</strong> → <strong>Görevde değilken / siren-ışık açık değilken.</strong></li>
+</ol>
+<hr />
+<h2>7. Memorize These</h2>
+<blockquote>
+<p><strong>Geçiş Üstünlüğüne Sahip 8 Araç (sıralamayı ezberle):</strong></p>
+<ol>
+<li><strong>Ambulans + yaralı/hasta taşıyan araçlar</strong></li>
+<li><strong>Organ ve doku nakil araçları</strong></li>
+<li><strong>İtfaiye ve benzeri acil müdahale araçları</strong></li>
+<li><strong>Zabıta (polis) — suç takibi / asayiş</strong></li>
+<li><strong>Trafik hizmetleri — kaza/olay yerine giden</strong></li>
+<li><strong>Kar ve buz mücadele + acil yol bakım araçları</strong></li>
+<li><strong>Afet ve acil durum hizmetleri (AFAD)</strong></li>
+<li><strong>Koruma araçları + korunan araç (VIP konvoy)</strong></li>
+</ol>
+<p><strong>Geçiş üstünlüğü SADECE görev sırasında + siren + ışık açıkken kullanılır.</strong></p>
+<p><strong>Geçiş üstünlüğü ≠ geçiş hakkı.</strong> Üstünlük 8-li listeye özel, duty-state bağımlı; hak ise her sürücünün kavşakta uyguladığı normal öncelik.</p>
+<p><strong>Kavşak hiyerarşisinde sıralama:</strong> Trafik Polisi (görevli) &gt; Geçiş Üstünlüğü &gt; Işık &gt; Levha &gt; Yer işareti &gt; Normal geçiş hakkı kuralları.</p>
+</blockquote>
+<hr />
+<h2>8. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Geçiş üstünlüğü</td>
+<td>Priority (emergency) right</td>
+<td>Override granted to the 8 groups</td>
+</tr>
+<tr>
+<td>Geçiş hakkı</td>
+<td>Right of way</td>
+<td>Normal kavşak priority</td>
+</tr>
+<tr>
+<td>Sesli uyarı cihazı</td>
+<td>Audible warning device</td>
+<td>Siren</td>
+</tr>
+<tr>
+<td>Işıklı uyarı cihazı</td>
+<td>Visual warning device</td>
+<td>Flashing light bar (mavi/kırmızı)</td>
+</tr>
+<tr>
+<td>Görevde</td>
+<td>On duty</td>
+<td>The state that activates üstünlük</td>
+</tr>
+<tr>
+<td>Hizmetin devamı süresince</td>
+<td>While the service continues</td>
+<td>Duty-state phrase for #8</td>
+</tr>
+<tr>
+<td>Ambulans</td>
+<td>Ambulance</td>
+<td>Medical emergency vehicle</td>
+</tr>
+<tr>
+<td>Organ ve doku nakil aracı</td>
+<td>Organ &amp; tissue transport vehicle</td>
+<td>Transplant courier</td>
+</tr>
+<tr>
+<td>İtfaiye</td>
+<td>Fire brigade</td>
+<td>Fire-response vehicle</td>
+</tr>
+<tr>
+<td>Acil müdahale aracı</td>
+<td>Emergency-response vehicle</td>
+<td>HAZMAT, rescue, etc.</td>
+</tr>
+<tr>
+<td>Zabıta</td>
+<td>Police / law enforcement</td>
+<td>Polis, jandarma</td>
+</tr>
+<tr>
+<td>Sanık / suçlu takibi</td>
+<td>Pursuit of suspects</td>
+<td>Police pursuit</td>
+</tr>
+<tr>
+<td>Genel güvenlik ve asayiş</td>
+<td>General security &amp; public order</td>
+<td>Public-safety duty</td>
+</tr>
+<tr>
+<td>Olay yeri</td>
+<td>Incident site</td>
+<td>Crime / event scene</td>
+</tr>
+<tr>
+<td>Trafik hizmetleri</td>
+<td>Traffic services</td>
+<td>Traffic-police / kaza ekibi</td>
+</tr>
+<tr>
+<td>Kar ve buz mücadelesi</td>
+<td>Snow &amp; ice clearing</td>
+<td>Winter road operation</td>
+</tr>
+<tr>
+<td>Yol yapım ve bakım</td>
+<td>Road construction &amp; maintenance</td>
+<td>Highway authority</td>
+</tr>
+<tr>
+<td>Afet ve acil durum</td>
+<td>Disaster and emergency</td>
+<td>AFAD-scoped scenarios</td>
+</tr>
+<tr>
+<td>Koruma aracı</td>
+<td>Protection / escort vehicle</td>
+<td>Lead or trail VIP escort</td>
+</tr>
+<tr>
+<td>Korunan araç</td>
+<td>Protected vehicle</td>
+<td>The VIP's car</td>
+</tr>
+<tr>
+<td>Konvoy</td>
+<td>Convoy</td>
+<td>Escorted vehicle group</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>9. Cross-references</h2>
+<ul>
+<li>Geçiş üstünlüğü vs geçiş hakkı (two-name trap) → <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a></li>
+<li>Kontrol hiyerarşisi (polis &gt; ışık &gt; levha &gt; yer) → <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a></li>
+<li>Kavşakta "geçiş üstünlüğüne sahip araçlara yol verme" = Rule 1 of the 7-rule priority list → <a href="19-kavşak-geçiş-hakkı.md">19-kavşak-geçiş-hakkı.md</a></li>
+<li>Trafik polisinin 8 hareketi (polis her zaman geçiş üstünlüğünün üstünde) → <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a></li>
+<li>Sağdan geçmenin 3 istisnasından biri: görev başında sol kenarda duran geçiş üstünlüğüne sahip araç → <a href="17-geçme-kuralları.md">17-geçme-kuralları.md</a></li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html">📄 Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME<span class="score">304.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-114.html">📄 Sayfa 114: TEPE LAMBALARI<span class="score">209.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html">📄 Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI<span class="score">113.6</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-112.html">📄 Sayfa 112: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLAR<span class="score">110.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-176.html">📄 Sayfa 176: 10- Belediye Trafik Birimleri:<span class="score">84.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-173.html">📄 Sayfa 173: 4- Karayolları Genel Müdürlüğü:<span class="score">84.2</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/index.html">🖼️ Geçiş Üstünlüğü & Kolaylığı<span class="score">7 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/index.html">🖼️ Kavşaklarda İlk Geçiş Hakkı<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">2 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

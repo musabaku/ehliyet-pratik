@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araçların Işıklandırılması ve Işıkların Kullanılması — Vehicle Lighting & Light Use | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 23-araç-ışıklandırma-kullanımı</span>
+</div>
+<div class="content">
+<h1>Araçların Işıklandırılması ve Işıkların Kullanılması — Vehicle Lighting &amp; Light Use</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — Işıklandırma (önde/arkada hangi lambalar, uzun far <strong>100 m</strong>, kısa far <strong>25 m</strong>, plaka <strong>20 m</strong>, ne zaman yakılmalı) · SLIDE 2 — Işıkların kullanılması (uzun far ne zaman, kısa far ne zaman, selektör yapma kuralı) · SLIDE 3 — Işıkların kullanılmasında yasaklar (sis lambası, tek park lambası ile seyir, dönüş ışığı "geç", karşılaşmada söndürme, öndeki aracı geçmede uzun far, standart dışı ışık — 1.246 TL cezası)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Lights do <strong>two jobs</strong> on a vehicle:<br />
+1. <strong>Seeing</strong> — illuminate the road ahead for the driver (kısa farlar + uzun farlar + sis lambaları).<br />
+2. <strong>Being seen / signaling</strong> — make the car visible to others and communicate intent (park lambası, sinyal, fren, geri vites, plaka lambası).</p>
+<p>The exam tests <strong>three things</strong>:<br />
+- <strong>Which lights are at the front vs the back</strong> of the car.<br />
+- <strong>How far each headlight type must illuminate</strong> (3 fixed distances: <strong>100 m / 25 m / 20 m</strong>).<br />
+- <strong>When each light type is required</strong> (day vs night, town vs highway, weather) and <strong>when it is forbidden</strong>.</p>
+<hr />
+<h2>2. SLIDE 1 — Araçların Işıklandırılması</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-125.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-125.png" alt="Slayt — Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve" loading="lazy"></a><figcaption>Slayt — Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-125.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Diagram of two cars from above — a red car with a short yellow beam labeled <strong>25 metre</strong>, and a purple car with a long yellow beam labeled <strong>100 metre</strong>. Three bullet points below describe: when to turn lights on, what lights are on the front vs back, and the 3 distance values.</p>
+<h3>The 3 rules</h3>
+<blockquote>
+<ol>
+<li><strong>Araçların ışıkları gündüz kar, sis, şiddetli yağmur ve yeterli derecede aydınlatılmamış yerlerde yakılmalıdır, gece ise ışıkları yakmak zorunludur.</strong></li>
+</ol>
+<p><em>Daytime: lights must be on during </em><em>snow, fog, heavy rain, and poorly-lit areas</em><em>. At night: lights are </em><em>mandatory</em><em>.</em></p>
+<ol>
+<li><strong>Araçların önünde; beyaz ışık veren kısa ve uzun farlar, portakal sarısı renginde sinyal lambaları ve sis lambaları vardır. Arka kısımda ise park lambası, sinyal lambaları, fren, geri vites lambası ve plaka lambası mevcuttur.</strong></li>
+</ol>
+<p><em>At the </em><em>front</em><em>: </em><em>white</em><em> short + long headlights, </em><em>orange-yellow</em><em> turn signals, fog lamps. At the </em><em>back</em><em>: park lamp, turn signals, brake lamp, reverse lamp, plate lamp.</em></p>
+<ol>
+<li><strong>Uzun farlar 100 metre, Kısa farlar 25 metre ileriyi aydınlatacak şekilde ayarlı olmalıdır. Aracın plakası 20 metre mesafeden okunacak şekilde aydınlatılmış olmalıdır.</strong></li>
+</ol>
+<p><em>Long headlights: </em><em>100 m</em><em> ahead. Short headlights: </em><em>25 m</em><em> ahead. Plate light: plate must be </em><em>readable from 20 m</em><em> away.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Front vs back — memorize which light lives where</h4>
+<table>
+<thead>
+<tr>
+<th>Konum</th>
+<th>Lambalar</th>
+<th>Renk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ön (front)</strong></td>
+<td><strong>Kısa far, Uzun far</strong></td>
+<td>Beyaz</td>
+</tr>
+<tr>
+<td><strong>Ön (front)</strong></td>
+<td><strong>Sinyal lambası</strong></td>
+<td>Portakal sarısı</td>
+</tr>
+<tr>
+<td><strong>Ön (front)</strong></td>
+<td><strong>Sis lambası</strong></td>
+<td>(sarı veya beyaz)</td>
+</tr>
+<tr>
+<td><strong>Arka (back)</strong></td>
+<td><strong>Park lambası</strong></td>
+<td>Kırmızı</td>
+</tr>
+<tr>
+<td><strong>Arka (back)</strong></td>
+<td><strong>Sinyal lambası</strong></td>
+<td>Portakal sarısı</td>
+</tr>
+<tr>
+<td><strong>Arka (back)</strong></td>
+<td><strong>Fren lambası</strong></td>
+<td>Kırmızı</td>
+</tr>
+<tr>
+<td><strong>Arka (back)</strong></td>
+<td><strong>Geri vites lambası</strong></td>
+<td>Beyaz</td>
+</tr>
+<tr>
+<td><strong>Arka (back)</strong></td>
+<td><strong>Plaka lambası</strong></td>
+<td>Beyaz</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exam trap:</strong> fren lambası and geri vites lambası are <strong>only at the back</strong>. Sinyal is front AND back. Farlar (head-lights) are <strong>only front</strong>. Plate lamp is <strong>only back</strong>.</p>
+<h4>The 3 magic distances — memorize cold</h4>
+<table>
+<thead>
+<tr>
+<th>Lamba</th>
+<th style="text-align: center;">Aydınlatma mesafesi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Uzun far (long headlight / high-beam)</strong></td>
+<td style="text-align: center;"><strong>100 m</strong></td>
+</tr>
+<tr>
+<td><strong>Kısa far (short headlight / low-beam)</strong></td>
+<td style="text-align: center;"><strong>25 m</strong></td>
+</tr>
+<tr>
+<td><strong>Plaka lambası (plate light)</strong></td>
+<td style="text-align: center;">Plaka <strong>20 m</strong> mesafeden okunmalı</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mnemonic for the 100/25/20:</strong> uzun far is 4× kısa far (100 / 25). Plate lamp is just a hair under kısa far (20 vs 25).</p>
+<h4>When to turn lights on — the 5 conditions</h4>
+<ul>
+<li><strong>Gündüz:</strong> kar, sis, şiddetli yağmur, yeterli aydınlatılmamış yer → yakılmalı.</li>
+<li><strong>Gece:</strong> <strong>her durumda zorunlu.</strong></li>
+</ul>
+<p>"Yeterli aydınlatılmamış yer" covers underpasses, forest roads, unlit rural streets.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Uzun far: 100 m. Kısa far: 25 m. Plaka: 20 m'den okunmalı.</strong><br />
+<strong>Önde:</strong> kısa+uzun far (beyaz), sinyal (portakal sarısı), sis lambası.<br />
+<strong>Arkada:</strong> park, sinyal, <strong>fren, geri vites, plaka</strong> lambası.<br />
+Gündüz: kar/sis/şiddetli yağmur/karanlık yer → lights on. Gece: her zaman zorunlu.</p>
+</blockquote>
+<hr />
+<h2>3. SLIDE 2 — Işıkların Kullanılması</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-126.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-126.png" alt="Slayt — Sayfa 126: IŞIKLARIN KULLANILMASI" loading="lazy"></a><figcaption>Slayt — Sayfa 126: IŞIKLARIN KULLANILMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-126.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Header "<strong>IŞIKLARIN KULLANILMASI</strong>" with two pink sub-sections — "<strong>Uzağı Gösteren Işıklar (Uzun Farlar):</strong>" and "<strong>Yakını Gösteren Işıklar (Kısa Farlar):</strong>" — each with bullet rules. A blue high-beam icon appears top-right. Closing paragraph describes "<strong>Selektör Yapma</strong>" (flashing). Bottom shows two toy-car photos labeled <strong>karşılaşmada yakın ışıklar</strong> (low beams when meeting oncoming) and <strong>takipte yakın ışıklar</strong> (low beams when following).</p>
+<h3>Uzun Farlar (high beams) — kullanım yerleri</h3>
+<blockquote>
+<ul>
+<li><strong>Yerleşim birimleri dışındaki karayollarında geceleri seyrederken</strong> — on highways (outside towns) at night.</li>
+<li><strong>Yeterince aydınlatılmamış tünellere girerken ve benzeri yerlerde</strong> — when entering poorly-lit tunnels and similar places.</li>
+</ul>
+</blockquote>
+<h3>Kısa Farlar (low beams) — kullanım yerleri</h3>
+<blockquote>
+<ul>
+<li><strong>Yerleşim birimleri içinde ve aydınlatmanın yeterli olduğu yerlerde</strong> — inside towns and in well-lit areas.</li>
+<li><strong>Karşılaşmalarda, öndeki aracı takip ederken ve geçerken yan yana gelinceye kadar</strong> — when meeting oncoming traffic, when following another vehicle, and when overtaking <strong>until you're side-by-side</strong>.</li>
+<li><strong>Gündüz görüşü azaltan sisli, yağışlı ve benzeri havalarda kullanılır</strong> — in foggy, rainy, and similar reduced-visibility daytime conditions.</li>
+</ul>
+</blockquote>
+<h3>Selektör Yapma (flashing high-beams)</h3>
+<blockquote>
+<p><strong>Sürücüler, geceleri yakın ilerisi görülmeyen kavşak, dönemeç ve tepe üstlerine yaklaşırken yakın ve uzağı gösteren ışıkları ardı ardına sıra ile yakarak gelişlerini haber vermek zorundadır. (Selektör Yapma)</strong></p>
+<p><em>At night, when approaching junctions, curves, or hilltops where the road ahead is not visible, drivers MUST </em><em>flash low-beam and high-beam alternately</em><em> to announce their approach — this is called </em><em>"Selektör yapmak"</em><em>.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Uzun far rule — "outside towns, at night, highways"</h4>
+<p>High beams light up <strong>100 m</strong>, which is far too much for a town (dazzles other drivers, reflects off shop windows). So uzun far is only for:<br />
+- Rural highways at night.<br />
+- Unlit tunnels.</p>
+<h4>Kısa far rule — "inside towns, meeting, following, overtaking-until-parallel, bad weather"</h4>
+<p>Low beams are the <strong>default</strong> for almost everything. Specific "MUST use low-beam" situations:<br />
+- <strong>Yerleşim içinde</strong> (urban areas — even at night, uzun far is illegal inside the city).<br />
+- <strong>Karşılaşma</strong> (meeting) — as soon as you see oncoming headlights, switch to low beam to not blind them.<br />
+- <strong>Takip</strong> (following) — don't dazzle the car in front via their mirrors.<br />
+- <strong>Geçme (overtaking)</strong> — low beam until you are <strong>yan yana</strong> (side by side) with the vehicle being overtaken; only then switch to high beam.<br />
+- <strong>Gündüz sisli/yağışlı</strong> (foggy or rainy daytime) — low beam is mandatory because it doesn't reflect back into your own eyes off droplets the way high beam does.</p>
+<h4>Selektör yapma — the "I'm coming" signal</h4>
+<p>In rural areas at night, hilltops and blind curves are deadly because two cars can meet with zero warning. Law requires you to flash your high beams (toggle kısa↔uzun rapidly) as you approach. This is the Turkish equivalent of "honking around a blind bend" — but done with light instead of sound.</p>
+<p><strong>When:</strong> geceleri + yakın ilerisi görülmeyen <strong>kavşak / dönemeç / tepe üstü</strong>.<br />
+<strong>How:</strong> yakın + uzak ışıkları ardı ardına sıra ile yakmak (alternating).<br />
+<strong>Name:</strong> <strong>Selektör yapmak</strong>.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Uzun far nerede?</strong> Yerleşim <strong>dışında</strong>, geceleri, karayolu ve <strong>aydınlatılmamış tünel</strong>.<br />
+<strong>Kısa far nerede?</strong> Yerleşim <strong>içinde</strong>, <strong>karşılaşma</strong>, <strong>takip</strong>, <strong>geçmede yan yana gelene kadar</strong>, <strong>gündüz sisli/yağışlı</strong> havalar.<br />
+<strong>Selektör yapma:</strong> gece görülmeyen <strong>kavşak / dönemeç / tepe üstü</strong> — yakın+uzak ışıkları <strong>ardı ardına</strong> yak.</p>
+</blockquote>
+<hr />
+<h2>4. SLIDE 3 — Işıkların Kullanılmasında Yasaklar</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-127.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/page-127.png" alt="Slayt — Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR" loading="lazy"></a><figcaption>Slayt — Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-127.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>Pink header "<strong>IŞIKLARIN KULLANILMASINDA YASAKLAR</strong>" with a 6-item bullet list and a closing legal paragraph citing the fine (<strong>1.246 TL, Madde 30/1-a</strong>). Two photos at the bottom: a car in a tunnel, and cars in heavy fog/snow with lights on.</p>
+<h3>The 6 forbidden light-uses</h3>
+<blockquote>
+<ol>
+<li><strong>Sis lambalarının; sisli, karlı ve sağanak yağmurlu havalar dışında ve diğer farlarla birlikte yakılması</strong> — lighting <strong>fog lamps</strong> except in fog/snow/heavy rain, or lighting them <strong>together with the other headlights</strong>.</li>
+<li><strong>Sadece park lambaları veya sis ışıkları ile seyredilmesi</strong> — driving with <strong>only</strong> park lights or <strong>only</strong> fog lights (insufficient illumination).</li>
+<li><strong>Dönüş ışıklarının "geç" anlamında kullanılması</strong> — using turn signals to mean <strong>"come / pass"</strong> (they mean "I am turning", not "you may go").</li>
+<li><strong>Karşılaşmalarda ışıkların söndürülmesi</strong> — <strong>turning off</strong> lights when meeting oncoming traffic (you switch to low beam, you do NOT turn off).</li>
+<li><strong>Öndeki aracı geçişlerde uyarı için çok kısa süre dışında uzağı gösteren ışıkların yakılması</strong> — using <strong>high beams</strong> while overtaking, except for a <strong>very brief warning flash</strong>.</li>
+<li><strong>Yönetmelikte belirlenen esaslara aykırı nitelikte ışık takılması ve kullanılması</strong> — installing or using lights that violate the regulation (non-standard colors, improper shapes, aftermarket mods outside spec).</li>
+</ol>
+<p><strong>yasaktır.</strong> → all the above are <strong>forbidden</strong>.</p>
+</blockquote>
+<h3>Closing legal clause</h3>
+<blockquote>
+<p><strong>Işık donanımından yakını ve uzağı gösteren ışıklar ile park, fren ve dönüş ışıkları noksan, bozuk veya teknik şartlara aykırı olan araçları kullanmak yasaktır (Cezası: 1.246 TL, Madde 30/1-a)</strong></p>
+<p><em>Driving with </em><em>missing, broken, or non-compliant</em><em> low/high/park/brake/turn lights is forbidden — fine: </em><em>1.246 TL</em><em> (Highway Traffic Law Article 30/1-a).</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Fog lamp rule (item 1)</h4>
+<p>Sis lambası is for <strong>sis / kar / sağanak yağmur</strong> ONLY. And it's used <strong>alone or with low beams</strong>, not with high beams (their combined glare is worse than either alone in reduced visibility).</p>
+<h4>"Only park light" rule (item 2)</h4>
+<p>Park lights are for <strong>parked cars</strong> — not for moving vehicles. Driving with only park lights means you're essentially invisible. Same for fog-lights-only.</p>
+<h4>Turn signal ≠ "go ahead" (item 3)</h4>
+<p>A frequent wrong habit: flicking the right signal at a car behind to mean "come, overtake me." Illegal. The signal means "I am turning in that direction" only. For "come / pass / it's safe" you flash low-beam once (kısa selektör) or wave.</p>
+<h4>Do NOT turn off lights when meeting (item 4)</h4>
+<p>The correct response to oncoming headlights is to <strong>switch to low beam</strong> — never to <strong>turn lights off</strong>. Turning off makes you invisible at the worst possible moment.</p>
+<h4>High beam during overtake (item 5)</h4>
+<p>High beams are allowed only for a <strong>very short warning flash</strong> to signal "I'm about to overtake." Continuous high beam during the pass blinds the driver in front via their mirror.</p>
+<h4>Non-standard lights (item 6)</h4>
+<p>Colored LED underglow, non-stock bulb colors, oversized spot lamps, improperly angled beams — all forbidden under the Yönetmelik. The <strong>1.246 TL fine</strong> also applies to any missing or broken required lamp (bulb out on a brake light counts).</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Yasak 6 ışık davranışı:</strong><br />
+1. Sis lambası — sadece sis/kar/sağanakta, tek başına veya kısa farla; diğer farlarla beraber yakma <strong>YASAK</strong>.<br />
+2. Sadece park lambası veya sadece sis ışığı ile seyir <strong>YASAK</strong>.<br />
+3. Dönüş sinyalini <strong>"geç"</strong> anlamında kullanma <strong>YASAK</strong>.<br />
+4. Karşılaşmada ışıkları <strong>söndürme</strong> <strong>YASAK</strong> (sadece kısa fara düş).<br />
+5. Geçme sırasında <strong>uzun far</strong> (çok kısa uyarı dışında) <strong>YASAK</strong>.<br />
+6. Standart dışı ışık takma/kullanma <strong>YASAK</strong>. Ceza: <strong>1.246 TL</strong>.</p>
+</blockquote>
+<hr />
+<h2>5. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Uzun farlar kaç metre ileriyi aydınlatır?"</strong> → <strong>100 m.</strong></li>
+<li><strong>"Kısa farlar kaç metre ileriyi aydınlatır?"</strong> → <strong>25 m.</strong></li>
+<li><strong>"Plaka hangi mesafeden okunacak şekilde aydınlatılmalı?"</strong> → <strong>20 m.</strong></li>
+<li><strong>"Gündüz hangi durumlarda ışık yakılmalı?"</strong> → <strong>Kar, sis, şiddetli yağmur, yeterli aydınlatılmamış yerlerde.</strong></li>
+<li><strong>"Yerleşim içinde geceleri hangi far kullanılır?"</strong> → <strong>Kısa farlar.</strong></li>
+<li><strong>"Gece yerleşim dışı karayolunda hangi far kullanılır?"</strong> → <strong>Uzun farlar.</strong></li>
+<li><strong>"Karşılaşmalarda sürücü ne yapar?"</strong> → <strong>Kısa fara düşer (söndürmez).</strong></li>
+<li><strong>"Geceleri tepe üstü/kavşak/dönemeç yaklaşırken sürücü ne yapar?"</strong> → <strong>Selektör yapar (yakın-uzak ardı ardına).</strong></li>
+<li><strong>"Aşağıdakilerden hangisi aracın arkasında bulunmaz?"</strong> → <strong>Uzun far / kısa far</strong> (arkada yok; önde var).</li>
+<li><strong>"Sinyal lambalarının rengi nedir?"</strong> → <strong>Portakal sarısı.</strong></li>
+<li><strong>"Sis lambaları hangi durumda kullanılır?"</strong> → <strong>Sisli, karlı, sağanak yağmurlu havalarda.</strong></li>
+<li><strong>"Sinyal lambasını 'geç' anlamında kullanmak doğru mudur?"</strong> → <strong>Hayır, yasaktır.</strong></li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>3 ALTIN MESAFE:</strong> Uzun far <strong>100 m</strong> · Kısa far <strong>25 m</strong> · Plaka <strong>20 m</strong>'den okunmalı.</p>
+<p><strong>ÖN LAMBALARI:</strong> kısa far, uzun far, sinyal (<strong>portakal sarısı</strong>), sis lambası.<br />
+<strong>ARKA LAMBALARI:</strong> park, sinyal, <strong>fren, geri vites, plaka</strong>.</p>
+<p><strong>UZUN FAR:</strong> yerleşim <strong>dışı</strong>, gece, aydınlatılmamış tünel.<br />
+<strong>KISA FAR:</strong> yerleşim <strong>içi</strong>, karşılaşma, takip, geçmede <strong>yan yana gelene kadar</strong>, gündüz sisli/yağışlı.</p>
+<p><strong>SELEKTÖR YAPMA:</strong> gece görülmeyen <strong>kavşak / dönemeç / tepe üstü</strong> — yakın+uzak <strong>ardı ardına</strong>.</p>
+<p><strong>6 YASAK:</strong> sis lambası yanlış kullanım · sadece park/sis ile seyir · sinyali "geç" anlamında · karşılaşmada ışık söndürme · geçmede uzun far · standart dışı ışık. <strong>Ceza: 1.246 TL.</strong></p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aydınlatma</td>
+<td>Illumination / lighting</td>
+<td>Act of lighting</td>
+</tr>
+<tr>
+<td>Far</td>
+<td>Headlight</td>
+<td>Ön ışık</td>
+</tr>
+<tr>
+<td>Uzun far</td>
+<td>High beam / long-distance headlight</td>
+<td>100 m</td>
+</tr>
+<tr>
+<td>Kısa far</td>
+<td>Low beam / short headlight</td>
+<td>25 m</td>
+</tr>
+<tr>
+<td>Park lambası</td>
+<td>Park light / side marker</td>
+<td>Parked-car visibility light</td>
+</tr>
+<tr>
+<td>Sinyal lambası</td>
+<td>Turn signal / indicator</td>
+<td>Portakal sarısı</td>
+</tr>
+<tr>
+<td>Sis lambası</td>
+<td>Fog lamp</td>
+<td>Only in sis/kar/sağanak</td>
+</tr>
+<tr>
+<td>Fren lambası</td>
+<td>Brake light</td>
+<td>Kırmızı, arkada</td>
+</tr>
+<tr>
+<td>Geri vites lambası</td>
+<td>Reverse lamp</td>
+<td>Beyaz, arkada</td>
+</tr>
+<tr>
+<td>Plaka lambası</td>
+<td>License plate lamp</td>
+<td>20 m'den okunacak</td>
+</tr>
+<tr>
+<td>Portakal sarısı</td>
+<td>Orange-yellow</td>
+<td>Sinyal rengi</td>
+</tr>
+<tr>
+<td>Selektör yapmak</td>
+<td>To flash high-beams alternately</td>
+<td>Kavşak/dönemeç/tepe üstü uyarısı</td>
+</tr>
+<tr>
+<td>Karşılaşma</td>
+<td>Meeting (oncoming)</td>
+<td>Two cars passing in opposite directions</td>
+</tr>
+<tr>
+<td>Takip</td>
+<td>Following</td>
+<td>Being behind another car</td>
+</tr>
+<tr>
+<td>Geçme</td>
+<td>Overtaking</td>
+<td>Passing the car ahead</td>
+</tr>
+<tr>
+<td>Yan yana gelmek</td>
+<td>To come side-by-side</td>
+<td>Mid-overtake reference point</td>
+</tr>
+<tr>
+<td>Yerleşim birimi</td>
+<td>Settled area / town</td>
+<td>Şehir/kasaba</td>
+</tr>
+<tr>
+<td>Aydınlatılmamış</td>
+<td>Unlit</td>
+<td>No street lamps</td>
+</tr>
+<tr>
+<td>Sağanak yağmur</td>
+<td>Heavy downpour</td>
+<td>Pouring rain</td>
+</tr>
+<tr>
+<td>Noksan</td>
+<td>Missing / incomplete</td>
+<td>Eksik</td>
+</tr>
+<tr>
+<td>Bozuk</td>
+<td>Broken / faulty</td>
+<td>Çalışmayan</td>
+</tr>
+<tr>
+<td>Teknik şartlar</td>
+<td>Technical specifications</td>
+<td>Yönetmelik standardı</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li>Şarj sistemi (lambaları besleyen) → <a href="../araç-tekniği/04-şarj-sistemi.md">04-şarj-sistemi.md</a></li>
+<li>Aydınlatma ve ikaz sistemi (arıza gösterge ışıkları) → <a href="../araç-tekniği/05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a></li>
+<li>Geçme kuralları → <a href="17-geçme-kuralları.md">17-geçme-kuralları.md</a></li>
+<li>Duraklama ve park (park lambası kullanımı) → <a href="22-duraklama-park-tedbirleri.md">22-duraklama-park-tedbirleri.md</a></li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-126.html">📄 Sayfa 126: IŞIKLARIN KULLANILMASI<span class="score">265.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-125.html">📄 Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve<span class="score">220.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-127.html">📄 Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR<span class="score">175.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-173.html">📄 Sayfa 173: 4- Karayolları Genel Müdürlüğü:<span class="score">89.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-120.html">📄 Sayfa 120: DURAKLAMANIN YASAK OLDUĞU YERLER<span class="score">88.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html">📄 Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI<span class="score">81.9</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/index.html">🖼️ Durma, Park, Işıklandırma<span class="score">6 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/07-gecme-manevralar/index.html">🖼️ Geçme & Manevralar<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/index.html">🖼️ Trafik Görevlisi & Işıklı İşaretler<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

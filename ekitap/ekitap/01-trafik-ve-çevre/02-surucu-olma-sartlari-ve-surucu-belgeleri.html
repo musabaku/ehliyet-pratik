@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SÜRÜCÜ OLMA ŞARTLARI VE SÜRÜCÜ BELGELERİ | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ E-Kitap dizini</a>
+  <span class="crumb">01-trafik-ve-çevre / 02-surucu-olma-sartlari-ve-surucu-belgeleri</span>
+</div>
+<div class="content">
+<hr />
+<p>lesson: Trafik ve Çevre Bilgisi<br />
+subject: SÜRÜCÜ OLMA ŞARTLARI VE SÜRÜCÜ BELGELERİ<br />
+subject_number: 2<br />
+subject_id: 26b0402884b8f7d1738d47722de6d87f<br />
+lesson_id: bc9d0800a0eb0b4e14f303c5183a2964<br />
+url: https://e-tusekon.com/user/read-article.php?lesson=bc9d0800a0eb0b4e14f303c5183a2964&amp;subject=26b0402884b8f7d1738d47722de6d87f<br />
+language: tr</p>
+<hr />
+<h1>SÜRÜCÜ OLMA ŞARTLARI VE SÜRÜCÜ BELGELERİ</h1>
+<blockquote>
+<p><strong>Ders:</strong> Trafik ve Çevre Bilgisi (Traffic &amp; Environment) — Subject 2/15</p>
+<p><strong>English translation:</strong> <em>pending — will be added in a later pass</em></p>
+</blockquote>
+<hr />
+<h2>Turkish Original (Türkçe)</h2>
+<p>Trafik ve Çevre Bilgisi<br />
+SÜRÜCÜ OLMA ŞARTLARI VE SÜRÜCÜ BELGELERİ<br />
+SÜRÜCÜ OLMA ŞARTLARI VE SÜRÜCÜ BELGELERİ<br />
+1- Sürücü Belgesi Alma Süreci<br />
+A -2918 Sayılı Karayolları Trafik Kanunu’na göre Milli Eğitim Bakanlığının Görev ve Yetkileri :<br />
+• Sürücülerin yetiştirilmesi için sürücü kurslarının açılmasına izin vermek ve bu sürücü kurslarını denetlemek.<br />
+• Sürücü eğitimi almış olan adayların sınavlarını yaparak başarılı olanlara sertifika düzenlemek.<br />
+• Genel trafik eğitim planını hazırlayarak, ilgili kuruluşlar ile iş birliği yaparak uygulamak.<br />
+• İlköğretim ve orta öğretim okullarında zorunlu olarak trafik ve ilkyardım dersleri koymak.<br />
+Çocuk trafik eğitim parklarının yapılma, açılma, denetim ve çalışmalarından sorumludur.<br />
+B – Özel motorlu taşıt sürücüleri kurslarının ve sürücü davranışlarını geliştirme eğitim merkezlerinin görevleri:<br />
+Milli Eğitim Bakanlığına bağlı olarak faaliyet gösteren özel motorlu taşıt sürücüleri kurslarının görevleri şunladır,<br />
+• Sürücü adaylarına teorik ve uygulamalı olarak, motorlu taşıt sürücüsü eğitimi vermek.<br />
+• Sürücü belgesi olup da, kendini yeterli görmeyenlere özel direksiyon eğitimi dersi vermek.<br />
+• Yapılan sınavlarda başarılı olanlara sertifika düzenlemek.<br />
+Sağlık Bakanlığına bağlı olarak faaliyet gösteren sürücü davranışlarını geliştirme eğitim merkezlerinin görevleri: şunladır,<br />
+· İkinci defa geçici olarak sürücü belgeleri geri alınan sürücülere sürücü davranışlarını geliştirme eğitimi verilir.<br />
+· Eğitim programı 24 saatlik olup, günde en fazla 6 saat ve haftada 1 gün olmak üzere, 4 haftada tamamlanır.<br />
+2- Sürücü Adaylarında Aranan Şartlar :<br />
+- Motorlu araçların sürücü belgesi sahibi olmayan kişiler tarafından karayollarında sürülmesi ve sürülmesine izin verilmesi yasaktır.<br />
+- Sürücü belgeleri Nüfus Müdürlüklerince verilmektedir.<br />
+- Karayollarında bisiklet kullananların 11, motorsuz taşıt kullananların ve hayvan sürücülerinin 13 yaşını bitirmiş olmaları zorunludur.<br />
+Karayolları Trafik Yönetmeliği’nin 76. maddesine göre belirlenen sürücü belgesi alma şartlarını karşılayan sürücülere, sürücü belgesi verilmektedir. sürücü belgesi almak için aşağıdaki şartların yerine getirilmiş olması gerekmektedir;<br />
+a-Yaş şartı;<br />
+Sürücü belgesi alma şartlarında ilk sırada yer alan yaş şartı, çeşitli sürücü belgesi sınıfları için farklıdır. Sürücü belgesi sınıflarına göre belirlenen minimum yaş sınırları aşağıdaki şekildedir;<br />
+- M, A1 ve B1 Sınıfı sürücü belgeleri için en az 16 yaş,<br />
+- A2, B, BE, C1, C1E, F ve G sınıfı sürücü belgeleri için en az 18 yaş<br />
+- A sınıfı sürücü belgesi için 24 yaş veya iki yıllık A2 sınıfı sürücü belgesi sahibi olmak şartı ile 20 aşında olunmalıdır.<br />
+- C, CE, D1 ve D1E sınıfı sürücü belgeleri için 21 yaş,<br />
+- D ve DE sınıfı sürücü belgeleri için ise 24 yaşında olunmalıdır.<br />
+b- Eğitim Şartı;<br />
+Sürücü belgesi alacaklar için eğitim durumu Karayolları Trafik Yönetmeliği’nin 76. maddesine göre belirlenir. Sürücü belgesi alacak olan adayların en az ilkokul düzeyinde eğitim almış olmaları zorunludur.<br />
+c- Sağlık Şartı;<br />
+Sürücü belgesi almak için adaylar araç kullanabileceklerine dair sağlık raporlarını kayıt sırasında yanlarında getirmelidirler. Diğer şartlar sağlandığı halde sağlık raporu olmayan sürücü adaylarına sürücü belgesi verilmemektedir.<br />
+Sürücü adaylarının genel sağlık muayeneleri pratisyen tabip veya uzman tabip tarafından yapılır. Yönetmelikte belirtilen hükümlere uygun, beden ve ruh sağlığı bakımından sürücülük yapmalarına engel durumlarının bulunmadığını sağlık raporu ile belgelendirilmiş olmaları gerekmektedir. bu raporlar Aile Hekimi tarafından verilebilir. Ancak, kişinin aile hekimi tarafından yapılan genel muayenesinde veya geçmişe dönük sağlık sicilinde sürücü belgesi almasına engel teşkil edebilecek bir durumdan şüphe edildiğinde, bir uzman hekim tarafından muayene edilmek üzere sevk edilebilir.<br />
+Renk körlüğü: olanlar herhangi bir şart olmaksızın sürücü olabilirler.<br />
+Gece körlüğü: olanlar gün doğumundan 1 saat öncesi ile gün batımından 1 saat sonrası zaman dilimleri içerisinde araç kullanabilirler.<br />
+Tabip tarafından, sürücü veya sürücü adayının yapılan genel muayenesinde;<br />
+- İşitme kaybı,<br />
+- Günlük hayatı kısıtlayan denge problemi, baş dönmesi nedeni olabilecek bir hastalık,<br />
+- Uyku bozukluğu (Obstrüktif uyku apnesi sendromu, gündüz aşırı uyuklama hali),<br />
+- Malign tümör hikâyesi,<br />
+- Eklem hareketlerinde kısıtlama,<br />
+- Ekstremite noksanlığı,<br />
+- Kas, tendon ve bağ lezyonları,<br />
+- Hipoglisemiye yol açabilecek ilaç kullanılan diabetes mellitus hastalığı,<br />
+- Kalp-damar hastalığı (anjinal yakınma, akut koroner sendrom tanısı, angioplasti, kalp yetmezliği, hipertansiyon, bilinç bozukluğuna yol açabilecek ritim bozukluğu, kalıcı pil implantasyonu),<br />
+- Organ yetmezliği (organ nakli geçirilmiş olması, kronik böbrek yetmezliği ve diğer hayati önemi haiz organlarda dekompanse yetmezlik),<br />
+- Santral sinir sistemi hastalıkları,<br />
+- Periferik sinir sistemi hastalıkları,<br />
+- Epilepsi,<br />
+- Kas hastalıkları (myopati, progresif muskuler distrofi, kas-sinir kavşak hastalıkları),<br />
+- Ruh hastalığı (ağır akıl hastalığı, zeka geriliği, demans, kişilik bozukluğu, ağır davranış bozukluğu),<br />
+- Alkol bağımlılığı,<br />
+- Psikotrop madde bağımlılığı,<br />
+- Görme derecelerinin 5 inci maddenin ikinci fıkrasına uygun,<br />
+- Görme alanının uygun,<br />
+- Renk körlüğü (Herhangi bir koşul aranmadan sürücü olabilirler.),<br />
+- Gece körlüğü (tavuk karası), gün içinde yapılan yolculuklar ile sınırlı (gün doğumundan bir saat sonra, gün batımından bir saat önce),<br />
+- Derinlik duyusunun normal,<br />
+- Pitozis-hemipitozis,<br />
+- Diplopi ve şaşılığı,<br />
+- Blefarospazm, katarakt, afaki, progresif göz hastalığı,<br />
+- Monoküler görme (snellen eşeli ile görme derecelerinin 5 inci maddenin ikinci fıkrasına uygun)<br />
+olup olmadığı yönünde değerlendirme yapılır.<br />
+Ç- Adli Sicil Kaydı Şartı;<br />
+26.09.2004 tarihli ve 5237 sayılı Türk Ceza Kanununun 188, 190 ve 191 inci maddeleri, 21.03.2007 tarihli ve 5607 sayılı Kaçakçılıkla Mücadele Kanununun 4 üncü maddesinin yedinci fıkrası, 10.07.1953 tarihli ve 6136 sayılı Ateşli Silahlar ve Bıçaklar ile Diğer Aletler Hakkında Kanunun 12 inci maddesinin ikinci ve takip eden fıkralarında belirtilen suçlardan hüküm giydiğine dair kayıt bulunmaması gerekmektedir.<br />
+d - Deneyim Şartı;<br />
+Çeşitli sürücü belgesi sınıflarına göre deneyim şartı farklılık göstermektedir. Bazı sürücü belgeleri için deneyim gerekliyken bazılarında gerekli görülmemiştir.<br />
+sürücü belgesi sınıflarına göre deneyim şartları şöyledir;<br />
+- A sınıfı sürücü belgesi için; minimum 2 yıllık A2 sınıfı sürücü belgesi sahibi olmak (eğer 24 yaş doldurulduysa deneyim gerekli değildir).<br />
+- C1, C, D1 ve D sınıfı sürücü belgesi için; minimum 2 yıllık B sınıfı sürücü belgesi sahibi olmak<br />
+- BE sınıfı sürücü belgesi için; B sınıfı sürücü belgesi sahibi olmak<br />
+- CE sınıfı sürücü belgesi için; C sınıfı sürücü belgesi sahip olmak<br />
+- C1E sınıfı sürücü belgesi için C1 sınıfı sürücü belgesi sahibi olmak<br />
+- DE sınıfı sürücü belgesi için; D sınıfı sürücü belgesine sahip olmak<br />
+- D1E sınıfı sürücü belgesi için; D1 sınıfı sürücü belgesi sahip olmak gereklidir.<br />
+e- Diğer Şartlar;<br />
+Sürücü adayları Millî Eğitim Bakanlığının denetiminde teorik ve uygulamalı sınava girerler. Sürücü kursuna katılan ve yapılan sınavlarda başarılı olan adaylara Sertifika verilir. Sertifikasını alan adaylar Nüfus ve Vatandaşlık işleri Genel Müdürlüğünün ilgili birimlerinden Aday Sürücü Belgelerini alırlar.<br />
+f- Sürücü belgelerinin uluslararası karşılıklı tanınmalarıyla ilgili hususlar;<br />
+- Türkiye’den Alınan Sürücü Belgelerinin Yurtdışında Geçerlilik Durumu:<br />
+01.01.2016 tarihinden itibaren düzenlenmeye başlayan yeni tip sürücü belgesiyle Karayolu Trafiği Konvansiyonuna üye olan 84 ülkede araç kullanılabilmektedir. Türk sürücü belgesiyle araç kullanım süresi bulunulan ülke mevzuatına göre farklılık göstermektedir.<br />
+Karayolu Trafiği Konvansiyonuna üye olmayan ülkelerde araç kullanılabilmesi için Türkiye Ülkeler Turing ve Otomobilciler Kurumu tarafından verilen "Uluslararası Sürücü Belgesi" alınması gerekmektedir.<br />
+-Yurtdışından Alınan Sürücü Belgelerinin Türkiye’de Geçerlilik Durumu:<br />
+01.01.2016 tarihinden itibaren yurtdışından alınan sürücü belgesiyle Ülkemizde Türk vatandaşları 1 yıl, yabancılar 6 ay süreyle araç kullanabilmektedirler. Bu sürenin sonunda Ülkemiz sürücü belgesinin alınması gerekmektedir.<br />
+3- Sürücü, Şoför ve Sürücü Belgesi;<br />
+SÜRÜCÜ : Karayolunda, motorlu veya motorsuz bir aracı sevk ve idare eden kişiye denir.<br />
+ŞOFÖR : Karayolunda, ticari olarak tescil edilmiş motorlu taşıtı süren kişiye denir.<br />
+SÜRÜCÜ BELGESİ : Motorlu araçları kullanmak için gerekli olan yetki belgesidir.<br />
+4- Sürücülerin Sorumlulukları ve Topluma Verdikleri Söz;<br />
+Sorumluluk; kişinin kendi davranışlarını veya kendi yetki alanına giren herhangi bir olayın sonuçlarını üstlenmesi anlamına gelmektedir. Unutmayınız ki güvenli, dikkatli, sorumlu davranmak üzgün ve pişman olmaktan iyidir. Sorumluluk duygusuna sahip bir sürücü, sadece araç kullanmayı değil, aynı zamanda kendine hâkim olmayı da öğrenmelidir. Sürücü, trafik içindeki davranışlarının sorumluluğunu hem kendine hem de diğer yol kullanıcılarına karşı üstlenebilmelidir. Davranışlarının sonuçlarını düşünerek, hareket etmelidir. Çünkü sürücü belgesi sahibi olmak demek, topluma bir 'söz' vermek demektir. Sürücü, bu belge ile "ben bir canlıyı öldürme ve çevreye zarar verme potansiyeli olan 'aracı' güvenli bir şekilde ve kimseye ve hiçbir şeye zarar vermeden kullanmak için gerekli bilgileri öğrendim ve bu bilgileri uygulamak için gerekli olan kişilik özelliklerine, yetişkinliğe ve sorumluluk duygusuna, psikolojik ve fiziksel uygunluklara sahibim" demektedir. Sürücü araç kullandığı sürece topluma verdiği bu sözü tutmakla yükümlüdür. Sürücülükle ilgili sınavları geçmesi ve belgeye hak kazanması, resmi olarak bu yükümlülüğü üstlendiği anlamına gelmektedir. "Insanı ayakta tutan iskelet ve kas sistemi değil, prensipleri, sorumlulukları ve inançlarıdır."<br />
+5- Sürücü Belgesi Sınıfları ve Araç Kullanma Yetkileri;<br />
+· M Sınıfı : Motorlu bisiklet kullanma yetkisine sahip sürücü belgesi olup, 16 yaşını doldurmuş olma şartı aranır. Sadece kendi sınıfına ait araçları kullanabilir.<br />
+· A1 Sınıfı : Motor silindir hacmi 125 cc 'ye kadar olan motosikletleri kullanma yetkisine sahip sürücü belgesi olup, 16 yaşını doldurmuş olma şartı aranır. M sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· A2 Sınıfı : Motor gücü 35 Kw ’a kadar olan motosikletleri kullanma yetkisine sahip sürücü belgesi olup, 18 yaşını doldurmuş olma şartı aranır. M ve A1 sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· A Sınıfı : Motor gücü 35 Kw ’dan daha fazla olan motosikletleri kullanma yetkisine sahip sürücü belgesi olup, 24 yaşını doldurmuş olma veya 2 yıllık A2 sürücü belgesi sahibi olmak şartı ile 20 yaşını doldurmuş olma şartı aranır. M, A1 ve A2 sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· B1 Sınıfı : 4 tekerlekli motosikletleri kullanma yetkisine sahip sürücü belgesi olup, 16 yaşını doldurmuş olma şartı aranır. M sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· B Sınıfı : Otomobil türü araçları kullanma yetkisine sahip sürücü belgesi olup, 18 yaşını doldurmuş olma şartı aranır. Bu belgeyle M, F ve B1 sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· BE Sınıfı : Otomobil türü araçları römork veya yarı römork ile birlikte kullanma yetkisi verir. 18 yaşını doldurmuş ve B sınıfı sürücü belgesi sahibi olma şartı aranır. B, B1, F ve M sınıfındaki araçları kullanma yetkisi de tanır.<br />
+· C1 Sınıfı : 7500 kg'a kadar kamyon ve çekici türü araçları kullanma yetkisine sahip sürücü belgesi olup, 18 yaşını doldurmuş olma şartı aranır. M, B, B1, F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· C1E Sınıfı : C1 sınıfında bulunan araçları römork veya yarı römork ile birlikte kullanma yetkisi verir. 18 yaşını doldurmuş ve C1 sınıfı sürücü belgesi sahibi olma şartı aranır. M, B, BE, B1, C1, F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· C Sınıfı : Kamyon ve çekici türü araçları yetkisine sahip sürücü belgesi olup, 21 yaşını doldurmuş olma şartı aranır. M, B,, B1, C1, ve F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· CE Sınıfı : Kamyon ve Çekici türü araçları römork veya yarı römork ile birlikte kullanma yetkisi verir. 21 yaşını doldurmuş ve C sınıfı sürücü belgesi sahibi olma şartı aranır. M, B, BE, B1, C, C1, C1E, F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· D1 Sınıfı : Minibüs türü araçları kullanma yetkisine sahip sürücü belgesi olup, 21 yaşını doldurmuş olma şartı aranır. M, B, B1 ve F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· D1E Sınıfı : Minibüs türü araçları römork veya yarı römork ile birlikte kullanma yetkisi verir. 21 yaşını doldurmuş ve D1 sınıfı sürücü belgesi sahibi olma şartı aranır. M, B, BE, B1, D1 ve F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· D Sınıfı : Otobüs türü araçları kullanma yetkisine sahip sürücü belgesi olup, 24 yaşını doldurmuş olma şartı aranır. M, B, BE, B1, D1, F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· DE Sınıfı : Otobüs türü araçları römork veya yarı römork ile birlikte kullanma yetkisi verir. 24 yaşını doldurmuş ve D sınıfı sürücü belgesi sahibi olma şartı aranır. M, B, BE, B1, D, D1, D1E ve F sınıfındaki araçları kullanma yetkisine de sahiptir.<br />
+· G Sınıfı : İş makinası türünden araçları kullanma yetkisine sahip bir sürücü belgesi olup, 18 yaşını doldurmuş olma şartı aranır. Sadece kendi sınıfına ait araçları kullanabilir.<br />
+· F Sınıfı : Traktör türünden araçları kullanma yetkisine sahip bir sürücü belgesi olup, 18 yaşını doldurmuş olma şartı aranır. Sadece kendi sınıfına ait araçları kullanabilir.<br />
+K Sınıfı: G sınıfı sürücü belgesi hariç, her hangi bir sınıf sürücü belgesi almak üzere sürücü kursuna müracaat ederek, teorik eğitimlerini tamamlamış ve teorik sınavdan başarılı olmuş kursiyerler için, direksiyon eğitimi dersinde ve direksiyon sınavında, sürücü kursu aracını, direksiyon usta öğreticisinin nezaretinde akan trafikte kullanabilmeleri için kurs müdürlüğünce düzenlenen 6 ay süreli geçici bir sürücü belgesidir.<br />
+6-Sürücü Belgelerinin Geçerlilik Süreleri ve Yenilenme Şartları;<br />
+Sürücü belgelerinin türlerine göre belli bir zamana kadar geçerlilik süresi verilir. Verilen sürenin sonunda sürücü belgesi sahibi kişi, son altı ay içerisinde çekilmiş olduğu bir biyometrik fotoğraf ve hala sürücü olabilme şartlarını taşıdığını gösteren bir sürücü olur raporu ile birlikte, sürücü belgesi kart ücretini yatırarak Nüfus Müdürlüklerinden sürücü belgesini yenilemek zorundadır.<br />
+Buna göre;<br />
+M-A1-A2-A-B1-B-BE-F ve G sınıfı sürücü belgeleri alındığı yıldan itibaren 10 yıl geçerli olup, sürenin sonunda yenilenmelidirler.<br />
+C1-C1E-C-CE-D1-D1E-D ve DE sınıfı sürücü belgeleri ise alındığı yıldan itibaren 5 yıl geçerlin olup, sürenin sonunda yenilenmelidirler.<br />
+7- Aday Sürücü Belgesi;<br />
+a- Aday sürücülerin uyması gereken kurallar ve sürücü belgesinin iptal sebepleri;<br />
+01.01.2016 tarihinden itibaren ilk kez sürücü belgesi alanlar sürücü belgelerini aldıkları tarihten itibaren iki yıl süreyle aday (stajyer) sürücü olurlar. Aday (stajyer) sürücüler bu iki yıllık süre içerisinde, sürücü belgesinin kullanmaya yetkili olduğu araç veya araçları, her hangi bir kısıtlama ve şart olmadan, genel trafik kurallarına uymak şartı ile kullanabilirler. Ancak, 2 yıllık aday (stajyer) sürücülük dönemi içerisinde Kanun’ca belirlenmiş olan yapmaması gereken sürücü hatalarını yapması halinde sürücü belgeleri süresiz olarak iptal edilir. Aday (stajyer) sürücülerin 2 yıllık süre içerisinde yapmaması gerekn sürücü davranışları şunlardır;<br />
+- 2 yıl süre içerisinde 75 ceza puanının doldurulması,<br />
+- Ceza puanına bakılmaksızın trafik ışıklarının 3 kez ihlal edilmesi,<br />
+- Hız sınırlarının 3 kez ihlal edilmesi,<br />
+- Koruyucu tertibat (emniyet kemeri kask) kullanımının 3 kez ihlal edilmesi,<br />
+- Okul ve yaya geçitlerinde yayaların ve öğrencilerin geçiş haklarının 3 kez ihlal edilmesi,<br />
+- Araç cinsine bakılmaksızın 0,20 promil üzerinde alkollü olarak araç kullandığı tespit edilmesi,<br />
+- Ölümle sonuçlanan trafik kazasında asli kusurlu olunması,<br />
+b- Aday sürücü belgesi iptal edilenlerin yeniden sürücü belgesi alabilmeleri için müracaat şartları;<br />
+2 yıllık aday (stajyer) sürücülük döneminde sürücü belgesine süresiz olarak el konulan kişiler tekrar sürücü belgesi almak istediklerinde, sürücü kurslarına kayıt işlemi esnasında sürücü adaylarından istenilen evraklara ilave olarak bir de, sürücülüğe engel hali bulunmadığını gösterir Psikoteknik Değerlendirme Testi Raporu ve Psikiyatri Uzmanı Raporu ile birlikte yeniden her hangi bir sürücü kursuna kayıt olabilirler. Ancak, bu kişilerin sürücü belgelerinin geri alınması nedenlerine bağlı olarak konulmuş bir süre var ise, tekrar sürücü kursuna kayıt olabilmek için o sürenin geçmesini beklemesi gerekir. Örneğin 2 yıllık aday (stajyer) sürücülük dönemi içerisinde 0,20 promil ile 0,49 promil arasında alkollü olarak araç kullandığı tespit edildiği için sürücü belgesine süresiz olarak el konulan kişiler her hangi bir süre şartı olmadan sürücü kurslarına kayıt olabiliyor iken, 0,50 ve daha fazla promil ile alkollü olarak araç kullandığı tespit edildiği için sürücü belgesine süresiz olarak el konulan kişiler ise 6 ay süre geçmeden tekrar sürücü kursuna kayıt olamazlar.<br />
+8- Sürücü Sertifikasını Sürücü Belgesine Dönüştürme;<br />
+Direksiyon Eğitimi Dersi Uygulama Sınavında başarılı olan sürücü adaylarının almaya hak kazanmış olduğu sürücü sertifikaları, sınav tarihinden sonraki ilk mesai gününde ilçe milli eğitim müdürlüklerince elektronik ortamda onaylanarak, hazır hale getirilir. Sürücü adayları almaya hak kazanmış oldukları sürücü sertifikalarına e-devlet üzerinden ulaşabilirler. Sürücü sertifikası ile hiçbir şekilde araç kullanılamaz. Araç kullanabilmek için mutlaka sürücü sertifikasının, sürücü belgesine dönüştürülmesi gerekir. Bunun için önce İçişleri Bakanlığı Nüfus ve Vatandaşlık İşleri Genel Müdürlüğünün www.nvi.gov.tr internet adresinde bulunan “Randevu İşlemleri” linki üzerinden veya Alo 199 müşteri hizmetleri numarasını arayarak, herhangi bir ilçe nüfus müdürlüğünden “Sürücü Belgesi Randevusu” oluşturması gerekmektedir. Belirlen randevu gün ve saatinden önce sürücü belgesine dönüştürülecek olan sürücü sertifikasının türüne göre sertifika harç bedeli, sürücü belgesi kart bedeli ve Türk Polis Teşkilatını Güçlendirme Vakfı ücretini internet bankacılığı veya banka şubelerinden ödeyerek, ödeme dekontları ve son 6 ay içerisinde çekilmiş olan 1 adet biyometrik fotoğraf ile birlikte randevu gün ve saatinde nüfus müdürlüğünde hazır bulunurlar. Nüfus müdürlüğünde yapılan parmak izi ve diğer iş ve işlemlerin ardından kişiye hemen orada sürücü belgesi yerine geçen Geçici Belge düzenlenerek teslim edilir. Kişi bu asıl sürücü belgesi eline ulaşıncaya kadar Geçici Belge ile araç kullanabilir. Nüfus ve Vatandaşlık İşleri Genel Müdürlüğüne ait Ankara da bulunan basım merkezinde hazırlanan asıl sürücü belgesi kısa bir süre sonra kişinin ikametgah adresine kargo ile gönderilir.<br />
+9- Organ Bağışı;<br />
+Organ ve doku bağışı, bir kişinin hayatta iken kendi özgür iradesiyle, organ ve dokularının bir kısmını veya tamamını tıbben yaşamı sona erdikten sonra başka hastaların tedavisinde kullanılmasına izin vermesi ve bunu belgelendirmesidir. 18 yaşını aşmış, akli dengesi yerinde olan herkes organ-doku bağışında bulunabilir. Gönüllülük esasına dayalı olan organ bağışında bağışçı olmak için sağlık müdürlüklerine, devlet ve özel hastanelerin organ bağışı koordinatörlerine ya da sağlık ocaklarına başvurulabilir. Organ yetmezliği, böbrek, karaciğer, kalp, akciğer, pankreas veya kemik iliği gibi organların işlevlerini yerine getirememesi durumudur. Bu durum, hastanın yaşam kalitesini ve süresini önemli ölçüde düşürebilir. Organ nakli, organ yetmezliği olan hastalar için tek tedavi seçeneğidir.</p>
+<hr />
+<p><em>Extracted from E-TUSEKON portal on 2026-04-13 via Playwright + authenticated curl. See <a href="../../playwright-analysis.md">../../playwright-analysis.md</a> for methodology.</em></p>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

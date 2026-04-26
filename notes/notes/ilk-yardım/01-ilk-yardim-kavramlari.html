@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İlk Yardım ile İlgili Kavramlar — First Aid Concepts | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 01-ilk-yardim-kavramlari</span>
+</div>
+<div class="content">
+<h1>İlk Yardım ile İlgili Kavramlar — First Aid Concepts</h1>
+<p><strong>Last updated:</strong> 2026-04-25<br />
+<strong>Slides covered:</strong> SLIDE 2 (definitions), SLIDE 3 (amaç + KBK + 112), SLIDE 4 (ilk yardımcının görevleri), SLIDE 6 (Hayat Kurtarma Zinciri), SLIDE 7 (olay yerinin değerlendirilmesi + yaralının araçtan çıkarılması), SLIDE 8 (öncelik sırası + ABC + ilkeler 6 aşama), SLIDE 9 (İlk Yardım Çantası)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>İlk yardım</strong> bir kaza ya da hayatı tehlikeye sokan bir durumda, tıbbi görevlilerin yardımı sağlanıncaya kadar, <strong>olay yerinde</strong> mevcut araç-gereçle yapılan, hayat kurtarıcı veya durumun kötüleşmesini önleyici müdahaledir.<br />
+<em>(First aid is the on-scene intervention performed with available materials by laypeople — until medical personnel arrive — to save a life or stop the situation from worsening.)</em></p>
+</blockquote>
+<p>İlk yardım is what an ordinary trained person does <strong>at the scene</strong> with whatever is on hand. It ends the moment professional medical help takes over.</p>
+<hr />
+<h2>2. SLIDE 2 — İlk Yardım vs Acil Tedavi (the core definition slide)</h2>
+<h3>What the slide showed</h3>
+<p>Two red-headed paragraphs side by side defining the two terms, plus a question prompting the difference:</p>
+<ul>
+<li><strong>İlk Yardım:</strong> "Herhangi bir kaza ya da hayatı tehlikeye sokan bir durumda, <strong>tıbbi görevlilerin yardımı sağlanıncaya kadar</strong>, hayat kurtarıcı ya da durumun daha kötüye gitmesini önlemek amacıyla <strong>olay yerinde mevcut araç-gereçlerle</strong> yapılan müdahaleye <strong>ilk yardım denir</strong>."</li>
+<li><strong>Acil Tedavi:</strong> "Acil tedavi ünitelerinde hasta ya da yaralılara, <strong>doktor ve sağlık personeli</strong> tarafından yapılan <strong>tıbbi müdahalelerdir</strong>."</li>
+<li><strong>İlk yardım ile acil tedavi arasındaki fark nedir?</strong></li>
+</ul>
+<h3>Clean English explanation</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>İlk Yardım (First Aid)</th>
+<th>Acil Tedavi (Emergency Treatment)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Who performs it?</strong></td>
+<td>Anyone trained — an <strong>ilk yardımcı</strong> (lay first-aider)</td>
+<td><strong>Doktor ve sağlık personeli</strong> (doctors and medical staff)</td>
+</tr>
+<tr>
+<td><strong>Where?</strong></td>
+<td><strong>Olay yerinde</strong> (at the scene of the incident)</td>
+<td><strong>Acil tedavi ünitelerinde</strong> (in emergency treatment units / hospital ER)</td>
+</tr>
+<tr>
+<td><strong>With what?</strong></td>
+<td><strong>Mevcut araç-gereçlerle</strong> — whatever is available on site</td>
+<td><strong>Tıbbi ekipmanla</strong> — proper medical equipment</td>
+</tr>
+<tr>
+<td><strong>Goal</strong></td>
+<td>Keep the person alive until pros arrive; prevent worsening</td>
+<td>Definitive medical treatment</td>
+</tr>
+<tr>
+<td><strong>Time window</strong></td>
+<td>Until medical help arrives</td>
+<td>Begins when medical help takes over</td>
+</tr>
+</tbody>
+</table>
+<p>The two are <strong>sequential, not interchangeable.</strong> First aid is the bridge between the accident and the hospital.</p>
+<h3>Critical exam fact</h3>
+<p><strong>İlk yardım = olay yerinde, mevcut araç-gereçle, tıbbi yardım gelene kadar.</strong><br />
+<strong>Acil tedavi = hastanede, tıbbi ekipmanla, doktor/sağlık personeli tarafından.</strong></p>
+<p>If a question describes a doctor doing something in a hospital, it is <strong>acil tedavi</strong>, not ilk yardım — even if it sounds like emergency care.</p>
+<hr />
+<h2>3. SLIDE 3 — İlk Yardımın Amacı + Temel Uygulamaları (KBK)</h2>
+<h3>What the slide showed</h3>
+<p><strong>İlk Yardımın Amacı:</strong><br />
+- Hayati tehlikeyi ortadan kaldırmak<br />
+- Yaşamsal fonksiyonların sürdürülmesini sağlamak<br />
+- Hasta veya yaralının durumunun kötüleşmesini önlemek<br />
+- İyileşmeyi kolaylaştırmak</p>
+<p><strong>İlk yardımın temel uygulamaları nelerdir?</strong><br />
+<strong>(KBK)</strong> olarak ifade edilir: <strong>Koruma, Bildirme, Kurtarma</strong>.</p>
+<ul>
+<li><strong>Koruma:</strong> Kaza sonuçlarının ağırlaşmasını önlemek için olay yerinin değerlendirilmesini kapsar. En önemli işlem, <strong>olay yerinde oluşabilecek tehlikeleri belirleyerek güvenli bir çevre oluşturmaktır.</strong></li>
+<li><strong>Bildirme:</strong> Türkiye'de <strong>112 acil telefon numarası</strong> üzerinden bildirim gerçekleştirilir. Acil yardım haberleşmesinde iletilecek <strong>mesaj kısa, öz ve anlaşılır</strong> olmalıdır. Olay yeri adresi, kazazedelerin sayısı, kazazedelerin durumu belirtilir.</li>
+<li><strong>Kurtarma (Müdahalede bulunma):</strong> Olay ya da kaza yerinde, hasta ya da yaralılara yapılan müdahaleleri kapsar.</li>
+</ul>
+<h3>Clean English explanation</h3>
+<p><strong>The 4 goals of first aid (amaç):</strong><br />
+1. <strong>Eliminate the life-threat</strong> — stop the immediate danger to life.<br />
+2. <strong>Maintain vital functions</strong> — keep breathing, circulation, and consciousness going.<br />
+3. <strong>Prevent the patient's condition from worsening</strong> — don't let things get worse before help arrives.<br />
+4. <strong>Facilitate recovery</strong> — make later medical recovery easier.</p>
+<p><strong>The 3 fundamental practices = KBK (Koruma–Bildirme–Kurtarma) — in this exact order:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What you actually do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Koruma</strong></td>
+<td><strong>Protect</strong></td>
+<td>Survey the scene, neutralize hazards (traffic, fire, fuel), make a safe environment <strong>before</strong> approaching anyone.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Bildirme</strong></td>
+<td><strong>Notify</strong></td>
+<td>Call <strong>112</strong> with a <strong>short, clear, complete</strong> message: address, number of victims, condition of victims.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Kurtarma</strong></td>
+<td><strong>Rescue / intervene</strong></td>
+<td>Then perform first aid on the patient(s).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The 112 message must contain (memorize):</strong><br />
+- <strong>Olay yeri adresi</strong> — exact address of the incident<br />
+- <strong>Kazazede sayısı</strong> — number of victims<br />
+- <strong>Kazazedelerin durumu</strong> — their condition (bleeding, unconscious, breathing, etc.)<br />
+- Don't hang up first — let the dispatcher end the call.</p>
+<h3>Critical exam fact</h3>
+<p><strong>KBK = Koruma → Bildirme → Kurtarma</strong> — protection comes BEFORE calling, calling comes BEFORE intervention. <strong>Do NOT</strong> rush to the victim before securing the scene; do <strong>not</strong> start CPR before someone has called 112.</p>
+<hr />
+<h2>4. SLIDE 4 — İlk Yardımcının Müdahale ile İlgili Yapması Gerekenler</h2>
+<h3>What the slide showed</h3>
+<p><strong>İlkyardımcının müdahale ile ilgili yapması gerekenler nelerdir?</strong></p>
+<ul>
+<li>Yaralıların durumunu değerlendirmek ve öncelikli müdahale edilecekleri belirlemek</li>
+<li>Yaralıların korku ve endişelerini gidermek</li>
+<li>Yaralılara müdahalede yardımcı olacak kişileri organize etmek</li>
+<li>Yaralının durumunun ağırlaşmasını önlemek için kendi kişisel olanakları ile gerekli müdahalelerde bulunmak</li>
+<li>Yaralıyı sıcak tutmak</li>
+<li>Yaralının yarasını görmesine izin vermemek</li>
+<li><strong>Yaralının bilinci kapalı ise ağızdan hiçbir şey verilmemelidir.</strong></li>
+<li>Yaralıları hareket ettirmeden müdahale yapmak</li>
+<li>Yaralıların en uygun yöntemlerle en yakın sağlık kuruluşuna sevk edilmesini sağlamak</li>
+<li><strong>Ağır yaralıları, hayati tehlike olmadığı sürece asla yerinden kıpırdatmamak.</strong></li>
+</ul>
+<h3>Clean English explanation</h3>
+<p>The <strong>first aider's checklist on scene</strong> (a list the exam loves to draw single questions from):</p>
+<ol>
+<li><strong>Triage</strong> — assess every victim and decide who to treat first (most life-threatening first).</li>
+<li><strong>Calm the victims</strong> — reduce their fear and anxiety. Panic worsens shock.</li>
+<li><strong>Organize bystanders</strong> — direct other people to help (call 112, manage traffic, fetch supplies).</li>
+<li><strong>Intervene with what you have</strong> — don't wait for ideal equipment; use what's available to stop the condition from worsening.</li>
+<li><strong>Keep the victim warm</strong> — prevents shock. Cover with a blanket/coat.</li>
+<li><strong>Don't let the victim see their own wound</strong> — psychological shock can worsen physical shock.</li>
+<li><strong>Bilinci kapalı (unconscious) → NOTHING by mouth.</strong> No water, no food, no medicine. Risk of choking / aspiration.</li>
+<li><strong>Don't move the victim during intervention</strong> — especially if a spinal injury is possible.</li>
+<li><strong>Send to the nearest health facility by the most appropriate method</strong> — usually 112 ambulance, not a private car.</li>
+<li><strong>Severely injured → never moved unless there is a continuing life-threat</strong> (fire, flooding, traffic about to hit them). Otherwise leave them where they are until 112 arrives.</li>
+</ol>
+<h3>Critical exam fact</h3>
+<p>Two rules from this list are tested constantly:<br />
+- <strong>"Bilinci kapalı yaralıya ağızdan hiçbir şey verilmez."</strong> <em>(Nothing by mouth to an unconscious patient.)</em><br />
+- <strong>"Ağır yaralı, hayati tehlike olmadıkça yerinden kıpırdatılmaz."</strong> <em>(A severely injured person is not moved unless there is a continuing life-threat.)</em></p>
+<p>If an exam option says "give the unconscious patient water" or "immediately move the severely injured patient to a comfortable spot" — both are wrong.</p>
+<hr />
+<h2>5. SLIDE 6 — Hayat Kurtarma Zinciri (Chain of Survival)</h2>
+<h3>What the slide showed</h3>
+<p><strong>HAYAT KURTARMA ZİNCİRİ</strong> — 4 halka (4 links):</p>
+<table>
+<thead>
+<tr>
+<th>Halka</th>
+<th>Görev</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Halka</strong></td>
+<td>Sağlık kuruluşuna haber verilmesi</td>
+</tr>
+<tr>
+<td><strong>2. Halka</strong></td>
+<td>Olay yerinde temel yaşam desteği yapılması</td>
+</tr>
+<tr>
+<td><strong>3. Halka</strong></td>
+<td>Ambulans ekiplerince müdahaleler yapılması</td>
+</tr>
+<tr>
+<td><strong>4. Halka</strong></td>
+<td>Hastane acil servislerinde müdahale yapılması</td>
+</tr>
+</tbody>
+</table>
+<h3>Clean English explanation</h3>
+<p>The <strong>Chain of Survival</strong> is the sequence of links that, if all are completed in order and on time, give a victim the best chance of surviving. <strong>Each halka (link) depends on the previous one</strong> — break one and survival drops sharply.</p>
+<table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Who does it</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1 — Notify</strong></td>
+<td>Bystander / first-aider</td>
+<td>Call <strong>112</strong> the moment you recognize the emergency. Without this call, professionals never arrive.</td>
+</tr>
+<tr>
+<td><strong>2 — Basic life support on scene</strong></td>
+<td>First-aider (lay rescuer)</td>
+<td>Open airway, rescue breathing, chest compressions (<strong>Temel Yaşam Desteği</strong> — covered later). Bridges the gap until ambulance arrives.</td>
+</tr>
+<tr>
+<td><strong>3 — Ambulance intervention</strong></td>
+<td>112 paramedic team</td>
+<td>Advanced interventions on scene and during transport (oxygen, IV, defibrillation).</td>
+</tr>
+<tr>
+<td><strong>4 — Hospital emergency room</strong></td>
+<td>Doctors / hospital staff</td>
+<td>Definitive emergency treatment in the ER.</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<ul>
+<li>The <strong>first link (1. Halka) is calling 112</strong> — not chest compressions.</li>
+<li>The <strong>second link is what the lay first-aider does at the scene</strong> (Temel Yaşam Desteği = basic life support).</li>
+<li>Links <strong>3 and 4 are professional / hospital</strong> — outside the first-aider's role.</li>
+<li>A common trap: an option saying "Hayat Kurtarma Zinciri'nin ilk halkası temel yaşam desteğidir" → <strong>WRONG</strong>. The first link is <strong>haber verme (notification)</strong>.</li>
+</ul>
+<hr />
+<h2>6. SLIDE 7 — Olay Yerinin Değerlendirilmesi + Yaralının Araçtan Çıkarılması</h2>
+<h3>What the slide showed</h3>
+<p><strong>Olay yerinin değerlendirilmesinde yapılacaklar nelerdir?</strong><br />
+- Olay yeri <strong>yeterince görünebilir biçimde işaretlenmelidir</strong>. Kaza noktasının önüne ve arkasına gelebilecek araç sürücülerini yavaşlatmak ve olası bir kaza tehlikesini önlemek için uyarı işaretleri yerleştirilmelidir. Bunun için <strong>üçgen reflektörler</strong> kullanılmalıdır.<br />
+- Kazaya uğrayan aracın <strong>kontak anahtarı kapatılmalıdır</strong>.<br />
+- Olay yerinde yaralılara yapılacak yardımı güçleştirebilecek veya engelleyebilecek <strong>meraklı kişiler olay yerinden uzaklaştırılmalıdır</strong>.<br />
+- Olası <strong>infilak ve yangın riskini</strong> önlemek için olay yerinde <strong>sigara içilmemelidir</strong>.<br />
+- <strong>Gaz varlığı</strong> söz konusu ise oluşabilecek zehirlenmelerin önlenmesi için gerekli önlemler alınmalıdır.<br />
+- <strong>Gaz tüpünün vanası kapatılmalıdır.</strong><br />
+- <strong>Kıvılcım oluşturacak ışıklandırma veya çağrı araçlarının kullanılmasına izin verilmemelidir.</strong></p>
+<p><strong>Yaralının araçtan çıkarılması:</strong><br />
+- Yaralının araçtan çıkarılması son derece önemlidir. <strong>Yapılacak bir yanlışlık onun ölümüne, durumunun daha kötüye gitmesine veya sakat kalmasına neden olabilir.</strong><br />
+- Eğer yaralı araçta <strong>sıkışmamış</strong> ise mümkünse <strong>3 kişiyle, omurga ekseninin (baş–boyun–gövde) bozulmamasına dikkat ederek</strong> çıkarılmalıdır.<br />
+- Ancak bir kişiden başka kimse yoksa <strong>ve araç yanıyorsa</strong> acele olarak, <strong>tek kişi ile</strong> çıkarılır.<br />
+- Yaralı araçtan çıkarılıp ne tür bir ilk yardıma gereksinimi olduğuna karar verilir verilmez <strong>hemen uygun bir pozisyon verilmelidir</strong>. Aksi halde ilk yardımın etkinliği kalmaz.</p>
+<h3>Clean English explanation</h3>
+<h4>Securing the scene (Koruma in practice)</h4>
+<p>Before touching any victim, the first-aider does these things to prevent <strong>a second accident</strong>:</p>
+<ol>
+<li><strong>Mark the scene visibly</strong> — place a <strong>warning triangle (üçgen reflektör)</strong> in front of and behind the crash so oncoming drivers slow down. (B-class drivers must carry these by law.)</li>
+<li><strong>Turn off the ignition</strong> of the crashed vehicle (kontak anahtarı kapatılır) — stops fuel pumping, reduces fire risk.</li>
+<li><strong>Move spectators away</strong> — meraklı kişiler interfere with first aid.</li>
+<li><strong>No smoking</strong> — fuel leaks ignite from a single cigarette.</li>
+<li><strong>Gas-leak protocol</strong> — close gas-tank valve (gaz tüpünün vanası kapatılır), prevent poisoning.</li>
+<li><strong>No spark-creating tools</strong> — no flashlights or radios that can spark, no flame-based lighting.</li>
+</ol>
+<h4>Removing a victim from a vehicle — the <strong>Rentek maneuver</strong> (covered next class)</h4>
+<p><strong>Default rule:</strong> Do NOT remove the victim from the vehicle. Wait for 112.</p>
+<p><strong>Two exceptions where the victim MUST be removed quickly:</strong><br />
+1. <strong>The vehicle is on fire</strong> (yanıyor)<br />
+2. There's a <strong>continuing life-threat</strong> at the scene (gas leak, water rising, vehicle about to fall, etc.)</p>
+<p><strong>How to remove safely (when removal is necessary):</strong><br />
+- <strong>Ideal: 3 people.</strong> One supports the head/neck, the others support the body. Move as one unit, keeping the <strong>spine axis (baş–boyun–gövde)</strong> straight and aligned. This prevents converting a vertebral fracture into spinal-cord paralysis.<br />
+- <strong>Emergency one-person extraction:</strong> only if alone AND the vehicle is on fire. The recognised technique is <strong>Rentek maneuver</strong> (will be detailed in a later slide).<br />
+- <strong>After extraction:</strong> immediately give the victim the <strong>appropriate position</strong> (recovery position, etc.). Otherwise the first aid loses effect.</p>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Üçgen reflektör</strong> is the legally required scene-marking tool — front and back of the wreck.</li>
+<li><strong>Default = do not move the victim.</strong> Removal is only justified by <strong>fire</strong> or another <strong>continuing life-threat</strong>.</li>
+<li>When removal is unavoidable solo, the <strong>Rentek maneuver</strong> is used — when 3 people are available, the <strong>baş–boyun–gövde (head–neck–trunk) spinal axis</strong> must be preserved.</li>
+<li>"Ilk yardımcı kazazedeyi araçtan hemen çıkarmalıdır" → <strong>WRONG by default.</strong> The exam tests whether you know "remove only if there's a continuing life-threat."</li>
+</ul>
+<hr />
+<h2>7. SLIDE 8 — Öncelik Sırası + ABC + İlkeler/Aşamalar</h2>
+<h3>What the slide showed</h3>
+<p><strong>İlk Yardımda Öncelik Sırası</strong> (treat in this order):<br />
+1. Solunumu duranlar<br />
+2. Kalbi duranlar, kanaması olanlar<br />
+3. Şoka girenler</p>
+<p><strong>İlk Yardımın Hedefleri — En önemli 3 hedef, ilkyardımın A–B–C si:</strong><br />
+- <strong>A)</strong> Solunum yolunu açık tutmak<br />
+- <strong>B)</strong> Yeterli solunumu sağlamak<br />
+- <strong>C)</strong> Kan dolaşımının sağlanması</p>
+<p><strong>İlk Yardımın İlkeleri – Aşamaları (6 adım):</strong><br />
+1. Kaza yerinde gerekli emniyet tedbirlerini almak, yaralıyı tehlikeli yerden güvenli bir yere taşımak.<br />
+2. Yaralıyı değerlendirmek (<strong>tanı</strong>), hangi konuda ilk yardım yapılacağına karar vermek.<br />
+3. İlk yardım yapmak.<br />
+4. Haberleşmeyi sağlamak.<br />
+5. Hangi yaralının önce taşınacağına karar vermek; <strong>gruplamak</strong>.<br />
+6. Kazazedeleri uygun pozisyonda taşıyarak sevk etmek.</p>
+<h3>Clean English explanation</h3>
+<h4>A) Triage priority — kime önce müdahale edilir?</h4>
+<p>When there are multiple casualties, you must decide <strong>who gets first aid first</strong>. The order is:</p>
+<table>
+<thead>
+<tr>
+<th>Sıra</th>
+<th>Durum</th>
+<th>Why first</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Solunumu duranlar</strong> (not breathing)</td>
+<td>Brain dies in 4–6 minutes without oxygen — this is the absolute top priority.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Kalbi duranlar, kanaması olanlar</strong> (no heartbeat, severe bleeding)</td>
+<td>Without circulation, oxygen doesn't reach the brain; major bleeding causes death within minutes.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Şoka girenler</strong> (in shock)</td>
+<td>Shock is reversible if treated; will progress to cardiac arrest if ignored.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mental model:</strong> "Önce nefes, sonra kalp/kan, sonra şok." A patient screaming is breathing — so they wait. The silent, motionless one is the priority.</p>
+<h4>B) The A-B-C of first aid (universal life-support order)</h4>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Turkish</th>
+<th>English</th>
+<th>What you check / do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A</strong></td>
+<td><strong>Airway / solunum yolunu açık tutmak</strong></td>
+<td>Airway open</td>
+<td>Tilt head back, clean mouth, <strong>head-tilt chin-lift maneuver</strong> to clear the airway.</td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td><strong>Breathing / yeterli solunumu sağlamak</strong></td>
+<td>Adequate breathing</td>
+<td>Look-listen-feel; if not breathing, give rescue breaths.</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td><strong>Circulation / kan dolaşımının sağlanması</strong></td>
+<td>Circulation</td>
+<td>Check pulse / signs of life; if absent, start chest compressions. Stop visible bleeding.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Memorize the order: A → B → C.</strong> No point breathing into someone whose airway is blocked. No point compressing a chest of someone who needs an open airway.</p>
+<h4>C) The 6 stages of first aid (the "what you do, in order" list)</h4>
+<ol>
+<li><strong>Secure the scene</strong> + move the victim from danger to a safe area (= Koruma).</li>
+<li><strong>Assess the victim (tanı)</strong> — figure out what's wrong before treating.</li>
+<li><strong>Perform first aid</strong> itself — actual interventions.</li>
+<li><strong>Communicate</strong> — call 112, keep contact, relay info.</li>
+<li><strong>Decide transport priority — gruplamak</strong> — when there are multiple victims, group them by severity and decide order of transport.</li>
+<li><strong>Transport the victim in the correct position</strong> to definitive care.</li>
+</ol>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Triage rule:</strong> in a multi-casualty scene, <strong>solunumu duranlar her zaman birinci sıradadır</strong>. (The screamers can wait — they are breathing.)</li>
+<li><strong>A-B-C</strong> stands for: <strong>A</strong>irway (Hava yolu) → <strong>B</strong>reathing (Solunum) → <strong>C</strong>irculation (Kan dolaşımı). Order matters; never C first.</li>
+<li><strong>Tanı (assessment) comes BEFORE müdahale (intervention).</strong> Step 2 of the 6 ilkeler is "değerlendirmek (tanı)" — exam loves this trap: option says "ilk yardımcı önce müdahale eder" → wrong. First <strong>assess</strong>, then <strong>act</strong>.</li>
+<li><strong>Gruplamak</strong> = sorting victims by severity for transport. This is step 5, not step 1.</li>
+</ul>
+<hr />
+<h2>8. SLIDE 9 — İlk Yardım Çantası (First Aid Kit)</h2>
+<h3>What the slide showed</h3>
+<p><strong>Karayolları Trafik Kanunu'na göre tüm motorlu taşıtlarda (motosiklet, motorlu bisiklet, iş makinesi hariç) ilk yardım çantası bulundurmak zorunludur.</strong> Araçlarda ilk yardım çantasının yeri <strong>sürücünün ulaşabileceği en yakın yer</strong> olmalıdır. <strong>İlk yardım çantasının malzeme miktarı taşınan yolcu sayısına göre belirlenir.</strong></p>
+<p><strong>İlk yardım çantasında bulunması gereken malzemeler:</strong><br />
+- <strong>2 adet büyük sargı bezi</strong> (10 cm × 3–5 m) — yaraları sarmak için<br />
+- <strong>1 kutu hidrofil gaz steril</strong> (10 × 10 cm 50'lik bir kutu) — yaraları kapatmak için<br />
+- <strong>3 adet üçgen sargı bezi</strong> — kırık, çıkık ve burkulmada kolu askıya almak için, ayrıca el, ayak, baş sargısı olarak kullanılır<br />
+- <strong>1 adet antiseptik solüsyon</strong> — yaraları temizlemek için<br />
+- <strong>1 adet flaster</strong> (2 cm × 5 m) — sargıyı sabitlemek için<br />
+- <strong>10 adet çengelli iğne</strong> — sargıların bitim yerinde / turnikeyi yakaya tutturmak için<br />
+- <strong>1 adet küçük makas</strong> — çamaşırları kesmek için<br />
+- <strong>1 adet esmark bandajı</strong> — çıkık, burkulma ve kanamada<br />
+- <strong>1 adet turnike</strong> — kanamayı durdurmak için<br />
+- <strong>10 adet yara bandı</strong> — küçük yaralanmalarda<br />
+- <strong>1 adet alüminyum yanık örtüsü</strong><br />
+- <strong>2 çift tıbbi eldiven</strong><br />
+- <strong>1 adet el feneri</strong></p>
+<p><strong>Çıkarılan malzemeler (artık çantada bulunmaz):</strong><br />
+- <strong>Tentürdiyot (tentürdiot)</strong> — açık yaranın üzerine sürüldüğünde mikroplarla birlikte <strong>canlı hücreleri de öldürdüğü</strong> ve yaranın geç iyileşmesine neden olduğu için listeden çıkarılmıştır.<br />
+- <strong>Oksijenli su</strong> — yanlışlıkla iç organların görüldüğü yaralara dökülünce o organlara zarar verdiği için listeden çıkarılmıştır.</p>
+<h3>Clean English explanation</h3>
+<h4>Legal rule</h4>
+<ul>
+<li><strong>Every motor vehicle must carry a first aid kit</strong> by Karayolları Trafik Kanunu — <strong>except</strong> motorcycles (motosiklet), motorized bicycles (motorlu bisiklet), and construction machinery (iş makinesi).</li>
+<li><strong>Location:</strong> the <strong>closest spot the driver can reach</strong> — usually inside the cabin, NOT in the trunk.</li>
+<li><strong>Quantity scaling:</strong> kit contents scale with <strong>the number of passengers carried</strong> (yolcu sayısı), not the vehicle's age or engine size.</li>
+</ul>
+<h4>Kit contents — what each item is for</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Quantity</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sargı bezi (large bandage roll)</td>
+<td>2</td>
+<td>wrap wounds</td>
+</tr>
+<tr>
+<td>Hidrofil gaz steril (sterile gauze)</td>
+<td>1 box (50 × 10×10 cm)</td>
+<td>cover wounds</td>
+</tr>
+<tr>
+<td>Üçgen sargı bezi (triangular bandage)</td>
+<td>3</td>
+<td>sling for arm in fracture/dislocation/sprain; also wraps for hand/foot/head</td>
+</tr>
+<tr>
+<td>Antiseptik solüsyon (antiseptic solution)</td>
+<td>1</td>
+<td>clean wounds</td>
+</tr>
+<tr>
+<td>Flaster (medical tape)</td>
+<td>1 (2 cm × 5 m)</td>
+<td>secure dressings</td>
+</tr>
+<tr>
+<td>Çengelli iğne (safety pin)</td>
+<td>10</td>
+<td>secure end of bandages, attach turnike to collar</td>
+</tr>
+<tr>
+<td>Küçük makas (small scissors)</td>
+<td>1</td>
+<td>cut clothing</td>
+</tr>
+<tr>
+<td>Esmark bandajı (Esmarch bandage)</td>
+<td>1</td>
+<td>dislocation, sprain, bleeding</td>
+</tr>
+<tr>
+<td>Turnike (tourniquet)</td>
+<td>1</td>
+<td>stop severe bleeding</td>
+</tr>
+<tr>
+<td>Yara bandı (adhesive bandages / band-aids)</td>
+<td>10</td>
+<td>minor cuts</td>
+</tr>
+<tr>
+<td>Alüminyum yanık örtüsü (foil burn sheet)</td>
+<td>1</td>
+<td>cover burns</td>
+</tr>
+<tr>
+<td>Tıbbi eldiven (medical gloves)</td>
+<td>2 pairs</td>
+<td>hygiene &amp; safety</td>
+</tr>
+<tr>
+<td>El feneri (flashlight)</td>
+<td>1</td>
+<td>examine in low light</td>
+</tr>
+</tbody>
+</table>
+<h4>Items that are NO LONGER in the kit (and why) — exam favorite</h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Why removed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tentürdiyot</strong> (iodine tincture)</td>
+<td>Kills not only microbes but also <strong>living cells</strong> of the wound — slows healing.</td>
+</tr>
+<tr>
+<td><strong>Oksijenli su</strong> (hydrogen peroxide)</td>
+<td>If accidentally poured onto a deep wound where internal organs are exposed, it <strong>damages those organs</strong>.</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<ul>
+<li><strong>Çantanın yeri = sürücünün ulaşabileceği en yakın yer.</strong> (NOT the trunk, NOT the glove compartment if hard to reach.)</li>
+<li><strong>Malzeme miktarı = yolcu sayısına göre.</strong> (NOT vehicle weight, NOT engine size, NOT vehicle age.)</li>
+<li><strong>Tentürdiyot ve oksijenli su artık çantada YOKTUR.</strong> This is one of the most-tested items: if an option lists tentürdiyot or oksijenli su as something that "should be" in the kit → wrong.</li>
+<li><strong>Motosiklet, motorlu bisiklet, iş makinesi → muaf</strong> (exempt from carrying a first aid kit).</li>
+<li>The <strong>turnike</strong> in the kit is for <strong>arteriyel kanamayı durdurmak</strong> — not for sprains or fractures.</li>
+</ul>
+<hr />
+<h2>8B. Hoca's Live Class Additions (2026-04-25)</h2>
+<h3>1. Doğal Gaz Zehirlenmesi — Concrete Koruma Example</h3>
+<p>The hoca used this as the canonical example of <strong>koruma</strong> (the K in KBK). Memorize the exact 5-step sequence — exam loves this scenario.</p>
+<blockquote>
+<p><em>"Bir doğal gaz zehirlenmesi olduğunu düşünelim. Hemen gidiyoruz önce vanayı kapatıyoruz, sigortaları kapatıyoruz, camları açıyoruz."</em></p>
+</blockquote>
+<p><strong>Doğal gaz zehirlenmesinde koruma sırası:</strong><br />
+1. <strong>Vanayı kapat</strong> (close the gas valve) — stop the source.<br />
+2. <strong>Sigortaları kapat</strong> (turn off electrical breakers) — prevent spark-ignited explosion.<br />
+3. <strong>Cam ve çerçeveleri aç</strong> (open windows) — ventilate.<br />
+4. <strong>Ağzına maske tak</strong> (cover your own mouth/nose with a mask).<br />
+5. <strong>Kişiyi hemen oradan çıkar</strong> (move the victim out).</p>
+<p><strong>Exam logic:</strong> Why <strong>NOT</strong> flip a light switch first? → A switch creates a <strong>spark</strong> → patlama (explosion). This is why <strong>sigortaları kapat</strong> comes before lights. Trap option: "ışığı yak" → ÇOK YANLIŞ.</p>
+<h3>2. KBK Mnemonic — "Kırmızı Başlıklı Kız"</h3>
+<blockquote>
+<p><em>"Hani kırmızı başlıklı kızı da kodlayarak aklınızda tutabilirsiniz."</em></p>
+</blockquote>
+<p><strong>K-B-K</strong> = the initials of the Turkish folktale <strong>"Kırmızı Başlıklı Kız"</strong> (Little Red Riding Hood). Use it to remember <strong>K</strong>oruma → <strong>B</strong>ildirme → <strong>K</strong>urtarma in the right order.</p>
+<h3>3. İlkyardımcının Özellikleri — Verbal Expansion</h3>
+<p>The hoca added emotional/character traits the slide doesn't list explicitly:</p>
+<blockquote>
+<p><em>"Telaşlı, heyecanlı, ümitsiz, sinirli, kızgın bir ilk yardımcı olmamalı. Acil olanlara öncelik vermesi, imkanlardan çok iyi yararlanması..."</em></p>
+</blockquote>
+<p><strong>An ideal ilkyardımcı IS:</strong><br />
+- <strong>Sakin</strong> (calm) — NOT telaşlı/heyecanlı/sinirli/kızgın<br />
+- <strong>Umutlu</strong> (hopeful) — NOT ümitsiz<br />
+- <strong>Bilgili</strong> (knowledgeable) — has ilk yardım sertifikası<br />
+- <strong>Organize edebilen</strong> (able to direct bystanders)<br />
+- <strong>İmkanları değerlendirebilen</strong> (uses what's available — kit + environment)<br />
+- <strong>Güzel iletişim kurabilen</strong> (good communicator with 112 / sağlık görevlileri)</p>
+<p>A trap option lists "telaşlı" or "kızgın" as a positive trait → wrong.</p>
+<h3>4. Tek Yardımcı vs İki Yardımcı — Call-First Rule</h3>
+<blockquote>
+<p><em>"Tıkanan kişiyle siz tekseniz önce uygulama sonra 112'yi arıyoruz. Ama eğer sizinle beraber bir kişi daha varsa hem uygulama hem 112."</em></p>
+</blockquote>
+<p><strong>Rule:</strong><br />
+- <strong>Yalnız iseniz</strong> → <strong>önce uygulama yap, sonra 112'yi ara.</strong> (Time matters more than the call when alone.)<br />
+- <strong>Yanınızda biri varsa</strong> → <strong>paralel:</strong> sen uygula, o arasın.</p>
+<p>This is the universal "tek mi, çift mi?" decision that comes up in tıkanma, suni solunum, kalp masajı questions.</p>
+<h3>5. Ölçü ve Sayı Tablosu (The Hoca Repeated These — All Are Stock Exam Numbers)</h3>
+<table>
+<thead>
+<tr>
+<th>Konu</th>
+<th>Sayı</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bilinç dereceleri</td>
+<td><strong>3</strong> (sözlü → ağrılı → yok)</td>
+</tr>
+<tr>
+<td>Nabız ölçme</td>
+<td><strong>3 parmak, 5 saniye</strong></td>
+</tr>
+<tr>
+<td>112 mesajı</td>
+<td><strong>Kısa, öz, anlaşılır</strong></td>
+</tr>
+<tr>
+<td>Suni solunum yetişkinde</td>
+<td><strong>15–20 / dakika</strong></td>
+</tr>
+<tr>
+<td>Kalp masajı</td>
+<td><strong>dakikada 100 bası</strong> <em>(hoca'nın ifadesi; slide 80–100 diyor)</em></td>
+</tr>
+<tr>
+<td>CPR oranı</td>
+<td><strong>30 kalp masajı : 2 suni solunum</strong></td>
+</tr>
+<tr>
+<td>Heimlich</td>
+<td><strong>5–6 kez ani basınç</strong>, içeri-yukarı (ters J)</td>
+</tr>
+<tr>
+<td>Sırta vuruş</td>
+<td><strong>5–7 kez</strong> <em>(hoca; slide "4 kez" der — both seen in exams)</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>5. Why this matters for the exam</h2>
+<ol>
+<li><strong>"İlk yardım nedir?"</strong> → answer must include <strong>olay yerinde</strong>, <strong>mevcut araç-gereçle</strong>, <strong>tıbbi yardım gelinceye kadar</strong>. Distractors will swap one of these for "hastanede" or "tıbbi ekipmanla" — wrong.</li>
+<li><strong>"İlk yardım ile acil tedavi arasındaki fark"</strong> → the difference is <strong>kim, nerede, neyle</strong> (who / where / with what), not the goal. Both aim to save the patient.</li>
+<li><strong>"İlk yardımcı kimdir?"</strong> → an ordinary trained person (not necessarily medical staff). The exam often tests that you do <strong>not</strong> need to be a doctor to perform first aid.</li>
+<li><strong>"İlk yardımın amacı değildir?"</strong> (which is NOT a goal) — the goals are: hayati tehlikeyi kaldırmak, yaşamsal fonksiyonları sürdürmek, kötüleşmeyi önlemek, iyileşmeyi kolaylaştırmak. <strong>"Kesin tedavi etmek"</strong> (definitive treatment) is NOT a goal — that's acil tedavi.</li>
+<li><strong>"KBK sırası nedir?"</strong> → <strong>Koruma → Bildirme → Kurtarma</strong>, in that order. A trap option may put Kurtarma first.</li>
+<li><strong>"Türkiye'de acil çağrı numarası?"</strong> → <strong>112</strong>.</li>
+<li><strong>"112'ye iletilen mesaj nasıl olmalıdır?"</strong> → <strong>kısa, öz ve anlaşılır</strong> (short, concise, clear), and must include adres + kazazede sayısı + durumu.</li>
+<li><strong>"Olay yerinde ilk yapılacak iş?"</strong> → <strong>olay yerini değerlendirip güvenli bir çevre oluşturmak</strong> (Koruma) — NOT calling 112 first, NOT touching the victim first.</li>
+<li><strong>"Bilinci kapalı yaralıya ne verilmez?"</strong> → <strong>ağızdan hiçbir şey</strong> (nothing by mouth — no water, food, or pills).</li>
+<li><strong>"Ağır yaralı ne zaman hareket ettirilir?"</strong> → only when there is a continuing life-threat at the scene; otherwise <strong>never moved</strong>.</li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>İlk yardım:</strong> olay yerinde, mevcut araç-gereçlerle, tıbbi yardım gelene kadar yapılan müdahale.<br />
+<em>First aid: intervention performed at the scene, with available materials, until medical help arrives.</em></p>
+<p><strong>Acil tedavi:</strong> acil tedavi ünitelerinde, doktor ve sağlık personeli tarafından yapılan tıbbi müdahale.<br />
+<em>Emergency treatment: medical intervention performed in emergency units by doctors and health personnel.</em></p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ilk yardım</td>
+<td>first aid</td>
+<td>on-scene lay intervention</td>
+</tr>
+<tr>
+<td>acil tedavi</td>
+<td>emergency treatment</td>
+<td>hospital-based medical care</td>
+</tr>
+<tr>
+<td>ilk yardımcı</td>
+<td>first-aider</td>
+<td>trained layperson who does ilk yardım</td>
+</tr>
+<tr>
+<td>olay yeri</td>
+<td>scene of the incident</td>
+<td>where the accident happened</td>
+</tr>
+<tr>
+<td>mevcut araç-gereç</td>
+<td>available equipment</td>
+<td>whatever is on hand</td>
+</tr>
+<tr>
+<td>tıbbi görevli / sağlık personeli</td>
+<td>medical personnel</td>
+<td>professionals (doctor, nurse, paramedic)</td>
+</tr>
+<tr>
+<td>müdahale</td>
+<td>intervention</td>
+<td>the act of stepping in</td>
+</tr>
+<tr>
+<td>hasta</td>
+<td>patient (sick person)</td>
+<td>person who is ill</td>
+</tr>
+<tr>
+<td>yaralı</td>
+<td>injured person</td>
+<td>person with trauma</td>
+</tr>
+<tr>
+<td>kaza</td>
+<td>accident</td>
+<td>the event</td>
+</tr>
+<tr>
+<td>hayat kurtarıcı</td>
+<td>life-saving</td>
+<td>adjective for the goal of ilk yardım</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li>Portal verbatim: <code>e-kitap/02-ilk-yardım/01-ilk-yardim-ile-ilgili-kavramlar.md</code></li>
+<li>Next slide expected: ilk yardımın amaçları, ilk yardımcının özellikleri, ilk yardımın temel uygulamaları (ABC).</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araçların Manevraları: Sağa ve Sola Dönüşler — Right & Left Turn Maneuvers | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 18-manevralar-dönüşler</span>
+</div>
+<div class="content">
+<h1>Araçların Manevraları: Sağa ve Sola Dönüşler — Right &amp; Left Turn Maneuvers</h1>
+<p><strong>Last updated:</strong> 2026-04-18<br />
+<strong>Slides covered:</strong> SLIDE 1 — Sağa Dönüşler (30 m yerleşim içi / 150 m dışı şerit değiştirme yasağı + sağa dönüş sürücüsünün 5 görevi) · SLIDE 2 — Sola Dönüşler (sola dönüş sürücüsünün 8 görevi) · SLIDE 3 — Dönel Kavşaklarda Dönüşler (orta adaya bitişik şerit kuralı, şerit muhafaza zorunluluğu) · SLIDE 4 — Geri Gitme ve Geri Dönüşler (bağlantı/otoyol/tek yönlü yollarda yasak, ağır araçlarda gözcü zorunluluğu) · SLIDE 5 — Araçların Dönüşleri ve Manevra Kuralları özeti (sağa dar / sola geniş + 3 yasak davranış + yayalara-bisikletliye-sağdan-karşıdan gelene öncelik)</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>A <strong>dönüş (turn)</strong> is the second most error-prone maneuver after geçme. The exam tests turning under two headings:<br />
+1. <strong>Sağa dönüş (right turn)</strong> — tighter, simpler, but still has 5 strict sub-rules.<br />
+2. <strong>Sola dönüş (left turn)</strong> — more dangerous because you cross oncoming traffic; 8 sub-rules.</p>
+<p>Both maneuvers share a universal rule that the exam LOVES to ask:</p>
+<blockquote>
+<p><strong>Kavşaklara yaklaşırken, yerleşim yeri İÇİNDE 30 m, yerleşim yeri DIŞINDA 150 m mesafe içinde ve kavşaklarda ŞERİT DEĞİŞTİRMEK YASAKTIR. Bu nedenle dönüş yapacak sürücüler bu mesafelerden önce gidecekleri yöne göre uygun şeride girmelidirler.</strong></p>
+</blockquote>
+<p>Memorize the <strong>30 / 150</strong> pair cold — it is the single most-asked dönüş number on the exam.</p>
+<hr />
+<h2>2. SLIDE 1 — Sağa Dönüşler (Right Turns)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A blue header "<strong>ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞLER)</strong>" with the 30/150 şerit-değiştirme-yasağı paragraph, a "<strong>Sağa dönüşlerde sürücüler;</strong>" header, then 5 bulleted duties. Right-side illustrations showed (a) a top-down intersection with a red car and note "<strong>Şehir içi 30 — Şehirler arası 150 metreden sinyal verilir</strong>", and (b) a car mid-right-turn with a YOL VER sign.</p>
+<h4>The 30/150 rule (verbatim)</h4>
+<blockquote>
+<p><strong>Sürücüler kavşaklara yaklaşırken; yerleşim yerlerinde 30 metre, yerleşim yerleri dışında 150 metre mesafe içinde ve kavşaklarda şerit değiştirmeleri yasaktır.</strong> Bu nedenle dönüş yapacak olan sürücüler bu mesafelerden önce gidecekleri yöne göre uygun şeride girmelidirler.</p>
+</blockquote>
+<h4>The 5 sağa dönüş duties (verbatim)</h4>
+<blockquote>
+<p><strong>Sağa dönüşlerde sürücüler;</strong></p>
+<ol>
+<li><strong>Sağa dönüş işaretini vermeye</strong> — give a right-turn signal.</li>
+<li><strong>Sağ şeride veya dönüşe ayrılmış şeride girmeye</strong> — move into the right lane, or into the dedicated turn lane if one exists.</li>
+<li><strong>Hızını azaltmaya</strong> — slow down.</li>
+<li><strong>Dar bir kavisle dönmeye</strong> — turn in a TIGHT curve.</li>
+<li><strong>Dönüş sırasında varsa kurallara uygun olarak karşıya geçen yayalara ve bisiklet yolundaki bisikletlilere geçiş hakkı vermeye</strong> — yield to crossing pedestrians and bicyclists in the bike lane.</li>
+<li><strong>Dönülen karayolunun gidiş şeridine veya gidişine ayrılmış en sağ şeridine girmeye</strong> — enter the <strong>rightmost lane</strong> of the road you're turning onto.</li>
+</ol>
+<p>→ <strong>Zorunludurlar.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The pre-turn lane-change window (30 m / 150 m)</h4>
+<p>Before any dönüş, you must already be in the correct lane <strong>at least 30 m before the kavşak inside town</strong>, or <strong>150 m before it outside town</strong>. Changing lanes inside that window is <strong>yasak</strong> (forbidden) — you are committed. The signal should be given <strong>at or before</strong> this distance.</p>
+<p><strong>Why these distances?</strong> Inside town speeds are low (~50 km/h) so 30 m is enough. Outside town speeds are 90+ km/h so you need <strong>5× the distance</strong> (150 m) for other drivers to anticipate your maneuver.</p>
+<h4>Why "dar kavisle" for a right turn</h4>
+<p>A sağa dönüş is geometrically tight — the corner is close, you hug it. A <strong>geniş kavis</strong> (wide arc) would swing into the opposing lane of the new road, which is illegal and dangerous. Keep your turn radius small and close to the right edge.</p>
+<h4>Why yield to pedestrians and cyclists</h4>
+<p>When turning right, your path crosses the pedestrian crossing and often a bike lane of the road you're entering. <strong>Yayalara ve bisikletlilere geçiş hakkı</strong> is a hard rule, not a courtesy.</p>
+<h4>Target lane = "en sağ şerit"</h4>
+<p>When the road you're entering has multiple lanes, you <strong>must</strong> enter the rightmost lane. You then change lanes <strong>after</strong> completing the turn and merging into traffic.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kavşaklara yaklaşırken şerit değiştirme yasağı:</strong> <strong>yerleşim içi 30 m</strong>, <strong>yerleşim dışı 150 m</strong>. Bu mesafeden ÖNCE uygun şeride girilmelidir.</p>
+<p><strong>Sağa dönüş 5 görev:</strong> (1) sağa sinyal · (2) sağ şeride / dönüş şeridine gir · (3) hızı azalt · (4) <strong>dar</strong> bir kavisle dön · (5) yayalara + bisikletlilere geçiş hakkı · ve dönülen yolun <strong>en sağ şeridine</strong> gir.</p>
+</blockquote>
+<hr />
+<h2>2B. SLIDE 2 — Sola Dönüşler (Left Turns)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-091.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-091.png" alt="Slayt — Sayfa 91: ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER):" loading="lazy"></a><figcaption>Slayt — Sayfa 91: ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-091.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A blue header "<strong>ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER)</strong>" followed by a "<strong>Sola dönüşlerde sürücüler;</strong>" header and 8 bulleted duties ending in "<strong>Zorunludurlar.</strong>". An illustration showed a pink car labeled "1" stopped at a YOL VER sign on the south approach and the same car labeled "2" completing a wide left turn into the westbound carriageway.</p>
+<h4>The 8 sola dönüş duties (verbatim)</h4>
+<blockquote>
+<p><strong>Sola dönüşlerde sürücüler;</strong></p>
+<ol>
+<li><strong>Sola dönüş işaretini vermeye</strong> — give a left-turn signal.</li>
+<li><strong>Çok şeritli yollarda gidişe ayrılan şeritlerden en soldaki şeride, iki şeritli ve iki yönlü karayollarında sağ şeridin soluna yanaşmaya</strong> — on multi-lane roads, move into the leftmost lane of your direction; on two-lane two-way roads, move to the <strong>left side of the right lane</strong> (i.e. snug against the centerline).</li>
+<li><strong>Hızını azaltmaya</strong> — slow down.</li>
+<li><strong>Kavşağa geldiğinde varsa kurallara uygun olarak karşıya geçen yayalara geçiş hakkı vermeye</strong> — yield to pedestrians crossing legally.</li>
+<li><strong>Dönüşe başlamadan sağdan gelen taşıtlara ilk geçiş hakkı vermeye</strong> — before starting the turn, yield to vehicles coming from your RIGHT.</li>
+<li><strong>Dönüş sırasında karşı yönden gelen ve emniyetle duramayacak kadar yaklaşmış olan araçların geçmesini beklemeye</strong> — during the turn, wait for oncoming vehicles that are too close to stop safely.</li>
+<li><strong>Geniş kavisle dönüş yapmaya</strong> — turn in a WIDE curve.</li>
+<li><strong>Gireceği yolun gidiş yönünde çok şeritli olması halinde, en sağ şerit dışında, uygun bir şeride girmeye</strong> — when the target road has multiple lanes going your direction, enter <strong>an appropriate lane OTHER than the rightmost</strong> (because the rightmost is reserved for right-entering traffic from the cross street).</li>
+<li><strong>Yola girdikten sonra, en kısa sürede, trafiği tehlikeye düşürmeden sağa yaklaşmaya</strong> — after entering the new road, move back to the right ASAP without endangering traffic.</li>
+</ol>
+<p>→ <strong>Zorunludurlar.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>Why "en soldaki şerit" (or "sağ şeridin soluna" on narrow roads)</h4>
+<p>A left turn requires you to already be <strong>as far left as legally possible</strong> before you begin. On a multi-lane road, that's the leftmost forward lane. On a narrow two-way road with just one lane each way, you cannot cross the centerline in advance — you just hug the inside of your lane, snug to the centerline.</p>
+<h4>The two yield duties (#5 and #6)</h4>
+<p>These are the left-turn version of the universal <strong>geçiş hakkı</strong> priority:<br />
+- <strong>Sağdan gelen araç</strong> (vehicle from your right) has priority — this is the default Turkish intersection rule.<br />
+- <strong>Karşı yönden gelen</strong> (oncoming vehicle): if they're too close to stop safely, <strong>you wait</strong>. This is the "don't cut across an oncoming car's path at the last second" rule.</p>
+<h4>Why "geniş kavis" for a left turn</h4>
+<p>Unlike the right turn, a left turn sweeps across the entire intersection. A <strong>dar kavis</strong> (tight arc) on a left would cut the corner and clip into the wrong-direction lane of the new road. <strong>Geniş</strong> means: go deep into the intersection, then swing smoothly into your target lane.</p>
+<p><strong>Memory anchor:</strong> <strong>SAĞA = DAR, SOLA = GENİŞ.</strong> This is a direct exam pair.</p>
+<h4>Target lane = "en sağ şerit DIŞINDA uygun bir şerit"</h4>
+<p>Contrast with the right-turn rule. When turning left onto a multi-lane road, you should NOT immediately occupy the rightmost lane — that lane belongs to traffic merging in from the right at the same kavşak. Pick a middle or left-of-right appropriate lane, then migrate right afterward.</p>
+<h4>The "move right ASAP after turning" rule</h4>
+<p>Once you're in the new road, don't linger in the middle/left lanes. As soon as it is safe, drift right to allow faster traffic and overtakers to pass. This is the same "sağdan sürme" default discussed in <a href="14-karayolu-kullanım-kuralları.md">14-karayolu-kullanım-kuralları.md</a>.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Sola dönüş 8 görev:</strong> (1) sola sinyal · (2) çok şeritli yolda <strong>en sol şeride</strong>, iki yönlü yolda <strong>sağ şeridin soluna</strong> · (3) hızı azalt · (4) yayalara geçiş hakkı · (5) <strong>sağdan gelen araca</strong> ilk geçiş hakkı · (6) karşı yönden yakın araçları bekle · (7) <strong>geniş</strong> kavisle dön · (8) dönülen çok şeritli yolda <strong>en sağ DIŞINDA uygun bir şeride</strong> gir, sonra en kısa sürede sağa yaklaş.</p>
+</blockquote>
+<hr />
+<h2>2C. SLIDE 3 — Dönel Kavşaklarda Dönüşler (Roundabouts)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-090.png" alt="Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):" loading="lazy"></a><figcaption>Slayt — Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ): <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-090.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A header "<strong>ARAÇLARIN MANEVRALARI (DÖNEL KAVŞAKLARDA DÖNÜŞLER)</strong>" followed by a 5-bullet list, plus three illustrations: a top-down cross-shape kavşak, a 3-lane approach with numbered lanes (1/2/3), and a red-flow diagram showing a car entering a dönel kavşak and circulating around the center island.</p>
+<blockquote>
+<p><strong>Dönel kavşaklarda dönüşlerde sürücüler;</strong></p>
+<ol>
+<li><strong>Dönüş işareti vermeye</strong> — give a turn signal.</li>
+<li><strong>Hızını azaltmaya</strong> — slow down.</li>
+<li><strong>Sola veya geriye dönecek ise orta adaya bitişik şeritten kavşağa girmeye</strong> — if turning LEFT or making a U-turn, enter the roundabout in the <strong>innermost lane (next to the center island)</strong>.</li>
+<li><strong>Dönel kavşakta geriye dönecek ise orta adaya bitişik şeritte dönüşe geçmeye</strong> — to U-turn inside the roundabout, stay in the innermost lane throughout.</li>
+<li><strong>Orta ada etrafında dönerken, kavşak çıkışında bulunan ve uygun mesafede olmayan bir karayoluna veya geçiş yoluna girmek istemesi hali dışında, şeridini muhafaza etmeye</strong> — while circling the center island, maintain your lane <strong>unless</strong> the exit you want is immediately coming up and you can safely change lane to take it.</li>
+</ol>
+<p>→ <strong>Mecburdurlar.</strong></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>A <strong>dönel kavşak (roundabout)</strong> is a ring-shaped intersection where all traffic circulates counter-clockwise (in Türkiye's right-hand-drive convention) around a central island. The slide gives four lane-picking rules:</p>
+<h4>Which lane to enter the roundabout</h4>
+<ul>
+<li><strong>Sağa çıkış (right exit) / ilk çıkış:</strong> use the <strong>outer / right</strong> lane.</li>
+<li><strong>Karşıya geçiş (düz):</strong> typically the outer or middle lane (depending on number of approach lanes).</li>
+<li><strong>Sola çıkış / son çıkış:</strong> use the <strong>innermost</strong> lane — next to the center island.</li>
+<li><strong>Geriye dönüş (U-turn):</strong> use the innermost lane and stay there until past the U-turn exit.</li>
+</ul>
+<p>The rule to memorize: <strong>sola veya geriye → orta adaya bitişik şerit</strong>.</p>
+<h4>Şeridini muhafaza et (hold your lane)</h4>
+<p>Inside the roundabout, you do <strong>not</strong> freely lane-change. You stay in the lane you entered. The only exception is when your target exit is approaching and you can safely move one lane out to take it.</p>
+<h4>Entering: yield to circulating traffic</h4>
+<p>Though not on this slide, the universal roundabout rule is: <strong>halkaki araçlara geçiş hakkı vermek zorundasın</strong>. The driver entering yields to the driver already inside the ring.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Dönel kavşakta sola veya geriye dönecek sürücü, ORTA ADAYA BİTİŞİK ŞERİTTEN girer. Dönel kavşakta ŞERİT MUHAFAZA edilir</strong> (uygun çıkış hariç).</p>
+</blockquote>
+<hr />
+<h2>2D. SLIDE 4 — Geri Gitme ve Geri Dönüşler (Reversing &amp; U-turns)</h2>
+<figure class="slide-figure"><a href="../../ders-kitabi/trafik-ve-cevre/page-095.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/07-gecme-manevralar/page-095.png" alt="Slayt — Sayfa 95: GERİ GİTME VE GERİ DÖNÜŞLER" loading="lazy"></a><figcaption>Slayt — Sayfa 95: GERİ GİTME VE GERİ DÖNÜŞLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-095.html" target="_blank">→ pdf metni</a></figcaption></figure>
+
+<h3>What the slide showed</h3>
+<p>A header "<strong>GERİ GİTME VE GERİ DÖNÜŞLER</strong>" with two bulleted rules, plus illustrations of a driver looking over her shoulder while reversing, and a truck+trailer rig.</p>
+<blockquote>
+<p><strong>Sürücülerin:</strong></p>
+<ol>
+<li>
+<p><strong>Bağlantı yolları, otoyollar ve tek yönlü yollarda geri gitmeleri YASAKTIR.</strong><br />
+<em>Reversing is FORBIDDEN on connection roads, motorways, and one-way streets.</em></p>
+</li>
+<li>
+<p><strong>Kamyon, otobüs, çekici, römork ve yarı römork takılı bir aracın geri manevrası sürücünün görüşüne açık alanda emniyetle yapılamıyor ise, sürücü aracın arkasında bir GÖZCÜ bulundurmak ZORUNDADIR.</strong><br />
+<em>For a truck, bus, semi-tractor, or any vehicle with a trailer or semi-trailer, if the reverse maneuver can't be done safely in open sight, the driver MUST station a </em><em>SPOTTER (gözcü)</em><em> behind the vehicle.</em></p>
+</li>
+</ol>
+</blockquote>
+<h3>Clean English explanation</h3>
+<h4>The 3 "no reversing" places</h4>
+<ol>
+<li><strong>Bağlantı yolu</strong> — the short connection ramp linking two roads (e.g., between a local road and an otoyol).</li>
+<li><strong>Otoyol</strong> — motorways. Reversing on an otoyol is catastrophic and illegal.</li>
+<li><strong>Tek yönlü yol</strong> — one-way streets. Going in reverse on a one-way street is effectively going <strong>the wrong way</strong>, even at low speed.</li>
+</ol>
+<p>On normal two-way roads, short reversing (parking, backing into a driveway) is allowed as long as it is safe and brief.</p>
+<h4>The gözcü (spotter) requirement for heavy vehicles</h4>
+<p>For kamyon / otobüs / çekici / römork / yarı römork combinations, the rear blind spot is enormous — the driver literally cannot see what's behind. If the reverse area is not fully visible and clear, the driver <strong>must</strong> place a person on the ground behind the vehicle to guide them. Failure to do so shifts liability entirely to the driver if someone is injured.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>GERİ GİTME YASAK:</strong> bağlantı yolu · otoyol · tek yönlü yol.</p>
+<p><strong>Kamyon/otobüs/çekici/römork takılı araç:</strong> görüş açık değilse sürücü arkaya <strong>GÖZCÜ</strong> koymak ZORUNDADIR.</p>
+</blockquote>
+<hr />
+<h2>2E. SLIDE 5 — Araçların Dönüşleri ve Manevra Kuralları (Summary + 3 forbidden behaviors)</h2>
+<h3>What the slide showed</h3>
+<p>A summary slide "<strong>ARAÇLARIN DÖNÜŞLERİ VE MANEVRA KURALLARI</strong>" with three side-by-side diagrams captioned:<br />
+- <strong>Sağa dar kavisle</strong> (right turn: tight arc)<br />
+- <strong>Sola geniş kavisle dönülür</strong> (left turn: wide arc)<br />
+- <strong>Ada dönüşleri</strong> (roundabout turns)</p>
+<p>Then three forbidden behaviors and a priority recap.</p>
+<h4>The 3 YASAK (forbidden) behaviors during any maneuver</h4>
+<blockquote>
+<p><strong>Araç sürücülerinin:</strong></p>
+<ol>
+<li><strong>İşaret vermeden manevraya başlamaları</strong> — starting a maneuver without signaling.</li>
+<li><strong>İşaret verdiği anda aniden şerit değiştirmeleri</strong> — changing lanes the instant they signal (no pause for others to see and react).</li>
+<li><strong>Manevraya başladıktan sonra işaret vermeleri YASAKTIR</strong> — signaling AFTER the maneuver is already underway is forbidden.</li>
+</ol>
+</blockquote>
+<h4>The universal priority recap</h4>
+<blockquote>
+<p><strong>Sağa ve sola dönüşlerde, sürücüler kurallara uygun olarak geçiş yapan yayalara, varsa bisiklet yolundaki bisikletlilere ve sola dönüşlerde sağdan ve karşıdan gelen trafiğe ilk geçiş hakkını vermek zorundadırlar.</strong></p>
+<p><em>At both right and left turns, drivers must yield to: lawfully crossing pedestrians, cyclists in a bike lane (if any), and — at left turns specifically — traffic coming from the right AND oncoming traffic.</em></p>
+</blockquote>
+<h3>Clean English explanation</h3>
+<p>This slide is the <strong>exam-recap</strong> slide. It reduces all the turn lessons into 3 single-line rules:</p>
+<h4>1. Sağa = DAR, Sola = GENİŞ</h4>
+<p>Already covered — this is the geometric spine of the entire topic.</p>
+<h4>2. Signal timing: the 3 yasak</h4>
+<p>Signaling is a <strong>promise of intent, delivered EARLY enough for others to react</strong>. The 3 illegal patterns are all timing violations:<br />
+- <strong>No signal at all</strong> → no warning.<br />
+- <strong>Signal = move</strong> (simultaneous) → warning arrives too late.<br />
+- <strong>Signal AFTER moving</strong> → warning arrives when it's useless.</p>
+<p>The legal pattern is <strong>signal, PAUSE, then maneuver</strong> — give other drivers 1-2 seconds to see the blinker and adjust.</p>
+<h4>3. Yield hierarchy during turns</h4>
+<p>In order of priority during any sağa/sola dönüş:<br />
+1. <strong>Yayalar</strong> (pedestrians) on a legal crossing.<br />
+2. <strong>Bisikletliler</strong> in the bike lane.<br />
+3. <strong>(Sola dönüşte)</strong> sağdan gelen traffic.<br />
+4. <strong>(Sola dönüşte)</strong> karşıdan gelen trafik.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>3 YASAK davranış:</strong> (1) <strong>sinyalsiz</strong> manevra başlatmak · (2) sinyal verir <strong>vermez aniden</strong> şerit değiştirmek · (3) manevraya başladıktan <strong>SONRA sinyal vermek</strong>.</p>
+<p><strong>Dönüşlerde öncelik sırası:</strong> YAYA → BİSİKLETLİ → (sola dönüşte) <strong>SAĞDAN gelen araç</strong> → (sola dönüşte) <strong>KARŞIDAN gelen araç</strong>.</p>
+</blockquote>
+<hr />
+<h2>3. Sağa vs Sola dönüş — the contrast table (memorize)</h2>
+<table>
+<thead>
+<tr>
+<th>Detay</th>
+<th><strong>Sağa dönüş</strong></th>
+<th><strong>Sola dönüş</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sinyal</td>
+<td>Sağa</td>
+<td>Sola</td>
+</tr>
+<tr>
+<td>Hazırlık şeridi</td>
+<td><strong>En sağ</strong> / dönüş şeridi</td>
+<td><strong>En sol</strong> (çok şeritli) / sağ şeridin soluna (iki yönlü dar)</td>
+</tr>
+<tr>
+<td>Kavis</td>
+<td><strong>DAR</strong></td>
+<td><strong>GENİŞ</strong></td>
+</tr>
+<tr>
+<td>Yayalara öncelik</td>
+<td>Evet</td>
+<td>Evet</td>
+</tr>
+<tr>
+<td>Bisikletlilere öncelik</td>
+<td>Evet (bisiklet yolundaki)</td>
+<td>— (sola dönüşte belirtilmedi)</td>
+</tr>
+<tr>
+<td>Sağdan gelen araç</td>
+<td>—</td>
+<td><strong>Evet — ilk geçiş hakkı</strong></td>
+</tr>
+<tr>
+<td>Karşıdan gelen araç</td>
+<td>—</td>
+<td>Evet — emniyetle duramayacak kadar yakınsa bekle</td>
+</tr>
+<tr>
+<td>Dönülen yol şeridi</td>
+<td><strong>En sağ şerit</strong></td>
+<td><strong>En sağ DIŞINDA uygun bir şerit</strong>, sonra sağa kay</td>
+</tr>
+<tr>
+<td>Görev sayısı</td>
+<td><strong>5</strong></td>
+<td><strong>8</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>The universal 30/150 rule (both turns)</h3>
+<table>
+<thead>
+<tr>
+<th>Yerleşim</th>
+<th style="text-align: right;">Şerit değiştirme yasağı ve sinyalleme mesafesi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Yerleşim yeri İÇİNDE</td>
+<td style="text-align: right;"><strong>30 m</strong></td>
+</tr>
+<tr>
+<td>Yerleşim yeri DIŞINDA</td>
+<td style="text-align: right;"><strong>150 m</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>4. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Kavşaklara yaklaşırken şerit değiştirmek yerleşim içi kaç metre mesafede yasaktır?"</strong> → <strong>30 m</strong>.</li>
+<li><strong>"Yerleşim yeri dışında kavşağa kaç metre kala şerit değiştirmek yasaktır?"</strong> → <strong>150 m</strong>.</li>
+<li><strong>"Sağa dönen sürücü kavisi nasıl almalıdır?"</strong> → <strong>Dar bir kavisle.</strong></li>
+<li><strong>"Sola dönen sürücü kavisi nasıl almalıdır?"</strong> → <strong>Geniş bir kavisle.</strong></li>
+<li><strong>"Sola dönerken ilk geçiş hakkı kime verilir?"</strong> → <strong>Sağdan gelen taşıtlara</strong> (ve yayalara).</li>
+<li><strong>"Sağa dönen sürücü dönülen yolun hangi şeridine girer?"</strong> → <strong>En sağ şeride</strong>.</li>
+<li><strong>"Sola dönen sürücü çok şeritli yolda hangi şeride girer?"</strong> → <strong>En sağ şerit DIŞINDA uygun bir şeride</strong>, sonra en kısa sürede sağa yaklaşır.</li>
+<li><strong>"Sağa dönen sürücü hangi yol kullanıcılarına geçiş hakkı vermelidir?"</strong> → <strong>Yayalara ve bisikletlilere.</strong></li>
+<li><strong>"Sola dönerken karşıdan gelen araç ne olursa beklenir?"</strong> → <strong>Emniyetle duramayacak kadar yaklaşmışsa</strong>.</li>
+<li><strong>"İki yönlü dar yolda sola dönecek sürücü ne yapar?"</strong> → <strong>Sağ şeridin soluna yanaşır</strong> (centerline'a yaklaşır).</li>
+</ol>
+<hr />
+<h2>5. Memorize These</h2>
+<blockquote>
+<p><strong>Kavşağa şerit değiştirme yasağı: 30 m YERLEŞİM İÇİ, 150 m YERLEŞİM DIŞI.</strong> <em>(Sinyalleme mesafesiyle aynı.)</em></p>
+<p><strong>SAĞA = DAR KAVİS · SOLA = GENİŞ KAVİS.</strong></p>
+<p><strong>Sağa dönüş → dönülen yolun EN SAĞ şeridine gir. Sola dönüş → EN SAĞ DIŞINDA uygun şeride gir, sonra sağa kay.</strong></p>
+<p><strong>Sola dönüşte önceliği: (1) yayalar, (2) sağdan gelen araçlar, (3) emniyetle duramayacak karşı yönden yaklaşan araçlar.</strong></p>
+<p><strong>Sola dönüş hazırlığı:</strong> çok şeritli yolda <strong>EN SOL şeride</strong>, iki yönlü dar yolda <strong>sağ şeridin soluna</strong> yanaş.</p>
+<p><strong>Sağa dönüş hazırlığı:</strong> sağ şeride veya dönüş için ayrılmış şeride gir.</p>
+</blockquote>
+<hr />
+<h2>6. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Manevra</td>
+<td>Maneuver</td>
+<td>Any controlled change of path</td>
+</tr>
+<tr>
+<td>Dönüş</td>
+<td>Turn</td>
+<td>Right or left turn</td>
+</tr>
+<tr>
+<td>Sağa dönüş</td>
+<td>Right turn</td>
+<td>Tighter turn</td>
+</tr>
+<tr>
+<td>Sola dönüş</td>
+<td>Left turn</td>
+<td>Crosses oncoming traffic</td>
+</tr>
+<tr>
+<td>Kavşak</td>
+<td>Intersection</td>
+<td>Where roads meet</td>
+</tr>
+<tr>
+<td>Şerit değiştirme</td>
+<td>Lane change</td>
+<td>Moving between lanes</td>
+</tr>
+<tr>
+<td>Dönüş şeridi</td>
+<td>Turn lane</td>
+<td>Dedicated turning lane</td>
+</tr>
+<tr>
+<td>Dar kavis</td>
+<td>Tight arc</td>
+<td>Required for right turns</td>
+</tr>
+<tr>
+<td>Geniş kavis</td>
+<td>Wide arc</td>
+<td>Required for left turns</td>
+</tr>
+<tr>
+<td>Dönülen yol</td>
+<td>Target road</td>
+<td>The road you're turning onto</td>
+</tr>
+<tr>
+<td>Gidiş yönü</td>
+<td>Direction of travel</td>
+<td>Your direction</td>
+</tr>
+<tr>
+<td>En sağ şerit</td>
+<td>Rightmost lane</td>
+<td>Right-turn target lane</td>
+</tr>
+<tr>
+<td>En sol şerit</td>
+<td>Leftmost lane</td>
+<td>Left-turn prep lane on multi-lane roads</td>
+</tr>
+<tr>
+<td>Sağ şeridin solu</td>
+<td>Left side of right lane</td>
+<td>Left-turn prep on narrow two-way</td>
+</tr>
+<tr>
+<td>Geçiş hakkı</td>
+<td>Right of way</td>
+<td>Priority at intersections</td>
+</tr>
+<tr>
+<td>Sağdan gelen taşıt</td>
+<td>Vehicle coming from the right</td>
+<td>Default priority holder</td>
+</tr>
+<tr>
+<td>Karşı yönden gelen</td>
+<td>Oncoming vehicle</td>
+<td>Cross-traffic during left turn</td>
+</tr>
+<tr>
+<td>Emniyetle duramayacak kadar yakın</td>
+<td>Too close to stop safely</td>
+<td>The "wait for oncoming" threshold</td>
+</tr>
+<tr>
+<td>Yaya</td>
+<td>Pedestrian</td>
+<td>Walking person</td>
+</tr>
+<tr>
+<td>Bisikletli</td>
+<td>Cyclist</td>
+<td>Person on a bicycle</td>
+</tr>
+<tr>
+<td>Bisiklet yolu</td>
+<td>Bike lane</td>
+<td>Dedicated cyclist path</td>
+</tr>
+<tr>
+<td>Yerleşim yeri içi</td>
+<td>Inside town</td>
+<td>30 m turn-prep zone</td>
+</tr>
+<tr>
+<td>Yerleşim yeri dışı</td>
+<td>Outside town</td>
+<td>150 m turn-prep zone</td>
+</tr>
+<tr>
+<td>Sinyal</td>
+<td>Signal / blinker</td>
+<td>Turn indicator</td>
+</tr>
+<tr>
+<td>Zorunludurlar</td>
+<td>Are obliged / must</td>
+<td>Hard duty marker</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. Cross-references</h2>
+<ul>
+<li>Geçiş üstünlüğü vs geçiş hakkı (the two-name trap) → <a href="01-temel-kavramlar.md">01-temel-kavramlar.md</a></li>
+<li>Sağdan-gelen priority at intersections (detailed) → <a href="07-tehlike-uyarı-işaretleri.md">07-tehlike-uyarı-işaretleri.md</a> + <a href="05-trafik-işaretleri-öncelik.md">05-trafik-işaretleri-öncelik.md</a></li>
+<li>Yol çizgileri (dönüş oklarını gösteren yer üstü işaretleri) → <a href="11-yol-çizgileri.md">11-yol-çizgileri.md</a></li>
+<li>Karayolu kullanım kuralları (sağdan sürme, lane discipline) → <a href="14-karayolu-kullanım-kuralları.md">14-karayolu-kullanım-kuralları.md</a></li>
+<li>Geçme kuralları (kavşaklarda geçme yasağı) → <a href="17-geçme-kuralları.md">17-geçme-kuralları.md</a></li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-090.html">📄 Sayfa 90: ARAÇLARIN MANEVRALARI (SAĞA DÖNÜŞ):<span class="score">186.6</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-091.html">📄 Sayfa 91: ARAÇLARIN MANEVRALARI (SOLA DÖNÜŞLER):<span class="score">152.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-080.html">📄 Sayfa 80: KARAYOLU KULLANIM KURALLARI<span class="score">147.7</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html">📄 Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI<span class="score">138.7</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html">📄 Sayfa 167: ASLİ KUSUR SAYILAN HALLER<span class="score">117.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-095.html">📄 Sayfa 95: GERİ GİTME VE GERİ DÖNÜŞLER<span class="score">108.5</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/07-gecme-manevralar/index.html">🖼️ Geçme & Manevralar<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/03-trafik-isaret-levhalari/index.html">🖼️ Trafik İşaret Levhaları<span class="score">4 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/08-kavsak-ilk-gecis/index.html">🖼️ Kavşaklarda İlk Geçiş Hakkı<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

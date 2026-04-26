@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRAFİKTE TEHLİKE ALGISI (ÖNGÖRÜLÜ SÜRÜCÜLÜK BECERİSİ) | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,#11472d,#227245);
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:780px;margin:24px auto 60px;padding:30px 32px;
+  background:#fff;border-radius:12px;
+  border:1px solid #e4dac8;
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:#11472d;margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:#0a7f44;margin:24px 0 10px;font-weight:600;border-bottom:2px solid #e4dac8;padding-bottom:4px}
+.content h3{font-size:1.05rem;color:#11472d;margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:#1f1b15;margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:#f5f0e6;padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:#f5f0e6;padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid #0a7f44;
+  background:#f0f7f2;padding:10px 16px;margin:12px 0;
+  font-style:italic;color:#1f1b15;
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid #e4dac8;padding:8px 12px;text-align:left}
+.content th{background:#fff8ec;font-weight:600;color:#11472d}
+.content tr:nth-child(even){background:#fffcf6}
+.content a{color:#0a7f44;text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
+.content strong{color:#11472d;font-weight:600}
+.content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:#fff;border:1px solid #e4dac8;border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:#6f6454;font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:#0a7f44;font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong>Ehliyet Pratik</strong><span>4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text">Ders Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text">Slaytlar</span></span><span class="eh-nav-meta">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section"><div class="eh-nav-note">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div></div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ E-Kitap dizini</a>
+  <span class="crumb">01-trafik-ve-çevre / 10-trafikte-tehlike-algisi-ongorulu-suruculuk-becerisi</span>
+</div>
+<div class="content">
+<hr />
+<p>lesson: Trafik ve Çevre Bilgisi<br />
+subject: TRAFİKTE TEHLİKE ALGISI (ÖNGÖRÜLÜ SÜRÜCÜLÜK BECERİSİ)<br />
+subject_number: 10<br />
+subject_id: 3c30e7699bc2bdaf53e39f5364039c95<br />
+lesson_id: bc9d0800a0eb0b4e14f303c5183a2964<br />
+url: https://e-tusekon.com/user/read-article.php?lesson=bc9d0800a0eb0b4e14f303c5183a2964&amp;subject=3c30e7699bc2bdaf53e39f5364039c95<br />
+language: tr</p>
+<hr />
+<h1>TRAFİKTE TEHLİKE ALGISI (ÖNGÖRÜLÜ SÜRÜCÜLÜK BECERİSİ)</h1>
+<blockquote>
+<p><strong>Ders:</strong> Trafik ve Çevre Bilgisi (Traffic &amp; Environment) — Subject 10/15</p>
+<p><strong>English translation:</strong> <em>pending — will be added in a later pass</em></p>
+</blockquote>
+<hr />
+<h2>Turkish Original (Türkçe)</h2>
+<p>Trafik ve Çevre Bilgisi<br />
+TRAFİKTE TEHLİKE ALGISI (ÖNGÖRÜLÜ SÜRÜCÜLÜK BECERİSİ)<br />
+TRAFİKTE TEHLİKE ALGISI (ÖNGÖRÜLÜ SÜRÜCÜLÜK BECERİSİ)<br />
+1. Trafikte Tehlike ve Risk Kavramları;<br />
+Tehlike: Potansiyel olarak bir zarara veya kazaya neden olabilecek bir durum demektir. Tehlike somuttur ve gözlemlenebilir. Örneğin, kaygan bir yol, arızalı bir araç, dikkatsiz bir yaya, kırmızı şıkta geçmek gibi.<br />
+Risk: Bir tehlikenin gerçekleşme olasılığı ve bu olayın sonuçlarının şiddetini ifade eder. Örneğin, alkollü olarak araç kullanmanın sonunda kaza yapmak, hızlı araç kullanma sebebi ile kaza yapmak, kak takmamış halde kaza yapmak gibi.<br />
+2.Trafikte Karşılaşılabilecek Tehlike ve Riskler;<br />
+a- Savunmasız (Korunmasız) yol kullanıcıları ile karşılaşabilecek tehlike ve riskler, Çocuklar, yaşlılar, engelliler, yayalar, hayvanlar, motorsuz taşıt sürücüleri, bisiklet, motorlu bisiklet ve motosiklet sürücüleri savunmamız yol kullanıcıları olarak kabul edilir. Sürücüler trafikte bunlara karşı çok dikkatli olmalıdır.<br />
+b- Mevsim geçişlerinde karşılaşabilecek tehlike ve riskler, Mevsim geçişlerinde yapılacak kontrollerin periyodik bakımlar kadar önemlidir. Bahar ayları; herhangi bir küçük problemin, büyüyerek sürüş güvenliğini tehlikeye atmadan önce tespiti için ideal zamanlardır. Bu sebeple, özellikle mevsim geçişlerinin yaşandığı zamanlarda her türlü mevsimsel risklere karşı hazırlıklı ve tedbirli olmalıyız. Araçların cam silecekleri mutlaka 6 ayda bir değiştirilmelidir.<br />
+c- Hava durumuna bağlı karşılaşabilecek tehlike ve riskler, Yağışlı havalarda yolların ıslak veya çamur olması, aşırı sıcaklarda asfaltın erimesi gibi nedenlerden dolayı yol tutuşu azalacağı için araçların kayma riski artarken aynı zamanda durma mesafesi de artar. Islak zeminin yanı sıra aracın camlarında oluşan buğu ve yağmur damlaları görüşü etkilemekte, bu da görüş mesafesini ve kalitesini azaltmaktadır. Yağmurun ilk yağmaya başladığı dakikalar sürüş açısından risklidir. Yoldaki mevcut toz ve yağlar yağmur suyu ile birleştiğinde zeminin kayganlığı artmaktadır. Sisli havalarda ise hem algılama mesafesi hem de durma mesafesi uzar.<br />
+ç- Çevre ve yolun fiziki yapısından kaynaklanabilecek tehlike ve riskler, Asfalt yollarda durma mesafesi toprak yollara göre daha kısadır. Yolun belli kesimlerinde gevşek satıh malzemesinin bulunması durumunda bu bölümlerde durma mesafesi uzar. Yolun kayganlaşmasının nedeni iklim şartları olabileceği gibi, yolun eğimi, kaplaması ve yolda yapılan tamirler de olabilir. Yola boya, mazot, taş vb. şeyler dökülmüş olabilir.<br />
+d- Gün batımı ve gün doğumu geçişlerinde karşılaşılabilecek tehlike ve riskler, Gün batımı ile gün doğumu arasında araba kullandığımızda  görsel algılama ve tepki süresi büyük ölçüde azalır. Mesafeleri ve bazı nesneleri algılamak zorlaşır.<br />
+e- Gece araç kullanma sırasında karşılaşılabilecek tehlike ve riskler, Geceleri görüşün azalmasından dolayı kaza riski 2-3 kat artmaktadır. Görme mesafeniz, geceleri sadece farlarınızın aydınlattığı alanla sınırlıdır. Uzağı gösteren farlarımız aracımızın önünü 100 mt. Yakını gösteren farlarımız ise 25 mt. ye kadar aydınlatabilmelidir. Karşımızdan gelen araçların farları sürücülerin gözlerini kamaştırdığı gibi arkamızdan gelen araçlarında ışıkları aynadan gözümüze vurabilir. Ön camımızın temizliği ve ayna ayarları çok önemlidir.<br />
+f - Kavşaklarda karşılaşılabilecek tehlike ve riskler, Kontrolsüz kavşaklar başta olmak üzere her türlü kavşak trafikte kaza riski büyük olan yerlerdir. Kontrolsüz kavşaklarda geçiş hakkı kurallarına uymayan sürücüler ile kontrollü kavşaklarda trafik işaret ve işaretçilerine riayet etmeyen sürücüler potansiyel kaza riskleridir.<br />
+g- Dikkat dağıtıcı uğraşılardan kaynaklanabilecek tehlike ve riskler, Sürücünün araç kullanma esnasında aynı zamanda cep telefonu ile konuşması, müziğe kendini kaptırması, navigasyon cihazına odaklanması, sosyal medyada gezinmesi, yiyecek ve içecek tüketmesi, araçtaki yolcular ile ilgilenmesi potansiyel kaza riskleri arasındadır.<br />
+h- Köy, mezra ve tarım alanlarında karşılaşılabilecek tehlike ve riskler, Özellikle besiciliğin çok olduğu yerlerde köy yollarından geçerken her an karşımıza çıkabilecek bir hayvan veya hayvan sürüsüne karşı hazırlıklı ve dikkatli olmalıyız. Köy yollarında ışıksız ve reflektörsüz traktör ve traktör römorkları veya at arabaları ile karşı karşıya kalmanız an meselesidir.<br />
+I- Römorklu araç kullanırken karşılaşılabilecek tehlike ve riskler, Aracınıza römork bağlı olduğunda kullanım özellikleri değişecektir. Çektiğiniz römorkun toplam ağırlığına göre aracınızın frenleme mesafesi uzayacaktır. Bunu göz önüne alarak, emniyetli araç takip etme mesafesini normal takip mesafesinden daha fazla tutunuz. Araca römork bağlı iken toplam araç boyu uzayacak, dönüşlerde bu uzunluğu da hesaba katmanız gerekecektir. Keskin dönüşlerde dönüş sinyali vererek diğer araçlara niyetinizi gösteriniz ve hızınız azaltarak geniş bir açıyla dönünüz. Römork veya yarı römork takmış olan araçlar hız limitlerini normalinde 10km daha düşük tutmak zorundadır.<br />
+i- Şehirler arası uzun yolculukların sonunda şehir içi trafiğine girişte karşılaşılabilecek tehlike ve riskler, Şehirler arası yollardaki trafik, şehir içi trafiğe göre daha hızlı ve daha azdır. Oysa sürücüler uzun süre hızlı bir şekilde araç kullandıklarından dolayı gözleri hıza alışmış olurlar. Bu şekilde şehir içine girdiklerinde bunun farkına varmazlar. Şehir içi trafiğinde sadece önümüzdeki trafiği değil yan yollardaki trafiği de dikkatli bir şekilde takip etmemiz gerekir.<br />
+j- Araç kullanma tekniğinden kaynaklanabilecek tehlike ve riskler, Sürücülerin araç kullanma tarzları ve araç kullanmaya dair yanlış alışkanlıkları da kaza riskine neden olur. Örneğin; Emniyet kemeri takmamak, makas atmak, emniyet şeridini kullanmak, hatalı sollama, virajlara hızlı girmek, takip mesafesine riayet etmemek, şerit ihlali yapmak gibi.<br />
+k- Trafik yoğunluğu olan yollarda araç kullanımından kaynaklanabilecek tehlike ve riskler, Özellikle mesai başlama ve bitiş saatleri, okul giriş çıkış saatleri gibi trafiğin yoğun olduğu saatler trafikte kaza riskinin yüksek olduğu anlardır. Mümkün olduğunca mecbur kalmadıkça bu saatlerde trafiğe çıkılmamalıdır.<br />
+l- Hız limitini aşma sonucu oluşabilecek tehlike ve riskler, Kontrolsüz hız, ani fren yapılması gereken durumlarda trafik kazalarına davetiye çıkarır. Ani frenlerde duramayarak önündeki araca ya da yayaya çarpabilir, şiddetli fren nedeniyle araç içinde yolcuların boyun zedelenmelerine neden olabilirsiniz. Sürücülerin özellikle kavşaklara ve tepe üstlerine yaklaşırken, dönemeçli yollarda ilerlerken, yaya ve hemzemin geçitlerine, tünellere, dar köprü ve menfezlere yaklaşırken, şehir içinde ilerlerken, yapım ve onarım alanlarına girerken hızlarını azaltmaları gerekir.<br />
+m- Trafik işaretlerinin görünmesini engelleyen durumlar sonucunda oluşabilecek tehlike ve riskler, Trafik işaret levhaları yolların durumu ve çevre hakkında sürücülere bilgi verir. Trafik levhalarına göre hareket eden sürücüler, olası kazalara karşı hem kendi hem de trafikteki diğer kişileri korur. Karayolu yapısı üzerine, trafiği güçleştirecek, tehlikeye sokacak veya engel yaratacak, trafik işaretlerinin görülmelerini engelleyecek veya güçleştirecek şekilde bir şey koymak, atmak, dökmek, bırakmak vb. hareketlerde bulunmak yasaktır.<br />
+n- Yaya geçidi tabelası bulunan ancak sinyalizasyon bulunmayan yaya ve okul geçitlerinde oluşabilecek tehlike ve riskler, Işık varsa yaya bekleyecek. Işık olmayan yerlerde yayalar yaya geçitlerinde ve okul geçitlerinde öncelik hakkına sahiptir. Kavşak girişlerinde, yay ve okul geçitlerinde ve dönüşlerde araçlar yol hakkını yayalara vermelidir.</p>
+<hr />
+<p><em>Extracted from E-TUSEKON portal on 2026-04-13 via Playwright + authenticated curl. See <a href="../../playwright-analysis.md">../../playwright-analysis.md</a> for methodology.</em></p>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>
