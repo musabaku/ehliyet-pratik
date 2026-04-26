@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tescil, Muayene, Sigorta ve Sürücü Belgeleri | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 32-tescil-muayene-surucu-belgeleri</span>
+</div>
+<div class="content">
+<h1>Tescil, Muayene, Sigorta ve Sürücü Belgeleri</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 152–163. Drafted from PDF (no live class for this topic).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>This note bundles the <strong>legal/administrative half</strong> of the trafik subject:<br />
+- <strong>Hukuki sorumluluk + sigorta türleri</strong> (insurance categories)<br />
+- <strong>Trafik denetimlerinde kontrol edilen evraklar</strong><br />
+- <strong>Araç tescili prosedürü</strong> (vehicle registration)<br />
+- <strong>Trafik belgesi</strong><br />
+- <strong>Periyodik muayene süreleri</strong> (inspection intervals)<br />
+- <strong>Sürücü belgesi sınıfları + yaş şartları</strong> (license classes table)<br />
+- <strong>Sürücü olur sağlık şartları</strong> (medical requirements)<br />
+- <strong>Sürücü belgesinin geri alınması ve iptali</strong> (license suspension/revocation)</p>
+<p>These topics produce <strong>multiple exam questions per attempt</strong>. Note 12 (alkol-ve-surme-yasakları) covers the alcohol-specific belge geri alma case; this note covers the broader administrative regime.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-152.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-152.png" alt="Ders kitabı — Sayfa 152: HUKUKİ SORUMLULUK VE SİGORTA" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 152: HUKUKİ SORUMLULUK VE SİGORTA <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-152.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Hukuki Sorumluluk ve Sigorta (PDF p152)</h2>
+
+
+<h3>Zorunlu Mali Sorumluluk Sigortası (trafik sigortası)</h3>
+<blockquote>
+<p><em>"Bir motorlu aracın işletmesinin bir kimsenin </em><em>ölümü, yaralanmasına</em><em> veya bir şeyin </em><em>zarara uğramasına</em><em> neden olması halinde </em><em>motorlu aracı işletenin sorumluluğunu karşılamak üzere yapılması zorunlu sigorta</em><em>ya </em><em>Zorunlu Mali Sorumluluk Sigortası</em><em> denir."</em></p>
+<p><em>"Zorunlu mali sorumluluk sigortası bulunmayan araçlar, </em><em>trafikten men edilir.</em><em>"</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Değer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Süresi</strong></td>
+<td><strong>12 ay</strong> — yıllık yenilenir</td>
+</tr>
+<tr>
+<td><strong>Eksikse</strong></td>
+<td><strong>Trafikten men</strong></td>
+</tr>
+<tr>
+<td><strong>Çağrı durumu</strong></td>
+<td>Sigortasız araç → kazada <strong>yetkili çağrılması zorunlu</strong> <em>(bkz: <a href="28-kaza-tutanagi-sorumluluklar-kusurlar.md">28-kaza-tutanagi-sorumluluklar-kusurlar.md</a>)</em></td>
+</tr>
+</tbody>
+</table>
+<h3>Otobüsler için ek sigorta</h3>
+<blockquote>
+<p><em>"Otobüslerin </em><em>'Zorunlu koltuk ferdi kaza sigortası'</em><em> yaptırmadan trafiğe çıkmasına izin verilmez."</em></p>
+</blockquote>
+<p>Otobüslerde <strong>iki</strong> zorunlu sigorta vardır: trafik sigortası + koltuk ferdi kaza sigortası.</p>
+<h3>Sürücü kusur sorumluluğu</h3>
+<blockquote>
+<p><em>"</em><em>Araç sahibi, araç sürücüsünün kusurundan sorumludur.</em><em>"</em></p>
+</blockquote>
+<p>If you lend your car to someone else, <strong>you (the owner) are also liable</strong> for their fault.</p>
+<h3>Kasko sigortası</h3>
+<blockquote>
+<p><em>"Kasko sigortası </em><em>zorunlu olmayıp isteğe bağlıdır.</em><em>"</em></p>
+</blockquote>
+<p><strong>Kasko = optional</strong> (covers your own car damage; trafik sigortası only covers third parties).</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Zorunlu mali sorumluluk (trafik) sigortası 12 ay süreli, eksikse araç trafikten men edilir.</strong></p>
+<p><strong>Otobüslerde ek olarak zorunlu koltuk ferdi kaza sigortası vardır.</strong></p>
+<p><strong>Araç sahibi sürücünün kusurundan sorumludur.</strong></p>
+<p><strong>Kasko sigortası ZORUNLU DEĞİL, isteğe bağlıdır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-154.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-154.png" alt="Ders kitabı — Sayfa 154: Trafik denetimlerinde neler kontrol edilir?" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 154: Trafik denetimlerinde neler kontrol edilir? <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-154.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Trafik Denetimlerinde Kontrol Edilen Evraklar (PDF p154)</h2>
+
+
+<blockquote>
+<p><em>"Trafik denetimlerinde </em><em>Ehliyet – Ruhsat!</em><em> kontrol edilir."</em></p>
+</blockquote>
+<h3>Sırayla</h3>
+<ol>
+<li><strong>Ehliyet</strong> — sahte mi? aracın sınıfına uygun mu?</li>
+<li><strong>Ruhsat cüzdanı</strong> — içindeki evraklar:</li>
+<li><strong>Tescil Belgesi</strong></li>
+<li><strong>Trafik Belgesi</strong></li>
+<li><strong>Sigorta evrakları</strong></li>
+</ol>
+<h3>Trafik belgesi muayene tarihi</h3>
+<blockquote>
+<p><em>"Kontrollerde Trafik belgesi üzerindeki </em><em>muayene tarihleri</em><em> ve Trafik sigorta belgesindeki tarihler kontrol edilir, </em><em>muayene tarihi geçmiş ise veya sigortası yenilenmemişse ceza verilir.</em><em>"</em></p>
+</blockquote>
+<p>Both <strong>muayene</strong> and <strong>sigorta</strong> dates are checked at every roadside check. Either expired = ceza.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Trafik denetiminde kontrol edilenler: ehliyet + tescil belgesi + trafik belgesi + sigorta evrakları. Muayenesi/sigortası geçmiş araca ceza verilir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-156.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-156.png" alt="Ders kitabı — Sayfa 156: ARAÇLARIN TESCİLİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 156: ARAÇLARIN TESCİLİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-156.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/trafik-ve-cevre/page-155.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-155.png" alt="Ders kitabı — Sayfa 155: ARAÇLARIN TESCİLİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 155: ARAÇLARIN TESCİLİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-155.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Araçların Tescili (PDF pp 155–156)</h2>
+
+
+<h3>İlk tescil süresi</h3>
+<blockquote>
+<p><em>"İlk defa tescili yapılacak araçların sahipleri, satın alma veya gümrükten çekme tarihinden itibaren </em><em>3 ay içinde</em><em> tescil yaptırmak üzere gerekli bilgi ve belgelerle yazılı olarak müracaat etmek zorundadırlar."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Durum</th>
+<th>Süre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>İlk defa tescil (yeni araç / gümrükten çıkış)</strong></td>
+<td><strong>3 ay içinde</strong></td>
+</tr>
+<tr>
+<td><strong>El değiştirme (ikinci el alım)</strong></td>
+<td><strong>1 ay içinde</strong> kendi adına tescil</td>
+</tr>
+<tr>
+<td><strong>Teknik değişiklik veya adres değişikliği</strong></td>
+<td><strong>30 gün içinde</strong> bildirim</td>
+</tr>
+</tbody>
+</table>
+<h3>İlk tescil için gerekli evraklar</h3>
+<ul>
+<li>Aracın faturası</li>
+<li>Taşıt alım vergisi ödeme belgesi</li>
+<li>Teknik belge (karayolu uygunluk belgesi)</li>
+<li>Zorunlu mali sorumluluk sigorta belgesi</li>
+<li>Motorlu taşıtlar vergisi ödeme belgesi</li>
+<li>Çevre kirliliği önleme fonu ödeme belgesi</li>
+</ul>
+<p>→ Doğruluk kontrolü → <strong>Trafik belgesi + tescil belgesi + tescil plaka numarası verilir.</strong></p>
+<h3>El değiştirme prosedürü</h3>
+<ol>
+<li>Satıcı vergi dairesinden <strong>"Borcu yoktur belgesi"</strong> alır</li>
+<li>Alıcı + satıcı <strong>notere</strong> gider</li>
+<li>Noter <strong>satış işlemini</strong> yapar</li>
+<li>Noter evrakı <strong>tescil kuruluşuna</strong> gönderir</li>
+<li>Tescil belgesi yeni sahibine <strong>yeniden düzenlenir</strong></li>
+</ol>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Yeni araç: 3 ay içinde tescil. İkinci el: 1 ay içinde tescil. Teknik/adres değişikliği: 30 gün bildirim.</strong></p>
+<p><strong>El değiştirme: vergi borcu yok belgesi → noter → tescil kuruluşu.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-157.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-157.png" alt="Ders kitabı — Sayfa 157: TRAFİK BELGESİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 157: TRAFİK BELGESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-157.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Trafik Belgesi (PDF p157)</h2>
+
+
+<blockquote>
+<p><em>"Trafik belgesi tescil işlemleri tamamlanmış araçların, </em><em>trafiğe çıkarılmasına müsaade edilen</em><em> ve </em><em>muayene sürelerini belirleyen</em><em> bir belgedir."</em></p>
+</blockquote>
+<ul>
+<li>Her muayene sonunda muayene istasyonu <strong>belgenin muayene bölümüne kayıt yapar</strong> + tasdik + imza.</li>
+<li>Belgenin <strong>kaybolması</strong> veya <strong>muayene bölümlerinin bitmesi</strong> halinde herhangi bir tescil biriminde yenilenir.</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Trafik belgesi: aracın trafiğe çıkma izni + muayene süresini gösterir. Kaybolması veya muayene bölümünün bitmesi halinde tescil biriminde yenilenir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-158.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-158.png" alt="Ders kitabı — Sayfa 158: ARAÇLARIN MUAYENELERİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 158: ARAÇLARIN MUAYENELERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-158.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>6. SLIDE 5 — Araçların Muayene Süreleri (PDF p158)</h2>
+
+
+<blockquote>
+<p><strong>Memorize this table cold — it generates multiple exam questions every attempt.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Araç türü</th>
+<th>İlk muayene</th>
+<th>Periyodik</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Lastik tekerlekli traktör + römork</strong></td>
+<td>3 yaş sonunda</td>
+<td><strong>3 yılda bir</strong></td>
+</tr>
+<tr>
+<td><strong>Resmi/hususi otomobil + römork</strong></td>
+<td>3 yaş sonunda</td>
+<td><strong>2 yılda bir</strong></td>
+</tr>
+<tr>
+<td><strong>İki/üç tekerlekli araçlar</strong></td>
+<td>3 yaş sonunda</td>
+<td><strong>2 yılda bir</strong></td>
+</tr>
+<tr>
+<td><strong>Diğer motorlu araçlar + römorklar</strong></td>
+<td>(yıllık)</td>
+<td><strong>HER YIL</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Olağanüstü muayene</h3>
+<blockquote>
+<p><em>"Muayene süresi dolmasa bile </em><em>kazaya karışması sonucu yetkili zabıtaca muayenesi gerekli görülenler</em><em> ile, </em><em>araç üzerinde değişiklik yapılması</em><em> halinde muayenesi zorunludur."</em></p>
+</blockquote>
+<p>Two extra triggers regardless of normal interval:<br />
+1. Kaza sonrası zabıta talebi<br />
+2. Araç üzerinde teknik değişiklik</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Otomobil ve 2/3-tekerlekli araç: ilk 3 yaş + 2 yılda bir. Traktör: ilk 3 yaş + 3 yılda bir. Diğer motorlu araçlar: her yıl.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-159.png" alt="Ders kitabı — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-159.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/trafik-ve-cevre/page-160.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-160.png" alt="Ders kitabı — Sayfa 160: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 160: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-160.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>7. SLIDE 6 — Araçlarda Bulundurulması Zorunlu Malzemeler (PDF p159)</h2>
+
+
+<p>This is a <strong>per-vehicle-type expanded list</strong> — overlaps with araç-tekniği note 14 (<a href="../araç-tekniği/14-zorunlu-arac-ve-gerecler.md">../araç-tekniği/14-zorunlu-arac-ve-gerecler.md</a>) but adds vehicle-specific specs.</p>
+<h3>Yangın söndürme cihazı kapasitesi (per type)</h3>
+<table>
+<thead>
+<tr>
+<th>Araç</th>
+<th>Cihaz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Otomobil, minibüs, kamyonet</strong></td>
+<td><strong>1 kg × 1 adet</strong></td>
+</tr>
+<tr>
+<td><strong>Otobüs, kamyon, çekici</strong></td>
+<td><strong>6 kg × 1 adet</strong></td>
+</tr>
+<tr>
+<td><strong>Tehlikeli madde taşıyan araç</strong></td>
+<td><strong>6 kg × 2 adet</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Diğer per-vehicle gereçler</h3>
+<table>
+<thead>
+<tr>
+<th>Gereç</th>
+<th>Hangi araçlarda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Takoğraf</strong></td>
+<td>Otobüs, kamyon, çekiciler</td>
+</tr>
+<tr>
+<td><strong>Taksimetre</strong></td>
+<td>Taksi otomobillerinde</td>
+</tr>
+<tr>
+<td><strong>Reflektör (2 adet)</strong></td>
+<td><strong>Motosiklet ve motorlu bisiklet hariç</strong> bütün motorlu araçlar</td>
+</tr>
+<tr>
+<td><strong>Stepne</strong></td>
+<td>Şehirler arası yolcu taşıyan tüm araçlar</td>
+</tr>
+<tr>
+<td><strong>Tekerlek takozu (1 adet)</strong></td>
+<td>Otobüs + 3,5 ton üstü araçlar + iki dingilli römorklar</td>
+</tr>
+<tr>
+<td><strong>Tekerlek takozu (2 adet)</strong></td>
+<td>3+ dingilli taşıtlar + tek dingilli römorklar</td>
+</tr>
+<tr>
+<td><strong>İlk yardım çantası</strong></td>
+<td>Motosiklet, motorlu bisiklet, iş makinesi <strong>HARİÇ</strong> bütün taşıtlar</td>
+</tr>
+<tr>
+<td><strong>Engel işareti</strong></td>
+<td>Otobüs, kamyon, çekici</td>
+</tr>
+<tr>
+<td><strong>Çekme halatı, pense, tornavida, kriko, bijon anahtarı, zincir, seyyar lamba/el feneri</strong></td>
+<td>Otomobil + minibüs + otobüs + kamyonet + kamyon + çekici + L.T. traktörler</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Yangın söndürme cihazı: otomobil 1 kg×1; otobüs/kamyon 6 kg×1; tehlikeli madde aracı 6 kg×2.</strong></p>
+<p><strong>Reflektör motosiklet/motorlu bisiklet hariç tüm motorlu araçlarda 2 adet.</strong></p>
+<p><strong>İlk yardım çantası motosiklet, motorlu bisiklet ve iş makinesi hariç tüm taşıtlarda zorunludur.</strong></p>
+<p><strong>Takoğraf otobüs/kamyon/çekiciye, taksimetre taksilere zorunludur.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-161.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-161.png" alt="Ders kitabı — Sayfa 161: SÜRÜCÜ BELGELERİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 161: SÜRÜCÜ BELGELERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-161.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>8. SLIDE 7 — Sürücü Belgesi Sınıfları (PDF p161)</h2>
+
+
+<blockquote>
+<p><strong>The license-class table — guaranteed exam topic.</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Sınıf</th>
+<th>Kullandığı araç</th>
+<th>Kapsam</th>
+<th>En az öğrenim</th>
+<th>Yaş</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A1</strong></td>
+<td>Motorlu Bisiklet</td>
+<td>—</td>
+<td>İlkokul</td>
+<td><strong>17</strong></td>
+</tr>
+<tr>
+<td><strong>A2</strong></td>
+<td>Motosiklet</td>
+<td>A1</td>
+<td>İlkokul</td>
+<td><strong>17</strong></td>
+</tr>
+<tr>
+<td><strong>B</strong></td>
+<td><strong>Otomobil, Minibüs, Kamyonet</strong></td>
+<td>F</td>
+<td>İlkokul</td>
+<td><strong>18</strong></td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>Kamyon</td>
+<td>B, F</td>
+<td>İlkokul</td>
+<td><strong>22</strong></td>
+</tr>
+<tr>
+<td><strong>D</strong></td>
+<td>Çekici</td>
+<td>C, B, F</td>
+<td>İlkokul</td>
+<td><strong>22</strong></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Otobüs</td>
+<td>C, B, F</td>
+<td>İlkokul</td>
+<td><strong>22</strong></td>
+</tr>
+<tr>
+<td><strong>F</strong></td>
+<td>Lastik Tekerlekli Traktör</td>
+<td>—</td>
+<td>İlkokul</td>
+<td><strong>17</strong></td>
+</tr>
+<tr>
+<td><strong>G</strong></td>
+<td>İş Makineleri</td>
+<td>—</td>
+<td>İlkokul</td>
+<td><strong>18</strong></td>
+</tr>
+<tr>
+<td><strong>H</strong></td>
+<td>Hasta ve Sakat Araçları</td>
+<td>—</td>
+<td>İlkokul</td>
+<td><strong>17</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Aday sürücülük</h3>
+<blockquote>
+<p><em>"İlk defa sürücü belgesi alanlar </em><em>en az bir yıl süre ile aday sürücü</em><em> olarak kabul edilirler."</em></p>
+</blockquote>
+<h3>Süresi geçmiş belge</h3>
+<blockquote>
+<p><em>"Geçerlilik süresi dolan sürücü belgesi ile araç kullanan sürücüye </em><em>343 TL idari para cezası</em><em> verilir ve sürücü belgesi geri alınır."</em></p>
+</blockquote>
+<h3>Dış ülke ehliyetleri</h3>
+<blockquote>
+<p><em>"Dış ülkelerden aldıkları sürücü belgeleri ile yönetmelikte belirtilen süre ve şartlara aykırı olarak araç kullananlar hakkında her seferinde </em><em>343 TL idari para cezası</em><em> verilir."</em></p>
+</blockquote>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>A1 motorlu bisiklet 17 yaş; A2 motosiklet 17; B otomobil 18; C kamyon 22; D çekici 22; E otobüs 22; F traktör 17.</strong></p>
+<p><strong>B sınıfı = otomobil + minibüs + kamyonet, kapsamına F (traktör) dahil.</strong></p>
+<p><strong>İlk belge alan en az 1 yıl ADAY SÜRÜCÜDÜR.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-162.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-162.png" alt="Ders kitabı — Sayfa 162: SÜRÜCÜ OLUR SAĞLIK ŞARTLARI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 162: SÜRÜCÜ OLUR SAĞLIK ŞARTLARI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-162.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>9. SLIDE 8 — Sürücü Olur Sağlık Şartları (PDF p162)</h2>
+
+
+<h3>Monoküler (tek gözü görmeyen) kişiler</h3>
+<ul>
+<li><strong>A1, A2, B, F sınıfı</strong> alabilir; <strong>ticari araç KULLANAMAZ</strong></li>
+<li>Aracın <strong>iç + sağ + sol</strong> olmak üzere <strong>en az 3 ayna</strong> zorunlu</li>
+<li>Belgeye "monoküler" yazılır</li>
+<li><strong>Her yıl göz hekiminden</strong> sağlık raporu zorunlu</li>
+<li><strong>Hız sınırı:</strong> yerleşim yeri içinde <strong>50 km/s</strong>, dışında belirlenen sınırdan <strong>10 km/s daha az</strong></li>
+</ul>
+<h3>Gece körlüğü</h3>
+<ul>
+<li><strong>Gün doğumundan 1 saat öncesi → gün batımından 1 saat sonrasına kadar</strong> araç kullanabilir.</li>
+</ul>
+<h3>Renk körlüğü</h3>
+<ul>
+<li><strong>Herhangi bir koşul olmadan sürücü olabilir.</strong> (Trafik ışıkları konum bazlı tanınabildiği için.)</li>
+</ul>
+<h3>İşitme cihazı kullananlar</h3>
+<ul>
+<li><strong>B ve F sınıfı</strong> alabilir; <strong>ticari araç KULLANAMAZ</strong></li>
+</ul>
+<h3>İşitme + konuşma engelliler</h3>
+<ul>
+<li><strong>H sınıfı</strong> belge verilir</li>
+<li>Aracın <strong>arka camının sol ve sağ üst köşesine</strong> "işitme ve konuşma engelli" işareti konulur</li>
+</ul>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Monoküler: A1, A2, B, F alabilir; ticari yasak; 3 ayna; her yıl göz raporu; hız sınırı 50 (içeride) / belirlenen-10 (dışarıda).</strong></p>
+<p><strong>Renk körü hiçbir koşul olmadan sürücü olabilir.</strong></p>
+<p><strong>Gece körü gün doğumu-1 saat / gün batımı+1 saat aralığında araç kullanır.</strong></p>
+<p><strong>İşitme cihazlı: B ve F (ticari yasak). İşitme+konuşma engelli: H sınıfı + arka cam işareti.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>10. SLIDE 9 — Sürücü Belgesinin Geri Alınması (PDF p163)</h2>
+
+
+<h3>Geri alma sebepleri</h3>
+<ol>
+<li><strong>Sağlık raporu</strong> ile sürücülük yapmasında sakınca görülenler</li>
+<li><strong>Sahte / hile ile alınmış / şartsız verilmiş</strong> belge tespiti</li>
+<li><strong>100 ceza puanı</strong> doluması (aşağıda detay)</li>
+<li><strong>Ölümle sonuçlanan kazada asli kusurlu</strong> olmak → <strong>1 yıl</strong></li>
+</ol>
+<h3>100 ceza puanı kademeli yaptırım</h3>
+<blockquote>
+<p>Trafik suçunun işlendiği tarihten geriye doğru <strong>1 yıl içinde</strong> toplam:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Kez</th>
+<th>Ceza</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. defa 100 puan</strong></td>
+<td>Belge <strong>2 ay geri alınır</strong> + eğitime tabi tutulur (sürücü kursunda trafik dersi tekrar)</td>
+</tr>
+<tr>
+<td><strong>2. defa 100 puan</strong> (aynı yıl içinde)</td>
+<td>Belge <strong>4 ay geri alınır</strong> + <strong>psiko-teknik değerlendirme</strong> + <strong>psikiyatri muayenesi</strong></td>
+</tr>
+<tr>
+<td><strong>3. defa 100 puan</strong> (aynı yıl içinde)</td>
+<td>Belge <strong>SÜRESİZ İPTAL</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Eğitim sonrası geri alma süreci</h3>
+<ul>
+<li>Sürücü kursunda trafik dersi al</li>
+<li>MEM'den eğitim belgesi al</li>
+<li>Emniyete başvur → süre sonunda <strong>belge iade edilir</strong></li>
+</ul>
+<h3>Asli kusurlu ölümlü kaza</h3>
+<blockquote>
+<p><strong>1 yıl</strong> süreyle belge geri alınır.</p>
+</blockquote>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>1. defa 100 puan: 2 ay + eğitim. 2. defa: 4 ay + psiko-teknik + psikiyatri. 3. defa: süresiz iptal.</strong></p>
+<p><strong>Ölümle sonuçlanan kazada asli kusurlu → belge 1 yıl geri alınır.</strong></p>
+<p><strong>Sahte/hile ile alınmış belge → geri alınır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-153.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-153.png" alt="Ders kitabı — Sayfa 153: 4- Trafik suçları ve karşılığı cezalar, Ceza puanları" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 153: 4- Trafik suçları ve karşılığı cezalar, Ceza puanları <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-153.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>11. Para Cezaları (PDF p153)</h2>
+
+
+<ul>
+<li><strong>Tebliğ tarihinden 1 ay içinde</strong> ödenmezse → her geciken ay için <strong>%5 faiz</strong></li>
+<li>Toplam faiz <strong>cezanın 2 katını geçemez</strong></li>
+<li><strong>Peşin ödeme indirimi: %25</strong></li>
+<li><strong>Plakaya yazılan ceza</strong> sürücüye tebliğ + <strong>15 gün içinde</strong> peşin ödeme → <strong>%25 indirim</strong></li>
+<li>Ekonomik durum yetersizse: ilk taksit peşin + <strong>1 yıl içinde 4 eşit taksit</strong></li>
+</ul>
+<h3>Trafik suç türleri</h3>
+<ul>
+<li><strong>5–20 ceza puanı</strong> her bir ihlal için</li>
+<li><strong>Trafik mahkemeleri</strong> bakar; trafik mahkemesi yoksa <strong>Sulh Ceza Mahkemeleri</strong></li>
+<li>Tutanak düzenleyenler: <strong>EGM Trafik zabıtası, Jandarma, Ulaştırma Bakanlığı yetkilisi, KGM yetkilisi</strong></li>
+<li><strong>Fahri Trafik Müfettişliği:</strong> Karayolları Güvenliği Yüksek Kurulunca uygun görülen kişilere verilir; tutanağı <strong>1 hafta içinde</strong> trafik kuruluşuna teslim eder; ücretsizdir; görev kötüye kullanan <strong>2–6 ay hafif hapis</strong>.</li>
+</ul>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Para cezası peşin ödenince %25 indirim.</strong></p>
+<p><strong>Plakaya yazılan ceza tebliğden sonra 15 gün içinde peşin ödenirse %25 indirim.</strong></p>
+<p><strong>Her bir ihlal için 5–20 ceza puanı.</strong></p>
+<p><strong>Fahri Trafik Müfettişi tutanağı 1 hafta içinde teslim eder.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>12. Why this matters for the exam</h2>
+
+
+<ol>
+<li><strong>"Zorunlu mali sorumluluk sigortasının süresi nedir?"</strong> → <strong>12 ay</strong></li>
+<li><strong>"Kasko sigortası zorunlu mudur?"</strong> → <strong>HAYIR, isteğe bağlı</strong></li>
+<li><strong>"Yeni alınan araç kaç ay içinde tescil edilir?"</strong> → <strong>3 ay</strong></li>
+<li><strong>"İkinci el alınan araç kaç ay içinde kendi adına tescil edilir?"</strong> → <strong>1 ay</strong></li>
+<li><strong>"Otomobillerin periyodik muayene sıklığı nedir?"</strong> → <strong>2 yılda bir</strong> (ilk 3 yaş sonra)</li>
+<li><strong>"Traktörlerin periyodik muayene sıklığı?"</strong> → <strong>3 yılda bir</strong></li>
+<li><strong>"B sınıfı sürücü belgesi en az kaç yaşında alınır?"</strong> → <strong>18</strong></li>
+<li><strong>"E sınıfı (otobüs) en az kaç yaşında alınır?"</strong> → <strong>22</strong></li>
+<li><strong>"İlk belge alanlar kaç yıl aday sürücü kabul edilir?"</strong> → <strong>1 yıl</strong></li>
+<li><strong>"Renk körlüğü olanlar sürücü olabilir mi?"</strong> → <strong>EVET, hiçbir koşul olmadan</strong></li>
+<li><strong>"Monoküler kişi ticari araç kullanabilir mi?"</strong> → <strong>HAYIR</strong></li>
+<li><strong>"100 ceza puanı 1. defa dolarsa belge ne kadar süreyle geri alınır?"</strong> → <strong>2 ay</strong> + eğitim</li>
+<li><strong>"3. defa 100 puanı dolan sürücü?"</strong> → <strong>belge süresiz iptal</strong></li>
+<li><strong>"Ölümle sonuçlanan kazada asli kusurlu sürücünün belgesi ne kadar geri alınır?"</strong> → <strong>1 yıl</strong></li>
+<li><strong>"Para cezasında peşin ödeme indirimi yüzde kaçtır?"</strong> → <strong>%25</strong></li>
+<li><strong>"Tehlikeli madde aracında kaç kg yangın söndürme cihazı?"</strong> → <strong>6 kg × 2 adet</strong> <em>(araç-tekniği note 14 ile çapraz)</em></li>
+</ol>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>13. Memorize These</h2>
+
+
+<blockquote>
+<p><strong>Trafik (zorunlu mali) sigortası 12 ay; kasko isteğe bağlı; otobüs ek olarak koltuk ferdi kaza sigortası.</strong></p>
+<p><strong>Yeni araç 3 ay; ikinci el 1 ay; teknik/adres değişikliği 30 gün içinde bildirim.</strong></p>
+<p><strong>Muayene: otomobil + 2/3-tekerlekli ilk 3 yaş + 2 yılda bir; traktör 3 yılda bir; diğer motorlular her yıl.</strong></p>
+<p><strong>Sürücü belgesi sınıfları: A1 motorlu bisiklet (17), A2 motosiklet (17), B otomobil (18), C kamyon (22), D çekici (22), E otobüs (22), F traktör (17), G iş makinesi (18), H özel araç (17). Aday sürücü 1 yıl.</strong></p>
+<p><strong>Sağlık: monoküler ticari yasak + 3 ayna + yılda bir göz raporu + hız: yerleşim içi 50, dışarda belirlenen-10. Gece körü gün doğumu-1/gün batımı+1 arasında. Renk körü serbest.</strong></p>
+<p><strong>100 puan: 1.→2 ay + eğitim; 2.→4 ay + psiko-teknik+psikiyatri; 3.→süresiz iptal. Ölümle asli kusurlu → 1 yıl geri alma.</strong></p>
+<p><strong>Para cezası peşin %25 indirim; tebliğ + 15 gün içinde plakaya yazılan ceza için aynı indirim.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-153.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-153.png" alt="Ders kitabı — Sayfa 153: 4- Trafik suçları ve karşılığı cezalar, Ceza puanları" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 153: 4- Trafik suçları ve karşılığı cezalar, Ceza puanları <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-153.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>14. Consolidated Exam Vocabulary</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zorunlu mali sorumluluk sigortası</td>
+<td>Mandatory liability insurance</td>
+<td>Trafik sigortası</td>
+</tr>
+<tr>
+<td>Trafik sigortası</td>
+<td>Traffic insurance</td>
+<td>Aynı</td>
+</tr>
+<tr>
+<td>Kasko sigortası</td>
+<td>Comprehensive (own-vehicle) insurance</td>
+<td>İsteğe bağlı</td>
+</tr>
+<tr>
+<td>Koltuk ferdi kaza sigortası</td>
+<td>Seat individual accident insurance</td>
+<td>Otobüs ek zorunlu</td>
+</tr>
+<tr>
+<td>Trafikten men</td>
+<td>Banned from traffic</td>
+<td>Sigortasız araca</td>
+</tr>
+<tr>
+<td>Tescil</td>
+<td>Registration</td>
+<td>Plaka almak</td>
+</tr>
+<tr>
+<td>Tescil belgesi</td>
+<td>Registration document</td>
+<td>Ruhsat içinde</td>
+</tr>
+<tr>
+<td>Trafik belgesi</td>
+<td>Traffic document</td>
+<td>Muayene tarihi</td>
+</tr>
+<tr>
+<td>Ruhsat cüzdanı</td>
+<td>Vehicle license folder</td>
+<td>Tescil + trafik + sigorta</td>
+</tr>
+<tr>
+<td>Muayene</td>
+<td>Inspection</td>
+<td>Periyodik</td>
+</tr>
+<tr>
+<td>Periyodik muayene</td>
+<td>Periodic inspection</td>
+<td>Sıklık aracın türüne göre</td>
+</tr>
+<tr>
+<td>Sürücü belgesi</td>
+<td>Driving license</td>
+<td>Ehliyet</td>
+</tr>
+<tr>
+<td>Aday sürücü</td>
+<td>Probationary driver</td>
+<td>İlk 1 yıl</td>
+</tr>
+<tr>
+<td>Monoküler</td>
+<td>Monocular (one-eyed)</td>
+<td>Tek göz görmeyen</td>
+</tr>
+<tr>
+<td>Gece körlüğü</td>
+<td>Night blindness</td>
+<td>Saat sınırlı</td>
+</tr>
+<tr>
+<td>Renk körlüğü</td>
+<td>Color blindness</td>
+<td>Sınırsız</td>
+</tr>
+<tr>
+<td>İşitme cihazı</td>
+<td>Hearing aid</td>
+<td>B + F sınıfı</td>
+</tr>
+<tr>
+<td>Hasta ve sakat aracı</td>
+<td>Disabled-driver vehicle</td>
+<td>H sınıfı</td>
+</tr>
+<tr>
+<td>Tescil kuruluşu</td>
+<td>Registration office</td>
+<td>EGM birimi</td>
+</tr>
+<tr>
+<td>Noter</td>
+<td>Notary</td>
+<td>El değiştirme adımı</td>
+</tr>
+<tr>
+<td>Borcu yoktur belgesi</td>
+<td>No-debt certificate</td>
+<td>Vergi dairesinden</td>
+</tr>
+<tr>
+<td>Aday sürücü</td>
+<td>Probationary driver</td>
+<td>İlk 1 yıl</td>
+</tr>
+<tr>
+<td>Ceza puanı</td>
+<td>Penalty point</td>
+<td>5–20 her ihlalde</td>
+</tr>
+<tr>
+<td>100 ceza puanı</td>
+<td>100 penalty points</td>
+<td>Belge geri alma eşiği</td>
+</tr>
+<tr>
+<td>Geri alma</td>
+<td>Suspension</td>
+<td>Geçici belge iadesi</td>
+</tr>
+<tr>
+<td>İptal</td>
+<td>Revocation</td>
+<td>Süresiz</td>
+</tr>
+<tr>
+<td>Süresiz iptal</td>
+<td>Indefinite revocation</td>
+<td>3. defa 100 puan</td>
+</tr>
+<tr>
+<td>Psiko-teknik değerlendirme</td>
+<td>Psycho-technical evaluation</td>
+<td>4-aylık geri almada</td>
+</tr>
+<tr>
+<td>Psikiyatri muayenesi</td>
+<td>Psychiatric exam</td>
+<td>4-aylık geri almada</td>
+</tr>
+<tr>
+<td>Asli kusurlu</td>
+<td>Primarily at fault</td>
+<td>Ölümlü kazada → 1 yıl</td>
+</tr>
+<tr>
+<td>Fahri Trafik Müfettişi</td>
+<td>Honorary Traffic Inspector</td>
+<td>Yüksek Kurul atar</td>
+</tr>
+<tr>
+<td>Tutanak</td>
+<td>Report</td>
+<td>1 hafta içinde teslim</td>
+</tr>
+<tr>
+<td>Para cezası</td>
+<td>Monetary fine</td>
+<td>%25 peşin indirim</td>
+</tr>
+<tr>
+<td>Tebliğ</td>
+<td>Notification</td>
+<td>15 gün içinde ödeme</td>
+</tr>
+<tr>
+<td>Faiz</td>
+<td>Interest</td>
+<td>%5/ay, max ceza × 2</td>
+</tr>
+<tr>
+<td>Trafik mahkemesi</td>
+<td>Traffic court</td>
+<td>Belge davalarına bakar</td>
+</tr>
+<tr>
+<td>Sulh Ceza Mahkemesi</td>
+<td>Magistrate Criminal Court</td>
+<td>Trafik mahk. yoksa</td>
+</tr>
+<tr>
+<td>Yangın söndürme cihazı</td>
+<td>Fire extinguisher</td>
+<td>Kg ve adet aracın türüne göre</td>
+</tr>
+<tr>
+<td>Reflektör</td>
+<td>Reflective triangle</td>
+<td>2 adet (motosiklet hariç)</td>
+</tr>
+<tr>
+<td>Stepne</td>
+<td>Spare tire</td>
+<td>Şehirlerarası yolcu araçları</td>
+</tr>
+<tr>
+<td>İlk yardım çantası</td>
+<td>First-aid kit</td>
+<td>Motosiklet/iş mak. hariç</td>
+</tr>
+<tr>
+<td>Takoğraf</td>
+<td>Tachograph</td>
+<td>Otobüs/kamyon/çekici</td>
+</tr>
+<tr>
+<td>Taksimetre</td>
+<td>Taximeter</td>
+<td>Taksiler</td>
+</tr>
+<tr>
+<td>Tekerlek takozu</td>
+<td>Wheel chock</td>
+<td>Ağır araçlar</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>15. Cross-references</h2>
+
+
+<ul>
+<li><strong>Alkol-spesifik belge geri alma + ceza tablosu:</strong> <a href="12-alkol-ve-surme-yasakları.md">12-alkol-ve-surme-yasakları.md</a>.</li>
+<li><strong>Asli kusurlu kavramı (ölümlü kaza → 1 yıl):</strong> <a href="29-cevre-asli-kusur-saygisiz-surme.md">29-cevre-asli-kusur-saygisiz-surme.md</a>.</li>
+<li><strong>Kazada zabıta çağırma şartları (sigortasız/ehliyetsiz):</strong> <a href="28-kaza-tutanagi-sorumluluklar-kusurlar.md">28-kaza-tutanagi-sorumluluklar-kusurlar.md</a>.</li>
+<li><strong>Bisiklet/motosiklet yaş şartı (11/13):</strong> <a href="27-bisiklet-motosiklet-kurallari.md">27-bisiklet-motosiklet-kurallari.md</a>.</li>
+<li><strong>Mandatory equipment baseline:</strong> <a href="../araç-tekniği/14-zorunlu-arac-ve-gerecler.md">../araç-tekniği/14-zorunlu-arac-ve-gerecler.md</a>.</li>
+<li><strong>Hangi kurum hangi belgeyi verir:</strong> <a href="30-trafik-kuruluslari.md">30-trafik-kuruluslari.md</a> — EGM (sürücü belgesi + tescil + plaka), KGM (muayene + ağırlık), MEB (sertifika).</li>
+</ul></div></section><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-153.html">📄 Sayfa 153: 4- Trafik suçları ve karşılığı cezalar, Ceza puanları<span class="score">339.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html">📄 Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER<span class="score">291.7</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-161.html">📄 Sayfa 161: SÜRÜCÜ BELGELERİ<span class="score">285.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html">📄 Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:<span class="score">277.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-152.html">📄 Sayfa 152: HUKUKİ SORUMLULUK VE SİGORTA<span class="score">246.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-156.html">📄 Sayfa 156: ARAÇLARIN TESCİLİ<span class="score">231.5</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/index.html">🖼️ Tescil, Belge, Çevre, Psikoloji<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/index.html">🖼️ Kazalar, Cezalar, Sigorta<span class="score">6 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

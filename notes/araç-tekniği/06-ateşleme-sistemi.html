@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ateşleme Sistemi — Ignition System | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 06-ateşleme-sistemi</span>
+</div>
+<div class="content">
+<h1>Ateşleme Sistemi — Ignition System</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 19 + portal e-kitap (<code>01-aracla-ilgili-temel-bilgiler.md</code>)<br />
+<strong>Note:</strong> Hoca İnayet skipped this chapter entirely in the live class. Drafted from the polished MEB textbook.</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Ateşleme sistemi:</strong> Sıkıştırılmış benzin–hava karışımını silindir içinde <strong>kıvılcım</strong> ile ateşleyerek yanmayı ve gücü başlatan sistemdir.<br />
+<em>(The ignition system ignites the compressed petrol–air mixture inside the cylinder with a spark, starting combustion and producing power.)</em></p>
+</blockquote>
+<p>The ignition system is <strong>the spark provider</strong>. Its only job: at the precise moment the piston is at the top of its compression stroke, deliver a fat, high-voltage spark across the buji (spark plug) gap so the compressed fuel mixture explodes. Only <strong>gasoline (benzinli) engines</strong> have an ignition system in this sense — diesel engines self-ignite from compression heat (no buji).</p>
+<p><strong>The flow:</strong></p>
+<pre><code>AKÜ (12 V) ─▶ KONTAK ANAHTARI ─▶ ENDÜKSİYON BOBİNİ (12 V → 15 000–25 000 V)
+            ─▶ DİSTRİBÜTÖR (sends current to the right cylinder's plug)
+            ─▶ BUJİ (spark jumps the gap → ignites mixture)
+</code></pre>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%202/drive-download-20260416T070942Z-3-001/CleanShot-14-04-2026%20at%208%E2%80%AF.56.47%402x.png" alt="Sınıfta gösterilen slayt (8 :56:47" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-019.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/02-atesleme-aku/page-019.png" alt="Ders kitabı — Sayfa 19: ATEġLEME SĠSTEMĠNĠN PARÇALARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 19: ATEġLEME SĠSTEMĠNĠN PARÇALARI <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-019.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/arac-teknigi/page-014.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/02-atesleme-aku/page-014.png" alt="Ders kitabı — Sayfa 14: ATEġLEME SĠSTEMĠ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 14: ATEġLEME SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-014.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 3</div><a href="../../ders-kitabi/arac-teknigi/page-018.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/02-atesleme-aku/page-018.png" alt="Ders kitabı — Sayfa 18: A- Buji Kablosu, B-Distribütör, C-Tevzi Makarası, D-Endiksiyon Bobini kablosu, E" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 18: A- Buji Kablosu, B-Distribütör, C-Tevzi Makarası, D-Endiksiyon Bobini kablosu, E <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-018.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Ateşleme Sisteminin Parçaları (4 main parts)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>A bullet list of the 4 ignition components with their görev (purpose) one-liners.</p>
+<h3>Clean English explanation</h3>
+<p>The ignition system has just <strong>four critical parts</strong>. Memorize the name + one-line job of each.</p>
+<h4>1. <strong>KONTAK ANAHTARI</strong> — Ignition switch / key</h4>
+<blockquote>
+<p><em>"Aracın elektrik devresini açan – kapatan, motoru çalıştıran ve durduran anahtara kontak anahtarı denir."</em></p>
+</blockquote>
+<p>The switch that <strong>opens and closes the car's electrical circuit</strong>, and starts and stops the engine. Same physical key as in the marş sistemi — kontak anahtarı serves both systems.</p>
+<h4>2. <strong>ENDÜKSİYON BOBİNİ</strong> — Induction coil (ignition coil)</h4>
+<blockquote>
+<p><em>"Akünün 12 Voltluk enerjisini 15 000 ile 25 000 volt arasında yükselten. Yüksek gerilim üreten parçadır."</em></p>
+</blockquote>
+<p><strong>Steps the akü's 12 V up to 15 000–25 000 V</strong> — the high voltage needed to fire a buji. This is the <strong>single most exam-tested part</strong> of the ignition system.</p>
+<blockquote>
+<p><strong>Critical exam number:</strong> 12 V → <strong>15 000–25 000 V</strong>.</p>
+</blockquote>
+<h4>3. <strong>DİSTRİBÜTÖR</strong> — Distributor</h4>
+<blockquote>
+<p><em>"Sırası gelen bujiye elektrik akımı verir."</em></p>
+</blockquote>
+<p><strong>Sends the high-voltage current to whichever buji is next in the firing order.</strong> Acts like a rotary switch — at any instant only one cylinder is firing, and the distribütör routes the spark to the right one.</p>
+<h4>4. <strong>BUJİ</strong> — Spark plug</h4>
+<blockquote>
+<p><em>"Ateşlemeyi sağlar."</em></p>
+</blockquote>
+<p>The component that <strong>actually produces the spark</strong> inside the cylinder. The spark jumps a small air gap at the tip of the buji and ignites the compressed benzin–hava karışımı.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Endüksiyon bobini, akünün 12 voltluk enerjisini 15 000–25 000 volta yükseltir.</strong><br />
+<em>(The induction coil steps battery 12 V up to 15 000–25 000 V.)</em></p>
+</blockquote>
+<p>If the exam asks "Aracın yüksek gerilimini sağlayan parça hangisidir?" → <strong>Endüksiyon bobini</strong>.</p>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%201/drive-download-20260416T071122Z-3-001/CleanShot-13-04-2026%20at%208%E2%80%AF.32.41%402x.png" alt="Sınıfta gösterilen slayt (8 :32:41" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-019.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/02-atesleme-aku/page-019.png" alt="Ders kitabı — Sayfa 19: ATEġLEME SĠSTEMĠNĠN PARÇALARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 19: ATEġLEME SĠSTEMĠNĠN PARÇALARI <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-019.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Buji Arızaları (Spark Plug Faults &amp; Symptoms)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>A short paragraph listing the four ways a buji can fail to fire and the symptoms.</p>
+<h3>When a buji can't fire</h3>
+<p>A buji <strong>cannot ignite the mixture</strong> if any of these are true:<br />
+- <strong>Kurum bağlamış</strong> — fouled / coked with carbon deposits<br />
+- <strong>Kablosu çıkmış</strong> — its cable is unplugged<br />
+- <strong>Islanmış</strong> — it's wet (water, fuel)<br />
+- (Added by general knowledge) <strong>Tırnak/elektrot aşınmış</strong> — electrode is worn out</p>
+<h3>Symptoms when one buji misfires</h3>
+<blockquote>
+<p><em>"Bujilerden biri ateşlemezse motor titreyerek, sarsıntılı ve düzensiz çalışır (motosiklet çalışmaz). Motor güçten düşer ve yakıt sarfiyatı artar."</em></p>
+</blockquote>
+<p>If even one buji is dead:<br />
+- <strong>Motor titrer</strong> — engine vibrates / shakes<br />
+- <strong>Sarsıntılı ve düzensiz çalışır</strong> — runs roughly and unevenly<br />
+- <strong>(Bir motosiklette) motor hiç çalışmaz</strong> — a motorcycle (typically 1-cylinder) won't run at all<br />
+- <strong>Motor güçten düşer</strong> — engine loses power<br />
+- <strong>Yakıt sarfiyatı artar</strong> — fuel consumption goes up</p>
+<h3>Maintenance rule</h3>
+<blockquote>
+<p><em>"Bujiler belirli kilometrelerde değiştirilmelidir."</em></p>
+</blockquote>
+<p><strong>Bujis must be replaced at the kilometre interval specified in the service book</strong> (typically every ~20 000–30 000 km depending on plug type — but on the exam, the safe answer is <strong>"servis kitabında belirtilen sürelerde"</strong>).</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Bir buji ateşleme yapmazsa motor sarsıntılı çalışır, güçten düşer ve yakıt tüketimi artar.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%201/drive-download-20260416T071122Z-3-001/CleanShot-13-04-2026%20at%208%E2%80%AF.33.19%402x.png" alt="Sınıfta gösterilen slayt (8 :33:19" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-011.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/01-motor-genel/page-011.png" alt="Ders kitabı — Sayfa 11: DĠZEL MOTORLARIN ÇALIġMA SĠSTEMĠ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 11: DĠZEL MOTORLARIN ÇALIġMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-011.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/arac-teknigi/page-005.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/01-motor-genel/page-005.png" alt="Ders kitabı — Sayfa 5: 3-Yakıtlarına Göre Motorlar:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 5: 3-Yakıtlarına Göre Motorlar: <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-005.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Benzinli vs Dizel: Ateşleme Farkı</h2>
+
+
+<h3>What the slide showed</h3>
+<p>The portal e-kitap explicitly contrasts how the two engine types ignite their fuel.</p>
+<h3>Clean English explanation</h3>
+<p>This is one of the <strong>most repeated exam contrasts</strong> in Araç Tekniği. The two engine types ignite their fuel by completely different physics.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Benzinli motor</strong></th>
+<th><strong>Dizel motor</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fuel</td>
+<td>Benzin</td>
+<td>Mazot / motorin</td>
+</tr>
+<tr>
+<td>What gets compressed</td>
+<td><strong>Benzin–hava karışımı</strong></td>
+<td><strong>Sadece hava</strong></td>
+</tr>
+<tr>
+<td>Ignition trigger</td>
+<td><strong>Buji kıvılcımı</strong> (spark plug)</td>
+<td><strong>Sıkıştırılmış sıcak hava</strong> + enjektörden püskürtülen yakıt</td>
+</tr>
+<tr>
+<td>Has a buji?</td>
+<td><strong>Evet</strong> — her silindirde bir buji</td>
+<td><strong>Hayır</strong> — buji yoktur</td>
+</tr>
+<tr>
+<td>Has a kızdırma bujisi?</td>
+<td>Hayır</td>
+<td><strong>Evet</strong> — sadece soğuk hava ön ısıtması için (combustion plug değil)</td>
+</tr>
+<tr>
+<td>Sıkıştırma oranı</td>
+<td>Düşük</td>
+<td><strong>Yüksek</strong> (sıkıştırma ısısı yakıtı tutuşturmaya yeter)</td>
+</tr>
+</tbody>
+</table>
+<h3>The two-bujis trap</h3>
+<p>Diesels have a part called <strong>kızdırma (ısıtma) bujisi</strong> — <em>"glow plug"</em>. This is <strong>not an ignition spark plug</strong>. It only <strong>pre-warms the cylinder</strong> in cold weather so the compressed air gets hot enough to self-ignite the diesel. Once the engine is running, the glow plug is not used.</p>
+<blockquote>
+<p><strong>Exam trap:</strong> "Dizel motorda buji var mıdır?" — answer: <strong>Yok</strong> (no spark-ignition buji). Even though kızdırma bujisi exists, the question almost always means the spark plug. Real exam wording usually says "ateşleme bujisi" to clarify.</p>
+</blockquote>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Benzinli motorda yakıt buji ile ateşlenir. Dizel motorda yakıt sıkıştırılmış sıcak havanın üzerine püskürtülerek kendiliğinden tutuşur.</strong></p>
+</blockquote>
+<hr />
+</div></section><h2>5. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Aracın yüksek gerilimini sağlayan parça hangisidir?"</strong> → <strong>Endüksiyon bobini</strong> (12 V → 15 000–25 000 V)</li>
+<li><strong>"Sırası gelen bujiye elektrik akımı veren parça hangisidir?"</strong> → <strong>Distribütör</strong></li>
+<li><strong>"Bir bujinin arızalanması durumunda aşağıdakilerden hangisi olmaz?"</strong> — distractor will say "yakıt sarfiyatı azalır" — wrong, <strong>artar</strong>.</li>
+<li><strong>"Dizel motorlarda ateşleme nasıl olur?"</strong> → <strong>Sıkıştırılmış sıcak hava üzerine yakıt püskürtülür</strong>, buji ile değil.</li>
+<li><strong>"Bujiler ne zaman değiştirilir?"</strong> → <strong>Servis kitabında belirtilen kilometrelerde</strong>.</li>
+<li><strong>Distractor questions</strong> — "ateşleme sisteminin parçası değildir" — typical wrong answers: karbüratör, marş motoru, alternatör, radyatör, enjektör. Memorize the 4 real parts.</li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>Ateşleme sistemi: sıkıştırılmış yakıt-hava karışımını buji ile ateşleyerek gücü oluşturan sistemdir.</strong><br />
+<em>(Ignition system: ignites the compressed fuel-air mixture with the spark plug to produce power.)</em></p>
+<p><strong>Ateşleme sisteminin parçaları: kontak anahtarı, endüksiyon bobini, distribütör, buji.</strong><br />
+<em>(Parts: ignition switch, induction coil, distributor, spark plug.)</em></p>
+<p><strong>Endüksiyon bobini akünün 12 voltunu 15 000–25 000 volta yükseltir.</strong><br />
+<em>(The induction coil steps battery 12 V up to 15 000–25 000 V.)</em></p>
+<p><strong>Distribütör, sırası gelen bujiye elektrik akımı gönderir.</strong></p>
+<p><strong>Buji ateşlemeyi sağlar; arızalı buji motoru sarsıntılı çalıştırır, güçten düşürür, yakıt sarfiyatını artırır.</strong></p>
+<p><strong>Dizel motorlarda buji yoktur; ateşleme sıkıştırılmış sıcak hava ile yapılır.</strong></p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary — Ateşleme Sistemi</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ateşleme sistemi</td>
+<td>Ignition system</td>
+<td>The whole spark-providing system</td>
+</tr>
+<tr>
+<td>Ateşleme</td>
+<td>Ignition</td>
+<td>The spark event</td>
+</tr>
+<tr>
+<td>Ateşlemek</td>
+<td>To ignite</td>
+<td>Verb</td>
+</tr>
+<tr>
+<td>Buji</td>
+<td>Spark plug</td>
+<td>Tip-mounted spark generator</td>
+</tr>
+<tr>
+<td>Endüksiyon bobini</td>
+<td>Induction coil / ignition coil</td>
+<td>12 V → 15 000–25 000 V step-up</td>
+</tr>
+<tr>
+<td>Bobin</td>
+<td>Coil</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>Distribütör</td>
+<td>Distributor</td>
+<td>Routes spark to the next cylinder</td>
+</tr>
+<tr>
+<td>Kontak anahtarı</td>
+<td>Ignition switch / key</td>
+<td>Master on/off</td>
+</tr>
+<tr>
+<td>Yüksek gerilim</td>
+<td>High voltage</td>
+<td>The 15–25 kV the bobin produces</td>
+</tr>
+<tr>
+<td>Volt</td>
+<td>Volt</td>
+<td>Voltage unit</td>
+</tr>
+<tr>
+<td>Kıvılcım</td>
+<td>Spark</td>
+<td>Electrical arc at the buji tip</td>
+</tr>
+<tr>
+<td>Sıkıştırılmış</td>
+<td>Compressed</td>
+<td>Past participle — air/mixture squeezed by piston</td>
+</tr>
+<tr>
+<td>Yakıt-hava karışımı</td>
+<td>Fuel-air mixture</td>
+<td>What the buji ignites</td>
+</tr>
+<tr>
+<td>Kurum bağlamak</td>
+<td>To carbon-foul</td>
+<td>Buji failure mode</td>
+</tr>
+<tr>
+<td>Kablo</td>
+<td>Wire / cable</td>
+<td>Buji cable</td>
+</tr>
+<tr>
+<td>Islanmak</td>
+<td>To get wet</td>
+<td>Buji failure mode</td>
+</tr>
+<tr>
+<td>Sarsıntılı</td>
+<td>Shaky / juddery</td>
+<td>Misfire symptom</td>
+</tr>
+<tr>
+<td>Düzensiz</td>
+<td>Irregular</td>
+<td>Misfire symptom</td>
+</tr>
+<tr>
+<td>Güçten düşmek</td>
+<td>To lose power</td>
+<td>Misfire symptom</td>
+</tr>
+<tr>
+<td>Yakıt sarfiyatı</td>
+<td>Fuel consumption</td>
+<td>Goes up when ignition is bad</td>
+</tr>
+<tr>
+<td>Tutuşmak</td>
+<td>To catch fire / ignite</td>
+<td>Self-ignition in diesels</td>
+</tr>
+<tr>
+<td>Kendiliğinden tutuşma</td>
+<td>Self-ignition</td>
+<td>Diesel principle</td>
+</tr>
+<tr>
+<td>Kızdırma bujisi</td>
+<td>Glow plug</td>
+<td>Diesel cold-start pre-heater (NOT a spark plug)</td>
+</tr>
+<tr>
+<td>Püskürtmek</td>
+<td>To spray / inject</td>
+<td>What the enjektör does</td>
+</tr>
+<tr>
+<td>Sıkıştırma oranı</td>
+<td>Compression ratio</td>
+<td>Higher in diesels</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li><strong>Mirror / dependency:</strong> <a href="03-marş-sistemi.md">03-marş-sistemi.md</a> — kontak anahtarı is shared. The marş sistemi cranks the engine until the ateşleme sistemi can take over.</li>
+<li><strong>Fuel side:</strong> <a href="01-yakıt-sistemi.md">01-yakıt-sistemi.md</a> — the karbüratör/enjektör delivers what the buji ignites.</li>
+<li><strong>Power chain:</strong> kontak anahtarı → bobin → distribütör → buji → silindir.</li>
+<li><strong>Exam trap:</strong> Don't confuse <strong>buji</strong> (gasoline spark plug) with <strong>kızdırma bujisi</strong> (diesel glow plug — only pre-heats, no spark).</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/arac-teknigi/page-019.html">📄 Sayfa 19: ATEşLEME SİSTEMİNİN PARÇALARI<span class="score">226.8</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-014.html">📄 Sayfa 14: ATEşLEME SİSTEMİ<span class="score">123.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-010.html">📄 Sayfa 10: BENZİN-LPG’Lİ MOTORLARIN ÇALIşMA SİSTEMİ<span class="score">108.0</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-011.html">📄 Sayfa 11: DİZEL MOTORLARIN ÇALIşMA SİSTEMİ<span class="score">98.1</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-005.html">📄 Sayfa 5: 3-Yakıtlarına Göre Motorlar:<span class="score">77.5</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-023.html">📄 Sayfa 23: BENZİNLİ MOTOR<span class="score">76.4</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/arac-teknigi-kitabi/02-atesleme-aku/index.html">🖼️ Ateşleme & Akü<span class="score">4 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/01-motor-genel/index.html">🖼️ Motor: Sınıflandırma & Çalışma<span class="score">7 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/03-yakit-sistemi/index.html">🖼️ Yakıt Sistemi<span class="score">5 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

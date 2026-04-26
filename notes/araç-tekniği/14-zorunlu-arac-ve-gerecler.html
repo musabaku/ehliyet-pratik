@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Araçta Bulundurulması Zorunlu Araç ve Gereçler — Mandatory Equipment | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 14-zorunlu-arac-ve-gerecler</span>
+</div>
+<div class="content">
+<h1>Araçta Bulundurulması Zorunlu Araç ve Gereçler — Mandatory Equipment</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Portal e-kitap (<code>06-aracta-bulundurmasi-zorunlu-arac-ve-gerecler.md</code>) — PDF ders kitabı doesn't cover this list separately.</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Araçta bulundurulması zorunlu araç ve gereçler:</strong> Karayolları Trafik Kanunu'na göre her aracın <strong>mevzuat gereği</strong> içinde bulundurması gereken güvenlik, ilk yardım ve onarım malzemeleridir.<br />
+<em>(Mandatory in-vehicle equipment: the safety, first-aid, and repair items every vehicle is legally required to carry by traffic law.)</em></p>
+</blockquote>
+<p>These items are <strong>legal requirements</strong> — driving without them is a fineable offense, and certain ones (reflektör, ilk yardım çantası, yangın söndürme) are checked at every periyodik muayene (vehicle inspection) and randomly by trafik polisi.</p>
+<p>The exam tests this list as a memorization block: <strong>"Aşağıdakilerden hangisi araçta bulundurulması zorunlu değildir?"</strong> is the standard distractor question — they slip in something like "tıbbi termometre" or "navigasyon cihazı" as the trap.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%201/drive-download-20260416T071122Z-3-001/CleanShot-13-04-2026%20at%209%E2%80%AF.24.17%402x.png" alt="Sınıfta gösterilen slayt (9 :24:17" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/page-047.png" alt="Ders kitabı — Sayfa 47: TEKERLEKLER VE LASTĠKLER" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 47: TEKERLEKLER VE LASTĠKLER <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-047.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — The Full Mandatory List (13 items)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>A bulleted checklist of 13 items every car must carry.</p>
+<h3>The 13 items</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Turkish</th>
+<th>English</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>İlk Yardım Çantası</strong></td>
+<td>First-aid kit</td>
+<td>Trafik kazasında ilk müdahale</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Yangın Söndürme Cihazı</strong></td>
+<td>Fire extinguisher</td>
+<td>Motor / kabin yangını</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Yedek Malzeme ve Takımlar</strong></td>
+<td>Spare parts &amp; tools</td>
+<td>Basic toolkit (tornavida, pense, anahtarlar)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Reflektör</strong> <em>(2 adet)</em></td>
+<td>Reflective triangle (×2)</td>
+<td>Bozuk araç işaretleme — 150 m önünde + arkasında</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Takoz</strong></td>
+<td>Wheel chock / wedge</td>
+<td>Park edilen aracı tekerden destekler (eğimli yol)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Çekme Halatı</strong></td>
+<td>Tow rope</td>
+<td>Bozuk araç çekme</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Engel İşareti</strong></td>
+<td>Obstacle / hazard sign</td>
+<td>Yolda obstruction işaretleme</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Çocuk Bağlama Sistemleri</strong></td>
+<td>Child restraint system</td>
+<td>150 cm altı çocuklar için zorunlu</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Boyun Korsesi</strong></td>
+<td>Neck brace / cervical collar</td>
+<td>Kazada yaralı boyun sabitleme</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Koruma Başlığı (Kask)</strong></td>
+<td>Protective helmet</td>
+<td>Motosikletlilerde zorunlu</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Koruma Gözlüğü</strong></td>
+<td>Protective goggles</td>
+<td>Motosikletlilerde rüzgâr/böcek koruması</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>Stepne / Tamir Kiti</strong></td>
+<td>Spare tyre / repair kit</td>
+<td>Lastik patlamasında</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Kriko ve Bijon Anahtarı</strong></td>
+<td>Jack &amp; lug wrench</td>
+<td>Tekerlek değiştirme aletleri</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Her araçta bulundurulması zorunlu malzemeler arasında ilk yardım çantası, yangın söndürme cihazı, reflektör, takoz, çekme halatı, kriko ve bijon anahtarı sayılır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%202/drive-download-20260416T070942Z-3-001/CleanShot-14-04-2026%20at%208%E2%80%AF.52.16%402x.png" alt="Sınıfta gösterilen slayt (8 :52:16" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/page-059.png" alt="Ders kitabı — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-059.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Item-by-Item Detail (with exam-traps)</h2>
+
+
+<h3>İlk Yardım Çantası</h3>
+<p>Standardized contents (gauze, bandage, scissors, gloves, antiseptic, etc.). <strong>Inspection requirement</strong> — must be valid (sterile items not expired).</p>
+<blockquote>
+<p><strong>Exam trap:</strong> The question "ilk yardım çantasında bulunmayan malzeme hangisidir?" usually slips in <strong>ağrı kesici ilaç (painkiller medicine)</strong> or <strong>tansiyon aleti (BP cuff)</strong> as the trap — these are <strong>NOT</strong> in the standard kit. The kit is for trauma, not medication.</p>
+</blockquote>
+<h3>Yangın Söndürme Cihazı</h3>
+<blockquote>
+<p><strong>Exam fact:</strong> Şarjı yıllık olarak kontrol edilir; valid süresi dolmuşsa cihazın araçta bulunmasının hiçbir anlamı yoktur.</p>
+<p><strong>Bağlama yeri:</strong> Sürücünün rahat ulaşabileceği bir yere sabit monteli olmalıdır.</p>
+</blockquote>
+<h3>Reflektör (2 adet — kırmızı üçgen)</h3>
+<p><strong>Single most-tested item.</strong> Bozulan araç için kullanılır. Yerleştirme kuralı:</p>
+<blockquote>
+<ul>
+<li><strong>Şehir içinde:</strong> aracın <strong>en az 30 m</strong> önüne ve arkasına</li>
+<li><strong>Şehirler arası (otoyol/şehir dışı):</strong> aracın <strong>en az 150 m</strong> önüne ve arkasına</li>
+<li><strong>Geceleri</strong> ve sis/yağmur gibi düşük görüş koşullarında <strong>mutlaka</strong> yakılmalıdır (4'lü flaşörle birlikte).</li>
+</ul>
+</blockquote>
+<h3>Takoz</h3>
+<p>Eğimli yolda park edilen araçta tekerleğin kaymasını önler. <strong>El freni + vites + takoz</strong> üçlüsü güvenli park için kuraldır.</p>
+<h3>Çekme Halatı (Çekme İpi)</h3>
+<p>Bozulan aracı en yakın servise/bakım noktasına çekmek için kullanılır.</p>
+<blockquote>
+<p><strong>Halat ile çekme kuralları (özet):</strong><br />
+- Halat uzunluğu <strong>en fazla 5 metre</strong> olmalıdır.<br />
+- Halatın orta kısmına <strong>kırmızı bez</strong> bağlanır (görünürlük için).<br />
+- Çekilen aracın çevirebilen, fren tutan, vitesi boş bırakılabilir bir araç olması şarttır.<br />
+- Yolcu taşıyan araçlar (otobüs, minibüs) <strong>halat ile çekilemez</strong> — sadece çubuklu çekici (rijit bağlantı) ile çekilebilir.</p>
+</blockquote>
+<p>(Detaylar <a href="../trafik-ve-çevre/26-arızalı-araç-çekme.md">trafik-ve-çevre/26-arızalı-araç-çekme.md</a> içinde.)</p>
+<h3>Engel İşareti</h3>
+<p>Yolda kalmış aracın veya yol üzerindeki obstruction'ın diğer sürücülere bildirilmesi için kullanılır. Reflektörle birlikte kullanılır.</p>
+<h3>Çocuk Bağlama Sistemleri (Child seats)</h3>
+<ul>
+<li><strong>150 cm boy</strong> ve <strong>36 kg ağırlık</strong> altındaki çocuklar <strong>özel çocuk koltuğunda</strong> taşınmak zorundadır.</li>
+<li><strong>10 yaş altı çocuklar</strong> sürücünün yanında (ön koltukta) <strong>oturtulamaz</strong>.</li>
+</ul>
+<h3>Boyun Korsesi (Cervical collar)</h3>
+<p>Trafik kazalarında yaralının <strong>boyun ve omurilik</strong> sabitlemesi için. İlk yardım çantasının bir parçası olabilir; ayrıca bulundurulması da yaygın.</p>
+<h3>Koruma Başlığı (Kask) ve Gözlüğü</h3>
+<p><strong>Motosiklet ve motorlu bisikletlerde</strong> sürücü ve yolcu için <strong>zorunludur</strong>. Otomobillerde değil — bu yüzden distractor sorularında <strong>otomobile zorunlu mudur?</strong> trap'i çıkar (cevap: hayır, sadece motosiklette).</p>
+<h3>Stepne / Tamir Kiti</h3>
+<p>Lastik patlamasında kullanılır. Yeni nesil bazı araçlarda stepne yerine <strong>lastik tamir kiti (sıvı dolgu + mini kompresör)</strong> bulunur — ikisi de sayılır.</p>
+<h3>Kriko ve Bijon Anahtarı</h3>
+<p><strong>Stepne taşımanın anlamı yok eğer kriko ve bijon yoksa</strong> — birlikte düşünülen üçlü: <strong>stepne + kriko + bijon anahtarı</strong>.</p>
+<blockquote>
+<p><strong>Exam trap:</strong> "Lastik değiştirmek için araçta bulunması gereken malzemeler hangisidir?" → <strong>stepne, kriko, bijon anahtarı</strong>. Distractor: kayışı keser, çekme halatı ekler.</p>
+</blockquote>
+<hr />
+</div></section><h2>4. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Aşağıdakilerden hangisi araçta bulundurulması zorunlu değildir?"</strong> → distractors: tıbbi termometre, navigasyon cihazı, ağrı kesici ilaç, kahve termosu, yedek anahtar.</li>
+<li><strong>"Lastik değiştirmek için gerekli malzemeler hangileridir?"</strong> → <strong>stepne + kriko + bijon anahtarı</strong>.</li>
+<li><strong>"Bozuk araçta reflektörün konulma mesafesi şehir dışında ne kadardır?"</strong> → <strong>en az 150 m</strong>.</li>
+<li><strong>"İlk yardım çantasında bulunmayan malzeme hangisidir?"</strong> → <strong>ağrı kesici / tansiyon aleti / sıvı sabun</strong> gibi tıbbi-olmayan trap maddeler.</li>
+<li><strong>"Motosiklet sürücüsünde zorunlu koruyucu malzeme hangisidir?"</strong> → <strong>kask + koruma gözlüğü</strong>.</li>
+<li><strong>"Çocuk koltuğu hangi yaş/boy altındaki çocuklar için zorunludur?"</strong> → <strong>150 cm boy, 36 kg ağırlık altı</strong>.</li>
+<li><strong>"Halat ile çekilemeyecek araç hangisidir?"</strong> → <strong>otobüs / yolcu taşıyan araç</strong>.</li>
+</ol>
+<hr />
+<h2>5. Memorize These</h2>
+<blockquote>
+<p><strong>Zorunlu malzemeler: ilk yardım çantası, yangın söndürme cihazı, reflektör, takoz, çekme halatı, engel işareti, çocuk koltuğu, boyun korsesi, kask, koruma gözlüğü, stepne, kriko, bijon anahtarı, yedek malzeme.</strong></p>
+<p><strong>Reflektör mesafesi: şehir içi 30 m, şehir dışı 150 m, aracın hem önüne hem arkasına.</strong></p>
+<p><strong>Lastik değiştirmek için: stepne + kriko + bijon anahtarı.</strong></p>
+<p><strong>Çocuk koltuğu: 150 cm boy / 36 kg ağırlık altındaki çocuklar için zorunlu. 10 yaş altı çocuk ön koltuğa oturtulmaz.</strong></p>
+<p><strong>Kask ve koruma gözlüğü: yalnızca motosiklet ve motorlu bisiklette zorunludur.</strong></p>
+<p><strong>Halat çekme: otobüs/minibüs gibi yolcu taşıyan araçlar halat ile çekilemez.</strong></p>
+</blockquote>
+<hr />
+<h2>6. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zorunlu</td>
+<td>Mandatory</td>
+<td>Legally required</td>
+</tr>
+<tr>
+<td>Bulundurulmak</td>
+<td>To be carried / kept</td>
+<td>Passive — "must be present"</td>
+</tr>
+<tr>
+<td>İlk yardım çantası</td>
+<td>First-aid kit</td>
+<td>Standardized trauma kit</td>
+</tr>
+<tr>
+<td>Yangın söndürme cihazı</td>
+<td>Fire extinguisher</td>
+<td>Annual recharge</td>
+</tr>
+<tr>
+<td>Reflektör</td>
+<td>Reflective triangle</td>
+<td>Red triangle marker</td>
+</tr>
+<tr>
+<td>Üçgen reflektör</td>
+<td>Triangle reflector</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Takoz</td>
+<td>Wheel chock</td>
+<td>Wedge under tire</td>
+</tr>
+<tr>
+<td>Çekme halatı</td>
+<td>Tow rope</td>
+<td>Max 5 m</td>
+</tr>
+<tr>
+<td>Çekme ipi</td>
+<td>Tow rope</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Engel işareti</td>
+<td>Hazard sign</td>
+<td>Obstruction marker</td>
+</tr>
+<tr>
+<td>Çocuk bağlama sistemi</td>
+<td>Child restraint</td>
+<td>Car seat</td>
+</tr>
+<tr>
+<td>Çocuk koltuğu</td>
+<td>Child seat</td>
+<td>Common term</td>
+</tr>
+<tr>
+<td>Boyun korsesi</td>
+<td>Cervical collar</td>
+<td>Neck brace</td>
+</tr>
+<tr>
+<td>Koruma başlığı / Kask</td>
+<td>Protective helmet</td>
+<td>Motorcycle helmet</td>
+</tr>
+<tr>
+<td>Koruma gözlüğü</td>
+<td>Protective goggles</td>
+<td>Motorcycle eyewear</td>
+</tr>
+<tr>
+<td>Stepne</td>
+<td>Spare tire</td>
+<td>Spare wheel</td>
+</tr>
+<tr>
+<td>Tamir kiti</td>
+<td>Repair kit</td>
+<td>Liquid sealant + compressor (modern alt to stepne)</td>
+</tr>
+<tr>
+<td>Kriko</td>
+<td>Jack</td>
+<td>Lifts the car for tire change</td>
+</tr>
+<tr>
+<td>Bijon</td>
+<td>Lug nut</td>
+<td>Wheel nut</td>
+</tr>
+<tr>
+<td>Bijon anahtarı</td>
+<td>Lug wrench</td>
+<td>Wheel-nut spanner</td>
+</tr>
+<tr>
+<td>Yedek malzeme</td>
+<td>Spare parts</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>Takım</td>
+<td>Toolset</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>Yangın söndürücü</td>
+<td>Fire extinguisher</td>
+<td>Synonym</td>
+</tr>
+<tr>
+<td>Periyodik muayene</td>
+<td>Periodic inspection</td>
+<td>When equipment is checked</td>
+</tr>
+<tr>
+<td>Mevzuat</td>
+<td>Legislation</td>
+<td>Legal regulations</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>7. Cross-references</h2>
+<ul>
+<li><strong>Reflektör placement detail:</strong> <a href="../trafik-ve-çevre/05-trafik-işaretleri-öncelik.md">../trafik-ve-çevre/05-trafik-işaretleri-öncelik.md</a> (general signage rules) and <a href="../trafik-ve-çevre/26-arızalı-araç-çekme.md">../trafik-ve-çevre/26-arızalı-araç-çekme.md</a> (broken-down vehicle marking — to be written).</li>
+<li><strong>First aid kit contents:</strong> <a href="../ilk-yardım/">../ilk-yardım/</a> — ilk yardım notes cover what's actually inside.</li>
+<li><strong>Tire change procedure:</strong> <a href="08b-lastikler.md">08b-lastikler.md</a> — uses stepne + kriko + bijon anahtarı.</li>
+<li><strong>Child seat legal age/weight rule:</strong> repeated in trafik-ve-çevre passenger transport notes.</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/arac-teknigi/page-053.html">📄 Sayfa 53: FREN SİSTEMİ<span class="score">61.8</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-048.html">📄 Sayfa 48: TEKERLEKLER VE LASTİKLER<span class="score">61.1</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-059.html">📄 Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri<span class="score">58.6</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-047.html">📄 Sayfa 47: TEKERLEKLER VE LASTİKLER<span class="score">55.6</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-051.html">📄 Sayfa 51: FREN SİSTEMİ<span class="score">42.3</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-039.html">📄 Sayfa 39: ELEKTRİK - AYDINLATMA VE İKAZ SİSTEMİ<span class="score">41.2</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/index.html">🖼️ Güç Aktarma & Lastikler<span class="score">4 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/index.html">🖼️ Fren, Süspansiyon, Direksiyon<span class="score">2 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/index.html">🖼️ Rodaj, Bakım, Yakıt Tasarrufu<span class="score">2 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

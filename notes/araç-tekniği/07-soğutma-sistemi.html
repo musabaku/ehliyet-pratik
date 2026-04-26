@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soğutma Sistemi — Cooling System | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">araç-tekniği / 07-soğutma-sistemi</span>
+</div>
+<div class="content">
+<h1>Soğutma Sistemi — Cooling System</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 28–32 + portal e-kitap<br />
+<strong>Note:</strong> Hoca İnayet only mentioned antifriz briefly. Drafted from the polished MEB textbook for full system coverage.</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Soğutma sistemi:</strong> Yanma ve çalışma sonucu meydana gelen ısıyı dengede tutmayı ve motoru soğutmayı sağlar.<br />
+<em>(The cooling system keeps the heat from combustion and operation in balance and cools the engine.)</em></p>
+</blockquote>
+<p>Inside a running engine, fuel explodes hundreds of times per second. Without active cooling, the silindir blok and silindir kapağı would melt, valves would warp, and the motor would seize. The soğutma sistemi <strong>circulates water (or air)</strong> around the hottest engine parts, carries the heat to the <strong>radyatör</strong>, and the <strong>vantilatör</strong> blows cooler air through the radyatör fins to dump that heat into the atmosphere.</p>
+<p>Two cooling types — exam knows both:<br />
+- <strong>Su soğutmalı motorlar</strong> — water-cooled (almost all modern cars)<br />
+- <strong>Hava soğutmalı motorlar</strong> — air-cooled (motorcycles, some small engines)</p>
+<p><strong>The flow (water-cooled):</strong></p>
+<pre><code>Devirdaim/Su pompası ─▶ motor su kanalları (heats up)
+                     ─▶ Termostat (opens when warm enough)
+                     ─▶ Radyatör (vantilatör cools the water)
+                     ─▶ back to su pompası
+</code></pre>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%202/drive-download-20260416T070942Z-3-001/CleanShot-14-04-2026%20at%208%E2%80%AF.54.31%402x.png" alt="Sınıfta gösterilen slayt (8 :54:31" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-029.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/page-029.png" alt="Ders kitabı — Sayfa 29: SOĞUTMA SĠSTEMĠ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 29: SOĞUTMA SĠSTEMĠ <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-029.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/arac-teknigi/page-004.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/01-motor-genel/page-004.png" alt="Ders kitabı — Sayfa 4: 2- Soğutma sistemlerine göre:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 4: 2- Soğutma sistemlerine göre: <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-004.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Soğutma Sisteminin Parçaları</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Bullet list of 9 parts that make up the water-cooled circuit.</p>
+<h3>The 9 parts</h3>
+<ol>
+<li><strong>Radyatör</strong> — water reservoir + heat exchanger</li>
+<li><strong>Devirdaim / Su pompası</strong> — water circulation pump</li>
+<li><strong>Vantilatör</strong> — fan that cools the radyatör</li>
+<li><strong>Vantilatör kayışı</strong> — the belt that drives the fan + water pump + alternator</li>
+<li><strong>Termostat</strong> — temperature regulator valve</li>
+<li><strong>Hararet göstergesi ve müşürü</strong> — temperature gauge + sender</li>
+<li><strong>Takviye su kabı</strong> — coolant overflow / expansion tank</li>
+<li><strong>Radyatör ve kalorifer hortumları</strong> — radyatör and heater hoses</li>
+<li><strong>Fan</strong> <em>(only on hava soğutmalı engines)</em> — direct air-blower fan</li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Soğutma sisteminin parçaları: radyatör, su pompası (devirdaim), vantilatör, vantilatör kayışı, termostat, hararet göstergesi, takviye su kabı, hortumlar.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%202/drive-download-20260416T070942Z-3-001/CleanShot-14-04-2026%20at%208%E2%80%AF.54.31%402x.png" alt="Sınıfta gösterilen slayt (8 :54:31" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-030.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/page-030.png" alt="Ders kitabı — Sayfa 30: SOĞUTMA SĠSTEMĠNĠN PARÇALARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 30: SOĞUTMA SĠSTEMĠNĠN PARÇALARI <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-030.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/arac-teknigi/page-031.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/page-031.png" alt="Ders kitabı — Sayfa 31: SOĞUTMA SĠSTEMĠNĠN PARÇALARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 31: SOĞUTMA SĠSTEMĠNĠN PARÇALARI <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-031.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Per-Part Definitions (Exam Definitions)</h2>
+
+
+<h3>Radyatör</h3>
+<blockquote>
+<p><em>"Soğutma suyuna depoluk eder."</em></p>
+</blockquote>
+<p>Acts as the <strong>reservoir</strong> for cooling water and the <strong>heat exchanger</strong> where the water gives up its heat to the air. Critical level rule:</p>
+<blockquote>
+<p><strong>Radyatör içerisindeki su seviyesi peteklerin üzerinde olmalıdır.</strong><br />
+<em>(The water level inside the radyatör must be above the cooling fins.)</em></p>
+</blockquote>
+<p>If a takviye su kabı (overflow tank) is used, the water must sit <strong>between the two marked lines</strong>.</p>
+<h3>Devirdaim / Su pompası</h3>
+<blockquote>
+<p><em>"Radyatördeki suyu, motorun su kanallarına gönderir."</em></p>
+</blockquote>
+<p>The <strong>water pump</strong> pushes water from the radyatör through the engine's internal cooling channels and back. Without it, water doesn't move and the engine overheats immediately.</p>
+<h3>Vantilatör</h3>
+<blockquote>
+<p><em>"Radyatördeki suyun soğuması için hava akımı oluşturur."</em></p>
+</blockquote>
+<p>The <strong>fan</strong> generates an airflow through the radyatör fins so the water inside cools faster. On modern cars this is usually an <strong>otomatik (elektrikli) fan</strong> controlled by the temperature sender.</p>
+<h3>Vantilatör kayışı (V-belt)</h3>
+<blockquote>
+<p><em>"Motorun krank milinden hareket alarak devirdaim-su pompası, vantilatör ve alternatörün çalışmasını sağlar."</em></p>
+</blockquote>
+<p>The V-belt is driven by the krank mili (crankshaft) and <strong>simultaneously turns three things</strong>:<br />
+- the su pompası (water pump)<br />
+- the vantilatör (fan)<br />
+- the <strong>alternatör</strong> (charging system)</p>
+<blockquote>
+<p><strong>Critical exam fact — kayış gerginliği:</strong> When pressed with a finger, the belt should flex <strong>1–1.5 cm</strong>.</p>
+<ul>
+<li><strong>Çok gevşekse</strong> → motor hararet yapar (overheats), şarj de düşer</li>
+<li><strong>Çok sıkıysa</strong> → kayış kopabilir veya alternatörün rulmanları zarar görür</li>
+</ul>
+</blockquote>
+<p>This single belt links 3 systems. If it snaps, you lose cooling <strong>and</strong> charging at once — see the cross-system note in §5.</p>
+<h3>Termostat</h3>
+<blockquote>
+<p><em>"Soğutma suyunun sıcaklığını dengede tutar. Termostat silindir kapağı çıkışında bulunur."</em></p>
+</blockquote>
+<p>A temperature-controlled valve mounted at the <strong>silindir kapağı çıkışı</strong> (cylinder head outlet). When the engine is cold it stays <strong>closed</strong> so water stays in the engine and warms up fast. When warm enough it <strong>opens</strong> and lets water flow to the radyatör.</p>
+<blockquote>
+<p><strong>Termostat arızalanırsa:</strong> motor hararet yapar (stuck closed → no flow to radyatör).</p>
+<p><strong>Termostat çıkarılırsa:</strong> motor sürekli soğuk çalışır → parçalar aşınır.</p>
+</blockquote>
+<p>Both extremes are wrong. The thermostat exists precisely so the engine sits at its <strong>optimum operating temperature</strong> — too cold is as harmful as too hot.</p>
+<h3>Hararet müşürü + göstergesi</h3>
+<ul>
+<li><strong>Müşür</strong> = the sender (sensor in the cylinder head)</li>
+<li><strong>Gösterge</strong> = the dashboard temperature gauge</li>
+</ul>
+<p>The müşür measures coolant temperature; the gösterge displays it on the dashboard. If the needle climbs into the red zone → <strong>HARARET</strong> warning.</p>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/vehicle%20info%20part%202/drive-download-20260416T070942Z-3-001/CleanShot-14-04-2026%20at%209%E2%80%AF.12.51%402x.png" alt="Sınıfta gösterilen slayt (9 :12:51" loading="lazy"></div><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/arac-teknigi/page-032.html" target="_blank"><img src="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/page-032.png" alt="Ders kitabı — Sayfa 32: HARARET" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 32: HARARET <a class="slide-figure-link" href="../../ders-kitabi/arac-teknigi/page-032.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — HARARET (Engine Overheating)</h2>
+
+
+<h3>Why the engine overheats — full causes list</h3>
+<blockquote>
+<p><em>"Motorun hararet yapma sebepleri:"</em></p>
+</blockquote>
+<ul>
+<li><strong>Radyatörün tıkalı, delik veya çatlak olması</strong> — radyatör clogged, holed, or cracked</li>
+<li><strong>Su pompasının arızalanması</strong> — water pump failed</li>
+<li><strong>Su kanallarının tıkalı olması</strong> — internal water channels blocked</li>
+<li><strong>Termostatın arızalanması</strong> — thermostat stuck closed</li>
+<li><strong>Aracın uygun devir ve viteste kullanılmaması</strong> — wrong gear / engine over-revved</li>
+<li><strong>Vantilatör kayışının gevşek olması veya kopması</strong> — fan belt loose or snapped</li>
+<li><strong>Radyatör suyunun eksik olması</strong> — coolant level low</li>
+<li><strong>Su hortumlarında kaçak olması</strong> — leaking hoses</li>
+<li><strong>Otomatik fanın arızalı olması</strong> — auto fan dead</li>
+<li><strong>Fan soğutmalı araçlarda:</strong> fan motoru arızası, kablo gevşekliği/kopukluğu, fan müşürü arızası, fan sigortasının atması</li>
+</ul>
+<h3>The single most-tested rule — what to do if the car overheats</h3>
+<blockquote>
+<p><strong>Hararet yapmış olan araç 10–15 dk rolantide çalıştırıldıktan sonra, radyatör kapağı soğuk ve ıslak bir bezle önce gevşetilir, hava basıncı alınır, daha sonra açılarak ılık su ilave edilir. Soğuk su ilave edilirse motor bloğu ve silindir kapağı çatlayabilir.</strong></p>
+</blockquote>
+<p>In English:<br />
+1. <strong>Pull over and stop</strong> safely — do not keep driving an overheated engine.<br />
+2. <strong>Idle the engine 10–15 minutes</strong> at rolanti so it cools gradually (the water pump still circulates).<br />
+3. With a <strong>cool, damp cloth</strong>, <strong>first crack the radyatör cap loose</strong> to vent the steam pressure (do NOT remove it fully — pressurized boiling water will spray and burn you).<br />
+4. After pressure releases, fully open the cap.<br />
+5. <strong>Add lukewarm water (ılık su) ONLY</strong>.<br />
+6. <strong>Never add cold water</strong> to a hot engine — the thermal shock will <strong>crack the silindir bloğu and silindir kapağı</strong>, and that's a complete engine rebuild.</p>
+<h3>Critical exam facts (multiple)</h3>
+<blockquote>
+<p><strong>Hararet yapmış araca soğuk su ilave edilirse motor bloğu ve silindir kapağı çatlar.</strong> — <em>(Cold water on a hot engine cracks the block.)</em></p>
+<p><strong>Hararet yapmış araç önce 10–15 dakika rolantide çalıştırılarak soğutulur.</strong></p>
+<p><strong>Termostat arızası → motor hararet yapar.</strong></p>
+<p><strong>Radyatöre konacak su: temiz, yumuşak, kireçsiz, içilebilir nitelikte olmalıdır.</strong></p>
+</blockquote>
+<hr />
+</div></section><h2>5. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Soğutma sisteminin görevi nedir?"</strong> → <strong>Yanma sonucu oluşan ısıyı dengede tutmak ve motoru soğutmak.</strong></li>
+<li><strong>"Aşağıdakilerden hangisi soğutma sisteminin parçası değildir?"</strong> — distractors: alternatör, karbüratör, marş motoru, enjektör. Real parts: radyatör, su pompası, vantilatör, termostat, hararet göstergesi.</li>
+<li><strong>"Motor neden hararet yapar?"</strong> → any from the 10-item list above; the most-trapped specific answer is <strong>termostat arızası</strong> or <strong>kayış gevşek/kopuk</strong>.</li>
+<li><strong>"Hararet yapmış araca ne yapılır?"</strong> → idle 10–15 min, sonra ılık su ilave. <strong>Soğuk su KULLANILMAZ.</strong></li>
+<li><strong>"Termostat çıkarılırsa motor nasıl çalışır?"</strong> → <strong>Sürekli soğuk çalışır, parçalar aşınır.</strong></li>
+<li><strong>"Vantilatör kayışı koparsa hangi sistemler etkilenir?"</strong> → soğutma + şarj (the same belt drives su pompası, vantilatör, <strong>alternatör</strong>).</li>
+<li><strong>"Radyatöre nasıl su konulur?"</strong> → <strong>Temiz, yumuşak, kireçsiz, içilebilecek nitelikte.</strong></li>
+<li><strong>"Kış mevsiminde soğutma suyuna ne ilave edilir?"</strong> → <strong>Antifriz</strong> (donmayı önler + korozyonu engeller).</li>
+</ol>
+<h3>The 3-red-light rule reminder</h3>
+<blockquote>
+<p><strong>Şarj, yağ, hararet</strong> — if any of these three lights up red, <strong>stop the car immediately</strong>. Hararet is the soğutma system's red light.</p>
+</blockquote>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>Soğutma sistemi: yanma ve çalışma sonucu oluşan ısıyı dengede tutmayı ve motoru soğutmayı sağlar.</strong></p>
+<p><strong>Parçaları: radyatör, su pompası (devirdaim), vantilatör, vantilatör kayışı, termostat, hararet göstergesi ve müşürü, takviye su kabı, hortumlar.</strong></p>
+<p><strong>Vantilatör kayışı parmakla bastırıldığında 1–1,5 cm esnemelidir.</strong></p>
+<p><strong>Termostat silindir kapağı çıkışında bulunur. Arızalanırsa motor hararet yapar; çıkarılırsa motor sürekli soğuk çalışır.</strong></p>
+<p><strong>Hararet yapan araca soğuk su katılırsa motor bloğu ve silindir kapağı çatlar — bu yüzden ılık su ilave edilir.</strong></p>
+<p><strong>Kış mevsiminde soğutma suyuna donmayı önlemek için antifriz katılır.</strong></p>
+<p><strong>Radyatör suyu temiz, yumuşak, kireçsiz ve içilebilir nitelikte olmalıdır.</strong></p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary — Soğutma Sistemi</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Soğutma sistemi</td>
+<td>Cooling system</td>
+<td>The whole circuit</td>
+</tr>
+<tr>
+<td>Soğutma</td>
+<td>Cooling</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>Soğutmak</td>
+<td>To cool</td>
+<td>Verb</td>
+</tr>
+<tr>
+<td>Hararet</td>
+<td>Overheating</td>
+<td>The bad event</td>
+</tr>
+<tr>
+<td>Hararet yapmak</td>
+<td>To overheat</td>
+<td>Verb form</td>
+</tr>
+<tr>
+<td>Radyatör</td>
+<td>Radiator</td>
+<td>Reservoir + heat exchanger</td>
+</tr>
+<tr>
+<td>Radyatör kapağı</td>
+<td>Radiator cap</td>
+<td>Pressure cap on top</td>
+</tr>
+<tr>
+<td>Radyatör peteği</td>
+<td>Radiator core / fins</td>
+<td>Thin metal grid inside</td>
+</tr>
+<tr>
+<td>Su pompası / Devirdaim</td>
+<td>Water pump / circulator</td>
+<td>Drives the flow</td>
+</tr>
+<tr>
+<td>Vantilatör</td>
+<td>Fan (radyatör fan)</td>
+<td>Blows air through the core</td>
+</tr>
+<tr>
+<td>Vantilatör kayışı</td>
+<td>V-belt / fan belt</td>
+<td>Drives pump + fan + alternator</td>
+</tr>
+<tr>
+<td>Termostat</td>
+<td>Thermostat</td>
+<td>Temperature-controlled valve</td>
+</tr>
+<tr>
+<td>Hararet müşürü</td>
+<td>Temperature sender / sensor</td>
+<td>Reads coolant temp</td>
+</tr>
+<tr>
+<td>Hararet göstergesi</td>
+<td>Temperature gauge</td>
+<td>Dashboard display</td>
+</tr>
+<tr>
+<td>Takviye su kabı</td>
+<td>Coolant overflow / expansion tank</td>
+<td>Translucent reservoir</td>
+</tr>
+<tr>
+<td>Hortum</td>
+<td>Hose</td>
+<td>Rubber pipe</td>
+</tr>
+<tr>
+<td>Kalorifer hortumu</td>
+<td>Heater hose</td>
+<td>Cabin heater pipe</td>
+</tr>
+<tr>
+<td>Su kanalları</td>
+<td>Water channels / jackets</td>
+<td>Inside the engine block</td>
+</tr>
+<tr>
+<td>Antifriz</td>
+<td>Antifreeze</td>
+<td>Winter additive — prevents freezing + corrosion</td>
+</tr>
+<tr>
+<td>Donma</td>
+<td>Freezing</td>
+<td>What antifriz prevents</td>
+</tr>
+<tr>
+<td>Kireç</td>
+<td>Limescale</td>
+<td>Why soft water is required</td>
+</tr>
+<tr>
+<td>Kireçsiz</td>
+<td>Lime-free</td>
+<td>Required for radyatör water</td>
+</tr>
+<tr>
+<td>Yumuşak su</td>
+<td>Soft water</td>
+<td>Required for radyatör water</td>
+</tr>
+<tr>
+<td>Kaçak</td>
+<td>Leak</td>
+<td>Hose leak</td>
+</tr>
+<tr>
+<td>Tıkanmak</td>
+<td>To clog</td>
+<td>Radyatör/channel failure</td>
+</tr>
+<tr>
+<td>Çatlamak</td>
+<td>To crack</td>
+<td>What happens to the block from cold-water shock</td>
+</tr>
+<tr>
+<td>Silindir bloğu</td>
+<td>Cylinder block</td>
+<td>Cracks if shocked</td>
+</tr>
+<tr>
+<td>Silindir kapağı</td>
+<td>Cylinder head</td>
+<td>Cracks if shocked; thermostat sits on it</td>
+</tr>
+<tr>
+<td>Krank mili</td>
+<td>Crankshaft</td>
+<td>Drives the V-belt</td>
+</tr>
+<tr>
+<td>Esnemek</td>
+<td>To flex</td>
+<td>Belt tension test</td>
+</tr>
+<tr>
+<td>Gevşek</td>
+<td>Loose</td>
+<td>Belt fault</td>
+</tr>
+<tr>
+<td>Sıkı</td>
+<td>Tight</td>
+<td>Belt fault (other extreme)</td>
+</tr>
+<tr>
+<td>Kopmak</td>
+<td>To snap</td>
+<td>Belt failure</td>
+</tr>
+<tr>
+<td>Sigorta atmak</td>
+<td>Fuse to blow</td>
+<td>Auto-fan failure mode</td>
+</tr>
+<tr>
+<td>Hava soğutmalı</td>
+<td>Air-cooled</td>
+<td>Motorcycle/old engine type</td>
+</tr>
+<tr>
+<td>Su soğutmalı</td>
+<td>Water-cooled</td>
+<td>Modern car type</td>
+</tr>
+<tr>
+<td>Rolantide</td>
+<td>At idle</td>
+<td>"10–15 dk rolantide çalıştırıldıktan sonra"</td>
+</tr>
+<tr>
+<td>Ilık su</td>
+<td>Lukewarm water</td>
+<td>The only safe water to add to a hot engine</td>
+</tr>
+<tr>
+<td>Soğuk su</td>
+<td>Cold water</td>
+<td>Forbidden — cracks the block</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li><strong>Shared belt:</strong> <a href="04-şarj-sistemi.md">04-şarj-sistemi.md</a> — the same vantilatör kayışı drives the alternatör. Belt break = <strong>soğutma + şarj</strong> both die.</li>
+<li><strong>Dashboard warning:</strong> <a href="05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a> — the <strong>hararet göstergesi/lambası</strong> is one of the 3 red-light "stop immediately" warnings (şarj, yağ, hararet).</li>
+<li><strong>Lube system parallel:</strong> <a href="02-yağlama-sistemi.md">02-yağlama-sistemi.md</a> — yağlama also helps cool moving parts indirectly; soğutma cools the block/head.</li>
+<li><strong>Two-name trap:</strong> <strong>devirdaim = su pompası</strong> (same part). <strong>vantilatör = fan</strong> (same part on radyatör; "fan" tek başına bazen elektrikli fan için kullanılır).</li>
+<li><strong>Ateşleme link:</strong> the bobin/buji generate the heat that the soğutma sistemi has to remove. See <a href="06-ateşleme-sistemi.md">06-ateşleme-sistemi.md</a>.</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/arac-teknigi/page-032.html">📄 Sayfa 32: HARARET<span class="score">250.2</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-030.html">📄 Sayfa 30: SOĞUTMA SİSTEMİNİN PARÇALARI<span class="score">201.3</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-031.html">📄 Sayfa 31: SOĞUTMA SİSTEMİNİN PARÇALARI<span class="score">186.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-029.html">📄 Sayfa 29: SOĞUTMA SİSTEMİ<span class="score">155.4</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-010.html">📄 Sayfa 10: BENZİN-LPG’Lİ MOTORLARIN ÇALIşMA SİSTEMİ<span class="score">98.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-036.html">📄 Sayfa 36: MARş SİSTEMİ<span class="score">72.5</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/index.html">🖼️ Soğutma & Hararet<span class="score">6 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/06-sarj-mars/index.html">🖼️ Şarj & Marş<span class="score">5 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/01-motor-genel/index.html">🖼️ Motor: Sınıflandırma & Çalışma<span class="score">3 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

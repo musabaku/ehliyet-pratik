@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafikle İlgili Kuruluşlar ve Komisyonlar — Traffic Authorities | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 30-trafik-kuruluslari</span>
+</div>
+<div class="content">
+<h1>Trafikle İlgili Kuruluşlar ve Komisyonlar — Traffic Authorities</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 169–176. Drafted from PDF (no live class for this topic).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Turkish trafik düzeni is run by <strong>10+ different agencies</strong>, each with a specific responsibility (driver licensing, vehicle inspection, road construction, accident reporting, environment, education, etc.). The exam consistently asks <strong>"hangi kurum X'ten sorumludur?"</strong> — you have to match agency → görev.</p>
+<p>This note also bundles <strong>harita okuma + yol/şehir bilgisi</strong> (PDF p169–170), which is light filler content but exam-tested in trip-planning questions.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-169.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-169.png" alt="Ders kitabı — Sayfa 169: HARİTA OKUMA – YOL VE ŞEHİR BİLGİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 169: HARİTA OKUMA – YOL VE ŞEHİR BİLGİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-169.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/trafik-ve-cevre/page-001.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/01-tanimlar/page-001.png" alt="Ders kitabı — Sayfa 1: TRAFİK VE ÇEVRE BİLGİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 1: TRAFİK VE ÇEVRE BİLGİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-001.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Harita Okuma, Yol ve Şehir Bilgisi (PDF p169–170)</h2>
+
+
+<h3>Why a driver should know city/route info</h3>
+<blockquote>
+<p><em>"Sürücüler </em><em>daha az yakıtla, daha kısa sürede</em><em> bir yere ulaşabilmek için trafiğe çıkarken </em><em>şehir planını dikkate almalıdır</em><em>."</em></p>
+</blockquote>
+<p>Knowing the city saves fuel + time + reduces çevre kirliliği.</p>
+<h3>Şehirler arası yolculuk</h3>
+<blockquote>
+<p><em>"Şehirler arası yolculuğa çıkanlar yanlarında </em><em>Türkiye Karayolu Haritası bulundurmalıdır.</em><em>"</em></p>
+</blockquote>
+<p>Inter-city trip → carry a Turkey road map (paper or digital).</p>
+<h3>Ticari sürücü gereği</h3>
+<blockquote>
+<p><em>"Ticari araç kullanan sürücüler yaşadığı şehrin </em><em>yol ve kavşaklarını, terminal, hastane, spor alanları, alışveriş merkezleri, tarihi yerleri</em><em> gibi önemli yerleri bilmelidir."</em></p>
+</blockquote>
+<p>Commercial drivers (taksi, dolmuş, kamyon, vb.) must know:<br />
+- Yollar ve kavşaklar<br />
+- Terminal, hastane, spor alanı, AVM, tarihi yerler</p>
+<h3>Harita okuma</h3>
+<blockquote>
+<p><em>"Haritalarda yer ve yön bulmak için genel olarak haritanın </em><em>sağ alt köşesinde</em><em> belirtilen şekil ve sembollerin açıklamalarına dikkat edilmelidir."</em></p>
+</blockquote>
+<p>Map legend = <strong>sağ alt köşe</strong> (bottom-right corner) — shape/symbol explanations.</p>
+<h3>Navigasyon cihazları</h3>
+<blockquote>
+<p><em>"Günümüzde navigasyon cihazları yer ve yön bulma konusunda sürücülere çok büyük kolaylık sağlamaktadır."</em></p>
+</blockquote>
+<p>GPS → modern alternative.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Şehirler arası yolculukta Türkiye karayolu haritası bulundurulur. Harita lejantı sağ alt köşededir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-171.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-171.png" alt="Ders kitabı — Sayfa 171: TRAFİK İLE İLGİLİ KURULUŞ ve KOMİSYONLAR:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 171: TRAFİK İLE İLGİLİ KURULUŞ ve KOMİSYONLAR: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-171.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Karayolları Güvenliği Yüksek Kurulu (Top Council)</h2>
+
+
+<blockquote>
+<p><em>"</em><em>Karayolları Güvenliği Yüksek Kurulu:</em><em> Kurul, </em><em>Başbakan'ın başkanlığında yılda 2 defa</em><em> toplanır. Karayolu Trafik Güvenliği Kurulunca uygun görülen önerileri değerlendirerek karara bağlar."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Değer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Başkan</strong></td>
+<td><strong>Başbakan</strong></td>
+</tr>
+<tr>
+<td><strong>Toplanma sıklığı</strong></td>
+<td><strong>Yılda 2 defa</strong></td>
+</tr>
+<tr>
+<td><strong>Görev</strong></td>
+<td>Karayolu Trafik Güvenliği Kurulu önerilerini karara bağlamak</td>
+</tr>
+</tbody>
+</table>
+<p>This is the <strong>top-level ulusal kurul</strong> — sets national policy.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Karayolları Güvenliği Yüksek Kurulu: Başbakan başkanlığında, yılda 2 defa toplanır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-171.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-171.png" alt="Ders kitabı — Sayfa 171: TRAFİK İLE İLGİLİ KURULUŞ ve KOMİSYONLAR:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 171: TRAFİK İLE İLGİLİ KURULUŞ ve KOMİSYONLAR: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-171.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Karayolu Trafik Güvenliği Kurulu (Working Council)</h2>
+
+
+<blockquote>
+<p><em>"</em><em>Karayolu Trafik Güvenliği Kurulu:</em><em> Kurul, </em><em>Emniyet Genel Müdürlüğü Trafik Hizmetleri Başkanı</em><em> başkanlığında, </em><em>ayda bir</em><em> toplanır. Trafik hizmetlerinin daha çağdaş ve güvenli bir şekilde yürütülebilmesi için önerilerin uygulanabilirliğini tartışarak karara bağlar."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Özellik</th>
+<th>Değer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Başkan</strong></td>
+<td><strong>EGM Trafik Hizmetleri Başkanı</strong></td>
+</tr>
+<tr>
+<td><strong>Toplanma sıklığı</strong></td>
+<td><strong>Ayda bir</strong></td>
+</tr>
+<tr>
+<td><strong>Görev</strong></td>
+<td>Önerileri tartışıp Yüksek Kurul'a sunmak</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Karayolu Trafik Güvenliği Kurulu: EGM Trafik Hizmetleri Başkanı başkanlığında, ayda bir toplanır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-172.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-172.png" alt="Ders kitabı — Sayfa 172: 3- Emniyet Genel Müdürlüğü:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 172: 3- Emniyet Genel Müdürlüğü: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-172.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Emniyet Genel Müdürlüğü (EGM)</h2>
+
+
+<p>The <strong>most-tested agency</strong> on the exam. Görevleri:</p>
+<ol>
+<li><strong>Sürücü belgelerini düzenleyip verir</strong> + ülke çapında <strong>sürücü sicilini tutar</strong></li>
+<li><strong>Araç tescilini yapar</strong> + belge ve plakalarını verir</li>
+<li><strong>Akan ve duran trafiği düzenler, yönetir</strong></li>
+<li><strong>Belge ve gereçleri + sürücülerin kurallara uyup uymadığını denetler</strong></li>
+<li>Trafik kazalarında <strong>yaralı bakımını sağlamak için tedbir alır + yakınlarına haber verir</strong></li>
+<li>Trafik kazalarının oluş nedenleri ile ilgili <strong>veri toplar, değerlendirir, ilgili kuruluşlara teklif sunar</strong></li>
+<li><strong>El koyduğu trafik kazalarında kaza tespit tutanağı düzenler</strong></li>
+<li><strong>Sigorta şirketlerine</strong> hasar tazminatı için bilgi/belge verir</li>
+</ol>
+<h3>Mnemonic: EGM = "lisans + tescil + denetim + tutanak"</h3>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>EGM: sürücü belgesi + sicil + araç tescili + plaka + trafik denetimi + kaza tutanağı.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-173.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-173.png" alt="Ders kitabı — Sayfa 173: 4- Karayolları Genel Müdürlüğü:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 173: 4- Karayolları Genel Müdürlüğü: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-173.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>6. SLIDE 5 — Karayolları Genel Müdürlüğü (KGM)</h2>
+
+
+<p>Karayolları Genel Müdürlüğü is responsible for the <strong>road infrastructure itself</strong> (asphalt, signage, bridges).</p>
+<p>Görevleri:<br />
+1. Yapım ve bakımından sorumlu olduğu yollarda <strong>düzenleme ve işaretlemeleri yapar</strong><br />
+2. <strong>İşaretleme standartlarını tespit ve kontrol eder</strong><br />
+3. Karayolu güvenliği projelerini <strong>inceler ve onaylar</strong><br />
+4. Trafik kazası verilerine göre <strong>önleyici teknik tedbirler alır</strong><br />
+5. <strong>Araçların ağırlık kontrollerini yapar</strong> + suç/ceza tutanağı düzenler<br />
+6. <strong>Tescile bağlı araçların muayenesini yapar</strong><br />
+7. Karayolunda <strong>kavşak, durak, aydınlatma, park yeri</strong> vb. tesisleri yapar<br />
+8. Karayolu yapısına hasar verenler/işaretlere uymayanlar için tutanak düzenler<br />
+9. İçişleri Bakanlığı görüşü ile <strong>hız sınırı belirler</strong></p>
+<h3>Mnemonic: KGM = "yol + işaret + ağırlık + muayene"</h3>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>KGM: yol yapım/bakım + işaretleme + ağırlık kontrolü + araç muayenesi + standart dışı yük izni + hız sınırı belirleme.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-174.png" alt="Ders kitabı — Sayfa 174: 5- Milli Eğitim Bakanlığı :" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 174: 5- Milli Eğitim Bakanlığı : <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>7. SLIDE 6 — Milli Eğitim Bakanlığı (MEB)</h2>
+
+
+<blockquote>
+<p><em>"5- Milli Eğitim Bakanlığı:"</em></p>
+</blockquote>
+<ol>
+<li><strong>Sürücü kursları açar</strong>, özel sürücü kursu izni verir, kursları <strong>denetler</strong></li>
+<li>Sürücü adaylarının <strong>teorik ve uygulamalı sınavlarını yapar</strong> + <strong>sertifika</strong> verir</li>
+<li>Okul içi/öncesi/dışı <strong>trafik eğitimi planı</strong> hazırlar ve uygular</li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>MEB: sürücü kursları + sınavları + sertifika + trafik eğitimi.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-174.png" alt="Ders kitabı — Sayfa 174: 5- Milli Eğitim Bakanlığı :" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 174: 5- Milli Eğitim Bakanlığı : <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-174.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>8. SLIDE 7 — Sağlık Bakanlığı</h2>
+
+
+<ol>
+<li>Trafik kazaları için <strong>ilk ve acil yardım hizmetlerini planlar</strong></li>
+<li>Karayolları üzerinde <strong>ilk yardım istasyonları kurar</strong></li>
+<li>Her ilde <strong>ambulans + sağlık personeli</strong> bulundurur</li>
+<li>Sevk edilenlerden <strong>30 gün içinde ölenlerin</strong> kayıtlarını tutar + EGM'ye bildirir</li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Sağlık Bakanlığı: ilk yardım planlama + istasyonlar + ambulans + 30-gün ölüm bildirimi.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-175.png" alt="Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>9. SLIDE 8 — Gıda, Tarım ve Hayvancılık Bakanlığı</h2>
+
+
+<blockquote>
+<p><em>"7- Gıda, Tarım ve Hayvancılık Bakanlığı: </em><em>Köy Yollarında</em><em>;"</em></p>
+</blockquote>
+<p>Görevi sınırlı: <strong>sadece köy yolları</strong> üzerinde:<br />
+- Trafik düzeni + güvenlik için işaretleme<br />
+- Kavşak, durak, park, aydınlatma projelerini inceler/onaylar</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Gıda Tarım Hayvancılık Bakanlığı = sadece KÖY YOLLARI işaretleme.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-175.png" alt="Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>10. SLIDE 9 — Ulaştırma, Denizcilik ve Haberleşme Bakanlığı</h2>
+
+
+<ol>
+<li><strong>Tescile bağlı araçların muayenesini yapar</strong> + muayene istasyonlarını denetler</li>
+<li><strong>Araçların ağırlık ve boyut kontrollerini yapar</strong></li>
+<li>Karayolları Trafik Kanunu ihlalleri için <strong>tutanak + idari para cezası</strong></li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Ulaştırma Bakanlığı: araç muayene istasyonu denetimi + ağırlık/boyut kontrolü + idari para cezası.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-175.png" alt="Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>11. SLIDE 10 — Orman ve Su İşleri / Çevre ve Şehircilik Bakanlığı</h2>
+
+
+<p>Görevi: <strong>Çevre Kanunu çerçevesinde belirtilen görevler.</strong></p>
+<p>Yani trafik kaynaklı çevre kirliliği düzenlemesi bu bakanlığın yetkisindedir.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Çevre ve Şehircilik Bakanlığı: çevre kirliliği düzenlemeleri.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-176.png" alt="Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>12. SLIDE 11 — Belediye Trafik Birimleri + İl/İlçe Trafik Komisyonları</h2>
+
+
+<h3>Belediye Trafik Birimleri</h3>
+<ol>
+<li>Sorumlu olduğu yolları trafik düzeni/güvenliği için bakım altında tutar</li>
+<li><strong>Yol/kavşak düzenleme + işaretleme</strong></li>
+<li><strong>Açık/kapalı park yerleri, alt/üst geçit</strong> yapar</li>
+<li>Trafiği tehlikeye düşüren engelleri görülecek şekilde işaretler/kaldırır</li>
+<li><strong>Çocuklar için trafik eğitim tesisleri</strong> yapar</li>
+</ol>
+<h3>İl ve İlçe Trafik Komisyonları</h3>
+<ul>
+<li><strong>İl başkanı: Vali; İlçe başkanı: Kaymakam</strong></li>
+<li>Kararlar <strong>valinin onayı</strong> ile yürürlüğe girer</li>
+<li>Ticari yolcu/yük taşıma şartlarını + güzergâh + sayı belirler</li>
+<li>Boş alanları <strong>geçici otopark</strong> ilan eder</li>
+<li>Yerel trafik düzenleme tedbirleri alır</li>
+</ul>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Belediye trafik birimleri: yol/kavşak işaretleme + park yerleri + çocuk trafik eğitim tesisi.</strong></p>
+<p><strong>İl Trafik Komisyonu başkanı: Vali. İlçe Trafik Komisyonu başkanı: Kaymakam.</strong></p>
+<p><strong>Komisyon kararları valinin onayı ile yürürlüğe girer.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-176.png" alt="Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>13. Quick-reference table — "Hangi kurum?"</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Görev</th>
+<th>Sorumlu kurum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sürücü belgesini düzenlemek + sicil tutmak</td>
+<td><strong>EGM</strong></td>
+</tr>
+<tr>
+<td>Araç tescili + plaka</td>
+<td><strong>EGM</strong></td>
+</tr>
+<tr>
+<td>Trafik denetimi + kaza tutanağı</td>
+<td><strong>EGM</strong></td>
+</tr>
+<tr>
+<td>Yol yapım/bakım/işaretleme (devlet yolu)</td>
+<td><strong>KGM</strong></td>
+</tr>
+<tr>
+<td>Ağırlık kontrolü + standart dışı yük izni</td>
+<td><strong>KGM</strong></td>
+</tr>
+<tr>
+<td>Köy yolları işaretleme</td>
+<td><strong>Gıda Tarım Hayvancılık Bakanlığı</strong></td>
+</tr>
+<tr>
+<td>Belediye yolları + park yeri + alt-üst geçit</td>
+<td><strong>Belediye Trafik Birimleri</strong></td>
+</tr>
+<tr>
+<td>Sürücü kursları + sınavları + sertifika</td>
+<td><strong>MEB</strong></td>
+</tr>
+<tr>
+<td>Trafik eğitimi planı</td>
+<td><strong>MEB</strong></td>
+</tr>
+<tr>
+<td>İlk yardım istasyonu + ambulans</td>
+<td><strong>Sağlık Bakanlığı</strong></td>
+</tr>
+<tr>
+<td>30-gün içi ölüm bildirimi</td>
+<td><strong>Sağlık Bakanlığı</strong></td>
+</tr>
+<tr>
+<td>Muayene istasyonu denetimi + ağırlık/boyut kontrolü + idari ceza</td>
+<td><strong>Ulaştırma Bakanlığı</strong></td>
+</tr>
+<tr>
+<td>Çevre kirliliği düzenlemesi</td>
+<td><strong>Çevre ve Şehircilik Bakanlığı</strong></td>
+</tr>
+<tr>
+<td>Radyoaktif yük taşıma izni</td>
+<td><strong>Atom Enerjisi Komisyonu</strong> <em>(bkz: note 24)</em></td>
+</tr>
+<tr>
+<td>Yarış izni (il içi)</td>
+<td><strong>Valilik</strong> (en az 30 gün önce) <em>(bkz: note 27)</em></td>
+</tr>
+<tr>
+<td>Yarış izni (iller arası/uluslararası)</td>
+<td><strong>İçişleri Bakanlığı</strong></td>
+</tr>
+<tr>
+<td>İl Trafik Komisyonu başkanlığı</td>
+<td><strong>Vali</strong></td>
+</tr>
+<tr>
+<td>İlçe Trafik Komisyonu başkanlığı</td>
+<td><strong>Kaymakam</strong></td>
+</tr>
+<tr>
+<td>Üst-üst kurul başkanlığı</td>
+<td><strong>Başbakan</strong> (Karayolları Güvenliği Yüksek Kurulu)</td>
+</tr>
+<tr>
+<td>Çalışma kurulu başkanlığı</td>
+<td><strong>EGM Trafik Hizmetleri Başkanı</strong> (Karayolu Trafik Güvenliği Kurulu)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-176.png" alt="Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>14. Why this matters for the exam</h2>
+
+
+<ol>
+<li><strong>"Sürücü belgesini hangi kurum verir?"</strong> → <strong>EGM</strong></li>
+<li><strong>"Araç tescilini hangi kurum yapar?"</strong> → <strong>EGM</strong></li>
+<li><strong>"Karayolu işaretleme standartlarını hangi kurum belirler?"</strong> → <strong>KGM</strong></li>
+<li><strong>"Köy yollarındaki işaretlemeyi hangi bakanlık yapar?"</strong> → <strong>Gıda Tarım Hayvancılık Bakanlığı</strong></li>
+<li><strong>"Sürücü kurslarını hangi bakanlık denetler?"</strong> → <strong>MEB</strong></li>
+<li><strong>"Karayolları Güvenliği Yüksek Kurulu kim başkanlığında, ne sıklıkla toplanır?"</strong> → <strong>Başbakan, yılda 2 defa</strong></li>
+<li><strong>"Karayolu Trafik Güvenliği Kurulu kim başkanlığında, ne sıklıkla toplanır?"</strong> → <strong>EGM Trafik Hizmetleri Başkanı, ayda bir</strong></li>
+<li><strong>"İl Trafik Komisyonu başkanı kimdir?"</strong> → <strong>Vali</strong></li>
+<li><strong>"İlçe Trafik Komisyonu başkanı kimdir?"</strong> → <strong>Kaymakam</strong></li>
+<li><strong>"Komisyon kararları kimin onayı ile yürürlüğe girer?"</strong> → <strong>Valinin</strong></li>
+<li><strong>"Şehirler arası yolculukta yanına ne alınmalıdır?"</strong> → <strong>Türkiye karayolu haritası</strong></li>
+</ol>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-176.png" alt="Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 176: 10- Belediye Trafik Birimleri: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-176.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>15. Memorize These</h2>
+
+
+<blockquote>
+<p><strong>EGM: sürücü belgesi + araç tescili + denetim + kaza tutanağı.</strong></p>
+<p><strong>KGM: yol + işaret + ağırlık + araç muayene + hız sınırı + standart dışı yük izni.</strong></p>
+<p><strong>Gıda Tarım Hayvancılık Bakanlığı = sadece köy yolları.</strong></p>
+<p><strong>MEB: sürücü kursu + sınav + sertifika + trafik eğitimi.</strong></p>
+<p><strong>Sağlık Bakanlığı: ilk yardım istasyonu + ambulans + 30-gün ölüm bildirimi.</strong></p>
+<p><strong>Ulaştırma Bakanlığı: muayene istasyonu denetimi + ağırlık/boyut + idari para cezası.</strong></p>
+<p><strong>Belediye Trafik Birimleri: yol/kavşak işaretleme + park + çocuk trafik eğitim tesisi.</strong></p>
+<p><strong>Karayolları Güvenliği Yüksek Kurulu: Başbakan başkan, yılda 2 toplanır.</strong></p>
+<p><strong>Karayolu Trafik Güvenliği Kurulu: EGM Trafik Hizmetleri Başkanı, ayda bir.</strong></p>
+<p><strong>İl: Vali; İlçe: Kaymakam başkan. Komisyon kararı valinin onayı ile yürürlüğe girer.</strong></p>
+<p><strong>Şehirler arası yolculukta Türkiye karayolu haritası bulundurulur; harita lejantı sağ alt köşededir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-175.png" alt="Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-175.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>16. Consolidated Exam Vocabulary</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Karayolları Güvenliği Yüksek Kurulu</td>
+<td>High Council for Highway Safety</td>
+<td>Başbakan başkanlığında</td>
+</tr>
+<tr>
+<td>Karayolu Trafik Güvenliği Kurulu</td>
+<td>Highway Traffic Safety Board</td>
+<td>EGM başkanlığında</td>
+</tr>
+<tr>
+<td>Emniyet Genel Müdürlüğü (EGM)</td>
+<td>General Directorate of Security</td>
+<td>Police HQ</td>
+</tr>
+<tr>
+<td>Karayolları Genel Müdürlüğü (KGM)</td>
+<td>General Directorate of Highways</td>
+<td>Road authority</td>
+</tr>
+<tr>
+<td>Milli Eğitim Bakanlığı (MEB)</td>
+<td>Ministry of National Education</td>
+<td>Driving schools</td>
+</tr>
+<tr>
+<td>Sağlık Bakanlığı</td>
+<td>Ministry of Health</td>
+<td>First aid stations</td>
+</tr>
+<tr>
+<td>Ulaştırma Bakanlığı</td>
+<td>Ministry of Transport</td>
+<td>Vehicle inspection</td>
+</tr>
+<tr>
+<td>Çevre ve Şehircilik Bakanlığı</td>
+<td>Ministry of Environment</td>
+<td>Pollution rules</td>
+</tr>
+<tr>
+<td>Gıda Tarım Hayvancılık Bakanlığı</td>
+<td>Ministry of Agriculture</td>
+<td>Village roads</td>
+</tr>
+<tr>
+<td>İçişleri Bakanlığı</td>
+<td>Ministry of Interior</td>
+<td>International race permit</td>
+</tr>
+<tr>
+<td>Atom Enerjisi Komisyonu</td>
+<td>Atomic Energy Commission</td>
+<td>Radioactive load permit</td>
+</tr>
+<tr>
+<td>Belediye</td>
+<td>Municipality</td>
+<td>Local roads + parks</td>
+</tr>
+<tr>
+<td>Belediye Trafik Birimi</td>
+<td>Municipal traffic unit</td>
+<td>Local enforcement</td>
+</tr>
+<tr>
+<td>İl Trafik Komisyonu</td>
+<td>Provincial Traffic Commission</td>
+<td>Vali başkan</td>
+</tr>
+<tr>
+<td>İlçe Trafik Komisyonu</td>
+<td>District Traffic Commission</td>
+<td>Kaymakam başkan</td>
+</tr>
+<tr>
+<td>Vali</td>
+<td>Provincial governor</td>
+<td>İl başkanı</td>
+</tr>
+<tr>
+<td>Kaymakam</td>
+<td>District governor</td>
+<td>İlçe başkanı</td>
+</tr>
+<tr>
+<td>Başbakan</td>
+<td>Prime Minister</td>
+<td>Yüksek Kurul başkanı</td>
+</tr>
+<tr>
+<td>Sürücü sicili</td>
+<td>Driver record</td>
+<td>EGM tutar</td>
+</tr>
+<tr>
+<td>Tescil</td>
+<td>Registration</td>
+<td>Araç tescili → EGM</td>
+</tr>
+<tr>
+<td>Plaka</td>
+<td>License plate</td>
+<td>EGM verir</td>
+</tr>
+<tr>
+<td>Muayene</td>
+<td>Inspection</td>
+<td>KGM + Ulaştırma yapar</td>
+</tr>
+<tr>
+<td>Trafik tutanağı</td>
+<td>Traffic report</td>
+<td>EGM düzenler</td>
+</tr>
+<tr>
+<td>Sertifika</td>
+<td>Certificate</td>
+<td>MEB verir (sürücü adayına)</td>
+</tr>
+<tr>
+<td>Ehliyet</td>
+<td>Driving license</td>
+<td>Sertifika sonrası EGM verir</td>
+</tr>
+<tr>
+<td>İlk yardım istasyonu</td>
+<td>First-aid station</td>
+<td>Sağlık Bakanlığı kurar</td>
+</tr>
+<tr>
+<td>Ambulans</td>
+<td>Ambulance</td>
+<td>Sağlık Bakanlığı</td>
+</tr>
+<tr>
+<td>Köy yolu</td>
+<td>Village road</td>
+<td>Gıda Tarım sorumlu</td>
+</tr>
+<tr>
+<td>Standart dışı yük</td>
+<td>Out-of-spec cargo</td>
+<td>KGM izni</td>
+</tr>
+<tr>
+<td>Yarış izni</td>
+<td>Race permit</td>
+<td>Vali / İçişleri</td>
+</tr>
+<tr>
+<td>Türkiye karayolu haritası</td>
+<td>Turkey road map</td>
+<td>Şehirler arası yolculukta</td>
+</tr>
+<tr>
+<td>Lejant</td>
+<td>Map legend</td>
+<td>Sağ alt köşe</td>
+</tr>
+<tr>
+<td>Navigasyon</td>
+<td>GPS navigation</td>
+<td>Modern aracı</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-147.png" alt="Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>17. Cross-references</h2>
+
+
+<ul>
+<li><strong>Standart dışı yük + radyoaktif madde izni:</strong> <a href="24-araçların-yüklenmesi.md">24-araçların-yüklenmesi.md</a>.</li>
+<li><strong>Yarış izni (valilik / İçişleri):</strong> <a href="27-bisiklet-motosiklet-kurallari.md">27-bisiklet-motosiklet-kurallari.md §6</a>.</li>
+<li><strong>Trafik kazası tutanağı + EGM görevi:</strong> <a href="28-kaza-tutanagi-sorumluluklar-kusurlar.md">28-kaza-tutanagi-sorumluluklar-kusurlar.md</a>.</li>
+<li><strong>Çevre/asli kusur:</strong> <a href="29-cevre-asli-kusur-saygisiz-surme.md">29-cevre-asli-kusur-saygisiz-surme.md</a>.</li>
+<li><strong>Sürücü belgesi sınıfları + tescil + muayene detayı:</strong> <a href="32-tescil-muayene-surucu-belgeleri.md">32-tescil-muayene-surucu-belgeleri.md</a>.</li>
+</ul></div></section><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-176.html">📄 Sayfa 176: 10- Belediye Trafik Birimleri:<span class="score">276.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-169.html">📄 Sayfa 169: HARİTA OKUMA – YOL VE ŞEHİR BİLGİSİ<span class="score">235.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-173.html">📄 Sayfa 173: 4- Karayolları Genel Müdürlüğü:<span class="score">223.7</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-174.html">📄 Sayfa 174: 5- Milli Eğitim Bakanlığı :<span class="score">217.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-175.html">📄 Sayfa 175: 7- Gıda, Tarım ve Hayvancılık Bakanlığı:<span class="score">193.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-172.html">📄 Sayfa 172: 3- Emniyet Genel Müdürlüğü:<span class="score">180.5</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/index.html">🖼️ Kazalar, Cezalar, Sigorta<span class="score">7 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/index.html">🖼️ Tescil, Belge, Çevre, Psikoloji<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

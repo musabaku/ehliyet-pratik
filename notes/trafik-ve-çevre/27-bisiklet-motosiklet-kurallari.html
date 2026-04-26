@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bisiklet, Motorlu Bisiklet ve Motosiklet Kuralları — Two-Wheeled Vehicle Rules | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 27-bisiklet-motosiklet-kurallari</span>
+</div>
+<div class="content">
+<h1>Bisiklet, Motorlu Bisiklet ve Motosiklet Kuralları — Two-Wheeled Vehicle Rules</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 138–145. Drafted from PDF (no live class for this topic).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Two-wheeled vehicles (bisiklet, motorlu bisiklet, motosiklet) and pedestrians (yayalar) have their own set of rules separate from cars. The exam tests <strong>age limits, passenger limits, equipment requirements, and forbidden behaviors</strong> with high frequency.</p>
+<p>This note also covers the <strong>child-passenger and protective-equipment rules</strong> from page 138, the <strong>pedestrian rules</strong> from page 145, and the <strong>çocuk/hasta/engelli/görmeyen yayalar</strong> rules from page 144.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-138.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-138.png" alt="Ders kitabı — Sayfa 138: SÜRÜCÜ VE YOLCULARIN KORUYUCU TERTİBAT KULLANMALARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 138: SÜRÜCÜ VE YOLCULARIN KORUYUCU TERTİBAT KULLANMALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-138.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Sürücü ve Yolcuların Koruyucu Tertibat (PDF p138)</h2>
+
+
+<h3>Çocukların ön koltukta taşınması</h3>
+<blockquote>
+<p><em>"Sürücünün yanındaki ön koltukta </em><em>10 yaşından küçük çocukların</em><em> taşınması yasaktır."</em></p>
+</blockquote>
+<p><strong>Children under 10 cannot sit in the front passenger seat.</strong> Period.</p>
+<h3>Çocuk bağlama sistemleri (child seats)</h3>
+<blockquote>
+<p><em>"Araçlarda </em><em>150 cm'den kısa ve 36 kg'ın altındaki çocukların</em><em> taşınması sırasında çocukların ağırlığına uygun </em><em>çocuk bağlama sistemlerinin kullanılması zorunludur</em><em>."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Boy / Ağırlık</th>
+<th>Kural</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>&lt;150 cm boy + &lt;36 kg ağırlık</strong></td>
+<td><strong>Çocuk koltuğu zorunlu</strong></td>
+</tr>
+<tr>
+<td><strong>&gt;135 cm</strong></td>
+<td>Bağlama sistemi yerine arka koltukta emniyet kemeri kullanabilir (önde değil)</td>
+</tr>
+<tr>
+<td><strong>&lt;3 yaş</strong></td>
+<td>Çocuk koltuğu YOKSA hiç taşınamaz</td>
+</tr>
+</tbody>
+</table>
+<h3>Motosiklet/motorlu bisiklet koruyucu tertibat</h3>
+<blockquote>
+<p><em>"</em><em>Motosiklet ve motorlu bisiklet sürücülerinin koruma başlığı ve koruma gözlüğü, yolcularının ise koruma başlığı kullanmaları zorunludur.</em><em>"</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Kişi</th>
+<th>Zorunlu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sürücü</strong></td>
+<td><strong>Koruma başlığı (kask) + koruma gözlüğü</strong></td>
+</tr>
+<tr>
+<td><strong>Yolcu</strong></td>
+<td><strong>Sadece koruma başlığı (kask)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>10 yaşından küçük çocuklar ön koltuğa oturtulmaz.</strong></p>
+<p><strong>150 cm'den kısa ve 36 kg altındaki çocuklar için çocuk koltuğu zorunludur.</strong></p>
+<p><strong>Çocuk koltuğu olmayan araçlarda 3 yaşın altındaki çocuklar taşınamaz.</strong></p>
+<p><strong>Motosiklet sürücüsü: kask + gözlük. Yolcu: sadece kask.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-139.png" alt="Ders kitabı — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/trafik-ve-cevre/page-140.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-140.png" alt="Ders kitabı — Sayfa 140: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET İLE İLGİLİ KURALLAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 140: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET İLE İLGİLİ KURALLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-140.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 3</div><a href="../../ders-kitabi/trafik-ve-cevre/page-133.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-133.png" alt="Ders kitabı — Sayfa 133: YÜK TAŞIMAK İÇİN YAPILMIŞ ARAÇLARDA GEREKLİ HALLERDE:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 133: YÜK TAŞIMAK İÇİN YAPILMIŞ ARAÇLARDA GEREKLİ HALLERDE: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-133.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 4</div><a href="../../ders-kitabi/trafik-ve-cevre/page-141.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-141.png" alt="Ders kitabı — Sayfa 141:    Sürücü arkasında; Bir kişiden fazlasının taşınması yasaktır." loading="lazy"></a><figcaption>Ders kitabı — Sayfa 141:    Sürücü arkasında; Bir kişiden fazlasının taşınması yasaktır. <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-141.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — İki Tekerlekli Araç Yasakları (PDF pp 139–141)</h2>
+
+
+<h3>Where they can be ridden</h3>
+<blockquote>
+<p><em>"Bu araçların </em><em>yaya yollarında</em><em> sürülmesi yasaktır."</em></p>
+<p><em>"Ayrı bir bisiklet yolu olduğu halde, bisiklet ve motorlu bisikletlerin </em><em>taşıt yollarında</em><em> sürülmesi yasaktır."</em></p>
+</blockquote>
+<ul>
+<li>Yaya yolu (sidewalk) → <strong>YASAK</strong></li>
+<li>Bisiklet yolu varsa → bisiklet/motorlu bisiklet <strong>bu yolu kullanmak zorunda</strong>, taşıt yolunu kullanamaz.</li>
+</ul>
+<h3>Yan yana sürme</h3>
+<blockquote>
+<p><em>"İkiden fazlasının taşıt yolunun bir şeridinde </em><em>yan yana sürülmesi yasaktır.</em><em>"</em></p>
+</blockquote>
+<p>Maximum <strong>2 abreast</strong> in a single lane. 3+ side-by-side = forbidden.</p>
+<h3>Yolcu taşıma</h3>
+<blockquote>
+<p><em>"Sürücü arkasında oturma yeri olmadıkça başka kişilerin taşınması yasaktır."</em></p>
+<p><em>"Yeterli oturma yeri olsa dahi </em><em>bir kişiden fazlasının taşınması yasaktır</em><em>."</em></p>
+</blockquote>
+<ul>
+<li>No designated seat → no passenger.</li>
+<li>Even with seats → <strong>maximum 1 passenger</strong> behind the driver.</li>
+</ul>
+<h3>Bagaj/paket taşıma</h3>
+<blockquote>
+<p><em>"Bu araçların sürülmesi sırasında </em><em>elde bagaj, paket ve benzerlerinin taşınması yasaktır.</em><em>"</em></p>
+</blockquote>
+<p>No carrying packages <strong>in your hands</strong> while riding.</p>
+<h3>Akrobatik hareketler</h3>
+<blockquote>
+<p><em>"İzin alınarak yapılan gösteriler haricinde, bu araçlar üzerinde </em><em>akrobatik hareketler yapılması yasaktır.</em><em>"</em></p>
+</blockquote>
+<p>Wheelies, stunts, etc. → <strong>forbidden</strong> unless permit-licensed exhibition.</p>
+<h3>Ticari yük taşıma</h3>
+<blockquote>
+<p><em>"Üç tekerlekli ve özel şekilde imal edilmiş motosikletler hariç, bu araçlar üzerine kasa, sandık vb yaptırılarak </em><em>ticari amaçla yük taşınması yasaktır.</em><em>"</em></p>
+</blockquote>
+<p>Standard 2-wheelers cannot be used as commercial cargo vehicles. Only purpose-built 3-wheelers can.</p>
+<h3>Başka araca tutunma</h3>
+<blockquote>
+<p><em>"Başka araçlara tutunularak sürülmesi yasaktır."</em></p>
+</blockquote>
+<p>Holding onto another vehicle for tow → <strong>forbidden</strong> (the "skitching" prohibition).</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Yaya yollarında bisiklet/motosiklet sürmek YASAKTIR.</strong></p>
+<p><strong>Bisiklet yolu varsa taşıt yoluna çıkmak yasaktır.</strong></p>
+<p><strong>Tek şeritte en fazla 2 yan yana sürülebilir.</strong></p>
+<p><strong>Sürücü arkasında en fazla 1 kişi taşınır.</strong></p>
+<p><strong>Elde bagaj/paket taşımak yasaktır.</strong></p>
+<p><strong>Başka araca tutunarak sürmek yasaktır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-139.png" alt="Ders kitabı — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-139.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Yaş Sınırları (PDF p139)</h2>
+
+
+<blockquote>
+<p><em>"</em><em>Bisiklet sürücülerinin 11 yaşını</em><em>, </em><em>motorsuz taşıtları sürenlerin de 13 yaşını</em><em> doldurmuş olmaları gerekmektedir."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Araç</th>
+<th>Asgari yaş</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bisiklet</strong></td>
+<td><strong>11 yaş</strong></td>
+</tr>
+<tr>
+<td><strong>Motorsuz taşıtlar</strong> (at, eşek, hayvan arabası, vb.)</td>
+<td><strong>13 yaş</strong></td>
+</tr>
+<tr>
+<td><strong>Motorlu bisiklet (A1)</strong></td>
+<td><strong>17 yaş</strong> <em>(bkz: sürücü belgesi note 12)</em></td>
+</tr>
+<tr>
+<td><strong>Motosiklet (A2)</strong></td>
+<td><strong>17 yaş</strong> <em>(bkz: sürücü belgesi note 12)</em></td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Bisiklet için minimum yaş 11; motorsuz taşıtlar için 13.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-143.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-143.png" alt="Ders kitabı — Sayfa 143: YAVAŞ SÜRME VE YAVAŞLAMA YASAĞI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 143: YAVAŞ SÜRME VE YAVAŞLAMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-143.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Yavaş Sürme ve Yavaşlama Yasağı (PDF p143)</h2>
+
+
+<blockquote>
+<p><em>"Sürücülerin </em><em>zorunlu bir neden olmadıkça</em><em>:</em><br />
+- <em>Diğer araçların ilerleyişine engel olacak şekilde </em><em>yavaş sürmeleri</em><em>,</em><br />
+- <em>Belirlenen hız sınırlarının </em><em>çok altında</em><em> ve trafiğin akışına engel olacak şekilde sürmeleri,</em><br />
+- <em>Başkalarını rahatsız edecek veya tehlikeye sokacak şekilde </em><em>gereksiz ve ani yavaşlamaları yasaktır</em><em>.</em>"</p>
+</blockquote>
+<p>Driving <strong>too slow without a reason</strong> is also a violation, just like speeding. Three forms:<br />
+1. Unnecessarily slow speed<br />
+2. Driving far below the posted limit when no reason<br />
+3. Sudden unjustified slowdowns</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Zorunlu bir neden olmadıkça aşırı yavaş sürmek + ani yavaşlamak YASAKTIR.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-144.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-144.png" alt="Ders kitabı — Sayfa 144: YARIŞLAR VE KOŞULAR:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 144: YARIŞLAR VE KOŞULAR: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-144.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>6. SLIDE 5 — Çocuk, Hasta, Engelli ve Görmeyen Yayalar (PDF p144)</h2>
+
+
+<blockquote>
+<p><em>"Gözleri görmeyenlerden, </em><em>beyaz baston taşıyan</em><em>, kollarında </em><em>3 siyah yuvarlaklı sarı bant</em><em> bulunan, bir yayanın veya köpeğin yardımı ile yürüyen kişilerin taşıt yolu üzerinde bulunmaları halinde </em><em>bütün sürücülerin yavaşlamaları, gerektiğinde durmaları ve yardımcı olmaları zorunludur.</em><em>"</em></p>
+</blockquote>
+<h3>Visually-impaired pedestrian markers</h3>
+<ul>
+<li><strong>Beyaz baston</strong> (white cane)</li>
+<li><strong>3 siyah yuvarlaklı sarı kol bandı</strong> (yellow armband with 3 black circles)</li>
+<li>A guiding person or guide dog (köpek)</li>
+</ul>
+<h3>Driver duty</h3>
+<ul>
+<li><strong>Yavaşla</strong> (slow down)</li>
+<li><strong>Gerekirse dur</strong> (stop if needed)</li>
+<li><strong>Yardımcı ol</strong> (assist)</li>
+</ul>
+<h3>Yarış izinleri (page 144 — same group)</h3>
+<ul>
+<li><strong>İl içi yarış:</strong> valilikten en az <strong>30 gün</strong> önce izin</li>
+<li><strong>İller arası / uluslararası yarış:</strong> İçişleri Bakanlığı izni</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Beyaz baston veya 3 siyah yuvarlaklı sarı bantlı görmeyen yayaya bütün sürücüler yavaşlar, gerekirse durur, yardımcı olur.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-145.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-145.png" alt="Ders kitabı — Sayfa 145: YAYALARLA İLGİLİ KURALLAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 145: YAYALARLA İLGİLİ KURALLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-145.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>7. SLIDE 6 — Yaya Kuralları (PDF p145)</h2>
+
+
+<h3>Where pedestrians walk</h3>
+<ul>
+<li><strong>Yaya yolu / banket / alan varsa</strong> → onlardan yürü</li>
+<li><strong>İki tarafında banket bulunan yollarda</strong> → kendi gidiş yönüne göre <strong>sol bankette</strong></li>
+</ul>
+<h3>Karşıya geçiş</h3>
+<ul>
+<li><strong>Yaya geçidi, okul geçidi veya kavşaktan geç</strong></li>
+<li><strong>100 m yakınında</strong> geçit/kavşak yoksa → araçların hızını kontrol ederek en kısa doğrultuda geçilebilir</li>
+<li>Geçitten geçerken <strong>sağ bölümünden</strong> yürü</li>
+<li><strong>Önce sol, sonra sağ</strong> kontrol et</li>
+</ul>
+<h3>Gece yaya kuralları</h3>
+<blockquote>
+<p><em>"Yaya yolu bulunmayan karayollarında </em><em>gece yürümek zorunda kalan yayalar</em><em> sürücüleri uyarıcı </em><em>açık renk elbise giymek</em><em>, üstünde veya elindeki eşyada </em><em>yansıtıcı bulundurmak veya ışık taşımak</em><em> zorundadır."</em></p>
+</blockquote>
+<p>Night pedestrian on shoulderless road:<br />
+- Wear light-colored clothing<br />
+- Carry a reflector or light</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Yayalar iki taraflı banketli yolda kendi gidiş yönüne göre sol bankette yürür.</strong></p>
+<p><strong>100 m içinde geçit yoksa, araçları kontrol ederek karşıdan karşıya geçilebilir.</strong></p>
+<p><strong>Geçitten geçerken sağ bölümünden yürünür ve önce sol sonra sağ kontrol edilir.</strong></p>
+<p><strong>Gece yürüyen yaya açık renk elbise + yansıtıcı/ışık taşımalıdır.</strong></p>
+</blockquote>
+<hr />
+</div></section><h2>8. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Bisiklet sürücüsünün asgari yaşı kaçtır?"</strong> → <strong>11</strong></li>
+<li><strong>"Motorsuz taşıtları sürenlerin yaşı kaçtır?"</strong> → <strong>13</strong></li>
+<li><strong>"Bir motosiklette en fazla kaç yolcu taşınır?"</strong> → <strong>1 (sürücü dışında)</strong></li>
+<li><strong>"Motosiklet sürücüsünde zorunlu koruyucu nedir?"</strong> → <strong>kask + gözlük</strong></li>
+<li><strong>"10 yaş altı çocuk nereye oturtulamaz?"</strong> → <strong>ön koltuğa</strong></li>
+<li><strong>"150 cm/36 kg altı çocuklar için zorunlu malzeme nedir?"</strong> → <strong>çocuk koltuğu (çocuk bağlama sistemi)</strong></li>
+<li><strong>"Çocuk koltuğu olmayan araçta kaç yaş altı çocuk taşınamaz?"</strong> → <strong>3 yaş altı</strong></li>
+<li><strong>"Bisiklet yolunun olduğu yerde bisiklet hangi yolu kullanır?"</strong> → <strong>sadece bisiklet yolunu</strong> (taşıt yoluna girmez)</li>
+<li><strong>"Beyaz baston taşıyan görmeyen yaya gördüğünde sürücü ne yapar?"</strong> → <strong>yavaşlar, gerekirse durur, yardımcı olur</strong></li>
+<li><strong>"Yaya geçidinden geçerken hangi taraftan yürünür?"</strong> → <strong>sağ bölümünden</strong></li>
+<li><strong>"Geceleri yaya yolu olmayan yolda yürüyen yaya ne giymeli?"</strong> → <strong>açık renk elbise + yansıtıcı/ışık</strong></li>
+</ol>
+<hr />
+<h2>9. Memorize These</h2>
+<blockquote>
+<p><strong>Bisiklet 11 yaş, motorsuz taşıt 13 yaş.</strong></p>
+<p><strong>10 yaş altı çocuk ön koltukta YOK; 150 cm/36 kg altı çocuk koltuğu ZORUNLU; &lt;3 yaş + koltuk yoksa hiç taşınamaz.</strong></p>
+<p><strong>Motosiklet sürücüsü: kask + gözlük. Yolcu: sadece kask.</strong></p>
+<p><strong>Tek şeritte yan yana en fazla 2 iki tekerlekli; sürücü arkasında en fazla 1 yolcu.</strong></p>
+<p><strong>Yaya yolunda bisiklet YASAK; bisiklet yolu varsa taşıt yolu YASAK.</strong></p>
+<p><strong>Akrobatik hareketler, elde bagaj, başka araca tutunma YASAK.</strong></p>
+<p><strong>Görmeyen yaya (beyaz baston / 3 siyah yuvarlaklı sarı bant) görüldüğünde tüm sürücüler yavaşlar, gerekirse durur.</strong></p>
+<p><strong>Yayalar iki taraflı banketli yolda sol bankette yürür; geçitten sağ bölümünden geçer; önce sol sonra sağ kontrol eder.</strong></p>
+<p><strong>Gece yaya: açık renk elbise + yansıtıcı/ışık.</strong></p>
+</blockquote>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-138.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-138.png" alt="Ders kitabı — Sayfa 138: SÜRÜCÜ VE YOLCULARIN KORUYUCU TERTİBAT KULLANMALARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 138: SÜRÜCÜ VE YOLCULARIN KORUYUCU TERTİBAT KULLANMALARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-138.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>10. Consolidated Exam Vocabulary</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bisiklet</td>
+<td>Bicycle</td>
+<td>Pedal-only</td>
+</tr>
+<tr>
+<td>Motorlu bisiklet</td>
+<td>Moped (low-power motorcycle)</td>
+<td>Small motor</td>
+</tr>
+<tr>
+<td>Motosiklet</td>
+<td>Motorcycle</td>
+<td>Full motorcycle</td>
+</tr>
+<tr>
+<td>Yaya yolu</td>
+<td>Sidewalk / pedestrian path</td>
+<td>Bisiklet yasak</td>
+</tr>
+<tr>
+<td>Bisiklet yolu</td>
+<td>Bicycle lane</td>
+<td>Mandatory if exists</td>
+</tr>
+<tr>
+<td>Şerit</td>
+<td>Lane</td>
+<td>Traffic lane</td>
+</tr>
+<tr>
+<td>Yan yana</td>
+<td>Side by side</td>
+<td>Max 2</td>
+</tr>
+<tr>
+<td>Sürücü</td>
+<td>Rider / driver</td>
+<td>The cyclist/motorcyclist</td>
+</tr>
+<tr>
+<td>Yolcu</td>
+<td>Passenger</td>
+<td>Behind the rider</td>
+</tr>
+<tr>
+<td>Bagaj</td>
+<td>Baggage / package</td>
+<td>Forbidden in hand</td>
+</tr>
+<tr>
+<td>Akrobatik hareket</td>
+<td>Acrobatic move / stunt</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>Ticari yük</td>
+<td>Commercial cargo</td>
+<td>Forbidden on standard 2-wheelers</td>
+</tr>
+<tr>
+<td>Tutunma</td>
+<td>Holding on</td>
+<td>Skitching — forbidden</td>
+</tr>
+<tr>
+<td>Koruma başlığı</td>
+<td>Protective helmet (kask)</td>
+<td>Mandatory</td>
+</tr>
+<tr>
+<td>Kask</td>
+<td>Helmet</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Koruma gözlüğü</td>
+<td>Protective goggles</td>
+<td>Mandatory for rider</td>
+</tr>
+<tr>
+<td>Çocuk bağlama sistemi</td>
+<td>Child restraint</td>
+<td>Car seat</td>
+</tr>
+<tr>
+<td>Çocuk koltuğu</td>
+<td>Child seat</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Ön koltuk</td>
+<td>Front seat</td>
+<td>Off-limits to &lt;10</td>
+</tr>
+<tr>
+<td>Beyaz baston</td>
+<td>White cane</td>
+<td>Visually-impaired marker</td>
+</tr>
+<tr>
+<td>Görmeyen yaya</td>
+<td>Visually-impaired pedestrian</td>
+<td>Driver must yield</td>
+</tr>
+<tr>
+<td>Banket</td>
+<td>Shoulder</td>
+<td>Where pedestrians walk</td>
+</tr>
+<tr>
+<td>Yaya geçidi</td>
+<td>Pedestrian crossing</td>
+<td>Where to cross</td>
+</tr>
+<tr>
+<td>Okul geçidi</td>
+<td>School crossing</td>
+<td>Same idea</td>
+</tr>
+<tr>
+<td>Yansıtıcı</td>
+<td>Reflector</td>
+<td>Night pedestrian gear</td>
+</tr>
+<tr>
+<td>Açık renk elbise</td>
+<td>Light-colored clothing</td>
+<td>Night visibility</td>
+</tr>
+<tr>
+<td>Yavaş sürme yasağı</td>
+<td>Slow-driving ban</td>
+<td>Yes, this exists</td>
+</tr>
+<tr>
+<td>Ani yavaşlama</td>
+<td>Sudden slowdown</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>Yarış</td>
+<td>Race</td>
+<td>Needs valilik permit (30 days)</td>
+</tr>
+<tr>
+<td>İçişleri Bakanlığı</td>
+<td>Ministry of Interior</td>
+<td>Permit for international races</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-161.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-161.png" alt="Ders kitabı — Sayfa 161: SÜRÜCÜ BELGELERİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 161: SÜRÜCÜ BELGELERİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-161.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>11. Cross-references</h2>
+
+
+<ul>
+<li><strong>Sürücü belgesi A1/A2 sınıfı + yaş şartları:</strong> <a href="12-alkol-ve-surme-yasakları.md">12-alkol-ve-surme-yasakları.md</a> and forthcoming <a href="32-tescil-muayene-surucu-belgeleri.md">32-tescil-muayene-surucu-belgeleri.md</a>.</li>
+<li><strong>Hız kuralları (yavaş sürme yasağı bağlantısı):</strong> <a href="15-hız-kuralları.md">15-hız-kuralları.md</a>.</li>
+<li><strong>Mandatory equipment:</strong> <a href="../araç-tekniği/14-zorunlu-arac-ve-gerecler.md">../araç-tekniği/14-zorunlu-arac-ve-gerecler.md</a> — kask + gözlük listed there.</li>
+</ul></div></section><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-139.html">📄 Sayfa 139: BİSİKLET, MOTORLU BİSİKLET ve MOTOSİKLET SÜRÜCÜLERİ<span class="score">285.8</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-145.html">📄 Sayfa 145: YAYALARLA İLGİLİ KURALLAR<span class="score">245.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-138.html">📄 Sayfa 138: SÜRÜCÜ VE YOLCULARIN KORUYUCU TERTİBAT KULLANMALARI<span class="score">197.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-144.html">📄 Sayfa 144: YARIŞLAR VE KOŞULAR:<span class="score">159.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-143.html">📄 Sayfa 143: YAVAŞ SÜRME VE YAVAŞLAMA YASAĞI<span class="score">104.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-176.html">📄 Sayfa 176: 10- Belediye Trafik Birimleri:<span class="score">91.2</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/index.html">🖼️ Bisiklet, Motosiklet, Yaya<span class="score">7 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/04-yol-cizgileri/index.html">🖼️ Yol Çizgileri<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">3 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafik Kazaları: Tutanak, Sorumluluklar ve Asli Kusur Tespiti | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 28-kaza-tutanagi-sorumluluklar-kusurlar</span>
+</div>
+<div class="content">
+<h1>Trafik Kazaları: Tutanak, Sorumluluklar ve Asli Kusur Tespiti</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 146–151. Drafted from PDF (no live class for this topic).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>Trafik kazaları are classified by severity and trigger different procedures:<br />
+- <strong>Maddi hasarlı</strong> (property-only damage)<br />
+- <strong>Yaralanmalı</strong> (with injury)<br />
+- <strong>Ölümlü</strong> (with death)</p>
+<p>For each, specific <strong>tutanak (report) procedures, kazaya karışanların yükümlülükleri (driver duties), and trafik zabıtasının görevleri (police duties)</strong> apply. The exam asks both "who does what" and "when must yetkililer (officials) be called vs anlaşma (mutual settlement) is allowed."</p>
+<p>This is one of the <strong>highest-yield exam blocks</strong> in trafik-ve-çevre — multiple questions per exam.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-147.png" alt="Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Kaza Türleri (Accident Categories)</h2>
+
+
+<p>The textbook lists three:<br />
+- <strong>Maddi hasarlı</strong> — only property damage, no injuries<br />
+- <strong>Yaralanmalı</strong> — at least one person injured<br />
+- <strong>Ölümlü</strong> — at least one person died</p>
+<p>The classification matters because <strong>maddi hasarlı + tarafların anlaşması</strong> is the only case where you can resolve the accident without the trafik zabıtası.</p>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-147.png" alt="Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Maddi Hasarlı Tutanak: When Drivers Can Settle Themselves</h2>
+
+
+<blockquote>
+<p><em>"Kazaya karışan sürücülerin tümü, </em><em>yetkililerin gelmesini gerekli görmez ve aralarında anlaşırlarsa</em><em>, trafik akışını engellememek için olay yerinin </em><em>fotoğrafları çekilerek</em><em> kazaya karışan araçlar </em><em>taşıt yolu dışına</em><em> çıkarılır ve </em><em>'Maddi Hasarlı Trafik Kazası Tespit Tutanağını' düzenleyip birlikte imza altına alarak</em><em> olay yerinden ayrılabilirler."</em></p>
+</blockquote>
+<h3>The 4-step driver-resolved procedure</h3>
+<p>For <strong>maddi hasarlı + anlaşma</strong>:<br />
+1. <strong>Take photos</strong> of the scene<br />
+2. <strong>Move the vehicles off the road</strong> (don't block traffic)<br />
+3. <strong>Fill out the Maddi Hasarlı Trafik Kazası Tespit Tutanağı together</strong><br />
+4. <strong>Both sign</strong> and leave</p>
+<h3>⚠️ CRITICAL — once you leave, no go-back</h3>
+<blockquote>
+<p><em>"Olay yerinden ayrıldıktan sonra, yetkililerden kaza tespit tutanağı düzenlemesini isteyemezler."</em></p>
+</blockquote>
+<p><strong>Once you've left the scene and signed the tutanak, you cannot later ask the police to write a separate report.</strong> The voluntary tutanak is final.</p>
+<h3>What you exchange</h3>
+<blockquote>
+<p><em>"Araçların </em><em>sigorta poliçeleri</em><em>, </em><em>ehliyet</em><em> ve </em><em>kimlik fotokopilerini</em><em> karşılıklı olarak birbirlerine verirler ve bu belgelerle araç servise teslim edilir."</em></p>
+</blockquote>
+<p>Each driver gives the other:<br />
+- Sigorta poliçesi (insurance policy)<br />
+- Ehliyet (driving license)<br />
+- Kimlik (ID) photocopy</p>
+<p>The vehicle goes to a service that <strong>notifies the insurance company</strong> and gets approval before doing repairs.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Maddi hasarlı + tarafların anlaşması: fotoğraf çek → araçları taşıt yolu dışına al → tutanak doldur → imzalayıp ayrıl. Sonra geri dönüp yetkili çağırılamaz.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-148.png" alt="Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — When You MUST Call Yetkililer (Police)</h2>
+
+
+<blockquote>
+<p><em>"Yetkililer Tarafından Tutanak Tutulması Gereken Durumlar:"</em></p>
+</blockquote>
+<p>The 6 mandatory-call situations:</p>
+<ol>
+<li><strong>Kazaya bir aracın karışması</strong> — only one vehicle involved (single-vehicle accident)</li>
+<li><strong>Taraflardan birinin sürücü belgesinin bulunmaması</strong> — one driver has no license</li>
+<li><strong>Araçlardan birinin zorunlu mali sorumluluk sigortasının olmaması</strong> — one vehicle has no mandatory insurance</li>
+<li><strong>Sürücülerden herhangi birinde alkol, uyuşturucu veya uyarıcı madde aldığı şüphesinin bulunması</strong> — alcohol/drug suspicion</li>
+<li><strong>Kazaya karışan araçlardan herhangi birinin kamu kurum/kuruluşuna ait olması</strong> veya <strong>kamu malına / üçüncü şahısların eşyalarına zarar verilmesi</strong> — public-vehicle / public-property / third-party property damage</li>
+<li><strong>Kazada ölüm veya yaralanma durumunun olması</strong> — any death or injury</li>
+</ol>
+<p>If ANY of these is true → <strong>trafik zabıtası mutlaka çağrılır</strong>.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Yetkili çağırma zorunlu: tek araç, ehliyetsiz sürücü, sigortasız araç, alkol şüphesi, kamu malı/üçüncü şahıs zararı, ölüm/yaralanma.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-148.png" alt="Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Trafik Zabıtasının Görevleri</h2>
+
+
+<p>When the police arrive at a kaza, their görevs:</p>
+<ol>
+<li><strong>Yolun trafiğe kapandığı hallerde, yolu trafiğe açmak</strong> — reopen the road if blocked</li>
+<li><strong>Karayolunu kullananlar için ek bir tehlikenin oluşmaması için gerekli tedbirleri almak</strong> — prevent secondary hazards</li>
+<li><strong>Yaralılara ilk yardım yapılmasını ve en yakın sağlık kuruluşuna gönderilmesini sağlamak</strong> — first aid + send to nearest hospital</li>
+<li><strong>Kaza yerindeki mal güvenliğini sağlamak</strong> — secure property at scene</li>
+<li><strong>Trafik Kazası Tespit Tutanağı düzenlemek</strong> — write the official accident report</li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Trafik zabıtasının görevleri: yolu aç, ek tehlikeyi önle, yaralılara ilk yardım + hastaneye sevk, mal güvenliği, tespit tutanağı düzenle.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-150.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-150.png" alt="Ders kitabı — Sayfa 150: KAZAYA KARIŞANLAR VE KAZA YERİNDEN GEÇENLERİN SORUMLULUKLARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 150: KAZAYA KARIŞANLAR VE KAZA YERİNDEN GEÇENLERİN SORUMLULUKLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-150.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>6. SLIDE 5 — Kazaya Karışanların Sorumlulukları</h2>
+
+
+<blockquote>
+<p><em>"Kazaya Karışanlar:"</em></p>
+</blockquote>
+<p>Drivers who are <strong>involved in</strong> the accident must:<br />
+- <strong>Durmak ve trafik güvenliği için gerekli önlemleri almak</strong> — stop and take safety measures<br />
+- <strong>Kaza yerindeki durumu değiştirmemek</strong> — don't alter the scene (keep evidence intact)<br />
+- <strong>Olayı görevlilere bildirmek, kaza yerinden ayrılmamak</strong> — report to officials, do not leave<br />
+- <strong>İstendiğinde kimlik ve adreslerini bildirmek, sürücü ve trafik belgeleri ile sigorta poliçelerini göstermek</strong> — present ID/address/license/insurance on request<br />
+- <strong>Başında sahibi ve sorumlusu bulunmayan araç veya mala zarar verilmesi halinde</strong>: bul → not bırak → en kısa sürede yetkililere bildir</p>
+<h3>The "park-bumped car" rule</h3>
+<p>If you damage a parked car / unattended property:<br />
+1. <strong>Try to find the owner</strong><br />
+2. If you can't → <strong>leave a note</strong> in a visible place<br />
+3. → <strong>Notify the authorities ASAP</strong></p>
+<p>Just driving off = <strong>kazadan kaçma</strong> (hit-and-run), criminal offense.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kazaya karışan sürücü: dur + güvenlik al + yeri değiştirme + bildir + ayrılma + belgeleri göster.</strong></p>
+<p><strong>Park edilmiş araca zarar verince → sahibini ara → bulamazsan not bırak → yetkiliyi bilgilendir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-150.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-150.png" alt="Ders kitabı — Sayfa 150: KAZAYA KARIŞANLAR VE KAZA YERİNDEN GEÇENLERİN SORUMLULUKLARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 150: KAZAYA KARIŞANLAR VE KAZA YERİNDEN GEÇENLERİN SORUMLULUKLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-150.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>7. SLIDE 6 — Kaza Yerinden Geçenlerin Sorumlulukları</h2>
+
+
+<blockquote>
+<p><em>"Kaza Yerinden Geçenlerin Sorumlulukları:"</em></p>
+</blockquote>
+<p>People who simply <strong>pass by</strong> the accident must:<br />
+- <strong>Kaza yerinde usulüne uygun ilk yardım tedbirlerini almak</strong> — apply proper first aid<br />
+- <strong>Olayı en yakın zabıtaya veya sağlık kuruluşuna bildirmek</strong> — notify nearest police/hospital<br />
+- <strong>Yetkililerin isteği halinde yaralıları sağlık kuruluşuna götürmek</strong> — transport injured to hospital if asked</p>
+<p>This is the legal duty to <strong>assist</strong> even if you weren't involved.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kaza yerinden geçen: ilk yardım + zabıta/sağlık bildirimi + (talep halinde) yaralıyı taşıma.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-151.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-151.png" alt="Ders kitabı — Sayfa 151: Sürücü Kusurlarının Tespiti" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 151: Sürücü Kusurlarının Tespiti <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-151.html" target="_blank">→ pdf metni</a></figcaption></div><div class="slide-pair"><div class="slide-pair-label">📖 İlgili sayfa 2</div><a href="../../ders-kitabi/trafik-ve-cevre/page-146.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-146.png" alt="Ders kitabı — Sayfa 146: TRAFİK KAZALARI VE CEZALAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 146: TRAFİK KAZALARI VE CEZALAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-146.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>8. SLIDE 7 — Sürücü Kusurlarının Tespiti</h2>
+
+
+<blockquote>
+<p><em>"Adli mevzuat ve yargılama hükümleri saklı kalmak üzere, trafik kazalarına karışanların kusur durumları; </em><em>2918 sayılı Karayolları Kanunu</em><em> ve </em><em>Karayolları Trafik Yönetmeliği</em><em>nde belirtilen kurallar, şartlar, hak ve yükümlülükler ile </em><em>asli kusur sayılan haller</em><em> dikkate alınarak belirlenir."</em></p>
+</blockquote>
+<h3>Kusur tespitinde kullanılan kanunlar</h3>
+<ul>
+<li><strong>2918 sayılı Karayolları Trafik Kanunu</strong></li>
+<li><strong>Karayolları Trafik Yönetmeliği</strong></li>
+</ul>
+<h3>Hesaplama yöntemi</h3>
+<blockquote>
+<p><em>"Trafik kazalarına karışan sürücülerin kusur oranları; </em><em>100 veya 8 sayısı, tam kötü puan olarak esas alınarak hesaplanır.</em><em>"</em></p>
+</blockquote>
+<p>Driver fault is calculated using <strong>100 or 8</strong> as the maximum-fault baseline (depending on which framework). One driver can be "100% kusurlu" or "8/8 kusurlu" — both express the same maximum fault.</p>
+<h3>Evidence used in tespit</h3>
+<ul>
+<li><strong>Kaza mahallindeki iz ve deliller</strong> (skid marks, debris, damage location)</li>
+<li><strong>Kazaya karışanların ifadeleri</strong> (driver statements)</li>
+<li><strong>Tanık ifadeleri</strong> (witness statements)</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kusur tespiti: 2918 sayılı kanun + yönetmelik + asli kusur halleri esas alınır; iz/delil + ifadeler değerlendirilir; oran 100 veya 8 üzerinden hesaplanır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-167.png" alt="Ders kitabı — Sayfa 167: ASLİ KUSUR SAYILAN HALLER" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 167: ASLİ KUSUR SAYILAN HALLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>9. The "Asli Kusur Sayılan Haller" cross-link</h2>
+
+
+<p>The actual list of <strong>asli kusur (primary fault) actions</strong> is on PDF p167 and lives in <a href="29-cevre-asli-kusur-saygisiz-surme.md">29-cevre-asli-kusur-saygisiz-surme.md §3</a>. They include:<br />
+- Kırmızı ışıkta geçmek<br />
+- Bölünmüş yolda karşı şeride girmek<br />
+- Arkadan çarpmak<br />
+- Geçme yasağı yerinde geçmek<br />
+- Kavşakta ilk geçiş hakkına uymamak<br />
+- Daralan yollarda geçiş kolaylığı sağlamamak<br />
+- ...and more.</p>
+<p>A driver who commits an asli kusur action <strong>is automatically held primarily at fault</strong> — kusur durumu tespit edilirken bu maddeler ağırlıklı sayılır.</p>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-148.png" alt="Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>10. Why this matters for the exam</h2>
+
+
+<ol>
+<li><strong>"Maddi hasarlı kazada taraflar anlaşırsa ne yaparlar?"</strong> → fotoğraf + araçları yoldan al + tutanak doldur + imzala + ayrıl.</li>
+<li><strong>"Tutanak doldurup ayrıldıktan sonra yetkililerden tutanak istenebilir mi?"</strong> → <strong>HAYIR.</strong></li>
+<li><strong>"Hangi durumlarda zabıta MUTLAKA çağrılır?"</strong> → tek araç, ehliyetsiz, sigortasız, alkol şüphesi, kamu malı, ölüm/yaralanma.</li>
+<li><strong>"Kazaya karışan sürücünün ilk yapması gereken nedir?"</strong> → <strong>durmak + güvenlik tedbiri almak + yeri değiştirmemek</strong>.</li>
+<li><strong>"Park edilmiş araca zarar veren sürücü ne yapar?"</strong> → sahibini ara, bulamazsan not bırak, yetkililere bildir.</li>
+<li><strong>"Kaza yerinden geçenlerin sorumlulukları nelerdir?"</strong> → ilk yardım + bildirim + (istenirse) yaralı taşıma.</li>
+<li><strong>"Trafik zabıtasının görevlerinden biri değildir?"</strong> — trap: "tamir işlemini başlatır" / "sigorta hesabını yapar" — bunlar zabıtanın görevi değil.</li>
+<li><strong>"Sürücü kusur oranı hangi sayı üzerinden hesaplanır?"</strong> → <strong>100 veya 8</strong>.</li>
+<li><strong>"Sigortasız araçla kaza yapılırsa ne olur?"</strong> → yetkili çağırılması zorunludur.</li>
+</ol>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-148.png" alt="Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-148.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>11. Memorize These</h2>
+
+
+<blockquote>
+<p><strong>Maddi hasarlı + anlaşma: fotoğraf → araçları yoldan al → birlikte tutanak doldur ve imzala → ayrıl. Geri dönüp yetkili çağrılamaz.</strong></p>
+<p><strong>Yetkili çağırma zorunlu: tek araç, ehliyetsiz, sigortasız, alkol şüphesi, kamu malı/üçüncü şahıs zararı, ölüm/yaralanma.</strong></p>
+<p><strong>Kazaya karışan: dur + güvenlik al + yeri değiştirme + bildir + ayrılma + belgeleri göster.</strong></p>
+<p><strong>Park edilmiş araca zarar verince: sahibini bul → bulunmazsa not bırak → yetkilileri bilgilendir.</strong></p>
+<p><strong>Kaza yerinden geçen: ilk yardım + bildirim + (talep edilirse) yaralı taşıma.</strong></p>
+<p><strong>Zabıtanın görevleri: yolu aç, ek tehlikeyi önle, ilk yardım + sevk, mal güvenliği, tutanak düzenle.</strong></p>
+<p><strong>Kusur tespiti 2918 sayılı kanun + yönetmelik temelinde, 100 veya 8 üzerinden hesaplanır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/page-147.png" alt="Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 147: TRAFİK KAZALARI VE CEZALAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-147.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>12. Consolidated Exam Vocabulary</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trafik kazası</td>
+<td>Traffic accident</td>
+<td>Generic</td>
+</tr>
+<tr>
+<td>Maddi hasarlı kaza</td>
+<td>Property-damage-only accident</td>
+<td>No injury</td>
+</tr>
+<tr>
+<td>Yaralanmalı kaza</td>
+<td>Accident with injury</td>
+<td>Yetkili zorunlu</td>
+</tr>
+<tr>
+<td>Ölümlü kaza</td>
+<td>Fatal accident</td>
+<td>Yetkili zorunlu</td>
+</tr>
+<tr>
+<td>Kazaya karışan</td>
+<td>Person involved in accident</td>
+<td>Subject to driver duties</td>
+</tr>
+<tr>
+<td>Kaza yerinden geçen</td>
+<td>Person passing the accident scene</td>
+<td>Subject to bystander duties</td>
+</tr>
+<tr>
+<td>Tutanak</td>
+<td>Official report</td>
+<td>Written record</td>
+</tr>
+<tr>
+<td>Tespit tutanağı</td>
+<td>Determination report</td>
+<td>Standard form</td>
+</tr>
+<tr>
+<td>Düzenlemek</td>
+<td>To draw up / fill out</td>
+<td>"Tutanak düzenler"</td>
+</tr>
+<tr>
+<td>İmza</td>
+<td>Signature</td>
+<td>Required to seal tutanak</td>
+</tr>
+<tr>
+<td>Yetkili</td>
+<td>Authority / official</td>
+<td>Police, etc.</td>
+</tr>
+<tr>
+<td>Trafik zabıtası</td>
+<td>Traffic police</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>Anlaşma</td>
+<td>Mutual agreement</td>
+<td>Path for maddi hasarlı</td>
+</tr>
+<tr>
+<td>Sigorta poliçesi</td>
+<td>Insurance policy</td>
+<td>Required document</td>
+</tr>
+<tr>
+<td>Zorunlu mali sorumluluk sigortası</td>
+<td>Mandatory liability insurance</td>
+<td>"Trafik sigortası"</td>
+</tr>
+<tr>
+<td>Ehliyet</td>
+<td>Driving license</td>
+<td>Document to show</td>
+</tr>
+<tr>
+<td>Kimlik</td>
+<td>ID card</td>
+<td>Document to show</td>
+</tr>
+<tr>
+<td>Kusur</td>
+<td>Fault</td>
+<td>Driver's responsibility share</td>
+</tr>
+<tr>
+<td>Asli kusur</td>
+<td>Primary fault</td>
+<td>Specific list of actions</td>
+</tr>
+<tr>
+<td>Kusur oranı</td>
+<td>Fault ratio</td>
+<td>100 or 8 base</td>
+</tr>
+<tr>
+<td>Kusurlu</td>
+<td>At-fault</td>
+<td>Adjective</td>
+</tr>
+<tr>
+<td>2918 sayılı kanun</td>
+<td>Law nr. 2918</td>
+<td>Karayolları Trafik Kanunu</td>
+</tr>
+<tr>
+<td>Karayolları Trafik Yönetmeliği</td>
+<td>Traffic Regulations</td>
+<td>Companion regulation</td>
+</tr>
+<tr>
+<td>İz ve delil</td>
+<td>Trace and evidence</td>
+<td>Used in fault determination</td>
+</tr>
+<tr>
+<td>İfade</td>
+<td>Statement</td>
+<td>Driver/witness testimony</td>
+</tr>
+<tr>
+<td>Tanık</td>
+<td>Witness</td>
+<td>Third-party observer</td>
+</tr>
+<tr>
+<td>Olay yeri</td>
+<td>Scene of the event</td>
+<td>Where the kaza happened</td>
+</tr>
+<tr>
+<td>Görevli</td>
+<td>Designated official</td>
+<td>Police, official-on-duty</td>
+</tr>
+<tr>
+<td>İlk yardım</td>
+<td>First aid</td>
+<td>Bystander duty</td>
+</tr>
+<tr>
+<td>Sağlık kuruluşu</td>
+<td>Health institution</td>
+<td>Hospital, clinic</td>
+</tr>
+<tr>
+<td>Yaralı</td>
+<td>Injured person</td>
+<td>Subject of triage</td>
+</tr>
+<tr>
+<td>Mal güvenliği</td>
+<td>Property safety</td>
+<td>Police duty at scene</td>
+</tr>
+<tr>
+<td>Hit-and-run / Kazadan kaçmak</td>
+<td>To flee the scene</td>
+<td>Criminal offense</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>13. Cross-references</h2>
+
+
+<ul>
+<li><strong>Asli kusur full list:</strong> <a href="29-cevre-asli-kusur-saygisiz-surme.md">29-cevre-asli-kusur-saygisiz-surme.md</a> §3.</li>
+<li><strong>Sigorta + tescil + sürücü belgesi geri alma:</strong> <a href="32-tescil-muayene-surucu-belgeleri.md">32-tescil-muayene-surucu-belgeleri.md</a> — "Ölümle sonuçlanan kazalarda asli kusurlu sürücünün belgesi 1 yıl geri alınır."</li>
+<li><strong>Alkol şüphesi prosedürü:</strong> <a href="12-alkol-ve-surme-yasakları.md">12-alkol-ve-surme-yasakları.md</a>.</li>
+<li><strong>İlk yardım detayı:</strong> <a href="../ilk-yardım/">../ilk-yardım/</a>.</li>
+</ul></div></section><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-148.html">📄 Sayfa 148: Maddi Hasarlı Trafik Kazası Tespit Tutanağının Düzenlenmesi<span class="score">439.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-147.html">📄 Sayfa 147: TRAFİK KAZALARI VE CEZALAR<span class="score">269.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-150.html">📄 Sayfa 150: KAZAYA KARIŞANLAR VE KAZA YERİNDEN GEÇENLERİN SORUMLULUKLARI<span class="score">251.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-151.html">📄 Sayfa 151: Sürücü Kusurlarının Tespiti<span class="score">210.7</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html">📄 Sayfa 167: ASLİ KUSUR SAYILAN HALLER<span class="score">154.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-152.html">📄 Sayfa 152: HUKUKİ SORUMLULUK VE SİGORTA<span class="score">117.3</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/index.html">🖼️ Kazalar, Cezalar, Sigorta<span class="score">7 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/index.html">🖼️ Tescil, Belge, Çevre, Psikoloji<span class="score">4 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/index.html">🖼️ Alkol & Mesleki<span class="score">3 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

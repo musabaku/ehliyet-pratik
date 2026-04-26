@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arızalı Araç İşaretleme ve Çekme — Disabled Vehicle Marking & Towing | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 26-arizali-arac-cekme</span>
+</div>
+<div class="content">
+<h1>Arızalı Araç İşaretleme ve Çekme — Disabled Vehicle Marking &amp; Towing</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 135–137. Drafted from PDF (no live class for this topic).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>When a vehicle breaks down on the road, two separate problem-sets activate:<br />
+1. <strong>İşaretleme</strong> — marking the disabled vehicle so other drivers see it from far away (avoid secondary collisions).<br />
+2. <strong>Çekme</strong> — towing it to the nearest service.</p>
+<p>Each has its own legal rules with <strong>specific distances, equipment, and speed limits</strong> that the exam tests with a memorize-the-numbers approach: 30 m / 150 m / 5 m / 2.5 m / 20 × 20 cm / 1 m / 15 km/s / 20 km/s.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-135.png" alt="Ders kitabı — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Where to Move a Broken-Down Vehicle</h2>
+
+
+<blockquote>
+<p><em>"Araç sürücüleri, bütün imkânları elverdiği ölçüde kullanarak hareket ettirme, itme ve benzeri yollarla, araçlarını </em><em>karayolu dışına</em><em>, bu mümkün olmaz ise </em><em>bankete</em><em>, bu da mümkün değilse </em><em>taşıt yolunun en sağına</em><em> almak ve her durumda yol, hava ve trafik şartları ile gece ve gündüz olmasına göre, gerekli güvenlik ve uyarı tedbirlerini derhal alıp uygulamakla yükümlüdürler."</em></p>
+</blockquote>
+<h3>Priority order — where to push the broken vehicle</h3>
+<ol>
+<li><strong>Karayolu dışına</strong> (off the road entirely) — best</li>
+<li><strong>Bankete</strong> (onto the shoulder) — if off-road impossible</li>
+<li><strong>Taşıt yolunun en sağına</strong> (to the rightmost edge of the lane) — last resort</li>
+</ol>
+<p>Then <strong>immediately deploy safety/warning equipment</strong>.</p>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-135.png" alt="Ders kitabı — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-135.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Reflektör Placement (the 30 m / 150 m rule)</h2>
+
+
+<blockquote>
+<p><em>"Aracın </em><em>ön ve arkasına 30 metre mesafede</em><em> diğer araç sürücülerinin </em><em>150 m. mesafeden açıkça görebilecekleri</em><em> şekilde birer reflektör veya kırmızı ışıklı cihaz konulmalı."</em></p>
+</blockquote>
+<p>Two distances combined:</p>
+<table>
+<thead>
+<tr>
+<th>Number</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>30 m</strong></td>
+<td>The reflektör is placed <strong>30 m in front of and 30 m behind</strong> the disabled vehicle.</td>
+</tr>
+<tr>
+<td><strong>150 m</strong></td>
+<td>Other drivers must be able to <strong>see the reflektör from at least 150 m away</strong>.</td>
+</tr>
+</tbody>
+</table>
+<p>So <strong>30 m is the placement distance, 150 m is the visibility distance</strong>. Both numbers appear in exam questions.</p>
+<h3>What counts as a valid marker</h3>
+<ul>
+<li><strong>Reflektör</strong> (red triangle, 45 cm equilateral, 5 cm wide reflective borders)</li>
+<li><strong>Kırmızı ışıklı cihaz</strong> (red blinking light)</li>
+</ul>
+<h3>What is FORBIDDEN as marking</h3>
+<blockquote>
+<p><em>"Arızalı aracın önüne ve arkasına </em><em>taş dizmek, teneke, bidon, lastik gibi şeyler koymak, ateş yakarak işaretleme yapmak tehlikeli ve yasaktır.</em><em>"</em></p>
+</blockquote>
+<p>These are illegal:<br />
+- ❌ Stones lined up<br />
+- ❌ Cans, drums, tires<br />
+- ❌ Open fire / burning materials</p>
+<h3>Otobüs/kamyon special marker</h3>
+<blockquote>
+<p><em>"Otobüs, kamyon ve çekicilerde, </em><em>150 x 25 cm. ebadında engel işareti</em><em> ile işaretleme yapılması zorunludur."</em></p>
+</blockquote>
+<p>Buses, trucks, and çekiciler must additionally place a <strong>150 × 25 cm engel işareti</strong> (obstacle sign) — a long reflective bar.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Arızalı aracın 30 m önüne ve arkasına, 150 m'den görülebilecek şekilde reflektör veya kırmızı ışıklı cihaz konur.</strong></p>
+<p><strong>Reflektör: kenarları 45 cm eşkenar üçgen, 5 cm genişliğinde ışık yansıtan kenarlı.</strong></p>
+<p><strong>Otobüs/kamyon/çekici: 150 × 25 cm engel işareti zorunludur.</strong></p>
+<p><strong>Taş, teneke, lastik, ateş ile işaretleme YASAKTIR.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-136.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/page-136.png" alt="Ders kitabı — Sayfa 136: ÇEKEN VE ÇEKİLEN ARAÇLARLA İLGİLİ KURALLAR:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 136: ÇEKEN VE ÇEKİLEN ARAÇLARLA İLGİLİ KURALLAR: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-136.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Çeken ve Çekilen Araç Kuralları (Towing Rules)</h2>
+
+
+<h3>Weight &amp; occupancy rules</h3>
+<blockquote>
+<p><em>"Çekilen aracın </em><em>ağırlığı, çeken aracın taşıma sınırından fazla olmamalıdır</em><em>."</em></p>
+</blockquote>
+<p>The towed vehicle's weight ≤ the towing vehicle's taşıma sınırı.</p>
+<blockquote>
+<p><em>"</em><em>Her iki araç boş olmalı</em><em>, yolcu ve yük olmamalı, sürücüleri yönetiminde olmalıdır."</em></p>
+</blockquote>
+<p><strong>Both vehicles must be empty</strong> (no cargo, no passengers) — only their drivers.</p>
+<h3>Bağlantı (the coupling)</h3>
+<blockquote>
+<p><em>"Aradaki bağlantı yerinden çıkmayacak ve kopmayacak şekilde </em><em>çelik çubuk, çelik halat veya zincir</em><em> ile yapılmalıdır."</em></p>
+</blockquote>
+<p>The connection must be: <strong>çelik çubuk</strong> (steel rod), <strong>çelik halat</strong> (steel cable), or <strong>zincir</strong> (chain). Rope, fabric, plastic — illegal.</p>
+<h3>Bağlantı uzunluğu</h3>
+<blockquote>
+<p><em>"Bağlantı </em><em>en fazla 5 m. olmalıdır</em><em>. Bu mesafe </em><em>2,5 m'yi geçtiği takdirde</em><em>, bağlantının </em><em>orta kısmına gündüz kırmızı yansıtıcı veya 20×20 cm ebadında kırmızı bez, gece kırmızı ışık veya kırmızı yansıtıcı</em><em> konulmalıdır."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Distance</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Max 5 m</strong></td>
+<td>Maximum allowed coupling length</td>
+</tr>
+<tr>
+<td><strong>&gt;2.5 m</strong></td>
+<td>Mid-cable marker required (20 × 20 cm red cloth by day, red light by night)</td>
+</tr>
+</tbody>
+</table>
+<h3>Çekilen aracın ışıkları</h3>
+<blockquote>
+<p><em>"Çekilen aracın ışık donanımı bozuk ise arkasına </em><em>gündüz 20×20 cm boyutunda kırmızı bez, gece kırmızı ışık veya reflektör</em><em> konulmalıdır."</em></p>
+</blockquote>
+<p>If the towed vehicle's lights don't work, mark the rear with the same 20 × 20 cm red cloth (day) or red light/reflector (night).</p>
+<h3>Freni bozuk araç (broken-brake vehicle)</h3>
+<blockquote>
+<p><em>"Çekilen aracın </em><em>freni bozuk ise, 1 m'lik Çeki demiri ile bağlantı yapılmalıdır</em><em>."</em></p>
+</blockquote>
+<p>If the towed vehicle's <strong>brakes are broken</strong>: use a <strong>rigid 1 m steel tow bar</strong> (NOT cable). A cable can't slow the towed vehicle, so it would crash into the towing vehicle on every stop.</p>
+<h3>Hız sınırları while towing</h3>
+<blockquote>
+<p><em>"Freni bozuk aracı çekerken </em><em>15 km/s</em><em>., diğer arızalı araçları çekerken </em><em>20 km/s</em><em>. Hız sınırına uyulmalıdır."</em></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Towed vehicle condition</th>
+<th>Max speed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Brakes broken</strong></td>
+<td><strong>15 km/s</strong></td>
+</tr>
+<tr>
+<td><strong>Other faults</strong> (brakes OK)</td>
+<td><strong>20 km/s</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>When you cannot use a tow rope at all</h3>
+<blockquote>
+<p><em>"Kendi kendine hareket gücü olmayan römork ve benzeri arızalı araçlar ile başka bir araçla çekilemeyecek durumda olan araçlar, </em><em>oto kurtarıcı</em><em> ile çekilmelidir."</em></p>
+</blockquote>
+<p>Disabled trailers and severely-damaged vehicles must be towed by an <strong>oto kurtarıcı (rigid wrecker)</strong> — not by another car with a cable.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Çekme bağlantısı çelik çubuk, çelik halat veya zincir olmalıdır — en fazla 5 m, 2,5 m'yi geçerse ortasına işaret konur.</strong></p>
+<p><strong>Freni bozuk araç sadece 1 m'lik çeki demiri ile çekilir, hız 15 km/s'yi geçemez.</strong></p>
+<p><strong>Diğer arızalı araçlar çekilirken hız 20 km/s'yi geçemez.</strong></p>
+<p><strong>Yolcu taşıyan araçlar (otobüs, minibüs) halat ile çekilemez — oto kurtarıcı kullanılır.</strong></p>
+</blockquote>
+<hr />
+</div></section><h2>5. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Arızalı aracın önüne ve arkasına kaç metre mesafede reflektör konulur?"</strong> → <strong>30 m</strong></li>
+<li><strong>"Reflektör kaç metreden görülebilecek şekilde yerleştirilir?"</strong> → <strong>150 m</strong></li>
+<li><strong>"Bağlantı uzunluğu en fazla kaç metre olmalıdır?"</strong> → <strong>5 m</strong></li>
+<li><strong>"Çekme bağlantısı 2,5 m'yi geçerse ortasına ne konulur?"</strong> → <strong>20×20 cm kırmızı bez (gündüz) / kırmızı ışık (gece)</strong></li>
+<li><strong>"Freni bozuk araç hangi bağlantı ile çekilir?"</strong> → <strong>1 m'lik çeki demiri</strong></li>
+<li><strong>"Freni bozuk aracı çekerken hız sınırı nedir?"</strong> → <strong>15 km/s</strong></li>
+<li><strong>"Diğer arızalı araçları çekerken hız sınırı nedir?"</strong> → <strong>20 km/s</strong></li>
+<li><strong>"Aşağıdakilerden hangisi arızalı aracı işaretlemek için kullanılamaz?"</strong> → <strong>taş, teneke, ateş, lastik</strong> (these are forbidden).</li>
+<li><strong>"Hangi araçlar halat yerine oto kurtarıcı ile çekilir?"</strong> → <strong>kendi hareketi olmayan römork, ağır arızalı araçlar, otobüs/yolcu taşıyan araçlar.</strong></li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>Önce karayolu dışı, mümkün değilse banket, son çare taşıt yolunun en sağı.</strong></p>
+<p><strong>Reflektör 30 m önüne + 30 m arkasına; 150 m'den görülebilecek şekilde.</strong></p>
+<p><strong>Reflektör boyutu: 45 cm eşkenar üçgen, 5 cm yansıtıcı kenar.</strong></p>
+<p><strong>Çekme bağlantısı: çelik çubuk / halat / zincir; max 5 m; &gt;2,5 m ise ortasına işaret.</strong></p>
+<p><strong>Freni bozuk araç: 1 m çeki demiri + 15 km/s; diğer arızalılar 20 km/s.</strong></p>
+<p><strong>Otobüs/kamyon/çekici işaretlemesi: 150 × 25 cm engel işareti.</strong></p>
+<p><strong>Taş, teneke, bidon, lastik, ateş ile işaretleme YASAKTIR.</strong></p>
+<p><strong>Yolcu taşıyan araçlar halat ile çekilemez — oto kurtarıcı.</strong></p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arızalı araç</td>
+<td>Disabled / faulty vehicle</td>
+<td>Broken-down</td>
+</tr>
+<tr>
+<td>İşaretleme</td>
+<td>Marking</td>
+<td>Hazard signaling</td>
+</tr>
+<tr>
+<td>Banket</td>
+<td>Shoulder (of road)</td>
+<td>Gravel strip</td>
+</tr>
+<tr>
+<td>Karayolu dışı</td>
+<td>Off the road</td>
+<td>Best place to push</td>
+</tr>
+<tr>
+<td>Reflektör</td>
+<td>Reflective triangle</td>
+<td>Red triangle, 45 cm</td>
+</tr>
+<tr>
+<td>Kırmızı ışıklı cihaz</td>
+<td>Red flashing light</td>
+<td>Alternative to triangle</td>
+</tr>
+<tr>
+<td>Engel işareti</td>
+<td>Obstacle sign</td>
+<td>150 × 25 cm long bar</td>
+</tr>
+<tr>
+<td>Eşkenar üçgen</td>
+<td>Equilateral triangle</td>
+<td>Reflektör shape</td>
+</tr>
+<tr>
+<td>Çeken araç</td>
+<td>Towing vehicle</td>
+<td>The puller</td>
+</tr>
+<tr>
+<td>Çekilen araç</td>
+<td>Towed vehicle</td>
+<td>The pulled</td>
+</tr>
+<tr>
+<td>Çekme</td>
+<td>Towing</td>
+<td>Verb</td>
+</tr>
+<tr>
+<td>Bağlantı</td>
+<td>Coupling / connection</td>
+<td>Cable/rod between</td>
+</tr>
+<tr>
+<td>Çelik halat</td>
+<td>Steel cable</td>
+<td>Allowed tow line</td>
+</tr>
+<tr>
+<td>Çelik çubuk</td>
+<td>Steel rod</td>
+<td>Allowed tow line</td>
+</tr>
+<tr>
+<td>Zincir</td>
+<td>Chain</td>
+<td>Allowed tow line</td>
+</tr>
+<tr>
+<td>Çeki demiri</td>
+<td>Tow bar</td>
+<td>Rigid 1 m bar for broken-brake car</td>
+</tr>
+<tr>
+<td>Kırmızı bez</td>
+<td>Red cloth</td>
+<td>20 × 20 cm marker</td>
+</tr>
+<tr>
+<td>Kırmızı yansıtıcı</td>
+<td>Red reflector</td>
+<td>Same purpose</td>
+</tr>
+<tr>
+<td>Oto kurtarıcı</td>
+<td>Wrecker / tow truck</td>
+<td>Rigid recovery vehicle</td>
+</tr>
+<tr>
+<td>Hız sınırı</td>
+<td>Speed limit</td>
+<td>15 / 20 km/s while towing</td>
+</tr>
+<tr>
+<td>Taşıma sınırı</td>
+<td>Carrying capacity</td>
+<td>Max towed weight</td>
+</tr>
+<tr>
+<td>Boş</td>
+<td>Empty</td>
+<td>Both vehicles must be</td>
+</tr>
+<tr>
+<td>Yük donanımı</td>
+<td>Load equipment</td>
+<td>Includes lights</td>
+</tr>
+<tr>
+<td>Işık donanımı</td>
+<td>Light equipment</td>
+<td>Towed lights must work or be marked</td>
+</tr>
+<tr>
+<td>Yasak</td>
+<td>Forbidden</td>
+<td>Stones, fire, etc.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li><strong>Equipment carried in every car:</strong> <a href="../araç-tekniği/14-zorunlu-arac-ve-gerecler.md">../araç-tekniği/14-zorunlu-arac-ve-gerecler.md</a> — every car must carry reflektör + çekme halatı.</li>
+<li><strong>Hazmat marking adds gözcü rule:</strong> <a href="25-tehlikeli-madde-tasinmasi.md">25-tehlikeli-madde-tasinmasi.md</a> — disabled hazmat needs supervision after marking.</li>
+<li><strong>Park/duraklama overlap:</strong> <a href="22-duraklama-park-tedbirleri.md">22-duraklama-park-tedbirleri.md</a>.</li>
+<li><strong>Tire change procedure:</strong> <a href="../araç-tekniği/08b-lastikler.md">../araç-tekniği/08b-lastikler.md</a> — same reflektör rule applies during a roadside tire change.</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-135.html">📄 Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ<span class="score">346.5</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-136.html">📄 Sayfa 136: ÇEKEN VE ÇEKİLEN ARAÇLARLA İLGİLİ KURALLAR:<span class="score">338.5</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html">📄 Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER<span class="score">110.8</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-145.html">📄 Sayfa 145: YAYALARLA İLGİLİ KURALLAR<span class="score">61.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-131.html">📄 Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI<span class="score">60.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html">📄 Sayfa 83: HIZ KURALLARI<span class="score">55.9</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">4 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/03-trafik-isaret-levhalari/index.html">🖼️ Trafik İşaret Levhaları<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">2 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

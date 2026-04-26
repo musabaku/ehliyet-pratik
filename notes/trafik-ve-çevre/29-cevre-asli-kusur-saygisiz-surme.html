@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Çevre, Tedbirsiz/Saygısız Sürme ve Asli Kusur | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 29-cevre-asli-kusur-saygisiz-surme</span>
+</div>
+<div class="content">
+<h1>Çevre, Tedbirsiz/Saygısız Sürme ve Asli Kusur</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 164–168. Drafted from PDF (no live class for this topic).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>This note covers three closely-related exam-tested blocks:<br />
+1. <strong>Çevre tanımları + kirlilik kaynakları</strong> — environment and pollution definitions.<br />
+2. <strong>Tedbirsiz ve saygısız araç sürme yasağı</strong> — the list of "thoughtless/disrespectful driving" prohibitions (cigarette butts, mud-splash, mobile phone, etc.).<br />
+3. <strong>Asli kusur sayılan haller</strong> — the <strong>canonical list of primary-fault actions</strong> that automatically make the driver chiefly responsible in an accident.</p>
+<p>This is a <strong>memorize-the-list</strong> topic — exam writes "Aşağıdakilerden hangisi asli kusur sayılır?" or "Aşağıdakilerden hangisi tedbirsiz sürme sayılır?" and you pick from a 4-option list.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-164.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-164.png" alt="Ders kitabı — Sayfa 164: ÇEVRE İLE İLGİLİ TANIMLAR" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 164: ÇEVRE İLE İLGİLİ TANIMLAR <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-164.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Çevre ile İlgili Tanımlar (PDF p164)</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Terim</th>
+<th>Tanım</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Çevre</strong></td>
+<td>İnsanı etkileyen ve insanlardan etkilenen dış ortam</td>
+<td>Environment</td>
+</tr>
+<tr>
+<td><strong>Çevre koruma</strong></td>
+<td>Çevre kirliliğini önlemek amacıyla yapılan çalışmalar</td>
+<td>Environmental protection</td>
+</tr>
+<tr>
+<td><strong>Çevre hakkı</strong></td>
+<td>Sağlıklı ve dengeli bir çevrede yaşama hakkı</td>
+<td>Environmental right</td>
+</tr>
+<tr>
+<td><strong>Çevre kirliliği</strong></td>
+<td>İnsan faaliyetleri sonucu hava/su/toprakta meydana gelen olumsuz gelişmeler ve ekolojik dengenin bozulması</td>
+<td>Environmental pollution</td>
+</tr>
+<tr>
+<td><strong>Erozyon</strong></td>
+<td>Toprağın rüzgar ve su gibi etkilerle bir yerden bir yere taşınması</td>
+<td>Erosion</td>
+</tr>
+<tr>
+<td><strong>Gürültü</strong></td>
+<td>Kişilerin huzurunu, ruh ve beden sağlığını bozacak seviyede istenmeyen sesler</td>
+<td>Noise (legal sense)</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Çevre = insanı etkileyen ve insandan etkilenen dış ortam. Erozyon = toprağın taşınması. Gürültü = sağlığı bozacak seviyede istenmeyen ses.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-165.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-165.png" alt="Ders kitabı — Sayfa 165: Taşıtlar ve Sürücülerin Etkisiyle Meydana Gelen Kirlilik:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 165: Taşıtlar ve Sürücülerin Etkisiyle Meydana Gelen Kirlilik: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-165.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Sürücü Kaynaklı Hava / Toprak / Su Kirliliği (PDF p165)</h2>
+
+
+<h3>Hava Kirliliği — driver-caused causes</h3>
+<ul>
+<li>Bakımı yapılmamış araçların <strong>fazla yakıt yakması</strong></li>
+<li><strong>Temiz olmayan yakıt</strong> kullanılması</li>
+<li><strong>Trafik yoğunluğu</strong></li>
+<li><strong>Zaruri olmayan</strong> durumlarda araç kullanımı</li>
+<li><strong>Park sonrasında gereksiz yere çalışır durumda bekletme</strong> (idling)</li>
+</ul>
+<h3>Critical numbers (PDF p165)</h3>
+<blockquote>
+<p><em>"Temiz havada %78 azot, %21 oksijen, %1,3 diğer gazlar, %0,03 karbondioksit bulunur."</em></p>
+<p><em>"Egzoz gazları havayı %70, karbonmonoksit gazı havayı %80 oranında kirletir."</em></p>
+<p><em>"Araç motoru rolantide çalışırken egzozdan çıkan </em><em>karbonmonoksit gazı %3,5'tan</em><em>, araç hareket halindeyken </em><em>%4,5'tan fazla olmamalıdır.</em><em>"</em></p>
+</blockquote>
+<h3>Katalitik konvektör</h3>
+<blockquote>
+<p><em>"Katalitik konvektör içerisinden geçen egzoz gazları </em><em>karbonmonoksit ve hidrokarbon bileşiklerini bırakır</em><em>. Böylece egzozdan çıkan gazların hava kirliliğine etkisi önemli derecede azalır."</em></p>
+</blockquote>
+<h3>Toprak Kirliliği</h3>
+<ul>
+<li>Bakım atıklarının (motor yağı, asit) toprağa dökülmesi</li>
+<li>Atık çöplerin yola atılması</li>
+<li>Kimyasal/radyoaktif madde taşınmasında tedbirsizlik</li>
+<li>Sürücü kaynaklı orman ve tarım yangınları</li>
+</ul>
+<h3>Su Kirliliği</h3>
+<ul>
+<li>Deniz kıyısı/dere yataklarından kum alınması</li>
+<li>Atıkların bu alanlara dökülmesi</li>
+</ul>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Temiz havada azot %78, oksijen %21, karbondioksit %0,03.</strong></p>
+<p><strong>Karbonmonoksit egzoz gazları havayı %80 oranında kirletir.</strong></p>
+<p><strong>Rolantide egzoz CO oranı %3,5'tan fazla olamaz; harekette %4,5'tan fazla olamaz.</strong></p>
+<p><strong>Katalitik konvektör CO ve hidrokarbonları tutarak kirliliği azaltır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-166.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-166.png" alt="Ders kitabı — Sayfa 166: TEDBİRSİZ ve SAYGISIZ ARAÇ SÜRME YASAĞI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 166: TEDBİRSİZ ve SAYGISIZ ARAÇ SÜRME YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-166.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Tedbirsiz ve Saygısız Araç Sürme Yasağı (PDF p166)</h2>
+
+
+<blockquote>
+<p><em>"Aşağıdaki davranışlar yasaktır:"</em></p>
+</blockquote>
+<p>The <strong>5-item canonical list</strong> that the exam tests verbatim:</p>
+<ol>
+<li>
+<p><strong>Su, çamur ve benzerlerini sıçratmak, atmak, dökmek</strong><br />
+<em>(Splashing/throwing/dumping water, mud, etc. — onto pedestrians or other vehicles)</em></p>
+</li>
+<li>
+<p><strong>Korkutmak veya şaşırtmak</strong><br />
+<em>(Scaring or startling other road users)</em></p>
+</li>
+<li>
+<p><strong>Sigara külü ve izmaritlerini veya başka şeyleri yola atmak, dökmek</strong><br />
+<em>(Throwing cigarette ash, butts, or anything else onto the road)</em></p>
+</li>
+<li>
+<p><strong>Özel amaçlarla, keyfi veya kasıtlı davranışlarda bulunmak, seyir emniyetini ihlal etmek veya tehlikeye düşürmek</strong><br />
+<em>(Personal/willful/intentional driving behaviors that endanger seyir emniyeti)</em></p>
+</li>
+<li>
+<p><strong>Seyir halinde sürücülerin cep ve araç telefonu ile benzeri haberleşme cihazlarını kullanması</strong><br />
+<em>(Using mobile phones / car phones / similar communication devices while driving)</em></p>
+</li>
+</ol>
+<blockquote>
+<p>⚠️ <strong>Hands-free istisna:</strong> <em>"Cep ve araç telefonları ile benzeri haberleşme cihazlarının sürücüler tarafından </em><em>çeşitli elektronik sistemler vasıtasıyla ele alınmadan kullanılmasında bir sakınca yoktur</em><em>."</em></p>
+<p>Hands-free (Bluetooth, etc.) <strong>is allowed</strong> — only handheld use is forbidden.</p>
+</blockquote>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Tedbirsiz/saygısız sürme yasakları: su/çamur sıçratma, korkutma, sigara izmariti atma, kasıtlı tehlikeli davranış, elde telefon kullanma.</strong></p>
+<p><strong>Hands-free telefon kullanımı YASAK DEĞİLDİR.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-167.png" alt="Ders kitabı — Sayfa 167: ASLİ KUSUR SAYILAN HALLER" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 167: ASLİ KUSUR SAYILAN HALLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Asli Kusur Sayılan Haller (PDF p167) — THE LIST</h2>
+
+
+<blockquote>
+<p><em>"Aşağıdaki hal ve hareketlerde bulunan sürücüler </em><em>asli kusurlu sayılırlar</em><em>."</em></p>
+</blockquote>
+<p>The <strong>canonical 10-item list</strong> the exam pulls from. Memorize it.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Asli kusur (primary fault) action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Kırmızı ışıkta veya görevlinin dur işaretinde geçmek</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>"Taşıt giremez" levhasının bulunduğu karayoluna girmek</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Bölünmüş karayolunda karşı yönden gelen trafiğin kullandığı şeride girmek</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>İkiden fazla şeritli yollarda karşı yön şeridine girmek</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Arkadan çarpmak</strong> <em>(rear-ending another vehicle)</em></td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Geçme yasağı olan yerlerde önceki aracı geçmek</strong></td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Kavşaklarda ilk geçiş hakkına uymamak</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Daralan yollarda geçiş kolaylığı sağlamamak</strong></td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>Manevraları düzenleyen kurallara uymamak</strong></td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>Yerleşim yerleri dışındaki karayolunda zorunlu haller dışında duraklamak veya park etmek</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>Kurallara uygun olarak park etmiş araca çarpmak</strong></td>
+</tr>
+</tbody>
+</table>
+<h3>Asli kusurdan kurtulma istisnası</h3>
+<blockquote>
+<p><em>"Sürücülerin veya yayaların kural dışı hareketleri veya taşıtların teknik arızaları bir başka sürücüyü tehlikeye düşürmüş ve bu sürücü, oluşması muhtemel bir kazayı önlemek, can ve mal güvenliğini korumak amacı ile </em><em>Karayolları Trafik Kanununun öngördüğü temel kurallardan birini ihlal etmeye mecbur kalmış</em><em> ve bütün tedbirlere rağmen bir kazaya neden olmuşsa, </em><em>asli kusurlu sayılamaz.</em><em>"</em></p>
+</blockquote>
+<p>If you broke a rule <strong>only</strong> to avoid a worse accident caused by someone else's misbehavior, you are <strong>NOT considered asli kusurlu</strong> — provided you took every precaution.</p>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Asli kusur listesi (memorize): kırmızı ışık, taşıt giremez girme, karşı şeride girme, arkadan çarpmak, geçme yasağı yerinde geçmek, kavşakta ilk geçiş hakkına uymamak, daralan yolda geçiş kolaylığı sağlamamak, manevra kurallarına uymamak, şehir dışında zorunlu olmadan duraklamak/park etmek, park halindeki araca çarpmak.</strong></p>
+<p><strong>Bir başkasının kuralsızlığından dolayı kuralı ihlal etmek zorunda kalan sürücü asli kusurlu sayılmaz.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-168.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-168.png" alt="Ders kitabı — Sayfa 168: SES, MÜZİK, GÖRÜNTÜ VE HABERLEŞME CİHAZLARI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 168: SES, MÜZİK, GÖRÜNTÜ VE HABERLEŞME CİHAZLARI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-168.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>6. SLIDE 5 — Ses, Müzik, Görüntü ve Haberleşme Cihazları (PDF p168)</h2>
+
+
+<blockquote>
+<p><em>"Yasa ve yönetmelikte belirtilen şartlara uymayan ses, müzik, görüntü ve haberleşme cihazları ve sürücünün </em><em>izleme ve kullanma sahası içinde bulunan görüntü cihazları</em><em> araçlardan </em><em>söktürülür</em><em>."</em></p>
+</blockquote>
+<h3>Görüntü cihazı kuralı</h3>
+<p><strong>Driver's field of view: NO video screens</strong> during driving (e.g., dashboard-mounted TV in front of driver). These get <strong>forcibly removed</strong> at inspection.</p>
+<h3>Ses (horn / klakson / korna) kuralları</h3>
+<p>Aracın ses cihazları <strong>sadece</strong> şu durumlarda kullanılır:<br />
+- <strong>Yakın ilerisi görülmeyen kavşak, dönemeç ve tepe üstü gibi yerlere yaklaşırken gelişi haber verme</strong><br />
+- <strong>Yol ve trafik durumuna göre karayolunu kullananları uyarma</strong><br />
+- <strong>Geçme halleri</strong></p>
+<h3>Forbidden korna uses</h3>
+<ul>
+<li><strong>Kamunun rahat ve huzurunu bozacak şekilde gereksiz veya gereğinden uzun ve ayarsız</strong> seslendirilmesi</li>
+<li><strong>Geçiş üstünlüğüne sahip araçlardaki sirenlerin diğer araçlara takılarak kullanılması</strong> <em>(e.g., putting an ambulance siren on a private car)</em></li>
+</ul>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Sürücünün izleme sahası içinde görüntü cihazı bulunamaz.</strong></p>
+<p><strong>Korna sadece kavşak/dönemeç/tepe yaklaşırken, uyarı amacıyla, geçiş sırasında kullanılır.</strong></p>
+<p><strong>Geçiş üstünlüğü siren/ışıkları başka araca takılamaz.</strong></p>
+</blockquote>
+<hr />
+</div></section><h2>7. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Aşağıdakilerden hangisi asli kusur sayılır?"</strong> → seçeneklerden biri kesinlikle 11 maddeden biri olur.</li>
+<li><strong>"Bir başkasının kuralsızlığından dolayı kural ihlal eden sürücü ne sayılır?"</strong> → <strong>asli kusurlu sayılmaz</strong>.</li>
+<li><strong>"Aşağıdakilerden hangisi tedbirsiz/saygısız sürme sayılır?"</strong> → su/çamur sıçratma, sigara izmariti atma, korkutma, elde telefon, kasıtlı davranış.</li>
+<li><strong>"Hands-free telefon kullanımı yasak mıdır?"</strong> → <strong>HAYIR</strong>.</li>
+<li><strong>"Çevre nedir?"</strong> → insanı etkileyen + insandan etkilenen dış ortam.</li>
+<li><strong>"Erozyon nedir?"</strong> → toprağın taşınması.</li>
+<li><strong>"Egzoz gazlarındaki CO oranı rolantide en fazla kaç olmalıdır?"</strong> → <strong>%3,5</strong>. Harekette: <strong>%4,5</strong>.</li>
+<li><strong>"Temiz havada azot oranı?"</strong> → <strong>%78</strong>.</li>
+<li><strong>"Katalitik konvektör ne yapar?"</strong> → CO ve hidrokarbonları tutar.</li>
+<li><strong>"Aşağıdakilerden hangisi sürücünün izleme sahası içinde bulunamaz?"</strong> → <strong>görüntü cihazı</strong>.</li>
+<li><strong>"Korna hangi durumda kullanılır?"</strong> → görüş kapalı kavşak/dönemeç/tepe yaklaşırken, geçme sırasında.</li>
+</ol>
+<hr />
+<h2>8. Memorize These</h2>
+<blockquote>
+<p><strong>Çevre = insanı etkileyen ve insandan etkilenen dış ortam.</strong></p>
+<p><strong>Temiz hava: %78 azot, %21 oksijen, %0,03 CO₂.</strong></p>
+<p><strong>Egzoz CO oranı: rolantide %3,5; harekette %4,5 maksimum.</strong></p>
+<p><strong>Tedbirsiz/saygısız sürme yasakları: su/çamur sıçratma, korkutma, sigara izmariti atma, kasıtlı davranış, elde telefon. Hands-free SERBEST.</strong></p>
+<p><strong>Asli kusur 11 maddesi: kırmızı ışık + taşıt giremez girme + karşı şeride girme + arkadan çarpma + geçme yasağı yerinde geçme + kavşakta ilk geçiş hakkı ihlali + daralan yolda geçiş kolaylığı sağlamama + manevra kuralı ihlali + şehir dışı zorunsuz duraklama/park + park halindeki araca çarpma.</strong></p>
+<p><strong>Başkasının kuralsızlığından dolayı kuralı ihlal etmek zorunda kalan sürücü asli kusurlu sayılmaz.</strong></p>
+<p><strong>Sürücü izleme sahasında görüntü cihazı YOK; korna sadece görüş-kapalı kavşak/dönemeç/tepe + uyarı + geçme amacıyla kullanılır.</strong></p>
+</blockquote>
+<hr />
+<h2>9. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Çevre</td>
+<td>Environment</td>
+<td>"Dış ortam"</td>
+</tr>
+<tr>
+<td>Çevre kirliliği</td>
+<td>Environmental pollution</td>
+<td>Sürücü-kaynaklı kategori</td>
+</tr>
+<tr>
+<td>Çevre koruma</td>
+<td>Env. protection</td>
+<td>Önleme çalışmaları</td>
+</tr>
+<tr>
+<td>Çevre hakkı</td>
+<td>Right to a healthy environment</td>
+<td>Anayasal hak</td>
+</tr>
+<tr>
+<td>Erozyon</td>
+<td>Erosion</td>
+<td>Toprağın taşınması</td>
+</tr>
+<tr>
+<td>Gürültü</td>
+<td>Noise (legal)</td>
+<td>Sağlığı bozan ses</td>
+</tr>
+<tr>
+<td>Hava kirliliği</td>
+<td>Air pollution</td>
+<td>Egzoz, idle, vb.</td>
+</tr>
+<tr>
+<td>Toprak kirliliği</td>
+<td>Soil pollution</td>
+<td>Yağ/asit dökme</td>
+</tr>
+<tr>
+<td>Su kirliliği</td>
+<td>Water pollution</td>
+<td>Atık dökme</td>
+</tr>
+<tr>
+<td>Karbonmonoksit</td>
+<td>Carbon monoxide (CO)</td>
+<td>Egzoz zehirli gazı</td>
+</tr>
+<tr>
+<td>Hidrokarbon</td>
+<td>Hydrocarbon</td>
+<td>Egzoz bileşeni</td>
+</tr>
+<tr>
+<td>Katalitik konvektör</td>
+<td>Catalytic converter</td>
+<td>CO + HC azaltır</td>
+</tr>
+<tr>
+<td>Egzoz gazı</td>
+<td>Exhaust gas</td>
+<td>Kirletici</td>
+</tr>
+<tr>
+<td>Rolanti</td>
+<td>Idle</td>
+<td>%3,5 CO sınırı</td>
+</tr>
+<tr>
+<td>Tedbirsiz sürme</td>
+<td>Reckless driving</td>
+<td>Yasaklar listesi</td>
+</tr>
+<tr>
+<td>Saygısız sürme</td>
+<td>Disrespectful driving</td>
+<td>Yasaklar listesi</td>
+</tr>
+<tr>
+<td>Sıçratmak</td>
+<td>To splash</td>
+<td>Su/çamur</td>
+</tr>
+<tr>
+<td>Korkutmak</td>
+<td>To frighten</td>
+<td>Yasak</td>
+</tr>
+<tr>
+<td>Şaşırtmak</td>
+<td>To startle</td>
+<td>Yasak</td>
+</tr>
+<tr>
+<td>Sigara izmariti</td>
+<td>Cigarette butt</td>
+<td>Yola atma yasak</td>
+</tr>
+<tr>
+<td>Cep telefonu</td>
+<td>Mobile phone</td>
+<td>Elde kullanım yasak</td>
+</tr>
+<tr>
+<td>Hands-free</td>
+<td>Hands-free</td>
+<td>Serbest</td>
+</tr>
+<tr>
+<td>Asli kusur</td>
+<td>Primary fault</td>
+<td>11-madde listesi</td>
+</tr>
+<tr>
+<td>Asli kusurlu</td>
+<td>Primarily at fault</td>
+<td>Belge geri alma sebebi</td>
+</tr>
+<tr>
+<td>Kavşak</td>
+<td>Intersection</td>
+<td>İlk geçiş hakkı kuralı</td>
+</tr>
+<tr>
+<td>İlk geçiş hakkı</td>
+<td>Right of way</td>
+<td>Kavşakta</td>
+</tr>
+<tr>
+<td>Daralan yol</td>
+<td>Narrowing road</td>
+<td>Geçiş kolaylığı kuralı</td>
+</tr>
+<tr>
+<td>Manevra</td>
+<td>Maneuver</td>
+<td>Şerit değişikliği vb.</td>
+</tr>
+<tr>
+<td>Geçme yasağı</td>
+<td>No-passing zone</td>
+<td>Geçmek = asli kusur</td>
+</tr>
+<tr>
+<td>Bölünmüş karayolu</td>
+<td>Divided highway</td>
+<td>Karşı şeride girmek = asli kusur</td>
+</tr>
+<tr>
+<td>Görüntü cihazı</td>
+<td>Video / display device</td>
+<td>Sürücü sahasında yasak</td>
+</tr>
+<tr>
+<td>Ses cihazı</td>
+<td>Sound device</td>
+<td>Korna</td>
+</tr>
+<tr>
+<td>Korna</td>
+<td>Horn</td>
+<td>Sınırlı kullanım</td>
+</tr>
+<tr>
+<td>Kavşak/dönemeç/tepe üstü</td>
+<td>Intersection/curve/hilltop</td>
+<td>Korna izinli alanlar</td>
+</tr>
+<tr>
+<td>Geçiş üstünlüğü</td>
+<td>Right-of-way priority</td>
+<td>Ambulans/itfaiye</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>10. Cross-references</h2>
+
+
+<ul>
+<li><strong>Trafik kazaları + kusur tespiti:</strong> <a href="28-kaza-tutanagi-sorumluluklar-kusurlar.md">28-kaza-tutanagi-sorumluluklar-kusurlar.md</a> — uses this asli kusur list.</li>
+<li><strong>Sürücü belgesi geri alma (asli kusurlu ölümlü kaza → 1 yıl):</strong> <a href="32-tescil-muayene-surucu-belgeleri.md">32-tescil-muayene-surucu-belgeleri.md</a>.</li>
+<li><strong>İlk geçiş hakkı detayı:</strong> <a href="19-kavşak-geçiş-hakkı.md">19-kavşak-geçiş-hakkı.md</a>.</li>
+<li><strong>Geçme kuralları (asli kusur 6. madde):</strong> <a href="17-geçme-kuralları.md">17-geçme-kuralları.md</a>.</li>
+<li><strong>Geçiş kolaylığı (asli kusur 8. madde):</strong> <a href="21-geçiş-kolaylığı-sağlama.md">21-geçiş-kolaylığı-sağlama.md</a>.</li>
+<li><strong>Korna + sirenler ile çevre:</strong> <a href="23-araç-ışıklandırma-kullanımı.md">23-araç-ışıklandırma-kullanımı.md</a>.</li>
+</ul></div></section><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html">📄 Sayfa 167: ASLİ KUSUR SAYILAN HALLER<span class="score">423.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-165.html">📄 Sayfa 165: Taşıtlar ve Sürücülerin Etkisiyle Meydana Gelen Kirlilik:<span class="score">368.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-168.html">📄 Sayfa 168: SES, MÜZİK, GÖRÜNTÜ VE HABERLEŞME CİHAZLARI<span class="score">228.5</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-166.html">📄 Sayfa 166: TEDBİRSİZ ve SAYGISIZ ARAÇ SÜRME YASAĞI<span class="score">205.6</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-164.html">📄 Sayfa 164: ÇEVRE İLE İLGİLİ TANIMLAR<span class="score">181.5</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-088.html">📄 Sayfa 88: ÖNDEKİ ARACI GEÇME KURALLARI<span class="score">116.8</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/index.html">🖼️ Tescil, Belge, Çevre, Psikoloji<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/13-trafik-kazalari-cezalar/index.html">🖼️ Kazalar, Cezalar, Sigorta<span class="score">2 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

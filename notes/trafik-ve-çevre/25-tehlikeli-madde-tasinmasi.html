@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tehlikeli Maddelerin Taşınması — Hazardous Materials Transport | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 25-tehlikeli-madde-tasinmasi</span>
+</div>
+<div class="content">
+<h1>Tehlikeli Maddelerin Taşınması — Hazardous Materials Transport</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 131–133. Drafted from PDF (no live class for this topic).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<blockquote>
+<p><strong>Tehlikeli madde:</strong> <em>"Patlayıcı, yanıcı, yakıcı veya kolayca ateş alıcı, zehirli veya radyoaktif maddeler ile bunların benzerleri."</em><br />
+<em>(Hazardous material: explosive, flammable, combustible or easily ignitable, toxic, or radioactive substances and similar materials.)</em></p>
+</blockquote>
+<p>Hazmat transport is governed by <strong>strict separate rules</strong> — distance limits, equipment limits, fire-source bans — because a single spark or careless cigarette near a tanker could cause a major explosion or chemical contamination.</p>
+<p>The exam treats this as a <strong>memorize-the-numbers block</strong>: 30 m / 50 m / 20 m / 6 V / 6 kg / 2 adet. Get the numbers cold.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-131.png" alt="Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — What counts as Tehlikeli Madde?</h2>
+
+
+<h3>Categories</h3>
+<ul>
+<li><strong>Patlayıcı</strong> — explosive (dynamite, ammunition)</li>
+<li><strong>Yanıcı</strong> — flammable (gasoline, alcohol)</li>
+<li><strong>Yakıcı</strong> — combustion-supporting (oxygen, peroxides)</li>
+<li><strong>Kolayca ateş alıcı</strong> — easily ignitable (paint thinner, hexane)</li>
+<li><strong>Zehirli</strong> — toxic (chlorine, pesticides)</li>
+<li><strong>Radyoaktif</strong> — radioactive (medical/industrial isotopes)</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Patlayıcı, yanıcı, yakıcı, ateş alıcı, zehirli ve radyoaktif maddeler tehlikeli madde sayılır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-131.png" alt="Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Loading &amp; Unloading Rules (30 m clearance)</h2>
+
+
+<blockquote>
+<p><em>"Tehlikeli maddelerin yüklenmesi ve boşaltılması sırasında bulundukları yere </em><em>30 m. mesafe içinde</em><em>, sigara ve benzerleri </em><em>içilmemeli</em><em>, kibrit, çakmak, aydınlatma cihazı gibi </em><em>alev ve kıvılcım çıkaran şeyler kullanılmamalıdır</em><em>."</em></p>
+</blockquote>
+<p>During loading or unloading hazmat:<br />
+- <strong>30 metre içinde sigara içilmez.</strong><br />
+- <strong>Kibrit, çakmak, alev/kıvılcım çıkaran cihaz kullanılmaz.</strong></p>
+<p>This is the <strong>#1 most-tested fact</strong> about hazmat — the <strong>30 m fire-source-free zone</strong>.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Tehlikeli madde yüklenmesi/boşaltılması sırasında 30 m mesafe içinde sigara, kibrit, çakmak, alev veya kıvılcım çıkaran şeyler kullanılamaz.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-131.png" alt="Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. SLIDE 3 — Lighting &amp; Equipment Rules</h2>
+
+
+<h3>Aydınlatma — only 6-volt battery flashlights</h3>
+<blockquote>
+<p><em>"Tehlikeli madde taşıyan araçlarda </em><em>6 voltu geçmeyen pilli fener</em><em> dışındaki aydınlatma cihazları kullanılmaz."</em></p>
+</blockquote>
+<p>The only legal lighting inside or near a hazmat vehicle is a <strong>battery-powered flashlight ≤ 6 V</strong>. Higher-voltage devices can spark if they fail and ignite vapors.</p>
+<h3>Yangın söndürme — 2 × 6 kg extinguishers</h3>
+<blockquote>
+<p><em>"Bu araçlarda </em><em>iki adet 6 kg. kapasiteli yangın söndürme cihazı</em><em> bulundurulur."</em></p>
+</blockquote>
+<p>Standard cars carry one 1 kg extinguisher; hazmat vehicles must carry <strong>two 6 kg extinguishers</strong>. Compare with the equipment list (note 14, <a href="../araç-tekniği/14-zorunlu-arac-ve-gerecler.md">araç-tekniği/14-zorunlu-arac-ve-gerecler.md</a>).</p>
+<h3>Yük &amp; yolcu kısıtı</h3>
+<blockquote>
+<p><em>"Araca başka yük alınmaz, mal sahibi ve hizmetlisinden başka yolcu bindirilmez."</em></p>
+</blockquote>
+<ul>
+<li><strong>No other cargo</strong> can be added.</li>
+<li><strong>No passengers</strong> except the cargo owner and their staff.</li>
+</ul>
+<h3>Critical exam facts</h3>
+<blockquote>
+<p><strong>Tehlikeli madde aracında yalnızca 6 V altı pilli fener kullanılabilir.</strong></p>
+<p><strong>Tehlikeli madde aracında 2 adet 6 kg yangın söndürme cihazı bulundurulur.</strong></p>
+<p><strong>Tehlikeli madde aracına başka yük + başka yolcu alınmaz (yalnızca mal sahibi ve hizmetlisi).</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/page-131.png" alt="Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-131.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>5. SLIDE 4 — Park, Duraklama &amp; Takip Mesafesi</h2>
+
+
+<blockquote>
+<p><em>"Duraklama ve park etme halinde araç, </em><em>bir görevlinin gözetimi altında</em><em> tutulmalıdır."</em></p>
+</blockquote>
+<p>A hazmat vehicle parked or stopped <strong>must be supervised</strong> by a designated person (gözcü). Never left unattended.</p>
+<blockquote>
+<p><em>"Yerleşim yeri dışındaki karayollarında </em><em>en az 50 m. takip mesafesi</em><em> uygulanmalıdır."</em></p>
+</blockquote>
+<p>On rural/intercity roads, the <strong>takip mesafesi (following distance) behind a hazmat vehicle is at least 50 m</strong> — much greater than the standard 50–70 m for a normal car at 90 km/h.</p>
+<blockquote>
+<p><em>"Duraklama işleminde diğer araçlara </em><em>20 m. mesafe bırakarak</em><em> duraklama yapılmalıdır."</em></p>
+</blockquote>
+<p>When stopping (duraklama), keep <strong>at least 20 m from other vehicles</strong> — so a fire/explosion in your hazmat doesn't spread.</p>
+<h3>The 4 critical numbers — memorize as a block</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Distance / amount</th>
+<th>Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>30 m</strong></td>
+<td>Fire-source-free zone during loading/unloading</td>
+<td>No smoking, no flames, no sparks</td>
+</tr>
+<tr>
+<td><strong>50 m</strong></td>
+<td>Minimum following distance behind a hazmat vehicle</td>
+<td>On out-of-town roads</td>
+</tr>
+<tr>
+<td><strong>20 m</strong></td>
+<td>Minimum gap from other vehicles when duraklama</td>
+<td>Even brief stops</td>
+</tr>
+<tr>
+<td><strong>6 V / 6 kg / 2 adet</strong></td>
+<td>Flashlight max voltage / extinguisher size / extinguisher count</td>
+<td>Equipment specs</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><h2>6. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Tehlikeli madde yüklenmesi sırasında kaç metre mesafede sigara içilemez?"</strong> → <strong>30 m</strong></li>
+<li><strong>"Tehlikeli madde taşıyan araçta kaç kg kapasiteli kaç adet yangın söndürme cihazı bulunur?"</strong> → <strong>2 adet × 6 kg</strong></li>
+<li><strong>"Tehlikeli madde aracında hangi aydınlatma cihazı kullanılabilir?"</strong> → <strong>6 voltu geçmeyen pilli fener</strong></li>
+<li><strong>"Tehlikeli madde taşıyan araç şehirlerarası yolda en az kaç metre takip mesafesi bırakmalıdır?"</strong> → <strong>50 m</strong></li>
+<li><strong>"Tehlikeli madde aracı duraklarken diğer araçlara en az kaç metre mesafe bırakır?"</strong> → <strong>20 m</strong></li>
+<li><strong>"Tehlikeli madde aracında sürücüden başka kim bulunabilir?"</strong> → <strong>Yalnızca mal sahibi ve hizmetlisi</strong></li>
+<li><strong>"Aşağıdakilerden hangisi tehlikeli madde sayılmaz?"</strong> — distractors: gübre, su, sebze. Tehlikeli = patlayıcı/yanıcı/yakıcı/zehirli/radyoaktif.</li>
+<li><strong>"Duraklama ve park sırasında tehlikeli madde aracı nasıl tutulmalıdır?"</strong> → <strong>Bir görevlinin gözetimi altında.</strong></li>
+</ol>
+<hr />
+<h2>7. Memorize These</h2>
+<blockquote>
+<p><strong>Tehlikeli madde: patlayıcı, yanıcı, yakıcı, ateş alıcı, zehirli, radyoaktif maddeler.</strong></p>
+<p><strong>Yükleme/boşaltma sırasında 30 m içinde sigara, kibrit, çakmak yasak.</strong></p>
+<p><strong>Aydınlatma: sadece 6 V altı pilli fener kullanılabilir.</strong></p>
+<p><strong>Yangın söndürme: 2 adet × 6 kg cihaz bulundurulur.</strong></p>
+<p><strong>Şehirler arası yolda takip mesafesi en az 50 m.</strong></p>
+<p><strong>Duraklama: diğer araçlara en az 20 m mesafe bırakılır + bir görevlinin gözetiminde.</strong></p>
+<p><strong>Araca başka yük + başka yolcu alınmaz; yalnızca mal sahibi ve hizmetlisi bulunabilir.</strong></p>
+</blockquote>
+<hr />
+<h2>8. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tehlikeli madde</td>
+<td>Hazardous material</td>
+<td>Hazmat</td>
+</tr>
+<tr>
+<td>Patlayıcı</td>
+<td>Explosive</td>
+<td>Dynamite, ammo</td>
+</tr>
+<tr>
+<td>Yanıcı</td>
+<td>Flammable</td>
+<td>Gasoline, alcohol</td>
+</tr>
+<tr>
+<td>Yakıcı</td>
+<td>Combustion-supporting</td>
+<td>Oxygen, peroxides</td>
+</tr>
+<tr>
+<td>Ateş alıcı</td>
+<td>Easily ignitable</td>
+<td>Solvents</td>
+</tr>
+<tr>
+<td>Zehirli</td>
+<td>Toxic</td>
+<td>Chemicals</td>
+</tr>
+<tr>
+<td>Radyoaktif</td>
+<td>Radioactive</td>
+<td>Isotopes</td>
+</tr>
+<tr>
+<td>Yüklenme</td>
+<td>Loading</td>
+<td>Onto the truck</td>
+</tr>
+<tr>
+<td>Boşaltma</td>
+<td>Unloading</td>
+<td>Off the truck</td>
+</tr>
+<tr>
+<td>Sigara içmek</td>
+<td>To smoke</td>
+<td>The forbidden act</td>
+</tr>
+<tr>
+<td>Kibrit</td>
+<td>Match</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>Çakmak</td>
+<td>Lighter</td>
+<td>Forbidden</td>
+</tr>
+<tr>
+<td>Aydınlatma cihazı</td>
+<td>Lighting device</td>
+<td>Forbidden if &gt;6 V</td>
+</tr>
+<tr>
+<td>Pilli fener</td>
+<td>Battery flashlight</td>
+<td>Only legal light</td>
+</tr>
+<tr>
+<td>Volt</td>
+<td>Volt</td>
+<td>Voltage unit (max 6)</td>
+</tr>
+<tr>
+<td>Yangın söndürme cihazı</td>
+<td>Fire extinguisher</td>
+<td>2 × 6 kg required</td>
+</tr>
+<tr>
+<td>Kapasiteli</td>
+<td>Of capacity</td>
+<td>"6 kg kapasiteli"</td>
+</tr>
+<tr>
+<td>Mal sahibi</td>
+<td>Cargo owner</td>
+<td>Allowed passenger</td>
+</tr>
+<tr>
+<td>Hizmetli</td>
+<td>Staff / attendant</td>
+<td>Allowed passenger</td>
+</tr>
+<tr>
+<td>Gözetim</td>
+<td>Supervision</td>
+<td>Required during stops</td>
+</tr>
+<tr>
+<td>Görevli</td>
+<td>Designated person / official</td>
+<td>Who supervises</td>
+</tr>
+<tr>
+<td>Takip mesafesi</td>
+<td>Following distance</td>
+<td>50 m minimum</td>
+</tr>
+<tr>
+<td>Yerleşim yeri dışı</td>
+<td>Out-of-town</td>
+<td>Where 50 m rule applies</td>
+</tr>
+<tr>
+<td>Duraklama</td>
+<td>Brief stop</td>
+<td>20 m gap rule</td>
+</tr>
+<tr>
+<td>Park etme</td>
+<td>Parking</td>
+<td>Same gözcü rule</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>9. Cross-references</h2>
+<ul>
+<li><strong>Mandatory equipment baseline:</strong> <a href="../araç-tekniği/14-zorunlu-arac-ve-gerecler.md">../araç-tekniği/14-zorunlu-arac-ve-gerecler.md</a> — standard vehicle is 1 × 1 kg extinguisher; hazmat is 2 × 6 kg.</li>
+<li><strong>Reflektör placement:</strong> <a href="26-arızalı-araç-çekme.md">26-arızalı-araç-çekme.md</a> — broken-down hazmat vehicles get the same reflektör + extra "gözcü" rule.</li>
+<li><strong>Vehicle loading limits:</strong> <a href="24-araçların-yüklenmesi.md">24-araçların-yüklenmesi.md</a> — radyoaktif yük requires Atom Enerjisi Komisyonu permit.</li>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-131.html">📄 Sayfa 131: TEHLİKELİ MADDELERİN TAŞINMASI<span class="score">321.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html">📄 Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER<span class="score">92.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-135.html">📄 Sayfa 135: ARIZALI ARAÇLARIN İŞARETLENMESİ<span class="score">63.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-120.html">📄 Sayfa 120: DURAKLAMANIN YASAK OLDUĞU YERLER<span class="score">56.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-129.html">📄 Sayfa 129: ARAÇLARIN YÜKLENMESİ<span class="score">48.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-087.html">📄 Sayfa 87: TAKİP MESAFESİ<span class="score">48.5</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">6 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/06-karayolu-hiz-mesafe/index.html">🖼️ Hız & Mesafe<span class="score">3 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/index.html">🖼️ Durma, Park, Işıklandırma<span class="score">3 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>

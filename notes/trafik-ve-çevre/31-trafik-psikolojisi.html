@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafik Psikolojisi — Driver Psychology | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">trafik-ve-çevre / 31-trafik-psikolojisi</span>
+</div>
+<div class="content">
+<h1>Trafik Psikolojisi — Driver Psychology</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Oktay TAŞCI ders kitabı pp. 177–179 + portal e-kitap (<code>10-trafikte-tehlike-algisi-ongorulu-suruculuk-becerisi.md</code>).</p>
+<hr />
+<h2>1. Overview — Görev (Purpose)</h2>
+<p>The exam closes the trafik-ve-çevre subject with a chapter on <strong>driver psychology</strong> — covering performance factors, personality traits, mental health, sharing/respect/selfishness, alcohol, fatigue, and risk-taking. These questions test <strong>judgment + attitude</strong> rather than memorization. Watch for:<br />
+- "Aşağıdakilerden hangisi güvenli sürücülük için doğru bir tutumdur?"<br />
+- "Aşağıdaki kişilik özelliklerinden hangisi riskli sürücülüğü işaret eder?"</p>
+<p>This is also where the <strong>2014'ten itibaren 27 soru</strong> rule is mentioned: trafik-ve-çevre subject = <strong>27 soru</strong> of the 50-soru exam.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Trafik Psikolojisinin Konuları (PDF p177)</h2>
+
+
+<p>The 7 sub-topics covered:<br />
+1. <strong>Sürücülük performansı</strong> — görme, anlama, tepki süresi<br />
+2. <strong>Riskli ve güvenli sürücülüğü belirleyen kişilik özellikleri</strong><br />
+3. <strong>Ruhsal yapı bozukluklarının kazalara etkisi</strong><br />
+4. <strong>Paylaşma, başkalarına saygı ve bencillik duygularının sürücülükle ilişkisi</strong><br />
+5. <strong>Alkol ve sürücülük</strong><br />
+6. <strong>Yorgun, uykusuz ve dalgın araç kullanma</strong><br />
+7. <strong>Risk alma eğilimi</strong></p>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>3. Sürücülük Performansı — The 3 Components</h2>
+
+
+<h3>Görme (vision)</h3>
+<p><strong>The driver's eyes are 90% of input.</strong> Reduced when:<br />
+- Gece sürüş + far yetersizliği<br />
+- Yağmur / sis / kar<br />
+- Güneş kamaşması<br />
+- Görme bozukluğu (gözlük takmama)<br />
+- Yorgunluk</p>
+<h3>Anlama (comprehension)</h3>
+<p>Görme sonrası <strong>doğru yorumlama</strong> — "ışık sarıdı, kırmızıya dönüyor, durmam gerek." Bozulma sebepleri: yorgunluk, alkol, ilaç, telefon dikkat dağınıklığı.</p>
+<h3>Tepki süresi (reaction time)</h3>
+<p><strong>Algıdan eyleme geçen süre.</strong> Normal sürücüde <strong>0.7–1.0 saniye</strong> civarı. Uzayan sebepleri:<br />
+- Alkol → <strong>2–3 katına çıkar</strong><br />
+- Yorgunluk → uzar<br />
+- Telefon ile konuşma → bildirilen %30 düşüş<br />
+- İlaç (uyku verici, antihistaminik)</p>
+<blockquote>
+<p><strong>Cross-link:</strong> <a href="16-durma-mesafesi.md">16-durma-mesafesi.md</a> — durma mesafesi formülünde <strong>tepki + frenleme</strong> mesafeleri toplanır. Tepki uzayan sürücü = uzayan durma mesafesi.</p>
+</blockquote>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Sürücülük performansı: görme + anlama + tepki süresi. Bunlardan biri bozulursa kaza riski artar.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>4. Riskli ve Güvenli Sürücülüğü Belirleyen Kişilik Özellikleri</h2>
+
+
+<h3>Riskli sürücü kişiliği — kaza için yatkın</h3>
+<ul>
+<li><strong>Saldırgan / agresif</strong> (öfkeli kornaya basma, sıkı takip, geçme zorlama)</li>
+<li><strong>Sabırsız</strong> (kuyrukta bekleyemez, kırmızı ışıkta erken kalkış)</li>
+<li><strong>Bencil</strong> (geçiş kolaylığı sağlamaz, kavşakta zorlar)</li>
+<li><strong>Risk arayan</strong> (yüksek hız, akrobatik manevra, geçme yasağında geçme)</li>
+<li><strong>Aşırı özgüvenli</strong> ("ben her durumu kontrol ederim" hatası)</li>
+<li><strong>Dikkatsiz / dalgın</strong></li>
+</ul>
+<h3>Güvenli sürücü kişiliği</h3>
+<ul>
+<li><strong>Sabırlı</strong>, <strong>paylaşımcı</strong>, <strong>saygılı</strong></li>
+<li><strong>Öngörülü</strong> — başkalarının hatasını <strong>tahmin eder</strong></li>
+<li><strong>Kuralları içselleştirmiş</strong> (kontrol olmasa da uyar)</li>
+<li><strong>Sakin</strong> — provokasyona kapılmaz</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Güvenli sürücülük = sabır + paylaşım + saygı + öngörü. Riskli sürücülük = saldırganlık + sabırsızlık + bencillik + aşırı özgüven + risk arayışı.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>5. Ruhsal Yapı Bozuklukları — Kazalara Etkisi</h2>
+
+
+<p>Mental health conditions that increase accident risk:<br />
+- <strong>Depresyon</strong> → odaklanma + tepki süresi düşer<br />
+- <strong>Anksiyete</strong> → kararsızlık, ani fren<br />
+- <strong>Aşırı stres</strong> → öfke, agresif sürüş<br />
+- <strong>Uyku bozuklukları</strong> → mikro-uykular (1–2 saniye dalış) → ölümlü kaza<br />
+- <strong>Konsantrasyon bozuklukları</strong> (ADHD vb.)</p>
+<p>Sağlık raporu ile <strong>sürücülük yapmasında sakınca görülen kişiler</strong> ehliyetlerini kaybeder <em>(bkz: <a href="32-tescil-muayene-surucu-belgeleri.md">32-tescil-muayene-surucu-belgeleri.md</a> — sürücü belgesi geri alma)</em>.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Ruhsal yapı bozukluğu olan sürücüler için sağlık raporu zorunludur; sakınca görülenlerin belgesi geri alınır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-167.png" alt="Ders kitabı — Sayfa 167: ASLİ KUSUR SAYILAN HALLER" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 167: ASLİ KUSUR SAYILAN HALLER <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-167.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>6. Paylaşma, Saygı, Bencillik — Sürücülükle İlişki</h2>
+
+
+<h3>Paylaşma (sharing the road)</h3>
+<ul>
+<li>Yaya, bisikletli, motosikletli ile <strong>yolu paylaşmak</strong></li>
+<li>Geçiş hakkı + geçiş kolaylığı sağlama (asli kusur 7. ve 8. madde)</li>
+</ul>
+<h3>Saygı (respect)</h3>
+<ul>
+<li>Yaşlı, çocuk, engelli yayalara saygı</li>
+<li>Görmeyen yayaya <strong>yavaşla + dur + yardım et</strong> <em>(bkz: <a href="27-bisiklet-motosiklet-kurallari.md">27-bisiklet-motosiklet-kurallari.md §6</a>)</em></li>
+<li>Geçiş üstünlüğüne sahip araçlara (ambulans, itfaiye, polis) <strong>yol verme</strong></li>
+</ul>
+<h3>Bencillik (selfishness)</h3>
+<ul>
+<li>"Önce ben geçeyim" zihniyeti → kazaların kök sebebi</li>
+<li>Park yerlerini kapama</li>
+<li>Kavşakta gidiş hakkına uymama</li>
+<li>Kornaya gereksiz basma</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Bencillik trafik kazalarının ana psikolojik sebebidir; paylaşım ve saygı güvenli sürücülüğün temel direkleridir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/page-076.png" alt="Ders kitabı — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-076.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>7. Alkol ve Sürücülük</h2>
+
+
+<blockquote>
+<p><strong>Cross-link:</strong> Tam detay <a href="12-alkol-ve-surme-yasakları.md">12-alkol-ve-surme-yasakları.md</a> içinde.</p>
+</blockquote>
+<p>Kısa hatırlatma:<br />
+- <strong>Hususi araç:</strong> <strong>0.50 promil</strong> üstü alkol yasak<br />
+- <strong>Ticari araç:</strong> <strong>alkol kesinlikle yasak (0.00)</strong><br />
+- <strong>İlk ihlal:</strong> belge <strong>6 ay</strong> geri alınır<br />
+- <strong>2. ihlal (5 yıl içinde):</strong> <strong>2 yıl</strong> geri alınır<br />
+- <strong>3. ihlal:</strong> <strong>5 yıl</strong> geri alınır + psiko-teknik + muayene</p>
+<h3>Alkolün etkileri</h3>
+<ul>
+<li>Tepki süresi <strong>2–3 katına</strong> çıkar</li>
+<li>Görüş alanı <strong>daralır</strong> (tunel görüşü)</li>
+<li>Aşırı özgüven (hız algısı bozulur)</li>
+<li>Karar verme bozulur</li>
+<li>Mesafe + hız tahmini bozulur</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Alkol → tepki süresi 2–3x artar, görüş daralır, mesafe/hız tahmini bozulur, aşırı özgüven oluşur. Hususi araç sınırı 0.50 promil; ticari araçta tamamen yasak.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>8. Yorgun, Uykusuz ve Dalgın Araç Kullanma</h2>
+
+
+<h3>Belirtiler</h3>
+<ul>
+<li>Esneme, kapanan göz kapakları</li>
+<li>Hafıza boşlukları ("son 5 km'yi hatırlamıyorum")</li>
+<li>Şerit kaymaları</li>
+<li>Tepki süresinin fark edilir uzaması</li>
+<li>"Mikro-uyku" → 1–4 saniye gözlerin kapanması = 100 km/h'ta 100 metre kör sürüş</li>
+</ul>
+<h3>Çözüm</h3>
+<ul>
+<li><strong>Mola ver</strong> — 2 saatte bir 15 dk</li>
+<li>Açık hava + yürü</li>
+<li>Kahve yardımcı ama tek başına yetmez</li>
+<li><strong>Uyku bastıysa: dur ve uyu</strong> — 20 dk power nap mucize etkili</li>
+</ul>
+<h3>Dalgınlık (distracted driving)</h3>
+<ul>
+<li>Telefon (asla elde — bkz: tedbirsiz sürme yasağı)</li>
+<li>Yemek/içecek</li>
+<li>Yolcuyla yoğun tartışma</li>
+<li>Navigasyona gözünü dikme</li>
+<li>Çocukla ilgilenme</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Yorgun/uykusuz sürücü kazaya en yakın sürücüdür. 2 saatte bir mola; uyku bastıysa duracak ve uyuyacak. Dalgınlık (telefon, yemek, tartışma) tepki süresini uzatır.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>9. Risk Alma Eğilimi</h2>
+
+
+<h3>Yüksek-risk davranışlar</h3>
+<ul>
+<li>Aşırı hız</li>
+<li>Yakın takip</li>
+<li>Geçme yasağında geçme</li>
+<li>Emniyet kemeri takmama</li>
+<li>Kırmızı ışıkta geçme</li>
+<li>Alkol/uyuşturucu sonrası araç kullanma</li>
+</ul>
+<h3>Düşük-risk profil</h3>
+<ul>
+<li>Hız sınırına uyan</li>
+<li>3 saniye takip mesafesi bırakan</li>
+<li>Geçme yasağına uyan</li>
+<li>Her zaman emniyet kemeri takan</li>
+<li>"Kuralı çiğnemek bana zaman kazandırır" zihniyetinden kaçan</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Risk alma eğilimi yüksek olan sürücü kaza ve ölüm riskini orantılı olarak artırır. Güvenli sürücü "kazanılan 1 dakika için kaybedilen hayat" mantığını içselleştirmiştir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-179.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-179.png" alt="Ders kitabı — Sayfa 179: Sınavda Trafik ve Çevre Bilgisi dersinden 2014 yılı itibariyle" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 179: Sınavda Trafik ve Çevre Bilgisi dersinden 2014 yılı itibariyle <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-179.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>10. PDF p179 — Kapanış Sayfası (Önemli sınav bilgisi)</h2>
+
+
+<blockquote>
+<p><em>"Sınavda Trafik ve Çevre Bilgisi dersinden 2014 yılı itibariyle </em><em>27 soru</em><em> sorulmaktadır."</em></p>
+<p><em>"</em><em>ÖNCE EĞİTİM, SONRA EHLİYET!</em><em>"</em></p>
+</blockquote>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Trafik ve Çevre Bilgisi sınavda 27 soru oluşturur</strong> (50 soruluk sınavın yarısından fazlası). Bu yüzden bu ders en yüksek puan ağırlığına sahiptir.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>11. Why this matters for the exam</h2>
+
+
+<ol>
+<li><strong>"Sürücülük performansını oluşturan üç unsur nedir?"</strong> → <strong>görme + anlama + tepki süresi</strong></li>
+<li><strong>"Aşağıdakilerden hangisi güvenli sürücülüğün özelliğidir?"</strong> → sabır / paylaşım / saygı / öngörü.</li>
+<li><strong>"Aşağıdakilerden hangisi riskli sürücü kişiliğidir?"</strong> → saldırganlık / aşırı özgüven / bencillik / sabırsızlık / risk arayışı.</li>
+<li><strong>"Yorgun sürücü için en doğru davranış nedir?"</strong> → <strong>mola vermek; uyku bastıysa dur ve uyu</strong>.</li>
+<li><strong>"Alkol tepki süresini nasıl etkiler?"</strong> → <strong>2–3 katına çıkarır</strong>.</li>
+<li><strong>"Hususi araç için yasal alkol sınırı?"</strong> → <strong>0.50 promil</strong> (ticari = 0.00).</li>
+<li><strong>"Trafik kazalarının ana psikolojik sebebi nedir?"</strong> → <strong>bencillik / sabırsızlık / saygısızlık</strong>.</li>
+<li><strong>"Trafik ve Çevre Bilgisi sınavında kaç soru sorulur?"</strong> → <strong>27</strong>.</li>
+</ol>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>12. Memorize These</h2>
+
+
+<blockquote>
+<p><strong>Sürücülük performansı = görme + anlama + tepki süresi.</strong></p>
+<p><strong>Güvenli sürücü = sabır + paylaşım + saygı + öngörü.</strong></p>
+<p><strong>Riskli sürücü = saldırganlık + sabırsızlık + bencillik + aşırı özgüven + risk arayışı.</strong></p>
+<p><strong>Alkol tepki süresini 2–3 katına çıkarır, görüşü daraltır, mesafe/hız algısını bozar.</strong></p>
+<p><strong>Yorgun + uykusuz + dalgın = kaza risk faktörlerinin en üstünde. 2 saatte bir mola; uyku bastıysa dur ve uyu.</strong></p>
+<p><strong>Bencillik = trafik kazalarının ana psikolojik sebebi.</strong></p>
+<p><strong>Trafik ve Çevre dersinden sınavda 27 soru sorulur.</strong></p>
+<p><strong>ÖNCE EĞİTİM, SONRA EHLİYET.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-177.png" alt="Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 177: TRAFİK PSİKOLOJİSİ <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-177.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>13. Consolidated Exam Vocabulary</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Trafik psikolojisi</td>
+<td>Traffic psychology</td>
+<td>This chapter</td>
+</tr>
+<tr>
+<td>Sürücülük performansı</td>
+<td>Driving performance</td>
+<td>3 components</td>
+</tr>
+<tr>
+<td>Görme</td>
+<td>Vision / sight</td>
+<td>Eye input</td>
+</tr>
+<tr>
+<td>Anlama</td>
+<td>Comprehension</td>
+<td>Interpreting input</td>
+</tr>
+<tr>
+<td>Tepki süresi</td>
+<td>Reaction time</td>
+<td>Stim → response</td>
+</tr>
+<tr>
+<td>Algı</td>
+<td>Perception</td>
+<td>Sense + meaning</td>
+</tr>
+<tr>
+<td>Kişilik özelliği</td>
+<td>Personality trait</td>
+<td>Determines risk profile</td>
+</tr>
+<tr>
+<td>Saldırgan</td>
+<td>Aggressive</td>
+<td>Riskli</td>
+</tr>
+<tr>
+<td>Sabırsız</td>
+<td>Impatient</td>
+<td>Riskli</td>
+</tr>
+<tr>
+<td>Bencil</td>
+<td>Selfish</td>
+<td>Riskli (kaza ana sebebi)</td>
+</tr>
+<tr>
+<td>Sabırlı</td>
+<td>Patient</td>
+<td>Güvenli</td>
+</tr>
+<tr>
+<td>Paylaşımcı</td>
+<td>Sharing</td>
+<td>Güvenli</td>
+</tr>
+<tr>
+<td>Saygılı</td>
+<td>Respectful</td>
+<td>Güvenli</td>
+</tr>
+<tr>
+<td>Öngörülü</td>
+<td>Foresighted</td>
+<td>Güvenli — başkasının hatasını tahmin eder</td>
+</tr>
+<tr>
+<td>Aşırı özgüven</td>
+<td>Overconfidence</td>
+<td>Riskli</td>
+</tr>
+<tr>
+<td>Risk arayışı</td>
+<td>Risk-seeking</td>
+<td>Riskli</td>
+</tr>
+<tr>
+<td>Ruhsal yapı</td>
+<td>Mental constitution</td>
+<td>Bozukluk → kaza riski</td>
+</tr>
+<tr>
+<td>Depresyon</td>
+<td>Depression</td>
+<td>Risk faktörü</td>
+</tr>
+<tr>
+<td>Stres</td>
+<td>Stress</td>
+<td>Risk faktörü</td>
+</tr>
+<tr>
+<td>Uyku bozukluğu</td>
+<td>Sleep disorder</td>
+<td>Risk faktörü</td>
+</tr>
+<tr>
+<td>Mikro-uyku</td>
+<td>Micro-sleep</td>
+<td>1–4 sn göz kapanması</td>
+</tr>
+<tr>
+<td>Mola</td>
+<td>Break / rest</td>
+<td>2 saatte bir</td>
+</tr>
+<tr>
+<td>Yorgun</td>
+<td>Tired</td>
+<td>Tepki uzar</td>
+</tr>
+<tr>
+<td>Uykusuz</td>
+<td>Sleep-deprived</td>
+<td>Tepki uzar</td>
+</tr>
+<tr>
+<td>Dalgın</td>
+<td>Distracted</td>
+<td>Tepki uzar</td>
+</tr>
+<tr>
+<td>Cep telefonu</td>
+<td>Mobile phone</td>
+<td>En sık dikkat dağıtıcı</td>
+</tr>
+<tr>
+<td>Hands-free</td>
+<td>Hands-free</td>
+<td>Serbest</td>
+</tr>
+<tr>
+<td>Alkol</td>
+<td>Alcohol</td>
+<td>Tepki 2–3x ↑</td>
+</tr>
+<tr>
+<td>Promil</td>
+<td>Per mille</td>
+<td>0.50 hususi sınırı</td>
+</tr>
+<tr>
+<td>Tunel görüşü</td>
+<td>Tunnel vision</td>
+<td>Alkol etkisi</td>
+</tr>
+<tr>
+<td>Geçiş üstünlüğü</td>
+<td>Right-of-way priority</td>
+<td>Saygı kuralı</td>
+</tr>
+<tr>
+<td>Kontrol noktası</td>
+<td>Checkpoint</td>
+<td>Trafik denetimi</td>
+</tr>
+<tr>
+<td>27 soru</td>
+<td>27 questions</td>
+<td>Trafik+Çevre payı</td>
+</tr>
+<tr>
+<td>Ehliyet</td>
+<td>Driving license</td>
+<td>"Önce eğitim, sonra ehliyet"</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📖 Ders kitabı</div><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank"><img src="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/page-163.png" alt="Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:" loading="lazy"></a><figcaption>Ders kitabı — Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI: <a class="slide-figure-link" href="../../ders-kitabi/trafik-ve-cevre/page-163.html" target="_blank">→ pdf metni</a></figcaption></div></figure></aside><div class="slide-text"><h2>14. Cross-references</h2>
+
+
+<ul>
+<li><strong>Alkol detayları + ceza ölçeği:</strong> <a href="12-alkol-ve-surme-yasakları.md">12-alkol-ve-surme-yasakları.md</a>.</li>
+<li><strong>Tepki süresi → durma mesafesi formülü:</strong> <a href="16-durma-mesafesi.md">16-durma-mesafesi.md</a>.</li>
+<li><strong>Tedbirsiz/saygısız sürme yasakları (telefon dahil):</strong> <a href="29-cevre-asli-kusur-saygisiz-surme.md">29-cevre-asli-kusur-saygisiz-surme.md</a>.</li>
+<li><strong>Sağlık raporu ile belge geri alma:</strong> <a href="32-tescil-muayene-surucu-belgeleri.md">32-tescil-muayene-surucu-belgeleri.md</a>.</li>
+<li><strong>Görmeyen yayaya saygı (paylaşma örneği):</strong> <a href="27-bisiklet-motosiklet-kurallari.md">27-bisiklet-motosiklet-kurallari.md §6</a>.</li>
+</ul></div></section><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-177.html">📄 Sayfa 177: TRAFİK PSİKOLOJİSİ<span class="score">147.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-163.html">📄 Sayfa 163: SÜRÜCÜ BELGESİNİN GERİ ALINMASI:<span class="score">137.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html">📄 Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI<span class="score">109.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html">📄 Sayfa 83: HIZ KURALLARI<span class="score">71.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-167.html">📄 Sayfa 167: ASLİ KUSUR SAYILAN HALLER<span class="score">69.8</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-153.html">📄 Sayfa 153: 4- Trafik suçları ve karşılığı cezalar, Ceza puanları<span class="score">60.2</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/14-tescil-belge-cevre-psikoloji/index.html">🖼️ Tescil, Belge, Çevre, Psikoloji<span class="score">6 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/12-bisiklet-motosiklet-yaya/index.html">🖼️ Bisiklet, Motosiklet, Yaya<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/05-alkol-yasaklar-mesleki/index.html">🖼️ Alkol & Mesleki<span class="score">4 hit</span></a></li></ul></div></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+</body>
+</html>
