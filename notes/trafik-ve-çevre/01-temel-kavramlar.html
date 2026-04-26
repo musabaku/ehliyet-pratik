@@ -50,6 +50,20 @@ body{
 .content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
 .content strong{color:#11472d;font-weight:600}
 .content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
   .content h1{font-size:1.3rem}
@@ -931,7 +945,7 @@ Makine gücü → <strong>Motorlu Taşıt</strong>. İnsan/hayvan gücü → <st
 <li><a href="../araç-tekniği/08-güç-aktarma-organları.md">Araç Tekniği — 08 Güç aktarma organları</a> — what transmits the "makine gücü" inside a motorlu taşıt</li>
 <li>Portal: <a href="../../e-kitap/01-trafik-ve-çevre/04-karayolu-cesitleri-ve-karayolunu-kullanma-kurallari.md">e-kitap/01-trafik-ve-çevre/04-karayolu-cesitleri...</a> — karayolu çeşitleri (next topic)</li>
 <li><a href="README.md">README.md</a> — full subject index for Trafik ve Çevre</li>
-</ul>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-002.html">📄 Sayfa 2: Trafik: Yayaların, hayvanların ve araçların karayolu üzerindeki hal ve hareketlerine TRAFİ<span class="score">177.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-006.html">📄 Sayfa 6: Durma : Her türlü trafik zorunlulukları nedeni ile aracın durdurulmasıdır.<span class="score">133.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-007.html">📄 Sayfa 7: Trafik Kazası: Karayolu üzerinde hareket halinde olan bir veya birden fazla<span class="score">95.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-005.html">📄 Sayfa 5: Geçiş Üstünlüğü: Görev sırasında, belirli araç sürücülerinin can ve mal güvenliğini<span class="score">92.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-115.html">📄 Sayfa 115: GEÇİŞ ÜSTÜNLÜĞÜNE SAHİP ARAÇLARA YOL VERME<span class="score">91.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-025.html">📄 Sayfa 25: Bisiklet: Üzerinde bulunan insanın adale gücü ile pedal veya el ile tekerleği döndürülmek <span class="score">90.6</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/index.html">🖼️ Trafik Görevlisi & Işıklı İşaretler<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/09-gecis-ustunlugu-kolayligi/index.html">🖼️ Geçiş Üstünlüğü & Kolaylığı<span class="score">5 hit</span></a></li></ul></div></div></section>
 </div>
 <script>
 // If opened from app with ?back=... query param, override "back to app" link

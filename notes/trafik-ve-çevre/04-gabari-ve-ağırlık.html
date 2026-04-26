@@ -50,6 +50,20 @@ body{
 .content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
 .content strong{color:#11472d;font-weight:600}
 .content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
   .content h1{font-size:1.3rem}
@@ -328,7 +342,7 @@ body{
 <li><strong>Weight-based vehicle classes (kamyonet ≤ 3500 kg, kamyon &gt; 3500 kg):</strong> <a href="03-araç-tanımları.md">03-araç-tanımları.md § 3</a> — that 3.500 kg boundary is itself an <strong>azami yüklü ağırlık</strong> value.</li>
 <li><strong>Hafif römork ≤ 750 kg:</strong> <a href="03-araç-tanımları.md">03-araç-tanımları.md § 5</a> — again, an azami yüklü ağırlık threshold.</li>
 <li><strong>Prohibitive signs as a family (red circles):</strong> <em>pending</em> — will be covered in the dedicated trafik işaretleri file when that class lands.</li>
-</ul>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-029.html">📄 Sayfa 29: Gabari: Araçların yüklü veya yüksüz olarak karayolunda güvenli seyirlerini temin amacı<span class="score">214.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-128.html">📄 Sayfa 128: ARAÇLARIN BOYUT ÖLÇÜ VE AĞIRLIKLARI:<span class="score">66.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html">📄 Sayfa 83: HIZ KURALLARI<span class="score">58.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-023.html">📄 Sayfa 23: Römork: Motorlu araçla çekilen insan ve yük<span class="score">48.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-159.html">📄 Sayfa 159: ARAÇLARDA BULUNDURULMASI ZORUNLU MALZEMELER<span class="score">41.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-025.html">📄 Sayfa 25: Bisiklet: Üzerinde bulunan insanın adale gücü ile pedal veya el ile tekerleği döndürülmek <span class="score">35.8</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">3 hit</span></a></li></ul></div></div></section>
 </div>
 <script>
 // If opened from app with ?back=... query param, override "back to app" link

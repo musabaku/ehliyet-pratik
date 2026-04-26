@@ -50,6 +50,20 @@ body{
 .content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
 .content strong{color:#11472d;font-weight:600}
 .content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
   .content h1{font-size:1.3rem}
@@ -1795,7 +1809,7 @@ body{
 <li><strong>Steering &amp; suspension:</strong> Tire imbalance affects <strong>ön takım ayarları</strong> (front suspension settings) — will be covered in the süspansiyon / direksiyon sistemi lessons</li>
 <li><strong>Safety:</strong> Tire condition directly affects braking distance — relevant to the upcoming fren sistemi content</li>
 <li><strong>Maintenance culture:</strong> Along with yağ (oil), su (coolant), and akü (battery), hava basıncı (tire pressure) is one of the 4 things a driver should routinely check — see upcoming günlük bakım (daily maintenance) content</li>
-</ul>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/arac-teknigi/page-047.html">📄 Sayfa 47: TEKERLEKLER VE LASTİKLER<span class="score">199.2</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-048.html">📄 Sayfa 48: TEKERLEKLER VE LASTİKLER<span class="score">173.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-053.html">📄 Sayfa 53: FREN SİSTEMİ<span class="score">134.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-059.html">📄 Sayfa 59: Aracın Fazla Yakıt Yakmasının Sebepleri<span class="score">88.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-056.html">📄 Sayfa 56: DİREKSİYON – ÖN DÜZEN SİSTEMİ<span class="score">88.2</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-023.html">📄 Sayfa 23: BENZİNLİ MOTOR<span class="score">87.4</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/arac-teknigi-kitabi/08-guc-aktarma-lastik/index.html">🖼️ Güç Aktarma & Lastikler<span class="score">6 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/index.html">🖼️ Fren, Süspansiyon, Direksiyon<span class="score">6 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/10-rodaj-bakim-tasarruf/index.html">🖼️ Rodaj, Bakım, Yakıt Tasarrufu<span class="score">4 hit</span></a></li></ul></div></div></section>
 </div>
 <script>
 // If opened from app with ?back=... query param, override "back to app" link

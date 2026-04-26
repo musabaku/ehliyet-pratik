@@ -50,6 +50,20 @@ body{
 .content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
 .content strong{color:#11472d;font-weight:600}
 .content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
   .content h1{font-size:1.3rem}
@@ -283,7 +297,7 @@ body{
 <li>Gabari ve ağırlık tanımları → <a href="04-gabari-ve-ağırlık.md">04-gabari-ve-ağırlık.md</a></li>
 <li>Araç tanımları (kamyon, çekici, römork, yarı römork) → <a href="03-araç-tanımları.md">03-araç-tanımları.md</a></li>
 <li>Yasak duraklama/park yerleri (ağır araçlar için ek kurallar) → <a href="22-duraklama-park-tedbirleri.md">22-duraklama-park-tedbirleri.md</a></li>
-</ul>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-129.html">📄 Sayfa 129: ARAÇLARIN YÜKLENMESİ<span class="score">162.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-029.html">📄 Sayfa 29: Gabari: Araçların yüklü veya yüksüz olarak karayolunda güvenli seyirlerini temin amacı<span class="score">62.1</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-173.html">📄 Sayfa 173: 4- Karayolları Genel Müdürlüğü:<span class="score">51.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-130.html">📄 Sayfa 130: YÜKLEME SIRASINDA DİKKAT EDİLECEK HUSUSLAR:<span class="score">48.8</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-128.html">📄 Sayfa 128: ARAÇLARIN BOYUT ÖLÇÜ VE AĞIRLIKLARI:<span class="score">44.9</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-083.html">📄 Sayfa 83: HIZ KURALLARI<span class="score">39.8</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/11-yukleme-yolcu-tehlikeli/index.html">🖼️ Yükleme, Yolcu, Tehlikeli Madde<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/01-tanimlar/index.html">🖼️ Tanımlar<span class="score">2 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/index.html">🖼️ Durma, Park, Işıklandırma<span class="score">2 hit</span></a></li></ul></div></div></section>
 </div>
 <script>
 // If opened from app with ?back=... query param, override "back to app" link

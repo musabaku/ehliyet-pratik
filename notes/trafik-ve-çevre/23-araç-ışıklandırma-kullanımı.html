@@ -50,6 +50,20 @@ body{
 .content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
 .content strong{color:#11472d;font-weight:600}
 .content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
   .content h1{font-size:1.3rem}
@@ -434,7 +448,7 @@ Gündüz: kar/sis/şiddetli yağmur/karanlık yer → lights on. Gece: her zaman
 <li>Aydınlatma ve ikaz sistemi (arıza gösterge ışıkları) → <a href="../araç-tekniği/05-aydınlatma-ikaz-sistemi.md">05-aydınlatma-ikaz-sistemi.md</a></li>
 <li>Geçme kuralları → <a href="17-geçme-kuralları.md">17-geçme-kuralları.md</a></li>
 <li>Duraklama ve park (park lambası kullanımı) → <a href="22-duraklama-park-tedbirleri.md">22-duraklama-park-tedbirleri.md</a></li>
-</ul>
+</ul><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/trafik-ve-cevre/page-126.html">📄 Sayfa 126: IŞIKLARIN KULLANILMASI<span class="score">265.4</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-125.html">📄 Sayfa 125: ARAÇLARIN IŞIKLANDIRILMASI ve<span class="score">220.0</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-127.html">📄 Sayfa 127: IŞIKLARIN KULLANILMASINDA YASAKLAR<span class="score">175.2</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-173.html">📄 Sayfa 173: 4- Karayolları Genel Müdürlüğü:<span class="score">89.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-120.html">📄 Sayfa 120: DURAKLAMANIN YASAK OLDUĞU YERLER<span class="score">88.3</span></a></li><li><a href="../../ders-kitabi/trafik-ve-cevre/page-076.html">📄 Sayfa 76: ALKOLLÜ ARAÇ KULLANMA YASAĞI<span class="score">81.9</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/trafik-ders-kitabi/10-durma-park-isiklandirma/index.html">🖼️ Durma, Park, Işıklandırma<span class="score">6 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/07-gecme-manevralar/index.html">🖼️ Geçme & Manevralar<span class="score">5 hit</span></a></li><li><a href="../../pics/trafik-ders-kitabi/02-trafik-gorevlisi-isiklar/index.html">🖼️ Trafik Görevlisi & Işıklı İşaretler<span class="score">4 hit</span></a></li></ul></div></div></section>
 </div>
 <script>
 // If opened from app with ?back=... query param, override "back to app" link

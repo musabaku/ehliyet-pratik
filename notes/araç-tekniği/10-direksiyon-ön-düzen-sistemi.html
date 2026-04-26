@@ -50,6 +50,20 @@ body{
 .content hr{border:none;border-top:1px solid #e4dac8;margin:20px 0}
 .content strong{color:#11472d;font-weight:600}
 .content em{color:#1f1b15}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid #e4dac8;border-radius:10px;background:#fff8ec;
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:#11472d;
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:#0a7f44}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:#6f6454;background:#f0e8d8;padding:1px 6px;border-radius:10px;margin-left:5px}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
 @media(max-width:600px){
   .content{margin:14px;padding:18px 16px;border-radius:8px}
   .content h1{font-size:1.3rem}
@@ -440,7 +454,7 @@ ROT BAŞLARI        (tie-rod ends transmit force to wheel hubs)
 <li><strong>Süspansiyon sistemi</strong> (upcoming) — salıncak, amortisör, yay are shared between direksiyon and süspansiyon, they're physically the same hardware</li>
 </ul>
 <hr />
-<p><em>Next slides expected in this file: ön düzen ayar türleri (rot/balans/kamber/kaster), direksiyon arıza belirtileri, hidrolik / elektrikli direksiyon farkı.</em></p>
+<p><em>Next slides expected in this file: ön düzen ayar türleri (rot/balans/kamber/kaster), direksiyon arıza belirtileri, hidrolik / elektrikli direksiyon farkı.</em></p><section class="resource-panel"><h2>İlgili çalışma materyalleri</h2><div class="resource-grid"><div><h3>Ders kitabı sayfaları</h3><ul><li><a href="../../ders-kitabi/arac-teknigi/page-056.html">📄 Sayfa 56: DİREKSİYON – ÖN DÜZEN SİSTEMİ<span class="score">100.2</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-047.html">📄 Sayfa 47: TEKERLEKLER VE LASTİKLER<span class="score">93.7</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-053.html">📄 Sayfa 53: FREN SİSTEMİ<span class="score">66.9</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-048.html">📄 Sayfa 48: TEKERLEKLER VE LASTİKLER<span class="score">58.7</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-031.html">📄 Sayfa 31: SOĞUTMA SİSTEMİNİN PARÇALARI<span class="score">32.2</span></a></li><li><a href="../../ders-kitabi/arac-teknigi/page-013.html">📄 Sayfa 13: Araçta Genel Olarak Bulunan Kısım ve Sistemler<span class="score">30.0</span></a></li></ul></div><div><h3>İlgili slaytlar</h3><ul><li><a href="../../pics/arac-teknigi-kitabi/09-fren-suspansiyon-direksiyon/index.html">🖼️ Fren, Süspansiyon, Direksiyon<span class="score">5 hit</span></a></li><li><a href="../../pics/arac-teknigi-kitabi/05-sogutma-hararet/index.html">🖼️ Soğutma & Hararet<span class="score">2 hit</span></a></li></ul></div></div></section>
 </div>
 <script>
 // If opened from app with ?back=... query param, override "back to app" link
