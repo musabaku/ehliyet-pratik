@@ -45,4 +45,18 @@
   if(localStorage.getItem(storageKey)==='1')document.body.classList.add('eh-nav-collapsed');
   setActive();
   sync();
+
+  // Apply UI language from localStorage (set by main app's UI toggle)
+  function applyLang(){
+    const L=localStorage.getItem('eh_uilang')||'tr';
+    nav.querySelectorAll('[data-tr]').forEach(el=>{
+      const v=el.dataset[L];
+      if(v!==undefined)el.textContent=v;
+    });
+    const brandStrong=nav.querySelector('.eh-nav-brand strong[data-tr]');
+    if(brandStrong){const v=brandStrong.dataset[L];if(v)brandStrong.textContent=v;}
+  }
+  applyLang();
+  // Re-apply when storage changes in another tab (e.g. user toggled in main app)
+  window.addEventListener('storage',e=>{if(e.key==='eh_uilang')applyLang();});
 })();
