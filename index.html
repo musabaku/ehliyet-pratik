@@ -1041,7 +1041,7 @@ function selectA(L){
   localStorage.setItem('eh_mis',JSON.stringify(E.mistakes));
   if(E.mode==='marathon'){E.marathon=Math.max(E.marathon,E.idx+1);localStorage.setItem('eh_mar',E.marathon.toString())}
   renderQ();
-  if(E.mode!=='exam')setTimeout(()=>{if(E.idx<E.questions.length-1)nextQ()},800);
+  // No auto-advance — user clicks Sonraki when ready (so they can read the refs panel)
 }
 
 function nextQ(){if(E.idx<E.questions.length-1){E.idx++;renderQ();window.scrollTo({top:0,behavior:'smooth'})}else endQuiz()}
