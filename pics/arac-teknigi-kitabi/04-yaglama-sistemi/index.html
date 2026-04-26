@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaglama Sistemi | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);color:#1f1b15;min-height:100vh}
+.hero{background:linear-gradient(122deg,#11472d,#227245);color:#fff;padding:24px 18px;text-align:center}
+.hero h1{font-size:1.45rem;margin-bottom:4px}.hero p{opacity:.82;font-size:.9rem}
+.nav{display:flex;gap:12px;flex-wrap:wrap;padding:14px 18px}.nav a{color:#0a7f44;text-decoration:none;font-weight:600;font-size:.88rem}.nav a:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;padding:10px 18px 44px}
+.card{background:#fff;border:1px solid #e4dac8;border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(35,26,15,.05);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(35,26,15,.1)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f5f0e6}
+.card div{padding:8px 12px;font-size:.82rem;color:#6f6454;font-weight:600}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:10;align-items:center;justify-content:center;flex-direction:column}
+.lightbox.open{display:flex}.lightbox img{max-width:96vw;max-height:86vh;object-fit:contain;background:#fff;border-radius:6px}
+.lb-title{color:#fff;margin-top:10px;opacity:.85}.lb-close,.lb-nav{position:absolute;color:#fff;background:rgba(255,255,255,.12);border:0;cursor:pointer}
+.lb-close{top:16px;right:20px;font-size:1.8rem;background:none}.lb-nav{top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;font-size:2rem}.lb-prev{left:18px}.lb-next{right:18px}
+@media(max-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:8px 12px 36px}.hero h1{font-size:1.2rem}.lb-nav{width:38px;height:38px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>Yaglama Sistemi</h1>
+  <p>Arac Teknigi Ders Kitabi · 2 slayt</p>
+</div>
+<div class="nav">
+  <a href="../index.html">&larr; Konu listesi</a>
+  <a href="../../index.html">&larr; Slaytlar</a>
+  <a href="../../../index.html">&larr; Ehliyet Pratik</a>
+</div>
+<div class="grid">
+<button class="card" onclick="openBox(0)"><img src="page-026.png" alt="Sayfa 26" loading="lazy"><div>Sayfa 26</div></button>
+<button class="card" onclick="openBox(1)"><img src="page-027.png" alt="Sayfa 27" loading="lazy"><div>Sayfa 27</div></button>
+</div>
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeBox()">&times;</button>
+  <button class="lb-nav lb-prev" onclick="move(-1)">&#8249;</button>
+  <button class="lb-nav lb-next" onclick="move(1)">&#8250;</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-title" id="lb-title"></div>
+</div>
+<script>
+const IMAGES=['page-026.png', 'page-027.png'];
+let idx=0;
+function openBox(i){idx=i;render();document.getElementById('lightbox').className='lightbox open'}
+function closeBox(){document.getElementById('lightbox').className='lightbox'}
+function move(d){idx=(idx+d+IMAGES.length)%IMAGES.length;render()}
+function render(){const img=IMAGES[idx];document.getElementById('lb-img').src=img;document.getElementById('lb-title').textContent='Sayfa '+img.match(/page-(\d+)/)[1]+' · '+(idx+1)+'/'+IMAGES.length}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox();if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1)});
+</script>
+</body>
+</html>

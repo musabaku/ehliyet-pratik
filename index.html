@@ -360,6 +360,8 @@ body{
 .enrich-panel p{font-size:12px;color:var(--muted);margin-bottom:10px;line-height:1.45}
 .enrich-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
 .enrich-stat{font-size:11px;color:var(--muted2);text-align:center;margin-top:8px}
+.media-counts{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.media-counts .btn{min-width:88px}
 .study-panel{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
   padding:14px 16px;margin:0 0 16px;box-shadow:var(--shadow);
@@ -473,8 +475,10 @@ body{
     <div class="enrich-panel" id="enrich-panel">
       <h3 data-tr="Görselli Pratik" data-en="Visual Practice">Görselli Pratik</h3>
       <p data-tr="Resimli ve videolu sorular — özellikle trafik işaretleri, gösterge lambaları ve ilk yardım diyagramları için." data-en="Image and video questions — especially traffic signs, dashboard lights, and first-aid diagrams.">Resimli ve videolu sorular — özellikle trafik işaretleri, gösterge lambaları ve ilk yardım diyagramları için.</p>
-      <div class="enrich-actions">
-        <button class="btn btn-primary btn-sm" onclick="startQuiz('media')" data-tr="Sadece Görselli (30)" data-en="Media Only (30)">Sadece Görselli (30)</button>
+      <div class="enrich-actions media-counts">
+        <button class="btn btn-primary btn-sm" onclick="startMediaQuiz(30)" data-tr="30 Soru" data-en="30 Questions">30 Soru</button>
+        <button class="btn btn-sm" onclick="startMediaQuiz(100)" data-tr="100 Soru" data-en="100 Questions">100 Soru</button>
+        <button class="btn btn-sm" onclick="startMediaQuiz('all')" data-tr="Tüm Görselli" data-en="All Media">Tüm Görselli</button>
       </div>
       <div class="enrich-stat" id="enrich-stat"></div>
     </div>
@@ -711,8 +715,13 @@ const E={
     const el=document.getElementById('enrich-stat');
     if(!el)return;
     if(typeof ALL_QUESTIONS==='undefined'||!ALL_QUESTIONS.length){el.textContent='';return;}
-    const media=ALL_QUESTIONS.filter(q=>(q.media&&q.media.length)||(q.option_media&&Object.keys(q.option_media).length)).length;
-    el.textContent=`${media} resimli/videolu soru · toplam ${ALL_QUESTIONS.length} soru`;
+    const lang=localStorage.getItem('eh_uilang')||'tr';
+    const mediaAll=ALL_QUESTIONS.filter(hasMedia).length;
+    const mediaPool=ALL_QUESTIONS.filter(q=>this.cat==='all'||this.detectCat(q)===this.cat).filter(hasMedia).length;
+    const catLabel=this.cat==='all'?(lang==='en'?'all categories':'tüm kategoriler'):(this.CAT_LABELS[this.cat]||this.cat);
+    el.textContent=lang==='en'
+      ? `${mediaPool} media questions in ${catLabel} · ${mediaAll} total media questions`
+      : `${catLabel}: ${mediaPool} resimli/videolu soru · toplam ${mediaAll} görselli soru`;
   }
 };
 E.updateMarathonText();
@@ -737,7 +746,7 @@ else{E.updateCatCounts();E.updateEnrichedText();updateVCounts();applyUILang();}
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
-function setCategory(c,el){E.cat=c;document.querySelectorAll('#filter-row .btn').forEach(b=>b.classList.remove('active'));el.classList.add('active')}
+function setCategory(c,el){E.cat=c;document.querySelectorAll('#filter-row .btn').forEach(b=>b.classList.remove('active'));el.classList.add('active');E.updateEnrichedText()}
 
 /* ═══════════════════════════════════════════
    UI LANGUAGE TOGGLE (separate from Google Translate)
@@ -877,6 +886,10 @@ function hasMedia(q){
   return (q.media&&q.media.length)||(q.option_media&&Object.keys(q.option_media).length);
 }
 
+function startMediaQuiz(limit){
+  startQuiz('media',{limit});
+}
+
 function escapeHTML(s){
   return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 }
@@ -946,7 +959,7 @@ function optionMediaHTML(q,L){
   return html?`<div class="option-media">${html}</div>`:'';
 }
 
-function startQuiz(m){
+function startQuiz(m,opts={}){
   const source=questionSourceForMode(m);
   if(!source||!source.length){
     alert('Soru verisi yuklenemedi. questions_data.js dosyasini kontrol edin.');
@@ -986,8 +999,10 @@ function startQuiz(m){
   else if(m==='random')E.questions=shuffle([...pool]).slice(0,Math.min(20,pool.length));
   else if(m==='media'){
     const withMedia=pool.filter(hasMedia);
-    E.questions=shuffle(withMedia).slice(0,Math.min(30,withMedia.length));
-    if(!E.questions.length){alert('Bu kategoride resimli/videolu soru bulunamadi.');return}
+    if(!withMedia.length){alert('Bu kategoride resimli/videolu soru bulunamadi.');return}
+    const requested=opts.limit||30;
+    const n=requested==='all'?withMedia.length:Math.min(Number(requested)||30,withMedia.length);
+    E.questions=shuffle(withMedia).slice(0,n);
   }
   else {alert('Bilinmeyen mod: '+m);return}
 

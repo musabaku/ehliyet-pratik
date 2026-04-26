@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tescil Belge Cevre Psikoloji | Ehliyet Pratik</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);color:#1f1b15;min-height:100vh}
+.hero{background:linear-gradient(122deg,#11472d,#227245);color:#fff;padding:24px 18px;text-align:center}
+.hero h1{font-size:1.45rem;margin-bottom:4px}.hero p{opacity:.82;font-size:.9rem}
+.nav{display:flex;gap:12px;flex-wrap:wrap;padding:14px 18px}.nav a{color:#0a7f44;text-decoration:none;font-weight:600;font-size:.88rem}.nav a:hover{text-decoration:underline}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;padding:10px 18px 44px}
+.card{background:#fff;border:1px solid #e4dac8;border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(35,26,15,.05);cursor:pointer;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(35,26,15,.1)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#f5f0e6}
+.card div{padding:8px 12px;font-size:.82rem;color:#6f6454;font-weight:600}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:10;align-items:center;justify-content:center;flex-direction:column}
+.lightbox.open{display:flex}.lightbox img{max-width:96vw;max-height:86vh;object-fit:contain;background:#fff;border-radius:6px}
+.lb-title{color:#fff;margin-top:10px;opacity:.85}.lb-close,.lb-nav{position:absolute;color:#fff;background:rgba(255,255,255,.12);border:0;cursor:pointer}
+.lb-close{top:16px;right:20px;font-size:1.8rem;background:none}.lb-nav{top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;font-size:2rem}.lb-prev{left:18px}.lb-next{right:18px}
+@media(max-width:600px){.grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;padding:8px 12px 36px}.hero h1{font-size:1.2rem}.lb-nav{width:38px;height:38px}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <h1>Tescil Belge Cevre Psikoloji</h1>
+  <p>Trafik ve Cevre Ders Kitabi · 26 slayt</p>
+</div>
+<div class="nav">
+  <a href="../index.html">&larr; Konu listesi</a>
+  <a href="../../index.html">&larr; Slaytlar</a>
+  <a href="../../../index.html">&larr; Ehliyet Pratik</a>
+</div>
+<div class="grid">
+<button class="card" onclick="openBox(0)"><img src="page-154.png" alt="Sayfa 154" loading="lazy"><div>Sayfa 154</div></button>
+<button class="card" onclick="openBox(1)"><img src="page-155.png" alt="Sayfa 155" loading="lazy"><div>Sayfa 155</div></button>
+<button class="card" onclick="openBox(2)"><img src="page-156.png" alt="Sayfa 156" loading="lazy"><div>Sayfa 156</div></button>
+<button class="card" onclick="openBox(3)"><img src="page-157.png" alt="Sayfa 157" loading="lazy"><div>Sayfa 157</div></button>
+<button class="card" onclick="openBox(4)"><img src="page-158.png" alt="Sayfa 158" loading="lazy"><div>Sayfa 158</div></button>
+<button class="card" onclick="openBox(5)"><img src="page-159.png" alt="Sayfa 159" loading="lazy"><div>Sayfa 159</div></button>
+<button class="card" onclick="openBox(6)"><img src="page-160.png" alt="Sayfa 160" loading="lazy"><div>Sayfa 160</div></button>
+<button class="card" onclick="openBox(7)"><img src="page-161.png" alt="Sayfa 161" loading="lazy"><div>Sayfa 161</div></button>
+<button class="card" onclick="openBox(8)"><img src="page-162.png" alt="Sayfa 162" loading="lazy"><div>Sayfa 162</div></button>
+<button class="card" onclick="openBox(9)"><img src="page-163.png" alt="Sayfa 163" loading="lazy"><div>Sayfa 163</div></button>
+<button class="card" onclick="openBox(10)"><img src="page-164.png" alt="Sayfa 164" loading="lazy"><div>Sayfa 164</div></button>
+<button class="card" onclick="openBox(11)"><img src="page-165.png" alt="Sayfa 165" loading="lazy"><div>Sayfa 165</div></button>
+<button class="card" onclick="openBox(12)"><img src="page-166.png" alt="Sayfa 166" loading="lazy"><div>Sayfa 166</div></button>
+<button class="card" onclick="openBox(13)"><img src="page-167.png" alt="Sayfa 167" loading="lazy"><div>Sayfa 167</div></button>
+<button class="card" onclick="openBox(14)"><img src="page-168.png" alt="Sayfa 168" loading="lazy"><div>Sayfa 168</div></button>
+<button class="card" onclick="openBox(15)"><img src="page-169.png" alt="Sayfa 169" loading="lazy"><div>Sayfa 169</div></button>
+<button class="card" onclick="openBox(16)"><img src="page-170.png" alt="Sayfa 170" loading="lazy"><div>Sayfa 170</div></button>
+<button class="card" onclick="openBox(17)"><img src="page-171.png" alt="Sayfa 171" loading="lazy"><div>Sayfa 171</div></button>
+<button class="card" onclick="openBox(18)"><img src="page-172.png" alt="Sayfa 172" loading="lazy"><div>Sayfa 172</div></button>
+<button class="card" onclick="openBox(19)"><img src="page-173.png" alt="Sayfa 173" loading="lazy"><div>Sayfa 173</div></button>
+<button class="card" onclick="openBox(20)"><img src="page-174.png" alt="Sayfa 174" loading="lazy"><div>Sayfa 174</div></button>
+<button class="card" onclick="openBox(21)"><img src="page-175.png" alt="Sayfa 175" loading="lazy"><div>Sayfa 175</div></button>
+<button class="card" onclick="openBox(22)"><img src="page-176.png" alt="Sayfa 176" loading="lazy"><div>Sayfa 176</div></button>
+<button class="card" onclick="openBox(23)"><img src="page-177.png" alt="Sayfa 177" loading="lazy"><div>Sayfa 177</div></button>
+<button class="card" onclick="openBox(24)"><img src="page-178.png" alt="Sayfa 178" loading="lazy"><div>Sayfa 178</div></button>
+<button class="card" onclick="openBox(25)"><img src="page-179.png" alt="Sayfa 179" loading="lazy"><div>Sayfa 179</div></button>
+</div>
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeBox()">&times;</button>
+  <button class="lb-nav lb-prev" onclick="move(-1)">&#8249;</button>
+  <button class="lb-nav lb-next" onclick="move(1)">&#8250;</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-title" id="lb-title"></div>
+</div>
+<script>
+const IMAGES=['page-154.png', 'page-155.png', 'page-156.png', 'page-157.png', 'page-158.png', 'page-159.png', 'page-160.png', 'page-161.png', 'page-162.png', 'page-163.png', 'page-164.png', 'page-165.png', 'page-166.png', 'page-167.png', 'page-168.png', 'page-169.png', 'page-170.png', 'page-171.png', 'page-172.png', 'page-173.png', 'page-174.png', 'page-175.png', 'page-176.png', 'page-177.png', 'page-178.png', 'page-179.png'];
+let idx=0;
+function openBox(i){idx=i;render();document.getElementById('lightbox').className='lightbox open'}
+function closeBox(){document.getElementById('lightbox').className='lightbox'}
+function move(d){idx=(idx+d+IMAGES.length)%IMAGES.length;render()}
+function render(){const img=IMAGES[idx];document.getElementById('lb-img').src=img;document.getElementById('lb-title').textContent='Sayfa '+img.match(/page-(\d+)/)[1]+' · '+(idx+1)+'/'+IMAGES.length}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeBox();if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1)});
+</script>
+</body>
+</html>
