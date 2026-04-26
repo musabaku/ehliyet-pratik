@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yanıklar, Zehirlenmeler & Sokmalar — Burns, Poisoning, Stings | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</strong><span data-tr="4,450 soru + 1366 kelime" data-en="4,450 questions + 1366 words">4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Calisma" data-en="Practice">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text" data-tr="Sorular" data-en="Questions">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text" data-tr="Kelime" data-en="Vocabulary">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text" data-tr="Claude Notlari" data-en="Claude Notes">Claude Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text" data-tr="E-Kitap" data-en="E-Book">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text" data-tr="Slaytlar" data-en="Slides">Slaytlar</span></span><span class="eh-nav-meta" data-tr="galeri" data-en="gallery">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Tema" data-en="Theme">Tema</div>
+    <div class="eh-nav-themes">
+      <button class="eh-nav-theme" data-theme="cream" type="button" title="Cream">🌾</button>
+      <button class="eh-nav-theme" data-theme="blue" type="button" title="Blue">🌊</button>
+      <button class="eh-nav-theme" data-theme="paper" type="button" title="Paper">📜</button>
+      <button class="eh-nav-theme" data-theme="dim" type="button" title="Dim">🌙</button>
+    </div>
+    <button class="eh-nav-lang" type="button" id="eh-nav-lang-btn" title="Switch UI language">UI: TR</button>
+    <div class="eh-nav-note" data-tr="Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis." data-en="Jump from any page to the main app, notes, PDF texts, and slides.">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div>
+  </div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 06-yaniklar-zehirlenmeler</span>
+</div>
+<div class="content">
+<h1>Yanıklar, Zehirlenmeler &amp; Sokmalar — Burns, Poisoning, Stings</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Class date:</strong> 2026-04-26 (retrospective from screenshots)<br />
+<strong>Slides covered:</strong> Yanıklar (genel), Yanık dereceleri, Zehirlenmeler, Akrep/arı/güneş çarpması<br />
+<strong>Portal source:</strong> <a href="../../e-kitap/02-ilk-yardım/06-yaniklarda-ilk-yardim.md"><code>06-yaniklarda-ilk-yardim.md</code></a></p>
+<hr />
+<h2>1. Overview — Görev (Yanık nedir?)</h2>
+<blockquote>
+<p><strong>Yanık:</strong> Alev, ateş, sıcak su, sıcak buhar, kızgın katı cisimler, asit, baz, elektrik akımı, yıldırım, güneş, radyasyon gibi nedenlerle dokularda meydana gelen yaraya <strong>yanık</strong> denir.<br />
+<em>(A burn is tissue damage caused by heat, chemicals, electricity, lightning, sun, or radiation.)</em></p>
+<p><strong>Critical numbers:</strong><br />
+- <strong>Yetişkinde</strong> vücut yüzeyinin <strong>%20</strong>'sinden fazlasının yanması yaşamsal risk oluşturur.<br />
+- <strong>Bebeklerde</strong> bu oran <strong>%10</strong>'dur.</p>
+</blockquote>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.29.59%402x.png" alt="Sınıfta gösterilen slayt (9 :29:59" loading="lazy"></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Yanık Çeşitleri ve Nedenleri</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Composite image of 4 burn scenarios: firefighter near flames, child burning by hot water, hand under cold water, bandaged hand.</p>
+<h3>Yanık Çeşitleri</h3>
+<p><strong>Fiziksel yanıklar:</strong><br />
+- <strong>Isı ile</strong> (alev, kaynar su, buhar, sıcak metal)<br />
+- <strong>Elektrik</strong> (akım çarpması)<br />
+- <strong>Işın</strong> (radyasyon, güneş, X-ray)<br />
+- <strong>Sürtünme</strong><br />
+- <strong>Donma</strong> (frostbite)</p>
+<p><strong>Kimyasal yanıklar:</strong><br />
+- <strong>Asit / alkali (baz)</strong> maddelerle temas</p>
+<h3>Yanığın ciddiyetini belirleyen 7 faktör</h3>
+<ol>
+<li><strong>Derinlik</strong> (1°/2°/3°)</li>
+<li><strong>Yaygınlık</strong> (vücut yüzeyinin yüzdesi)</li>
+<li><strong>Bölge</strong> (yüz, el, eklem, genital → daha ciddi)</li>
+<li><strong>Enfeksiyon riski</strong></li>
+<li><strong>Yaş</strong> (bebek/yaşlı daha riskli)</li>
+<li><strong>Solunum yoluyla görülen zarar</strong></li>
+<li><strong>Önceden var olan hastalıklar</strong></li>
+</ol>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.30.53%402x.png" alt="Sınıfta gösterilen slayt (9 :30:53" loading="lazy"></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Yanık Dereceleri (Burn Degrees)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>3 illustrations showing 1°, 2°, 3° burns on a hand with cross-section anatomy.</p>
+<h3>Birinci derece yanık (1°)</h3>
+<ul>
+<li>Sadece <strong>derinin üst tabakası</strong> yanmıştır</li>
+<li>Deri bütünlüğü bozulmamış, <strong>gerginlik, ağrı, kızarıklık</strong></li>
+<li>~48 saatte iyileşir</li>
+<li><strong>İz bırakmaz</strong> — güneş yanıkları gibi</li>
+</ul>
+<h3>İkinci derece yanık (2°)</h3>
+<ul>
+<li>Derinin <strong>üst ve orta tabakası</strong> yanmış, bütünlüğü bozulmuş</li>
+<li><strong>İçi su dolu kabarcıklar (bül)</strong> vardır</li>
+<li><strong>Çok ağrılıdır</strong></li>
+<li>Kılcal damar sinir uçları açıkta — fazla ağrı, doku kesecikler oluşur</li>
+<li>Deri kendini yenileyerek iyileşir, <strong>iz bırakabilir</strong></li>
+</ul>
+<h3>Üçüncü derece yanık (3°)</h3>
+<ul>
+<li>Derinin <strong>tüm tabakaları</strong> bozulmuş</li>
+<li><strong>Kemiğe kadar</strong> inebilir, kas/sinir/damarlara zarar verir</li>
+<li><strong>Beyaz → kara → siyah</strong> renge kadar aşamaları</li>
+<li><strong>Sinir hücreleri yandığı için ÇOĞU ZAMAN AĞRI YOKTUR</strong> ← exam trick</li>
+<li>Sızıntı şeklinde sıvı akar</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>3. derece yanıkta ağrı YOKTUR</strong> (sinir uçları yandığı için).<br />
+1. derece → ağrı + kızarıklık + iz bırakmaz.<br />
+2. derece → <strong>bül (kabarcık)</strong> + en ağrılı.</p>
+</blockquote>
+<h3>Slide notes (yanıkta yapılacaklar list)</h3>
+<ul>
+<li><strong>Yanık yere genel olarak soğuk ve buz uygulanır</strong> (small areas only)</li>
+<li>Kimyasal madde yanıklarında <strong>bol su ile yıkanır</strong></li>
+<li>Motosiklet/traktör tüm araçlarda <strong>yangın söndürme cihazı bulundurulmalıdır</strong></li>
+<li><strong>Trafik kazası</strong> sonucunda yangına karşı <strong>kontak anahtarı kapatılmalıdır</strong></li>
+<li>Motora başlayan yangını söndürmek için <strong>motorun ön ve alt püskürtme işlemi yapılır</strong>, sonra kaput açılıp üst kısmına püskürtme yapılır</li>
+</ul>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.40.16%402x.png" alt="Sınıfta gösterilen slayt (9 :40:16" loading="lazy"></div></figure></aside><div class="slide-text"><h2>4. Yanıkta İlk Yardım Uygulamaları</h2>
+
+
+<h3>Isı ile yanıkta</h3>
+<ul>
+<li>Kişi yanıyorsa <strong>paniğe engel olunur</strong>, koşması engellenir, <strong>örtü/battaniye ile sarılır + yuvarlatılır</strong> (Stop-Drop-Roll)</li>
+<li><strong>ABC</strong> değerlendirilir, solunum yolu kontrol edilir</li>
+<li><strong>Yanmış deri kaldırılmadan</strong> giysiler çıkarılır</li>
+<li>Yanık bölge <strong>en az 20 dakika çeşme suyu altında</strong> tutulur (geniş yüzeyde önerilmez — ısı kaybı tehlikeli)</li>
+<li><strong>Yüzük, bilezik, saat çıkarılır</strong> (ödem öncesi)</li>
+<li><strong>Su toplamış yerler patlatılmaz</strong></li>
+<li><strong>Yanık üzerine ilaç/merhem/diş macunu/yoğurt SÜRÜLMEZ</strong></li>
+<li>Yanık üzeri <strong>temiz bezle örtülür</strong></li>
+<li>Yanık geniş + sağlık kuruluşu uzaksa, bilinçliyse: <strong>1 L su + 1 çay kaşığı karbonat + 1 çay kaşığı tuz</strong> karışımı içirilir</li>
+<li><strong>112 aranır</strong></li>
+</ul>
+<h3>Kimyasal yanıkta</h3>
+<ul>
+<li>Kimyasal madde ile temas <strong>en kısa sürede kesilmelidir</strong></li>
+<li>Bol <strong>tazyiksiz su</strong> ile <strong>en az 15-20 dakika</strong> yıkanır</li>
+<li>Giysiler çıkarılır, hasta örtülür</li>
+<li><strong>112 aranır</strong></li>
+</ul>
+<h3>Elektrik yanığında</h3>
+<ul>
+<li><strong>Soğukkanlı</strong> olunur</li>
+<li>Hastaya dokunmadan önce <strong>elektrik akımı KESİLİR</strong> — yoksa <strong>tahta çubuk veya ip</strong> ile temas kesilir</li>
+<li><strong>ABC</strong> değerlendirilir</li>
+<li><strong>Su ile müdahale edilmez</strong> ← çok önemli, akım iletir</li>
+<li>Hareket ettirilmez (omurga zarar görmüş olabilir)</li>
+<li>Hasar gören bölge temiz bezle örtülür</li>
+<li><strong>112 aranır</strong></li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>Elektrik yanığında <strong>suyla müdahale edilmez</strong> ve <strong>akım kesilmeden hastaya dokunulmaz</strong>.<br />
+Yanığa <strong>diş macunu, yoğurt, salça, merhem SÜRÜLMEZ</strong> — sadece soğuk su + temiz bez.<br />
+Yanığın bülü (su kabarcığı) <strong>patlatılmaz</strong> (enfeksiyon kapısı).</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.35.08%402x.png" alt="Sınıfta gösterilen slayt (9 :35:08" loading="lazy"></div></figure></aside><div class="slide-text"><h2>5. SLIDE 3 — Zehirlenmeler (Poisoning)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Block of text categorizing poisoning by route of entry: solunum yolu, sindirim yolu, deri yolu.</p>
+<h3>Tanım</h3>
+<blockquote>
+<p><strong>Zehirlenme:</strong> İnsan vücuduna girdiğinde çalışmasını ve yapısını bozan veya yok eden, ölüme neden olan maddelere <strong>zehir</strong> denir; bu maddelerin vücuda alınmasıyla görülen duruma <strong>zehirlenme</strong> denir.</p>
+</blockquote>
+<h3>3 yol — 3 ilk yardım</h3>
+<table>
+<thead>
+<tr>
+<th>Yol</th>
+<th>Örnek</th>
+<th>İlk Yardım</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Solunum yolu</strong></td>
+<td>Egzoz gazı (karbonmonoksit), kapalı garaj, soba</td>
+<td>Kapı/pencere açılır, <strong>temiz havaya çıkarılır</strong>; soluk durmuşsa <strong>suni solunum</strong>, kalp durmuşsa <strong>kalp masajı</strong></td>
+</tr>
+<tr>
+<td><strong>Sindirim yolu</strong></td>
+<td>İlaç, gıda, kimyasal yutma</td>
+<td><strong>2 saat içinde</strong> <strong>kusturulur</strong> — boğazı uyarmak en iyi yol; <strong>asit/baz/petrol ürünü yutmuşsa KUSTURULMAZ</strong> (yine bol su verilerek 112)</td>
+</tr>
+<tr>
+<td><strong>Deri yolu</strong></td>
+<td>Yılan sokması, kimyasal temas, böcek</td>
+<td>Sokma bölgesi soğuk + sıkıca üzerinden tutulur, <strong>turnike uygulanır</strong>; sokulan yer alta gelecek şekilde yatırılır; sıkma şekersizdir</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>CO (karbonmonoksit)</strong> zehirlenmesinde önce <strong>kapı pencere açılır</strong>, sonra hasta <strong>temiz havaya çıkarılır</strong>.<br />
+<strong>Asit/baz veya petrol ürünü yutulduğunda KUSTURULMAZ</strong> (yemek borusunu ikinci kez yakar).<br />
+<strong>Yılan sokmasında</strong>: ısırılan bölge <strong>kalp seviyesinden aşağıda</strong> tutulur, <strong>emilmez</strong>, sıkı bağ uygulanır, sevk.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.40.16%402x.png" alt="Sınıfta gösterilen slayt (9 :40:16" loading="lazy"></div></figure></aside><div class="slide-text"><h2>6. SLIDE 4 — Akrep, Arı, Kene, Güneş Çarpması (Bites &amp; Heat Stroke)</h2>
+
+
+<h3>Akrep sokması</h3>
+<ul>
+<li>Sokulan yer <strong>yıkanır</strong></li>
+<li>Sokulan yerin <strong>alt ve üst kısmına turnike</strong> uygulanır</li>
+<li>Sokulan yere <strong>buz</strong> konur</li>
+<li><strong>Kalp düzeyinden aşağıda</strong> tutulur, <strong>şok</strong>a karşı önlem alınır</li>
+<li><strong>Akrep serumu</strong> için sevk</li>
+</ul>
+<h3>Arı, örümcek, kene sokması</h3>
+<ul>
+<li>Mümkünse <strong>sağlık kuruluşunda çıkarılmalıdır</strong></li>
+<li>Keneyi çıkarmak için <strong>yanan kibrit yaklaştırılır</strong>, arının iğnesi cımbızla çıkarılır</li>
+<li>Sokulan yere <strong>soğuk</strong> tutulur</li>
+<li><strong>Amonyak, karbonat, limon, sirke, soğan, yoğurt</strong> sürülebilir</li>
+<li>Ağızdan <strong>sokulmuşsa</strong>: ağzında bir süre <strong>buz parçaları</strong> tutulur veya <strong>tuzlu su gargara</strong> yapılır</li>
+<li>Çamur, tetanoz ve mikroplanma riski → <strong>sürülmez</strong></li>
+</ul>
+<h3>Güneş çarpması</h3>
+<ul>
+<li><strong>Serin yere</strong> alınır</li>
+<li><strong>Vücut ısısı düşürülür</strong> — varsa <strong>ılık-soğuk</strong> suyla <strong>baş, göğse, koltuk altı, kasıklara</strong> soğuk uygulanır, <strong>ıslak çarşafa sarılır</strong></li>
+<li>Bilinci yerinde ise <strong>soğuk içecekler</strong> verilir</li>
+<li><strong>Deride terleme oluncaya kadar işlem devam ettirilir</strong>, çünkü <strong>terin buharlaşması ısı düşürür</strong></li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Yılan ısırığında</strong>: sıkı bağ, ısırılan yer <strong>kalp seviyesinden aşağıda</strong>, EMİLMEZ, sevk.<br />
+<strong>Akrep</strong>: turnike + buz + sevk.<br />
+<strong>Arı iğnesi</strong>: cımbızla çıkarılır.<br />
+<strong>Güneş çarpması</strong>: serin yer + ıslak çarşaf + soğuk içecek; <strong>terleme</strong> ısı düşmesinin işaretidir.</p>
+</blockquote>
+<hr />
+</div></section><h2>7. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Yetişkinde yaşamsal risk oluşturan yanık yüzey oranı?"</strong> → <strong>%20</strong>, bebeklerde <strong>%10</strong></li>
+<li><strong>"Hangi yanık derecesinde ağrı yoktur?"</strong> → <strong>3. derece</strong> (sinirler yandı)</li>
+<li><strong>"Yanıkta hangi madde sürülür?"</strong> → <strong>HİÇBİRİ</strong> — sadece <strong>soğuk su + temiz bez</strong></li>
+<li><strong>"Su kabarcığı (bül) ne yapılır?"</strong> → <strong>Patlatılmaz</strong> (enfeksiyon)</li>
+<li><strong>"Elektrik yanığında ilk ne yapılır?"</strong> → <strong>Akımın kesilmesi</strong> (yoksa tahta/iple temas kesilir)</li>
+<li><strong>"Asit yutma → kusturulur mu?"</strong> → <strong>HAYIR</strong></li>
+<li><strong>"Karbonmonoksit zehirlenmesinde ne yapılır?"</strong> → <strong>Kapı/pencere açılır + temiz havaya</strong> çıkarılır</li>
+<li><strong>"Yılan ısırılan yer nasıl tutulur?"</strong> → <strong>Kalp seviyesinden aşağıda</strong></li>
+<li><strong>"Trafik kazasında yangın için ilk ne yapılır?"</strong> → <strong>Kontak anahtarı kapatılır</strong></li>
+<li><strong>"Yanmış elbise ne yapılır?"</strong> → <strong>Yanmış deri kaldırılmadan giysi çıkarılır</strong></li>
+</ol>
+<hr />
+<h2>8. Memorize These</h2>
+<blockquote>
+<p><strong>Yanık yüzey oranı eşiği: yetişkin %20 — bebek %10</strong></p>
+<p><strong>3. derece yanıkta AĞRI YOKTUR</strong> (sinirler yandığı için)</p>
+<p><strong>Yanığa hiçbir şey sürülmez. Sadece soğuk su + temiz bez.</strong><br />
+<em>(Nothing is applied to a burn — no toothpaste, yogurt, salve, lemon. Just cool water and clean cloth.)</em></p>
+<p><strong>Bül (su kabarcığı) PATLATILMAZ</strong> — enfeksiyon kapısı.</p>
+<p><strong>Elektrik çarpan kişiye → AKIM KESİLMEDEN dokunulmaz.</strong> Suyla müdahale edilmez.</p>
+<p><strong>Asit, baz ve petrol ürünü yutmuşsa KUSTURULMAZ</strong> (yemek borusunu ikinci kez yakar).</p>
+<p><strong>Yılan ısırığı → kalp seviyesinden AŞAĞIDA, sıkı bağ, EMİLMEZ.</strong></p>
+</blockquote>
+<hr />
+<h2>9. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Yanık</strong></td>
+<td>Burn</td>
+<td>Tissue damage from heat/chemical/electric/radiation</td>
+</tr>
+<tr>
+<td><strong>Bül</strong></td>
+<td>Blister</td>
+<td>2° burn marker — never popped</td>
+</tr>
+<tr>
+<td><strong>Alev</strong></td>
+<td>Flame</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Buhar</strong></td>
+<td>Steam</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Asit / alkali (baz)</strong></td>
+<td>Acid / alkali</td>
+<td>Chemical burns</td>
+</tr>
+<tr>
+<td><strong>Sürtünme</strong></td>
+<td>Friction</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Donma</strong></td>
+<td>Frostbite</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Radyasyon</strong></td>
+<td>Radiation</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Karbonat</strong></td>
+<td>Baking soda</td>
+<td>Used in 1L water + 1 tsp salt mix for severe burn</td>
+</tr>
+<tr>
+<td><strong>Zehir</strong></td>
+<td>Poison</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Zehirlenme</strong></td>
+<td>Poisoning</td>
+<td>Solunum/sindirim/deri yolu</td>
+</tr>
+<tr>
+<td><strong>Karbonmonoksit (CO)</strong></td>
+<td>Carbon monoxide</td>
+<td>Egzoz gazı, soba zehirlenmesi</td>
+</tr>
+<tr>
+<td><strong>Kustur(ulma)k</strong></td>
+<td>To induce vomiting</td>
+<td>NEVER for acid/base/petroleum</td>
+</tr>
+<tr>
+<td><strong>Turnike</strong></td>
+<td>Tourniquet</td>
+<td>Used in scorpion sting, snake bite</td>
+</tr>
+<tr>
+<td><strong>Akrep sokması</strong></td>
+<td>Scorpion sting</td>
+<td>Buz + turnike + serum</td>
+</tr>
+<tr>
+<td><strong>Yılan sokması</strong></td>
+<td>Snake bite</td>
+<td>Kalp seviyesi altında, emilmez</td>
+</tr>
+<tr>
+<td><strong>Kene</strong></td>
+<td>Tick</td>
+<td>Removed with hot match (yanan kibrit)</td>
+</tr>
+<tr>
+<td><strong>Güneş çarpması</strong></td>
+<td>Heat stroke</td>
+<td>Serin yer + ıslak çarşaf</td>
+</tr>
+<tr>
+<td><strong>Çeşme suyu</strong></td>
+<td>Tap water</td>
+<td>20 min for thermal burn</td>
+</tr>
+<tr>
+<td><strong>Tazyiksiz su</strong></td>
+<td>Low-pressure water</td>
+<td>15-20 min for chemical burn</td>
+</tr>
+<tr>
+<td><strong>Yangın söndürme cihazı</strong></td>
+<td>Fire extinguisher</td>
+<td>Mandatory in motorcycle/tractor too</td>
+</tr>
+<tr>
+<td><strong>Kontak anahtarı</strong></td>
+<td>Ignition key</td>
+<td>Closed first in traffic-accident fire</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.34.50%402x.png" alt="Sınıfta gösterilen slayt (9 :34:50" loading="lazy"></div></figure></aside><div class="slide-text"><h2>10. Cross-references</h2>
+
+
+<ul>
+<li><a href="01-ilk-yardim-kavramlari.md">01-ilk-yardim-kavramlari.md</a> — KBK, ilk yardımcı sorumlulukları</li>
+<li><a href="03-temel-yasam-destegi.md">03-temel-yasam-destegi.md</a> — solunum/kalp durmasında ilk yardım</li>
+<li><a href="05-yaralanmalar.md">05-yaralanmalar.md</a> — yara çeşitleri, baş/göğüs/karın yaralanmaları</li>
+<li><a href="08-bilinc-bozukluklari.md">08-bilinc-bozukluklari.md</a> — şok pozisyonu (yanık şoku için)</li>
+</ul></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

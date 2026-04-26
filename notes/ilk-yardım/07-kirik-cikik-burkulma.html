@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kırık, Çıkık ve Burkulmalarda İlk Yardım — Fractures, Dislocations, Sprains | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</strong><span data-tr="4,450 soru + 1366 kelime" data-en="4,450 questions + 1366 words">4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Calisma" data-en="Practice">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text" data-tr="Sorular" data-en="Questions">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text" data-tr="Kelime" data-en="Vocabulary">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text" data-tr="Claude Notlari" data-en="Claude Notes">Claude Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text" data-tr="E-Kitap" data-en="E-Book">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text" data-tr="Slaytlar" data-en="Slides">Slaytlar</span></span><span class="eh-nav-meta" data-tr="galeri" data-en="gallery">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Tema" data-en="Theme">Tema</div>
+    <div class="eh-nav-themes">
+      <button class="eh-nav-theme" data-theme="cream" type="button" title="Cream">🌾</button>
+      <button class="eh-nav-theme" data-theme="blue" type="button" title="Blue">🌊</button>
+      <button class="eh-nav-theme" data-theme="paper" type="button" title="Paper">📜</button>
+      <button class="eh-nav-theme" data-theme="dim" type="button" title="Dim">🌙</button>
+    </div>
+    <button class="eh-nav-lang" type="button" id="eh-nav-lang-btn" title="Switch UI language">UI: TR</button>
+    <div class="eh-nav-note" data-tr="Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis." data-en="Jump from any page to the main app, notes, PDF texts, and slides.">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div>
+  </div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 07-kirik-cikik-burkulma</span>
+</div>
+<div class="content">
+<h1>Kırık, Çıkık ve Burkulmalarda İlk Yardım — Fractures, Dislocations, Sprains</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Class date:</strong> 2026-04-26 (retrospective from screenshots)<br />
+<strong>Slides covered:</strong> Kırık + atel uygulama + Bacak kemiği kırıkları + Çıkık &amp; burkulma<br />
+<strong>Portal source:</strong> <a href="../../e-kitap/02-ilk-yardım/07-kirikcikik-ve-burkulmalarda-ilk-yardim.md"><code>07-kirikcikik-ve-burkulmalarda-ilk-yardim.md</code></a></p>
+<hr />
+<h2>1. Overview — 3 Definitions</h2>
+<blockquote>
+<p><strong>Kırık (fracture):</strong> Kemik bütünlüğünün bozulmasıdır.<br />
+<em>(A fracture is a break in the integrity of a bone — happens by impact or sometimes spontaneously.)</em></p>
+<p><strong>Çıkık (dislocation):</strong> Oynar eklem yüzeylerinin <strong>kalıcı olarak</strong> birbirinden ayrılmasıdır. Kendiliğinden normale dönmez.<br />
+<em>(A dislocation is permanent separation of joint surfaces — does not return on its own.)</em></p>
+<p><strong>Burkulma (sprain):</strong> Eklem yüzeylerinin <strong>anlık olarak</strong> ayrılmasıdır — eklemlerin zorlanmasıyla oluşan <strong>en hafif</strong> zedelenme.<br />
+<em>(A sprain is brief joint-surface separation — the mildest joint injury.)</em></p>
+<p><strong>Mnemonic:</strong> Burkulma = anlık ayrılma. Çıkık = kalıcı ayrılma. Kırık = kemiğin kendisi kırılmıştır.</p>
+</blockquote>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.10.59%402x.png" alt="Sınıfta gösterilen slayt (9 :10:59" loading="lazy"></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Kırık Çeşitleri (Fracture Types)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Two limb diagrams labeled <strong>Kapalı kırık</strong> (intact skin over broken bone) vs <strong>Açık kırık</strong> (bone breaking through skin), plus a bandaged arm.</p>
+<h3>3 types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Turkish</th>
+<th>Definition</th>
+<th>Risk</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Closed</td>
+<td><strong>Kapalı kırık</strong></td>
+<td>Kemik kırık, <strong>deri sağlam</strong></td>
+<td>Lowest</td>
+</tr>
+<tr>
+<td>Open</td>
+<td><strong>Açık kırık</strong></td>
+<td>Deri yırtılmış, <strong>kemik uçları dışarıda</strong></td>
+<td>Bleeding + infection</td>
+</tr>
+<tr>
+<td>Comminuted</td>
+<td><strong>Parçalı kırık</strong></td>
+<td>Kemik <strong>birden fazla</strong> yerden kırık</td>
+<td>Most complex</td>
+</tr>
+</tbody>
+</table>
+<h3>Kırık Belirtileri (5 signs)</h3>
+<ol>
+<li><strong>Hareketle artan yoğun ağrı</strong></li>
+<li><strong>Şekil bozukluğu</strong> (sağlam taraf ile karşılaştırılır)</li>
+<li><strong>Şişlik + morarma</strong> (kanama)</li>
+<li><strong>İşlev kaybı</strong> (hareket ettirememe)</li>
+<li><strong>Hareket kısıtlanması</strong></li>
+</ol>
+<h3>Kırığın olumsuz etkileri</h3>
+<ul>
+<li>Kırık yakınındaki <strong>damar/sinir/kas</strong> yaralanır</li>
+<li>Kırık bölgede <strong>nabız alınamaması, soğukluk, solukluk</strong></li>
+<li><strong>Kanamaya bağlı şok</strong> riski</li>
+<li>Açık kırıkta <strong>enfeksiyon</strong> riski</li>
+</ul>
+<h3>Kırıkta İlk Yardım</h3>
+<ul>
+<li><strong>Yaşam tehdidi olan başka yaralanma</strong> varsa öncelik ona</li>
+<li>Yaralı <strong>HAREKET ETTİRİLMEZ</strong></li>
+<li><strong>Kırık kemik düzeltilmeye çalışılmaz</strong></li>
+<li>Kolda kırık varsa <strong>yüzük/saat çıkarılır</strong> (şişlik öncesi)</li>
+<li><strong>Açık kırıkta yara üzeri temiz bezle kapatılır</strong> (atel öncesi)</li>
+<li>Kırık bölge <strong>bir üst + bir alt eklemi de içine alacak şekilde</strong> <strong>karton/tahta/sert cisimle</strong> tespit edilir</li>
+<li>Tespit edilen bölge <strong>yukarıda</strong> tutulur</li>
+<li><strong>3-5 dakika aralıklarla</strong> nabız + deri rengi kontrol edilir</li>
+<li><strong>112 aranır</strong></li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Kırık kemik düzeltilmeye çalışılmaz.</strong> Tespit ederken <strong>bir üst + bir alt eklem</strong> de içeride olmalıdır. Açık kırıkta atelden ÖNCE yara temiz bezle kapatılır.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.22.34%402x.png" alt="Sınıfta gösterilen slayt (9 :22:34" loading="lazy"></div></figure></aside><div class="slide-text"><h2>3. Atel Uygulama Kuralları</h2>
+
+
+<blockquote>
+<p><strong>Atel:</strong> Kırık kemik uçlarının dokulara zarar vermemesi için kırık bölgesini <strong>hareketsiz</strong> hale getirmeye yarayan <strong>düz nesnedir</strong>.<br />
+<em>(A splint is a straight, rigid object used to immobilize a fracture so the bone ends don't damage tissue.)</em></p>
+</blockquote>
+<h3>Where atel is NOT applied</h3>
+<ul>
+<li><strong>Köprücük kemiği kırıkları</strong> (collarbone) — uses sling instead</li>
+<li><strong>Kafa kemiği kırıkları</strong> — atel yapılmaz</li>
+</ul>
+<h3>Atel Boyutları (sizing rule)</h3>
+<table>
+<thead>
+<tr>
+<th>Kırık yer</th>
+<th>Atel boyu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Diz ile ayak arası</strong> (lower leg)</td>
+<td><strong>Topuktan kalçaya</strong> kadar</td>
+</tr>
+<tr>
+<td><strong>Diz ile kalça arası</strong> (thigh)</td>
+<td><strong>Topuktan koltuk altına</strong> kadar (iç + dış yan)</td>
+</tr>
+<tr>
+<td><strong>Bacak / kalça</strong> (atel yoksa)</td>
+<td>İki bacak arasına yumuşak malzeme + <strong>iki bacak birbirine bağlanır</strong></td>
+</tr>
+<tr>
+<td><strong>Ön kol</strong> (forearm)</td>
+<td>Ön kol boyna <strong>kol ile 90° açı</strong> yapılarak asılır</td>
+</tr>
+<tr>
+<td><strong>Pazı kemiği</strong> (humerus)</td>
+<td>Atellenen kol, geniş sargı bezi ile <strong>karşı koltuk altına</strong> bağlanır</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>Atel <strong>bir üst + bir alt eklemi içerir</strong>. <strong>Köprücük + kafa</strong> kemiği kırıklarında atel KULLANILMAZ.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.22.34%402x.png" alt="Sınıfta gösterilen slayt (9 :22:34" loading="lazy"></div></figure></aside><div class="slide-text"><h2>4. SLIDE 2 — Bacak Kemiği Kırıkları (Leg Fractures)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>A figure lying on a stretcher with both legs splinted together, fully wrapped — the "no-splint fallback" technique.</p>
+<h3>Diz ile kalça arasında ise</h3>
+<ul>
+<li><strong>Dıştaki atel</strong> koltuk altından topuğa kadar uzatılır</li>
+<li><strong>2. atel</strong> bacağın iç kısmına yerleştirilir</li>
+<li>2 atel ortada kalacak şekilde bağlanır</li>
+</ul>
+<h3>Diz ile ayak arasında ise</h3>
+<ul>
+<li>Atel <strong>kalçadan topuğa</strong> uzatılır</li>
+</ul>
+<h3>Eğer atel yok ise</h3>
+<ul>
+<li>2 bacak arasına <strong>boşluk doldurmak için</strong> ceket/palto/yumuşak malzeme konur</li>
+<li><strong>2 bacak birbirine bağlanır</strong> — sağlam bacak atelin yerini alır</li>
+<li>Bacak kırığı olan yaralı <strong>sırt üstü yatırılarak sedyeye</strong> gönderilir</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>Atel <strong>yoksa</strong> sağlam bacak ikinci atel olarak kullanılır → <strong>iki bacak birbirine bağlanır</strong>.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.24.10%402x.png" alt="Sınıfta gösterilen slayt (9 :24:10" loading="lazy"></div></figure></aside><div class="slide-text"><h2>5. SLIDE 3 — Çıkık ve Burkulma</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Title slide divided into ÇIKIK section and BURKULMA section with definitions.</p>
+<h3>Çıkık — İlk Yardım</h3>
+<ul>
+<li>Eklem <strong>bulunduğu şekilde tespit edilir</strong></li>
+<li><strong>Yerine oturtulmaya çalışılmaz</strong> (kemik kırılabilir)</li>
+<li>Kalp seviyesinden <strong>yukarıda</strong> + <strong>soğuk</strong> uygulanır</li>
+<li>Bölgede <strong>nabız, deri rengi/ısı</strong> kontrol edilir</li>
+<li><strong>Hastaneye sevk edilir</strong></li>
+</ul>
+<h3>Burkulma — İlk Yardım</h3>
+<ul>
+<li><strong>Sıkıştırıcı bir bandajla</strong> burkulan eklem tespit edilir</li>
+<li>Şişlik/morluk/ağrı için <strong>soğuk uygulama</strong> + <strong>bölge yukarı</strong> kaldırılır</li>
+<li><strong>Hareket ettirilmez</strong></li>
+<li>Genellikle <strong>15-20 dk aralıklarla 12 saat</strong> soğuk uygulanır</li>
+<li>Bandaj 12 saat sonra <strong>elastik bandajla</strong> değiştirilebilir, sıcak uygulamaya geçilir</li>
+<li><strong>112 aranır</strong></li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>Çıkıkta eklem <strong>yerine oturtulmaya çalışılmaz</strong> — bulunduğu şekilde tespit. Burkulmada <strong>soğuk</strong> + <strong>bandaj</strong> + <strong>yukarı</strong> kaldırma.</p>
+</blockquote>
+<hr />
+</div></section><h2>6. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Kırık ne demektir?"</strong> → Kemik bütünlüğünün bozulması</li>
+<li><strong>"Çıkık ne demektir?"</strong> → Eklem yüzlerinin <strong>kalıcı</strong> ayrılması</li>
+<li><strong>"Burkulma ne demektir?"</strong> → Eklem yüzlerinin <strong>anlık</strong> ayrılması (en hafif)</li>
+<li><strong>"Atel hangi kırıklara uygulanmaz?"</strong> → <strong>Köprücük + kafa kemiği</strong> kırıklarında</li>
+<li><strong>"Atel uygulamasında nasıl tespit edilir?"</strong> → <strong>Bir üst + bir alt eklemi içerecek</strong> şekilde</li>
+<li><strong>"Açık kırıkta atelden önce ne yapılır?"</strong> → <strong>Yara üzeri temiz bezle kapatılır</strong></li>
+<li><strong>"Atel yoksa bacak kırığında ne yapılır?"</strong> → <strong>Sağlam bacak atelin yerini alır</strong> — iki bacak birbirine bağlanır</li>
+<li><strong>"Çıkıkta ilk yardımcı eklem yerine oturtmalı mı?"</strong> → <strong>HAYIR</strong> — bulunduğu şekilde tespit</li>
+<li><strong>"Burkulmada hangi sıcaklık?"</strong> → <strong>Soğuk uygulama</strong>, bölge yukarı kaldırılır</li>
+<li><strong>"Diz ile kalça arası kırıkta atel boyu?"</strong> → <strong>Topuktan koltuk altına</strong></li>
+</ol>
+<hr />
+<h2>7. Memorize These</h2>
+<blockquote>
+<p><strong>Kırık</strong> = kemik bütünlüğü bozuldu. <strong>Çıkık</strong> = eklem <strong>kalıcı</strong> ayrıldı. <strong>Burkulma</strong> = eklem <strong>anlık</strong> ayrıldı.</p>
+<p><strong>Kırık kemik DÜZELTİLMEYE çalışılmaz.</strong> Bulunduğu şekilde tespit edilir.</p>
+<p><strong>Atel = bir üst + bir alt eklemi içerir.</strong></p>
+<p><strong>Atelle TESPİT EDİLMEYECEK kırıklar:</strong> <strong>Köprücük kemiği + Kafa kemiği</strong></p>
+<p><strong>Açık kırıkta atelden ÖNCE yara temiz bezle kapatılır.</strong></p>
+<p><strong>Çıkıkta eklem YERİNE OTURTULMAZ.</strong></p>
+<p><strong>Burkulmada → Soğuk + sıkı bandaj + yukarı kaldır.</strong></p>
+</blockquote>
+<hr />
+<h2>8. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kırık</strong></td>
+<td>Fracture</td>
+<td>Bone integrity broken</td>
+</tr>
+<tr>
+<td><strong>Kapalı kırık</strong></td>
+<td>Closed fracture</td>
+<td>Skin intact</td>
+</tr>
+<tr>
+<td><strong>Açık kırık</strong></td>
+<td>Open/compound fracture</td>
+<td>Bone breaks skin</td>
+</tr>
+<tr>
+<td><strong>Parçalı kırık</strong></td>
+<td>Comminuted fracture</td>
+<td>Multiple breaks</td>
+</tr>
+<tr>
+<td><strong>Çıkık</strong></td>
+<td>Dislocation</td>
+<td>Permanent joint separation</td>
+</tr>
+<tr>
+<td><strong>Burkulma</strong></td>
+<td>Sprain</td>
+<td>Brief joint separation</td>
+</tr>
+<tr>
+<td><strong>Eklem</strong></td>
+<td>Joint</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Oynar eklem</strong></td>
+<td>Moveable joint</td>
+<td>The kind that dislocates/sprains</td>
+</tr>
+<tr>
+<td><strong>Atel</strong></td>
+<td>Splint</td>
+<td>Rigid immobilizer</td>
+</tr>
+<tr>
+<td><strong>Üçgen sargı</strong></td>
+<td>Triangular bandage</td>
+<td>For arm sling</td>
+</tr>
+<tr>
+<td><strong>Rulo sargı</strong></td>
+<td>Roll bandage</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Tespit</strong></td>
+<td>Immobilization/fixation</td>
+<td>"Hareketsiz hale getirmek"</td>
+</tr>
+<tr>
+<td><strong>Köprücük kemiği</strong></td>
+<td>Collarbone (clavicle)</td>
+<td>NO splint</td>
+</tr>
+<tr>
+<td><strong>Kafa kemiği</strong></td>
+<td>Skull bone</td>
+<td>NO splint</td>
+</tr>
+<tr>
+<td><strong>Pazı kemiği</strong></td>
+<td>Humerus (upper arm)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Ön kol</strong></td>
+<td>Forearm</td>
+<td>Atel 90° asılır</td>
+</tr>
+<tr>
+<td><strong>Uyluk kemiği</strong></td>
+<td>Femur (thigh bone)</td>
+<td>Largest splint needed</td>
+</tr>
+<tr>
+<td><strong>Kaval kemiği</strong></td>
+<td>Tibia (shin)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Diz kapağı</strong></td>
+<td>Patella (kneecap)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Topuk</strong></td>
+<td>Heel</td>
+<td>Atel reference point</td>
+</tr>
+<tr>
+<td><strong>Koltuk altı</strong></td>
+<td>Armpit</td>
+<td>Atel reference point</td>
+</tr>
+<tr>
+<td><strong>Kalça</strong></td>
+<td>Hip</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Şekil bozukluğu</strong></td>
+<td>Deformity</td>
+<td>Compare with healthy side</td>
+</tr>
+<tr>
+<td><strong>İşlev kaybı</strong></td>
+<td>Loss of function</td>
+<td>Sign of fracture/sprain</td>
+</tr>
+<tr>
+<td><strong>Şişlik</strong></td>
+<td>Swelling</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Morarma</strong></td>
+<td>Bruising</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>9. Cross-references</h2>
+<ul>
+<li><a href="01-ilk-yardim-kavramlari.md">01-ilk-yardim-kavramlari.md</a> — ABC, ilk yardımın aşamaları</li>
+<li><a href="02-insan-vucudu.md">02-insan-vucudu.md</a> — hareket sistemi, kemikler</li>
+<li><a href="04-kanamalar.md">04-kanamalar.md</a> — açık kırıkta kanama durdurma</li>
+<li><a href="05-yaralanmalar.md">05-yaralanmalar.md</a> — baş/göğüs/karın yaralanmaları (kafa kemiği kırığı dahil)</li>
+<li><a href="08-bilinc-bozukluklari.md">08-bilinc-bozukluklari.md</a> — kanamaya bağlı şok</li>
+<li><a href="09-tasima-teknikleri.md">09-tasima-teknikleri.md</a> — kırığı olan yaralının taşınması (en SON taşınanlar)</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

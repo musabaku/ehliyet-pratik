@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hasta/Yaralı Taşıma Teknikleri — Patient Transport Techniques | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</strong><span data-tr="4,450 soru + 1366 kelime" data-en="4,450 questions + 1366 words">4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Calisma" data-en="Practice">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text" data-tr="Sorular" data-en="Questions">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text" data-tr="Kelime" data-en="Vocabulary">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text" data-tr="Claude Notlari" data-en="Claude Notes">Claude Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text" data-tr="E-Kitap" data-en="E-Book">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text" data-tr="Slaytlar" data-en="Slides">Slaytlar</span></span><span class="eh-nav-meta" data-tr="galeri" data-en="gallery">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Tema" data-en="Theme">Tema</div>
+    <div class="eh-nav-themes">
+      <button class="eh-nav-theme" data-theme="cream" type="button" title="Cream">🌾</button>
+      <button class="eh-nav-theme" data-theme="blue" type="button" title="Blue">🌊</button>
+      <button class="eh-nav-theme" data-theme="paper" type="button" title="Paper">📜</button>
+      <button class="eh-nav-theme" data-theme="dim" type="button" title="Dim">🌙</button>
+    </div>
+    <button class="eh-nav-lang" type="button" id="eh-nav-lang-btn" title="Switch UI language">UI: TR</button>
+    <div class="eh-nav-note" data-tr="Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis." data-en="Jump from any page to the main app, notes, PDF texts, and slides.">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div>
+  </div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 09-tasima-teknikleri</span>
+</div>
+<div class="content">
+<h1>Hasta/Yaralı Taşıma Teknikleri — Patient Transport Techniques</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Source:</strong> Portal verbatim (<a href="../../e-kitap/02-ilk-yardım/09-hasta-yarali-tasima-teknikleri.md"><code>09-hasta-yarali-tasima-teknikleri.md</code></a>) — <em>no specific class slides; class did not cover this topic in detail.</em></p>
+<hr />
+<h2>1. Overview — Genel Kural</h2>
+<blockquote>
+<p><strong>En doğru taşıma yöntemi = İKİ KİŞİ ile SEDYE üzerinde taşıma.</strong><br />
+<em>(The safest patient transport is two-person stretcher carry.)</em></p>
+<p><strong>Yaralının taşınarak sevk edilmesi = ilk yardımın 6. ve son aşaması.</strong><br />
+<em>(Transporting the patient is the 6th and FINAL step of first aid.)</em></p>
+</blockquote>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.35.34%402x.png" alt="Sınıfta gösterilen slayt (9 :35:34" loading="lazy"></div></figure></aside><div class="slide-text"><h2>2. Taşıma Önceliği Sırası — Who Moves First?</h2>
+
+
+<h3>EN ÖNCE taşınanlar (HAYATİ TEHLİKE)</h3>
+<ol>
+<li><strong>Ağır kanaması olan</strong> (heavy bleeding)</li>
+<li><strong>Solunum zorluğu çekenler</strong> (breathing trouble)</li>
+<li><strong>Şoka girenler</strong> (in shock)</li>
+</ol>
+<h3>EN SON taşınanlar (hayati tehlike YOK)</h3>
+<ol>
+<li><strong>Kırık, çıkık, burkulması</strong> olan</li>
+<li><strong>Çatlağı</strong> olan</li>
+<li><strong>1. derece yanığı</strong> olan (en hafif yanık)</li>
+</ol>
+<blockquote>
+<p><strong>Critical exam fact:</strong> Triage rule — if you have to choose between a kanama (bleeding) and a kırık (fracture), <strong>kanama önce</strong>.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.20.11%402x.png" alt="Sınıfta gösterilen slayt (9 :20:11" loading="lazy"></div></figure></aside><div class="slide-text"><h2>3. Sedye İle Taşımada Genel Kurallar</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Kural</th>
+<th>Detay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Yaralı battaniye/çarşaf ile sarılır</strong></td>
+<td>Hipotermiyi önle</td>
+</tr>
+<tr>
+<td><strong>Sedyeye bağlanır</strong></td>
+<td>Düşmeyi önle</td>
+</tr>
+<tr>
+<td><strong>Sedye üzerinde baş gidiş yönünde</strong> olmalı</td>
+<td>Düz arazide — ama yaralının <strong>ayakları önde</strong> olur ki gittiği yönü görsün ⚠ slide vs portal çelişiyor; ezberi: <strong>yaralı ayakları önde, ambulansa BİNDİRİRKEN baş önde</strong></td>
+</tr>
+<tr>
+<td><strong>Sedye DAİMA YATAY</strong></td>
+<td>Sıvı dengesi</td>
+</tr>
+<tr>
+<td><strong>Öndeki sağ ayakla, arkadaki sol ayakla</strong> başlar</td>
+<td>Sürekli değişen adımlar — sallanmaz</td>
+</tr>
+<tr>
+<td><strong>Komut veren</strong> sorumlu olmalı</td>
+<td>Genellikle baş tarafındaki</td>
+</tr>
+<tr>
+<td><strong>Güçlü olan ilkyardımcı baş kısmında</strong> olmalı</td>
+<td>Daha ağır yük</td>
+</tr>
+<tr>
+<td><strong>Merdiven inişinde/çıkışında BAŞ YUKARIDA</strong></td>
+<td>"yokuş yukarı = baş yukarıda"</td>
+</tr>
+<tr>
+<td><strong>Ambulansa bindirirken BAŞ ÖNDE</strong></td>
+<td>Ambulans içine girerken</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Critical exam fact:</strong><br />
+- <strong>Düz yolda → ayaklar önde</strong> (yaralı gittiği yönü görsün)<br />
+- <strong>Merdivende → baş yukarıda</strong> (yokuş yönü ne olursa olsun)<br />
+- <strong>Ambulansa girerken → baş önde</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.20.11%402x.png" alt="Sınıfta gösterilen slayt (9 :20:11" loading="lazy"></div></figure></aside><div class="slide-text"><h2>4. Acil Taşıma Teknikleri (Emergency Moves)</h2>
+
+
+<h3>Genel kural: yaralının yeri DEĞİŞTİRİLMEZ</h3>
+<p><em>Taşıma yalnız </em><em>olağanüstü tehlike</em><em> (yangın, patlama, çökme) varsa yapılır.</em></p>
+<h3>Rentek Manevrası (Araç İçindeki Yaralıyı Çıkarma)</h3>
+<p><strong>Ne zaman:</strong> Solunum durması, yangın tehlikesi, patlama tehlikesi.</p>
+<p><strong>Adımlar:</strong><br />
+1. Kaza ortamı değerlendirilir (patlama/yangın), çevre güvenliği sağlanır<br />
+2. Hafifçe <strong>omzuna dokunarak</strong> "iyi misiniz?" — bilinç kontrol<br />
+3. Çevrede biri varsa <strong>112 aratılır</strong><br />
+4. <strong>Solunum</strong> gözlemlenir (göğüs hareketi)<br />
+5. Solunum YOK ise:<br />
+   - Ayakların <strong>pedala sıkışmadığından</strong> emin olunur<br />
+   - <strong>Emniyet kemeri açılır</strong><br />
+   - Yan tarafından yaklaşılır → <strong>bir el kolu, diğer el çenesi</strong> kavranarak <strong>boyun tespit edilir</strong><br />
+   - <strong>Baş-boyun-gövde hizasını bozmadan</strong> dışarı çekilir<br />
+   - Yavaşça yere veya sedyeye yerleştirilir</p>
+<blockquote>
+<p><strong>Critical exam fact:</strong> Rentek manevrasında <strong>boyun + omurga ekseni</strong> korunur. Bir el <strong>çene</strong>, bir el <strong>kol</strong>.</p>
+</blockquote>
+<h3>Sürükleme Yöntemleri</h3>
+<p>Çok kilolu yaralı veya dar geçit için.</p>
+<p><strong>Ayak bileklerinden sürükleme:</strong><br />
+- Yaralı yere yatırılır<br />
+- Ayak ve bacaklarda yaralanma yoksa <strong>bileklerden kavranarak</strong> çekilir<br />
+- <strong>Baş-boyun-gövde ekseni</strong> bozulmaz</p>
+<p><strong>Koltuk altından sürükleme:</strong><br />
+- Yaralı koltuk altlarından kavranır<br />
+- Dikkatlice sürüklenir</p>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.20.11%402x.png" alt="Sınıfta gösterilen slayt (9 :20:11" loading="lazy"></div></figure></aside><div class="slide-text"><h2>5. Kısa Mesafe Süratli Taşıma (1 İlkyardımcı)</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Yöntem</th>
+<th>Kim için</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Kucakta taşıma</strong></td>
+<td>Bilinçli çocuklar, hafif yetişkinler</td>
+</tr>
+<tr>
+<td><strong>Omuzdan destek</strong> (koltuk değneği gibi)</td>
+<td>Yürüyebilir hafif yaralı</td>
+</tr>
+<tr>
+<td><strong>Sırtta taşıma</strong></td>
+<td>Bilinçli hastalar</td>
+</tr>
+<tr>
+<td><strong>Omuzda taşıma — İtfaiyeci yöntemi</strong></td>
+<td><strong>Yürüyemeyen veya BİLİNCİ KAPALI</strong> kişiler. Bir kol boşta kaldığı için <strong>merdiven inip çıkmaya elverişli.</strong></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Critical exam fact:</strong> <strong>İtfaiyeci yöntemi</strong> = bilinç kapalı / yürüyemeyen yaralı, tek kişi taşıyıcı, <strong>bir el boşta</strong> kaldığı için merdivene elverişli.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.24.11%402x.png" alt="Sınıfta gösterilen slayt (9 :24:11" loading="lazy"></div></figure></aside><div class="slide-text"><h2>6. İki Kişi ile Taşıma</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Yöntem</th>
+<th>Kim için</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Altın Beşik</strong> (2/3/4 elle)</td>
+<td>Ciddi yaralanması olmayan + yardım edebilen yaralı</td>
+</tr>
+<tr>
+<td><strong>Kollar + bacaklardan tutarak</strong></td>
+<td>Hızlı yer değiştirme</td>
+</tr>
+<tr>
+<td><strong>Sandalye ile taşıma</strong></td>
+<td>Bilinçli yaralı, <strong>özellikle merdiven</strong> için</td>
+</tr>
+</tbody>
+</table>
+<h3>Altın Beşik elden farkları</h3>
+<ul>
+<li><strong>2 elle:</strong> Her ilkyardımcının 1 eli boşta — birbirinin omzunda; diğerleri ile bileklerinden kavrar</li>
+<li><strong>3 elle:</strong> 1. ilkyardımcı 2 elini kullanır</li>
+<li><strong>4 elle:</strong> Ilkyardımcılar 4 elin tamamını birbirine kenetler</li>
+</ul>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.24.11%402x.png" alt="Sınıfta gösterilen slayt (9 :24:11" loading="lazy"></div></figure></aside><div class="slide-text"><h2>7. Sedye Üzerinde Yerleştirme Teknikleri</h2>
+
+
+<h3>Kaşık Tekniği — 3 ilkyardımcı, <strong>bir taraftan</strong> ulaşılır</h3>
+<ol>
+<li>3 ilkyardımcı yaralının <strong>tek bir yanına</strong> diz çöker (bir diz yerde)</li>
+<li>Yaralının elleri göğsünde birleştirilir</li>
+<li><strong>1.</strong> baş ve omuzdan, <strong>2.</strong> sırtın alt kısmı + uyluk, <strong>3.</strong> dizler + bilek</li>
+<li>Komutla aynı anda <strong>dizlerinin üzerine</strong> kaldırılır</li>
+<li><strong>Göğüslerine doğru</strong> çevrilir</li>
+<li>Ayağa kalkar → <strong>sedyeye düzgün</strong> yerleştirir</li>
+</ol>
+<h3>Köprü Tekniği — 4 ilkyardımcı, <strong>iki taraftan</strong> ulaşılır</h3>
+<ol>
+<li>3 ilkyardımcı yaralının <strong>üzerine bacakları açıp</strong> yerleşir</li>
+<li><strong>1.</strong> omuz + ense, <strong>2.</strong> kalçalar, <strong>3.</strong> dizler altı</li>
+<li>Komutla 3'ü hastayı kaldırır</li>
+<li><strong>4. ilkyardımcı</strong> sedyeyi <strong>arkadaşların bacakları arasına</strong> iter</li>
+</ol>
+<h3>Karşılıklı Durarak Kaldırma — Omurga yaralanmaları</h3>
+<ul>
+<li>3 ilkyardımcı: 2 göğüs hizasında karşılıklı, 1 dizler hizasında</li>
+<li>Yaralı <strong>DÜZ</strong> olarak kaldırılıp sedyeye yerleştirilir</li>
+</ul>
+<blockquote>
+<p><strong>Critical exam fact:</strong> Omurga zedelenmesi şüphesinde <strong>karşılıklı durarak kaldırma</strong> + <strong>DÜZ</strong> kaldırma. Yaralı <strong>bükülmez</strong>.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.39.21%402x.png" alt="Sınıfta gösterilen slayt (9 :39:21" loading="lazy"></div></figure></aside><div class="slide-text"><h2>8. Battaniye İle Sedye Yapma</h2>
+
+
+<ul>
+<li><strong>Tek battaniye:</strong> Yere serilir → kenarları rulo yapılır → yaralı üzerine yatırılır → kısa mesafede taşınır</li>
+<li><strong>2 kiriş + battaniye:</strong> Battaniye serilir → 1/3'üne 1. kiriş yerleştirilir → battaniye katlanır → yakın noktaya 2. kiriş → kalan kısım kapatılır → yaralı <strong>2 kirişin arasındaki bölgeye</strong> yatırılır</li>
+</ul>
+<hr />
+</div></section><h2>9. Why this matters for the exam</h2>
+<ol>
+<li><strong>"En doğru taşıma yöntemi?"</strong> → <strong>İki kişi ile sedye</strong></li>
+<li><strong>"En önce taşınan yaralı?"</strong> → <strong>Ağır kanaması olan / şokta / solunum zorluğu çeken</strong></li>
+<li><strong>"En son taşınan yaralı?"</strong> → <strong>1. derece yanık / kırık / çıkık / burkulma</strong></li>
+<li><strong>"Sedyede merdiven inerken?"</strong> → <strong>Baş yukarıda</strong></li>
+<li><strong>"Ambulansa bindirirken?"</strong> → <strong>Baş önde</strong></li>
+<li><strong>"Düz yolda sedye taşımada yön?"</strong> → <strong>Yaralının ayakları önde</strong> (gittiği yönü görsün)</li>
+<li><strong>"Rentek manevrası ne için?"</strong> → Araç içinde <strong>yangın/patlama/solunum durması</strong> olan yaralıyı <strong>boyun-omurga ekseni bozulmadan</strong> çıkarmak</li>
+<li><strong>"Bilinci kapalı yaralıyı tek kişi taşıma yöntemi?"</strong> → <strong>İtfaiyeci yöntemi (omuzda)</strong></li>
+<li><strong>"Omurga yaralanmasında sedyeye nasıl?"</strong> → <strong>Karşılıklı durarak kaldırma</strong> (3 kişi, DÜZ)</li>
+<li><strong>"Yaralının taşınması ilk yardımın kaçıncı aşamasıdır?"</strong> → <strong>6. ve son</strong></li>
+</ol>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.20.11%402x.png" alt="Sınıfta gösterilen slayt (9 :20:11" loading="lazy"></div></figure></aside><div class="slide-text"><h2>10. Memorize These</h2>
+
+
+<blockquote>
+<p><strong>En doğru taşıma = İKİ KİŞİ ile SEDYE.</strong></p>
+<p><strong>Taşıma önceliği:</strong> Kanama → Solunum zorluğu → Şok ÖNCE; Kırık/çıkık/burkulma/1° yanık SONRA.</p>
+<p><strong>Düz yolda sedye → ayaklar önde. Merdivende → baş yukarıda. Ambulansa girerken → baş önde.</strong></p>
+<p><strong>Rentek manevrası = araç içi yaralıyı çıkarma, boyun-omurga ekseni KORUNUR.</strong></p>
+<p><strong>İtfaiyeci yöntemi → bilinci kapalı yaralı, tek kişi, merdivene uygun.</strong></p>
+<p><strong>Omurga şüphesinde → karşılıklı durarak kaldırma, DÜZ.</strong></p>
+<p><strong>Yaralının taşınması = ilk yardımın 6. ve SON aşaması.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.07.38%402x.png" alt="Sınıfta gösterilen slayt (9 :07:38" loading="lazy"></div></figure></aside><div class="slide-text"><h2>11. Consolidated Exam Vocabulary</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sedye</strong></td>
+<td>Stretcher</td>
+<td>Best transport tool</td>
+</tr>
+<tr>
+<td><strong>Taşıma</strong></td>
+<td>Transport</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Rentek manevrası</strong></td>
+<td>Rentek maneuver</td>
+<td>Vehicle-extraction technique</td>
+</tr>
+<tr>
+<td><strong>Sürükleme</strong></td>
+<td>Dragging</td>
+<td>Heavy patient or narrow space</td>
+</tr>
+<tr>
+<td><strong>Ayak bileği</strong></td>
+<td>Ankle</td>
+<td>Drag point</td>
+</tr>
+<tr>
+<td><strong>Koltuk altı</strong></td>
+<td>Armpit</td>
+<td>Drag point</td>
+</tr>
+<tr>
+<td><strong>Kucakta taşıma</strong></td>
+<td>Cradle carry</td>
+<td>Light/conscious patient</td>
+</tr>
+<tr>
+<td><strong>Sırtta taşıma</strong></td>
+<td>Piggyback</td>
+<td>Conscious patient</td>
+</tr>
+<tr>
+<td><strong>İtfaiyeci yöntemi</strong></td>
+<td>Firefighter's carry</td>
+<td>Unconscious, one-handed</td>
+</tr>
+<tr>
+<td><strong>Altın beşik</strong></td>
+<td>Golden cradle</td>
+<td>2-person, hand-linked</td>
+</tr>
+<tr>
+<td><strong>Kaşık tekniği</strong></td>
+<td>Spoon technique</td>
+<td>3-person, one-side approach</td>
+</tr>
+<tr>
+<td><strong>Köprü tekniği</strong></td>
+<td>Bridge technique</td>
+<td>4-person, both-sides approach</td>
+</tr>
+<tr>
+<td><strong>Karşılıklı durarak kaldırma</strong></td>
+<td>Face-to-face lift</td>
+<td>3-person, spinal injury</td>
+</tr>
+<tr>
+<td><strong>Battaniye</strong></td>
+<td>Blanket</td>
+<td>Improvised stretcher</td>
+</tr>
+<tr>
+<td><strong>Kiriş</strong></td>
+<td>Pole / beam</td>
+<td>For improvised stretcher</td>
+</tr>
+<tr>
+<td><strong>Baş-boyun-gövde ekseni</strong></td>
+<td>Head-neck-trunk axis</td>
+<td>Must NEVER twist</td>
+</tr>
+<tr>
+<td><strong>Omurga / omurilik</strong></td>
+<td>Spine / spinal cord</td>
+<td>Most protected structure</td>
+</tr>
+<tr>
+<td><strong>Emniyet kemeri</strong></td>
+<td>Seat belt</td>
+<td>Opened in Rentek</td>
+</tr>
+<tr>
+<td><strong>Pedal</strong></td>
+<td>Pedal</td>
+<td>Check feet aren't trapped</td>
+</tr>
+<tr>
+<td><strong>Komut</strong></td>
+<td>Command</td>
+<td>Coordinator gives lift orders</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.19.52%402x.png" alt="Sınıfta gösterilen slayt (9 :19:52" loading="lazy"></div></figure></aside><div class="slide-text"><h2>12. Cross-references</h2>
+
+
+<ul>
+<li><a href="01-ilk-yardim-kavramlari.md">01-ilk-yardim-kavramlari.md</a> — ilk yardımın 6 aşaması (taşıma = 6.)</li>
+<li><a href="04-kanamalar.md">04-kanamalar.md</a> — ağır kanama → öncelikli taşıma</li>
+<li><a href="05-yaralanmalar.md">05-yaralanmalar.md</a> — yatış pozisyonları (taşıma sırasında uygulanan)</li>
+<li><a href="07-kirik-cikik-burkulma.md">07-kirik-cikik-burkulma.md</a> — kırık yaralısı en SON taşınır</li>
+<li><a href="08-bilinc-bozukluklari.md">08-bilinc-bozukluklari.md</a> — şok yaralısı taşınma önceliklidir</li>
+</ul></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

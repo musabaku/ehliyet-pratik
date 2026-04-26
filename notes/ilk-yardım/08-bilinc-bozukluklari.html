@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilinç Bozukluklarında İlk Yardım — Loss of Consciousness | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</strong><span data-tr="4,450 soru + 1366 kelime" data-en="4,450 questions + 1366 words">4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Calisma" data-en="Practice">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text" data-tr="Sorular" data-en="Questions">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text" data-tr="Kelime" data-en="Vocabulary">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text" data-tr="Claude Notlari" data-en="Claude Notes">Claude Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text" data-tr="E-Kitap" data-en="E-Book">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text" data-tr="Slaytlar" data-en="Slides">Slaytlar</span></span><span class="eh-nav-meta" data-tr="galeri" data-en="gallery">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Tema" data-en="Theme">Tema</div>
+    <div class="eh-nav-themes">
+      <button class="eh-nav-theme" data-theme="cream" type="button" title="Cream">🌾</button>
+      <button class="eh-nav-theme" data-theme="blue" type="button" title="Blue">🌊</button>
+      <button class="eh-nav-theme" data-theme="paper" type="button" title="Paper">📜</button>
+      <button class="eh-nav-theme" data-theme="dim" type="button" title="Dim">🌙</button>
+    </div>
+    <button class="eh-nav-lang" type="button" id="eh-nav-lang-btn" title="Switch UI language">UI: TR</button>
+    <div class="eh-nav-note" data-tr="Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis." data-en="Jump from any page to the main app, notes, PDF texts, and slides.">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div>
+  </div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 08-bilinc-bozukluklari</span>
+</div>
+<div class="content">
+<h1>Bilinç Bozukluklarında İlk Yardım — Loss of Consciousness</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Class date:</strong> 2026-04-26 (retrospective from screenshots)<br />
+<strong>Slides covered:</strong> Şok, Bayılma &amp; Koma<br />
+<strong>Portal source:</strong> <a href="../../e-kitap/02-ilk-yardım/08-bilinc-bozukluklarinda-ilk-yardim.md"><code>08-bilinc-bozukluklarinda-ilk-yardim.md</code></a></p>
+<hr />
+<h2>1. Overview — 3 Levels of Consciousness Loss</h2>
+<blockquote>
+<p><strong>Bilinç bozukluğu:</strong> Süreli bilinç kaybıdır.<br />
+<em>(A timed loss of consciousness — ranges from brief fainting to deep coma.)</em></p>
+</blockquote>
+<p>3 phenomena handled in this chapter:<br />
+1. <strong>Şok</strong> — circulatory failure<br />
+2. <strong>Bayılma</strong> — brief loss of consciousness, brain hypoxia<br />
+3. <strong>Koma</strong> — deep loss of consciousness, no response to stimuli</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.25.26%402x.png" alt="Sınıfta gösterilen slayt (9 :25:26" loading="lazy"></div></figure></aside><div class="slide-text"><h2>2. SLIDE 1 — Şok (Shock)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Definition + nedenler + ilk yardım, with an illustration of a victim in shock position (legs raised, head turned to the side).</p>
+<h3>Tanım</h3>
+<blockquote>
+<p><strong>Şok:</strong> Dolaşım sisteminin yetersizliği sonucu vücudun her yerine yeterli kan akışının sağlanamaması nedeniyle sistemlerdeki çalışma yetersizliğidir.<br />
+<em>(Shock is systemic failure caused by inadequate blood circulation — the brain is the FIRST organ affected.)</em></p>
+</blockquote>
+<h3>Nedenleri (causes)</h3>
+<ul>
+<li><strong>Ani korku ve heyecan</strong></li>
+<li><strong>Aşırı kanama</strong> (most common)</li>
+<li><strong>Geniş yanıklar</strong></li>
+<li><strong>Şiddetli ağrılar</strong></li>
+<li><strong>Aşırı tuz ve su kaybı</strong></li>
+<li><strong>Zehirlenmeler</strong></li>
+<li><strong>Ağır yaralanmalar</strong></li>
+<li><strong>Kalp krizi, yüksek ateş</strong></li>
+</ul>
+<h3>Belirtiler (signs of shock)</h3>
+<ul>
+<li><strong>Kan basıncında düşme</strong></li>
+<li><strong>Hızlı + zayıf nabız</strong></li>
+<li><strong>Hızlı + yüzeysel solunum</strong></li>
+<li><strong>Ciltte soğukluk, solukluk, nemlilik</strong> (cold-pale-clammy)</li>
+<li><strong>Endişe, huzursuzluk</strong></li>
+<li><strong>Baş dönmesi</strong></li>
+<li><strong>Dudak çevresinde solukluk/morarma</strong></li>
+<li><strong>Susuzluk hissi</strong></li>
+<li><strong>Bilinç seviyesinde azalma</strong></li>
+</ul>
+<h3>İlk Yardım — Şok</h3>
+<ol>
+<li><strong>Önce şokun nedenini ortadan kaldırmaya çalışılır</strong> — kanama varsa durdurulur</li>
+<li><strong>Şok pozisyonu</strong> verilir (<strong>iç kanama HARİÇ</strong>)</li>
+<li><strong>Hava yolu açık</strong> tutulur</li>
+<li>Bilinci açık ve <strong>iç kanama yoksa ılık içecekler</strong> verilebilir (kan kaybetmediyse)</li>
+<li><strong>Üzeri örtülür</strong> (hipotermiyi önle)</li>
+<li><strong>Soluk yolu</strong> ve nabız kontrol edilir</li>
+<li><strong>112 aranır</strong></li>
+</ol>
+<h3>Şok Pozisyonu (CRITICAL)</h3>
+<blockquote>
+<p>Hasta <strong>sırtüstü dümdüz</strong> yatırılır →<br />
+Bacaklar <strong>yaklaşık 30 cm yukarı</strong> kaldırılır →<br />
+Bacakların altına <strong>çarşaf/battaniye/yastık/kıvrılmış giysi</strong> konur →<br />
+<strong>Üstü örtülür</strong> (ısınma sağlanır) →<br />
+<strong>Başı yana çevrilir</strong>.</p>
+</blockquote>
+<p><strong>Amaç:</strong> Bacaklardaki kan akımını azaltıp <strong>beyin ve iç organlara</strong> kan akışını artırmak.</p>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Şok pozisyonu = sırtüstü + bacaklar 30 cm yukarı + üstü örtülü + başı yana.</strong><br />
+<strong>İç kanama varsa şok pozisyonu UYGULANMAZ.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.27.49%402x.png" alt="Sınıfta gösterilen slayt (9 :27:49" loading="lazy"></div></figure></aside><div class="slide-text"><h2>3. SLIDE 2 — Bayılma &amp; Koma</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Two-block slide: top half <strong>BAYILMA</strong> (causes/symptoms/first-aid), bottom half <strong>KOMA</strong> (causes/symptoms/first-aid).</p>
+<h3>Bayılma (Fainting / Syncope)</h3>
+<blockquote>
+<p><strong>Bayılma:</strong> Beyne giden oksijenin çeşitli sebeplere bağlı olarak azalması nedeniyle <strong>kısa süreli geçici</strong> ya da kısmen bilinç kaybıdır.<br />
+<em>(Brief loss of consciousness due to reduced oxygen supply to the brain.)</em></p>
+</blockquote>
+<p><strong>Nedenleri:</strong><br />
+- Kan kaybı, kan görme<br />
+- Kan basıncının düşmesi, <strong>havasızlık</strong>, stres<br />
+- Açlık, <strong>kan şekerinin düşmesi</strong><br />
+- Şiddetli ağrı, çok sıcak, yüksek ateş, kansızlık<br />
+- Ani heyecan</p>
+<p><strong>Belirtiler:</strong><br />
+- Baş dönmesi, baygınlık, <strong>yere düşme</strong><br />
+- Bacaklarda uyuşma<br />
+- Bilinçte bulanıklık<br />
+- Yüzde solgunluk<br />
+- Üşüme, terleme<br />
+- Hızlı + zayıf nabız</p>
+<p><strong>İlk Yardım — Bayılma:</strong><br />
+- <strong>Sıkı giysiler gevşetilir</strong>, hava alması sağlanır<br />
+- <strong>Şok pozisyonu</strong> verilir + sıcak tutulur<br />
+- <strong>Duyu organları uyarılır</strong> (ses, ışık)<br />
+- Solunum kontrol edilir<br />
+- <strong>Yüz + ense soğuk su ile yıkanır</strong>, takma diş varsa çıkarılır<br />
+- <strong>TOKAT ATILMAZ</strong>, yakın mesafeden <strong>uzun süre alkol koklatılmaz</strong><br />
+- Ayıldıktan sonra <strong>yeterli süre dinlendirilir</strong><br />
+- 5 dakika içinde kendine gelmediyse <strong>sağlık ekipleri çağırılır</strong></p>
+<h3>Koma</h3>
+<blockquote>
+<p><strong>Koma:</strong> Hareket sisteminin duyu organlarının çalışmadığı ve <strong>uyaranlara karşı tepki verilmeyen derin bir bilinç kaybı + uyku halidir</strong>.<br />
+<em>(Deep unconsciousness — no response to any stimulus.)</em></p>
+</blockquote>
+<p><strong>Nedenleri:</strong><br />
+- Baş travmaları, <strong>beyin kanaması</strong><br />
+- Kanamalara bağlı şok, <strong>elektrik şoku</strong><br />
+- <strong>Alkol + zehirlenmeler</strong><br />
+- <strong>Suda boğulma</strong><br />
+- Bazı hastalıklar (diyabet, beyin enfeksiyonu)<br />
+- <strong>Sıcak çarpması</strong>, <strong>donma</strong></p>
+<p><strong>Belirtiler:</strong><br />
+- <strong>Bilinçsizlik, uyku, hareketsizlik, halsizlik</strong><br />
+- <strong>Uyaranlara reaksiyonsuzluk, refleks kayıpları</strong><br />
+- <strong>Hırıltılı solunum</strong></p>
+<p><strong>İlk Yardım — Koma:</strong><br />
+- <strong>Hava yolu hortumu</strong> takılarak soluk yolu açık tutulur<br />
+- <strong>Solunum durmuşsa</strong> suni solunum yapılır<br />
+- <strong>Vücut ısısı korunur</strong><br />
+- <strong>Koma pozisyonu</strong> verilir<br />
+- <strong>Uygun pozisyonda sevk</strong> edilir, <strong>112</strong> aranır</p>
+<h3>Koma Pozisyonu (Recovery Position) — Adım Adım</h3>
+<ol>
+<li><strong>Sesli + omzundan hafif sarsma</strong> ile bilinç kontrol</li>
+<li><strong>Sıkan giysiler gevşetilir</strong></li>
+<li>Ağız içi yabancı cisim kontrol</li>
+<li><strong>Bak-Dinle-Hisset</strong> ile solunum kontrol</li>
+<li><strong>Şah damarından</strong> nabız kontrol</li>
+<li>Hasta döndürüleceği tarafa diz çök</li>
+<li><strong>Karşı taraftaki kol</strong> karşı omzunun üzerine</li>
+<li><strong>Karşı taraftaki bacak</strong> dik açıyla kıvrılır</li>
+<li><strong>İlk yardımcıya yakın kol</strong> baş hizasında uzatılır</li>
+<li>Karşı omuz + kalça tutularak <strong>bir hamlede</strong> çevrilir</li>
+<li>Üstteki bacak öne destek, alttaki bacak hafif arkaya</li>
+<li><strong>Baş uzatılan kol üzerine yan + hafif öne eğik</strong></li>
+<li><strong>3-5 dk ara ile</strong> solunum + nabız kontrol</li>
+</ol>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Bayılma</strong>: kısa süreli, şok pozisyonu + duyuları uyar + tokat ATILMAZ + uzun süre alkol koklatılmaz.<br />
+<strong>Koma</strong>: derin, <strong>koma pozisyonu</strong> (yan yatış) + 112.<br />
+<strong>Bayılan kişiyi 5 dakikada kendine gelmiyorsa hastaneye sevk edilir.</strong></p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.27.49%402x.png" alt="Sınıfta gösterilen slayt (9 :27:49" loading="lazy"></div></figure></aside><div class="slide-text"><h2>4. Bonus — Diğer Bilinç Bozuklukları (Portal'dan)</h2>
+
+
+<h3>Havale (Seizure)</h3>
+<p><strong>Havale:</strong> Sinir sisteminin merkezindeki tahriş yüzünden beyinde <strong>elektriksel boşalmalar</strong> sonucu. Vücut adelelerinde <strong>kontrol edilemeyen kasılmalar.</strong></p>
+<p><strong>Nedenler:</strong><br />
+- Kafa travmasına bağlı beyin yaralanması<br />
+- Beyin enfeksiyonları<br />
+- <strong>Yüksek ateş</strong> (38°C üstü, özellikle <strong>6 ay-6 yaş arası</strong> çocuklarda)<br />
+- <strong>Sara (Epilepsi)</strong></p>
+<p><strong>Sara (Epilepsi) İlk Yardım:</strong><br />
+- <strong>Kriz kendi sürecini tamamlamaya bırakılır</strong><br />
+- <strong>Hasta bağlanmaya çalışılmaz</strong><br />
+- <strong>Kilitlenmiş çene açılmaya çalışılmaz</strong><br />
+- Ağzından <strong>hiçbir şey verilmez</strong> (yiyecek, içecek, ilaç, koklatma)<br />
+- Başını çarpmasını engellemek için <strong>başın altına yumuşak malzeme</strong> konur<br />
+- Etraftan <strong>yaralayıcı eşyalar uzaklaştırılır</strong><br />
+- Sıkan giysiler gevşetilir<br />
+- <strong>Kusma riskine</strong> karşı tedbir<br />
+- Düşme yaralanması varsa müdahale<br />
+- <strong>112</strong> aranır</p>
+<p><strong>Ateş havalesinde</strong> ilk yardım: <strong>ıslak havlu/çarşafa</strong> sarılır → düşmüyorsa <strong>oda sıcaklığında küvete</strong> sokulur → 112.</p>
+<h3>Kan Şekeri Düşüklüğü (Hipoglisemi)</h3>
+<ul>
+<li>Hastanın <strong>bilinci yerinde + kusmuyorsa</strong> ağızdan <strong>şeker veya şekerli içecek</strong> verilir (fazla şeker zarar vermez — düşük şeker beynin kalıcı hasarına yol açar)</li>
+<li>15-20 dk içinde belirti geçmiyorsa hastane</li>
+<li><strong>Bilinç kapalıysa</strong> koma pozisyonu + 112</li>
+</ul>
+<h3>Göğüs Ağrısı / Kalp Krizi</h3>
+<p><strong>Kalp krizi belirtileri:</strong> ölüm korkusu, terleme, mide bulantısı, <strong>kravat bölgesinde ağrı</strong> → omuzlara, boyna, çeneye, <strong>sol kola</strong> yayılır.</p>
+<p><strong>İlk Yardım:</strong><br />
+- <strong>Yarı oturur pozisyon</strong><br />
+- Hareket ettirilmez, sakinleştirilir<br />
+- Kıyafetleri gevşetilir<br />
+- <strong>Reçeteli ilaçları varsa</strong> alması sağlanır (dilaltı nitrogliserin, en fazla 3 doz)<br />
+- <strong>112 aranır</strong><br />
+- Solunumu durursa <strong>TYD</strong> başlatılır</p>
+<blockquote>
+<p><strong>Sigara, yüksek tansiyon, şeker hastalığı, fazla kilo</strong> = kalp krizi risk faktörleridir.</p>
+</blockquote>
+<hr />
+</div></section><h2>5. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Şok nedir?"</strong> → Dolaşım sisteminin yetersizliği → vücuda yeterli kan gitmemesi</li>
+<li><strong>"Şokta ilk etkilenen organ?"</strong> → <strong>BEYİN</strong></li>
+<li><strong>"Şok pozisyonu nedir?"</strong> → Sırtüstü + <strong>bacaklar 30 cm yukarı</strong> + üstü örtülü + baş yana</li>
+<li><strong>"Şok pozisyonu hangi durumda VERİLMEZ?"</strong> → <strong>İç kanama</strong> varsa</li>
+<li><strong>"Bayılan kişiye TOKAT atılır mı?"</strong> → <strong>HAYIR</strong></li>
+<li><strong>"Bayılan kişi alkol koklatılır mı?"</strong> → Yakın mesafeden <strong>uzun süre KOKLATILMAZ</strong></li>
+<li><strong>"Koma pozisyonu nedir?"</strong> → <strong>Yan + hafif öne eğik</strong> (yarı yüzükoyun-yan)</li>
+<li><strong>"Sara krizinde çene açılır mı?"</strong> → <strong>HAYIR</strong>, ağzına bir şey <strong>verilmez</strong></li>
+<li><strong>"Ateşli havale yaş aralığı?"</strong> → <strong>6 ay - 6 yaş</strong></li>
+<li><strong>"Hipoglisemide ne verilir?"</strong> → <strong>Şeker / şekerli içecek</strong> (bilinç açıksa)</li>
+<li><strong>"Kalp krizinde hangi pozisyon?"</strong> → <strong>Yarı oturur</strong></li>
+</ol>
+<hr />
+<h2>6. Memorize These</h2>
+<blockquote>
+<p><strong>Şok pozisyonu = SIRTÜSTÜ + BACAKLAR 30 CM YUKARI + ÜSTÜ ÖRTÜLÜ + BAŞ YANA.</strong><br />
+<em>İÇ KANAMADA UYGULANMAZ.</em></p>
+<p><strong>Şokta ilk etkilenen organ = BEYİN.</strong></p>
+<p><strong>Bayılana tokat ATILMAZ. Alkol uzun süre koklatılmaz.</strong></p>
+<p><strong>Komada → Koma pozisyonu (yan yatış).</strong></p>
+<p><strong>Sara krizinde → çene açılmaz, ağzından şey verilmez, kriz tamamlanmaya bırakılır.</strong></p>
+<p><strong>Kalp krizinde → yarı oturur pozisyon + 112.</strong></p>
+</blockquote>
+<hr />
+<h2>7. Consolidated Exam Vocabulary</h2>
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bilinç</strong></td>
+<td>Consciousness</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Bilinç kaybı</strong></td>
+<td>Loss of consciousness</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Şok</strong></td>
+<td>Shock</td>
+<td>Circulatory failure</td>
+</tr>
+<tr>
+<td><strong>Şok pozisyonu</strong></td>
+<td>Shock position</td>
+<td>Sırtüstü + bacaklar 30 cm yukarı</td>
+</tr>
+<tr>
+<td><strong>Bayılma</strong></td>
+<td>Fainting / syncope</td>
+<td>Brief loss</td>
+</tr>
+<tr>
+<td><strong>Koma</strong></td>
+<td>Coma</td>
+<td>Deep loss, no response</td>
+</tr>
+<tr>
+<td><strong>Koma pozisyonu</strong></td>
+<td>Recovery position</td>
+<td>Yan + hafif öne</td>
+</tr>
+<tr>
+<td><strong>Havale</strong></td>
+<td>Seizure</td>
+<td>Brain electrical discharge</td>
+</tr>
+<tr>
+<td><strong>Sara (Epilepsi)</strong></td>
+<td>Epilepsy</td>
+<td>Recurrent seizures</td>
+</tr>
+<tr>
+<td><strong>Hipoglisemi</strong></td>
+<td>Hypoglycemia</td>
+<td>Low blood sugar</td>
+</tr>
+<tr>
+<td><strong>Kalp krizi</strong></td>
+<td>Heart attack (MI)</td>
+<td>Miyokart enfarktüsü</td>
+</tr>
+<tr>
+<td><strong>Kalp spazmı</strong></td>
+<td>Angina pectoris</td>
+<td>Less severe than MI</td>
+</tr>
+<tr>
+<td><strong>Dolaşım yetersizliği</strong></td>
+<td>Circulatory insufficiency</td>
+<td>Cause of shock</td>
+</tr>
+<tr>
+<td><strong>Kan basıncı</strong></td>
+<td>Blood pressure</td>
+<td>Normal 100/50 - 140/100</td>
+</tr>
+<tr>
+<td><strong>Nabız</strong></td>
+<td>Pulse</td>
+<td>Adult 60-100, child 100-120, baby 100-140</td>
+</tr>
+<tr>
+<td><strong>Şah damarı</strong></td>
+<td>Carotid artery</td>
+<td>Pulse check site</td>
+</tr>
+<tr>
+<td><strong>Hırıltılı solunum</strong></td>
+<td>Wheezing/raspy breathing</td>
+<td>Coma sign</td>
+</tr>
+<tr>
+<td><strong>Refleks kaybı</strong></td>
+<td>Loss of reflexes</td>
+<td>Coma sign</td>
+</tr>
+<tr>
+<td><strong>Ani korku/heyecan</strong></td>
+<td>Sudden fear/excitement</td>
+<td>Shock cause</td>
+</tr>
+<tr>
+<td><strong>İç kanama</strong></td>
+<td>Internal bleeding</td>
+<td>NO shock position</td>
+</tr>
+<tr>
+<td><strong>Tokat</strong></td>
+<td>Slap</td>
+<td>NEVER given to a fainter</td>
+</tr>
+<tr>
+<td><strong>Dilaltı nitrogliserin</strong></td>
+<td>Sublingual nitroglycerin</td>
+<td>For angina, max 3 doses</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>8. Cross-references</h2>
+<ul>
+<li><a href="01-ilk-yardim-kavramlari.md">01-ilk-yardim-kavramlari.md</a> — ABC, KBK</li>
+<li><a href="03-temel-yasam-destegi.md">03-temel-yasam-destegi.md</a> — Bak-Dinle-Hisset, suni solunum, kalp masajı</li>
+<li><a href="04-kanamalar.md">04-kanamalar.md</a> — kanama → şok zinciri</li>
+<li><a href="05-yaralanmalar.md">05-yaralanmalar.md</a> — kafa travması → bilinç kaybı, yatış pozisyonları</li>
+<li><a href="06-yaniklar-zehirlenmeler.md">06-yaniklar-zehirlenmeler.md</a> — yanık şoku, zehirlenmede koma</li>
+<li><a href="09-tasima-teknikleri.md">09-tasima-teknikleri.md</a> — şok/koma yaralısının taşınması</li>
+</ul>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>

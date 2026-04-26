@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaralanmalarda İlk Yardım — Wound Care | Ehliyet Pratik</title>
+<style>
+:root,body[data-theme="cream"]{
+  --bg-grad-1:#f9e8cc;--bg-grad-2:#ffe3be;--bg-base:#f2eee6;
+  --surface-card:#ffffff;--surface-soft:#fffdf6;--surface-warm:#fff8ec;--surface-emoji:#f4ecd9;
+  --surface-code:#f5f0e6;--surface-quote:#f0f7f2;--surface-score:#f0e8d8;
+  --text-main:#1f1b15;--text-muted:#6f6454;
+  --brand-dark:#11472d;--brand-mid:#1d7044;--brand-accent:#0a7f44;--brand-deep:#0f4229;--brand-bar2:#227245;
+  --border:var(--border);
+}
+body[data-theme="blue"]{
+  --bg-grad-1:#dbe8f5;--bg-grad-2:#ecf3fb;--bg-base:#eef4fa;
+  --surface-card:#ffffff;--surface-soft:#f6fafe;--surface-warm:#eaf2fc;--surface-emoji:#d8e6f4;
+  --surface-code:#eef3f8;--surface-quote:#e9f1f9;--surface-score:#dde9f4;
+  --text-main:#13202f;--text-muted:#5a6b7d;
+  --brand-dark:#1c4a6f;--brand-mid:#2d709c;--brand-accent:#1f7aae;--brand-deep:#163d5b;--brand-bar2:#2d709c;
+  --border:#cad8e6;
+}
+body[data-theme="paper"]{
+  --bg-grad-1:#f4ead8;--bg-grad-2:#ede0c8;--bg-base:#ebe2cf;
+  --surface-card:#fdf8ed;--surface-soft:#f8f0dc;--surface-warm:#f3e7c8;--surface-emoji:#e9d8b0;
+  --surface-code:#ede0c0;--surface-quote:#efe8d4;--surface-score:#e6d9b6;
+  --text-main:#3a2f1f;--text-muted:#7a6a52;
+  --brand-dark:#5a3f1c;--brand-mid:#7a5928;--brand-accent:#9a7333;--brand-deep:#4a3214;--brand-bar2:#7a5928;
+  --border:#d4c5a8;
+}
+body[data-theme="dim"]{
+  --bg-grad-1:#2a3138;--bg-grad-2:#1f262d;--bg-base:#222930;
+  --surface-card:#2c333a;--surface-soft:#262d34;--surface-warm:#2f363d;--surface-emoji:#3a4149;
+  --surface-code:#1d2329;--surface-quote:#283036;--surface-score:#363d44;
+  --text-main:#e6e3dc;--text-muted:#9aa0a6;
+  --brand-dark:#1d6a40;--brand-mid:#2a8d56;--brand-accent:#3aae6b;--brand-deep:#155233;--brand-bar2:#2a8d56;
+  --border:#3a414a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,var(--bg-grad-1) 0,var(--bg-base) 42%),radial-gradient(circle at 95% 90%,var(--bg-grad-2) 0,var(--bg-base) 45%);
+  color:var(--text-main);line-height:1.6;min-height:100vh;
+}
+.bar{
+  background:linear-gradient(122deg,var(--brand-dark),var(--brand-bar2));
+  color:#fff;padding:14px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  box-shadow:0 1px 3px rgba(0,0,0,.1);
+}
+.bar a{color:#fff;text-decoration:none;opacity:.85;font-size:.85rem}
+.bar a:hover{opacity:1;text-decoration:underline}
+.bar .crumb{font-size:.78rem;opacity:.6;margin-left:auto}
+.content{
+  max-width:1480px;margin:24px auto 60px;padding:24px 22px;
+  background:var(--surface-card);border-radius:12px;
+  border:1px solid var(--border);
+  box-shadow:0 2px 12px rgba(0,0,0,.04);
+}
+.content h1{font-size:1.6rem;color:var(--brand-dark);margin-bottom:14px;font-weight:700;letter-spacing:-.3px}
+.content h2{font-size:1.25rem;color:var(--brand-accent);margin:24px 0 10px;font-weight:600;border-bottom:2px solid var(--border);padding-bottom:4px}
+.content h3{font-size:1.05rem;color:var(--brand-dark);margin:20px 0 8px;font-weight:600}
+.content h4{font-size:.95rem;color:var(--text-main);margin:16px 0 6px;font-weight:600}
+.content p{margin:10px 0}
+.content ul,.content ol{margin:10px 0 10px 24px}
+.content li{margin:4px 0}
+.content code{background:var(--surface-code);padding:1px 6px;border-radius:3px;font-size:.88em;font-family:Menlo,Monaco,monospace}
+.content pre{background:var(--surface-code);padding:14px;border-radius:6px;overflow-x:auto;margin:12px 0}
+.content pre code{background:none;padding:0}
+.content blockquote{
+  border-left:4px solid var(--brand-accent);
+  background:var(--surface-quote);padding:10px 16px;margin:12px 0;
+  font-style:italic;color:var(--text-main);
+}
+.content table{border-collapse:collapse;margin:12px 0;width:100%;font-size:.92em}
+.content th,.content td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.content th{background:var(--surface-warm);font-weight:600;color:var(--brand-dark)}
+.content tr:nth-child(even){background:var(--surface-soft)}
+.content a{color:var(--brand-accent);text-decoration:none}
+.content a:hover{text-decoration:underline}
+.content hr{border:none;border-top:1px solid var(--border);margin:20px 0}
+.content strong{color:var(--brand-dark);font-weight:600}
+.content em{color:var(--text-main)}
+.resource-panel{
+  margin-top:26px;padding:16px 18px;
+  border:1px solid var(--border);border-radius:10px;background:var(--surface-warm);
+}
+.resource-panel h2{
+  border-bottom:0;margin:0 0 10px;padding:0;
+  font-size:1.05rem;color:var(--brand-dark);
+}
+.resource-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.resource-panel h3{font-size:.92rem;margin:0 0 6px;color:var(--brand-accent)}
+.resource-panel ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.resource-panel li{margin:0;font-size:.9rem;line-height:1.4}
+.resource-panel .score{font-size:.72rem;color:var(--text-muted);background:var(--surface-score);padding:1px 6px;border-radius:10px;margin-left:5px}
+.slide-figure{
+  margin:14px 0 18px;padding:8px;
+  background:var(--surface-card);border:1px solid var(--border);border-radius:8px;
+  text-align:center;
+}
+.slide-figure a{display:inline-block;line-height:0}
+.slide-figure img{
+  max-width:100%;height:auto;border-radius:4px;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.slide-figure figcaption{
+  margin-top:8px;font-size:.78rem;color:var(--text-muted);font-style:italic;line-height:1.4;
+}
+.slide-figure-link{color:var(--brand-accent);font-style:normal;font-weight:500;margin-left:4px;text-decoration:none}
+.slide-figure-link:hover{text-decoration:underline}
+.slide-pair{margin:0 0 10px}
+.slide-pair:last-child{margin-bottom:0}
+.slide-pair-label{font-size:.72rem;font-weight:600;color:var(--brand-accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;text-align:left}
+.slide-pair img{display:block;width:100%;height:auto;border-radius:4px;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+/* Card-grid index pages */
+.note-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px;margin:18px 0}
+.note-card{display:flex;gap:12px;padding:14px 16px;background:var(--surface-soft);border:1px solid var(--border);border-radius:10px;text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s ease,border-color .12s ease}
+.note-card:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(17,71,45,.1);border-color:var(--brand-accent)}
+.note-card .emoji{font-size:1.8rem;line-height:1;flex-shrink:0;width:42px;height:42px;display:flex;align-items:center;justify-content:center;background:var(--surface-emoji);border-radius:8px}
+.note-card .meta{flex:1;min-width:0}
+.note-card .num{font-size:.7rem;font-weight:700;color:var(--brand-accent);letter-spacing:.08em;text-transform:uppercase}
+.note-card .name{font-size:.98rem;font-weight:600;color:var(--brand-dark);margin:2px 0 4px;line-height:1.3}
+.note-card .desc{font-size:.78rem;color:var(--text-muted);line-height:1.4}
+.subject-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;margin:18px 0}
+.subject-card{display:block;padding:22px;background:linear-gradient(135deg,var(--brand-deep),var(--brand-mid));color:#fff;border-radius:14px;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.subject-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,66,41,.25)}
+.subject-card .icon{font-size:2.2rem;display:block;margin-bottom:8px}
+.subject-card .title{font-size:1.15rem;font-weight:700;display:block;margin-bottom:4px}
+.subject-card .count{font-size:.85rem;opacity:.85}
+.slide-section{
+  display:flex;gap:10px;align-items:flex-start;margin:24px 0;
+}
+.slide-pin{
+  flex:0 0 50%;position:sticky;top:8px;align-self:flex-start;
+  max-height:calc(100vh - 16px);overflow:auto;
+}
+.slide-pin .slide-figure{margin:0;padding:4px}
+.slide-pin .slide-figure img{max-height:calc(100vh - 80px);width:100%;max-width:100%;object-fit:contain}
+.slide-text{flex:1;min-width:0;font-size:1.02rem;line-height:1.6}
+.slide-text > *:first-child{margin-top:0}
+@media(max-width:900px){
+  .slide-section{flex-direction:column}
+  .slide-pin{position:static;flex-basis:auto;width:100%;max-height:none;overflow:visible}
+  .slide-pin .slide-figure img{max-height:none}
+}
+@media(max-width:700px){.resource-grid{grid-template-columns:1fr}}
+@media(max-width:600px){
+  .content{margin:14px;padding:18px 16px;border-radius:8px}
+  .content h1{font-size:1.3rem}
+  .content h2{font-size:1.1rem}
+}
+</style>
+<link rel="stylesheet" href="../../assets/nav.css">
+</head>
+<body>
+<!-- EH_SHARED_NAV_START -->
+<button class="eh-nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="app-sidebar">☰</button>
+<aside class="eh-side-nav" id="app-sidebar">
+  <div class="eh-nav-brand"><strong data-tr="Ehliyet Pratik" data-en="Driving License Practice">Ehliyet Pratik</strong><span data-tr="4,450 soru + 1366 kelime" data-en="4,450 questions + 1366 words">4,450 soru + 1366 kelime</span></div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Calisma" data-en="Practice">Calisma</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="home" href="../../index.html"><span class="eh-nav-left"><span class="eh-nav-icon">Q</span><span class="eh-nav-text" data-tr="Sorular" data-en="Questions">Sorular</span></span><span class="eh-nav-meta">4450</span></a>
+      <a class="eh-nav-link" data-area="home" href="../../index.html#vocab"><span class="eh-nav-left"><span class="eh-nav-icon">V</span><span class="eh-nav-text" data-tr="Kelime" data-en="Vocabulary">Kelime</span></span><span class="eh-nav-meta">1366</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Ders Materyali" data-en="Study Material">Ders Materyali</div>
+    <div class="eh-nav-links">
+      <a class="eh-nav-link" data-area="notes" href="../../notes/"><span class="eh-nav-left"><span class="eh-nav-icon">N</span><span class="eh-nav-text" data-tr="Claude Notlari" data-en="Claude Notes">Claude Notlari</span></span><span class="eh-nav-meta">40</span></a>
+      <a class="eh-nav-link" data-area="ekitap" href="../../ekitap/"><span class="eh-nav-left"><span class="eh-nav-icon">E</span><span class="eh-nav-text" data-tr="E-Kitap" data-en="E-Book">E-Kitap</span></span><span class="eh-nav-meta">63</span></a>
+      <a class="eh-nav-link" data-area="ders-kitabi" href="../../ders-kitabi/"><span class="eh-nav-left"><span class="eh-nav-icon">P</span><span class="eh-nav-text" data-tr="PDF Metinleri" data-en="PDF Texts">PDF Metinleri</span></span><span class="eh-nav-meta">240</span></a>
+      <a class="eh-nav-link" data-area="pics" href="../../pics/"><span class="eh-nav-left"><span class="eh-nav-icon">S</span><span class="eh-nav-text" data-tr="Slaytlar" data-en="Slides">Slaytlar</span></span><span class="eh-nav-meta" data-tr="galeri" data-en="gallery">galeri</span></a>
+    </div>
+  </div>
+  <div class="eh-nav-section">
+    <div class="eh-nav-label" data-tr="Tema" data-en="Theme">Tema</div>
+    <div class="eh-nav-themes">
+      <button class="eh-nav-theme" data-theme="cream" type="button" title="Cream">🌾</button>
+      <button class="eh-nav-theme" data-theme="blue" type="button" title="Blue">🌊</button>
+      <button class="eh-nav-theme" data-theme="paper" type="button" title="Paper">📜</button>
+      <button class="eh-nav-theme" data-theme="dim" type="button" title="Dim">🌙</button>
+    </div>
+    <button class="eh-nav-lang" type="button" id="eh-nav-lang-btn" title="Switch UI language">UI: TR</button>
+    <div class="eh-nav-note" data-tr="Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis." data-en="Jump from any page to the main app, notes, PDF texts, and slides.">Her sayfadan ana uygulamaya, notlara, PDF metinlerine ve slaytlara gecis.</div>
+  </div>
+</aside>
+<div class="eh-nav-scrim"></div>
+<!-- EH_SHARED_NAV_END -->
+<div class="bar">
+  <a href="../../index.html">&larr; Ehliyet Pratik</a>
+  <a href="index.html">↑ Ders Notu dizini</a>
+  <span class="crumb">ilk-yardım / 05-yaralanmalar</span>
+</div>
+<div class="content">
+<h1>Yaralanmalarda İlk Yardım — Wound Care</h1>
+<p><strong>Last updated:</strong> 2026-04-26<br />
+<strong>Class date:</strong> 2026-04-26 (retrospective from screenshots)<br />
+<strong>Slides covered:</strong> Baş yaralanmaları, Göğüs yaralanmaları, Karın yaralanmaları, Yaralanmalarda yatış pozisyonları<br />
+<strong>Portal source:</strong> <a href="../../e-kitap/02-ilk-yardım/05-yaralanmalarda-ilk-yardim.md"><code>05-yaralanmalarda-ilk-yardim.md</code></a></p>
+<hr />
+<h2>1. Overview — Görev (Yara nedir?)</h2>
+<blockquote>
+<p><strong>Yara:</strong> Bir travma sonucu <strong>deri ya da mukozanın bütünlüğünün bozulmasıdır.</strong><br />
+<em>(A wound is a break in the skin or mucous membrane caused by trauma.)</em></p>
+<p><strong>Travma:</strong> Ani olarak dıştan mekanik bir etki sonucu meydana gelen, sağlığı tehdit eden, fiziksel ve ruhsal hasarlara yol açan olaydır.</p>
+</blockquote>
+<p>Wounds can come from a hit (<strong>çarpma</strong>), a fall (<strong>düşme</strong>), strong blows, atmospheric pressure changes, thermal effects (<strong>yanık</strong> burn, <strong>donma</strong> frostbite), electric shock, or radiation. The deeper the wound, the more organs and tissues are affected — and infection risk goes up because the skin's protective barrier is broken.</p>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.10.59%402x.png" alt="Sınıfta gösterilen slayt (9 :10:59" loading="lazy"></div></figure></aside><div class="slide-text"><h2>2. Yara Çeşitleri — Types of Wounds</h2>
+
+
+<h3>Künt yaralanma (Closed/blunt injury)</h3>
+<p>Skin looks intact but tissues underneath are crushed. Small vessels rupture and blood seeps under the skin → color turns <strong>black or blue (ekimoz / bruise)</strong>. If bigger vessels rupture, blood pools under the skin — this is <strong>hematom (hematoma)</strong>. Common with fractures.</p>
+<h3>Açık Yaralar (Open wounds)</h3>
+<p>Skin/mucous integrity is broken → bleeding + infection risk. Common signs: <strong>kanama (bleeding), ağrı (pain), yara kenarlarının ayrılması (wound edges separating).</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Type</th>
+<th>Turkish</th>
+<th>What it is</th>
+<th>Trick to remember</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Sıyrık (abrasion)</td>
+<td><strong>Sıyrık yara</strong></td>
+<td>Skin scraped on rough surface (asphalt, gravel) — surface-level capillary bleeding</td>
+<td>Çakıl taşı yarası — painful but shallow</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Kesik (cut)</td>
+<td><strong>Kesik yara</strong></td>
+<td>Sharp object (cam, bıçak) — clean or jagged</td>
+<td>Edges meet → cover with <strong>steril gazlı bez</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>Ezik (crush)</td>
+<td><strong>Ezik yara</strong></td>
+<td>Crash/rubble/punch — edges look mashed</td>
+<td><strong>Trafik kazalarında en çok görülen yara çeşidi</strong> ← exam favorite</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Delici (puncture)</td>
+<td><strong>Delici yara</strong></td>
+<td>Knife, nail, bullet — narrow but deep</td>
+<td><strong>Tetanoz tehlikesi</strong>, batan cisim çıkarılmaz</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Parçalı (avulsion)</td>
+<td><strong>Parçalı yara</strong></td>
+<td>Tissue torn away — machine/motor accidents</td>
+<td>Heavy bleeding, bone may show</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Enfekte (infected)</td>
+<td><strong>Enfekte yara</strong></td>
+<td>Mikrop kapma riski yüksek</td>
+<td>&gt;6 saat geçmiş, hayvan ısırığı, kirli/derin</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Critical exam fact:</strong> <em>Trafik kazalarında çarpma-çarpışma sonucu en çok </em><em>EZİK YARA</em><em> görülür.</em></p>
+</blockquote>
+<h3>Yaraların ortak belirtileri (3 universal signs)</h3>
+<ol>
+<li><strong>Ağrı</strong> (pain)</li>
+<li><strong>Kanama</strong> (bleeding)</li>
+<li><strong>Yara kenarının ayrılması</strong> (edge separation)</li>
+</ol>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.35.08%402x.png" alt="Sınıfta gösterilen slayt (9 :35:08" loading="lazy"></div></figure></aside><div class="slide-text"><h2>3. Yaralanmalarda Genel İlk Yardım</h2>
+
+
+<p>The universal flow for any wound:</p>
+<ol>
+<li><strong>Yaşam bulguları değerlendirilir (ABC)</strong> — airway, breathing, circulation</li>
+<li><strong>Yara yeri değerlendirilir</strong> — oluş şekli, süresi, yabancı cisim, kanama</li>
+<li><strong>Kanama durdurulur</strong> (see <a href="04-kanamalar.md">04-kanamalar.md</a>)</li>
+<li><strong>Üzeri temiz bezle kapatılır</strong></li>
+<li><strong>Sağlık kuruluşuna sevk</strong> edilir</li>
+<li><strong>Tetanoz konusunda uyarıda bulunulur</strong> (kirli/paslı metal/toprak teması varsa <strong>tetanoz serumu/aşısı</strong> zorunlu)</li>
+<li><strong>Yaradaki yabancı cisimlere DOKUNULMAZ</strong> — saplanmış cisim çıkarılmaz, çevresi sabitlenir</li>
+</ol>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.10.59%402x.png" alt="Sınıfta gösterilen slayt (9 :10:59" loading="lazy"></div></figure></aside><div class="slide-text"><h2>4. SLIDE 1 — Baş Yaralanmaları (Head injuries)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Anatomy diagram of a head with wound markers. List of belirtiler: <strong>deride yaralanma, kırık, morarma/şişlik, bilinç kaybı, burundan kan gelmesi, boyun ağrısı.</strong></p>
+<h3>Clean English explanation</h3>
+<p>~70% of traffic deaths happen because of <strong>kafa travması (head trauma).</strong> A blow to the head can cause surface wounds, skull fractures (<strong>kırık</strong>), brain shaking (<strong>beyin sarsıntısı</strong>) or brain bleeding (<strong>kanama</strong>).</p>
+<h3>İlk Yardım — Baş Yaralanması</h3>
+<ul>
+<li><strong>Solunum yolu açık tutulur</strong></li>
+<li>Kulaktan kan geliyorsa → <strong>kanayan kulak ALTTA olacak şekilde yan yatırılır</strong> (so blood can drain — don't dam it up)</li>
+<li>Kanama engellenmez — beyin basıncı yükselmesin</li>
+<li>Boyun yaralanması olabileceği varsayılır → boyun ve baş <strong>sabit</strong> tutulur</li>
+<li>Vücut sıcak tutulur, yara üstü <strong>temiz bir bez</strong> ile kapatılır</li>
+<li>Kanama yoksa baş üste gelecek şekilde 12-24 saat hastane gözetiminde tutulur</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>Kafatası yaralanmalarının belirtileri: <strong>Deride yaralanma + Kırık + Morarma/Şişlik + Bilinç kaybı + Burundan kan gelmesi + Boyun ağrısı.</strong><br />
+Kulaktan kan geliyorsa → <strong>kanayan kulak altta</strong> kalacak şekilde yatırılır, kanama durdurulmaya çalışılmaz.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.12.37%402x.png" alt="Sınıfta gösterilen slayt (9 :12:37" loading="lazy"></div></figure></aside><div class="slide-text"><h2>5. SLIDE 2 — Göğüs Yaralanmaları (Chest injuries)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Two figures: one with a chest wound exposing tissue, another bandaged. Text: <em>Göğüs bölgesinde yüzeysel yaralar olabileceği gibi kaburga kırıkları sonucu kaburganın akciğeri delip dışarı çıkması veya akciğere batması, sıkışma nedeniyle akciğer dokusunda harabiyet görülebilir.</em></p>
+<h3>Clean English explanation</h3>
+<p>Chest wounds can be:<br />
+- <strong>Yüzeysel (surface)</strong> — skin only<br />
+- <strong>Delici (penetrating)</strong> — broken rib pierces lung, or external object enters chest<br />
+- <strong>Sıkışma (compression)</strong> — crush injury to lung tissue</p>
+<p>Penetrating chest wounds are dangerous: air can leak into the chest cavity (<strong>pneumothorax</strong>) and collapse the lung. The wound must be <strong>sealed quickly</strong> to keep air out.</p>
+<h3>İlk Yardım — Göğüs Yaralanması</h3>
+<ul>
+<li>Delici yara varsa <strong>temiz bez ile delikten hava girmesi engellenir</strong> (cover the hole)</li>
+<li><strong>Batan cisim ÇIKARILMAZ</strong> — çevresi sabitlenir</li>
+<li>Açık göğüs yarası <strong>kapalı pansumanla</strong> kapatılır</li>
+<li>Soğuk uygulanır, kaburga kırığı sabitlenir</li>
+<li><strong>Yarı oturur veya yan oturur pozisyon</strong> verilir, sevk edilir</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>Göğüste delici yara varsa → <strong>temiz bez ile deliğin üzeri kapatılır</strong> (so air doesn't enter the chest cavity). Saplanmış cisim asla çıkarılmaz.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.14.58%402x.png" alt="Sınıfta gösterilen slayt (9 :14:58" loading="lazy"></div></figure></aside><div class="slide-text"><h2>6. SLIDE 3 — Karın Yaralanmaları (Abdominal injuries)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>Three figures: closed abdominal injury (cold compress), open abdominal injury, and the proper position (<strong>yara enine ise sırtüstü+dizler bükük</strong>, <strong>yara boyuna ise bacaklar düz</strong>).</p>
+<h3>Clean English explanation</h3>
+<ul>
+<li><strong>Kapalı (closed)</strong> — internal bleeding from blunt trauma; <strong>soğuk uygulama</strong> to slow bleeding</li>
+<li><strong>Açık (open)</strong> — wound visible; if <strong>organs are showing/protruding</strong>, do NOT push them back inside</li>
+<li>Cover with <strong>temiz, ıslak bir bez veya şeffaf naylon</strong></li>
+<li>If organs have come out → karın içine sokulmaz, üstüne ıslak temiz bez konur</li>
+<li><strong>Yara enine ise (transverse wound)</strong> → sırtüstü yatırılır, dizler bükülür (so wound edges come together)</li>
+<li><strong>Yara boyuna ise (longitudinal wound)</strong> → bacaklar düz uzatılır, gergin tutulur</li>
+<li>Ağızdan <strong>hiçbir şey verilmez</strong>, dudaklar ıslatılabilir</li>
+</ul>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p><strong>Açık karın yarasından organ çıkmışsa → asla içeri sokulmaz.</strong> Üstüne <strong>temiz, ıslak bir bez veya şeffaf naylon</strong> kapatılır. Yara enine ise dizler bükülür, boyuna ise bacaklar gergin tutulur.</p>
+</blockquote>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.20.11%402x.png" alt="Sınıfta gösterilen slayt (9 :20:11" loading="lazy"></div></figure></aside><div class="slide-text"><h2>7. SLIDE 4 — Yaralanmalarda Yatış Pozisyonları (Positioning)</h2>
+
+
+<h3>What the slide showed</h3>
+<p>9-cell grid showing each position with a labeled illustration:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Pozisyon</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Normal pozisyon</strong></td>
+<td>Default — bilinçli, yaralanması yok</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Şok pozisyonu</strong></td>
+<td>Şok riski — sırtüstü, <strong>bacaklar 30 cm yukarı</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sabit yan pozisyon</strong></td>
+<td>Bilinç kapalı + solunum/nabız var (= koma pozisyonu)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Solunum durmasında / Solunum yolunu açık tutulması</strong></td>
+<td>Ağızdan kan gelme halinde verilecek pozisyon</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Oturuş pozisyonu</strong></td>
+<td>Ağızdan kan gelme halinde</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Karın bölgesi yaralanmalarında</strong></td>
+<td>Sırtüstü, dizler bükülü</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Göğüs yaralanmalarında verilecek pozisyon</strong></td>
+<td>Yarı oturur veya yan oturur</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>Sırtüstü pozisyonu</strong></td>
+<td>Baş ve göğüste ağır kan basıncı azaltmak için (yüz kızarmış)</td>
+</tr>
+</tbody>
+</table>
+<h3>Critical exam fact</h3>
+<blockquote>
+<p>Pozisyonlar <strong>yaralının durumuna göre seçilir</strong> — şok için bacaklar yukarı, koma için yan pozisyon, karın yaralanmasında dizler bükük, göğüs yaralanmasında yarı oturur.</p>
+</blockquote>
+<hr />
+</div></section><h2>8. Why this matters for the exam</h2>
+<ol>
+<li><strong>"Trafik kazalarında en çok görülen yara çeşidi nedir?"</strong> → <strong>Ezik yara</strong></li>
+<li><strong>"Yaraların ortak 3 belirtisi nedir?"</strong> → Ağrı, kanama, yara kenarlarının ayrılması</li>
+<li><strong>"Delici yarada batan cisim çıkarılır mı?"</strong> → <strong>HAYIR</strong>, çevresi sabitlenir</li>
+<li><strong>"Tetanoz aşısı ne zaman zorunludur?"</strong> → Kirli/paslı metal veya toprakla temas eden yarada</li>
+<li><strong>"Kulaktan kan geliyorsa nasıl yatırılır?"</strong> → <strong>Kanayan kulak altta</strong> olacak şekilde</li>
+<li><strong>"Karın yarasından organ çıkmışsa ne yapılır?"</strong> → <strong>İçeri sokulmaz</strong>, üstüne <strong>temiz ıslak bez</strong> kapatılır</li>
+<li><strong>"Göğüs delici yarasında ne yapılır?"</strong> → Hava girmemesi için <strong>deliğin üzeri kapatılır</strong></li>
+<li><strong>"Şok pozisyonu nedir?"</strong> → Sırtüstü, <strong>bacaklar 30 cm yukarı</strong>, üstü örtülü, başı yana çevrilmiş</li>
+</ol>
+<hr />
+<h2>9. Memorize These</h2>
+<blockquote>
+<p><strong>Yaraların 3 ortak belirtisi:</strong> Ağrı, Kanama, Yara kenarlarının ayrılması<br />
+<em>(Pain, Bleeding, Wound edge separation)</em></p>
+<p><strong>Trafik kazalarında EN ÇOK görülen yara: EZİK YARA</strong><br />
+<em>(In traffic accidents, the most common wound type is crush wounds.)</em></p>
+<p><strong>Saplanmış cisim asla çıkarılmaz</strong> — çevresi sabitlenir, hastaneye öyle götürülür.<br />
+<em>(A penetrating object is never removed — it is stabilized and the patient is sent to hospital with it.)</em></p>
+<p><strong>Kafa yaralanması → kulaktan kan: kanayan kulak ALTTA</strong><br />
+<em>(Head injury with ear bleeding → bleeding ear DOWN, do not stop the bleeding.)</em></p>
+<p><strong>Açık karın yarasından organ → asla içeri sokulmaz, ıslak temiz bez ile kapatılır</strong></p>
+<p><strong>Şok pozisyonu = Sırtüstü + bacaklar 30 cm yukarı + üstü örtülü + baş yana</strong></p>
+</blockquote>
+<hr />
+<section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2026/CleanShot-26-04-2026%20at%209%E2%80%AF.10.59%402x.png" alt="Sınıfta gösterilen slayt (9 :10:59" loading="lazy"></div></figure></aside><div class="slide-text"><h2>10. Consolidated Exam Vocabulary</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Turkish</th>
+<th>English</th>
+<th>Quick meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Yara</strong></td>
+<td>Wound</td>
+<td>Skin/mucosa break</td>
+</tr>
+<tr>
+<td><strong>Travma</strong></td>
+<td>Trauma</td>
+<td>External impact</td>
+</tr>
+<tr>
+<td><strong>Künt yaralanma</strong></td>
+<td>Closed/blunt injury</td>
+<td>No skin break, internal damage</td>
+</tr>
+<tr>
+<td><strong>Açık yara</strong></td>
+<td>Open wound</td>
+<td>Skin broken</td>
+</tr>
+<tr>
+<td><strong>Sıyrık yara</strong></td>
+<td>Abrasion</td>
+<td>Surface scrape</td>
+</tr>
+<tr>
+<td><strong>Kesik yara</strong></td>
+<td>Cut/incision</td>
+<td>Sharp object</td>
+</tr>
+<tr>
+<td><strong>Ezik yara</strong></td>
+<td>Crush wound</td>
+<td><strong>Most common in traffic accidents</strong></td>
+</tr>
+<tr>
+<td><strong>Delici yara</strong></td>
+<td>Puncture wound</td>
+<td>Deep, narrow</td>
+</tr>
+<tr>
+<td><strong>Parçalı yara</strong></td>
+<td>Avulsion</td>
+<td>Tissue torn away</td>
+</tr>
+<tr>
+<td><strong>Enfekte yara</strong></td>
+<td>Infected wound</td>
+<td>Microbe risk high</td>
+</tr>
+<tr>
+<td><strong>Ekimoz</strong></td>
+<td>Bruise</td>
+<td>Blue/black skin discoloration</td>
+</tr>
+<tr>
+<td><strong>Hematom</strong></td>
+<td>Hematoma</td>
+<td>Pooled blood under skin</td>
+</tr>
+<tr>
+<td><strong>Tetanoz</strong></td>
+<td>Tetanus</td>
+<td>Wound infection from dirty metal/soil</td>
+</tr>
+<tr>
+<td><strong>Saplanmış cisim</strong></td>
+<td>Embedded/penetrating object</td>
+<td>Never removed</td>
+</tr>
+<tr>
+<td><strong>Steril gazlı bez</strong></td>
+<td>Sterile gauze</td>
+<td>First-line wound cover</td>
+</tr>
+<tr>
+<td><strong>Pansuman</strong></td>
+<td>Wound dressing</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Antiseptik</strong></td>
+<td>Antiseptic</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Kafa travması</strong></td>
+<td>Head trauma</td>
+<td>70% of traffic deaths</td>
+</tr>
+<tr>
+<td><strong>Beyin sarsıntısı</strong></td>
+<td>Concussion</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Kaburga kırığı</strong></td>
+<td>Rib fracture</td>
+<td>Can puncture lung</td>
+</tr>
+<tr>
+<td><strong>Akciğer</strong></td>
+<td>Lung</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Şok pozisyonu</strong></td>
+<td>Shock position</td>
+<td>Sırtüstü, bacaklar 30 cm yukarı</td>
+</tr>
+<tr>
+<td><strong>Koma pozisyonu</strong></td>
+<td>Recovery position</td>
+<td>Yan yatış</td>
+</tr>
+</tbody>
+</table>
+<hr />
+</div></section><section class="slide-section"><aside class="slide-pin"><figure class="slide-figure"><div class="slide-pair"><div class="slide-pair-label">📸 Sınıfta</div><img src="../../pics/ilk%20yardim/apr%2025/CleanShot-25-04-2026%20at%209%E2%80%AF.34.50%402x.png" alt="Sınıfta gösterilen slayt (9 :34:50" loading="lazy"></div></figure></aside><div class="slide-text"><h2>11. Cross-references</h2>
+
+
+<ul>
+<li><a href="01-ilk-yardim-kavramlari.md">01-ilk-yardim-kavramlari.md</a> — KBK, hayat kurtarma zinciri, ABC</li>
+<li><a href="02-insan-vucudu.md">02-insan-vucudu.md</a> — sistem ve organlar</li>
+<li><a href="03-temel-yasam-destegi.md">03-temel-yasam-destegi.md</a> — Bak-Dinle-Hisset, suni solunum, kalp masajı</li>
+<li><a href="04-kanamalar.md">04-kanamalar.md</a> — kanama türleri ve durdurma yöntemleri</li>
+<li><a href="07-kirik-cikik-burkulma.md">07-kirik-cikik-burkulma.md</a> — kemik yaralanmaları (özellikle kaburga, kafa)</li>
+<li><a href="08-bilinc-bozukluklari.md">08-bilinc-bozukluklari.md</a> — şok, bayılma, koma pozisyonu</li>
+<li><a href="09-tasima-teknikleri.md">09-tasima-teknikleri.md</a> — yaralı taşıma kuralları</li>
+</ul></div></section>
+</div>
+<script>
+// If opened from app with ?back=... query param, override "back to app" link
+const back = new URLSearchParams(location.search).get('back');
+if (back) {
+  document.querySelector('.bar a').href = back;
+}
+</script>
+<script src="../../assets/nav.js"></script>
+</body>
+</html>
