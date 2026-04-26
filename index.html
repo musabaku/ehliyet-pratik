@@ -1441,7 +1441,11 @@ document.getElementById('vq-input').addEventListener('keydown',e=>{
 
 // Init
 buildVCatChips();
-if(location.hash==='#vocab')switchTab('kelime');
+function handleInitialHash(){
+  if(location.hash==='#vocab')switchTab('kelime');
+}
+window.addEventListener('hashchange',handleInitialHash);
+handleInitialHash();
 </script>
 </body>
 </html>
