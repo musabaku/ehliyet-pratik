@@ -53,10 +53,17 @@
       const v=el.dataset[L];
       if(v!==undefined)el.textContent=v;
     });
-    const brandStrong=nav.querySelector('.eh-nav-brand strong[data-tr]');
-    if(brandStrong){const v=brandStrong.dataset[L];if(v)brandStrong.textContent=v;}
+    const langBtn=document.getElementById('eh-nav-lang-btn');
+    if(langBtn){
+      langBtn.textContent='UI: '+L.toUpperCase();
+      langBtn.className='eh-nav-lang'+(L==='en'?' en':'');
+    }
   }
   applyLang();
-  // Re-apply when storage changes in another tab (e.g. user toggled in main app)
+  document.getElementById('eh-nav-lang-btn')?.addEventListener('click',()=>{
+    const cur=localStorage.getItem('eh_uilang')||'tr';
+    localStorage.setItem('eh_uilang',cur==='tr'?'en':'tr');
+    applyLang();
+  });
   window.addEventListener('storage',e=>{if(e.key==='eh_uilang')applyLang();});
 })();

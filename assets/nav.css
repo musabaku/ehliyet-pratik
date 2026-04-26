@@ -63,6 +63,14 @@ body.eh-nav-collapsed .eh-nav-brand{height:34px;margin-bottom:12px;padding:0}
 body.eh-nav-collapsed .eh-nav-link{justify-content:center;padding:8px}
 body.eh-nav-collapsed .eh-nav-left{gap:0}
 .eh-nav-scrim{display:none}
+.eh-nav-lang{
+  display:block;width:100%;margin:0 0 10px;padding:7px 10px;
+  background:rgba(255,193,7,.18);border:1px solid rgba(255,193,7,.4);
+  color:#fff8e1;border-radius:10px;font-size:12px;font-weight:600;
+  cursor:pointer;letter-spacing:.04em;transition:background .15s;
+}
+.eh-nav-lang:hover{background:rgba(255,193,7,.32)}
+.eh-nav-lang.en{background:rgba(255,193,7,.32);color:#fff}
 @media(max-width:900px){
   body.eh-has-sidebar,body.eh-nav-collapsed{padding-left:0}
   .eh-nav-toggle{left:12px;top:12px;background:#11472d;border-color:rgba(255,255,255,.2)}
