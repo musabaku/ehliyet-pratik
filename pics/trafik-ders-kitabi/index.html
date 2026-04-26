@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trafik ve Çevre - Ders Kitabı | Ehliyet Pratik</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:radial-gradient(circle at 8% 0%,#f9e8cc 0,#f2eee6 42%),radial-gradient(circle at 95% 90%,#ffe3be 0,#f2eee6 45%);
+  color:#1f1b15;
+  min-height:100vh;
+}
+.hero{background:linear-gradient(122deg,#11472d,#227245);color:#fff;padding:28px 24px 22px;text-align:center}
+.hero h1{font-size:1.6rem;font-weight:700;letter-spacing:.3px}
+.hero p{font-size:.92rem;opacity:.85;margin-top:4px}
+.hero .author{font-size:.78rem;opacity:.7;margin-top:6px;font-style:italic}
+.hero .stats{display:flex;justify-content:center;gap:20px;margin-top:12px;font-size:.82rem;opacity:.75;flex-wrap:wrap}
+.hero .stats span{background:rgba(255,255,255,.12);padding:3px 10px;border-radius:12px}
+
+.back{display:inline-block;margin:16px 20px 0;font-size:.85rem;color:#0a7f44;text-decoration:none;font-weight:500}
+.back:hover{text-decoration:underline}
+
+.filters{display:flex;flex-wrap:wrap;gap:8px;padding:14px 20px 6px;justify-content:center}
+.filters button{
+  padding:6px 14px;border-radius:20px;border:1.5px solid #e4dac8;
+  background:#fff;color:#6f6454;font-size:.78rem;cursor:pointer;
+  transition:all .15s;font-weight:500;
+}
+.filters button.active{background:#0a7f44;color:#fff;border-color:#0a7f44}
+.filters button:hover:not(.active){background:#f5f0e6}
+
+.cat-section{padding:10px 20px 30px}
+.cat-header{
+  display:flex;align-items:baseline;gap:10px;
+  margin:20px 0 14px;padding-bottom:8px;
+  border-bottom:2px solid #e4dac8;flex-wrap:wrap;
+}
+.cat-header h2{font-size:1.15rem;color:#11472d;font-weight:600}
+.cat-header .badge{font-size:.72rem;background:#e8f5ee;color:#0a7f44;padding:2px 10px;border-radius:12px;font-weight:600}
+.cat-header .pages{font-size:.78rem;color:#6f6454;margin-left:auto}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.card{
+  background:#fff;border-radius:10px;overflow:hidden;
+  border:1px solid #e4dac8;
+  transition:transform .15s,box-shadow .15s;cursor:pointer;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#f5f0e6;display:block}
+.card .info{padding:8px 12px;display:flex;justify-content:space-between;align-items:center}
+.card .info .title{font-size:.78rem;color:#1f1b15;font-weight:500}
+.card .info .pg{font-size:.7rem;color:#a89e8e;font-weight:600}
+
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:1000;align-items:center;justify-content:center;flex-direction:column}
+.lightbox.open{display:flex}
+.lightbox img{max-width:96vw;max-height:88vh;object-fit:contain;border-radius:6px;background:#fff}
+.lightbox .lb-info{color:#fff;margin-top:12px;text-align:center;font-size:.88rem;opacity:.9}
+.lightbox .lb-info .lb-pg{font-size:.78rem;opacity:.65;margin-top:4px}
+.lightbox .lb-close{position:absolute;top:16px;right:20px;color:#fff;font-size:1.8rem;cursor:pointer;background:none;border:none;opacity:.7}
+.lightbox .lb-close:hover{opacity:1}
+.lightbox .lb-nav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2.4rem;cursor:pointer;background:rgba(255,255,255,.1);border:none;width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;opacity:.6;transition:opacity .15s}
+.lightbox .lb-nav:hover{opacity:1}
+.lightbox .lb-prev{left:16px}
+.lightbox .lb-next{right:16px}
+.lightbox .lb-counter{position:absolute;bottom:18px;color:#fff;font-size:.75rem;opacity:.5}
+
+@media(max-width:600px){
+  .hero{padding:20px 16px 16px}
+  .hero h1{font-size:1.25rem}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+  .cat-section{padding:8px 12px 24px}
+  .lightbox .lb-nav{width:36px;height:36px;font-size:1.6rem}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>Trafik ve Çevre Bilgisi</h1>
+  <p>Resmi MEB ders kitabı — 179 slayt, 14 konu</p>
+  <div class="author">Hazırlayan: Oktay TAŞCI</div>
+  <div class="stats">
+    <span id="total-count"></span>
+    <span id="cat-count"></span>
+  </div>
+</div>
+
+<a class="back" href="../index.html">&larr; Back to Pics Gallery</a>
+<a class="back" href="../../index.html" style="margin-left:14px">&larr; Back to Ehliyet Pratik</a>
+
+<div class="filters" id="filters"></div>
+<div id="gallery"></div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lb-close">&times;</button>
+  <button class="lb-nav lb-prev" id="lb-prev">&#8249;</button>
+  <button class="lb-nav lb-next" id="lb-next">&#8250;</button>
+  <img id="lb-img" src="" alt="">
+  <div class="lb-info">
+    <div id="lb-title"></div>
+    <div class="lb-pg" id="lb-pg"></div>
+  </div>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
+
+<script>
+const DATA=[{"category": "Tanımlar (Trafik, Karayolu, Araçlar)", "date": "Pages 1-29", "count": 29, "images": [{"path": "01-tanimlar/page-001.png", "page": 1}, {"path": "01-tanimlar/page-002.png", "page": 2}, {"path": "01-tanimlar/page-003.png", "page": 3}, {"path": "01-tanimlar/page-004.png", "page": 4}, {"path": "01-tanimlar/page-005.png", "page": 5}, {"path": "01-tanimlar/page-006.png", "page": 6}, {"path": "01-tanimlar/page-007.png", "page": 7}, {"path": "01-tanimlar/page-008.png", "page": 8}, {"path": "01-tanimlar/page-009.png", "page": 9}, {"path": "01-tanimlar/page-010.png", "page": 10}, {"path": "01-tanimlar/page-011.png", "page": 11}, {"path": "01-tanimlar/page-012.png", "page": 12}, {"path": "01-tanimlar/page-013.png", "page": 13}, {"path": "01-tanimlar/page-014.png", "page": 14}, {"path": "01-tanimlar/page-015.png", "page": 15}, {"path": "01-tanimlar/page-016.png", "page": 16}, {"path": "01-tanimlar/page-017.png", "page": 17}, {"path": "01-tanimlar/page-018.png", "page": 18}, {"path": "01-tanimlar/page-019.png", "page": 19}, {"path": "01-tanimlar/page-020.png", "page": 20}, {"path": "01-tanimlar/page-021.png", "page": 21}, {"path": "01-tanimlar/page-022.png", "page": 22}, {"path": "01-tanimlar/page-023.png", "page": 23}, {"path": "01-tanimlar/page-024.png", "page": 24}, {"path": "01-tanimlar/page-025.png", "page": 25}, {"path": "01-tanimlar/page-026.png", "page": 26}, {"path": "01-tanimlar/page-027.png", "page": 27}, {"path": "01-tanimlar/page-028.png", "page": 28}, {"path": "01-tanimlar/page-029.png", "page": 29}]}, {"category": "Trafik Görevlisi & Işıklı İşaretler", "date": "Pages 30-44", "count": 15, "images": [{"path": "02-trafik-gorevlisi-isiklar/page-030.png", "page": 30}, {"path": "02-trafik-gorevlisi-isiklar/page-031.png", "page": 31}, {"path": "02-trafik-gorevlisi-isiklar/page-032.png", "page": 32}, {"path": "02-trafik-gorevlisi-isiklar/page-033.png", "page": 33}, {"path": "02-trafik-gorevlisi-isiklar/page-034.png", "page": 34}, {"path": "02-trafik-gorevlisi-isiklar/page-035.png", "page": 35}, {"path": "02-trafik-gorevlisi-isiklar/page-036.png", "page": 36}, {"path": "02-trafik-gorevlisi-isiklar/page-037.png", "page": 37}, {"path": "02-trafik-gorevlisi-isiklar/page-038.png", "page": 38}, {"path": "02-trafik-gorevlisi-isiklar/page-039.png", "page": 39}, {"path": "02-trafik-gorevlisi-isiklar/page-040.png", "page": 40}, {"path": "02-trafik-gorevlisi-isiklar/page-041.png", "page": 41}, {"path": "02-trafik-gorevlisi-isiklar/page-042.png", "page": 42}, {"path": "02-trafik-gorevlisi-isiklar/page-043.png", "page": 43}, {"path": "02-trafik-gorevlisi-isiklar/page-044.png", "page": 44}]}, {"category": "Trafik İşaret Levhaları", "date": "Pages 45-64", "count": 20, "images": [{"path": "03-trafik-isaret-levhalari/page-045.png", "page": 45}, {"path": "03-trafik-isaret-levhalari/page-046.png", "page": 46}, {"path": "03-trafik-isaret-levhalari/page-047.png", "page": 47}, {"path": "03-trafik-isaret-levhalari/page-048.png", "page": 48}, {"path": "03-trafik-isaret-levhalari/page-049.png", "page": 49}, {"path": "03-trafik-isaret-levhalari/page-050.png", "page": 50}, {"path": "03-trafik-isaret-levhalari/page-051.png", "page": 51}, {"path": "03-trafik-isaret-levhalari/page-052.png", "page": 52}, {"path": "03-trafik-isaret-levhalari/page-053.png", "page": 53}, {"path": "03-trafik-isaret-levhalari/page-054.png", "page": 54}, {"path": "03-trafik-isaret-levhalari/page-055.png", "page": 55}, {"path": "03-trafik-isaret-levhalari/page-056.png", "page": 56}, {"path": "03-trafik-isaret-levhalari/page-057.png", "page": 57}, {"path": "03-trafik-isaret-levhalari/page-058.png", "page": 58}, {"path": "03-trafik-isaret-levhalari/page-059.png", "page": 59}, {"path": "03-trafik-isaret-levhalari/page-060.png", "page": 60}, {"path": "03-trafik-isaret-levhalari/page-061.png", "page": 61}, {"path": "03-trafik-isaret-levhalari/page-062.png", "page": 62}, {"path": "03-trafik-isaret-levhalari/page-063.png", "page": 63}, {"path": "03-trafik-isaret-levhalari/page-064.png", "page": 64}]}, {"category": "Yol Çizgileri", "date": "Pages 65-74", "count": 10, "images": [{"path": "04-yol-cizgileri/page-065.png", "page": 65}, {"path": "04-yol-cizgileri/page-066.png", "page": 66}, {"path": "04-yol-cizgileri/page-067.png", "page": 67}, {"path": "04-yol-cizgileri/page-068.png", "page": 68}, {"path": "04-yol-cizgileri/page-069.png", "page": 69}, {"path": "04-yol-cizgileri/page-070.png", "page": 70}, {"path": "04-yol-cizgileri/page-071.png", "page": 71}, {"path": "04-yol-cizgileri/page-072.png", "page": 72}, {"path": "04-yol-cizgileri/page-073.png", "page": 73}, {"path": "04-yol-cizgileri/page-074.png", "page": 74}]}, {"category": "Alkol, Sürme Yasakları & Mesleki Yeterlilik", "date": "Pages 75-79", "count": 5, "images": [{"path": "05-alkol-yasaklar-mesleki/page-075.png", "page": 75}, {"path": "05-alkol-yasaklar-mesleki/page-076.png", "page": 76}, {"path": "05-alkol-yasaklar-mesleki/page-077.png", "page": 77}, {"path": "05-alkol-yasaklar-mesleki/page-078.png", "page": 78}, {"path": "05-alkol-yasaklar-mesleki/page-079.png", "page": 79}]}, {"category": "Karayolu Kullanım, Hız & Mesafe", "date": "Pages 80-87", "count": 8, "images": [{"path": "06-karayolu-hiz-mesafe/page-080.png", "page": 80}, {"path": "06-karayolu-hiz-mesafe/page-081.png", "page": 81}, {"path": "06-karayolu-hiz-mesafe/page-082.png", "page": 82}, {"path": "06-karayolu-hiz-mesafe/page-083.png", "page": 83}, {"path": "06-karayolu-hiz-mesafe/page-084.png", "page": 84}, {"path": "06-karayolu-hiz-mesafe/page-085.png", "page": 85}, {"path": "06-karayolu-hiz-mesafe/page-086.png", "page": 86}, {"path": "06-karayolu-hiz-mesafe/page-087.png", "page": 87}]}, {"category": "Geçme, Manevralar & Dönüşler", "date": "Pages 88-95", "count": 8, "images": [{"path": "07-gecme-manevralar/page-088.png", "page": 88}, {"path": "07-gecme-manevralar/page-089.png", "page": 89}, {"path": "07-gecme-manevralar/page-090.png", "page": 90}, {"path": "07-gecme-manevralar/page-091.png", "page": 91}, {"path": "07-gecme-manevralar/page-092.png", "page": 92}, {"path": "07-gecme-manevralar/page-093.png", "page": 93}, {"path": "07-gecme-manevralar/page-094.png", "page": 94}, {"path": "07-gecme-manevralar/page-095.png", "page": 95}]}, {"category": "Kavşaklarda İlk Geçiş Hakkı", "date": "Pages 96-111", "count": 16, "images": [{"path": "08-kavsak-ilk-gecis/page-096.png", "page": 96}, {"path": "08-kavsak-ilk-gecis/page-097.png", "page": 97}, {"path": "08-kavsak-ilk-gecis/page-098.png", "page": 98}, {"path": "08-kavsak-ilk-gecis/page-099.png", "page": 99}, {"path": "08-kavsak-ilk-gecis/page-100.png", "page": 100}, {"path": "08-kavsak-ilk-gecis/page-101.png", "page": 101}, {"path": "08-kavsak-ilk-gecis/page-102.png", "page": 102}, {"path": "08-kavsak-ilk-gecis/page-103.png", "page": 103}, {"path": "08-kavsak-ilk-gecis/page-104.png", "page": 104}, {"path": "08-kavsak-ilk-gecis/page-105.png", "page": 105}, {"path": "08-kavsak-ilk-gecis/page-106.png", "page": 106}, {"path": "08-kavsak-ilk-gecis/page-107.png", "page": 107}, {"path": "08-kavsak-ilk-gecis/page-108.png", "page": 108}, {"path": "08-kavsak-ilk-gecis/page-109.png", "page": 109}, {"path": "08-kavsak-ilk-gecis/page-110.png", "page": 110}, {"path": "08-kavsak-ilk-gecis/page-111.png", "page": 111}]}, {"category": "Geçiş Üstünlüğü & Kolaylığı", "date": "Pages 112-118", "count": 7, "images": [{"path": "09-gecis-ustunlugu-kolayligi/page-112.png", "page": 112}, {"path": "09-gecis-ustunlugu-kolayligi/page-113.png", "page": 113}, {"path": "09-gecis-ustunlugu-kolayligi/page-114.png", "page": 114}, {"path": "09-gecis-ustunlugu-kolayligi/page-115.png", "page": 115}, {"path": "09-gecis-ustunlugu-kolayligi/page-116.png", "page": 116}, {"path": "09-gecis-ustunlugu-kolayligi/page-117.png", "page": 117}, {"path": "09-gecis-ustunlugu-kolayligi/page-118.png", "page": 118}]}, {"category": "Durma, Duraklama, Park & Işıklandırma", "date": "Pages 119-127", "count": 9, "images": [{"path": "10-durma-park-isiklandirma/page-119.png", "page": 119}, {"path": "10-durma-park-isiklandirma/page-120.png", "page": 120}, {"path": "10-durma-park-isiklandirma/page-121.png", "page": 121}, {"path": "10-durma-park-isiklandirma/page-122.png", "page": 122}, {"path": "10-durma-park-isiklandirma/page-123.png", "page": 123}, {"path": "10-durma-park-isiklandirma/page-124.png", "page": 124}, {"path": "10-durma-park-isiklandirma/page-125.png", "page": 125}, {"path": "10-durma-park-isiklandirma/page-126.png", "page": 126}, {"path": "10-durma-park-isiklandirma/page-127.png", "page": 127}]}, {"category": "Yükleme, Yolcu & Tehlikeli Madde", "date": "Pages 128-134", "count": 7, "images": [{"path": "11-yukleme-yolcu-tehlikeli/page-128.png", "page": 128}, {"path": "11-yukleme-yolcu-tehlikeli/page-129.png", "page": 129}, {"path": "11-yukleme-yolcu-tehlikeli/page-130.png", "page": 130}, {"path": "11-yukleme-yolcu-tehlikeli/page-131.png", "page": 131}, {"path": "11-yukleme-yolcu-tehlikeli/page-132.png", "page": 132}, {"path": "11-yukleme-yolcu-tehlikeli/page-133.png", "page": 133}, {"path": "11-yukleme-yolcu-tehlikeli/page-134.png", "page": 134}]}, {"category": "Bisiklet, Motosiklet & Yayalar", "date": "Pages 135-145", "count": 11, "images": [{"path": "12-bisiklet-motosiklet-yaya/page-135.png", "page": 135}, {"path": "12-bisiklet-motosiklet-yaya/page-136.png", "page": 136}, {"path": "12-bisiklet-motosiklet-yaya/page-137.png", "page": 137}, {"path": "12-bisiklet-motosiklet-yaya/page-138.png", "page": 138}, {"path": "12-bisiklet-motosiklet-yaya/page-139.png", "page": 139}, {"path": "12-bisiklet-motosiklet-yaya/page-140.png", "page": 140}, {"path": "12-bisiklet-motosiklet-yaya/page-141.png", "page": 141}, {"path": "12-bisiklet-motosiklet-yaya/page-142.png", "page": 142}, {"path": "12-bisiklet-motosiklet-yaya/page-143.png", "page": 143}, {"path": "12-bisiklet-motosiklet-yaya/page-144.png", "page": 144}, {"path": "12-bisiklet-motosiklet-yaya/page-145.png", "page": 145}]}, {"category": "Trafik Kazaları, Cezalar & Sigorta", "date": "Pages 146-153", "count": 8, "images": [{"path": "13-trafik-kazalari-cezalar/page-146.png", "page": 146}, {"path": "13-trafik-kazalari-cezalar/page-147.png", "page": 147}, {"path": "13-trafik-kazalari-cezalar/page-148.png", "page": 148}, {"path": "13-trafik-kazalari-cezalar/page-149.png", "page": 149}, {"path": "13-trafik-kazalari-cezalar/page-150.png", "page": 150}, {"path": "13-trafik-kazalari-cezalar/page-151.png", "page": 151}, {"path": "13-trafik-kazalari-cezalar/page-152.png", "page": 152}, {"path": "13-trafik-kazalari-cezalar/page-153.png", "page": 153}]}, {"category": "Tescil, Muayene, Belgeler, Çevre & Psikoloji", "date": "Pages 154-179", "count": 26, "images": [{"path": "14-tescil-belge-cevre-psikoloji/page-154.png", "page": 154}, {"path": "14-tescil-belge-cevre-psikoloji/page-155.png", "page": 155}, {"path": "14-tescil-belge-cevre-psikoloji/page-156.png", "page": 156}, {"path": "14-tescil-belge-cevre-psikoloji/page-157.png", "page": 157}, {"path": "14-tescil-belge-cevre-psikoloji/page-158.png", "page": 158}, {"path": "14-tescil-belge-cevre-psikoloji/page-159.png", "page": 159}, {"path": "14-tescil-belge-cevre-psikoloji/page-160.png", "page": 160}, {"path": "14-tescil-belge-cevre-psikoloji/page-161.png", "page": 161}, {"path": "14-tescil-belge-cevre-psikoloji/page-162.png", "page": 162}, {"path": "14-tescil-belge-cevre-psikoloji/page-163.png", "page": 163}, {"path": "14-tescil-belge-cevre-psikoloji/page-164.png", "page": 164}, {"path": "14-tescil-belge-cevre-psikoloji/page-165.png", "page": 165}, {"path": "14-tescil-belge-cevre-psikoloji/page-166.png", "page": 166}, {"path": "14-tescil-belge-cevre-psikoloji/page-167.png", "page": 167}, {"path": "14-tescil-belge-cevre-psikoloji/page-168.png", "page": 168}, {"path": "14-tescil-belge-cevre-psikoloji/page-169.png", "page": 169}, {"path": "14-tescil-belge-cevre-psikoloji/page-170.png", "page": 170}, {"path": "14-tescil-belge-cevre-psikoloji/page-171.png", "page": 171}, {"path": "14-tescil-belge-cevre-psikoloji/page-172.png", "page": 172}, {"path": "14-tescil-belge-cevre-psikoloji/page-173.png", "page": 173}, {"path": "14-tescil-belge-cevre-psikoloji/page-174.png", "page": 174}, {"path": "14-tescil-belge-cevre-psikoloji/page-175.png", "page": 175}, {"path": "14-tescil-belge-cevre-psikoloji/page-176.png", "page": 176}, {"path": "14-tescil-belge-cevre-psikoloji/page-177.png", "page": 177}, {"path": "14-tescil-belge-cevre-psikoloji/page-178.png", "page": 178}, {"path": "14-tescil-belge-cevre-psikoloji/page-179.png", "page": 179}]}];
+
+let allFlat = [];
+DATA.forEach(cat => {
+  cat.images.forEach(img => {
+    allFlat.push({ ...img, category: cat.category });
+  });
+});
+
+let activeFilter = 'all';
+let lbIdx = -1;
+let lbPool = [];
+
+document.getElementById('total-count').textContent = allFlat.length + ' slides';
+document.getElementById('cat-count').textContent = DATA.length + ' kategori';
+
+const filtersEl = document.getElementById('filters');
+const allBtn = document.createElement('button');
+allBtn.textContent = 'All (' + allFlat.length + ')';
+allBtn.className = 'active';
+allBtn.dataset.cat = 'all';
+allBtn.onclick = () => setFilter('all');
+filtersEl.appendChild(allBtn);
+
+DATA.forEach(cat => {
+  const btn = document.createElement('button');
+  btn.textContent = cat.category + ' (' + cat.count + ')';
+  btn.dataset.cat = cat.category;
+  btn.onclick = () => setFilter(cat.category);
+  filtersEl.appendChild(btn);
+});
+
+function setFilter(cat) {
+  activeFilter = cat;
+  document.querySelectorAll('.filters button').forEach(b => {
+    b.classList.toggle('active', b.dataset.cat === cat);
+  });
+  renderGallery();
+}
+
+function renderGallery() {
+  const gallery = document.getElementById('gallery');
+  gallery.innerHTML = '';
+  const catsToShow = activeFilter === 'all' ? DATA : DATA.filter(c => c.category === activeFilter);
+  lbPool = [];
+
+  catsToShow.forEach(cat => {
+    const section = document.createElement('div');
+    section.className = 'cat-section';
+
+    const header = document.createElement('div');
+    header.className = 'cat-header';
+    header.innerHTML = '<h2>' + cat.category + '</h2>' +
+      '<span class="badge">' + cat.count + ' slayt</span>' +
+      '<span class="pages">' + cat.date + '</span>';
+    section.appendChild(header);
+
+    const grid = document.createElement('div');
+    grid.className = 'grid';
+
+    cat.images.forEach((img, i) => {
+      const globalIdx = lbPool.length;
+      lbPool.push({ ...img, category: cat.category });
+
+      const card = document.createElement('div');
+      card.className = 'card';
+      card.onclick = () => openLightbox(globalIdx);
+
+      const imgEl = document.createElement('img');
+      imgEl.loading = 'lazy';
+      imgEl.src = img.path;
+      imgEl.alt = 'Page ' + img.page;
+
+      const info = document.createElement('div');
+      info.className = 'info';
+      info.innerHTML = '<span class="title">Slayt ' + img.page + '</span>' +
+        '<span class="pg">P' + img.page + '</span>';
+
+      card.appendChild(imgEl);
+      card.appendChild(info);
+      grid.appendChild(card);
+    });
+
+    section.appendChild(grid);
+    gallery.appendChild(section);
+  });
+}
+
+const lb = document.getElementById('lightbox');
+const lbImg = document.getElementById('lb-img');
+const lbTitle = document.getElementById('lb-title');
+const lbPg = document.getElementById('lb-pg');
+const lbCounter = document.getElementById('lb-counter');
+
+function openLightbox(idx) {
+  lbIdx = idx;
+  updateLightbox();
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  lb.classList.remove('open');
+  document.body.style.overflow = '';
+  lbIdx = -1;
+}
+function updateLightbox() {
+  const img = lbPool[lbIdx];
+  if (!img) return;
+  lbImg.src = img.path;
+  lbTitle.textContent = img.category;
+  lbPg.textContent = 'Slayt ' + img.page + ' / ' + 179;
+  lbCounter.textContent = (lbIdx + 1) + ' / ' + lbPool.length;
+}
+
+document.getElementById('lb-close').onclick = closeLightbox;
+document.getElementById('lb-prev').onclick = () => { if (lbIdx > 0) { lbIdx--; updateLightbox(); } };
+document.getElementById('lb-next').onclick = () => { if (lbIdx < lbPool.length - 1) { lbIdx++; updateLightbox(); } };
+lb.onclick = (e) => { if (e.target === lb) closeLightbox(); };
+
+document.addEventListener('keydown', (e) => {
+  if (!lb.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft' && lbIdx > 0) { lbIdx--; updateLightbox(); }
+  if (e.key === 'ArrowRight' && lbIdx < lbPool.length - 1) { lbIdx++; updateLightbox(); }
+});
+
+renderGallery();
+</script>
+</body>
+</html>
