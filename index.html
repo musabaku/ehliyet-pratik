@@ -553,7 +553,7 @@ body{
   <div id="s-home" style="padding-top:8px">
     <div class="mode-cards">
       <div class="mode-card" onclick="startQuiz('exam')"><h3 data-tr="Sinav Modu" data-en="Exam Mode">Sinav Modu</h3><p data-tr="50 soru, 45 dk, gercek format" data-en="50 questions, 45 min, real format">50 soru, 45 dk, gercek format</p></div>
-      <div class="mode-card" onclick="startQuiz('practice')"><h3 data-tr="Pratik" data-en="Practice">Pratik</h3><p data-tr="Aninda cevap, zaman yok" data-en="Instant feedback, no timer">Aninda cevap, zaman yok</p></div>
+      <div class="mode-card" onclick="openPracticeSets()"><h3 data-tr="Pratik" data-en="Practice">Pratik</h3><p data-tr="50'li setler — hangisini bitirdiğini takip et" data-en="Stable batches of 50 — track which sets you've finished">50'li setler — hangisini bitirdiğini takip et</p></div>
       <div class="mode-card" onclick="startQuiz('marathon')"><h3 data-tr="Maraton" data-en="Marathon">Maraton</h3><p data-tr="Tum 4450 soru, kaydet" data-en="All 4,450 questions, saves progress">Tum 4450 soru, kaydet</p></div>
       <div class="mode-card" onclick="startQuiz('mistakes')"><h3 data-tr="Hatalarim" data-en="My Mistakes">Hatalarim</h3><p data-tr="Yanlis sorulari tekrarla" data-en="Replay wrong questions">Yanlis sorulari tekrarla</p></div>
       <div class="mode-card" onclick="startQuiz('flagged')"><h3 data-tr="Isaretlenen" data-en="Flagged">Isaretlenen</h3><p data-tr="Isaret sorulari tekrarla" data-en="Replay flagged questions">Isaret sorulari tekrarla</p></div>
@@ -575,6 +575,18 @@ body{
         <button class="btn btn-sm" onclick="startMediaQuiz('all')" data-tr="Tüm Görselli" data-en="All Media">Tüm Görselli</button>
       </div>
       <div class="enrich-stat" id="enrich-stat"></div>
+    </div>
+    <div class="enrich-panel" id="practice-sets-panel" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap">
+        <h3 style="margin:0" data-tr="Pratik Setleri" data-en="Practice Sets">Pratik Setleri</h3>
+        <button class="btn btn-sm" onclick="closePracticeSets()" data-tr="Kapat" data-en="Close">Kapat</button>
+      </div>
+      <p id="practice-sets-info" style="margin:6px 0 10px;color:var(--muted);font-size:13px"></p>
+      <div id="practice-sets-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px"></div>
+      <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <button class="btn btn-sm" onclick="resetPracticeSets()" data-tr="Tüm setleri sıfırla" data-en="Reset all sets">Tüm setleri sıfırla</button>
+        <span style="color:var(--muted);font-size:12px" data-tr="✓ tamamlanan · sayı: doğru/toplam" data-en="✓ completed · number: correct/total">✓ tamamlanan · sayı: doğru/toplam</span>
+      </div>
     </div>
     <div style="text-align:center;color:var(--muted);font-size:12px"><span id="marathon-txt"></span></div>
   </div>
@@ -613,6 +625,7 @@ body{
     <p id="r-verdict" style="font-size:17px;font-weight:600;margin-bottom:20px"></p>
     <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
       <button class="btn" onclick="reviewMistakes()" data-tr="Hatalari Incele" data-en="Review Mistakes">Hatalari Incele</button>
+      <button class="btn" id="btn-copy-mistakes" onclick="copyMistakesForLLM(this)" data-tr="📋 Yanlislari Kopyala (LLM icin)" data-en="📋 Copy Wrongs (for LLM)">📋 Yanlislari Kopyala (LLM icin)</button>
       <button class="btn" onclick="goHome()" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</button>
       <button class="btn btn-primary" onclick="backToHome()" data-tr="Yeni Sinav" data-en="New Quiz">Yeni Sinav</button>
     </div>
@@ -844,7 +857,7 @@ else{E.updateCatCounts();E.updateEnrichedText();updateVCounts();applyUILang();}
 
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
-function setCategory(c,el){E.cat=c;document.querySelectorAll('#filter-row .btn').forEach(b=>b.classList.remove('active'));el.classList.add('active');E.updateEnrichedText()}
+function setCategory(c,el){E.cat=c;document.querySelectorAll('#filter-row .btn').forEach(b=>b.classList.remove('active'));el.classList.add('active');E.updateEnrichedText();const psp=document.getElementById('practice-sets-panel');if(psp&&psp.style.display!=='none')openPracticeSets()}
 
 /* ═══════════════════════════════════════════
    UI LANGUAGE TOGGLE (separate from Google Translate)
@@ -1063,7 +1076,7 @@ function startQuiz(m,opts={}){
     alert('Soru verisi yuklenemedi. questions_data.js dosyasini kontrol edin.');
     return;
   }
-  E.mode=m;E.answers={};E.ok=0;E.fail=0;E.idx=0;
+  E.mode=m;E.answers={};E.ok=0;E.fail=0;E.idx=0;E.practiceSet=null;
   let pool=source.map((q,i)=>({...q,_oi:i}));
   if(E.cat!=='all')pool=pool.filter(q=>E.detectCat(q)===E.cat);
 
@@ -1078,7 +1091,14 @@ function startQuiz(m,opts={}){
     if(pool.length<50){alert(`Sinav modu 50 soru gerektirir. Bu kategoride sadece ${pool.length} soru var. "Pratik" modunu deneyin.`);return}
     E.questions=shuffle([...pool]).slice(0,50);startTimer(45*60)
   }
-  else if(m==='practice')E.questions=shuffle([...pool]).slice(0,Math.min(50,pool.length));
+  else if(m==='practice'){
+    const setIdx=Number.isInteger(opts.setIdx)?opts.setIdx:0;
+    const SIZE=50;
+    const start=setIdx*SIZE;
+    if(start>=pool.length){alert('Bu set için yeterli soru yok.');return}
+    E.questions=pool.slice(start,start+SIZE); // stable, no shuffle
+    E.practiceSet={idx:setIdx,size:SIZE,start:start,cat:E.cat};
+  }
   else if(m==='marathon'){
     E.questions=pool;
     // Clamp to valid range — fixes crash when saved marathon index > new pool length
@@ -1194,6 +1214,12 @@ function updateStats(){
 function endQuiz(){
   if(E.timerInterval)clearInterval(E.timerInterval);
   const tot=E.questions.length,ans=E.ok+E.fail,empty=tot-ans,pct=tot>0?Math.round(E.ok/tot*100):0,pass=pct>=70;
+  if(E.mode==='practice'&&E.practiceSet){
+    const sets=JSON.parse(localStorage.getItem('eh_psets')||'{}');
+    const key=`${E.practiceSet.cat}:${E.practiceSet.idx}:${E.practiceSet.size}`;
+    sets[key]={ok:E.ok,fail:E.fail,total:tot,ts:Date.now()};
+    localStorage.setItem('eh_psets',JSON.stringify(sets));
+  }
   document.getElementById('s-quiz').style.display='none';
   document.getElementById('topbar').style.display='none';
   document.getElementById('progress-wrap').style.display='none';
@@ -1220,6 +1246,108 @@ function reviewMistakes(){
     s.appendChild(d);
   });
   if(!s.children.length)s.innerHTML='<p style="color:var(--brand);text-align:center">Hata yok!</p>';
+}
+
+/* ═══════════════════════════════════════════
+   PRACTICE SETS — stable batches of 50
+   ═══════════════════════════════════════════ */
+function getPracticePool(){
+  const source=questionSourceForMode('practice');
+  if(!source||!source.length)return [];
+  let pool=source.map((q,i)=>({...q,_oi:i}));
+  if(E.cat!=='all')pool=pool.filter(q=>E.detectCat(q)===E.cat);
+  return pool;
+}
+function openPracticeSets(){
+  const pool=getPracticePool();
+  if(!pool.length){const cn=E.CAT_LABELS[E.cat]||E.cat;alert(`Bu kategoride (${cn}) hic soru bulunamadi.`);return}
+  const SIZE=50;
+  const setCount=Math.ceil(pool.length/SIZE);
+  const sets=JSON.parse(localStorage.getItem('eh_psets')||'{}');
+  const grid=document.getElementById('practice-sets-grid');
+  grid.innerHTML='';
+  for(let i=0;i<setCount;i++){
+    const start=i*SIZE,end=Math.min(start+SIZE,pool.length);
+    const key=`${E.cat}:${i}:${SIZE}`;
+    const done=sets[key];
+    const btn=document.createElement('button');
+    btn.className='btn btn-sm'+(done?' btn-primary':'');
+    btn.style.cssText='padding:10px 6px;font-size:12px;display:flex;flex-direction:column;align-items:center;gap:4px;line-height:1.3';
+    const checkmark=done?' ✓':'';
+    const score=done?`<div style="font-size:11px;opacity:0.85">${done.ok}/${done.total}</div>`:'';
+    btn.innerHTML=`<div><strong>Set ${i+1}</strong>${checkmark}</div><div style="font-size:10px;opacity:0.75">${start+1}–${end}</div>${score}`;
+    btn.onclick=()=>{closePracticeSets();startQuiz('practice',{setIdx:i})};
+    grid.appendChild(btn);
+  }
+  const catName=E.cat==='all'?(uiLang==='en'?'all categories':'tüm kategoriler'):(E.CAT_LABELS[E.cat]||E.cat);
+  const completed=Object.keys(sets).filter(k=>k.startsWith(E.cat+':')&&k.endsWith(':'+SIZE)).length;
+  document.getElementById('practice-sets-info').textContent=
+    (uiLang==='en'?`${pool.length} questions in ${catName} → ${setCount} sets of ${SIZE}. Completed: ${completed}/${setCount}.`
+                  :`${catName} kategorisinde ${pool.length} soru → ${setCount} set × ${SIZE} soru. Tamamlanan: ${completed}/${setCount}.`);
+  document.getElementById('practice-sets-panel').style.display='block';
+  document.getElementById('practice-sets-panel').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function closePracticeSets(){document.getElementById('practice-sets-panel').style.display='none'}
+function resetPracticeSets(){
+  if(!confirm(uiLang==='en'?'Reset completion status for ALL practice sets (all categories)?':'TÜM pratik setlerinin tamamlanma durumunu sıfırla?'))return;
+  localStorage.removeItem('eh_psets');
+  openPracticeSets();
+}
+
+/* Build a clipboard-friendly markdown block of all wrong attempts so the user
+   can paste it into an LLM for concept review (TR + EN bilingual headers). */
+function buildMistakesMarkdown(){
+  const lines=[];
+  const setLabel=E.practiceSet?` (Set ${E.practiceSet.idx+1}, ${E.practiceSet.cat})`:'';
+  lines.push(`# Ehliyet — Wrong attempts / Yanlış cevaplar${setLabel}`);
+  lines.push('');
+  lines.push(`Score / Skor: ${E.ok}/${E.questions.length}`);
+  lines.push('');
+  lines.push('Please explain the underlying concept for each wrong answer below in plain English, focused on the Turkish driving exam (B-class). For each one: (1) why the correct answer is right, (2) why my pick is wrong, (3) one memorable rule to recall it on the exam.');
+  lines.push('');
+  lines.push('Lütfen aşağıdaki her yanlış soru için altta yatan konsepti açıkla (Türk B-sınıfı sürücü ehliyeti sınavı). Her biri için: (1) doğru cevap neden doğru, (2) benim seçimim neden yanlış, (3) sınavda hatırlamak için tek bir kural.');
+  lines.push('');
+  lines.push('---');
+  let n=0;
+  E.questions.forEach((q,i)=>{
+    const sel=E.answers[i];
+    if(sel===undefined||sel===q.answer)return;
+    n++;
+    lines.push('');
+    lines.push(`## ${n}. ${q.question}`);
+    lines.push('');
+    ['A','B','C','D'].forEach(L=>{
+      const tag=L===q.answer?' ✅ (correct/doğru)':(L===sel?' ❌ (my pick/seçimim)':'');
+      lines.push(`- **${L}.** ${q.options[L]||''}${tag}`);
+    });
+    lines.push('');
+    lines.push(`Correct / Doğru: **${q.answer}** · My answer / Seçimim: **${sel}**`);
+    if(q.category_label)lines.push(`Category / Kategori: ${q.category_label}`);
+  });
+  if(n===0){
+    lines.push('');
+    lines.push('_No wrong answers — all correct! / Yanlış yok, hepsi doğru!_');
+  }
+  return lines.join('\n');
+}
+function copyMistakesForLLM(btn){
+  const md=buildMistakesMarkdown();
+  const done=()=>{
+    const orig=btn.innerHTML;
+    btn.innerHTML=uiLang==='en'?'✓ Copied':'✓ Kopyalandı';
+    btn.disabled=true;
+    setTimeout(()=>{btn.innerHTML=orig;btn.disabled=false},2000);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(md).then(done).catch(()=>{
+      const ta=document.createElement('textarea');ta.value=md;document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy');done()}catch(e){alert('Kopyalama başarısız. Manuel kopyala:\n\n'+md.slice(0,400)+'...')}
+      finally{document.body.removeChild(ta)}
+    });
+  }else{
+    const ta=document.createElement('textarea');ta.value=md;document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');done()}finally{document.body.removeChild(ta)}
+  }
 }
 
 /* ═══════════════════════════════════════════
