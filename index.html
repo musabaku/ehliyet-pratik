@@ -537,6 +537,7 @@ body{
   <div class="topbar-right">
     <div class="timer" id="timer">45:00</div>
     <button class="tr-toggle" id="tr-toggle-bar" onclick="toggleTranslate()">EN</button>
+    <button class="tb-btn" onclick="copyQuizForLLM(this)" title="Tüm soruları kopyala (LLM)" data-tr="📋 Set" data-en="📋 Set">📋 Set</button>
     <button class="tb-btn" onclick="endQuiz()" data-tr="Bitir" data-en="Finish">Bitir</button>
   </div>
 </div>
@@ -596,7 +597,10 @@ body{
     <div class="q-card">
       <div class="q-header">
         <span class="q-number" id="q-num">Soru 1/50</span>
-        <span class="q-flag" id="q-flag" onclick="toggleFlag()" title="Isaretle">&#9733;</span>
+        <span style="display:inline-flex;gap:8px;align-items:center">
+          <span class="q-flag" id="q-copy" onclick="copyCurrentQ(this)" title="Bu soruyu kopyala (LLM)" style="font-size:18px">📋</span>
+          <span class="q-flag" id="q-flag" onclick="toggleFlag()" title="Isaretle">&#9733;</span>
+        </span>
       </div>
       <div class="q-text" id="q-text"></div>
       <div class="q-translation" id="q-tr"></div>
@@ -1294,60 +1298,86 @@ function resetPracticeSets(){
   openPracticeSets();
 }
 
-/* Build a clipboard-friendly markdown block of all wrong attempts so the user
-   can paste it into an LLM for concept review (TR + EN bilingual headers). */
-function buildMistakesMarkdown(){
+/* ─── Clipboard helpers ─── */
+function _renderQBlock(q,i,sel,n){
   const lines=[];
+  lines.push(`## ${n}. ${q.question}`);
+  lines.push('');
+  ['A','B','C','D'].forEach(L=>{
+    const isCorrect=L===q.answer;
+    const isPick=sel!==undefined&&L===sel;
+    let tag='';
+    if(isCorrect&&isPick)tag=' ✅ (correct & my pick / doğru, ben de seçtim)';
+    else if(isCorrect)tag=' ✅ (correct / doğru)';
+    else if(isPick)tag=' ❌ (my pick / seçimim)';
+    lines.push(`- **${L}.** ${q.options[L]||''}${tag}`);
+  });
+  lines.push('');
+  if(sel!==undefined)lines.push(`My answer / Seçimim: **${sel}** · Correct / Doğru: **${q.answer}**`);
+  else lines.push(`Correct / Doğru: **${q.answer}** · _Not yet answered / Cevaplanmadı_`);
+  if(q.category_label)lines.push(`Category / Kategori: ${q.category_label}`);
+  return lines.join('\n');
+}
+function _llmPrompt(scope){
+  return [
+    `Please explain the underlying concept for ${scope} below in plain English, focused on the Turkish B-class driving exam. For each: (1) why the correct answer is right, (2) why each distractor is wrong, (3) one memorable rule to recall it on the exam.`,
+    '',
+    `Lütfen aşağıdaki ${scope==='each question'?'her soru':'soru'} için altta yatan konsepti açıkla (Türk B-sınıfı sürücü ehliyeti sınavı). Her biri için: (1) doğru cevap neden doğru, (2) çeldiriciler neden yanlış, (3) sınavda hatırlamak için tek bir kural.`,
+  ].join('\n');
+}
+function buildMistakesMarkdown(){
   const setLabel=E.practiceSet?` (Set ${E.practiceSet.idx+1}, ${E.practiceSet.cat})`:'';
-  lines.push(`# Ehliyet — Wrong attempts / Yanlış cevaplar${setLabel}`);
-  lines.push('');
-  lines.push(`Score / Skor: ${E.ok}/${E.questions.length}`);
-  lines.push('');
-  lines.push('Please explain the underlying concept for each wrong answer below in plain English, focused on the Turkish driving exam (B-class). For each one: (1) why the correct answer is right, (2) why my pick is wrong, (3) one memorable rule to recall it on the exam.');
-  lines.push('');
-  lines.push('Lütfen aşağıdaki her yanlış soru için altta yatan konsepti açıkla (Türk B-sınıfı sürücü ehliyeti sınavı). Her biri için: (1) doğru cevap neden doğru, (2) benim seçimim neden yanlış, (3) sınavda hatırlamak için tek bir kural.');
-  lines.push('');
-  lines.push('---');
+  const lines=[`# Ehliyet — Wrong attempts / Yanlış cevaplar${setLabel}`,'',
+    `Score / Skor: ${E.ok}/${E.questions.length}`,'',_llmPrompt('each wrong answer'),'','---'];
   let n=0;
   E.questions.forEach((q,i)=>{
     const sel=E.answers[i];
     if(sel===undefined||sel===q.answer)return;
-    n++;
-    lines.push('');
-    lines.push(`## ${n}. ${q.question}`);
-    lines.push('');
-    ['A','B','C','D'].forEach(L=>{
-      const tag=L===q.answer?' ✅ (correct/doğru)':(L===sel?' ❌ (my pick/seçimim)':'');
-      lines.push(`- **${L}.** ${q.options[L]||''}${tag}`);
-    });
-    lines.push('');
-    lines.push(`Correct / Doğru: **${q.answer}** · My answer / Seçimim: **${sel}**`);
-    if(q.category_label)lines.push(`Category / Kategori: ${q.category_label}`);
+    n++;lines.push('');lines.push(_renderQBlock(q,i,sel,n));
   });
-  if(n===0){
-    lines.push('');
-    lines.push('_No wrong answers — all correct! / Yanlış yok, hepsi doğru!_');
-  }
+  if(n===0)lines.push('','_No wrong answers — all correct! / Yanlış yok, hepsi doğru!_');
   return lines.join('\n');
 }
-function copyMistakesForLLM(btn){
-  const md=buildMistakesMarkdown();
+function buildQuizMarkdown(){
+  const setLabel=E.practiceSet?` (Set ${E.practiceSet.idx+1}, ${E.practiceSet.cat})`:'';
+  const modeLbl=E.mode||'quiz';
+  const lines=[`# Ehliyet — ${modeLbl}${setLabel}`,'',
+    `Total: ${E.questions.length} · Answered so far: ${E.ok+E.fail} (✅ ${E.ok} / ❌ ${E.fail})`,'',
+    _llmPrompt('each question'),'','---'];
+  E.questions.forEach((q,i)=>{
+    const sel=E.answers[i];
+    lines.push('');lines.push(_renderQBlock(q,i,sel,i+1));
+  });
+  return lines.join('\n');
+}
+function buildSingleQMarkdown(q,sel){
+  return [`# Ehliyet — single question / tek soru`,'',_llmPrompt('this question'),'','---','',_renderQBlock(q,0,sel,1)].join('\n');
+}
+function _copyToClipboard(text,btn,doneTextTR,doneTextEN){
   const done=()=>{
+    if(!btn)return;
     const orig=btn.innerHTML;
-    btn.innerHTML=uiLang==='en'?'✓ Copied':'✓ Kopyalandı';
+    btn.innerHTML=uiLang==='en'?(doneTextEN||'✓ Copied'):(doneTextTR||'✓ Kopyalandı');
     btn.disabled=true;
-    setTimeout(()=>{btn.innerHTML=orig;btn.disabled=false},2000);
+    setTimeout(()=>{btn.innerHTML=orig;btn.disabled=false},1800);
+  };
+  const fallback=()=>{
+    const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy');done()}catch(e){alert('Kopyalama başarısız. İlk 400 karakter:\n\n'+text.slice(0,400)+'...')}
+    finally{document.body.removeChild(ta)}
   };
   if(navigator.clipboard&&navigator.clipboard.writeText){
-    navigator.clipboard.writeText(md).then(done).catch(()=>{
-      const ta=document.createElement('textarea');ta.value=md;document.body.appendChild(ta);ta.select();
-      try{document.execCommand('copy');done()}catch(e){alert('Kopyalama başarısız. Manuel kopyala:\n\n'+md.slice(0,400)+'...')}
-      finally{document.body.removeChild(ta)}
-    });
-  }else{
-    const ta=document.createElement('textarea');ta.value=md;document.body.appendChild(ta);ta.select();
-    try{document.execCommand('copy');done()}finally{document.body.removeChild(ta)}
-  }
+    navigator.clipboard.writeText(text).then(done).catch(fallback);
+  }else{fallback()}
+}
+function copyMistakesForLLM(btn){_copyToClipboard(buildMistakesMarkdown(),btn)}
+function copyQuizForLLM(btn){
+  if(!E.questions||!E.questions.length){alert('Aktif soru yok.');return}
+  _copyToClipboard(buildQuizMarkdown(),btn,'✓ Tümü kopyalandı','✓ All copied');
+}
+function copyCurrentQ(btn){
+  const q=E.questions[E.idx];if(!q)return;
+  _copyToClipboard(buildSingleQMarkdown(q,E.answers[E.idx]),btn,'✓','✓');
 }
 
 /* ═══════════════════════════════════════════
